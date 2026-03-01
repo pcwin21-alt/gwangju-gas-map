@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>광주 주유소 결제 가능 지도</title>
+  <script type="text/javascript"
+    src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=f912bbe9346dcc939b3ecabee03a4dff&libraries=services"
+    onerror="document.body.innerHTML='<div style=padding:40px;font-family:sans-serif><h2 style=color:#dc2626>카카오맵 SDK 로드 실패</h2><p style=margin-top:12px>원인: API 키 오류 또는 허용 도메인 미등록</p><ul style=margin-top:8px;line-height:2><li>카카오 개발자센터 → 앱 → 플랫폼 → Web에 <b>http://localhost:8080</b> 추가</li><li>.env의 KAKAO_MAPS_APP_KEY가 <b>JavaScript 키</b>인지 확인 (REST API 키 아님)</li></ul></div>'"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+           background: #f8fafc; }
+
+    /* 레이아웃 */
+    .app { display: flex; flex-direction: column; height: 100dvh; }
+    .header { background: #1e293b; color: #fff; padding: 12px 16px;
+               flex-shrink: 0; display: flex; align-items: center;
+               justify-content: space-between; gap: 12px; }
+    .header-text h1 { font-size: 16px; font-weight: 700; }
+    .header-text p { font-size: 12px; color: #94a3b8; margin-top: 2px; }
+    .header-actions { display: flex; gap: 8px; align-items: center; flex-shrink: 0; }
+    .feedback-btn {
+      flex-shrink: 0; display: inline-flex; align-items: center; gap: 5px;
+      padding: 6px 11px; border-radius: 6px; border: 1px solid #475569;
+      background: transparent; color: #94a3b8;
+      font-size: 12px; text-decoration: none; white-space: nowrap;
+      transition: all 0.15s;
+    }
+    .feedback-btn:hover { background: #334155; color: #e2e8f0; border-color: #64748b; }
+    /* 지도 위 플로팅 버튼 */
+    .map-area { position: relative; flex: 1; overflow: hidden; }
+    #map { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .coffee-float {
+      position: absolute; top: 10px; right: 10px; z-index: 100;
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 7px 13px; border-radius: 20px; border: none;
+      background: rgba(245, 158, 11, 0.88); color: #1c1917;
+      font-size: 12px; font-weight: 700; white-space: nowrap;
+      cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.22);
+      backdrop-filter: blur(4px); transition: all 0.15s;
+    }
+    .coffee-float:hover { background: rgba(217, 119, 6, 0.95); }
+
+    /* 커피 모달 */
+    .modal-backdrop {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,0.55); z-index: 200;
+      align-items: center; justify-content: center;
+    }
+    .modal-backdrop.open { display: flex; }
+    .modal-box {
+      background: #fff; border-radius: 16px; padding: 28px 24px;
+      text-align: center; width: 260px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+    .modal-box h2 { font-size: 17px; font-weight: 700; color: #1e293b; margin-bottom: 6px; }
+    .modal-box p { font-size: 12px; color: #64748b; line-height: 1.6; margin-bottom: 16px; }
+    .modal-qr { width: 200px; height: 200px; border-radius: 8px; border: 1px solid #e2e8f0; }
+    .modal-hint { margin-top: 10px; font-size: 11px; color: #94a3b8; }
+    .modal-close {
+      margin-top: 14px; display: block; width: 100%;
+      padding: 8px; border-radius: 8px; border: 1px solid #e2e8f0;
+      background: #f8fafc; color: #64748b; font-size: 13px;
+      cursor: pointer;
+    }
+    .modal-close:hover { background: #f1f5f9; }
+
+    @media (max-width: 480px) {
+      .feedback-btn .feedback-email { display: none; }
+    }
+
+    .controls { background: #fff; border-bottom: 1px solid #e2e8f0;
+                 padding: 10px 16px; display: flex; flex-direction: column; gap: 0;
+                 flex-shrink: 0; }
+
+    /* 검색 */
+    .search-box { flex: 1; min-width: 140px; max-width: 300px; position: relative; }
+    .search-box input {
+      width: 100%; padding: 7px 30px 7px 10px; border: 1px solid #cbd5e1;
+      border-radius: 6px; font-size: 13px; outline: none;
+    }
+    .search-box input:focus { border-color: #3b82f6; }
+    .search-clear {
+      position: absolute; right: 8px; top: 50%; transform: translateY(-50%);
+      background: none; border: none; cursor: pointer; color: #94a3b8;
+      font-size: 14px; line-height: 1; display: none; padding: 2px;
+    }
+    .search-clear.visible { display: block; }
+    .search-clear:hover { color: #475569; }
+    .no-result {
+      display: none; position: absolute; top: calc(100% + 4px); left: 0;
+      background: #fff; border: 1px solid #e2e8f0; border-radius: 6px;
+      padding: 8px 12px; font-size: 12px; color: #94a3b8; white-space: nowrap;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08); z-index: 10;
+    }
+    .no-result.visible { display: block; }
+
+    /* 자치구 필터 */
+    .controls-top { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; width: 100%; }
+    .controls-bottom { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; width: 100%;
+                        padding-top: 8px; border-top: 1px solid #f1f5f9; margin-top: 2px; }
+    .district-btn {
+      padding: 4px 10px; border-radius: 20px; border: 1.5px solid #e2e8f0;
+      font-size: 11px; cursor: pointer; background: #fff;
+      color: #64748b; transition: all 0.15s;
+    }
+    .district-btn.active { background: #0ea5e9; border-color: #0ea5e9; color: #fff; font-weight: 600; }
+    .district-btn:hover:not(.active) { background: #f0f9ff; border-color: #7dd3fc; color: #0284c7; }
+    .reset-btn {
+      margin-left: auto; padding: 4px 10px; border-radius: 20px;
+      border: 1.5px solid #e2e8f0; font-size: 11px; cursor: pointer;
+      background: #fff; color: #94a3b8; transition: all 0.15s;
+    }
+    .reset-btn:hover { background: #fef2f2; border-color: #fca5a5; color: #ef4444; }
+
+    /* 필터 버튼 */
+    .filter-group { display: flex; gap: 6px; flex-wrap: wrap; }
+    .filter-btn {
+      padding: 6px 12px; border-radius: 20px; border: 1.5px solid transparent;
+      font-size: 12px; cursor: pointer; background: #f1f5f9;
+      color: #475569; transition: all 0.15s;
+    }
+    .filter-btn.active { color: #fff; }
+    .filter-btn[data-filter="all"].active { background: #1e293b; border-color: #1e293b; }
+    .filter-btn[data-filter="saengsaeng"].active { background: #3b82f6; border-color: #3b82f6; }
+    .filter-btn[data-filter="onnuri"].active { background: #f59e0b; border-color: #f59e0b; }
+
+    /* 범례 */
+    .legend { display: flex; gap: 10px; align-items: center; flex-wrap: wrap;
+               font-size: 11px; color: #64748b; }
+    .legend-dot { width: 10px; height: 10px; border-radius: 50%;
+                   display: inline-block; margin-right: 3px; }
+
+    /* 카운터 */
+    .count-badge {
+      font-size: 11px; color: #64748b; white-space: nowrap; flex-shrink: 0;
+      background: #f1f5f9; padding: 4px 8px; border-radius: 10px;
+    }
+
+    /* 팝업 오버레이 */
+    .info-overlay {
+      position: absolute; background: #fff; border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15); padding: 12px 14px;
+      min-width: 200px; max-width: 280px; pointer-events: none;
+      transform: translate(-50%, calc(-100% - 14px));
+    }
+    .info-overlay .name {
+      font-weight: 700; font-size: 14px; color: #1e293b; margin-bottom: 4px;
+    }
+    .info-overlay .address {
+      font-size: 12px; color: #64748b; margin-bottom: 8px; line-height: 1.4;
+    }
+    .info-overlay .tags { display: flex; flex-direction: column; gap: 3px; }
+    .info-overlay .tag {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: 11px; font-weight: 600; padding: 3px 7px;
+      border-radius: 4px;
+    }
+    .tag.saengsaeng { background: #dbeafe; color: #1d4ed8; }
+    .tag.onnuri { background: #fef3c7; color: #92400e; }
+    .info-overlay .prices {
+      margin-top: 8px; padding-top: 8px; border-top: 1px solid #f1f5f9;
+      display: flex; flex-wrap: wrap; gap: 5px;
+    }
+    .price-item {
+      font-size: 11px; background: #f8fafc; border: 1px solid #e2e8f0;
+      border-radius: 4px; padding: 2px 7px; color: #334155;
+    }
+    .price-item b { color: #0f172a; }
+    .price-source { margin-top: 4px; font-size: 10px; color: #94a3b8; }
+    .info-overlay::after {
+
+      content: ''; position: absolute; bottom: -8px; left: 50%;
+      transform: translateX(-50%); border: 8px solid transparent;
+      border-top-color: #fff; border-bottom: none;
+    }
+
+    /* 순위 버튼 */
+    .rank-btn {
+      padding: 6px 12px; border-radius: 20px; border: 1.5px solid transparent;
+      font-size: 12px; cursor: pointer; background: #f1f5f9;
+      color: #475569; transition: all 0.15s; white-space: nowrap;
+    }
+    .rank-btn:hover, .rank-btn.active { background: #fef9c3; border-color: #fde047; color: #713f12; }
+
+    /* 순위 모달 */
+    .rank-modal {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,0.45); z-index: 300;
+      align-items: flex-end; justify-content: center;
+    }
+    .rank-modal.open { display: flex; }
+    @media (min-width: 480px) {
+      .rank-modal { align-items: center; }
+    }
+    .rank-panel {
+      background: #fff; border-radius: 20px 20px 0 0;
+      width: 100%; max-width: 480px;
+      padding: 20px 20px 32px;
+      box-shadow: 0 -8px 40px rgba(0,0,0,0.18);
+      max-height: 80vh; overflow-y: auto;
+    }
+    @media (min-width: 480px) {
+      .rank-panel { border-radius: 20px; max-height: 600px; }
+    }
+    .rank-panel-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 14px;
+    }
+    .rank-panel-title { font-size: 16px; font-weight: 700; color: #1e293b; }
+    .rank-panel-close {
+      background: #f1f5f9; border: none; border-radius: 50%;
+      width: 28px; height: 28px; cursor: pointer; font-size: 14px;
+      display: flex; align-items: center; justify-content: center; color: #64748b;
+    }
+    .rank-tabs {
+      display: flex; gap: 6px; margin-bottom: 16px;
+    }
+    .rank-tab {
+      flex: 1; padding: 7px 0; border-radius: 8px; border: 1.5px solid #e2e8f0;
+      font-size: 12px; font-weight: 600; cursor: pointer; background: #fff;
+      color: #64748b; transition: all 0.15s; text-align: center;
+    }
+    .rank-tab.active { background: #1e293b; border-color: #1e293b; color: #fff; }
+    .rank-list { display: flex; flex-direction: column; gap: 8px; }
+    .rank-item {
+      display: flex; align-items: center; gap: 12px;
+      padding: 10px 12px; border-radius: 10px; cursor: pointer;
+      transition: background 0.15s; border: 1.5px solid #f1f5f9;
+    }
+    .rank-item:hover { background: #f8fafc; border-color: #e2e8f0; }
+    .rank-badge {
+      width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; font-weight: 800;
+    }
+    .rank-badge.r1 { background: linear-gradient(135deg,#fef08a,#fbbf24); font-size: 22px; }
+    .rank-badge.r2 { background: linear-gradient(135deg,#e2e8f0,#94a3b8); font-size: 16px; color: #fff; }
+    .rank-badge.r3 { background: linear-gradient(135deg,#fed7aa,#f97316); font-size: 16px; color: #fff; }
+    .rank-badge.r4, .rank-badge.r5 { background: #f1f5f9; font-size: 13px; color: #64748b; }
+    .rank-info { flex: 1; min-width: 0; }
+    .rank-name { font-size: 13px; font-weight: 700; color: #1e293b;
+                  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .rank-addr { font-size: 11px; color: #94a3b8; margin-top: 1px;
+                  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .rank-price {
+      font-size: 16px; font-weight: 800; color: #0f172a;
+      flex-shrink: 0; white-space: nowrap;
+    }
+    .rank-price span { font-size: 11px; font-weight: 400; color: #94a3b8; }
+    .rank-empty { text-align: center; color: #94a3b8; font-size: 13px; padding: 24px 0; }
+
+    /* 지도 위 순위 뱃지 */
+    .rank-map-badge {
+      width: 24px; height: 24px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 15px; box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+      border: 2px solid #fff; pointer-events: none;
+      background: linear-gradient(135deg,#fef08a,#fbbf24);
+    }
+    .rank-map-badge.rm2 { background: linear-gradient(135deg,#e2e8f0,#94a3b8); font-size: 11px; color: #fff; }
+    .rank-map-badge.rm3 { background: linear-gradient(135deg,#fed7aa,#f97316); font-size: 11px; color: #fff; }
+    .rank-map-badge.rm4, .rank-map-badge.rm5 { background: #f1f5f9; border-color: #e2e8f0; font-size: 11px; color: #64748b; }
+
+    /* 가격 비교 점 (팝업용) */
+    .price-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%;
+                 margin-right: 4px; vertical-align: middle; flex-shrink: 0; }
+
+    /* 제보 버튼 */
+    .report-trigger-btn {
+      padding: 6px 11px; border-radius: 20px; border: 1.5px solid #a78bfa;
+      background: #f5f3ff; color: #7c3aed; font-size: 12px; font-weight: 600;
+      cursor: pointer; white-space: nowrap; transition: all 0.15s; flex-shrink: 0;
+    }
+    .report-trigger-btn:hover, .report-trigger-btn.active {
+      background: #7c3aed; color: #fff; border-color: #7c3aed;
+    }
+
+    /* 지도 위 제보 모드 안내 배너 */
+    .report-banner {
+      position: absolute; top: 10px; left: 50%; transform: translateX(-50%);
+      z-index: 100; background: rgba(124,58,237,0.92); color: #fff;
+      padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: 600;
+      display: flex; align-items: center; gap: 10px; white-space: nowrap;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.25); backdrop-filter: blur(4px);
+    }
+    .report-banner-cancel {
+      background: rgba(255,255,255,0.2); border: none; color: #fff;
+      font-size: 11px; padding: 3px 8px; border-radius: 10px; cursor: pointer;
+    }
+
+    /* 제보 패널 */
+    .report-panel {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,0.45); z-index: 300;
+      align-items: flex-end; justify-content: center;
+    }
+    .report-panel.open { display: flex; }
+    @media (min-width: 480px) { .report-panel { align-items: center; } }
+    .report-panel-box {
+      background: #fff; border-radius: 20px 20px 0 0;
+      width: 100%; max-width: 480px;
+      padding: 20px 20px 32px;
+      box-shadow: 0 -8px 40px rgba(0,0,0,0.18);
+      max-height: 90vh; overflow-y: auto;
+    }
+    @media (min-width: 480px) { .report-panel-box { border-radius: 20px; max-height: 640px; } }
+    .report-panel-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 16px;
+    }
+    .report-panel-title { font-size: 16px; font-weight: 700; color: #1e293b; }
+    .report-panel-close {
+      background: #f1f5f9; border: none; border-radius: 50%;
+      width: 28px; height: 28px; cursor: pointer; font-size: 14px;
+      display: flex; align-items: center; justify-content: center; color: #64748b;
+    }
+    .report-section-label {
+      font-size: 11px; font-weight: 700; color: #7c3aed; text-transform: uppercase;
+      letter-spacing: 0.05em; margin-bottom: 6px; margin-top: 14px;
+    }
+    .report-loc-display {
+      font-size: 12px; color: #475569; background: #f8fafc;
+      border: 1px solid #e2e8f0; border-radius: 8px; padding: 8px 10px;
+      margin-bottom: 8px; min-height: 34px;
+    }
+    .report-addr-row { display: flex; gap: 6px; margin-bottom: 6px; }
+    .report-addr-row input {
+      flex: 1; padding: 7px 10px; border: 1px solid #cbd5e1;
+      border-radius: 6px; font-size: 13px; outline: none;
+    }
+    .report-addr-row input:focus { border-color: #7c3aed; }
+    .report-addr-btn {
+      padding: 7px 12px; border-radius: 6px; border: none;
+      background: #7c3aed; color: #fff; font-size: 12px; font-weight: 600;
+      cursor: pointer; white-space: nowrap;
+    }
+    .report-map-hint {
+      font-size: 11px; color: #94a3b8; text-align: center; margin-bottom: 2px;
+    }
+    .report-map-pin-btn {
+      width: 100%; padding: 8px; border-radius: 8px; border: 1.5px dashed #a78bfa;
+      background: #f5f3ff; color: #7c3aed; font-size: 12px; cursor: pointer;
+      transition: all 0.15s;
+    }
+    .report-map-pin-btn:hover { background: #ede9fe; }
+    .report-input {
+      width: 100%; padding: 9px 10px; border: 1px solid #cbd5e1;
+      border-radius: 8px; font-size: 13px; outline: none;
+      transition: border-color 0.15s; margin-bottom: 2px;
+    }
+    .report-input:focus { border-color: #7c3aed; }
+    .report-payment-group {
+      display: flex; gap: 10px; flex-wrap: wrap; margin-top: 4px;
+    }
+    .report-payment-group label {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 13px; color: #334155; cursor: pointer;
+      padding: 6px 12px; border-radius: 8px; border: 1.5px solid #e2e8f0;
+      transition: all 0.15s;
+    }
+    .report-payment-group label:has(input:checked) {
+      border-color: #7c3aed; background: #f5f3ff; color: #7c3aed;
+    }
+    .report-textarea {
+      width: 100%; padding: 9px 10px; border: 1px solid #cbd5e1;
+      border-radius: 8px; font-size: 13px; outline: none; resize: vertical;
+      min-height: 60px; font-family: inherit; transition: border-color 0.15s;
+    }
+    .report-textarea:focus { border-color: #7c3aed; }
+    .report-submit-btn {
+      width: 100%; margin-top: 16px; padding: 12px;
+      border-radius: 10px; border: none;
+      background: #7c3aed; color: #fff; font-size: 14px; font-weight: 700;
+      cursor: pointer; transition: background 0.15s;
+    }
+    .report-submit-btn:hover { background: #6d28d9; }
+    .report-submit-btn:disabled {
+      background: #cbd5e1; cursor: not-allowed;
+    }
+    .report-note {
+      font-size: 11px; color: #94a3b8; text-align: center; margin-top: 8px;
+    }
+    /* 사진 첨부 영역 */
+    .report-file-area {
+      position: relative; border: 2px dashed #e2e8f0; border-radius: 10px;
+      padding: 14px 12px; text-align: center; cursor: pointer;
+      transition: border-color 0.15s, background 0.15s; margin-top: 4px;
+      overflow: hidden;
+    }
+    .report-file-area:hover { border-color: #a78bfa; background: #faf5ff; }
+    .report-file-area input[type="file"] {
+      position: absolute; inset: 0; opacity: 0; cursor: pointer;
+      width: 100%; height: 100%;
+    }
+    .report-file-hint { font-size: 12px; color: #94a3b8; pointer-events: none; }
+    .report-file-name { font-size: 12px; color: #7c3aed; font-weight: 600; margin-top: 4px; }
+    .report-file-preview {
+      width: 100%; max-height: 200px; object-fit: contain;
+      border-radius: 8px; margin-top: 10px; display: none; border: 1px solid #e2e8f0;
+    }
+    /* 제출 후 첨부 안내 */
+    .report-attach-reminder {
+      display: none; margin-top: 14px; padding: 12px 14px;
+      background: #f0fdf4; border: 1.5px solid #86efac; border-radius: 10px;
+      font-size: 12px; color: #166534; line-height: 1.6;
+    }
+    .report-attach-reminder strong { display: block; font-size: 13px; margin-bottom: 4px; }
+    .report-attach-img {
+      width: 100%; max-height: 160px; object-fit: contain;
+      border-radius: 6px; margin-top: 8px; border: 1px solid #bbf7d0; display: none;
+    }
+
+    @media (max-width: 480px) {
+      .controls { padding: 8px 12px; gap: 6px; }
+      .filter-btn { padding: 5px 10px; font-size: 11px; }
+      .legend { display: none; }
+    }
+  </style>
+</head>
+<body>
+<div class="app">
+  <div class="header">
+    <div class="header-text">
+      <h1>광주 주유소 결제 가능 지도</h1>
+      <p>온누리상품권 · 광주상생카드 사용 가능 주유소</p>
+    </div>
+    <div class="header-actions">
+      <a class="feedback-btn"
+         href="mailto:very-speking@naver.com?subject=%5B%EC%A3%BC%EC%9C%A0%EC%86%8C%20%EC%A7%80%EB%8F%84%5D%20%EC%98%A4%EB%A5%98%2F%EB%88%84%EB%9D%BD%20%EC%8B%A0%EA%B3%A0&body=%EC%A3%BC%EC%9C%A0%EC%86%8C%EB%AA%85%3A%0A%EC%A3%BC%EC%86%8C%3A%0A%EB%AC%B8%EC%A0%9C%20%EB%82%B4%EC%9A%A9%3A">
+        ✉ 오류·누락 신고 <span class="feedback-email" style="opacity:0.65;font-size:11px">(very-speking@naver.com)</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- 카카오페이 후원 모달 -->
+  <div class="modal-backdrop" id="coffeeModal">
+    <div class="modal-box">
+      <h2>☕ 커피 사주기</h2>
+      <p>이 지도가 도움이 됐다면<br>개발자에게 커피 한 잔 선물해주세요!</p>
+      <img class="modal-qr"
+           src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://qr.kakaopay.com/Ej8MzXsoX"
+           alt="카카오페이 QR코드">
+      <p class="modal-hint">카카오페이 앱으로 QR을 스캔하세요</p>
+      <button class="modal-close" id="coffeeModalClose">닫기</button>
+    </div>
+  </div>
+
+  <div class="controls">
+    <div class="controls-top">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="주유소명 · 주소 검색...">
+        <button class="search-clear" id="searchClear" title="지우기">✕</button>
+        <div class="no-result" id="noResult">검색 결과 없음</div>
+      </div>
+      <div class="filter-group">
+        <button class="filter-btn active" data-filter="all">전체</button>
+        <button class="filter-btn" data-filter="saengsaeng">상생카드</button>
+        <button class="filter-btn" data-filter="onnuri">온누리</button>
+      </div>
+      <div class="legend">
+        <span><span class="legend-dot" style="background:#3b82f6"></span>상생카드</span>
+        <span><span class="legend-dot" style="background:#f59e0b"></span>온누리</span>
+        <span><span class="legend-dot" style="background:#dc2626"></span>둘 다</span>
+      </div>
+      <span class="count-badge" id="countBadge">0개</span>
+      <button class="report-trigger-btn" id="reportTriggerBtn">+ 제보</button>
+    </div>
+    <div class="controls-bottom">
+      <button class="district-btn active" data-district="all">전체 구</button>
+      <button class="district-btn" data-district="광산구">광산구</button>
+      <button class="district-btn" data-district="남구">남구</button>
+      <button class="district-btn" data-district="동구">동구</button>
+      <button class="district-btn" data-district="북구">북구</button>
+      <button class="district-btn" data-district="서구">서구</button>
+      <button class="reset-btn" id="resetBtn">↺ 초기화</button>
+      <button class="rank-btn" id="rankBtn">👑 저렴한 순위</button>
+    </div>
+  </div>
+
+  <!-- 제보 패널 -->
+  <div class="report-panel" id="reportPanel">
+    <div class="report-panel-box">
+      <div class="report-panel-header">
+        <span class="report-panel-title">📍 새 주유소 제보</span>
+        <button class="report-panel-close" id="reportPanelClose">✕</button>
+      </div>
+
+      <div class="report-section-label">위치 지정</div>
+      <div class="report-loc-display" id="reportLocDisplay">위치가 설정되지 않았습니다</div>
+      <div class="report-addr-row">
+        <input type="text" id="reportAddrInput"
+               placeholder="주소 검색 (예: 광주광역시 북구 ...)">
+        <button class="report-addr-btn" id="reportAddrSearchBtn">검색</button>
+      </div>
+      <p class="report-map-hint">또는</p>
+      <button class="report-map-pin-btn" id="reportMapPinBtn">📍 지도를 클릭해 위치 지정</button>
+
+      <div class="report-section-label" style="margin-top:16px">주유소 정보</div>
+      <input type="text" id="reportName" class="report-input" placeholder="주유소명 *">
+
+      <div class="report-section-label">결제 수단</div>
+      <div class="report-payment-group">
+        <label><input type="checkbox" id="reportSaengsaeng"> 광주상생카드</label>
+        <label><input type="checkbox" id="reportOnnuri"> 온누리상품권</label>
+      </div>
+
+      <div class="report-section-label">기타 (선택)</div>
+      <textarea id="reportNotes" class="report-textarea"
+                placeholder="가격, 영업시간, 특이사항 등 자유롭게 적어주세요"></textarea>
+
+      <div class="report-section-label">결제 영수증 사진 (선택)</div>
+      <div class="report-file-area" id="reportFileArea">
+        <input type="file" id="reportFileInput" accept="image/*">
+        <div class="report-file-hint" id="reportFileHint">📎 사진을 클릭해 선택하거나 여기로 드래그</div>
+        <div class="report-file-name" id="reportFileName" style="display:none"></div>
+        <img id="reportFilePreview" class="report-file-preview" alt="영수증 미리보기">
+      </div>
+
+      <button class="report-submit-btn" id="reportSubmitBtn" disabled>
+        ✉ 이메일로 제보하기
+      </button>
+      <p class="report-note">제보 내용은 운영자가 검토 후 지도에 반영됩니다</p>
+
+      <!-- 제출 후 사진 첨부 안내 -->
+      <div class="report-attach-reminder" id="reportAttachReminder">
+        <strong>✓ 이메일이 열렸습니다!</strong>
+        선택하신 사진을 방금 열린 메일에 <b>직접 첨부</b>해 주세요.<br>
+        (메일 앱 → 첨부파일 아이콘 → 아래 사진 선택)
+        <img id="reportAttachImg" class="report-attach-img" alt="첨부할 사진">
+      </div>
+    </div>
+  </div>
+
+  <!-- 순위 모달 -->
+  <div class="rank-modal" id="rankModal">
+    <div class="rank-panel">
+      <div class="rank-panel-header">
+        <span class="rank-panel-title">👑 저렴한 주유소 TOP 5</span>
+        <button class="rank-panel-close" id="rankModalClose">✕</button>
+      </div>
+      <div class="rank-tabs">
+        <button class="rank-tab active" data-fuel="휘발유">휘발유</button>
+        <button class="rank-tab" data-fuel="경유">경유</button>
+        <button class="rank-tab" data-fuel="LPG">LPG</button>
+      </div>
+      <div class="rank-list" id="rankList"></div>
+    </div>
+  </div>
+
+  <div class="map-area">
+    <div id="map"></div>
+    <button class="coffee-float" id="coffeeBtn">☕ 개발자에게 커피사주기</button>
+    <div class="report-banner" id="reportBanner" style="display:none">
+      📍 제보할 주유소 위치를 지도에서 클릭하세요
+      <button class="report-banner-cancel" id="reportBannerCancel">취소</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const STATIONS = [{"name": "해피주유소", "address": "광주광역시 광산구 건재로 761", "lat": 35.0815317724595, "lng": 126.766612753503, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "(주)명진주유소", "address": "광주광역시 광산구 고봉로 21", "lat": 35.180739243021, "lng": 126.804507875063, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "주식회사 에이치에스에너지 장수셀프주유소", "address": "광주광역시 광산구 고봉로 239", "lat": 35.1851834590982, "lng": 126.78447971564, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "SK시민주유소", "address": "광주광역시 광산구 고봉로 249", "lat": 35.1858146853941, "lng": 126.783272096732, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "(주)스마일셀프주유소", "address": "광주광역시 광산구 고봉로 541", "lat": 35.2034987344813, "lng": 126.761028668122, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "푸른솔주유소", "address": "광주광역시 광산구 고봉로 905", "lat": 35.2254474427889, "lng": 126.735522697984, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "(주)더그린", "address": "광주광역시 광산구 동곡로 104", "lat": 35.0927016386721, "lng": 126.773180458016, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "한성골드주유소", "address": "광주광역시 광산구 동곡로 407", "lat": 35.1186373812017, "lng": 126.780147373096, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "광주주유소", "address": "광주광역시 광산구 동곡로 422", "lat": 35.1200350491494, "lng": 126.780702337413, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "유한회사 동일에너지산업", "address": "광주광역시 광산구 동곡로 450", "lat": 35.1228966114413, "lng": 126.779611638385, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "주식회사 버들산업", "address": "광주광역시 광산구 동곡로 510", "lat": 35.1267710527161, "lng": 126.776230506899, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "프라임 주유소", "address": "광주광역시 광산구 목련로 216", "lat": 35.1717717368779, "lng": 126.821430748389, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "(주)아지산업", "address": "광주광역시 광산구 목련로 250", "lat": 35.1732034410008, "lng": 126.824694298276, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "신광주주유소", "address": "광주광역시 광산구 목련로 372-8", "lat": 35.1809420009148, "lng": 126.833423398473, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "웰컴신가주유소", "address": "광주광역시 광산구 목련로 375", "lat": 35.1821614715523, "lng": 126.831942409889, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "신창 구도일주유소", "address": "광주광역시 광산구 북문대로 350", "lat": 35.1907011993344, "lng": 126.8548991601, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "다올에너지산업 주식회사", "address": "광주광역시 광산구 북문대로 389", "lat": 35.1917178129709, "lng": 126.850653480129, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "대근주유소", "address": "광주광역시 광산구 북문대로 639", "lat": 35.2080387198291, "lng": 126.832485769367, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "광장주유소", "address": "광주광역시 광산구 북문대로 907", "lat": 35.2314365999679, "lng": 126.824920757972, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "신촌주유소", "address": "광주광역시 광산구 사암로", "lat": 35.184477750199, "lng": 126.809746225294, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "마트몰주식회사송헌지점", "address": "광주광역시 광산구 사암로 104", "lat": 35.1536335299797, "lng": 126.807648216622, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "(주)실크로드주유소", "address": "광주광역시 광산구 사암로 866", "lat": 35.2170913852244, "lng": 126.825121150221, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "삼도주유소", "address": "광주광역시 광산구 삼도로", "lat": 35.1627165877061, "lng": 126.704237286768, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "슈퍼크린주유소", "address": "광주광역시 광산구 상무대로 372", "lat": 35.1437482128976, "lng": 126.806336437464, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "이칠주유소", "address": "광주광역시 광산구 상무대로 378", "lat": 35.1437396707585, "lng": 126.807140707345, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "진곡화물차주유소", "address": "광주광역시 광산구 손재로 327", "lat": 35.1942893749902, "lng": 126.793637078668, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "하진에너지 주식회사", "address": "광주광역시 광산구 손재로 415", "lat": 35.2027348955594, "lng": 126.794717266466, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "진영주유소", "address": "광주광역시 광산구 송도로 292", "lat": 35.1390635634149, "lng": 126.800552087793, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "유한회사 연성주유소", "address": "광주광역시 광산구 어등대로 247", "lat": 35.1520067723616, "lng": 126.75107860478, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "전송주유소", "address": "광주광역시 광산구 어등대로 583", "lat": 35.1510450641046, "lng": 126.786682910072, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "순양주유소", "address": "광주광역시 광산구 어등대로 667", "lat": 35.144687337864, "lng": 126.790930499862, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "천지주유소", "address": "광주광역시 광산구 영광로 3270", "lat": 35.1673842124021, "lng": 126.666530250629, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "(주)대각주유소", "address": "광주광역시 광산구 용아로 143", "lat": 35.1560924196777, "lng": 126.799465698439, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "브이넥스 주식회사", "address": "광주광역시 광산구 용아로 330", "lat": 35.1728261816259, "lng": 126.804022844522, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "대천주유소", "address": "광주광역시 광산구 용진로 599", "lat": 35.1933747254906, "lng": 126.746775077701, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "대촌주유소", "address": "광주광역시 남구 고싸움로", "lat": 35.0763598656713, "lng": 126.837170410072, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "(주)드림에너지/드림주유소", "address": "광주광역시 남구 대남대로 336", "lat": 35.1418450709958, "lng": 126.89383396972, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "새론주유소", "address": "광주광역시 남구 대남대로 347", "lat": 35.1425242692216, "lng": 126.892428166397, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "대남로 주유소", "address": "광주광역시 남구 대남대로 399", "lat": 35.146431919923, "lng": 126.889400592943, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "양촌주유소", "address": "광주광역시 남구 포충로 121", "lat": 35.060761034996, "lng": 126.790870836478, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "대촌상주유소", "address": "광주광역시 남구 회재로", "lat": 35.0788041721642, "lng": 126.831863401199, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "풍암주유소", "address": "광주광역시 남구 회재로 1208", "lat": 35.1327310343235, "lng": 126.89352585579, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "화력주유소", "address": "광주광역시 남구 회재로 338", "lat": 35.0932865512369, "lng": 126.826417522386, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "(유)광주개발", "address": "광주광역시 동구 남계길 4", "lat": 35.0965270813116, "lng": 126.939903933065, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "두암주유소", "address": "광주광역시 북구 군왕로 103", "lat": 35.1702972029047, "lng": 126.931923023541, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "북성주유소", "address": "광주광역시 북구 금남로 49", "lat": 35.1590015245917, "lng": 126.901465291369, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "도동재주유소", "address": "광주광역시 북구 동문대로 410", "lat": 35.1982306373564, "lng": 126.935316422247, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "서림주유소", "address": "광주광역시 북구 무등로 126", "lat": 35.1670557988575, "lng": 126.897663685673, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "경기장주유소", "address": "광주광역시 북구 무등로 76", "lat": 35.1684549394622, "lng": 126.892418835965, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "용두주유소", "address": "광주광역시 북구 빛고을대로 652", "lat": 35.2198643704041, "lng": 126.869403189209, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "첨단북광주IC주유소", "address": "광주광역시 북구 삼소로 318", "lat": 35.2402529198082, "lng": 126.868698247452, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "(주)엔씨아이 코끼주유소", "address": "광주광역시 북구 서하로 77", "lat": 35.1877225183738, "lng": 126.888732130476, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "SK코끼리주유소", "address": "광주광역시 북구 서하로 77", "lat": 35.1877225183738, "lng": 126.888732130476, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "코끼리주유소", "address": "광주광역시 북구 서하로 77", "lat": 35.1877225183738, "lng": 126.888732130476, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "주식회사 오림이사", "address": "광주광역시 북구 설죽로 421", "lat": 35.1969062445603, "lng": 126.899677783541, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "지산주유소", "address": "광주광역시 북구 양산택지로", "lat": 35.2131152775237, "lng": 126.881718761289, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "세본주유소", "address": "광주광역시 북구 용주로 21", "lat": 35.1814856502277, "lng": 126.900398927746, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "패밀리셀프주유소 주식회사", "address": "광주광역시 북구 우치로 670", "lat": 35.2241940250088, "lng": 126.902423144334, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "자모셀프주유소", "address": "광주광역시 북구 우치로 7", "lat": 35.16838359733, "lng": 126.910174863587, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "용전주유소", "address": "광주광역시 북구 우치로 809", "lat": 35.2344103916635, "lng": 126.894298383994, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "용전IC주유소", "address": "광주광역시 북구 우치로 842", "lat": 35.2376635865013, "lng": 126.893430760003, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "(주)일곡석유", "address": "광주광역시 북구 우치로422번길 22", "lat": 35.2045990214369, "lng": 126.902321946747, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "세오 주식회사", "address": "광주광역시 북구 임방울대로 979", "lat": 35.2149182570796, "lng": 126.86492703839, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "마트몰(주)더믿음가득주유소", "address": "광주광역시 북구 하남대로 777", "lat": 35.1715284134687, "lng": 126.877987689642, "payment_types": ["saengsaeng", "onnuri"], "source": ["saengsaeng"]}, {"name": "(주)케이피유통본촌주유소", "address": "광주광역시 북구 하서로 530", "lat": 35.2215212616774, "lng": 126.880515241803, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "시민주유소", "address": "광주광역시 서구 눌재로 328", "lat": 35.1107835873632, "lng": 126.825081794788, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "컨벤션주유소", "address": "광주광역시 서구 상무대로 714", "lat": 35.1433432282525, "lng": 126.842405015751, "payment_types": ["saengsaeng", "onnuri"], "source": ["saengsaeng"]}, {"name": "부일주유소", "address": "광주광역시 서구 상무대로 933", "lat": 35.1516281105698, "lng": 126.863924267202, "payment_types": ["saengsaeng", "onnuri"], "source": ["saengsaeng"]}, {"name": "골든타임주유소", "address": "광주광역시 서구 상무대로1206번길 3", "lat": 35.1553411757473, "lng": 126.89386736437, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "청정이엔지 주식회사", "address": "광주광역시 서구 상무자유로 18", "lat": 35.151153855524, "lng": 126.836137769533, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "우리셀프주유소", "address": "광주광역시 서구 죽봉대로 24", "lat": 35.1555832662964, "lng": 126.883735578852, "payment_types": ["saengsaeng", "onnuri"], "source": ["saengsaeng"]}, {"name": "풍암대림주유소", "address": "광주광역시 서구 풍서좌로 83", "lat": 35.1210725540255, "lng": 126.858719684027, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "예향주유소", "address": "광주광역시 서구 풍암신흥로 2", "lat": 35.1190479306959, "lng": 126.863939081823, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "대광주유소", "address": "광주광역시 서구 하남대로 556", "lat": 35.1731418024425, "lng": 126.853399993739, "payment_types": ["saengsaeng", "onnuri"], "source": ["saengsaeng"]}, {"name": "주식회사 제일에너지동곡점", "address": "광주광역시 광산구 동곡로 123", "lat": 35.0947248345073, "lng": 126.772692309838, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "동일가스", "address": "광주광역시 광산구 동곡로 456", "lat": 35.1231776241627, "lng": 126.77914824451, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "한일LPG충전소", "address": "광주광역시 광산구 북문대로420번길 92", "lat": 35.1925618231711, "lng": 126.85255171156, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "수완LPG충전소", "address": "광주광역시 광산구 사암로 668", "lat": 35.2035133190439, "lng": 126.812104825916, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "신공항엘피지충전소", "address": "광주광역시 광산구 상무대로 404", "lat": 35.1439276372744, "lng": 126.810187070282, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "주식회사 영진에너지", "address": "광주광역시 광산구 상무대로 483", "lat": 35.1435232665355, "lng": 126.818528525654, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "수완LPG충전소", "address": "광주광역시 광산구 수완동", "lat": 35.1970499262149, "lng": 126.825617616935, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "빛고을충전소", "address": "광주광역시 광산구 신가동", "lat": 35.1798449626863, "lng": 126.836000396367, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "주식회사 진솔가스", "address": "광주광역시 광산구 영광로", "lat": 35.1589329277769, "lng": 126.695201983415, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "대성가스(주)지평선LPG충전소", "address": "광주광역시 광산구 영광로 3777", "lat": 35.1589576729037, "lng": 126.719203642807, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "부경LPG충전소", "address": "광주광역시 광산구 장록동", "lat": 35.1350373921626, "lng": 126.77185373435, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "동부충전소", "address": "광주광역시 동구 남문로 615", "lat": 35.1257380534024, "lng": 126.930813200274, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "동광주LPG충전소", "address": "광주광역시 북구 동문대로 560", "lat": 35.2084547566215, "lng": 126.943378177681, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "더푸른 주식회사 북광주IC충전소", "address": "광주광역시 북구 빛고을대로 656", "lat": 35.2201865078065, "lng": 126.869482086174, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "더푸른 주식회사 첨단충전소", "address": "광주광역시 북구 삼소로 330", "lat": 35.2406975913088, "lng": 126.869733565375, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "패밀리LPG충전소", "address": "광주광역시 북구 우치로 654", "lat": 35.2225823697905, "lng": 126.902931662207, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "매일LPG충전소", "address": "광주광역시 북구 우치로 850", "lat": 35.2381985435545, "lng": 126.893234505047, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "미래LPG충전소", "address": "광주광역시 북구 임방울대로 983", "lat": 35.2146951891834, "lng": 126.865508522462, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "(주)무등엘피지충전소", "address": "광주광역시 북구 하서로 553", "lat": 35.2234925966817, "lng": 126.880965782736, "payment_types": ["saengsaeng"], "source": ["saengsaeng"]}, {"name": "다올에너지산업(주)", "address": "광주", "lat": 35.191717632744215, "lng": 126.85065348045785, "market_name": "신창동가구의거리일번국도상점가", "payment_types": ["onnuri"], "source": ["onnuri"]}, {"name": "(주)경훈에너지", "address": "광주", "lat": 35.1873399416342, "lng": 126.906604807221, "market_name": "오치1동 골목형상점가", "payment_types": ["onnuri"], "source": ["onnuri"]}, {"name": "성실주유소", "address": "광주", "lat": 35.1955508623259, "lng": 126.903766832622, "market_name": "31사단 골목형상점가", "payment_types": ["onnuri"], "source": ["onnuri"]}, {"name": "청우에너지(주)", "address": "광주", "lat": 35.1172538193079, "lng": 126.855270732399, "market_name": "매월동상인회 골목형상점가", "payment_types": ["onnuri"], "source": ["onnuri"]}, {"name": "(유)매월주유소", "address": "광주", "lat": 35.1197055395561, "lng": 126.858329307065, "market_name": "매월동상인회 골목형상점가", "payment_types": ["onnuri"], "source": ["onnuri"]}, {"name": "(유)플러스주유소", "address": "광주", "lat": 35.195656193253015, "lng": 126.90026721733436, "market_name": "삼각동 골목형상점가", "payment_types": ["onnuri"], "source": ["onnuri"]}, {"name": "상록 주유소", "address": "광주", "lat": 35.15442067471906, "lng": 126.89058824992554, "market_name": "월산로상인회 골목형상점가", "payment_types": ["onnuri"], "source": ["onnuri"]}, {"name": "영광주유소", "address": "광주", "lat": 35.1269419154047, "lng": 126.848094834958, "market_name": "금호아파트상인회 골목형상점가", "payment_types": ["onnuri"], "source": ["onnuri"]}, {"name": "유한회사신상무", "address": "광주", "lat": 35.1476352415181, "lng": 126.856863072013, "market_name": "운천테라스길상인회 골목형상점가", "payment_types": ["onnuri"], "source": ["onnuri"]}, {"name": "한강주유소", "address": "광주", "lat": 35.167125826000344, "lng": 126.88433099291169, "market_name": "광천동상인회 골목형상점가", "payment_types": ["onnuri"], "source": ["onnuri"]}, {"name": "운천주유소", "address": "광주", "lat": 35.1452932176006, "lng": 126.846323601107, "market_name": "마륵동상인회 골목형상점가", "payment_types": ["onnuri"], "source": ["onnuri"]}, {"name": "매월유통단지주유소", "address": "광주", "lat": 35.1140488923634, "lng": 126.849616111112, "market_name": "전평제상인회 골목형상점가", "payment_types": ["onnuri"], "source": ["onnuri"]}, {"name": "돌고개주유소", "address": "광주", "lat": 35.150391979805605, "lng": 126.89202251399107, "market_name": "농성세대공감상인회 골목형상점가", "payment_types": ["onnuri"], "source": ["onnuri"]}, {"name": "차나라주유소", "address": "광주", "lat": 35.1750450960476, "lng": 126.927107738186, "market_name": "두암2동 골목형상점가", "payment_types": ["onnuri"], "source": ["onnuri"]}, {"name": "다올주유소", "address": "광주", "lat": 35.191717632744215, "lng": 126.85065348045785, "market_name": "신창동가구의거리일번국도상점가", "payment_types": ["onnuri"], "source": ["onnuri"]}, {"name": "㈜동행", "address": "광주", "lat": 35.1348593916243, "lng": 126.91806943781118, "market_name": "신창동가구의거리일번국도상점가", "payment_types": ["onnuri"], "source": ["onnuri"]}, {"name": "금호석유", "address": "광주", "lat": 35.138632236471906, "lng": 126.79625606685471, "market_name": "송정매일시장", "payment_types": ["onnuri"], "source": ["onnuri"]}];
+
+const PRICES = {"해피주유소":{"휘발유":1669,"LPG":1569},"(주)명진주유소":{"휘발유":1669,"경유":1929,"LPG":1569},"SK시민주유소":{"휘발유":1698,"LPG":1598},"(주)스마일셀프주유소":{"LPG":1579,"휘발유":1689},"푸른솔주유소":{"휘발유":1689,"LPG":1599},"(주)더그린":{"휘발유":1657,"경유":1865,"LPG":1557},"한성골드주유소":{"휘발유":1639,"LPG":1559},"광주주유소":{"휘발유":1695,"LPG":1595},"신광주주유소":{"휘발유":1695,"LPG":1595},"웰컴신가주유소":{"휘발유":1625,"LPG":1568,"경유":1829},"신창 구도일주유소":{"경유":1865,"휘발유":1645,"LPG":1565},"대근주유소":{"휘발유":1637,"LPG":1563},"광장주유소":{"휘발유":1718,"LPG":1638},"신촌주유소":{"휘발유":1699,"LPG":1579},"삼도주유소":{"LPG":1569,"휘발유":1679},"슈퍼크린주유소":{"휘발유":1749,"경유":1899,"LPG":1649},"이칠주유소":{"휘발유":1699,"LPG":1599},"진곡화물차주유소":{"휘발유":1673,"LPG":1579},"하진에너지 주식회사":{"휘발유":1669,"LPG":1569},"진영주유소":{"휘발유":1699,"LPG":1599},"유한회사 연성주유소":{"휘발유":1654,"LPG":1554},"전송주유소":{"휘발유":1699,"LPG":1599},"순양주유소":{"휘발유":1688,"LPG":1578},"천지주유소":{"휘발유":1699,"LPG":1589},"(주)대각주유소":{"휘발유":1669,"경유":1929,"LPG":1569},"대천주유소":{"휘발유":1699,"LPG":1589},"대촌주유소":{"휘발유":1689,"LPG":1579},"(주)드림에너지/드림주유소":{"휘발유":1649,"LPG":1549},"새론주유소":{"휘발유":1669,"LPG":1599},"대남로 주유소":{"휘발유":1689,"LPG":1599},"양촌주유소":{"휘발유":1709,"LPG":1639},"풍암주유소":{"휘발유":1695,"경유":1899,"LPG":1595},"화력주유소":{"휘발유":1699,"LPG":1599},"두암주유소":{"휘발유":1728,"LPG":1628},"북성주유소":{"휘발유":1679,"LPG":1585},"도동재주유소":{"LPG":1649},"서림주유소":{"휘발유":1635,"LPG":1565},"경기장주유소":{"휘발유":1645,"경유":1879,"LPG":1563},"용두주유소":{"휘발유":1675,"LPG":1575},"첨단북광주IC주유소":{"휘발유":1659,"LPG":1569,"경유":1895},"SK코끼리주유소":{"휘발유":1698,"LPG":1588},"코끼리주유소":{"휘발유":1698,"LPG":1588},"주식회사 오림이사":{"휘발유":1668,"경유":1905,"LPG":1566},"지산주유소":{"휘발유":1645,"경유":1849,"LPG":1565},"세본주유소":{"휘발유":1719,"LPG":1639},"자모셀프주유소":{"휘발유":1678,"LPG":1578},"용전주유소":{"휘발유":1708,"LPG":1618},"용전IC주유소":{"LPG":1569,"휘발유":1659},"마트몰(주)더믿음가득주유소":{"휘발유":1628,"LPG":1558},"시민주유소":{"휘발유":1698,"LPG":1598},"컨벤션주유소":{"휘발유":1768,"LPG":1668},"부일주유소":{"경유":1875,"휘발유":1695,"LPG":1635},"골든타임주유소":{"휘발유":1648,"LPG":1559},"청정이엔지 주식회사":{"휘발유":1648,"LPG":1548},"우리셀프주유소":{"휘발유":1695,"경유":1875,"LPG":1595},"예향주유소":{"휘발유":1779,"경유":1979,"LPG":1679},"대광주유소":{"휘발유":1675,"LPG":1555},"(주)경훈에너지":{"휘발유":1659,"LPG":1569},"성실주유소":{"휘발유":1685,"LPG":1559},"(유)매월주유소":{"휘발유":1699,"경유":1949,"LPG":1599},"(유)플러스주유소":{"휘발유":1668,"LPG":1568},"상록 주유소":{"휘발유":1719,"경유":1945,"LPG":1619},"영광주유소":{"휘발유":1699,"LPG":1599},"한강주유소":{"휘발유":1699,"LPG":1609},"운천주유소":{"휘발유":1648,"LPG":1568},"매월유통단지주유소":{"휘발유":1699,"LPG":1629},"돌고개주유소":{"휘발유":1656,"LPG":1568},"차나라주유소":{"휘발유":1655,"경유":1935,"LPG":1575}};
+
+// 유종별 가격 범위 (팝업 비교 점 색상용)
+const PRICE_RANGE = ['휘발유', '경유', 'LPG'].reduce((acc, fuel) => {
+  const vals = Object.values(PRICES).map(p => p[fuel]).filter(Boolean);
+  acc[fuel] = vals.length ? { min: Math.min(...vals), max: Math.max(...vals) } : null;
+  return acc;
+}, {});
+
+function priceColor(price, min, max) {
+  if (min === max) return '#22c55e';
+  const t = Math.max(0, Math.min(1, (price - min) / (max - min)));
+  let r, g;
+  if (t < 0.5) {
+    r = Math.round(34 + (234 - 34) * t * 2);
+    g = Math.round(197 + (179 - 197) * t * 2);
+  } else {
+    r = Math.round(234 + (239 - 234) * (t - 0.5) * 2);
+    g = Math.round(179 * (1 - (t - 0.5) * 2));
+  }
+  return `rgb(${r},${g},0)`;
+}
+
+const COLOR = {
+  saengsaeng: '#3B82F6',
+  onnuri:     '#F59E0B',
+  both:       '#DC2626',
+};
+
+// 지도 초기화 (광주 중심)
+const map = new kakao.maps.Map(document.getElementById('map'), {
+  center: new kakao.maps.LatLng(35.1595, 126.8526),
+  level: 8,
+});
+
+// ── 광주 중심 원형 스포트라이트 오버레이 ───────────────
+(function() {
+  const outer = [
+    new kakao.maps.LatLng(38, 123), new kakao.maps.LatLng(38, 131),
+    new kakao.maps.LatLng(33, 131), new kakao.maps.LatLng(33, 123),
+  ];
+  // 광주 중심점 기준 반경 ~27km 원 (64각형 근사)
+  const CX = 35.152, CY = 126.820;
+  const LAT_R = 0.245, LNG_R = 0.300;  // 위도/경도 비율 보정
+  const circle = Array.from({ length: 64 }, (_, i) => {
+    const a = 2 * Math.PI * i / 64;
+    return new kakao.maps.LatLng(CX + LAT_R * Math.cos(a), CY + LNG_R * Math.sin(a));
+  });
+
+  new kakao.maps.Polygon({
+    map,
+    path: [outer, circle],
+    strokeWeight: 0,
+    fillColor: '#1e293b',
+    fillOpacity: 0.42,
+  });
+  // 원형 경계선 (은은하게)
+  new kakao.maps.Polyline({
+    map,
+    path: [...circle, circle[0]],
+    strokeWeight: 1.5,
+    strokeColor: '#93c5fd',
+    strokeOpacity: 0.4,
+    strokeStyle: 'solid',
+  });
+})();
+
+// 마커 SVG 생성 (색상별)
+function markerSvg(color) {
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="36" viewBox="0 0 28 36">
+    <path d="M14 0C6.268 0 0 6.268 0 14c0 10.5 14 22 14 22S28 24.5 28 14C28 6.268 21.732 0 14 0z"
+          fill="${color}" stroke="#fff" stroke-width="1.5"/>
+    <circle cx="14" cy="14" r="5" fill="#fff"/>
+  </svg>`;
+  return 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(svg)));
+}
+
+const markerImages = {
+  saengsaeng: new kakao.maps.MarkerImage(markerSvg(COLOR.saengsaeng), new kakao.maps.Size(28, 36)),
+  onnuri:     new kakao.maps.MarkerImage(markerSvg(COLOR.onnuri),     new kakao.maps.Size(28, 36)),
+  both:       new kakao.maps.MarkerImage(markerSvg(COLOR.both),       new kakao.maps.Size(28, 36)),
+};
+
+function getMarkerType(station) {
+  const pt = station.payment_types || [];
+  if (pt.includes('saengsaeng') && pt.includes('onnuri')) return 'both';
+  if (pt.includes('saengsaeng')) return 'saengsaeng';
+  return 'onnuri';
+}
+
+function buildInfoHtml(station) {
+  const pt = station.payment_types || [];
+  const tags = [];
+  if (pt.includes('saengsaeng')) tags.push(`<span class="tag saengsaeng">상생카드 가맹점</span>`);
+  if (pt.includes('onnuri'))     tags.push(`<span class="tag onnuri">온누리상품권 가맹점</span>`);
+
+  const p = PRICES[station.name];
+  let priceHtml = '';
+  if (p && Object.keys(p).length > 0) {
+    const order = ['휘발유', '경유', 'LPG'];
+    const items = order.filter(k => p[k]).map(k => {
+      const range = PRICE_RANGE[k];
+      const dot = range
+        ? `<span class="price-dot" style="background:${priceColor(p[k], range.min, range.max)}"></span>`
+        : '';
+      return `<span class="price-item">${dot}${k} <b>${p[k].toLocaleString()}원</b></span>`;
+    }).join('');
+    priceHtml = `<div class="prices">${items}<div class="price-source">Opinet 기준</div></div>`;
+  }
+
+  return `
+    <div class="info-overlay">
+      <div class="name">${station.name}</div>
+      <div class="address">${station.address}</div>
+      <div class="tags">${tags.join('')}</div>
+      ${priceHtml}
+    </div>`;
+}
+
+// 마커 생성
+let allMarkers = [];
+let activeOverlay = null;
+let rankMapOverlays = [];
+let reportMode = false;
+let reportPin = null;
+
+STATIONS.forEach(station => {
+  if (!station.lat || !station.lng) return;
+
+  const markerType = getMarkerType(station);
+  const marker = new kakao.maps.Marker({
+    position: new kakao.maps.LatLng(station.lat, station.lng),
+    image: markerImages[markerType],
+    map: map,
+  });
+
+  const overlay = new kakao.maps.CustomOverlay({
+    content: buildInfoHtml(station),
+    position: new kakao.maps.LatLng(station.lat, station.lng),
+    xAnchor: 0.5,
+    yAnchor: 1,
+    zIndex: 3,
+  });
+
+  kakao.maps.event.addListener(marker, 'click', function() {
+    if (reportMode) return;
+    if (activeOverlay) activeOverlay.setMap(null);
+    if (activeOverlay === overlay) {
+      activeOverlay = null;
+      return;
+    }
+    overlay.setMap(map);
+    activeOverlay = overlay;
+  });
+
+  kakao.maps.event.addListener(map, 'click', function() {
+    if (activeOverlay) { activeOverlay.setMap(null); activeOverlay = null; }
+  });
+
+  const DISTRICT_LIST = ['광산구', '남구', '동구', '북구', '서구'];
+  let district = DISTRICT_LIST.find(d => (station.address || '').includes(d)) || null;
+
+  // 온누리 가맹점: 주소가 '광주'뿐인 경우 market_name 키워드로 구 추정
+  if (!district && station.market_name) {
+    const MKT = [
+      ['31사단',  '북구'], ['오치',   '북구'], ['삼각동', '북구'], ['두암',   '북구'],
+      ['신창동',  '서구'], ['매월동', '서구'], ['마륵동', '서구'], ['광천동', '서구'],
+      ['농성',    '서구'], ['운천',   '서구'], ['금호',   '서구'], ['월산',   '서구'], ['전평', '서구'],
+      ['송정',    '광산구'],
+    ];
+    for (const [kw, gu] of MKT) {
+      if (station.market_name.includes(kw)) { district = gu; break; }
+    }
+  }
+
+  allMarkers.push({ marker, overlay, station, markerType, district });
+});
+
+// 필터 + 검색 적용
+let currentFilter = 'all';
+let currentDistrict = 'all';
+let currentSearch = '';
+
+function applyFilters() {
+  let sOnly = 0, oOnly = 0, both = 0;
+  const q = currentSearch.toLowerCase();
+  allMarkers.forEach(item => {
+    const matchFilter = currentFilter === 'all' ||
+      item.station.payment_types.includes(currentFilter);
+    const matchDistrict = currentDistrict === 'all' ||
+      item.district === currentDistrict;
+    const matchSearch = !q ||
+      item.station.name.toLowerCase().includes(q) ||
+      (item.station.address || '').toLowerCase().includes(q);
+    const show = matchFilter && matchDistrict && matchSearch;
+    item.marker.setMap(show ? map : null);
+    if (show) {
+      const s = item.station.payment_types.includes('saengsaeng');
+      const o = item.station.payment_types.includes('onnuri');
+      if (s && o) both++;
+      else if (s) sOnly++;
+      else oOnly++;
+    }
+    if (!show && activeOverlay === item.overlay) {
+      item.overlay.setMap(null); activeOverlay = null;
+    }
+  });
+  const total = sOnly + oOnly + both;
+  let badge;
+  if (currentFilter === 'all') {
+    badge = both > 0
+      ? `상생 ${sOnly+both} / 온누리 ${oOnly+both} (겸용 ${both}, 총 ${total}개)`
+      : `총 ${total}개`;
+  } else {
+    badge = `${total}개`;
+  }
+  document.getElementById('countBadge').textContent = badge;
+  const noResult = document.getElementById('noResult');
+  noResult.classList.toggle('visible', (q.length > 0 || currentDistrict !== 'all') && total === 0);
+}
+
+// 초기 카운트
+applyFilters();
+
+// 필터 버튼 이벤트
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+    currentFilter = this.dataset.filter;
+    applyFilters();
+  });
+});
+
+// 검색 이벤트
+const searchInput = document.getElementById('searchInput');
+const searchClear = document.getElementById('searchClear');
+
+searchInput.addEventListener('input', function() {
+  currentSearch = this.value.trim();
+  searchClear.classList.toggle('visible', this.value.length > 0);
+  applyFilters();
+});
+
+searchClear.addEventListener('click', function() {
+  searchInput.value = '';
+  currentSearch = '';
+  this.classList.remove('visible');
+  applyFilters();
+  searchInput.focus();
+});
+
+// 자치구 필터
+document.querySelectorAll('.district-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.district-btn').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+    currentDistrict = this.dataset.district;
+    applyFilters();
+  });
+});
+
+// 초기화
+document.getElementById('resetBtn').addEventListener('click', function() {
+  searchInput.value = '';
+  currentSearch = '';
+  searchClear.classList.remove('visible');
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  document.querySelector('.filter-btn[data-filter="all"]').classList.add('active');
+  currentFilter = 'all';
+  document.querySelectorAll('.district-btn').forEach(b => b.classList.remove('active'));
+  document.querySelector('.district-btn[data-district="all"]').classList.add('active');
+  currentDistrict = 'all';
+  clearRankMapOverlays();
+  applyFilters();
+});
+
+// ── 순위 기능 ──────────────────────────────────────────
+const RANK_CROWNS = ['👑','🥈','🥉','4','5'];
+const RANK_CLASSES = ['r1','r2','r3','r4','r5'];
+
+function clearRankMapOverlays() {
+  rankMapOverlays.forEach(o => o.setMap(null));
+  rankMapOverlays = [];
+  document.getElementById('rankBtn').classList.remove('active');
+}
+
+function showRankOnMap(fuel) {
+  clearRankMapOverlays();
+  const list = Object.entries(PRICES)
+    .filter(([,p]) => p[fuel])
+    .sort(([,a],[,b]) => a[fuel] - b[fuel])
+    .slice(0, 5);
+  const icons = ['👑','2','3','4','5'];
+  const cls   = ['','rm2','rm3','rm4','rm5'];
+  list.forEach(([name], i) => {
+    const found = allMarkers.find(m => m.station.name === name);
+    if (!found) return;
+    const el = document.createElement('div');
+    el.className = ('rank-map-badge ' + cls[i]).trim();
+    el.textContent = icons[i];
+    const ov = new kakao.maps.CustomOverlay({
+      content: el,
+      position: new kakao.maps.LatLng(found.station.lat, found.station.lng),
+      xAnchor: 0.5,
+      yAnchor: 2.5,
+      zIndex: 10,
+    });
+    ov.setMap(map);
+    rankMapOverlays.push(ov);
+  });
+  document.getElementById('rankBtn').classList.add('active');
+}
+
+function getStationAddr(name) {
+  const s = STATIONS.find(st => st.name === name);
+  return s ? s.address : '';
+}
+
+function buildRankList(fuel) {
+  showRankOnMap(fuel);
+  const list = Object.entries(PRICES)
+    .filter(([,p]) => p[fuel])
+    .sort(([,a],[,b]) => a[fuel] - b[fuel])
+    .slice(0, 5);
+
+  const el = document.getElementById('rankList');
+  if (!list.length) {
+    el.innerHTML = `<div class="rank-empty">해당 유종 가격 정보가 없습니다</div>`;
+    return;
+  }
+
+  el.innerHTML = list.map(([name, p], i) => {
+    const addr = getStationAddr(name);
+    const addrShort = addr.replace('광주광역시 ','').replace('광주 ','');
+    return `
+    <div class="rank-item" data-name="${name}">
+      <div class="rank-badge ${RANK_CLASSES[i]}">${RANK_CROWNS[i]}</div>
+      <div class="rank-info">
+        <div class="rank-name">${name}</div>
+        <div class="rank-addr">${addrShort || '광주'}</div>
+      </div>
+      <div class="rank-price">${p[fuel].toLocaleString()}<span>원</span></div>
+    </div>`;
+  }).join('');
+
+  // 항목 클릭 → 지도 이동
+  el.querySelectorAll('.rank-item').forEach(item => {
+    item.addEventListener('click', function() {
+      const name = this.dataset.name;
+      const found = allMarkers.find(m => m.station.name === name);
+      if (found) {
+        document.getElementById('rankModal').classList.remove('open');
+        map.setCenter(new kakao.maps.LatLng(found.station.lat, found.station.lng));
+        map.setLevel(4);
+        if (activeOverlay) activeOverlay.setMap(null);
+        found.overlay.setMap(map);
+        activeOverlay = found.overlay;
+      }
+    });
+  });
+}
+
+let currentFuel = '휘발유';
+document.getElementById('rankBtn').addEventListener('click', function() {
+  buildRankList(currentFuel);
+  document.getElementById('rankModal').classList.add('open');
+});
+document.getElementById('rankModalClose').addEventListener('click', function() {
+  document.getElementById('rankModal').classList.remove('open');
+});
+document.getElementById('rankModal').addEventListener('click', function(e) {
+  if (e.target === this) this.classList.remove('open');
+});
+document.querySelectorAll('.rank-tab').forEach(tab => {
+  tab.addEventListener('click', function() {
+    document.querySelectorAll('.rank-tab').forEach(t => t.classList.remove('active'));
+    this.classList.add('active');
+    currentFuel = this.dataset.fuel;
+    buildRankList(currentFuel);
+  });
+});
+
+// ── 제보 기능 ────────────────────────────────────────────
+const geocoder = new kakao.maps.services.Geocoder();
+
+let reportLat = null, reportLng = null, reportAddress = '';
+
+const reportPanel    = document.getElementById('reportPanel');
+const reportBanner   = document.getElementById('reportBanner');
+const reportLocDisp  = document.getElementById('reportLocDisplay');
+const reportNameInp  = document.getElementById('reportName');
+const reportSubmitBtn = document.getElementById('reportSubmitBtn');
+
+function setReportLoc(lat, lng, addr) {
+  reportLat = lat; reportLng = lng; reportAddress = addr || '';
+  reportLocDisp.textContent = addr
+    ? `${addr} (${lat.toFixed(5)}, ${lng.toFixed(5)})`
+    : `위도 ${lat.toFixed(5)}, 경도 ${lng.toFixed(5)}`;
+  updateReportSubmitState();
+}
+
+function updateReportSubmitState() {
+  const ok = reportLat !== null && reportNameInp.value.trim().length > 0;
+  reportSubmitBtn.disabled = !ok;
+}
+
+function clearReportPin() {
+  if (reportPin) { reportPin.setMap(null); reportPin = null; }
+}
+
+function enterMapPinMode() {
+  reportPanel.classList.remove('open');
+  reportBanner.style.display = 'flex';
+  document.getElementById('reportTriggerBtn').classList.add('active');
+  reportMode = true;
+}
+
+function exitMapPinMode() {
+  reportBanner.style.display = 'none';
+  reportMode = false;
+}
+
+function openReportPanel() {
+  reportPanel.classList.add('open');
+  document.getElementById('reportTriggerBtn').classList.add('active');
+}
+
+function closeReportPanel() {
+  reportPanel.classList.remove('open');
+  exitMapPinMode();
+  clearReportPin();
+  reportLat = null; reportLng = null; reportAddress = '';
+  reportLocDisp.textContent = '위치가 설정되지 않았습니다';
+  reportNameInp.value = '';
+  document.getElementById('reportAddrInput').value = '';
+  document.getElementById('reportSaengsaeng').checked = false;
+  document.getElementById('reportOnnuri').checked = false;
+  document.getElementById('reportNotes').value = '';
+  document.getElementById('reportFileInput').value = '';
+  document.getElementById('reportFilePreview').style.display = 'none';
+  document.getElementById('reportFileName').style.display = 'none';
+  document.getElementById('reportFileHint').style.display = '';
+  document.getElementById('reportAttachReminder').style.display = 'none';
+  reportSubmitBtn.disabled = true;
+  document.getElementById('reportTriggerBtn').classList.remove('active');
+}
+
+// 지도 클릭 → 제보 위치 지정
+kakao.maps.event.addListener(map, 'click', function(mouseEvent) {
+  if (!reportMode) return;
+  const lat = mouseEvent.latLng.getLat();
+  const lng = mouseEvent.latLng.getLng();
+  clearReportPin();
+  const pinImg = new kakao.maps.MarkerImage(
+    markerSvg('#7c3aed'), new kakao.maps.Size(28, 36)
+  );
+  reportPin = new kakao.maps.Marker({
+    position: mouseEvent.latLng, image: pinImg, map: map,
+  });
+  // 역지오코딩으로 주소 조회
+  geocoder.coord2Address(lng, lat, function(result, status) {
+    const addr = status === kakao.maps.services.Status.OK
+      ? (result[0].road_address?.address_name || result[0].address.address_name)
+      : '';
+    setReportLoc(lat, lng, addr);
+  });
+  exitMapPinMode();
+  openReportPanel();
+});
+
+// 주소 검색
+document.getElementById('reportAddrSearchBtn').addEventListener('click', function() {
+  const addr = document.getElementById('reportAddrInput').value.trim();
+  if (!addr) return;
+  geocoder.addressSearch(addr, function(result, status) {
+    if (status !== kakao.maps.services.Status.OK) {
+      alert('주소를 찾을 수 없습니다. 더 구체적으로 입력해 주세요.');
+      return;
+    }
+    const lat = parseFloat(result[0].y);
+    const lng = parseFloat(result[0].x);
+    clearReportPin();
+    const pos = new kakao.maps.LatLng(lat, lng);
+    const pinImg = new kakao.maps.MarkerImage(
+      markerSvg('#7c3aed'), new kakao.maps.Size(28, 36)
+    );
+    reportPin = new kakao.maps.Marker({ position: pos, image: pinImg, map: map });
+    map.setCenter(pos);
+    setReportLoc(lat, lng, result[0].address_name);
+  });
+});
+document.getElementById('reportAddrInput').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') document.getElementById('reportAddrSearchBtn').click();
+});
+
+// 지도 클릭 모드 전환
+document.getElementById('reportMapPinBtn').addEventListener('click', enterMapPinMode);
+document.getElementById('reportBannerCancel').addEventListener('click', function() {
+  exitMapPinMode();
+  openReportPanel();
+});
+
+// 이름 입력 시 제출 버튼 상태 갱신
+reportNameInp.addEventListener('input', updateReportSubmitState);
+
+// 사진 선택 미리보기
+document.getElementById('reportFileInput').addEventListener('change', function() {
+  const file = this.files[0];
+  const preview = document.getElementById('reportFilePreview');
+  const hint    = document.getElementById('reportFileHint');
+  const fname   = document.getElementById('reportFileName');
+  if (!file) return;
+  const url = URL.createObjectURL(file);
+  preview.src = url;
+  preview.style.display = 'block';
+  hint.style.display = 'none';
+  fname.textContent = file.name;
+  fname.style.display = 'block';
+  // 안내 초기화
+  document.getElementById('reportAttachReminder').style.display = 'none';
+});
+
+// 제보 열기/닫기
+document.getElementById('reportTriggerBtn').addEventListener('click', function() {
+  if (reportPanel.classList.contains('open')) {
+    closeReportPanel();
+  } else {
+    openReportPanel();
+  }
+});
+document.getElementById('reportPanelClose').addEventListener('click', closeReportPanel);
+document.getElementById('reportPanel').addEventListener('click', function(e) {
+  if (e.target === this) closeReportPanel();
+});
+
+// 이메일 제출
+reportSubmitBtn.addEventListener('click', function() {
+  const name    = reportNameInp.value.trim();
+  const saeng   = document.getElementById('reportSaengsaeng').checked;
+  const onnuri  = document.getElementById('reportOnnuri').checked;
+  const notes   = document.getElementById('reportNotes').value.trim();
+  const payment = [saeng && '광주상생카드', onnuri && '온누리상품권'].filter(Boolean).join(', ') || '미선택';
+  const body = [
+    '[광주 주유소 지도 — 새 주유소 제보]',
+    '',
+    '주유소명: ' + name,
+    '주소: '    + (reportAddress || '(주소 미확인)'),
+    '좌표: '    + reportLat.toFixed(6) + ', ' + reportLng.toFixed(6),
+    '결제수단: '+ payment,
+    notes ? '기타: ' + notes : '',
+    document.getElementById('reportFileInput').files[0]
+      ? '[첨부] 결제 영수증 사진을 이 메일에 첨부했습니다.' : '',
+    '',
+    '* 카카오맵에서 위치를 확인해 주세요:',
+    'https://map.kakao.com/link/map/' + name + ',' + reportLat.toFixed(6) + ',' + reportLng.toFixed(6),
+  ].filter(l => l !== undefined).join('\n');
+
+  const mailUrl = 'mailto:very-speking@naver.com'
+    + '?subject=' + encodeURIComponent('[주유소 제보] ' + name)
+    + '&body='    + encodeURIComponent(body);
+
+  window.open(mailUrl, '_blank');
+
+  // 사진 선택됐으면 첨부 안내 표시
+  const fileInput = document.getElementById('reportFileInput');
+  if (fileInput.files[0]) {
+    const reminder = document.getElementById('reportAttachReminder');
+    const attachImg = document.getElementById('reportAttachImg');
+    attachImg.src = URL.createObjectURL(fileInput.files[0]);
+    attachImg.style.display = 'block';
+    reminder.style.display = 'block';
+    // 패널 스크롤을 안내 영역으로
+    reminder.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+});
+
+// 커피 사주기
+document.getElementById('coffeeBtn').addEventListener('click', function() {
+  const isMobile = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent) || window.innerWidth < 768;
+  if (isMobile) {
+    window.open('https://qr.kakaopay.com/Ej8MzXsoX', '_blank');
+  } else {
+    document.getElementById('coffeeModal').classList.add('open');
+  }
+});
+document.getElementById('coffeeModalClose').addEventListener('click', function() {
+  document.getElementById('coffeeModal').classList.remove('open');
+});
+document.getElementById('coffeeModal').addEventListener('click', function(e) {
+  if (e.target === this) this.classList.remove('open');
+});
+</script>
+</body>
+</html>
