@@ -114,6 +114,15 @@
     }
     .reset-btn:hover { background: #fef2f2; border-color: #fca5a5; color: #ef4444; }
 
+    /* 내 위치 버튼 */
+    .myloc-btn {
+      padding: 4px 10px; border-radius: 20px;
+      border: 1.5px solid #e2e8f0; font-size: 11px; cursor: pointer;
+      background: #fff; color: #64748b; transition: all 0.15s; white-space: nowrap;
+    }
+    .myloc-btn:hover { background: #f0fdf4; border-color: #86efac; color: #16a34a; }
+    .myloc-btn.loading { color: #94a3b8; pointer-events: none; }
+
     /* 필터 버튼 */
     .filter-group { display: flex; gap: 6px; flex-wrap: wrap; }
     .filter-btn {
@@ -474,6 +483,7 @@
       <button class="district-btn" data-district="동구">동구</button>
       <button class="district-btn" data-district="북구">북구</button>
       <button class="district-btn" data-district="서구">서구</button>
+      <button class="myloc-btn" id="myLocBtn">📍 내 위치</button>
       <button class="reset-btn" id="resetBtn">↺ 초기화</button>
       <button class="rank-btn" id="rankBtn">👑 저렴한 순위</button>
     </div>
@@ -822,6 +832,39 @@ document.querySelectorAll('.district-btn').forEach(btn => {
     currentDistrict = this.dataset.district;
     applyFilters();
   });
+});
+
+// 내 위치
+let myLocMarker = null;
+document.getElementById('myLocBtn').addEventListener('click', function() {
+  if (!navigator.geolocation) { alert('이 브라우저는 위치 기능을 지원하지 않습니다.'); return; }
+  const btn = this;
+  btn.textContent = '📍 위치 찾는 중...';
+  btn.classList.add('loading');
+  navigator.geolocation.getCurrentPosition(
+    function(pos) {
+      const latlng = new kakao.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
+      map.setCenter(latlng);
+      map.setLevel(4);
+      if (myLocMarker) myLocMarker.setMap(null);
+      myLocMarker = new kakao.maps.Marker({
+        map,
+        position: latlng,
+        image: new kakao.maps.MarkerImage(
+          'https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png',
+          new kakao.maps.Size(24, 35)
+        )
+      });
+      btn.textContent = '📍 내 위치';
+      btn.classList.remove('loading');
+    },
+    function() {
+      alert('위치 정보를 가져올 수 없습니다.\n브라우저 위치 권한을 허용해 주세요.');
+      btn.textContent = '📍 내 위치';
+      btn.classList.remove('loading');
+    },
+    { timeout: 10000 }
+  );
 });
 
 // 초기화
