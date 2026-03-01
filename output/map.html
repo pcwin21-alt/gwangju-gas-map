@@ -426,6 +426,63 @@
       .filter-btn { padding: 5px 10px; font-size: 11px; }
       .legend { display: none; }
     }
+
+    /* 도움말 버튼 */
+    .help-btn {
+      flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center;
+      width: 28px; height: 28px; border-radius: 50%;
+      border: 1.5px solid #475569; background: transparent; color: #94a3b8;
+      font-size: 14px; font-weight: 700; cursor: pointer;
+      transition: all 0.15s; text-decoration: none; line-height: 1;
+    }
+    .help-btn:hover { background: #334155; color: #e2e8f0; border-color: #64748b; }
+
+    /* 도움말 모달 */
+    .help-modal {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,0.5); z-index: 400;
+      align-items: flex-end; justify-content: center;
+    }
+    .help-modal.open { display: flex; }
+    @media (min-width: 480px) { .help-modal { align-items: center; } }
+    .help-panel {
+      background: #fff; border-radius: 20px 20px 0 0;
+      width: 100%; max-width: 480px;
+      padding: 20px 20px 36px;
+      box-shadow: 0 -8px 40px rgba(0,0,0,0.2);
+      max-height: 85vh; overflow-y: auto;
+    }
+    @media (min-width: 480px) { .help-panel { border-radius: 20px; max-height: 680px; } }
+    .help-panel-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 18px;
+    }
+    .help-panel-title { font-size: 17px; font-weight: 800; color: #1e293b; }
+    .help-panel-close {
+      background: #f1f5f9; border: none; border-radius: 50%;
+      width: 30px; height: 30px; cursor: pointer; font-size: 15px;
+      display: flex; align-items: center; justify-content: center; color: #64748b;
+    }
+    .help-section { margin-bottom: 18px; }
+    .help-section-title {
+      font-size: 12px; font-weight: 800; color: #0ea5e9;
+      text-transform: uppercase; letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+    .help-item {
+      display: flex; gap: 10px; align-items: flex-start;
+      margin-bottom: 8px;
+    }
+    .help-icon {
+      font-size: 18px; flex-shrink: 0; width: 28px; text-align: center;
+      line-height: 1.3;
+    }
+    .help-desc { font-size: 13px; color: #334155; line-height: 1.6; }
+    .help-desc b { color: #1e293b; }
+    .help-divider { border: none; border-top: 1px solid #f1f5f9; margin: 14px 0; }
+    .help-dot-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 4px; }
+    .help-dot-item { display: flex; align-items: center; gap: 5px; font-size: 12px; color: #475569; }
+    .help-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
   </style>
 </head>
 <body>
@@ -436,6 +493,7 @@
       <p>온누리상품권 · 광주상생카드 사용 가능 주유소</p>
     </div>
     <div class="header-actions">
+      <button class="help-btn" id="helpBtn" title="사용법 안내">?</button>
       <a class="feedback-btn"
          href="mailto:very-speking@naver.com?subject=%5B%EC%A3%BC%EC%9C%A0%EC%86%8C%20%EC%A7%80%EB%8F%84%5D%20%EC%98%A4%EB%A5%98%2F%EB%88%84%EB%9D%BD%20%EC%8B%A0%EA%B3%A0&body=%EC%A3%BC%EC%9C%A0%EC%86%8C%EB%AA%85%3A%0A%EC%A3%BC%EC%86%8C%3A%0A%EB%AC%B8%EC%A0%9C%20%EB%82%B4%EC%9A%A9%3A">
         ✉ 오류·누락 신고 <span class="feedback-email" style="opacity:0.65;font-size:11px">(very-speking@naver.com)</span>
@@ -453,6 +511,121 @@
            alt="카카오페이 QR코드">
       <p class="modal-hint">카카오페이 앱으로 QR을 스캔하세요</p>
       <button class="modal-close" id="coffeeModalClose">닫기</button>
+    </div>
+  </div>
+
+  <!-- 도움말 모달 -->
+  <div class="help-modal" id="helpModal">
+    <div class="help-panel">
+      <div class="help-panel-header">
+        <span class="help-panel-title">📖 사용 안내</span>
+        <button class="help-panel-close" id="helpModalClose">✕</button>
+      </div>
+
+      <div class="help-section">
+        <div class="help-section-title">이 지도는?</div>
+        <div class="help-item">
+          <span class="help-icon">🗺️</span>
+          <span class="help-desc">
+            광주광역시에서 <b>광주상생카드</b> 또는 <b>온누리상품권</b>으로 결제 가능한 주유소를 한눈에 볼 수 있는 지도입니다.
+          </span>
+        </div>
+        <div class="help-dot-row">
+          <span class="help-dot-item"><span class="help-dot" style="background:#3b82f6"></span>상생카드만</span>
+          <span class="help-dot-item"><span class="help-dot" style="background:#f59e0b"></span>온누리만</span>
+          <span class="help-dot-item"><span class="help-dot" style="background:#dc2626"></span>둘 다 가능</span>
+        </div>
+      </div>
+
+      <hr class="help-divider">
+
+      <div class="help-section">
+        <div class="help-section-title">주요 기능</div>
+        <div class="help-item">
+          <span class="help-icon">📍</span>
+          <span class="help-desc"><b>마커 클릭</b> → 주유소 이름·주소, 결제 가능 수단, 현재 유가(휘발유·경유·LPG) 확인</span>
+        </div>
+        <div class="help-item">
+          <span class="help-icon">🔍</span>
+          <span class="help-desc"><b>상단 검색창</b>에 주유소명이나 주소를 입력하면 해당 위치로 이동합니다.</span>
+        </div>
+        <div class="help-item">
+          <span class="help-icon">🔵</span>
+          <span class="help-desc"><b>상생카드 / 온누리 / 전체</b> 버튼으로 원하는 결제수단의 주유소만 볼 수 있습니다.</span>
+        </div>
+        <div class="help-item">
+          <span class="help-icon">🏘️</span>
+          <span class="help-desc"><b>구 필터</b>(광산구·남구·동구·북구·서구)로 원하는 지역만 볼 수 있습니다.</span>
+        </div>
+        <div class="help-item">
+          <span class="help-icon">👑</span>
+          <span class="help-desc"><b>저렴한 순위</b> 버튼 → 현재 보이는 주유소 중 휘발유·경유·LPG 가격 TOP 5를 확인합니다.</span>
+        </div>
+        <div class="help-item">
+          <span class="help-icon">📡</span>
+          <span class="help-desc"><b>내 위치</b> 버튼 → 내 현재 위치를 지도 중심으로 이동하고 별 표시로 나타냅니다. (브라우저 위치 권한 필요)</span>
+        </div>
+        <div class="help-item">
+          <span class="help-icon">↺</span>
+          <span class="help-desc"><b>초기화</b> 버튼으로 필터·검색·지도 위치를 한 번에 원래대로 되돌립니다.</span>
+        </div>
+      </div>
+
+      <hr class="help-divider">
+
+      <div class="help-section">
+        <div class="help-section-title">누락·오류 제보</div>
+        <div class="help-item">
+          <span class="help-icon">✏️</span>
+          <span class="help-desc">
+            지도에 없는 주유소, 잘못된 정보가 있다면 <b>+ 제보</b> 버튼을 눌러 알려주세요.
+            지도에서 위치를 직접 찍거나 주소를 입력하고, 사진도 첨부할 수 있습니다.
+          </span>
+        </div>
+        <div class="help-item">
+          <span class="help-icon">✉️</span>
+          <span class="help-desc">이메일로도 신고할 수 있습니다 → <b>very-speking@naver.com</b></span>
+        </div>
+      </div>
+
+      <hr class="help-divider">
+
+      <div class="help-section">
+        <div class="help-section-title">데이터 출처</div>
+        <div class="help-item">
+          <span class="help-icon">📊</span>
+          <span class="help-desc">
+            상생카드 주유소: 광주시 공공데이터 / 온누리상품권 가맹점: 공공데이터포털 / 유가 정보: 오피넷(한국석유공사) 제공 데이터 기준.
+            데이터는 주기적으로 업데이트되며, 실제와 차이가 있을 수 있습니다.
+          </span>
+        </div>
+      </div>
+
+      <hr class="help-divider">
+
+      <div class="help-section">
+        <div class="help-section-title">공유 안내</div>
+        <div class="help-item">
+          <span class="help-icon">📢</span>
+          <span class="help-desc">
+            이 지도는 <b>주변에 자유롭게 공유</b>하셔도 됩니다.<br>
+            다만 트래픽이 몰릴 경우 서버가 불안정해질 수 있으니 양해 부탁드립니다.<br>
+            관심과 성원이 많다면 서버를 확대해 보겠습니다.
+          </span>
+        </div>
+        <div class="help-item">
+          <span class="help-icon">💬</span>
+          <span class="help-desc">
+            문의·건의사항은 언제든 환영합니다 →
+            <a href="mailto:very-speking@naver.com" style="color:#0ea5e9;font-weight:600;">very-speking@naver.com</a>
+          </span>
+        </div>
+      </div>
+
+      <button class="help-panel-close" id="helpModalClose2"
+        style="width:100%;border-radius:10px;padding:11px;font-size:14px;font-weight:600;color:#64748b;background:#f1f5f9;border:none;cursor:pointer;margin-top:4px;">
+        닫기
+      </button>
     </div>
   </div>
 
@@ -1197,6 +1370,20 @@ document.getElementById('coffeeModalClose').addEventListener('click', function()
 document.getElementById('coffeeModal').addEventListener('click', function(e) {
   if (e.target === this) this.classList.remove('open');
 });
+
+// 도움말 모달
+const helpModal = document.getElementById('helpModal');
+function openHelp() { helpModal.classList.add('open'); }
+function closeHelp() { helpModal.classList.remove('open'); }
+document.getElementById('helpBtn').addEventListener('click', openHelp);
+document.getElementById('helpModalClose').addEventListener('click', closeHelp);
+document.getElementById('helpModalClose2').addEventListener('click', closeHelp);
+helpModal.addEventListener('click', function(e) { if (e.target === this) closeHelp(); });
+// 최초 방문 시 자동 오픈
+if (!localStorage.getItem('helpSeen')) {
+  openHelp();
+  localStorage.setItem('helpSeen', '1');
+}
 </script>
 <footer style="text-align:center;padding:10px 16px;font-size:11px;color:#888;border-top:1px solid #e5e7eb;background:#fafafa;">
   v1 · 2026-03-01 · 박진감 (<a href="mailto:very-speking@naver.com" style="color:#888;">very-speking@naver.com</a>) · <a href="https://github.com/pcwin21-alt/gwangju-gas-map" target="_blank" style="color:#888;">GitHub</a>
