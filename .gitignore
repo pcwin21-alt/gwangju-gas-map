@@ -1,0 +1,24 @@
+# API 키 — 절대 커밋 금지
+.env
+
+# 대용량 중간 데이터 (output/map.html 만 배포)
+output/raw_onnuri.json
+output/raw_sangsaeng.json
+output/dedup_result.json
+output/merged_stations.json
+output/error.log
+output/test.html
+
+# Python 캐시
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# 로컬 Claude 설정
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
