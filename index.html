@@ -1346,26 +1346,21 @@ if (!localStorage.getItem('helpSeen')) {
 // 방문자 카운터 (GoatCounter)
 (function() {
   const today = new Date().toISOString().slice(0, 10).replace(/-/g, '');
-  const gcScript = document.querySelector('script[data-goatcounter]');
+  // 오늘 카운트: 스크립트 의존 없이 image pixel로 직접 전송
+  new Image().src = 'https://spectac1e.goatcounter.com/count?p=%2Fd' + today;
+  // 카운트 조회: window load 후 실행 (race condition 방지)
   function fetchCounts() {
     Promise.all([
       fetch('https://spectac1e.goatcounter.com/counter/%2Fhit.json'),
       fetch('https://spectac1e.goatcounter.com/counter/%2Fd' + today + '.json')
     ]).then(function(rs) {
-      return Promise.all(rs.map(function(r) { return r.json(); }));
+      return Promise.all(rs.map(function(r) { return r.ok ? r.json() : {count:'0'}; }));
     }).then(function(data) {
       document.getElementById('cnt-total').textContent = data[0].count || '0';
       document.getElementById('cnt-today').textContent = data[1].count || '0';
     }).catch(function() {});
   }
-  if (gcScript) {
-    gcScript.addEventListener('load', function() {
-      if (window.goatcounter && window.goatcounter.count) {
-        window.goatcounter.count({ path: '/d' + today });
-      }
-      fetchCounts();
-    });
-  }
+  window.addEventListener('load', fetchCounts);
 })();
 </script>
 <footer style="text-align:center;padding:10px 16px;font-size:11px;color:#888;border-top:1px solid #e5e7eb;background:#fafafa;">
