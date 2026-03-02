@@ -12,6 +12,11 @@
   <meta property="og:image" content="https://pcwin21-alt.github.io/gwangju-gas-map/thumbnail.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://pcwin21-alt.github.io/gwangju-gas-map/thumbnail.png">
+  <script>
+    window.goatcounter = { path: function() { return '/hit'; } };
+  </script>
+  <script data-goatcounter="https://spectac1e.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
   <script type="text/javascript"
     src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=f912bbe9346dcc939b3ecabee03a4dff&libraries=services"
     onerror="document.body.innerHTML='<div style=padding:40px;font-family:sans-serif><h2 style=color:#dc2626>카카오맵 SDK 로드 실패</h2><p style=margin-top:12px>원인: API 키 오류 또는 허용 도메인 미등록</p><ul style=margin-top:8px;line-height:2><li>카카오 개발자센터 → 앱 → 플랫폼 → Web에 <b>http://localhost:8080</b> 추가</li><li>.env의 KAKAO_MAPS_APP_KEY가 <b>JavaScript 키</b>인지 확인 (REST API 키 아님)</li></ul></div>'"></script>
@@ -1337,9 +1342,35 @@ if (!localStorage.getItem('helpSeen')) {
   openHelp();
   localStorage.setItem('helpSeen', '1');
 }
+
+// 방문자 카운터 (GoatCounter)
+(function() {
+  const today = new Date().toISOString().slice(0, 10).replace(/-/g, '');
+  const gcScript = document.querySelector('script[data-goatcounter]');
+  function fetchCounts() {
+    Promise.all([
+      fetch('https://spectac1e.goatcounter.com/counter/%2Fhit.json'),
+      fetch('https://spectac1e.goatcounter.com/counter/%2Fd' + today + '.json')
+    ]).then(function(rs) {
+      return Promise.all(rs.map(function(r) { return r.json(); }));
+    }).then(function(data) {
+      document.getElementById('cnt-total').textContent = data[0].count || '0';
+      document.getElementById('cnt-today').textContent = data[1].count || '0';
+    }).catch(function() {});
+  }
+  if (gcScript) {
+    gcScript.addEventListener('load', function() {
+      if (window.goatcounter && window.goatcounter.count) {
+        window.goatcounter.count({ path: '/d' + today });
+      }
+      fetchCounts();
+    });
+  }
+})();
 </script>
 <footer style="text-align:center;padding:10px 16px;font-size:11px;color:#888;border-top:1px solid #e5e7eb;background:#fafafa;">
-  #1 · v1 · 2026-03-01 · 박진감 (<a href="mailto:very-speking@naver.com" style="color:#888;">very-speking@naver.com</a>) · <a href="https://github.com/pcwin21-alt/gwangju-gas-map" target="_blank" style="color:#888;">GitHub</a>
+  <div style="margin-bottom:4px;">오늘 <b id="cnt-today" style="color:#334155;">-</b> · 전체 <b id="cnt-total" style="color:#334155;">-</b> 방문</div>
+  <div>#1 · v1 · 2026-03-01 · 박진감 (<a href="mailto:very-speking@naver.com" style="color:#888;">very-speking@naver.com</a>) · <a href="https://github.com/pcwin21-alt/gwangju-gas-map" target="_blank" style="color:#888;">GitHub</a></div>
 </footer>
 </body>
 </html>
