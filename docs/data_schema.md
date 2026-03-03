@@ -30,7 +30,8 @@ JSON Array — 각 원소가 주유소 1개.
 | 값 | 의미 |
 |----|------|
 | `"saengsaeng"` | gwangju.go.kr API 또는 공공데이터포털 상생카드 CSV |
-| `"onnuri"` | 공공데이터포털 온누리상품권 REST API |
+| `"onnuri"` | 공공데이터포털 온누리상품권 REST API (전통시장 한정) |
+| `"onnuri_place"` | onnuri.gift 내부 API — 주력 소스, 주소+좌표 포함 |
 
 ## 예시
 
@@ -65,8 +66,16 @@ JSON Array — 각 원소가 주유소 1개.
 
 ## 중간 파일 스키마
 
+### `/output/raw_onnuri_place.json` ⭐ 주력 온누리 소스
+onnuri.gift 내부 API 격자 스캔 결과. 주요 필드:
+- `frCd`: 가맹점 고유 코드 (중복 제거 기준)
+- `frcsNm`: 가맹점명
+- `frcsAddr`: 도로명 주소
+- `latitude`, `longitude`: 좌표 (WGS84)
+- `paperYn`, `cardYn`, `qrYn`: 지류/카드/QR 결제 가능 여부
+
 ### `/output/raw_onnuri.json`
-공공데이터포털 API 원본 응답 배열. 필드명은 API 응답에 따라 다름.
+공공데이터포털 API 원본 응답 배열 (전통시장 한정, 주소 없음). 필드명은 API 응답에 따라 다름.
 
 ### `/output/raw_sangsaeng.json`
 gwangju.go.kr API 원본 응답 배열. 주요 필드:

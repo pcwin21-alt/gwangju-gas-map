@@ -63,17 +63,30 @@ Step 1 → 변동 감지 → Step 2 → Step 3 → Step 4(조건부) → Step 5 
 
 트리거: 워크플로우 시작 시 가장 먼저 호출
 
-#### Step 1-A: 온누리상품권
+#### Step 1-A: 온누리상품권 공공데이터 (보조, 전통시장 한정)
 
 - 스크립트: `.claude/skills/data-fetcher/scripts/fetch_onnuri.py`
 - `ONNURI_API_KEY` 없으면 즉시 에스컬레이션
 - 공공데이터포털 REST API 호출, 광주광역시 필터 파라미터 사용
-- API 참조: `.claude/skills/data-fetcher/references/api_guide.md`
+- **한계**: 전통시장·골목형 상점가 소속 가맹점만 포함, 주소 필드 없음 → Step 1-B가 주력
+- API 참조: `.claude/skills/data-fetcher/references/api_guide.md` §1
 - 결과 저장: `/output/raw_onnuri.json`
 - 성공 기준: 레코드 1건 이상
 - 실패 시: 자동 재시도 최대 3회 → 에스컬레이션
 
-#### Step 1-B: 광주상생카드
+#### Step 1-B: 온누리 플레이스 (onnuri.gift 내부 API) ⭐ 주력 소스
+
+- 스크립트: `.claude/skills/data-fetcher/scripts/fetch_onnuri_place.py`
+- **비공개 내부 API** — onnuri.gift 사이트가 내부적으로 사용하는 엔드포인트
+  (`POST https://onnuri.gift/api/v1/place/search`)
+- 반경 1km 고정이므로 광주 전체를 1.5km 격자(~300점)로 스캔
+- `frCd` 기준 중복 제거
+- 결과 저장: `/output/raw_onnuri_place.json`
+- 성공 기준: 50건 이상 (광주 기준 100건 내외 정상)
+- API 구조 변경 감지 시: 에스컬레이션 후 DevTools 재추적 필요
+- API 참조: `.claude/skills/data-fetcher/references/api_guide.md` §4
+
+#### Step 1-C: 광주상생카드
 
 - 스크립트: `.claude/skills/data-fetcher/scripts/fetch_sangsaeng.py`
 - **1차**: `https://www.gwangju.go.kr/pg/getGjCardList.do` (POST)
