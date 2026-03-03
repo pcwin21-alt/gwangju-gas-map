@@ -546,6 +546,13 @@
     .react-item.voted .react-item-count { color: #16a34a; }
     .react-comment-area { margin-top: 16px; border-top: 1px solid #f1f5f9; padding-top: 14px; }
     .react-comment-label { font-size: 13px; font-weight: 600; color: #475569; margin-bottom: 8px; }
+    .react-comment-fields { display: flex; gap: 6px; margin-bottom: 8px; }
+    .react-nick-input, .react-pw-input {
+      flex: 1; border: 1.5px solid #e2e8f0; border-radius: 8px;
+      padding: 8px 10px; font-size: 12px; color: #1e293b; outline: none;
+      box-sizing: border-box; font-family: inherit; min-width: 0;
+    }
+    .react-nick-input:focus, .react-pw-input:focus { border-color: #818cf8; }
     .react-comment-input {
       width: 100%; border: 1.5px solid #e2e8f0; border-radius: 10px;
       padding: 10px 12px; font-size: 13px; color: #1e293b; resize: none;
@@ -571,12 +578,33 @@
     .react-only-comment-btn:hover { border-color: #818cf8; color: #6366f1; background: #f5f3ff; }
     .react-clist-wrap { margin-top: 16px; border-top: 1px solid #f1f5f9; padding-top: 14px; }
     .react-clist-title { font-size: 13px; font-weight: 700; color: #475569; margin-bottom: 10px; }
-    .react-clist { max-height: 200px; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; }
+    .react-clist { max-height: 220px; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; }
     .react-clist-item { display: flex; gap: 8px; padding: 9px 12px; background: #f8fafc; border-radius: 10px; }
     .react-clist-emoji { font-size: 16px; flex-shrink: 0; line-height: 1.4; }
     .react-clist-body { flex: 1; min-width: 0; }
+    .react-clist-nick-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px; }
+    .react-clist-nick { font-size: 12px; font-weight: 700; color: #6366f1; }
     .react-clist-text { font-size: 13px; color: #1e293b; word-break: break-all; line-height: 1.5; }
     .react-clist-meta { font-size: 11px; color: #94a3b8; margin-top: 3px; }
+    .react-del-btn {
+      padding: 2px 7px; border-radius: 5px; border: 1px solid #e2e8f0;
+      background: #fff; color: #94a3b8; font-size: 10px; cursor: pointer; flex-shrink: 0;
+    }
+    .react-del-btn:hover { border-color: #f87171; color: #ef4444; }
+    .react-del-confirm { display: none; align-items: center; gap: 5px; margin-top: 6px; }
+    .react-del-pw {
+      flex: 1; border: 1.5px solid #e2e8f0; border-radius: 6px;
+      padding: 5px 8px; font-size: 11px; outline: none; min-width: 0;
+    }
+    .react-del-pw:focus { border-color: #f87171; }
+    .react-del-ok {
+      padding: 5px 9px; border-radius: 6px; border: none;
+      background: #ef4444; color: #fff; font-size: 11px; font-weight: 700; cursor: pointer; flex-shrink: 0;
+    }
+    .react-del-cancel {
+      padding: 5px 9px; border-radius: 6px; border: 1px solid #e2e8f0;
+      background: #fff; color: #64748b; font-size: 11px; cursor: pointer; flex-shrink: 0;
+    }
     .react-clist-empty, .react-clist-loading { font-size: 13px; color: #94a3b8; text-align: center; padding: 16px 0; }
   </style>
 </head>
@@ -826,10 +854,14 @@
       </div>
       <button class="react-only-comment-btn" id="reactOnlyCommentBtn">✏️ 반응 없이 댓글만 남기기</button>
       <div class="react-comment-area" id="reactCommentArea" style="display:none">
-        <div class="react-comment-label">💬 한 마디 남겨주세요 (선택)</div>
+        <div class="react-comment-label">💬 한 마디 남겨주세요</div>
+        <div class="react-comment-fields">
+          <input type="text" class="react-nick-input" id="reactNickInput" placeholder="닉네임 (미입력 시 익명)" maxlength="20">
+          <input type="password" class="react-pw-input" id="reactPwInput" placeholder="비밀번호 (삭제 시 사용)" maxlength="30">
+        </div>
         <textarea class="react-comment-input" id="reactCommentInput" placeholder="자유롭게 작성해 주세요..." maxlength="200" rows="3"></textarea>
         <div class="react-comment-actions">
-          <button class="react-comment-skip" id="reactCommentSkip">그냥 닫기</button>
+          <button class="react-comment-skip" id="reactCommentSkip">닫기</button>
           <button class="react-comment-send" id="reactCommentSend">등록하기</button>
         </div>
       </div>
@@ -1549,24 +1581,23 @@ if (!localStorage.getItem('helpSeen')) {
     { id: 'share',  path: '/react/share',  label: '주변에 알릴게요',  emoji: '📣' },
     { id: 'sad',    path: '/react/sad',    label: '아쉬워요',         emoji: '😔' },
   ];
-  var GC_BASE    = 'https://spectac1e.goatcounter.com';
-  var LS_PREFIX  = 'rx_react-';
-  var COOLDOWN   = 86400000;
-  var BIN_URL    = 'https://api.jsonbin.io/v3/b/69a6e549d0ea881f40eab2b3';
-  var BIN_KEY    = '$2a$10$YoGGB9IHL44jP7Jbdnl8guzxC3511wf6oLt0oDss/qYOm70qFnCzO';
+  var GC_BASE   = 'https://spectac1e.goatcounter.com';
+  var LS_PREFIX = 'rx_react-';
+  var COOLDOWN  = 86400000;
+  var BIN_URL   = 'https://api.jsonbin.io/v3/b/69a6e549d0ea881f40eab2b3';
+  var BIN_KEY   = '$2a$10$YoGGB9IHL44jP7Jbdnl8guzxC3511wf6oLt0oDss/qYOm70qFnCzO';
   var selectedReact = null;
 
+  function uid() { return Date.now().toString(36) + Math.random().toString(36).slice(2, 6); }
   function encPath(p) { return p.split('/').map(encodeURIComponent).join('%2F'); }
-
   function esc(s) {
     return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
   }
-
   function relTime(ts) {
     var d = Date.now() - ts;
     if (d < 60000)    return '방금';
-    if (d < 3600000)  return Math.floor(d / 60000)   + '분 전';
-    if (d < 86400000) return Math.floor(d / 3600000)  + '시간 전';
+    if (d < 3600000)  return Math.floor(d / 60000)  + '분 전';
+    if (d < 86400000) return Math.floor(d / 3600000) + '시간 전';
     return Math.floor(d / 86400000) + '일 전';
   }
 
@@ -1586,11 +1617,20 @@ if (!localStorage.getItem('helpSeen')) {
       return;
     }
     el.innerHTML = list.slice().reverse().slice(0, 20).map(function(c) {
-      return '<div class="react-clist-item">'
-        + '<span class="react-clist-emoji">' + esc(c.emoji || '') + '</span>'
+      return '<div class="react-clist-item" data-id="' + esc(c.id || '') + '">'
+        + '<span class="react-clist-emoji">' + esc(c.emoji || '💬') + '</span>'
         + '<div class="react-clist-body">'
+        + '<div class="react-clist-nick-row">'
+        + '<span class="react-clist-nick">' + esc(c.nick || '익명') + '</span>'
+        + '<button class="react-del-btn">삭제</button>'
+        + '</div>'
         + (c.text ? '<div class="react-clist-text">' + esc(c.text) + '</div>' : '')
         + '<div class="react-clist-meta">' + esc(c.label) + ' · ' + relTime(c.ts) + '</div>'
+        + '<div class="react-del-confirm" style="display:none">'
+        + '<input type="password" class="react-del-pw" placeholder="비밀번호 입력">'
+        + '<button class="react-del-ok">확인</button>'
+        + '<button class="react-del-cancel">취소</button>'
+        + '</div>'
         + '</div></div>';
     }).join('');
   }
@@ -1605,17 +1645,43 @@ if (!localStorage.getItem('helpSeen')) {
       });
   }
 
-  function saveComment(reaction, text) {
+  function saveComment(reaction, nick, pw, text) {
+    var entry = {
+      id: uid(), emoji: reaction.emoji, label: reaction.label,
+      nick: nick || '익명', pw: btoa(unescape(encodeURIComponent(pw))),
+      text: text, ts: Date.now()
+    };
     fetch(BIN_URL + '/latest', { headers: { 'X-Master-Key': BIN_KEY } })
       .then(function(r) { return r.ok ? r.json() : null; })
       .then(function(d) {
         var list = (d && d.record && d.record.comments) ? d.record.comments : [];
-        list.push({ emoji: reaction.emoji, label: reaction.label, text: text, ts: Date.now() });
+        list.push(entry);
         if (list.length > 50) list = list.slice(-50);
         return fetch(BIN_URL, {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json', 'X-Master-Key': BIN_KEY },
           body: JSON.stringify({ comments: list }),
+        });
+      })
+      .then(function(r) { return r && r.ok ? r.json() : null; })
+      .then(function(d) { if (d && d.record) renderComments(d.record.comments); })
+      .catch(function() {});
+  }
+
+  function deleteComment(id, pw) {
+    fetch(BIN_URL + '/latest', { headers: { 'X-Master-Key': BIN_KEY } })
+      .then(function(r) { return r.ok ? r.json() : null; })
+      .then(function(d) {
+        var list = (d && d.record && d.record.comments) ? d.record.comments : [];
+        var target = list.filter(function(c) { return c.id === id; })[0];
+        if (!target) return null;
+        var encoded = btoa(unescape(encodeURIComponent(pw)));
+        if (encoded !== target.pw) { alert('비밀번호가 맞지 않아요.'); return null; }
+        var newList = list.filter(function(c) { return c.id !== id; });
+        return fetch(BIN_URL, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json', 'X-Master-Key': BIN_KEY },
+          body: JSON.stringify({ comments: newList }),
         });
       })
       .then(function(r) { return r && r.ok ? r.json() : null; })
@@ -1646,6 +1712,8 @@ if (!localStorage.getItem('helpSeen')) {
       countEl.textContent = isNaN(cur) ? 1 : cur + 1;
     }
     selectedReact = item;
+    document.getElementById('reactNickInput').value = '';
+    document.getElementById('reactPwInput').value = '';
     document.getElementById('reactCommentInput').value = '';
     document.getElementById('reactCommentArea').style.display = 'block';
   }
@@ -1655,6 +1723,7 @@ if (!localStorage.getItem('helpSeen')) {
     document.getElementById('reactCommentArea').style.display = 'none';
   }
 
+  // 패널 열기
   document.getElementById('reactFloatBtn').addEventListener('click', function() {
     document.getElementById('reactPanel').classList.add('open');
     loadComments();
@@ -1663,18 +1732,50 @@ if (!localStorage.getItem('helpSeen')) {
   document.getElementById('reactPanel').addEventListener('click', function(e) {
     if (e.target === this) closeReactPanel();
   });
+
+  // 댓글만 남기기 버튼
   document.getElementById('reactOnlyCommentBtn').addEventListener('click', function() {
     selectedReact = null;
+    document.getElementById('reactNickInput').value = '';
+    document.getElementById('reactPwInput').value = '';
     document.getElementById('reactCommentInput').value = '';
     document.getElementById('reactCommentArea').style.display = 'block';
   });
-  document.getElementById('reactCommentSkip').addEventListener('click', closeReactPanel);
-  document.getElementById('reactCommentSend').addEventListener('click', function() {
-    var text = document.getElementById('reactCommentInput').value.trim();
-    var reaction = selectedReact || { emoji: '💬', label: '댓글' };
-    if (text) saveComment(reaction, text);
-    closeReactPanel();
+
+  // 닫기 (댓글 입력창만 닫음, 패널 유지)
+  document.getElementById('reactCommentSkip').addEventListener('click', function() {
+    document.getElementById('reactCommentArea').style.display = 'none';
   });
+
+  // 등록하기 (패널 닫지 않음)
+  document.getElementById('reactCommentSend').addEventListener('click', function() {
+    var nick = document.getElementById('reactNickInput').value.trim();
+    var pw   = document.getElementById('reactPwInput').value;
+    var text = document.getElementById('reactCommentInput').value.trim();
+    if (!text) return;
+    var reaction = selectedReact || { emoji: '💬', label: '댓글' };
+    saveComment(reaction, nick, pw, text);
+    document.getElementById('reactCommentArea').style.display = 'none';
+    selectedReact = null;
+  });
+
+  // 삭제 버튼 이벤트 (이벤트 위임)
+  document.getElementById('reactClist').addEventListener('click', function(e) {
+    var t = e.target;
+    if (t.classList.contains('react-del-btn')) {
+      var confirm = t.closest('.react-clist-item').querySelector('.react-del-confirm');
+      confirm.style.display = confirm.style.display === 'none' ? 'flex' : 'none';
+    }
+    if (t.classList.contains('react-del-cancel')) {
+      t.closest('.react-del-confirm').style.display = 'none';
+    }
+    if (t.classList.contains('react-del-ok')) {
+      var item = t.closest('.react-clist-item');
+      var pw   = item.querySelector('.react-del-pw').value;
+      deleteComment(item.dataset.id, pw);
+    }
+  });
+
   ITEMS.forEach(function(item) {
     document.getElementById('ri-' + item.id).addEventListener('click', function() {
       vote(item);
