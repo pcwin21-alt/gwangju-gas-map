@@ -773,6 +773,51 @@ const map = new kakao.maps.Map(document.getElementById('map'), {
   });
 })();
 
+// ── 자치구 경계 폴리곤 ───────────────────────────────
+const DISTRICT_COLORS = {
+  '동구':   '#f59e0b',
+  '서구':   '#22c55e',
+  '남구':   '#06b6d4',
+  '북구':   '#8b5cf6',
+  '광산구': '#f97316',
+};
+
+const districtPolygonMap = {};
+
+function setDistrictHighlight(districtName) {
+  for (const polygons of Object.values(districtPolygonMap)) {
+    polygons.forEach(p => p.setOptions({ fillOpacity: 0 }));
+  }
+  if (districtName !== 'all' && districtPolygonMap[districtName]) {
+    districtPolygonMap[districtName].forEach(p => p.setOptions({ fillOpacity: 0.17 }));
+  }
+}
+
+fetch('https://raw.githubusercontent.com/raqoon886/Local_HangJeongDong/master/hangjeongdong_광주광역시.geojson')
+  .then(r => r.json())
+  .then(geojson => {
+    geojson.features.forEach(feature => {
+      const gu = (feature.properties.adm_nm || '').split(' ')[1];
+      const color = DISTRICT_COLORS[gu];
+      if (!color) return;
+
+      const geom = feature.geometry;
+      const rings = geom.type === 'Polygon' ? [geom.coordinates] : geom.coordinates;
+      rings.forEach(ring => {
+        const path = ring[0].map(([lng, lat]) => new kakao.maps.LatLng(lat, lng));
+        const polygon = new kakao.maps.Polygon({
+          map, path,
+          strokeWeight: 1.5, strokeColor: color, strokeOpacity: 0.6,
+          fillColor: color, fillOpacity: 0,
+        });
+        if (!districtPolygonMap[gu]) districtPolygonMap[gu] = [];
+        districtPolygonMap[gu].push(polygon);
+        kakao.maps.event.addListener(polygon, 'click', () => triggerDistrictSelect(gu));
+      });
+    });
+  })
+  .catch(() => {});
+
 // 마커 SVG 생성 (색상별)
 function markerSvg(color) {
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="36" viewBox="0 0 28 36">
@@ -959,12 +1004,18 @@ searchClear.addEventListener('click', function() {
 });
 
 // 자치구 필터
+function triggerDistrictSelect(districtName) {
+  document.querySelectorAll('.district-btn').forEach(b => b.classList.remove('active'));
+  const btn = document.querySelector(`.district-btn[data-district="${districtName}"]`);
+  if (btn) btn.classList.add('active');
+  currentDistrict = districtName;
+  setDistrictHighlight(districtName);
+  applyFilters();
+}
+
 document.querySelectorAll('.district-btn').forEach(btn => {
   btn.addEventListener('click', function() {
-    document.querySelectorAll('.district-btn').forEach(b => b.classList.remove('active'));
-    this.classList.add('active');
-    currentDistrict = this.dataset.district;
-    applyFilters();
+    triggerDistrictSelect(this.dataset.district);
   });
 });
 
@@ -1012,6 +1063,7 @@ document.getElementById('resetBtn').addEventListener('click', function() {
   document.querySelectorAll('.district-btn').forEach(b => b.classList.remove('active'));
   document.querySelector('.district-btn[data-district="all"]').classList.add('active');
   currentDistrict = 'all';
+  setDistrictHighlight('all');
   clearRankMapOverlays();
   applyFilters();
 });
