@@ -1682,58 +1682,10 @@
     ]
   },
   {
-    "name": "메가엠지씨커피 광주유촌점",
-    "address": "광주광역시 서구 상무버들로 24 (유촌동)",
-    "lat": 35.164596,
-    "lng": 126.860809,
-    "payment_types": [
-      "onnuri"
-    ],
-    "source": [
-      "onnuri_place"
-    ]
-  },
-  {
-    "name": "GS25광주유탑점",
-    "address": "광주광역시 서구 내방로 349 (화정동)",
-    "lat": 35.157713,
-    "lng": 126.878575,
-    "payment_types": [
-      "onnuri"
-    ],
-    "source": [
-      "onnuri_place"
-    ]
-  },
-  {
     "name": "에스케이신안석유",
     "address": "광주광역시 북구 중흥로7번길 15 (임동)",
     "lat": 35.166299,
     "lng": 126.894879,
-    "payment_types": [
-      "onnuri"
-    ],
-    "source": [
-      "onnuri_place"
-    ]
-  },
-  {
-    "name": "이마트24 광주유정점 ",
-    "address": "광주광역시 동구 무등로306번길 35-1 (계림동)",
-    "lat": 35.159232,
-    "lng": 126.914797,
-    "payment_types": [
-      "onnuri"
-    ],
-    "source": [
-      "onnuri_place"
-    ]
-  },
-  {
-    "name": "공주유과",
-    "address": "광주광역시 동구 제봉로184번길 15-1 (대인동)",
-    "lat": 35.153791,
-    "lng": 126.918239,
     "payment_types": [
       "onnuri"
     ],
@@ -1794,18 +1746,6 @@
     "address": "광주광역시 광산구 하남대로 364 (신가동)",
     "lat": 35.177982,
     "lng": 126.833385,
-    "payment_types": [
-      "onnuri"
-    ],
-    "source": [
-      "onnuri_place"
-    ]
-  },
-  {
-    "name": "쎄븐일레븐 광주유덕점 ",
-    "address": "광주광역시 서구 유덕로6번길 16 (유촌동)",
-    "lat": 35.165725,
-    "lng": 126.854361,
     "payment_types": [
       "onnuri"
     ],
