@@ -562,6 +562,13 @@
       background: #6366f1; color: #fff; font-size: 12px; font-weight: 700; cursor: pointer;
     }
     .react-comment-send:hover { background: #4f46e5; }
+    .react-only-comment-btn {
+      display: block; width: 100%; margin-top: 10px;
+      padding: 9px; border-radius: 10px; border: 1.5px dashed #cbd5e1;
+      background: #fff; color: #64748b; font-size: 12px; font-weight: 600;
+      cursor: pointer; transition: all 0.12s; text-align: center;
+    }
+    .react-only-comment-btn:hover { border-color: #818cf8; color: #6366f1; background: #f5f3ff; }
     .react-clist-wrap { margin-top: 16px; border-top: 1px solid #f1f5f9; padding-top: 14px; }
     .react-clist-title { font-size: 13px; font-weight: 700; color: #475569; margin-bottom: 10px; }
     .react-clist { max-height: 200px; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; }
@@ -817,6 +824,7 @@
           <span class="react-item-count" id="rc-sad">-</span>
         </div>
       </div>
+      <button class="react-only-comment-btn" id="reactOnlyCommentBtn">✏️ 반응 없이 댓글만 남기기</button>
       <div class="react-comment-area" id="reactCommentArea" style="display:none">
         <div class="react-comment-label">💬 한 마디 남겨주세요 (선택)</div>
         <textarea class="react-comment-input" id="reactCommentInput" placeholder="자유롭게 작성해 주세요..." maxlength="200" rows="3"></textarea>
@@ -1655,10 +1663,16 @@ if (!localStorage.getItem('helpSeen')) {
   document.getElementById('reactPanel').addEventListener('click', function(e) {
     if (e.target === this) closeReactPanel();
   });
+  document.getElementById('reactOnlyCommentBtn').addEventListener('click', function() {
+    selectedReact = null;
+    document.getElementById('reactCommentInput').value = '';
+    document.getElementById('reactCommentArea').style.display = 'block';
+  });
   document.getElementById('reactCommentSkip').addEventListener('click', closeReactPanel);
   document.getElementById('reactCommentSend').addEventListener('click', function() {
     var text = document.getElementById('reactCommentInput').value.trim();
-    if (selectedReact) saveComment(selectedReact, text);
+    var reaction = selectedReact || { emoji: '💬', label: '댓글' };
+    if (text) saveComment(reaction, text);
     closeReactPanel();
   });
   ITEMS.forEach(function(item) {
