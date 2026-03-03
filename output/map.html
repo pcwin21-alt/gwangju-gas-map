@@ -496,7 +496,7 @@
     .help-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
     /* 반응 버튼 & 패널 */
     .react-float-btn {
-      position: absolute; bottom: 12px; left: 12px; z-index: 100;
+      position: absolute; top: 50px; right: 10px; z-index: 100;
       display: inline-flex; align-items: center; gap: 5px;
       padding: 7px 13px; border-radius: 20px; border: none;
       background: rgba(99, 102, 241, 0.88); color: #fff;
@@ -544,6 +544,24 @@
     .react-item-label { font-size: 14px; font-weight: 600; color: #1e293b; }
     .react-item-count { font-size: 13px; font-weight: 700; color: #64748b; min-width: 24px; text-align: right; }
     .react-item.voted .react-item-count { color: #16a34a; }
+    .react-comment-area { margin-top: 16px; border-top: 1px solid #f1f5f9; padding-top: 14px; }
+    .react-comment-label { font-size: 13px; font-weight: 600; color: #475569; margin-bottom: 8px; }
+    .react-comment-input {
+      width: 100%; border: 1.5px solid #e2e8f0; border-radius: 10px;
+      padding: 10px 12px; font-size: 13px; color: #1e293b; resize: none;
+      box-sizing: border-box; outline: none; font-family: inherit;
+    }
+    .react-comment-input:focus { border-color: #818cf8; }
+    .react-comment-actions { display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end; }
+    .react-comment-skip {
+      padding: 7px 14px; border-radius: 8px; border: 1.5px solid #e2e8f0;
+      background: #fff; color: #64748b; font-size: 12px; font-weight: 600; cursor: pointer;
+    }
+    .react-comment-send {
+      padding: 7px 14px; border-radius: 8px; border: none;
+      background: #6366f1; color: #fff; font-size: 12px; font-weight: 700; cursor: pointer;
+    }
+    .react-comment-send:hover { background: #4f46e5; }
   </style>
 </head>
 <body>
@@ -781,6 +799,21 @@
             <span class="react-item-label">주변에 알릴게요</span>
           </div>
           <span class="react-item-count" id="rc-share">-</span>
+        </div>
+        <div class="react-item" id="ri-sad" data-path="/react/sad">
+          <div class="react-item-left">
+            <span class="react-item-emoji">😔</span>
+            <span class="react-item-label">아쉬워요</span>
+          </div>
+          <span class="react-item-count" id="rc-sad">-</span>
+        </div>
+      </div>
+      <div class="react-comment-area" id="reactCommentArea" style="display:none">
+        <div class="react-comment-label">💬 한 마디 남겨주세요 (선택)</div>
+        <textarea class="react-comment-input" id="reactCommentInput" placeholder="자유롭게 작성해 주세요..." maxlength="300" rows="3"></textarea>
+        <div class="react-comment-actions">
+          <button class="react-comment-skip" id="reactCommentSkip">그냥 닫기</button>
+          <button class="react-comment-send" id="reactCommentSend">이메일로 보내기</button>
         </div>
       </div>
     </div>
@@ -1488,9 +1521,10 @@ if (!localStorage.getItem('helpSeen')) {
 // 반응 패널
 (function() {
   const ITEMS = [
-    { id: 'useful', path: '/react/useful' },
-    { id: 'fire',   path: '/react/fire'   },
-    { id: 'share',  path: '/react/share'  },
+    { id: 'useful', path: '/react/useful', label: '도움됐어요 ✅' },
+    { id: 'fire',   path: '/react/fire',   label: '더 많이 필요해요 🔥' },
+    { id: 'share',  path: '/react/share',  label: '주변에 알릴게요 📣' },
+    { id: 'sad',    path: '/react/sad',    label: '아쉬워요 😔' },
   ];
   const GC_BASE   = 'https://spectac1e.goatcounter.com';
   const LS_PREFIX = 'rx_react-';
@@ -1518,6 +1552,8 @@ if (!localStorage.getItem('helpSeen')) {
     });
   }
 
+  var selectedReactLabel = '';
+
   function vote(item) {
     var now = Date.now();
     var ts  = parseInt(localStorage.getItem(LS_PREFIX + item.id) || '0', 10);
@@ -1530,16 +1566,34 @@ if (!localStorage.getItem('helpSeen')) {
       var cur = parseInt(countEl.textContent, 10);
       countEl.textContent = isNaN(cur) ? 1 : cur + 1;
     }
+    selectedReactLabel = item.label;
+    document.getElementById('reactCommentInput').value = '';
+    document.getElementById('reactCommentArea').style.display = 'block';
+  }
+
+  function closeReactPanel() {
+    document.getElementById('reactPanel').classList.remove('open');
+    document.getElementById('reactCommentArea').style.display = 'none';
   }
 
   document.getElementById('reactFloatBtn').addEventListener('click', function() {
     document.getElementById('reactPanel').classList.add('open');
   });
-  document.getElementById('reactPanelClose').addEventListener('click', function() {
-    document.getElementById('reactPanel').classList.remove('open');
-  });
+  document.getElementById('reactPanelClose').addEventListener('click', closeReactPanel);
   document.getElementById('reactPanel').addEventListener('click', function(e) {
-    if (e.target === this) this.classList.remove('open');
+    if (e.target === this) closeReactPanel();
+  });
+  document.getElementById('reactCommentSkip').addEventListener('click', closeReactPanel);
+  document.getElementById('reactCommentSend').addEventListener('click', function() {
+    var comment = document.getElementById('reactCommentInput').value.trim();
+    var subject = encodeURIComponent('[주유소지도] 피드백 — ' + selectedReactLabel);
+    var body = encodeURIComponent(
+      '반응: ' + selectedReactLabel + '\n\n' +
+      '한 마디:\n' + (comment || '(내용 없음)') + '\n\n' +
+      '— 광주 상생·온누리 주유소 지도에서 보냄'
+    );
+    window.open('mailto:very-speking@naver.com?subject=' + subject + '&body=' + body, '_blank');
+    closeReactPanel();
   });
   ITEMS.forEach(function(item) {
     document.getElementById('ri-' + item.id).addEventListener('click', function() {
