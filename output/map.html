@@ -1001,9 +1001,9 @@ function markerSvg(color) {
 }
 
 const markerImages = {
-  saengsaeng: new kakao.maps.MarkerImage(markerSvg(COLOR.saengsaeng), new kakao.maps.Size(28, 36)),
-  onnuri:     new kakao.maps.MarkerImage(markerSvg(COLOR.onnuri),     new kakao.maps.Size(28, 36)),
-  both:       new kakao.maps.MarkerImage(markerSvg(COLOR.both),       new kakao.maps.Size(28, 36)),
+  saengsaeng: new kakao.maps.MarkerImage(markerSvg(COLOR.saengsaeng), new kakao.maps.Size(18, 23), { offset: new kakao.maps.Point(9, 23) }),
+  onnuri:     new kakao.maps.MarkerImage(markerSvg(COLOR.onnuri),     new kakao.maps.Size(18, 23), { offset: new kakao.maps.Point(9, 23) }),
+  both:       new kakao.maps.MarkerImage(markerSvg(COLOR.both),       new kakao.maps.Size(18, 23), { offset: new kakao.maps.Point(9, 23) }),
 };
 
 function getMarkerType(station) {
