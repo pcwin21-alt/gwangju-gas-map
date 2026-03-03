@@ -494,6 +494,56 @@
     .help-dot-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 4px; }
     .help-dot-item { display: flex; align-items: center; gap: 5px; font-size: 12px; color: #475569; }
     .help-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+    /* 반응 버튼 & 패널 */
+    .react-float-btn {
+      position: absolute; bottom: 12px; left: 12px; z-index: 100;
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 7px 13px; border-radius: 20px; border: none;
+      background: rgba(99, 102, 241, 0.88); color: #fff;
+      font-size: 12px; font-weight: 700; white-space: nowrap;
+      cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.22);
+      backdrop-filter: blur(4px); transition: all 0.15s;
+    }
+    .react-float-btn:hover { background: rgba(79, 70, 229, 0.95); }
+    .react-panel {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,0.45); z-index: 300;
+      align-items: flex-end; justify-content: center;
+    }
+    .react-panel.open { display: flex; }
+    @media (min-width: 480px) { .react-panel { align-items: center; } }
+    .react-panel-box {
+      background: #fff; border-radius: 20px 20px 0 0;
+      width: 100%; max-width: 480px; padding: 20px 20px 32px;
+      box-shadow: 0 -8px 40px rgba(0,0,0,0.18);
+    }
+    @media (min-width: 480px) { .react-panel-box { border-radius: 20px; } }
+    .react-panel-header {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 14px;
+    }
+    .react-panel-header h3 { margin: 0; font-size: 16px; font-weight: 700; color: #1e293b; }
+    .react-panel-close {
+      background: none; border: none; cursor: pointer;
+      font-size: 20px; color: #94a3b8; padding: 0 4px;
+    }
+    .react-notice {
+      background: #f0f9ff; border-radius: 10px; padding: 10px 13px;
+      font-size: 12px; color: #0369a1; margin-bottom: 16px; line-height: 1.55;
+    }
+    .react-items { display: flex; flex-direction: column; gap: 10px; }
+    .react-item {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 15px; border-radius: 12px; border: 1.5px solid #e2e8f0;
+      cursor: pointer; transition: all 0.12s; background: #fff;
+    }
+    .react-item:hover { border-color: #818cf8; background: #f5f3ff; }
+    .react-item.voted { border-color: #22c55e; background: #f0fdf4; cursor: default; }
+    .react-item-left { display: flex; align-items: center; gap: 10px; }
+    .react-item-emoji { font-size: 22px; }
+    .react-item-label { font-size: 14px; font-weight: 600; color: #1e293b; }
+    .react-item-count { font-size: 13px; font-weight: 700; color: #64748b; min-width: 24px; text-align: right; }
+    .react-item.voted .react-item-count { color: #16a34a; }
   </style>
 </head>
 <body>
@@ -696,6 +746,43 @@
     <div class="report-banner" id="reportBanner" style="display:none">
       📍 제보할 주유소 위치를 지도에서 클릭하세요
       <button class="report-banner-cancel" id="reportBannerCancel">취소</button>
+    </div>
+    <button class="react-float-btn" id="reactFloatBtn">💬 반응 남기기</button>
+  </div>
+  <div class="react-panel" id="reactPanel">
+    <div class="react-panel-box">
+      <div class="react-panel-header">
+        <h3>이 지도, 어떠셨나요?</h3>
+        <button class="react-panel-close" id="reactPanelClose">✕</button>
+      </div>
+      <div class="react-notice">
+        🚀 <b>초기 버전 운영 중</b> — 현재 서버 용량이 충분합니다.<br>
+        이용자가 많아지면 기능을 확장할 예정이에요.<br>
+        지도가 필요하셨다면 아래 버튼을 눌러주세요!
+      </div>
+      <div class="react-items">
+        <div class="react-item" id="ri-useful" data-path="/react/useful">
+          <div class="react-item-left">
+            <span class="react-item-emoji">✅</span>
+            <span class="react-item-label">도움됐어요</span>
+          </div>
+          <span class="react-item-count" id="rc-useful">-</span>
+        </div>
+        <div class="react-item" id="ri-fire" data-path="/react/fire">
+          <div class="react-item-left">
+            <span class="react-item-emoji">🔥</span>
+            <span class="react-item-label">더 많이 필요해요</span>
+          </div>
+          <span class="react-item-count" id="rc-fire">-</span>
+        </div>
+        <div class="react-item" id="ri-share" data-path="/react/share">
+          <div class="react-item-left">
+            <span class="react-item-emoji">📣</span>
+            <span class="react-item-label">주변에 알릴게요</span>
+          </div>
+          <span class="react-item-count" id="rc-share">-</span>
+        </div>
+      </div>
     </div>
   </div>
   <footer style="text-align:center;padding:6px 16px;font-size:11px;color:#888;border-top:1px solid #e5e7eb;background:#fafafa;flex-shrink:0;">
@@ -1397,6 +1484,74 @@ if (!localStorage.getItem('helpSeen')) {
   openHelp();
   localStorage.setItem('helpSeen', '1');
 }
+
+// 반응 패널
+(function() {
+  const ITEMS = [
+    { id: 'useful', path: '/react/useful' },
+    { id: 'fire',   path: '/react/fire'   },
+    { id: 'share',  path: '/react/share'  },
+  ];
+  const GC_BASE   = 'https://spectac1e.goatcounter.com';
+  const LS_PREFIX = 'rx_react-';
+  const COOLDOWN  = 86400000; // 24h
+
+  function encPath(p) { return p.split('/').map(encodeURIComponent).join('%2F'); }
+
+  function loadCount(id, path) {
+    fetch(GC_BASE + '/counter/' + encPath(path) + '.json')
+      .then(function(r) { return r.ok ? r.json() : { count: '-' }; })
+      .then(function(d) {
+        var el = document.getElementById('rc-' + id);
+        if (el) el.textContent = d.count || '0';
+      })
+      .catch(function() {});
+  }
+
+  function restoreVoted() {
+    var now = Date.now();
+    ITEMS.forEach(function(item) {
+      var ts = parseInt(localStorage.getItem(LS_PREFIX + item.id) || '0', 10);
+      if (ts && now - ts < COOLDOWN) {
+        document.getElementById('ri-' + item.id).classList.add('voted');
+      }
+    });
+  }
+
+  function vote(item) {
+    var now = Date.now();
+    var ts  = parseInt(localStorage.getItem(LS_PREFIX + item.id) || '0', 10);
+    if (ts && now - ts < COOLDOWN) return;
+    new Image().src = GC_BASE + '/count?p=' + encodeURIComponent(item.path);
+    localStorage.setItem(LS_PREFIX + item.id, String(now));
+    document.getElementById('ri-' + item.id).classList.add('voted');
+    var countEl = document.getElementById('rc-' + item.id);
+    if (countEl) {
+      var cur = parseInt(countEl.textContent, 10);
+      countEl.textContent = isNaN(cur) ? 1 : cur + 1;
+    }
+  }
+
+  document.getElementById('reactFloatBtn').addEventListener('click', function() {
+    document.getElementById('reactPanel').classList.add('open');
+  });
+  document.getElementById('reactPanelClose').addEventListener('click', function() {
+    document.getElementById('reactPanel').classList.remove('open');
+  });
+  document.getElementById('reactPanel').addEventListener('click', function(e) {
+    if (e.target === this) this.classList.remove('open');
+  });
+  ITEMS.forEach(function(item) {
+    document.getElementById('ri-' + item.id).addEventListener('click', function() {
+      vote(item);
+    });
+  });
+
+  restoreVoted();
+  window.addEventListener('load', function() {
+    ITEMS.forEach(function(item) { loadCount(item.id, item.path); });
+  });
+})();
 
 // 방문자 카운터 (GoatCounter)
 (function() {
