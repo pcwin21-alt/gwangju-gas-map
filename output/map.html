@@ -1790,7 +1790,6 @@ if (!localStorage.getItem('helpSeen')) {
   const today = new Date().toISOString().slice(0, 10).replace(/-/g, '');
   // 오늘 카운트: 스크립트 의존 없이 image pixel로 직접 전송
   new Image().src = 'https://spectac1e.goatcounter.com/count?p=%2Fd' + today;
-  // 카운트 조회: window load 후 실행 (race condition 방지)
   function fetchCounts() {
     Promise.all([
       fetch('https://spectac1e.goatcounter.com/counter/%2Fhit.json'),
@@ -1802,7 +1801,11 @@ if (!localStorage.getItem('helpSeen')) {
       document.getElementById('cnt-today').textContent = data[1].count || '0';
     }).catch(function() {});
   }
-  window.addEventListener('load', fetchCounts);
+  // hit 처리 후 2초 대기 → 첫 조회, 이후 60초마다 갱신
+  window.addEventListener('load', function() {
+    setTimeout(fetchCounts, 2000);
+    setInterval(fetchCounts, 60000);
+  });
 })();
 </script>
 </body>
