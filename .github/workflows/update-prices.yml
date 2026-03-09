@@ -1,0 +1,60 @@
+name: 오피넷 가격 자동 업데이트
+
+on:
+  schedule:
+    - cron: '0 15 * * *'  # 매일 한국시간 자정 (UTC 15:00)
+  workflow_dispatch:       # 수동 실행 가능
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 패키지 설치
+        run: pip install requests python-dotenv
+
+      - name: 가격 수집
+        env:
+          OPINET_API_KEY: ${{ secrets.OPINET_API_KEY }}
+        run: |
+          echo "OPINET_API_KEY=$OPINET_API_KEY" > .env
+          python .claude/skills/data-fetcher/scripts/fetch_prices.py
+
+      - name: map.html 가격 반영
+        run: |
+          python - <<'EOF'
+          import json, re, sys
+          sys.stdout.reconfigure(encoding='utf-8')
+
+          with open('output/gas_prices.json', encoding='utf-8') as f:
+              raw = json.load(f)
+
+          prices = {name: v['prices'] for name, v in raw.items() if v.get('prices')}
+
+          with open('output/map.html', encoding='utf-8') as f:
+              html = f.read()
+
+          new_const = 'const PRICES = ' + json.dumps(prices, ensure_ascii=False) + ';'
+          result = re.sub(r'const PRICES = \{.*?\};', new_const, html, flags=re.DOTALL)
+
+          with open('output/map.html', 'w', encoding='utf-8') as f:
+              f.write(result)
+
+          print(f'완료: {len(prices)}건 가격 반영')
+          EOF
+
+      - name: 커밋 & 푸시
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add output/map.html output/gas_prices.json
+          git diff --staged --quiet || git commit -m "chore: 오피넷 가격 자동 업데이트 $(date +'%Y-%m-%d')"
+          git push
