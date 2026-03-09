@@ -1204,12 +1204,18 @@ document.getElementById('myLocBtn').addEventListener('click', function() {
       map.setCenter(latlng);
       map.setLevel(4);
       if (myLocMarker) myLocMarker.setMap(null);
+      const myLocSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+        <circle cx="11" cy="11" r="10" fill="#0ea5e9" fill-opacity="0.25" stroke="#0ea5e9" stroke-width="1.5"/>
+        <circle cx="11" cy="11" r="6" fill="#0ea5e9" stroke="#fff" stroke-width="2"/>
+      </svg>`;
+      const myLocImg = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(myLocSvg)));
       myLocMarker = new kakao.maps.Marker({
         map,
         position: latlng,
         image: new kakao.maps.MarkerImage(
-          'https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png',
-          new kakao.maps.Size(24, 35)
+          myLocImg,
+          new kakao.maps.Size(22, 22),
+          { offset: new kakao.maps.Point(11, 11) }
         )
       });
       btn.textContent = '📍 내 위치';
