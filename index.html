@@ -772,7 +772,7 @@
       </div>
 
       <button class="report-submit-btn" id="reportSubmitBtn" disabled>
-        ✉ 이메일로 제보하기
+        📨 제보 등록하기
       </button>
       <p class="report-note">제보 내용은 운영자가 검토 후 지도에 반영됩니다</p>
 
@@ -1505,44 +1505,42 @@ document.getElementById('reportPanel').addEventListener('click', function(e) {
   if (e.target === this) closeReportPanel();
 });
 
-// 이메일 제출
-reportSubmitBtn.addEventListener('click', function() {
+// 제보 등록 (Formspree)
+reportSubmitBtn.addEventListener('click', async function() {
   const name    = reportNameInp.value.trim();
   const saeng   = document.getElementById('reportSaengsaeng').checked;
   const onnuri  = document.getElementById('reportOnnuri').checked;
   const notes   = document.getElementById('reportNotes').value.trim();
   const payment = [saeng && '광주상생카드', onnuri && '온누리상품권'].filter(Boolean).join(', ') || '미선택';
-  const body = [
-    '[광주 주유소 지도 — 새 주유소 제보]',
-    '',
-    '주유소명: ' + name,
-    '주소: '    + (reportAddress || '(주소 미확인)'),
-    '좌표: '    + reportLat.toFixed(6) + ', ' + reportLng.toFixed(6),
-    '결제수단: '+ payment,
-    notes ? '기타: ' + notes : '',
-    document.getElementById('reportFileInput').files[0]
-      ? '[첨부] 결제 영수증 사진을 이 메일에 첨부했습니다.' : '',
-    '',
-    '* 카카오맵에서 위치를 확인해 주세요:',
-    'https://map.kakao.com/link/map/' + name + ',' + reportLat.toFixed(6) + ',' + reportLng.toFixed(6),
-  ].filter(l => l !== undefined).join('\n');
+  const kakaoUrl = 'https://map.kakao.com/link/map/' + name + ',' + reportLat.toFixed(6) + ',' + reportLng.toFixed(6);
 
-  const mailUrl = 'mailto:very-speking@naver.com'
-    + '?subject=' + encodeURIComponent('[주유소 제보] ' + name)
-    + '&body='    + encodeURIComponent(body);
+  reportSubmitBtn.disabled = true;
+  reportSubmitBtn.textContent = '전송 중...';
 
-  window.open(mailUrl, '_blank');
+  try {
+    const res = await fetch('https://formspree.io/f/mjgagwkl', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        주유소명: name,
+        주소: reportAddress || '(주소 미확인)',
+        좌표: reportLat.toFixed(6) + ', ' + reportLng.toFixed(6),
+        결제수단: payment,
+        기타: notes || '없음',
+        카카오맵: kakaoUrl,
+      }),
+    });
 
-  // 사진 선택됐으면 첨부 안내 표시
-  const fileInput = document.getElementById('reportFileInput');
-  if (fileInput.files[0]) {
-    const reminder = document.getElementById('reportAttachReminder');
-    const attachImg = document.getElementById('reportAttachImg');
-    attachImg.src = URL.createObjectURL(fileInput.files[0]);
-    attachImg.style.display = 'block';
-    reminder.style.display = 'block';
-    // 패널 스크롤을 안내 영역으로
-    reminder.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    if (res.ok) {
+      reportSubmitBtn.textContent = '✅ 제보 완료!';
+      setTimeout(() => { closeReportPanel(); }, 1500);
+    } else {
+      throw new Error('서버 오류');
+    }
+  } catch (e) {
+    alert('제보 전송에 실패했습니다. 잠시 후 다시 시도해 주세요.');
+    reportSubmitBtn.disabled = false;
+    reportSubmitBtn.textContent = '📨 제보 등록하기';
   }
 });
 
