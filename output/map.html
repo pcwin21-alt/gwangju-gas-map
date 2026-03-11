@@ -1049,8 +1049,8 @@ function buildInfoHtml(station) {
 
   return `
     <div class="info-overlay">
-      <div class="name" title="클릭하면 이름 복사" onclick="copyText('${station.name.replace(/'/g, "\\'")}')">${station.name}</div>
-      <div class="address" title="클릭하면 주소 복사" onclick="copyText('${(station.address||'').replace(/'/g, "\\'")}')">${station.address}</div>
+      <div class="name" data-copy-text="${station.name.replace(/"/g, '&quot;')}" title="클릭하면 이름 복사">${station.name}</div>
+      <div class="address" data-copy-text="${(station.address||'').replace(/"/g, '&quot;')}" title="클릭하면 주소 복사">${station.address}</div>
       <div class="tags">${tags.join('')}</div>
       ${priceHtml}
     </div>`;
@@ -1368,14 +1368,36 @@ document.querySelectorAll('.rank-tab').forEach(tab => {
 
 // ── 클립보드 복사 ─────────────────────────────────────────
 let toastTimer = null;
-function copyText(text) {
-  navigator.clipboard.writeText(text).then(() => {
-    const toast = document.getElementById('copyToast');
-    toast.textContent = `"${text}" 복사됨`;
-    toast.classList.add('show');
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => toast.classList.remove('show'), 1800);
-  });
+function showCopyToast(text) {
+  const toast = document.getElementById('copyToast');
+  toast.textContent = `"${text}" 복사됨`;
+  toast.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove('show'), 1800);
+}
+
+document.addEventListener('click', function(e) {
+  const el = e.target.closest('[data-copy-text]');
+  if (!el) return;
+  e.stopPropagation();
+  const text = el.getAttribute('data-copy-text');
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(() => showCopyToast(text)).catch(() => {
+      fallbackCopy(text);
+    });
+  } else {
+    fallbackCopy(text);
+  }
+});
+
+function fallbackCopy(text) {
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.cssText = 'position:fixed;opacity:0';
+  document.body.appendChild(ta);
+  ta.select();
+  try { document.execCommand('copy'); showCopyToast(text); } catch(e) {}
+  document.body.removeChild(ta);
 }
 
 // ── 제보 기능 ────────────────────────────────────────────
