@@ -169,10 +169,23 @@
     }
     .info-overlay .name {
       font-weight: 700; font-size: 14px; color: #1e293b; margin-bottom: 4px;
+      cursor: pointer;
     }
+    .info-overlay .name:hover { color: #7c3aed; }
     .info-overlay .address {
       font-size: 12px; color: #64748b; margin-bottom: 8px; line-height: 1.4;
+      cursor: pointer;
     }
+    .info-overlay .address:hover { color: #0ea5e9; }
+    /* 복사 토스트 */
+    #copyToast {
+      position: fixed; bottom: 80px; left: 50%; transform: translateX(-50%);
+      background: rgba(30,41,59,0.88); color: #fff;
+      padding: 7px 18px; border-radius: 20px; font-size: 13px;
+      pointer-events: none; opacity: 0; transition: opacity 0.2s;
+      z-index: 9999; white-space: nowrap;
+    }
+    #copyToast.show { opacity: 1; }
     .info-overlay .tags { display: flex; flex-direction: column; gap: 3px; }
     .info-overlay .tag {
       display: inline-flex; align-items: center; gap: 5px;
@@ -873,6 +886,7 @@
       </div>
     </div>
   </div>
+  <div id="copyToast">복사됨</div>
   <footer style="text-align:center;padding:6px 16px;font-size:11px;color:#888;border-top:1px solid #e5e7eb;background:#fafafa;flex-shrink:0;">
     #1 · v1 · 2026-03-01 · 박진감 (<a href="mailto:very-speking@naver.com" style="color:#888;">very-speking@naver.com</a>) · <a href="https://github.com/pcwin21-alt/gwangju-gas-map" target="_blank" style="color:#888;">GitHub</a>
   </footer>
@@ -1035,8 +1049,8 @@ function buildInfoHtml(station) {
 
   return `
     <div class="info-overlay">
-      <div class="name">${station.name}</div>
-      <div class="address">${station.address}</div>
+      <div class="name" title="클릭하면 이름 복사" onclick="copyText('${station.name.replace(/'/g, "\\'")}')">${station.name}</div>
+      <div class="address" title="클릭하면 주소 복사" onclick="copyText('${(station.address||'').replace(/'/g, "\\'")}')">${station.address}</div>
       <div class="tags">${tags.join('')}</div>
       ${priceHtml}
     </div>`;
@@ -1351,6 +1365,18 @@ document.querySelectorAll('.rank-tab').forEach(tab => {
     buildRankList(currentFuel);
   });
 });
+
+// ── 클립보드 복사 ─────────────────────────────────────────
+let toastTimer = null;
+function copyText(text) {
+  navigator.clipboard.writeText(text).then(() => {
+    const toast = document.getElementById('copyToast');
+    toast.textContent = `"${text}" 복사됨`;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove('show'), 1800);
+  });
+}
 
 // ── 제보 기능 ────────────────────────────────────────────
 const geocoder = new kakao.maps.services.Geocoder();
