@@ -1417,29 +1417,38 @@ document.querySelectorAll('.rank-tab').forEach(tab => {
 
 // ── 클립보드 복사 ─────────────────────────────────────────
 let toastTimer = null;
-function doCopy(text, onSuccess) {
-  const show = () => {
-    const toast = document.getElementById('copyToast');
-    toast.textContent = `"${text}" 복사됨`;
-    toast.classList.add('show');
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => toast.classList.remove('show'), 1800);
-    if (onSuccess) onSuccess();
-  };
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(text).then(show).catch(() => fallbackCopy(text, show));
-  } else {
-    fallbackCopy(text, show);
-  }
+function showCopyToast(text) {
+  const toast = document.getElementById('copyToast');
+  toast.textContent = `"${text}" 복사됨`;
+  toast.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove('show'), 1800);
 }
-function fallbackCopy(text, cb) {
+function doCopy(text, onSuccess) {
+  // execCommand는 동기 방식이라 클릭 핸들러 내에서 더 안정적
   const ta = document.createElement('textarea');
   ta.value = text;
-  ta.style.cssText = 'position:fixed;opacity:0';
+  ta.style.cssText = 'position:fixed;top:0;left:0;width:2px;height:2px;padding:0;border:none;outline:none;font-size:16px;opacity:0.01;';
   document.body.appendChild(ta);
+  ta.focus();
   ta.select();
-  try { document.execCommand('copy'); cb(); } catch(e) {}
+  ta.setSelectionRange(0, 99999);
+  let ok = false;
+  try { ok = document.execCommand('copy'); } catch(e) {}
   document.body.removeChild(ta);
+
+  if (ok) {
+    showCopyToast(text);
+    if (onSuccess) onSuccess();
+  } else if (navigator.clipboard && navigator.clipboard.writeText) {
+    // execCommand 실패 시 async API 시도
+    navigator.clipboard.writeText(text).then(() => {
+      showCopyToast(text);
+      if (onSuccess) onSuccess();
+    }).catch(() => {
+      showCopyToast('복사 실패 — 텍스트를 직접 선택해 주세요');
+    });
+  }
 }
 
 // ── 제보 기능 ────────────────────────────────────────────
