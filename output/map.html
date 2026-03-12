@@ -1061,8 +1061,9 @@ function buildInfoHtml(station) {
     btn.className = 'copy-btn';
     btn.title = '복사';
     btn.innerHTML = COPY_SVG;
-    btn.addEventListener('click', e => {
+    btn.addEventListener('mousedown', e => {
       e.stopPropagation();
+      e.preventDefault(); // 포커스 이동 방지 (클립보드 접근 유지)
       doCopy(text, () => {
         btn.innerHTML = CHECK_SVG;
         btn.classList.add('copied');
@@ -1440,14 +1441,18 @@ function doCopy(text, onSuccess) {
   if (ok) {
     showCopyToast(text);
     if (onSuccess) onSuccess();
-  } else if (navigator.clipboard && navigator.clipboard.writeText) {
-    // execCommand 실패 시 async API 시도
+    return;
+  }
+  // execCommand 실패 시 async API 시도
+  if (navigator.clipboard && navigator.clipboard.writeText) {
     navigator.clipboard.writeText(text).then(() => {
       showCopyToast(text);
       if (onSuccess) onSuccess();
     }).catch(() => {
-      showCopyToast('복사 실패 — 텍스트를 직접 선택해 주세요');
+      showCopyToast('복사 실패');
     });
+  } else {
+    showCopyToast('복사 실패');
   }
 }
 
