@@ -1,9 +1,14 @@
 """
-Opinet 유가정보 수집 (하이브리드 방식)
-1단계: aroundAll — 구별 중심점 15회 호출로 광주 전체 수집
-2단계: detailById — 1단계 미매칭 중 캐시에 UNI_ID 있는 것만 보완
+Opinet 유가정보 수집 (3단계 방식)
+1단계: aroundAll(휘발유/경유) — 구별 중심점 10회 호출로 UNI_ID 수집
+2단계: detailById — 1단계 미매칭 중 캐시에 UNI_ID 있는 것 보완
+3단계: detailById — 매칭된 주유소의 전체 연료 가격(휘발유/경유/LPG) 조회
 
-총 호출: 15 + 미매칭캐시수 (최초 실행 이후 점진적으로 줄어듦)
+aroundAll D047(LPG)는 주유소 휘발유 가격을 반환하는 오류가 있어 제외.
+detailById는 해당 주유소가 실제 판매하는 연료만 정확하게 반환.
+
+총 호출: 10(aroundAll) + 보완건수 + 매칭건수(~90)
+일 8회 실행 시 최대 ~1,000회 / 일 1,500회 한도 이내
 
 실행: python scripts/fetch_prices.py
 출력: output/gas_prices.json
@@ -37,10 +42,10 @@ GU_CENTERS = {
     "동구":   (302761, 281296),
 }
 
+# aroundAll은 휘발유/경유만 사용 (D047 LPG는 오피넷 API 오류로 제외)
 FUELS = [("B027", "휘발유"), ("B034", "경유")]
-# D047(LPG) 제외: aroundAll API가 LPG 코드로 호출해도 주유소 휘발유 가격을 반환해
-# LPG 가격으로 잘못 저장되는 문제 (1739~1949원 → 실제 오토가스는 800~1200원)
 RADIUS = 15000
+PRODCD_NAME = {"B027": "휘발유", "B034": "경유", "D047": "LPG"}
 
 
 def normalize(s: str) -> str:
@@ -70,11 +75,8 @@ def fetch_detail(uni_id: str) -> dict:
     return {
         p["PRODCD"]: p["PRICE"]
         for p in oils[0].get("OIL_PRICE", [])
-        if p["PRODCD"] in ("B027", "B034", "D047")
+        if p["PRODCD"] in ("B027", "B034", "D047") and p.get("PRICE")
     }
-
-
-PRODCD_NAME = {"B027": "휘발유", "B034": "경유", "D047": "LPG"}
 
 
 def main():
@@ -85,9 +87,8 @@ def main():
     with open(ROOT / "output" / "gas_stations.json", encoding="utf-8") as f:
         stations = json.load(f)
 
-    # opinet_cache.json(searchByName으로 구축한 UNI_ID 맵) 로드
     cache_file = ROOT / "output" / "opinet_cache.json"
-    cached_ids: dict[str, str] = {}  # station_name → UNI_ID
+    cached_ids: dict[str, str] = {}
     if cache_file.exists():
         with open(cache_file, encoding="utf-8") as f:
             cache_data = json.load(f)
@@ -96,7 +97,7 @@ def main():
                 cached_ids[name] = v["uni_id"]
         print(f"캐시 로드: {len(cached_ids)}건의 UNI_ID")
 
-    # ── 1단계: aroundAll ──────────────────────────────────
+    # ── 1단계: aroundAll (휘발유/경유) ───────────────────────
     print("\n[1단계] aroundAll 수집...")
     collected: dict[str, dict] = {}  # UNI_ID → {OS_NM, prices}
     calls = 0
@@ -118,7 +119,6 @@ def main():
 
     print(f"  → {calls}회 호출, {len(collected)}개 주유소 수집")
 
-    # 이름 인덱스
     opinet_idx = {normalize(v["OS_NM"]): uid for uid, v in collected.items()}
 
     def match_by_name(name: str) -> str | None:
@@ -131,8 +131,7 @@ def main():
                     break
         return uid
 
-    # ── 2단계: detailById 보완 ────────────────────────────
-    # 1단계에서 매칭 안 됐지만 캐시에 UNI_ID 있는 것
+    # ── 2단계: detailById 보완 (미매칭 캐시) ─────────────────
     need_detail = []
     for st in stations:
         name = st["name"]
@@ -151,9 +150,31 @@ def main():
             except Exception as e:
                 print(f"  {name}: 오류 {e}")
             time.sleep(0.15)
-        print(f"  → 보완 완료")
+        print(f"  → 완료")
 
-    # ── 최종 매칭 ─────────────────────────────────────────
+    # ── 3단계: detailById로 LPG 포함 전체 가격 조회 ──────────
+    # aroundAll D047은 오류가 있으므로, 매칭된 주유소에 대해
+    # detailById를 호출하여 실제 판매 연료(LPG 포함)를 정확히 가져옴
+    matched_uids = []
+    for st in stations:
+        uid = match_by_name(st["name"])
+        if uid and uid not in [u for _, u in matched_uids]:
+            matched_uids.append((st["name"], uid))
+
+    print(f"\n[3단계] detailById LPG 포함 전체 가격 조회 ({len(matched_uids)}건)...")
+    for name, uid in matched_uids:
+        try:
+            raw = fetch_detail(uid)
+            if raw:
+                prices = {PRODCD_NAME[k]: v for k, v in raw.items()}
+                collected[uid]["prices"] = prices
+                calls += 1
+        except Exception as e:
+            print(f"  {name}: 오류 {e}")
+        time.sleep(0.1)
+    print(f"  → 완료")
+
+    # ── 최종 매칭 ─────────────────────────────────────────────
     results = {}
     matched = 0
     for st in stations:
