@@ -26,7 +26,7 @@ jobs:
           OPINET_API_KEY: ${{ secrets.OPINET_API_KEY }}
         run: |
           echo "OPINET_API_KEY=$OPINET_API_KEY" > .env
-          python .claude/skills/data-fetcher/scripts/fetch_prices.py
+          python scripts/fetch_prices.py
 
       - name: map.html 가격 반영
         run: |
