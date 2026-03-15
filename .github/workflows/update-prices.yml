@@ -58,3 +58,14 @@ jobs:
           git add output/map.html output/gas_prices.json
           git diff --staged --quiet || git commit -m "chore: 오피넷 가격 자동 업데이트 $(TZ=Asia/Seoul date +'%Y-%m-%d %H:%M KST')"
           git push
+
+      - name: index.html 준비
+        run: cp output/map.html index.html
+
+      - name: GitHub Pages 배포
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
+          publish_branch: gh-pages
+          exclude_assets: '.github,output,docs,.claude,.env,requirements.txt,env.example'
