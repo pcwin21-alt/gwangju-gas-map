@@ -1916,36 +1916,5 @@ if (!localStorage.getItem('helpSeen')) {
   });
 })();
 </script>
-<script>
-(function() {
-  var t = setInterval(function() {
-    var divs = document.querySelectorAll('body > div');
-    for (var i = 0; i < divs.length; i++) {
-      if (divs[i].style.width === '405px') {
-        var d = divs[i];
-        d.style.position = 'fixed';
-        d.style.bottom = '20px';
-        d.style.left = '20px';
-        d.style.right = 'auto';
-        d.style.top = 'auto';
-        d.style.zIndex = '9999';
-        clearInterval(t);
-        break;
-      }
-    }
-  }, 300);
-})();
-</script>
-<script
-  async
-  src="https://mvp-test-omega.vercel.app/widget.js"
-  data-project-id="cmmjapcyf00016ssno3sy45td"
-  data-api-base="https://mvp-test-omega.vercel.app"
-  data-launcher-style="mini"
-  data-launcher-label="서비스 응원하기"
-  data-launcher-subtext="작은 응원이 서비스 운영을 계속 이어가게 합니다."
-  data-launcher-icon="🧾"
-  data-bootstrap-token="eyJwcm9qZWN0SWQiOiJjbW1qYXBjeWYwMDAxNnNzbm8zc3k0NXRkIiwib3JpZ2luIjoiaHR0cHM6Ly9wY3dpbjIxLWFsdC5naXRodWIuaW8iLCJleHAiOjE4MDU1MDkwMjgsInNjb3BlIjoiYm9vdHN0cmFwIn0.7ZvA0w71qQO4f6TpHgUgfrICzroQ5eFbXrdp3VNdGxc"
-></script>
 </body>
 </html>
