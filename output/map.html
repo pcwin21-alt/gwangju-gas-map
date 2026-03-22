@@ -625,11 +625,6 @@
       background: #fff; color: #64748b; font-size: 11px; cursor: pointer; flex-shrink: 0;
     }
     .react-clist-empty, .react-clist-loading { font-size: 13px; color: #94a3b8; text-align: center; padding: 16px 0; }
-    /* mvp-test-omega 위젯 위치: 좌측 하단 */
-    iframe[src*="mvp-test-omega"] {
-      left: 20px !important;
-      right: auto !important;
-    }
   </style>
 </head>
 <body>
@@ -1919,6 +1914,26 @@ if (!localStorage.getItem('helpSeen')) {
     setTimeout(fetchCounts, 2000);
     setInterval(fetchCounts, 60000);
   });
+})();
+</script>
+<script>
+(function() {
+  var t = setInterval(function() {
+    var divs = document.querySelectorAll('body > div');
+    for (var i = 0; i < divs.length; i++) {
+      if (divs[i].style.width === '405px') {
+        var d = divs[i];
+        d.style.position = 'fixed';
+        d.style.bottom = '20px';
+        d.style.left = '20px';
+        d.style.right = 'auto';
+        d.style.top = 'auto';
+        d.style.zIndex = '9999';
+        clearInterval(t);
+        break;
+      }
+    }
+  }, 300);
 })();
 </script>
 <script
