@@ -185,6 +185,15 @@
     }
     .copy-btn:hover { color: #7c3aed; background: #f5f3ff; }
     .copy-btn.copied { color: #16a34a; }
+    .distance-row {
+      margin-bottom: 8px; padding: 6px 8px; border-radius: 8px;
+      display: flex; align-items: center; justify-content: space-between; gap: 8px;
+      background: #f0fdfa; border: 1px solid #ccfbf1;
+      font-size: 12px; color: #0f766e;
+    }
+    .distance-label { font-weight: 700; }
+    .distance-value { font-weight: 800; white-space: nowrap; color: #0f766e; }
+    .distance-value.muted { font-weight: 600; color: #64748b; }
     .route-actions {
       margin-top: 10px; padding-top: 9px; border-top: 1px solid #f1f5f9;
       display: grid; grid-template-columns: 1fr 1fr; gap: 6px;
@@ -1324,6 +1333,29 @@ function distanceKm(a, b) {
   return R * 2 * Math.atan2(Math.sqrt(x), Math.sqrt(1 - x));
 }
 
+function updateDistanceElement(el) {
+  if (!currentLocation) {
+    el.textContent = '내 위치 확인 전';
+    el.classList.add('muted');
+    return;
+  }
+  const lat = Number(el.dataset.lat);
+  const lng = Number(el.dataset.lng);
+  if (!Number.isFinite(lat) || !Number.isFinite(lng)) {
+    el.textContent = '-';
+    el.classList.add('muted');
+    return;
+  }
+  const km = distanceKm(currentLocation, { lat, lng });
+  el.textContent = formatDistance(km);
+  el.classList.remove('muted');
+}
+
+function updateDistanceDisplays() {
+  document.querySelectorAll('.distance-value[data-lat][data-lng]')
+    .forEach(updateDistanceElement);
+}
+
 function buildInfoHtml(station) {
   const pt = station.payment_types || [];
   const tags = [];
@@ -1396,12 +1428,26 @@ function buildInfoHtml(station) {
   addrRow.appendChild(addrText);
   addrRow.appendChild(makeCopyBtn(station.address || ''));
 
+  const distanceRow = document.createElement('div');
+  distanceRow.className = 'distance-row';
+  const distanceLabel = document.createElement('span');
+  distanceLabel.className = 'distance-label';
+  distanceLabel.textContent = '내 위치 직선거리';
+  const distanceValue = document.createElement('span');
+  distanceValue.className = 'distance-value muted';
+  distanceValue.dataset.lat = station.lat;
+  distanceValue.dataset.lng = station.lng;
+  distanceRow.appendChild(distanceLabel);
+  distanceRow.appendChild(distanceValue);
+  updateDistanceElement(distanceValue);
+
   const tagsEl = document.createElement('div');
   tagsEl.className = 'tags';
   tagsEl.innerHTML = tags.join('');
 
   wrap.appendChild(nameRow);
   wrap.appendChild(addrRow);
+  wrap.appendChild(distanceRow);
   wrap.appendChild(tagsEl);
   if (priceHtml) {
     const priceEl = document.createElement('div');
@@ -1605,6 +1651,8 @@ function setCurrentLocation(lat, lng, centerMap = true) {
       { offset: new kakao.maps.Point(11, 11) }
     )
   });
+  updateDistanceDisplays();
+  if (nearbyPanel && nearbyPanel.classList.contains('open')) renderNearbyList();
   return currentLocation;
 }
 
