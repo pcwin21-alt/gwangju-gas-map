@@ -8,6 +8,7 @@ on:
       - 'output/gas_stations.json'
       - 'output/gas_prices.json'
       - 'thumbnail.png'
+      - 'favicon.svg'
 
 jobs:
   deploy:
