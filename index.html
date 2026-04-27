@@ -1373,12 +1373,15 @@ function buildInfoHtml(station) {
     let lastRun = 0;
     const run = e => {
       e.stopPropagation();
-      if (!isMobileDevice()) return;
       e.preventDefault();
       const now = Date.now();
       if (now - lastRun < 650) return;
       lastRun = now;
-      action();
+      if (isMobileDevice()) {
+        action();
+        return;
+      }
+      window.location.href = el.href;
     };
     el.addEventListener('click', run);
     el.addEventListener('touchend', run, { passive: false });
@@ -1452,8 +1455,6 @@ function buildInfoHtml(station) {
   const kakaoRouteBtn = document.createElement('a');
   kakaoRouteBtn.className = 'route-btn kakao';
   kakaoRouteBtn.href = getKakaoRouteUrl(station);
-  kakaoRouteBtn.target = '_blank';
-  kakaoRouteBtn.rel = 'noopener';
   kakaoRouteBtn.textContent = '카카오맵';
   kakaoRouteBtn.title = '카카오맵 길찾기';
   bindRouteLink(kakaoRouteBtn, () => openKakaoMap(station));
@@ -1461,8 +1462,6 @@ function buildInfoHtml(station) {
   const naverRouteBtn = document.createElement('a');
   naverRouteBtn.className = 'route-btn naver';
   naverRouteBtn.href = getNaverMapWebUrl(station);
-  naverRouteBtn.target = '_blank';
-  naverRouteBtn.rel = 'noopener';
   naverRouteBtn.textContent = '네이버지도';
   naverRouteBtn.title = '네이버지도 길찾기';
   bindRouteLink(naverRouteBtn, () => openNaverMap(station));
