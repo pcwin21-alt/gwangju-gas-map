@@ -20,8 +20,6 @@
   <script type="text/javascript"
     src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=f912bbe9346dcc939b3ecabee03a4dff&libraries=services"
     onerror="document.body.innerHTML='<div style=padding:40px;font-family:sans-serif><h2 style=color:#dc2626>카카오맵 SDK 로드 실패</h2><p style=margin-top:12px>원인: API 키 오류 또는 허용 도메인 미등록</p><ul style=margin-top:8px;line-height:2><li>카카오 개발자센터 → 앱 → 플랫폼 → Web에 <b>http://localhost:8080</b> 추가</li><li>.env의 KAKAO_MAPS_APP_KEY가 <b>JavaScript 키</b>인지 확인 (REST API 키 아님)</li></ul></div>'"></script>
-  <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.8.1/kakao.min.js"
-          crossorigin="anonymous"></script>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -803,7 +801,7 @@
         <div class="help-item"><b>구 필터</b>(광산구·남구·동구·북구·서구)로 원하는 지역만 볼 수 있습니다.</div>
         <div class="help-item"><b>👑 저렴한 순위</b> → 현재 보이는 주유소 중 휘발유·경유·LPG 가격 TOP 5를 확인합니다.</div>
         <div class="help-item"><b>📍 내 위치</b> → 현재 위치를 지도 중심으로 이동합니다. (브라우저 위치 권한 필요)</div>
-        <div class="help-item"><b>길찾기</b> → 주유소 팝업에서 카카오내비 또는 네이버 내비를 바로 엽니다.</div>
+        <div class="help-item"><b>길찾기</b> → 주유소 팝업에서 카카오맵 또는 네이버지도를 바로 엽니다.</div>
         <div class="help-item"><b>주변 내보내기</b> → 내 위치 기준 가까운 주유소 링크 목록을 복사합니다.</div>
         <div class="help-item"><b>↺ 초기화</b> → 필터·검색·지도 위치를 한 번에 원래대로 되돌립니다.</div>
       </div>
@@ -903,8 +901,8 @@
         </label>
       </div>
       <div class="nearby-actions">
-        <button class="nearby-action-btn" id="copyNearbyKakao">카카오 길찾기</button>
-        <button class="nearby-action-btn" id="copyNearbyNaver">네이버 내비</button>
+        <button class="nearby-action-btn" id="copyNearbyKakao">카카오맵</button>
+        <button class="nearby-action-btn" id="copyNearbyNaver">네이버지도</button>
         <button class="nearby-action-btn secondary" id="copyNearbyCsv">CSV</button>
       </div>
       <div class="nearby-list" id="nearbyList">
@@ -1226,7 +1224,8 @@ function getKakaoRouteQuery(station) {
 function getKakaoAppRouteUrl(station) {
   const query = getKakaoRouteQuery(station);
   if (/Android/i.test(navigator.userAgent)) {
-    return `intent://route?${query}#Intent;scheme=kakaomap;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=net.daum.android.map;end`;
+    const fallbackUrl = encodeURIComponent(getKakaoMobileRouteUrl(station));
+    return `intent://route?${query}#Intent;scheme=kakaomap;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=net.daum.android.map;S.browser_fallback_url=${fallbackUrl};end`;
   }
   return `kakaomap://route?${query}`;
 }
@@ -1235,18 +1234,12 @@ function getKakaoMobileRouteUrl(station) {
   return `https://m.map.kakao.com/scheme/route?${getKakaoRouteQuery(station)}`;
 }
 
-function getKakaoJavascriptKey() {
-  const sdk = Array.from(document.scripts)
-    .find(script => script.src && script.src.includes('dapi.kakao.com/v2/maps/sdk.js'));
-  if (!sdk) return '';
-  try {
-    return new URL(sdk.src).searchParams.get('appkey') || '';
-  } catch (e) {
-    return '';
-  }
+function getNaverMapWebUrl(station) {
+  const query = [station.name, station.address].filter(Boolean).join(' ') || '주유소';
+  return `https://map.naver.com/p/search/${encodeURIComponent(query)}`;
 }
 
-function getNaverNavigationUrl(station) {
+function getNaverMapAppUrl(station) {
   const appname = (location.hostname || 'gwangju-gas-map');
   const params = new URLSearchParams({
     dlat: Number(station.lat).toFixed(6),
@@ -1261,7 +1254,8 @@ function getNaverNavigationUrl(station) {
   }
   const query = params.toString();
   if (/Android/i.test(navigator.userAgent)) {
-    return `intent://navigation?${query}#Intent;scheme=nmap;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=com.nhn.android.nmap;end`;
+    const fallbackUrl = encodeURIComponent(getNaverMapWebUrl(station));
+    return `intent://navigation?${query}#Intent;scheme=nmap;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=com.nhn.android.nmap;S.browser_fallback_url=${fallbackUrl};end`;
   }
   return `nmap://navigation?${query}`;
 }
@@ -1299,37 +1293,20 @@ function openExternalUrl(url, fallbackUrl = null) {
   }, 1300);
 }
 
-function startKakaoNavi(station) {
-  if (!window.Kakao || !Kakao.Navi || !Kakao.init) return false;
-  const key = getKakaoJavascriptKey();
-  if (!key) return false;
-  try {
-    if (!Kakao.isInitialized()) Kakao.init(key);
-    Kakao.Navi.start({
-      name: station.name || '주유소',
-      x: Number(station.lng),
-      y: Number(station.lat),
-      coordType: 'wgs84',
-    });
-    return true;
-  } catch (e) {
-    return false;
-  }
-}
-
-function openKakaoRoute(station) {
-  if (isMobileDevice() && startKakaoNavi(station)) {
-    return;
-  }
+function openKakaoMap(station) {
   if (isMobileDevice()) {
-    openExternalUrl(getKakaoRouteUrl(station), getKakaoMobileRouteUrl(station));
+    openExternalUrl(getKakaoAppRouteUrl(station), getKakaoMobileRouteUrl(station));
     return;
   }
   window.open(getKakaoRouteUrl(station), '_blank', 'noopener');
 }
 
-function openNaverNavigation(station) {
-  openExternalUrl(getNaverNavigationUrl(station), getNaverFallbackUrl(station));
+function openNaverMap(station) {
+  if (isMobileDevice()) {
+    openExternalUrl(getNaverMapAppUrl(station), getNaverFallbackUrl(station) || getNaverMapWebUrl(station));
+    return;
+  }
+  window.open(getNaverMapWebUrl(station), '_blank', 'noopener');
 }
 
 function distanceKm(a, b) {
@@ -1472,16 +1449,16 @@ function buildInfoHtml(station) {
   const kakaoRouteBtn = document.createElement('button');
   kakaoRouteBtn.type = 'button';
   kakaoRouteBtn.className = 'route-btn kakao';
-  kakaoRouteBtn.textContent = '카카오내비';
-  kakaoRouteBtn.title = '카카오내비 길안내';
-  bindPress(kakaoRouteBtn, () => openKakaoRoute(station));
+  kakaoRouteBtn.textContent = '카카오맵';
+  kakaoRouteBtn.title = '카카오맵 길찾기';
+  bindPress(kakaoRouteBtn, () => openKakaoMap(station));
 
   const naverRouteBtn = document.createElement('button');
   naverRouteBtn.type = 'button';
   naverRouteBtn.className = 'route-btn naver';
-  naverRouteBtn.textContent = '네이버 내비';
-  naverRouteBtn.title = '네이버지도 내비게이션';
-  bindPress(naverRouteBtn, () => openNaverNavigation(station));
+  naverRouteBtn.textContent = '네이버지도';
+  naverRouteBtn.title = '네이버지도 길찾기';
+  bindPress(naverRouteBtn, () => openNaverMap(station));
 
   routeActions.appendChild(kakaoRouteBtn);
   routeActions.appendChild(naverRouteBtn);
@@ -1919,20 +1896,20 @@ function nearbyText(kind) {
   const items = getNearbyItems();
   if (!items.length) return '';
   if (kind === 'csv') {
-    const header = ['name', 'address', 'distance_km', 'lat', 'lng', 'kakao_route', 'naver_navigation'];
+    const header = ['name', 'address', 'distance_km', 'lat', 'lng', 'kakao_map', 'naver_map'];
     const rows = items.map(item => [
       item.station.name,
       item.station.address || '',
       item.dist.toFixed(2),
       Number(item.station.lat).toFixed(6),
       Number(item.station.lng).toFixed(6),
-      getKakaoMobileRouteUrl(item.station),
-      getNaverNavigationUrl(item.station)
+      getKakaoRouteUrl(item.station),
+      getNaverMapWebUrl(item.station)
     ].map(csvCell).join(','));
     return [header.join(','), ...rows].join('\n');
   }
   return items.map((item, idx) => {
-    const url = kind === 'naver' ? getNaverNavigationUrl(item.station) : getKakaoMobileRouteUrl(item.station);
+    const url = kind === 'naver' ? getNaverMapWebUrl(item.station) : getKakaoRouteUrl(item.station);
     return `${idx + 1}. ${item.station.name} (${formatDistance(item.dist)})\n${item.station.address || '주소 정보 없음'}\n${url}`;
   }).join('\n\n');
 }
