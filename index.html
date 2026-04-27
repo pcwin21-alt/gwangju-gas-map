@@ -208,6 +208,8 @@
       border: 1.5px solid #e2e8f0; border-radius: 8px;
       padding: 7px 8px; font-size: 12px; font-weight: 700;
       cursor: pointer; background: #fff; color: #475569;
+      display: flex; align-items: center; justify-content: center;
+      text-decoration: none;
       transition: background 0.15s, border-color 0.15s, color 0.15s;
       white-space: nowrap;
     }
@@ -1367,10 +1369,11 @@ function buildInfoHtml(station) {
   const COPY_SVG = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>`;
   const CHECK_SVG = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>`;
 
-  function bindPress(el, action) {
+  function bindRouteLink(el, action) {
     let lastRun = 0;
     const run = e => {
       e.stopPropagation();
+      if (!isMobileDevice()) return;
       e.preventDefault();
       const now = Date.now();
       if (now - lastRun < 650) return;
@@ -1446,19 +1449,23 @@ function buildInfoHtml(station) {
   const routeActions = document.createElement('div');
   routeActions.className = 'route-actions';
 
-  const kakaoRouteBtn = document.createElement('button');
-  kakaoRouteBtn.type = 'button';
+  const kakaoRouteBtn = document.createElement('a');
   kakaoRouteBtn.className = 'route-btn kakao';
+  kakaoRouteBtn.href = getKakaoRouteUrl(station);
+  kakaoRouteBtn.target = '_blank';
+  kakaoRouteBtn.rel = 'noopener';
   kakaoRouteBtn.textContent = '카카오맵';
   kakaoRouteBtn.title = '카카오맵 길찾기';
-  bindPress(kakaoRouteBtn, () => openKakaoMap(station));
+  bindRouteLink(kakaoRouteBtn, () => openKakaoMap(station));
 
-  const naverRouteBtn = document.createElement('button');
-  naverRouteBtn.type = 'button';
+  const naverRouteBtn = document.createElement('a');
   naverRouteBtn.className = 'route-btn naver';
+  naverRouteBtn.href = getNaverMapWebUrl(station);
+  naverRouteBtn.target = '_blank';
+  naverRouteBtn.rel = 'noopener';
   naverRouteBtn.textContent = '네이버지도';
   naverRouteBtn.title = '네이버지도 길찾기';
-  bindPress(naverRouteBtn, () => openNaverMap(station));
+  bindRouteLink(naverRouteBtn, () => openNaverMap(station));
 
   routeActions.appendChild(kakaoRouteBtn);
   routeActions.appendChild(naverRouteBtn);
