@@ -183,6 +183,21 @@
     }
     .copy-btn:hover { color: #7c3aed; background: #f5f3ff; }
     .copy-btn.copied { color: #16a34a; }
+    .route-actions {
+      margin-top: 10px; padding-top: 9px; border-top: 1px solid #f1f5f9;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 6px;
+    }
+    .route-btn {
+      border: 1.5px solid #e2e8f0; border-radius: 8px;
+      padding: 7px 8px; font-size: 12px; font-weight: 700;
+      cursor: pointer; background: #fff; color: #475569;
+      transition: background 0.15s, border-color 0.15s, color 0.15s;
+      white-space: nowrap;
+    }
+    .route-btn.kakao { border-color: #fde68a; color: #92400e; background: #fffbeb; }
+    .route-btn.kakao:hover { border-color: #f59e0b; background: #fef3c7; }
+    .route-btn.naver { border-color: #bbf7d0; color: #166534; background: #f0fdf4; }
+    .route-btn.naver:hover { border-color: #22c55e; background: #dcfce7; }
     /* 복사 토스트 */
     #copyToast {
       position: fixed; bottom: 80px; left: 50%; transform: translateX(-50%);
@@ -224,6 +239,88 @@
       color: #475569; transition: all 0.15s; white-space: nowrap;
     }
     .rank-btn:hover, .rank-btn.active { background: #fef9c3; border-color: #fde047; color: #713f12; }
+
+    .nearby-btn {
+      padding: 6px 12px; border-radius: 20px; border: 1.5px solid transparent;
+      font-size: 12px; cursor: pointer; background: #ecfeff;
+      color: #0e7490; transition: all 0.15s; white-space: nowrap;
+    }
+    .nearby-btn:hover, .nearby-btn.active { background: #06b6d4; border-color: #06b6d4; color: #fff; }
+
+    .nearby-panel {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,0.45); z-index: 300;
+      align-items: flex-end; justify-content: center;
+    }
+    .nearby-panel.open { display: flex; }
+    @media (min-width: 480px) { .nearby-panel { align-items: center; } }
+    .nearby-panel-box {
+      background: #fff; border-radius: 20px 20px 0 0;
+      width: 100%; max-width: 520px;
+      padding: 20px 20px 32px;
+      box-shadow: 0 -8px 40px rgba(0,0,0,0.18);
+      max-height: 86vh; overflow-y: auto;
+    }
+    @media (min-width: 480px) { .nearby-panel-box { border-radius: 20px; max-height: 680px; } }
+    .nearby-panel-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 12px;
+    }
+    .nearby-panel-title { font-size: 16px; font-weight: 800; color: #1e293b; }
+    .nearby-panel-close {
+      background: #f1f5f9; border: none; border-radius: 50%;
+      width: 28px; height: 28px; cursor: pointer; font-size: 14px;
+      display: flex; align-items: center; justify-content: center; color: #64748b;
+    }
+    .nearby-note {
+      background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px;
+      padding: 10px 12px; font-size: 12px; color: #475569; line-height: 1.55;
+      margin-bottom: 12px;
+    }
+    .nearby-controls {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 10px;
+    }
+    .nearby-controls label {
+      display: flex; flex-direction: column; gap: 4px;
+      font-size: 11px; font-weight: 700; color: #64748b;
+    }
+    .nearby-controls select {
+      width: 100%; padding: 8px 10px; border: 1px solid #cbd5e1;
+      border-radius: 8px; background: #fff; color: #1e293b; font-size: 13px;
+    }
+    .nearby-actions { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-bottom: 12px; }
+    .nearby-action-btn {
+      border: none; border-radius: 9px; padding: 9px 8px;
+      background: #0e7490; color: #fff; font-size: 12px; font-weight: 700;
+      cursor: pointer; white-space: nowrap;
+    }
+    .nearby-action-btn.secondary { background: #f1f5f9; color: #475569; }
+    .nearby-list { display: flex; flex-direction: column; gap: 8px; }
+    .nearby-item {
+      display: flex; align-items: center; gap: 10px;
+      padding: 10px 12px; border-radius: 10px; border: 1.5px solid #f1f5f9;
+      cursor: pointer; transition: background 0.15s, border-color 0.15s;
+    }
+    .nearby-item:hover { background: #f8fafc; border-color: #bae6fd; }
+    .nearby-dist {
+      width: 52px; flex-shrink: 0; text-align: center;
+      font-size: 12px; font-weight: 800; color: #0e7490;
+      background: #ecfeff; border-radius: 999px; padding: 5px 0;
+    }
+    .nearby-info { flex: 1; min-width: 0; }
+    .nearby-name {
+      font-size: 13px; font-weight: 700; color: #1e293b;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .nearby-addr {
+      font-size: 11px; color: #94a3b8; margin-top: 2px;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .nearby-empty { text-align: center; color: #94a3b8; font-size: 13px; padding: 22px 0; }
+    @media (max-width: 420px) {
+      .nearby-actions { grid-template-columns: 1fr; }
+      .nearby-controls { grid-template-columns: 1fr; }
+    }
 
     /* 순위 모달 */
     .rank-modal {
@@ -684,6 +781,8 @@
         <div class="help-item"><b>구 필터</b>(광산구·남구·동구·북구·서구)로 원하는 지역만 볼 수 있습니다.</div>
         <div class="help-item"><b>👑 저렴한 순위</b> → 현재 보이는 주유소 중 휘발유·경유·LPG 가격 TOP 5를 확인합니다.</div>
         <div class="help-item"><b>📍 내 위치</b> → 현재 위치를 지도 중심으로 이동합니다. (브라우저 위치 권한 필요)</div>
+        <div class="help-item"><b>길찾기</b> → 주유소 팝업에서 카카오맵 길찾기 또는 네이버 내비를 바로 엽니다.</div>
+        <div class="help-item"><b>주변 내보내기</b> → 내 위치 기준 가까운 주유소 링크 목록을 복사합니다.</div>
         <div class="help-item"><b>↺ 초기화</b> → 필터·검색·지도 위치를 한 번에 원래대로 되돌립니다.</div>
       </div>
 
@@ -748,6 +847,47 @@
       <button class="myloc-btn" id="myLocBtn">📍 내 위치</button>
       <button class="reset-btn" id="resetBtn">↺ 초기화</button>
       <button class="rank-btn" id="rankBtn">👑 저렴한 순위</button>
+      <button class="nearby-btn" id="nearbyBtn">↗ 주변 내보내기</button>
+    </div>
+  </div>
+
+  <!-- 주변 주유소 내보내기 -->
+  <div class="nearby-panel" id="nearbyPanel">
+    <div class="nearby-panel-box">
+      <div class="nearby-panel-header">
+        <span class="nearby-panel-title">주변 주유소 내보내기</span>
+        <button class="nearby-panel-close" id="nearbyPanelClose">✕</button>
+      </div>
+      <div class="nearby-note">
+        네이버지도·카카오맵 즐겨찾기 일괄 저장용 공개 API는 없어, 가까운 주유소 링크 목록으로 대신 내보냅니다.
+      </div>
+      <div class="nearby-controls">
+        <label>
+          반경
+          <select id="nearbyRadius">
+            <option value="3">3km</option>
+            <option value="5" selected>5km</option>
+            <option value="10">10km</option>
+            <option value="999">가까운 순</option>
+          </select>
+        </label>
+        <label>
+          개수
+          <select id="nearbyLimit">
+            <option value="10">10개</option>
+            <option value="20" selected>20개</option>
+            <option value="50">50개</option>
+          </select>
+        </label>
+      </div>
+      <div class="nearby-actions">
+        <button class="nearby-action-btn" id="copyNearbyKakao">카카오 길찾기</button>
+        <button class="nearby-action-btn" id="copyNearbyNaver">네이버 내비</button>
+        <button class="nearby-action-btn secondary" id="copyNearbyCsv">CSV</button>
+      </div>
+      <div class="nearby-list" id="nearbyList">
+        <div class="nearby-empty">내 위치를 확인하면 가까운 주유소가 표시됩니다.</div>
+      </div>
     </div>
   </div>
 
@@ -1033,6 +1173,136 @@ function getMarkerType(station) {
   return 'onnuri';
 }
 
+let currentLocation = null;
+let myLocMarker = null;
+
+function pointLabel(name, lat, lng) {
+  return `${encodeURIComponent(name || '주유소')},${Number(lat).toFixed(6)},${Number(lng).toFixed(6)}`;
+}
+
+function getKakaoMapUrl(station) {
+  return `https://map.kakao.com/link/map/${pointLabel(station.name, station.lat, station.lng)}`;
+}
+
+function getKakaoRouteUrl(station) {
+  const dest = pointLabel(station.name, station.lat, station.lng);
+  if (!currentLocation) return `https://map.kakao.com/link/to/${dest}`;
+  const start = pointLabel('내 위치', currentLocation.lat, currentLocation.lng);
+  return `https://map.kakao.com/link/by/car/${start}/${dest}`;
+}
+
+function getKakaoRouteQuery(station) {
+  const parts = [];
+  if (currentLocation) {
+    parts.push(`sp=${Number(currentLocation.lat).toFixed(6)},${Number(currentLocation.lng).toFixed(6)}`);
+  }
+  parts.push(`ep=${Number(station.lat).toFixed(6)},${Number(station.lng).toFixed(6)}`);
+  parts.push('by=car');
+  return parts.join('&');
+}
+
+function getKakaoAppRouteUrl(station) {
+  const query = getKakaoRouteQuery(station);
+  if (/Android/i.test(navigator.userAgent)) {
+    return `intent://route?${query}#Intent;scheme=kakaomap;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=net.daum.android.map;end`;
+  }
+  return `kakaomap://route?${query}`;
+}
+
+function getKakaoMobileRouteUrl(station) {
+  return `https://m.map.kakao.com/scheme/route?${getKakaoRouteQuery(station)}`;
+}
+
+function getNaverNavigationUrl(station) {
+  const appname = (location.hostname || 'gwangju-gas-map');
+  const params = new URLSearchParams({
+    dlat: Number(station.lat).toFixed(6),
+    dlng: Number(station.lng).toFixed(6),
+    dname: station.name || '주유소',
+    appname
+  });
+  if (currentLocation) {
+    params.set('slat', Number(currentLocation.lat).toFixed(6));
+    params.set('slng', Number(currentLocation.lng).toFixed(6));
+    params.set('sname', '내 위치');
+  }
+  const query = params.toString();
+  if (/Android/i.test(navigator.userAgent)) {
+    return `intent://navigation?${query}#Intent;scheme=nmap;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=com.nhn.android.nmap;end`;
+  }
+  return `nmap://navigation?${query}`;
+}
+
+function getNaverFallbackUrl(station) {
+  if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+    return 'https://apps.apple.com/kr/app/naver-map-navigation/id311867728';
+  }
+  if (!isMobileDevice()) {
+    return `https://map.naver.com/p/search/${encodeURIComponent(station.name || '주유소')}`;
+  }
+  return null;
+}
+
+function isMobileDevice() {
+  return /Android|iPhone|iPad|iPod|Mobi/i.test(navigator.userAgent);
+}
+
+function openExternalUrl(url, fallbackUrl = null) {
+  if (!fallbackUrl) {
+    window.location.href = url;
+    return;
+  }
+  let didHide = false;
+  const markHidden = () => { didHide = true; };
+  window.addEventListener('pagehide', markHidden, { once: true });
+  document.addEventListener('visibilitychange', function onVisibility() {
+    if (document.hidden) didHide = true;
+    document.removeEventListener('visibilitychange', onVisibility);
+  });
+  window.location.href = url;
+  setTimeout(() => {
+    window.removeEventListener('pagehide', markHidden);
+    if (!didHide) window.location.href = fallbackUrl;
+  }, 1300);
+}
+
+function openKakaoRoute(station) {
+  if (currentLocation) {
+    if (isMobileDevice()) {
+      openExternalUrl(getKakaoAppRouteUrl(station), getKakaoMobileRouteUrl(station));
+    } else {
+      window.open(getKakaoRouteUrl(station), '_blank', 'noopener');
+    }
+    return;
+  }
+  showCopyToast('내 위치 확인 중');
+  locateUser({ center: false })
+    .then(() => {
+      if (isMobileDevice()) {
+        openExternalUrl(getKakaoAppRouteUrl(station), getKakaoMobileRouteUrl(station));
+      } else {
+        window.open(getKakaoRouteUrl(station), '_blank', 'noopener');
+      }
+    })
+    .catch(() => openExternalUrl(getKakaoRouteUrl(station)));
+}
+
+function openNaverNavigation(station) {
+  openExternalUrl(getNaverNavigationUrl(station), getNaverFallbackUrl(station));
+}
+
+function distanceKm(a, b) {
+  const toRad = d => d * Math.PI / 180;
+  const R = 6371;
+  const dLat = toRad(b.lat - a.lat);
+  const dLng = toRad(b.lng - a.lng);
+  const lat1 = toRad(a.lat);
+  const lat2 = toRad(b.lat);
+  const x = Math.sin(dLat / 2) ** 2 +
+    Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLng / 2) ** 2;
+  return R * 2 * Math.atan2(Math.sqrt(x), Math.sqrt(1 - x));
+}
+
 function buildInfoHtml(station) {
   const pt = station.payment_types || [];
   const tags = [];
@@ -1103,6 +1373,33 @@ function buildInfoHtml(station) {
     priceEl.innerHTML = priceHtml;
     wrap.appendChild(priceEl.firstElementChild);
   }
+
+  const routeActions = document.createElement('div');
+  routeActions.className = 'route-actions';
+
+  const kakaoRouteBtn = document.createElement('button');
+  kakaoRouteBtn.type = 'button';
+  kakaoRouteBtn.className = 'route-btn kakao';
+  kakaoRouteBtn.textContent = '카카오맵';
+  kakaoRouteBtn.title = '카카오맵 길찾기';
+  kakaoRouteBtn.addEventListener('click', e => {
+    e.stopPropagation();
+    openKakaoRoute(station);
+  });
+
+  const naverRouteBtn = document.createElement('button');
+  naverRouteBtn.type = 'button';
+  naverRouteBtn.className = 'route-btn naver';
+  naverRouteBtn.textContent = '네이버 내비';
+  naverRouteBtn.title = '네이버지도 내비게이션';
+  naverRouteBtn.addEventListener('click', e => {
+    e.stopPropagation();
+    openNaverNavigation(station);
+  });
+
+  routeActions.appendChild(kakaoRouteBtn);
+  routeActions.appendChild(naverRouteBtn);
+  wrap.appendChild(routeActions);
   return wrap;
 }
 
@@ -1182,6 +1479,7 @@ function applyFilters() {
       item.station.name.toLowerCase().includes(q) ||
       (item.station.address || '').toLowerCase().includes(q);
     const show = matchFilter && matchDistrict && matchSearch;
+    item.visible = show;
     item.marker.setMap(show ? map : null);
     if (show) {
       const s = item.station.payment_types.includes('saengsaeng');
@@ -1256,42 +1554,73 @@ document.querySelectorAll('.district-btn').forEach(btn => {
 });
 
 // 내 위치
-let myLocMarker = null;
+function setCurrentLocation(lat, lng, centerMap = true) {
+  currentLocation = { lat, lng };
+  const latlng = new kakao.maps.LatLng(lat, lng);
+  if (centerMap) {
+    map.setCenter(latlng);
+    map.setLevel(4);
+  }
+  if (myLocMarker) myLocMarker.setMap(null);
+  const myLocSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+    <circle cx="11" cy="11" r="10" fill="#0ea5e9" fill-opacity="0.25" stroke="#0ea5e9" stroke-width="1.5"/>
+    <circle cx="11" cy="11" r="6" fill="#0ea5e9" stroke="#fff" stroke-width="2"/>
+  </svg>`;
+  const myLocImg = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(myLocSvg)));
+  myLocMarker = new kakao.maps.Marker({
+    map,
+    position: latlng,
+    image: new kakao.maps.MarkerImage(
+      myLocImg,
+      new kakao.maps.Size(22, 22),
+      { offset: new kakao.maps.Point(11, 11) }
+    )
+  });
+  return currentLocation;
+}
+
+function locateUser(options = {}) {
+  return new Promise((resolve, reject) => {
+    if (!navigator.geolocation) {
+      alert('이 브라우저는 위치 기능을 지원하지 않습니다.');
+      reject(new Error('geolocation unavailable'));
+      return;
+    }
+    const btn = options.button || null;
+    if (btn) {
+      btn.textContent = '📍 위치 찾는 중...';
+      btn.classList.add('loading');
+    }
+    navigator.geolocation.getCurrentPosition(
+      function(pos) {
+        const loc = setCurrentLocation(
+          pos.coords.latitude,
+          pos.coords.longitude,
+          options.center !== false
+        );
+        if (btn) {
+          btn.textContent = '📍 내 위치';
+          btn.classList.remove('loading');
+        }
+        resolve(loc);
+      },
+      function(err) {
+        if (btn) {
+          btn.textContent = '📍 내 위치';
+          btn.classList.remove('loading');
+        }
+        if (options.alertOnFail !== false) {
+          alert('위치 정보를 가져올 수 없습니다.\n브라우저 위치 권한을 허용해 주세요.');
+        }
+        reject(err || new Error('geolocation failed'));
+      },
+      { timeout: 10000, enableHighAccuracy: true, maximumAge: 60000 }
+    );
+  });
+}
+
 document.getElementById('myLocBtn').addEventListener('click', function() {
-  if (!navigator.geolocation) { alert('이 브라우저는 위치 기능을 지원하지 않습니다.'); return; }
-  const btn = this;
-  btn.textContent = '📍 위치 찾는 중...';
-  btn.classList.add('loading');
-  navigator.geolocation.getCurrentPosition(
-    function(pos) {
-      const latlng = new kakao.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
-      map.setCenter(latlng);
-      map.setLevel(4);
-      if (myLocMarker) myLocMarker.setMap(null);
-      const myLocSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
-        <circle cx="11" cy="11" r="10" fill="#0ea5e9" fill-opacity="0.25" stroke="#0ea5e9" stroke-width="1.5"/>
-        <circle cx="11" cy="11" r="6" fill="#0ea5e9" stroke="#fff" stroke-width="2"/>
-      </svg>`;
-      const myLocImg = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(myLocSvg)));
-      myLocMarker = new kakao.maps.Marker({
-        map,
-        position: latlng,
-        image: new kakao.maps.MarkerImage(
-          myLocImg,
-          new kakao.maps.Size(22, 22),
-          { offset: new kakao.maps.Point(11, 11) }
-        )
-      });
-      btn.textContent = '📍 내 위치';
-      btn.classList.remove('loading');
-    },
-    function() {
-      alert('위치 정보를 가져올 수 없습니다.\n브라우저 위치 권한을 허용해 주세요.');
-      btn.textContent = '📍 내 위치';
-      btn.classList.remove('loading');
-    },
-    { timeout: 10000 }
-  );
+  locateUser({ button: this });
 });
 
 // 초기화
@@ -1416,11 +1745,136 @@ document.querySelectorAll('.rank-tab').forEach(tab => {
   });
 });
 
+// ── 주변 주유소 내보내기 ─────────────────────────────────
+const nearbyPanel = document.getElementById('nearbyPanel');
+const nearbyList = document.getElementById('nearbyList');
+const nearbyRadius = document.getElementById('nearbyRadius');
+const nearbyLimit = document.getElementById('nearbyLimit');
+
+function formatDistance(km) {
+  if (km < 1) return Math.round(km * 1000) + 'm';
+  return km.toFixed(km < 10 ? 1 : 0) + 'km';
+}
+
+function getNearbyItems() {
+  if (!currentLocation) return [];
+  const radius = Number(nearbyRadius.value);
+  const limit = Number(nearbyLimit.value);
+  return allMarkers
+    .filter(item => item.visible !== false)
+    .map(item => ({
+      ...item,
+      dist: distanceKm(currentLocation, { lat: item.station.lat, lng: item.station.lng })
+    }))
+    .filter(item => radius >= 999 || item.dist <= radius)
+    .sort((a, b) => a.dist - b.dist)
+    .slice(0, limit);
+}
+
+function renderNearbyList() {
+  const items = getNearbyItems();
+  if (!items.length) {
+    nearbyList.innerHTML = '<div class="nearby-empty">조건에 맞는 주변 주유소가 없습니다.</div>';
+    return;
+  }
+  nearbyList.innerHTML = '';
+  items.forEach(item => {
+    const row = document.createElement('div');
+    row.className = 'nearby-item';
+    row.innerHTML = `
+      <div class="nearby-dist">${formatDistance(item.dist)}</div>
+      <div class="nearby-info">
+        <div class="nearby-name"></div>
+        <div class="nearby-addr"></div>
+      </div>
+    `;
+    row.querySelector('.nearby-name').textContent = item.station.name;
+    row.querySelector('.nearby-addr').textContent = item.station.address || '';
+    row.addEventListener('click', function() {
+      nearbyPanel.classList.remove('open');
+      document.getElementById('nearbyBtn').classList.remove('active');
+      map.setCenter(new kakao.maps.LatLng(item.station.lat, item.station.lng));
+      map.setLevel(4);
+      if (activeOverlay) activeOverlay.setMap(null);
+      item.overlay.setMap(map);
+      activeOverlay = item.overlay;
+    });
+    nearbyList.appendChild(row);
+  });
+}
+
+function openNearbyPanel() {
+  nearbyPanel.classList.add('open');
+  document.getElementById('nearbyBtn').classList.add('active');
+  if (currentLocation) {
+    renderNearbyList();
+    return;
+  }
+  nearbyList.innerHTML = '<div class="nearby-empty">내 위치 확인 중...</div>';
+  locateUser({ center: false, alertOnFail: false })
+    .then(renderNearbyList)
+    .catch(() => {
+      nearbyList.innerHTML = '<div class="nearby-empty">위치 권한을 허용하면 주변 주유소를 계산할 수 있습니다.</div>';
+    });
+}
+
+function closeNearbyPanel() {
+  nearbyPanel.classList.remove('open');
+  document.getElementById('nearbyBtn').classList.remove('active');
+}
+
+function csvCell(value) {
+  return '"' + String(value ?? '').replace(/"/g, '""') + '"';
+}
+
+function nearbyText(kind) {
+  const items = getNearbyItems();
+  if (!items.length) return '';
+  if (kind === 'csv') {
+    const header = ['name', 'address', 'distance_km', 'lat', 'lng', 'kakao_route', 'naver_navigation'];
+    const rows = items.map(item => [
+      item.station.name,
+      item.station.address || '',
+      item.dist.toFixed(2),
+      Number(item.station.lat).toFixed(6),
+      Number(item.station.lng).toFixed(6),
+      getKakaoMobileRouteUrl(item.station),
+      getNaverNavigationUrl(item.station)
+    ].map(csvCell).join(','));
+    return [header.join(','), ...rows].join('\n');
+  }
+  return items.map((item, idx) => {
+    const url = kind === 'naver' ? getNaverNavigationUrl(item.station) : getKakaoMobileRouteUrl(item.station);
+    return `${idx + 1}. ${item.station.name} (${formatDistance(item.dist)})\n${item.station.address || '주소 정보 없음'}\n${url}`;
+  }).join('\n\n');
+}
+
+function copyNearby(kind) {
+  const text = nearbyText(kind);
+  if (!text) {
+    showCopyToast('복사할 목록 없음');
+    return;
+  }
+  doCopy(text);
+}
+
+document.getElementById('nearbyBtn').addEventListener('click', openNearbyPanel);
+document.getElementById('nearbyPanelClose').addEventListener('click', closeNearbyPanel);
+nearbyPanel.addEventListener('click', function(e) {
+  if (e.target === this) closeNearbyPanel();
+});
+nearbyRadius.addEventListener('change', renderNearbyList);
+nearbyLimit.addEventListener('change', renderNearbyList);
+document.getElementById('copyNearbyKakao').addEventListener('click', () => copyNearby('kakao'));
+document.getElementById('copyNearbyNaver').addEventListener('click', () => copyNearby('naver'));
+document.getElementById('copyNearbyCsv').addEventListener('click', () => copyNearby('csv'));
+
 // ── 클립보드 복사 ─────────────────────────────────────────
 let toastTimer = null;
 function showCopyToast(text) {
   const toast = document.getElementById('copyToast');
-  toast.textContent = `"${text}" 복사됨`;
+  const label = String(text).length > 28 ? String(text).slice(0, 28) + '…' : text;
+  toast.textContent = `"${label}" 복사됨`;
   toast.classList.add('show');
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => toast.classList.remove('show'), 1800);
