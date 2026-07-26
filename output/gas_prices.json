@@ -57,7 +57,8 @@
     "uni_id": "A0020387",
     "matched_name": "한성골드주유소",
     "prices": {
-      "휘발유": 1829
+      "휘발유": 1829,
+      "LPG": 1819
     }
   },
   "광주주유소": {
@@ -98,21 +99,13 @@
   },
   "웰컴신가주유소": {
     "uni_id": "A0020631",
-    "matched_name": "웰컴신가주유소",
-    "prices": {
-      "휘발유": 1835,
-      "LPG": 1829,
-      "경유": 2230
-    }
+    "matched_name": null,
+    "prices": {}
   },
   "신창 구도일주유소": {
     "uni_id": "A0020707",
-    "matched_name": "신창 구도일주유소",
-    "prices": {
-      "경유": 2235,
-      "휘발유": 1830,
-      "LPG": 1820
-    }
+    "matched_name": null,
+    "prices": {}
   },
   "다올에너지산업 주식회사": {
     "uni_id": null,
@@ -155,12 +148,15 @@
   },
   "삼도주유소": {
     "uni_id": "A0020453",
-    "matched_name": null,
-    "prices": {}
+    "matched_name": "삼도주유소",
+    "prices": {
+      "LPG": 1819,
+      "휘발유": 1839
+    }
   },
   "슈퍼크린주유소": {
     "uni_id": "A0020316",
-    "matched_name": "슈퍼크린주유소(s)",
+    "matched_name": "슈퍼크린주유소",
     "prices": {
       "휘발유": 1878,
       "LPG": 1868,
@@ -169,24 +165,21 @@
   },
   "이칠주유소": {
     "uni_id": "A0020592",
-    "matched_name": "이칠주유소",
-    "prices": {
-      "휘발유": 1849,
-      "LPG": 1829
-    }
+    "matched_name": null,
+    "prices": {}
   },
   "진곡화물차주유소": {
     "uni_id": "A0020606",
-    "matched_name": "진곡화물차주유소",
-    "prices": {
-      "휘발유": 1879,
-      "LPG": 1839
-    }
+    "matched_name": null,
+    "prices": {}
   },
   "하진에너지 주식회사": {
     "uni_id": "A0020603",
-    "matched_name": null,
-    "prices": {}
+    "matched_name": "하진에너지 주식회사",
+    "prices": {
+      "휘발유": 1857,
+      "LPG": 1797
+    }
   },
   "진영주유소": {
     "uni_id": "A0020262",
@@ -206,16 +199,16 @@
   },
   "전송주유소": {
     "uni_id": "A0020477",
-    "matched_name": null,
-    "prices": {}
+    "matched_name": "전송주유소",
+    "prices": {
+      "휘발유": 1849,
+      "LPG": 1839
+    }
   },
   "순양주유소": {
     "uni_id": "A0019768",
-    "matched_name": "순양주유소",
-    "prices": {
-      "휘발유": 1858,
-      "LPG": 1828
-    }
+    "matched_name": null,
+    "prices": {}
   },
   "천지주유소": {
     "uni_id": "A0020254",
@@ -273,8 +266,7 @@
     "uni_id": "A0019683",
     "matched_name": "대남로주유소",
     "prices": {
-      "휘발유": 1843,
-      "LPG": 1833
+      "휘발유": 1843
     }
   },
   "양촌주유소": {
@@ -292,19 +284,17 @@
   },
   "풍암주유소": {
     "uni_id": "A0020430",
-    "matched_name": "풍암주유소",
+    "matched_name": "주식회사 풍암주유소",
     "prices": {
-      "경유": 2330,
       "휘발유": 1843,
-      "LPG": 1833
+      "경유": 2330
     }
   },
   "화력주유소": {
     "uni_id": "A0019632",
     "matched_name": "화력주유소",
     "prices": {
-      "휘발유": 1879,
-      "LPG": 1889
+      "휘발유": 1879
     }
   },
   "(유)광주개발": {
@@ -352,11 +342,8 @@
   },
   "용두주유소": {
     "uni_id": "A0032994",
-    "matched_name": "용두주유소",
-    "prices": {
-      "휘발유": 1869,
-      "LPG": 1849
-    }
+    "matched_name": null,
+    "prices": {}
   },
   "첨단북광주IC주유소": {
     "uni_id": "A0020134",
@@ -392,8 +379,9 @@
     "uni_id": "A0020055",
     "matched_name": "삼각그린주유소 ㈜오림이사",
     "prices": {
+      "경유": 2290,
       "휘발유": 1839,
-      "경유": 2290
+      "LPG": 1798
     }
   },
   "지산주유소": {
@@ -421,8 +409,7 @@
     "uni_id": "A0019951",
     "matched_name": "자모셀프주유소",
     "prices": {
-      "휘발유": 1839,
-      "LPG": 1798
+      "휘발유": 1839
     }
   },
   "용전주유소": {
@@ -474,20 +461,13 @@
   },
   "컨벤션주유소": {
     "uni_id": "A0019758",
-    "matched_name": "컨벤션주유소",
-    "prices": {
-      "휘발유": 1958,
-      "LPG": 1948
-    }
+    "matched_name": null,
+    "prices": {}
   },
   "부일주유소": {
     "uni_id": "A0020702",
-    "matched_name": "부일주유소",
-    "prices": {
-      "경유": 2285,
-      "휘발유": 1854,
-      "LPG": 1833
-    }
+    "matched_name": null,
+    "prices": {}
   },
   "골든타임주유소": {
     "uni_id": "A0019802",
@@ -530,8 +510,11 @@
   },
   "대광주유소": {
     "uni_id": "A0019726",
-    "matched_name": null,
-    "prices": {}
+    "matched_name": "대광주유소",
+    "prices": {
+      "휘발유": 1869,
+      "LPG": 1849
+    }
   },
   "주식회사 제일에너지동곡점": {
     "uni_id": null,
@@ -662,7 +645,7 @@
     "uni_id": "A0020051",
     "matched_name": "(유)플러스주유소",
     "prices": {
-      "휘발유": 1849,
+      "휘발유": 1839,
       "LPG": 1819
     }
   },
@@ -698,11 +681,8 @@
   },
   "운천주유소": {
     "uni_id": "A0020680",
-    "matched_name": "운천주유소",
-    "prices": {
-      "휘발유": 1858,
-      "LPG": 1848
-    }
+    "matched_name": null,
+    "prices": {}
   },
   "매월유통단지주유소": {
     "uni_id": "A0020227",
@@ -716,8 +696,7 @@
     "uni_id": "A0020481",
     "matched_name": "돌고개주유소",
     "prices": {
-      "휘발유": 1827,
-      "LPG": 1815
+      "휘발유": 1827
     }
   },
   "차나라주유소": {
@@ -749,42 +728,42 @@
     }
   },
   "신성에너지송암공단주유소": {
-    "uni_id": "A0019443",
-    "matched_name": "신성에너지송암공단주유소",
-    "prices": {
-      "휘발유": 1825,
-      "LPG": 1815
-    }
+    "uni_id": null,
+    "matched_name": null,
+    "prices": {}
   },
   "송암b주유소": {
-    "uni_id": null,
-    "matched_name": null,
-    "prices": {}
+    "uni_id": "A0019691",
+    "matched_name": "송암B주유소",
+    "prices": {
+      "휘발유": 1825
+    }
   },
   "송암a주유소": {
-    "uni_id": null,
-    "matched_name": null,
-    "prices": {}
+    "uni_id": "A0020202",
+    "matched_name": "송암A주유소",
+    "prices": {
+      "휘발유": 1825
+    }
   },
   "주남셀프주유소": {
+    "uni_id": "A0033410",
+    "matched_name": "주남셀프주유소",
+    "prices": {
+      "휘발유": 1865,
+      "경유": 2295,
+      "LPG": 1845
+    }
+  },
+  "송정현대주유소": {
     "uni_id": null,
     "matched_name": null,
     "prices": {}
   },
-  "송정현대주유소": {
-    "uni_id": "A0020310",
-    "matched_name": "송정현대주유소",
-    "prices": {
-      "휘발유": 1859
-    }
-  },
   "서광주역주유소": {
-    "uni_id": "A0020185",
-    "matched_name": "서광주역주유소(SK)",
-    "prices": {
-      "휘발유": 1825,
-      "LPG": 1795
-    }
+    "uni_id": null,
+    "matched_name": null,
+    "prices": {}
   },
   "대성석유": {
     "uni_id": null,
@@ -805,7 +784,8 @@
     "uni_id": "A0020488",
     "matched_name": "대동주유소 ㈜대주에너지",
     "prices": {
-      "휘발유": 1819
+      "휘발유": 1819,
+      "LPG": 1899
     }
   },
   "호대아름주유소": {
@@ -824,9 +804,13 @@
     "prices": {}
   },
   "미래주유소": {
-    "uni_id": null,
-    "matched_name": null,
-    "prices": {}
+    "uni_id": "A0019480",
+    "matched_name": "미래주유소",
+    "prices": {
+      "휘발유": 1845,
+      "경유": 2289,
+      "LPG": 1835
+    }
   },
   "(주)대창석유직영 월드컵주유소": {
     "uni_id": "A0019507",
@@ -881,12 +865,9 @@
     "prices": {}
   },
   "주식회사 아프리카주유소": {
-    "uni_id": "A0020545",
-    "matched_name": "(주)아프리카주유소",
-    "prices": {
-      "휘발유": 1849,
-      "LPG": 1797
-    }
+    "uni_id": null,
+    "matched_name": null,
+    "prices": {}
   },
   "에스케이신안석유": {
     "uni_id": null,
@@ -927,7 +908,6 @@
     "matched_name": "(주)대창석유직영 운암주유소",
     "prices": {
       "휘발유": 1829,
-      "LPG": 1789,
       "경유": 2239
     }
   },
@@ -953,7 +933,6 @@
     "uni_id": "A0019792",
     "matched_name": "(주)스피드주유소",
     "prices": {
-      "LPG": 1829,
       "휘발유": 1839
     }
   },
@@ -984,6 +963,7 @@
     "uni_id": "A0020173",
     "matched_name": "오치한전주유소",
     "prices": {
+      "LPG": 1798,
       "휘발유": 1839
     }
   },
@@ -1025,7 +1005,7 @@
     "uni_id": "A0019789",
     "matched_name": "망월주유소",
     "prices": {
-      "휘발유": 1880,
+      "휘발유": 1890,
       "LPG": 1890
     }
   },
@@ -1035,12 +1015,9 @@
     "prices": {}
   },
   "용두주유소 ": {
-    "uni_id": "A0032994",
-    "matched_name": "용두주유소",
-    "prices": {
-      "휘발유": 1869,
-      "LPG": 1849
-    }
+    "uni_id": null,
+    "matched_name": null,
+    "prices": {}
   },
   "(주)스피드에너지주유소": {
     "uni_id": null,
