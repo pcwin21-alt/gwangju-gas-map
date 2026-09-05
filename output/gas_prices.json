@@ -1,10 +1,8 @@
 {
   "해피주유소": {
     "uni_id": "A0019785",
-    "matched_name": "해피주유소",
-    "prices": {
-      "휘발유": 1839
-    }
+    "matched_name": null,
+    "prices": {}
   },
   "(주)명진주유소": {
     "uni_id": "A0020494",
@@ -32,25 +30,19 @@
     "prices": {}
   },
   "(주)더그린": {
-    "uni_id": "A0021057",
-    "matched_name": "더그린㈜ 푸른주유소",
-    "prices": {
-      "휘발유": 1815
-    }
+    "uni_id": null,
+    "matched_name": null,
+    "prices": {}
   },
   "한성골드주유소": {
     "uni_id": "A0020387",
-    "matched_name": "한성골드주유소",
-    "prices": {
-      "휘발유": 1819
-    }
+    "matched_name": null,
+    "prices": {}
   },
   "광주주유소": {
     "uni_id": "A0020392",
-    "matched_name": "광주주유소",
-    "prices": {
-      "휘발유": 1875
-    }
+    "matched_name": null,
+    "prices": {}
   },
   "유한회사 동일에너지산업": {
     "uni_id": null,
@@ -74,10 +66,8 @@
   },
   "신광주주유소": {
     "uni_id": "A0020392",
-    "matched_name": "광주주유소",
-    "prices": {
-      "휘발유": 1875
-    }
+    "matched_name": null,
+    "prices": {}
   },
   "웰컴신가주유소": {
     "uni_id": "A0020631",
@@ -206,10 +196,8 @@
   },
   "양촌주유소": {
     "uni_id": "A0020270",
-    "matched_name": "양촌주유소",
-    "prices": {
-      "휘발유": 1879
-    }
+    "matched_name": null,
+    "prices": {}
   },
   "대촌상주유소": {
     "uni_id": null,
@@ -272,7 +260,7 @@
     "prices": {}
   },
   "SK코끼리주유소": {
-    "uni_id": null,
+    "uni_id": "A0019786",
     "matched_name": null,
     "prices": {}
   },
@@ -357,11 +345,9 @@
     "prices": {}
   },
   "청정이엔지 주식회사": {
-    "uni_id": "A0021341",
-    "matched_name": "청정이엔지㈜ 나주점",
-    "prices": {
-      "휘발유": 1818
-    }
+    "uni_id": null,
+    "matched_name": null,
+    "prices": {}
   },
   "우리셀프주유소": {
     "uni_id": "A0020326",
@@ -659,7 +645,7 @@
     "prices": {}
   },
   "(주)대창석유직영 지산주유소": {
-    "uni_id": "A0019476",
+    "uni_id": null,
     "matched_name": null,
     "prices": {}
   },
@@ -774,7 +760,7 @@
     "prices": {}
   },
   "S-OIL지산주유소": {
-    "uni_id": "A0019476",
+    "uni_id": null,
     "matched_name": null,
     "prices": {}
   },
@@ -799,7 +785,7 @@
     "prices": {}
   },
   "북광주 ic주유소": {
-    "uni_id": null,
+    "uni_id": "A0020134",
     "matched_name": null,
     "prices": {}
   },
