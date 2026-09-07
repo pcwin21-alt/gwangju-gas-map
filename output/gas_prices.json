@@ -260,7 +260,7 @@
     "prices": {}
   },
   "SK코끼리주유소": {
-    "uni_id": null,
+    "uni_id": "A0019786",
     "matched_name": null,
     "prices": {}
   },
@@ -325,7 +325,7 @@
     "prices": {}
   },
   "시민주유소": {
-    "uni_id": "A0020269",
+    "uni_id": "A0020175",
     "matched_name": null,
     "prices": {}
   },
@@ -785,7 +785,7 @@
     "prices": {}
   },
   "북광주 ic주유소": {
-    "uni_id": null,
+    "uni_id": "A0020134",
     "matched_name": null,
     "prices": {}
   },
