@@ -15,7 +15,7 @@
     "prices": {}
   },
   "SK시민주유소": {
-    "uni_id": "A0020269",
+    "uni_id": "A0020175",
     "matched_name": null,
     "prices": {}
   },
@@ -775,7 +775,7 @@
     "prices": {}
   },
   "용두주유소 ": {
-    "uni_id": "A0032994",
+    "uni_id": null,
     "matched_name": null,
     "prices": {}
   },
@@ -785,7 +785,7 @@
     "prices": {}
   },
   "북광주 ic주유소": {
-    "uni_id": "A0020134",
+    "uni_id": null,
     "matched_name": null,
     "prices": {}
   },
