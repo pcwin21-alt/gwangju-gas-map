@@ -1,0 +1,9 @@
+.effective-price { display: inline-flex; flex-wrap: wrap; align-items: baseline; gap: 3px 6px; }
+.effective-price del { color: #64748b; font-size: 12px; font-weight: 400; }
+.effective-price b { color: #1d4ed8; }
+.effective-price small { flex-basis: 100%; color: #475569; font-size: 12px; font-weight: 400; line-height: 1.5; }
+.info-overlay .effective-price small { display: none; }
+.rank-price .effective-price { display: flex; flex-direction: column; align-items: flex-end; gap: 1px; }
+.rank-price .effective-price small { font-size: 11px; }
+.trip-prices { display: flex; flex-direction: column; gap: 8px; margin: 10px 0; }
+.trip-fuel-price { font-size: 14px; line-height: 1.5; }

@@ -23,6 +23,8 @@
     src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=f912bbe9346dcc939b3ecabee03a4dff&libraries=services"
     onerror="document.body.innerHTML='<div style=padding:40px;font-family:sans-serif><h2 style=color:#dc2626>카카오맵 SDK 로드 실패</h2><p style=margin-top:12px>원인: API 키 오류 또는 허용 도메인 미등록</p><ul style=margin-top:8px;line-height:2><li>카카오 개발자센터 → 앱 → 플랫폼 → Web에 <b>http://localhost:8080</b> 추가</li><li>.env의 KAKAO_MAPS_APP_KEY가 <b>JavaScript 키</b>인지 확인 (REST API 키 아님)</li></ul></div>'"></script>
   <link rel="stylesheet" href="assets/route-planner.css">
+  <link rel="stylesheet" href="assets/price-display.css">
+  <script src="assets/price-display.js"></script>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -1010,7 +1012,7 @@
   <div class="rank-modal" id="rankModal">
     <div class="rank-panel">
       <div class="rank-panel-header">
-        <span class="rank-panel-title">👑 저렴한 주유소 TOP 5</span>
+        <span class="rank-panel-title">👑 저렴한 주유소 TOP 5 · 할인 전 기준</span>
         <button class="rank-panel-close" id="rankModalClose">✕</button>
       </div>
       <div class="rank-tabs">
@@ -1405,9 +1407,9 @@ function buildInfoHtml(station) {
       const dot = range
         ? `<span class="price-dot" style="background:${priceColor(p[k], range.min, range.max)}"></span>`
         : '';
-      return `<span class="price-item">${dot}${k} <b>${p[k].toLocaleString()}원</b></span>`;
+      return `<span class="price-item">${dot}${k} ${GasPriceDisplay.html(p[k], station)}</span>`;
     }).join('');
-    priceHtml = `<div class="prices">${items}<div class="price-source">Opinet 기준</div></div>`;
+    priceHtml = `<div class="prices">${items}<div class="price-source">Opinet 기준${pt.includes('saengsaeng') ? ' · 상생카드 10% 적용 체감가' : ''}</div></div>`;
   }
 
   const COPY_SVG = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>`;
@@ -1826,7 +1828,7 @@ function buildRankList(fuel) {
         <div class="rank-name">${name}</div>
         <div class="rank-addr">${addrShort || '광주'}</div>
       </div>
-      <div class="rank-price">${p[fuel].toLocaleString()}<span>원</span></div>
+      <div class="rank-price">${GasPriceDisplay.html(p[fuel], STATIONS.find(st => st.name === name))}</div>
     </div>`;
   }).join('');
 
