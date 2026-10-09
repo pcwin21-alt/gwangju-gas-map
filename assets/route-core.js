@@ -29,7 +29,7 @@
       (scheme === 'all' || s.payment_types.includes(scheme)) &&
       (fuel === 'all' || s.fuel_kind === fuel) &&
       (scheme !== 'onnuri' || method === 'any' ||
-        (method === 'digital' ? s.onnuri_methods?.card || s.onnuri_methods?.qr : s.onnuri_methods?.paper)))
+        (method === 'digital' ? s.onnuri_methods?.digital || s.onnuri_methods?.card || s.onnuri_methods?.qr : s.onnuri_methods?.paper)))
       .map(s => ({station: s, penalty: distance(start, s) + distance(s, end) - direct}))
       .sort((a,b) => a.penalty-b.penalty).slice(0, 24).map(x=>x.station);
   }
