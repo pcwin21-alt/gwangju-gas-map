@@ -22,8 +22,9 @@
   <script type="text/javascript"
     src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=f912bbe9346dcc939b3ecabee03a4dff&libraries=services"
     onerror="document.body.innerHTML='<div style=padding:40px;font-family:sans-serif><h2 style=color:#dc2626>카카오맵 SDK 로드 실패</h2><p style=margin-top:12px>원인: API 키 오류 또는 허용 도메인 미등록</p><ul style=margin-top:8px;line-height:2><li>카카오 개발자센터 → 앱 → 플랫폼 → Web에 <b>http://localhost:8080</b> 추가</li><li>.env의 KAKAO_MAPS_APP_KEY가 <b>JavaScript 키</b>인지 확인 (REST API 키 아님)</li></ul></div>'"></script>
-  <link rel="stylesheet" href="assets/route-planner.css?v=a59a26d7f5a1">
+  <link rel="stylesheet" href="assets/route-planner.css?v=da2e3ad51c2b">
   <link rel="stylesheet" href="assets/price-display.css?v=7aa9555f0e95">
+  <link rel="stylesheet" href="assets/updates.css?v=dfaa761f2f4e">
   <script src="assets/price-display.js?v=c638a9941b8f"></script>
   <script src="assets/merchant-display.js?v=9f4f6647ac98"></script>
   <style>
@@ -836,7 +837,7 @@
 
       <div class="help-section">
         <div class="help-section-title">데이터 출처</div>
-        <div class="help-item">상생카드: 광주시 가맹점 조회 / 온누리: 온누리 플레이스 기존 확인 기록 / 유가: 오피넷(한국석유공사)</div>
+        <div class="help-item">상생카드: 광주시 가맹점 조회 / 온누리: 소상공인시장진흥공단 공식 파일·기존 위치 기록 / 유가: 오피넷(한국석유공사)</div>
         <div class="help-item">상생카드는 공식 조회 결과, 온누리는 연간 공식 자료와 대조한 기록을 표시합니다. 온누리 자료 기준일과 매칭 미완료 여부는 각 주유소에서 확인하세요. 유가 갱신일과 가맹점 자료 기준일은 다릅니다.</div>
       </div>
 
@@ -886,10 +887,46 @@
       <button class="reset-btn" id="resetBtn">↺ 초기화</button>
       <button class="rank-btn" id="rankBtn">👑 저렴한 순위</button>
       <button class="nearby-btn" id="nearbyBtn">↗ 주변 내보내기</button>
+      <button class="updates-trigger" id="updatesBtn" type="button" aria-haspopup="dialog" aria-controls="updatesDialog">업데이트 내역</button>
     </div>
   </div>
 
-  <p class="merchant-note merchant-stale merchant-banner" id="merchantFreshness" role="status"></p>
+  <dialog class="updates-dialog" id="updatesDialog" aria-labelledby="updatesTitle">
+    <div class="updates-header">
+      <h2 id="updatesTitle">업데이트 내역</h2>
+      <button id="updatesClose" type="button" aria-label="업데이트 내역 닫기" autofocus>닫기</button>
+    </div>
+    <div class="updates-body">
+      <section class="updates-data" aria-labelledby="updatesDataTitle">
+        <h3 id="updatesDataTitle">현재 데이터</h3>
+        <p id="merchantFreshness" role="status"></p>
+        <p>유가: 3시간마다 갱신 · 가맹점: 매일 오전 6시 30분 확인</p>
+        <p>온누리는 연간 공식 자료입니다. 매칭되지 않은 곳은 과거 기록으로 표시합니다.</p>
+      </section>
+      <section class="updates-release">
+        <h3><time datetime="2026-10-10">2026.10.10</time></h3>
+        <ul>
+          <li>상단 조회 현황을 업데이트 내역 팝업으로 이동했습니다.</li>
+          <li>온누리 2026년 7월 31일 기준 공식 자료로 기존 가맹점 100곳을 대조했습니다. 매칭되지 않은 3곳은 최근 미확인으로 유지했습니다.</li>
+          <li>지류·디지털 가맹 여부와 자료 기준일을 주유소 상세창과 경유 후보에 표시합니다.</li>
+          <li>온누리 갱신을 공식 파일 조회 방식으로 바꿨습니다. 조회 실패 시 마지막 확인 자료를 유지합니다.</li>
+          <li>업데이트 후 이전 화면이 남는 캐시 문제를 보완했습니다.</li>
+        </ul>
+      </section>
+      <section class="updates-release">
+        <h3><time datetime="2026-10-09">2026.10.09</time></h3>
+        <ul>
+          <li>출발지와 목적지를 정하고, 가는 길에 들를 주유소의 추가 이동시간·거리를 비교하는 기능을 추가했습니다. 도로 추정값이며 실시간 교통은 반영하지 않습니다.</li>
+          <li>선택한 주유소를 경유해 최종 목적지로 이동하는 네이버 내비·카카오맵 연결을 추가했습니다.</li>
+          <li>상생카드 가맹점에 할인 전 가격과 10% 적용 체감가를 함께 표시합니다. 예: 1,818원/L → 1,636.2원/L.</li>
+          <li>온누리 지류·디지털 결제수단과 휘발유·경유 주유소/LPG 충전소를 구분해 찾을 수 있습니다.</li>
+          <li>상생카드 공식 목록의 자동 갱신, 가맹점별 확인일 표시, 좌표가 불확실한 장소의 경유 추천 제외를 반영했습니다.</li>
+          <li>모바일에서 경유 검색과 후보 목록을 보기 편하게 조정했습니다.</li>
+        </ul>
+      </section>
+      <a class="updates-source" href="https://www.data.go.kr/data/3060079/fileData.do" target="_blank" rel="noopener">온누리 공식 자료 확인 ↗</a>
+    </div>
+  </dialog>
   <details class="trip-panel" id="tripPanel">
     <summary><h2 class="trip-heading">가는 길에 주유소 들르기</h2></summary>
     <div class="trip-body">
@@ -2497,5 +2534,6 @@ if (!localStorage.getItem('helpSeen')) {
 </script>
 <script src="assets/route-core.js?v=0c268acfbbeb"></script>
 <script src="assets/route-planner.js?v=ba0a7a53e625"></script>
+<script src="assets/updates.js?v=db39e7a48351"></script>
 </body>
 </html>
