@@ -5,6 +5,10 @@ on:
     - cron: '0 */3 * * *'  # 3시간마다 (하루 8회)
   workflow_dispatch:       # 수동 실행 가능
 
+concurrency:
+  group: gas-map-data-write
+  cancel-in-progress: false
+
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -13,6 +17,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
 
       - uses: actions/setup-python@v5
         with:
@@ -60,12 +66,11 @@ jobs:
           git push
 
       - name: index.html 준비
-        run: cp output/map.html index.html
+        run: python scripts/prepare_site.py
 
       - name: GitHub Pages 배포
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
+          publish_dir: ./_site
           publish_branch: gh-pages
-          exclude_assets: '.github,output,docs,.claude,.env,requirements.txt,env.example'
