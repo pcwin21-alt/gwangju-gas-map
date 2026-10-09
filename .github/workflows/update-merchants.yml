@@ -1,0 +1,39 @@
+name: 가맹점 목록 확인 및 갱신
+on:
+  schedule:
+    - cron: '30 21 * * *'
+  workflow_dispatch:
+concurrency:
+  group: gas-map-data-write
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install requests
+      - name: 가맹점 전체 수집 및 검증
+        run: python scripts/refresh_merchants.py
+      - name: 데이터 검사
+        run: python -m unittest discover -s tests -p 'test_*.py'
+      - name: 변경 기록 저장
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add output/map.html output/gas_stations.json output/filtered_sangsaeng.json output/merchant_status.json output/merchant_review.json
+          git diff --staged --quiet || git commit -m "chore: 가맹점 확인 기록 갱신"
+          git push origin main
+      - name: 공개 파일 준비
+        run: python scripts/prepare_site.py
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          publish_branch: gh-pages

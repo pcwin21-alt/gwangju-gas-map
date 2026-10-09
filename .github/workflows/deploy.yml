@@ -9,6 +9,12 @@ on:
       - 'output/gas_prices.json'
       - 'thumbnail.png'
       - 'favicon.svg'
+      - 'assets/**'
+      - 'scripts/prepare_site.py'
+
+concurrency:
+  group: gas-map-data-write
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -17,14 +23,15 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
 
       - name: Copy map.html as index.html
-        run: cp output/map.html index.html
+        run: python scripts/prepare_site.py
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
+          publish_dir: ./_site
           publish_branch: gh-pages
-          exclude_assets: '.github,output,docs,.claude,.env,requirements.txt,env.example'
