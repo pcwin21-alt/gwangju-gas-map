@@ -15,8 +15,15 @@
 }
 @media(max-height:500px) and (orientation:landscape){
   .header .header-text p,.controls .legend,.controls .count-badge,.controls .report-trigger-btn,.trip-panel .trip-trigger-hint {display:none;}
-  .header {padding:6px 12px;}
-  .controls {padding:6px 12px;}
-  .trip-panel {padding:6px 12px;}
+  .header.header {padding:6px 12px;}
+  .controls.controls {padding:6px 12px;}
+  .trip-panel.trip-panel {padding:6px 12px;}
   .trip-panel .trip-trigger {padding:8px 12px;}
+}
+@media(min-width:701px) and (max-width:950px) and (max-height:500px) and (orientation:landscape){
+  .controls .controls-bottom {grid-template-columns:repeat(6,minmax(0,1fr));}
+  .controls-bottom .rank-btn {grid-column:4;grid-row:1;}
+  .controls-bottom .nearby-btn {grid-column:5;grid-row:1;}
+  .controls-bottom .updates-trigger {grid-column:6;grid-row:1;}
+  .controls-bottom button {font-size:12px;}
 }
