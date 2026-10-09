@@ -25,7 +25,6 @@
   <link rel="stylesheet" href="assets/route-planner.css">
   <link rel="stylesheet" href="assets/price-display.css">
   <link rel="stylesheet" href="assets/updates.css">
-  <link rel="stylesheet" href="assets/mobile-map.css">
   <script src="assets/map-viewport.js"></script>
   <script src="assets/price-display.js"></script>
   <script src="assets/merchant-display.js"></script>
@@ -751,6 +750,7 @@
     }
     .react-clist-empty, .react-clist-loading { font-size: 13px; color: #94a3b8; text-align: center; padding: 16px 0; }
   </style>
+  <link rel="stylesheet" href="assets/visual-refresh.css">
 </head>
 <body>
 <div class="app">
@@ -768,12 +768,13 @@
           <path d="M18.7 23.7c0-3.3 2.7-6 6-6s6 2.7 6 6c0 4.7-6 8.7-6 8.7s-6-4-6-8.7z" fill="#ef4444"/>
           <circle cx="24.7" cy="23.7" r="2.1" fill="#fff"/>
         </svg>
-        <h1>광주광역시 상생·온누리 주유소 지도</h1>
+        <h1>광주 주유소 지도</h1>
       </div>
-      <p>온누리상품권 · 광주상생카드 사용 가능 주유소 &nbsp;|&nbsp; 오늘 <b id="cnt-today" style="color:#cbd5e1;">-</b> · 전체 <b id="cnt-total" style="color:#cbd5e1;">-</b></p>
+      <p>상생카드 · 온누리상품권<span hidden> 오늘 <b id="cnt-today">-</b> · 전체 <b id="cnt-total">-</b></span></p>
     </div>
     <div class="header-actions">
-      <button class="help-btn" id="helpBtn" title="사용법 안내">?</button>
+      <button class="tools-trigger" id="toolsOpenBtn" type="button" aria-haspopup="dialog" aria-controls="mapTools">더보기 <span aria-hidden="true">⋯</span></button>
+      <button class="help-btn" id="helpBtn" title="사용법 안내" aria-label="사용법 안내">?</button>
       <a class="feedback-btn"
          href="mailto:pcwin21@gmail.com?subject=%5B%EC%A3%BC%EC%9C%A0%EC%86%8C%20%EC%A7%80%EB%8F%84%5D%20%EC%98%A4%EB%A5%98%2F%EB%88%84%EB%9D%BD%20%EC%8B%A0%EA%B3%A0&body=%EC%A3%BC%EC%9C%A0%EC%86%8C%EB%AA%85%3A%0A%EC%A3%BC%EC%86%8C%3A%0A%EB%AC%B8%EC%A0%9C%20%EB%82%B4%EC%9A%A9%3A">
         ✉ 오류·누락 신고 <span class="feedback-email" style="opacity:0.65;font-size:11px">(pcwin21@gmail.com)</span>
@@ -820,7 +821,7 @@
         <div class="help-item"><b>검색창</b>에 주유소명이나 주소를 입력하면 해당 위치로 이동합니다.</div>
         <div class="help-item"><b>상생카드 / 온누리 / 전체</b> 버튼으로 원하는 결제수단의 주유소만 볼 수 있습니다.</div>
         <div class="help-item"><b>구 필터</b>(광산구·남구·동구·북구·서구)로 원하는 지역만 볼 수 있습니다.</div>
-        <div class="help-item"><b>👑 저렴한 순위</b> → 현재 보이는 주유소 중 휘발유·경유·LPG 가격 TOP 5를 확인합니다.</div>
+        <div class="help-item"><b>가격 순위</b> → 현재 보이는 주유소 중 휘발유·경유·LPG 가격 TOP 5를 확인합니다.</div>
         <div class="help-item"><b>📍 내 위치</b> → 현재 위치를 지도 중심으로 이동합니다. (브라우저 위치 권한 필요)</div>
         <div class="help-item"><b>길찾기</b> → 주유소 팝업에서 카카오맵 또는 네이버지도를 바로 엽니다.</div>
         <div class="help-item"><b>주변 내보내기</b> → 내 위치 기준 가까운 주유소 링크 목록을 복사합니다.</div>
@@ -861,7 +862,7 @@
   <div class="controls">
     <div class="controls-top">
       <div class="search-box">
-        <input type="text" id="searchInput" placeholder="주유소명 · 주소 검색...">
+        <input type="text" id="searchInput" placeholder="주유소명 · 주소 검색..." aria-label="주유소명 또는 주소 검색">
         <button class="search-clear" id="searchClear" title="지우기">✕</button>
         <div class="no-result" id="noResult">검색 결과 없음</div>
       </div>
@@ -876,7 +877,6 @@
         <span><span class="legend-dot" style="background:#dc2626"></span>둘 다</span>
       </div>
       <span class="count-badge" id="countBadge">0개</span>
-      <button class="report-trigger-btn" id="reportTriggerBtn">+ 제보</button>
     </div>
     <div class="controls-bottom">
       <label class="mobile-district"><select id="districtSelect" aria-label="지역 선택"><option value="all">전체 지역</option><option>광산구</option><option>남구</option><option>동구</option><option>북구</option><option>서구</option></select></label>
@@ -887,13 +887,23 @@
       <button class="district-btn" data-district="북구">북구</button>
       <button class="district-btn" data-district="서구">서구</button>
       <button class="myloc-btn" id="myLocBtn">📍 내 위치</button>
-      <button class="fit-results-btn" id="fitResultsBtn" type="button">결과 보기</button>
-      <button class="reset-btn" id="resetBtn">↺ 초기화</button>
-      <button class="rank-btn" id="rankBtn">👑 저렴한 순위</button>
-      <button class="nearby-btn" id="nearbyBtn">↗ 주변 내보내기</button>
-      <button class="updates-trigger" id="updatesBtn" type="button" aria-haspopup="dialog" aria-controls="updatesDialog">업데이트 내역</button>
+      <button class="rank-btn" id="rankBtn">가격 순위</button>
     </div>
   </div>
+
+  <dialog id="mapTools" class="tools-dialog" aria-labelledby="toolsTitle">
+    <div class="tools-header"><h2 id="toolsTitle">더보기</h2><button id="toolsCloseBtn" type="button" aria-label="더보기 닫기" autofocus>닫기</button></div>
+    <nav class="tools-actions" aria-label="지도 도구">
+      <button id="toolsHelpBtn" type="button">사용법 안내</button>
+      <button class="reset-btn" id="resetBtn">↺ 초기화</button>
+      <button class="nearby-btn" id="nearbyBtn">↗ 주변 내보내기</button>
+      <button class="updates-trigger" id="updatesBtn" type="button" aria-haspopup="dialog" aria-controls="updatesDialog">업데이트 내역</button>
+      <button class="report-trigger-btn" id="reportTriggerBtn">+ 제보</button>
+      <button class="coffee-float" id="coffeeBtn">☕ 개발자에게 커피사주기</button>
+      <button class="react-float-btn" id="reactFloatBtn">💬 반응 남기기</button>
+      <a href="mailto:pcwin21@gmail.com" class="tools-contact">오류·누락 신고 / 문의 <span>↗</span></a>
+    </nav>
+  </dialog>
 
   <dialog class="updates-dialog" id="updatesDialog" aria-labelledby="updatesTitle">
     <div class="updates-header">
@@ -910,6 +920,7 @@
       <section class="updates-release">
         <h3><time datetime="2026-10-10">2026.10.10</time></h3>
         <ul>
+          <li>모바일 중심으로 디자인을 개편했습니다. 검색·결제 필터·위치·가격 순위를 우선 배치하고, 보조 도구는 더보기로 모았습니다. 지도 위 가림을 줄이고 버튼·입력창·팝업의 크기와 색상을 통일했습니다.</li>
           <li>하단의 예전 버전·날짜·개인 연락처 표시를 제거하고, 오류·누락 신고 및 문의 이메일을 pcwin21@gmail.com으로 통일했습니다.</li>
           <li>모바일의 구별 버튼을 선택형 지역 필터로 줄였습니다. 지역·결제수단·검색 결과를 지도 안에 맞추고, ‘결과 보기’ 버튼과 화면 회전·경유창 전환 시 지도 크기 보정을 추가했습니다.</li>
           <li>경유 검색 입구를 눈에 띄는 ‘경유 주유소 찾기’ 버튼으로 바꾸고, 열기·접기 상태를 표시했습니다.</li>
@@ -1075,12 +1086,12 @@
 
   <div class="map-area">
     <div id="map"></div>
-    <button class="coffee-float" id="coffeeBtn">☕ 개발자에게 커피사주기</button>
+      <button class="fit-results-btn" id="fitResultsBtn" type="button">결과 보기</button>
+
     <div class="report-banner" id="reportBanner" style="display:none">
       📍 제보할 주유소 위치를 지도에서 클릭하세요
       <button class="report-banner-cancel" id="reportBannerCancel">취소</button>
     </div>
-    <button class="react-float-btn" id="reactFloatBtn">💬 반응 남기기</button>
   </div>
   <div class="react-panel" id="reactPanel">
     <div class="react-panel-box">
@@ -1672,7 +1683,8 @@ function applyFilters() {
   } else {
     badge = `${total}개`;
   }
-  document.getElementById('countBadge').textContent = badge;
+  document.getElementById('countBadge').textContent = `${total}곳`;
+  document.getElementById('countBadge').title = badge;
   const noResult = document.getElementById('noResult');
   noResult.classList.toggle('visible', (q.length > 0 || currentDistrict !== 'all') && total === 0);
 }
@@ -2562,5 +2574,6 @@ if (!localStorage.getItem('helpSeen')) {
 <script src="assets/route-core.js"></script>
 <script src="assets/route-planner.js"></script>
 <script src="assets/updates.js"></script>
+<script src="assets/visual-refresh.js"></script>
 </body>
 </html>
