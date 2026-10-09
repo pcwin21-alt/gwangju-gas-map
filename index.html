@@ -25,6 +25,8 @@
   <link rel="stylesheet" href="assets/route-planner.css?v=de72f8bd59e2">
   <link rel="stylesheet" href="assets/price-display.css?v=7aa9555f0e95">
   <link rel="stylesheet" href="assets/updates.css?v=dfaa761f2f4e">
+  <link rel="stylesheet" href="assets/mobile-map.css?v=24b40ac1abc0">
+  <script src="assets/map-viewport.js?v=a3fc8e007020"></script>
   <script src="assets/price-display.js?v=c638a9941b8f"></script>
   <script src="assets/merchant-display.js?v=9f4f6647ac98"></script>
   <style>
@@ -877,6 +879,7 @@
       <button class="report-trigger-btn" id="reportTriggerBtn">+ 제보</button>
     </div>
     <div class="controls-bottom">
+      <label class="mobile-district"><select id="districtSelect" aria-label="지역 선택"><option value="all">전체 지역</option><option>광산구</option><option>남구</option><option>동구</option><option>북구</option><option>서구</option></select></label>
       <button class="district-btn active" data-district="all">전체 구</button>
       <button class="district-btn" data-district="광산구">광산구</button>
       <button class="district-btn" data-district="남구">남구</button>
@@ -884,6 +887,7 @@
       <button class="district-btn" data-district="북구">북구</button>
       <button class="district-btn" data-district="서구">서구</button>
       <button class="myloc-btn" id="myLocBtn">📍 내 위치</button>
+      <button class="fit-results-btn" id="fitResultsBtn" type="button">결과 보기</button>
       <button class="reset-btn" id="resetBtn">↺ 초기화</button>
       <button class="rank-btn" id="rankBtn">👑 저렴한 순위</button>
       <button class="nearby-btn" id="nearbyBtn">↗ 주변 내보내기</button>
@@ -906,6 +910,7 @@
       <section class="updates-release">
         <h3><time datetime="2026-10-10">2026.10.10</time></h3>
         <ul>
+          <li>모바일의 구별 버튼을 선택형 지역 필터로 줄였습니다. 지역·결제수단·검색 결과를 지도 안에 맞추고, ‘결과 보기’ 버튼과 화면 회전·경유창 전환 시 지도 크기 보정을 추가했습니다.</li>
           <li>경유 검색 입구를 눈에 띄는 ‘경유 주유소 찾기’ 버튼으로 바꾸고, 열기·접기 상태를 표시했습니다.</li>
           <li>상단 조회 현황을 업데이트 내역 팝업으로 이동했습니다.</li>
           <li>온누리 2026년 7월 31일 기준 공식 자료로 기존 가맹점 100곳을 대조했습니다. 매칭되지 않은 3곳은 최근 미확인으로 유지했습니다.</li>
@@ -1631,6 +1636,9 @@ STATIONS.forEach(station => {
 let currentFilter = 'all';
 let currentDistrict = 'all';
 let currentSearch = '';
+const mapViewport = GasMapViewport.create(map, document.getElementById('map'),
+  () => allMarkers.filter(item => item.visible).map(item => item.station));
+document.getElementById('fitResultsBtn').addEventListener('click', () => mapViewport.fit());
 
 function applyFilters() {
   let sOnly = 0, oOnly = 0, both = 0;
@@ -1673,6 +1681,7 @@ function applyFilters() {
 
 // 초기 카운트
 applyFilters();
+mapViewport.fit();
 
 // 필터 버튼 이벤트
 document.querySelectorAll('.filter-btn').forEach(btn => {
@@ -1681,24 +1690,30 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
     this.classList.add('active');
     currentFilter = this.dataset.filter;
     applyFilters();
+    mapViewport.fit();
   });
 });
 
 // 검색 이벤트
 const searchInput = document.getElementById('searchInput');
 const searchClear = document.getElementById('searchClear');
+let searchFitTimer;
 
 searchInput.addEventListener('input', function() {
   currentSearch = this.value.trim();
   searchClear.classList.toggle('visible', this.value.length > 0);
   applyFilters();
+  clearTimeout(searchFitTimer);
+  searchFitTimer = setTimeout(() => mapViewport.fit(), 350);
 });
 
 searchClear.addEventListener('click', function() {
   searchInput.value = '';
   currentSearch = '';
+  clearTimeout(searchFitTimer);
   this.classList.remove('visible');
   applyFilters();
+  mapViewport.fit();
   searchInput.focus();
 });
 
@@ -1708,9 +1723,16 @@ function triggerDistrictSelect(districtName) {
   const btn = document.querySelector(`.district-btn[data-district="${districtName}"]`);
   if (btn) btn.classList.add('active');
   currentDistrict = districtName;
+  document.getElementById('districtSelect').value = districtName;
   setDistrictHighlight(districtName);
   applyFilters();
+  clearRankMapOverlays();
+  if (activeOverlay) { activeOverlay.setMap(null); activeOverlay = null; }
+  mapViewport.fit();
 }
+document.getElementById('districtSelect').addEventListener('change', function() {
+  triggerDistrictSelect(this.value);
+});
 
 document.querySelectorAll('.district-btn').forEach(btn => {
   btn.addEventListener('click', function() {
@@ -1801,9 +1823,11 @@ document.getElementById('resetBtn').addEventListener('click', function() {
   document.querySelectorAll('.district-btn').forEach(b => b.classList.remove('active'));
   document.querySelector('.district-btn[data-district="all"]').classList.add('active');
   currentDistrict = 'all';
+  document.getElementById('districtSelect').value = 'all';
   setDistrictHighlight('all');
   clearRankMapOverlays();
   applyFilters();
+  mapViewport.fit();
 });
 
 // ── 순위 기능 ──────────────────────────────────────────
