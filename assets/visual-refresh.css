@@ -1,8 +1,8 @@
-:root {--ink:#18243c;--muted:#57647b;--line:#dce3ef;--accent:#315bd6;--surface:#f5f7fc;}
+:root {--ink:#18243c;--muted:#57647b;--line:#dce3ef;--accent:#233e78;--surface:#f5f7fc;}
 body {color:var(--ink);background:var(--surface);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;}
 button,a,input,select,summary {-webkit-tap-highlight-color:transparent;}
 button,a,summary {touch-action:manipulation;}
-:focus-visible {outline:3px solid #315bd6;outline-offset:3px;}
+:focus-visible {outline:3px solid #233e78;outline-offset:3px;}
 .app {height:100vh;height:100dvh;overflow:hidden;}
 .header {background:#fff;color:var(--ink);padding:12px 20px;border-bottom:1px solid var(--line);gap:8px;}
 .header-logo {width:32px;height:32px;border-radius:10px;box-shadow:none;background:var(--surface);}
@@ -19,7 +19,7 @@ button,a,summary {touch-action:manipulation;}
 .search-box {max-width:400px;min-width:0;}
 .search-box input {height:46px;padding:10px 42px 10px 16px;background:var(--surface);border:1px solid var(--line);border-radius:14px;font-size:16px;color:var(--ink);}
 .search-box input::placeholder {color:#67758d;}
-.search-box input:focus {background:#fff;border-color:var(--accent);box-shadow:0 0 0 3px #315bd614;}
+.search-box input:focus {background:#fff;border-color:var(--accent);box-shadow:0 0 0 3px #233e7814;}
 .search-clear {min-width:40px;min-height:40px;right:2px;color:var(--muted);font-size:17px;}
 .filter-group {gap:4px;padding:4px;background:var(--surface);border-radius:14px;}
 .filter-btn {height:38px;padding:6px 18px;border:0;border-radius:10px;background:transparent;font-size:14px;font-weight:600;color:var(--muted);}
@@ -30,19 +30,19 @@ button,a,summary {touch-action:manipulation;}
 .count-badge {margin-left:auto;background:transparent;color:var(--muted);font-size:13px;padding:0 4px;}
 .controls-bottom {padding-top:0;border:0;margin:0;gap:8px;}
 .controls-bottom button,.mobile-district select {min-height:44px;padding:8px 14px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);font-size:14px;cursor:pointer;margin:0;}
-.controls-bottom .district-btn.active {background:#edf2ff;border-color:#bcccf4;color:#264cad;font-weight:700;}
-.controls-bottom .rank-btn {background:#edf2ff;color:#264cad;border-color:#cdd9f7;font-weight:700;}
+.controls-bottom .district-btn.active {background:#eef2f9;border-color:#b8c7e1;color:#233e78;font-weight:700;}
+.controls-bottom .rank-btn {background:#eef2f9;color:#233e78;border-color:#cbd5e8;font-weight:700;}
 .mobile-district {display:none;min-width:0;}
 .mobile-district select {width:100%;font:inherit;font-size:16px;}
 .map-area {min-height:0;isolation:isolate;}
 .map-area .fit-results-btn {position:absolute;right:14px;bottom:max(24px,env(safe-area-inset-bottom));z-index:100;min-height:46px;padding:10px 16px;border:1px solid var(--line);border-radius:14px;background:#fff;color:var(--ink);font-size:14px;font-weight:600;box-shadow:0 3px 14px #18243c26;cursor:pointer;}
 .trip-panel {padding:0 20px 12px;background:#fff;border-bottom:1px solid var(--line);}
 .trip-panel .trip-trigger {padding:12px 16px;gap:12px;background:var(--accent);border-color:var(--accent);border-radius:14px;}
-.trip-panel .trip-trigger:hover {background:#2548b8;}
+.trip-panel .trip-trigger:hover {background:#192e5d;}
 .trip-trigger-hint {font-size:12px;line-height:1.4;}
 .trip-heading {font-size:16px;}
 .trip-trigger-state {font-size:13px;}
-.trip-panel[open] .trip-trigger {background:#edf2ff;color:#264cad;border-color:#cdd9f7;}
+.trip-panel[open] .trip-trigger {background:#eef2f9;color:#233e78;border-color:#cbd5e8;}
 .trip-panel input,.trip-panel select,.trip-panel button,.trip-link {border-radius:12px;border-color:var(--line);}
 .trip-input-row input {flex:1;min-width:0;width:0;}
 .trip-input-row button {flex:0 0 auto;white-space:nowrap;}
@@ -114,7 +114,7 @@ button,a,summary {touch-action:manipulation;}
 }
 
 /* Blue theme details shared by route forms and station popups. */
-.trip-trigger-hint {color:#e6edff;}
-.trip-panel[open] .trip-trigger-hint,.trip-selected {color:#264cad;}
-.distance-row {background:#edf2ff;border-color:#cdd9f7;color:#264cad;}
-.distance-value {color:#264cad;}
+.trip-trigger-hint {color:#e1e8f5;}
+.trip-panel[open] .trip-trigger-hint,.trip-selected {color:#233e78;}
+.distance-row {background:#eef2f9;border-color:#cbd5e8;color:#233e78;}
+.distance-value {color:#233e78;}
