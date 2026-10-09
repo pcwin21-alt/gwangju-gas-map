@@ -31,3 +31,5 @@
 .trip-panel.has-results .trip-form,.trip-panel.has-results .trip-search-options {display:none;}
 #tripRouteSummary {font-weight:700;overflow-wrap:anywhere;margin:8px 0;}
 @media(max-width:700px){.app:has(#tripPanel[open]) .controls{display:none}}
+
+.merchant-banner {margin:0;padding:6px 16px;background:#fffbeb;flex-shrink:0;}
