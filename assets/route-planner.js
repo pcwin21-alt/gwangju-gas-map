@@ -44,7 +44,7 @@
     if(station.payment_types.includes('saengsaeng')) labels.push('상생카드');
     if(station.payment_types.includes('onnuri')) {
       const m=station.onnuri_methods;
-      labels.push('온누리 '+(m ? [m.paper&&'지류', (m.card||m.qr)&&'디지털'].filter(Boolean).join('·') : '종류 미확인')+' (최근 미확인)');
+      labels.push('온누리 '+(m ? [m.paper&&'지류', GasMerchantDisplay.digital(m)&&'디지털'].filter(Boolean).join('·') : '종류 미확인')+' · '+GasMerchantDisplay.onnuriNote(station));
     }
     return labels.join(' / ');
   }
@@ -80,9 +80,8 @@
       }
       card.append(block);
     }
-    const v=station.verification?.saengsaeng;
     const info=document.createElement('p');info.className='trip-note';
-    info.textContent=v ? `상생카드 조회: ${v.checked_at.slice(0,10)}` : '온누리 마지막 확인: 2026-03-03 · 결제 가능 여부 재확인 필요';card.append(info);
+    info.textContent=GasMerchantDisplay.verificationText(station);card.append(info);
     card.append(routeActions(station));return card;
   }
   async function requireStart() {
@@ -145,6 +144,8 @@
   byId('tripEdit').addEventListener('click',()=>{clearResults();say('경로 또는 결제수단을 수정한 뒤 다시 비교하세요.');byId('tripDestination').focus();});
   ['tripPayment','tripMethod','tripFuel'].forEach(id=>byId(id).addEventListener('change',()=>{clearResults();say('조건이 변경됐습니다. 추가 이동시간을 다시 비교하세요.');}));
   const metadata=typeof MERCHANT_STATUS==='undefined'?{}:MERCHANT_STATUS;
-  byId('merchantFreshness').textContent=`상생카드 조회 ${metadata.saengsaeng?.checked_at?.slice(0,10)||'미확인'} · 온누리 2026-03-03 이후 전체 갱신 미완료`;
+  const onnuri=metadata.onnuri;
+  const onnuriSummary=onnuri?.source_date ? `공식 자료 ${onnuri.source_date} 대조 ${onnuri.matched_count}곳 · 매칭 미완료 ${onnuri.unmatched_count}곳` : '최근 전체 갱신 미완료';
+  byId('merchantFreshness').textContent=`상생카드 조회 ${metadata.saengsaeng?.checked_at?.slice(0,10)||'미확인'} · 온누리 ${onnuriSummary}${onnuri?.refresh_error ? ' · 새 파일 조회 실패, 이전 자료 유지' : ''}`;
   window.GasRoutePlanner={chooseStation};
 })();

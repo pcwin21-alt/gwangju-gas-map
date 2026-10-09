@@ -24,3 +24,5 @@ venv/
 Thumbs.db
 
 _site/
+output/onnuri_official.csv
+output/*.tmp

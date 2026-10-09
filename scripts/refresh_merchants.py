@@ -6,6 +6,10 @@ import time
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 import requests
+try:
+    from official_onnuri import fetch_snapshot, reconcile
+except ModuleNotFoundError:
+    from scripts.official_onnuri import fetch_snapshot, reconcile
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'output'
@@ -106,7 +110,7 @@ def merge(sangsaeng, onnuri, old, checked):
         lat, lng = coords(row.get('latitude'), row.get('longitude'))
         station = {'id': 'onnuri:' + row['frCd'], 'name': name,
                    'address': row.get('frcsAddr', ''), 'lat': lat, 'lng': lng,
-                   'payment_types': ['onnuri'], 'source': ['onnuri_place'], 'aliases': [],
+                   'payment_types': ['onnuri'], 'source': ['onnuri_csv' if row.get('_verification') else 'onnuri_place'], 'aliases': [],
                    'fuel_kind': 'lpg' if '충전소' in name else 'liquid',
                    'route_eligible': lat is not None and bool(re.search(r'주유소|충전소', name))}
         key = road_key(station['address'])
@@ -116,8 +120,9 @@ def merge(sangsaeng, onnuri, old, checked):
             target = candidates[0]
             if 'onnuri' not in target['payment_types']:
                 target['payment_types'].append('onnuri')
-            if 'onnuri_place' not in target['source']:
-                target['source'].append('onnuri_place')
+            for source in station['source']:
+                if source not in target['source']:
+                    target['source'].append(source)
             if name != target['name']:
                 target['aliases'].append(name)
         else:
@@ -127,12 +132,17 @@ def merge(sangsaeng, onnuri, old, checked):
         prior = target.get('onnuri_methods')
         target['onnuri_methods'] = {k: row.get(v) == 'Y' for k, v in
                                    [('paper', 'paperYn'), ('card', 'cardYn'), ('qr', 'qrYn')]}
+        target['onnuri_methods']['digital'] = (row['digitalYn'] == 'Y' if 'digitalYn' in row
+            else target['onnuri_methods']['card'] or target['onnuri_methods']['qr'])
         if prior:
-            target['onnuri_methods'] = {k: prior[k] and v for k, v in target['onnuri_methods'].items()}
+            target['onnuri_methods'] = {k: prior.get(k, False) and v for k, v in target['onnuri_methods'].items()}
         previous = target['verification'].get('onnuri', {})
         ids = previous.get('source_ids', [previous['source_id']] if previous.get('source_id') else [])
         target['verification']['onnuri'] = {'checked_at': '2026-03-03', 'status': 'stale',
                                             'source_id': row['frCd'], 'source_ids': sorted(set(ids + [row['frCd']]))}
+        if row.get('_verification'):
+            target['verification']['onnuri'].update(row['_verification'])
+            target['verification']['onnuri']['source_ids'] = sorted(set(ids + [row['frCd']]))
     for station in result:
         if not station['route_eligible']:
             review.append({'reason': '내비 추천 제외: 좌표 또는 자동차 주유 업종 확인 필요',
@@ -170,20 +180,29 @@ def main():
         save('merchant_status.json', status)
         sync_map(old, status)
         raise
-    # Probe once: this historical endpoint currently rejects direct public calls.
-    # A probe is never a full snapshot; successful responses still need full scan verification.
+    # Official annual file replaces the unavailable historical endpoint.
+    historical = load('raw_onnuri_place.json', [])
+    official_review = []
     try:
-        response = session.post('https://onnuri.gift/api/v1/place/search', timeout=20,
-            json={'keyword': '주유소', 'addrNm': '', 'placeTypeList': [], 'paperYn': '',
-                  'cardYn': '', 'qrYn': '', 'latitude': '35.081858', 'longitude': '126.831485'},
-            headers={'Origin': 'https://onnuri.gift', 'Referer': 'https://onnuri.gift/'})
-        status['onnuri'] = {'status': 'stale', 'checked_at': '2026-03-03', 'attempted_at': checked,
-                            'http_status': response.status_code,
-                            'reason': '최근 전체 수집 미완료. 기존 확인 기록 유지'}
-    except requests.RequestException:
-        status['onnuri'] = {'status': 'stale', 'checked_at': '2026-03-03', 'attempted_at': checked,
-                            'reason': '조회 연결 실패. 기존 확인 기록 유지'}
-    stations, review = merge(live, load('raw_onnuri_place.json', []), old, checked)
+        snapshot = fetch_snapshot(session, load('onnuri_official_snapshot.json'), checked)
+        save('onnuri_official_snapshot.json', snapshot)
+        source_error = None
+    except (requests.RequestException, ValueError, KeyError) as error:
+        snapshot = load('onnuri_official_snapshot.json')
+        source_error = type(error).__name__
+    if snapshot:
+        historical, official_review = reconcile(snapshot, historical)
+        status['onnuri'] = {'status': 'published_snapshot', 'source_date': snapshot['source_date'],
+            'checked_at': snapshot['retrieved_at'], 'attempted_at': checked,
+            'source_url': snapshot['source_url'], 'total_rows': snapshot['total_rows'],
+            'refresh_error': source_error, 'reason': '연간 공식 자료; 상호·상점가 일치 기록만 갱신. 실시간 가맹 여부 미확인'}
+    else:
+        status['onnuri'] = {**status.get('onnuri', {}), 'status': 'stale',
+            'attempted_at': checked, 'refresh_error': source_error, 'reason': '공식 파일 조회 실패. 과거 기록 유지'}
+    stations, review = merge(live, historical, old, checked)
+    review.extend(official_review)
+    status['onnuri']['matched_count'] = sum(s.get('verification', {}).get('onnuri', {}).get('status') == 'published_snapshot' for s in stations)
+    status['onnuri']['unmatched_count'] = sum(s.get('verification', {}).get('onnuri', {}).get('status') == 'stale' for s in stations)
     # Legacy rows with only a city as address cannot establish a navigation destination.
     review.extend({'reason': '기존 상세주소 없음', 'name': s['name']} for s in old if not road_key(s.get('address')))
     save('filtered_sangsaeng.json', live)
@@ -191,7 +210,7 @@ def main():
     save('merchant_status.json', status)
     save('merchant_review.json', review)
     sync_map(stations, status)
-    print(f'상생카드 {len(live)}건 / 지도 {len(stations)}건 / 검토 {len(review)}건. 온누리 최신 확인 미완료.')
+    print(f'상생카드 {len(live)}건 / 지도 {len(stations)}건 / 온누리 공식 매칭 {status["onnuri"]["matched_count"]}건 / 과거 기록 {status["onnuri"]["unmatched_count"]}건 / 검토 {len(review)}건.')
 
 if __name__ == '__main__':
     main()
