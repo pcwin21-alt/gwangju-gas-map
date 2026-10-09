@@ -37,6 +37,13 @@ class Merchants(unittest.TestCase):
         self.assertEqual(rows[0]['payment_types'],['saengsaeng','onnuri'])
         self.assertIn('옛이름주유소',rows[0]['aliases'])
 
+    def test_same_place_duplicate_source_keeps_ids(self):
+        row={'frCd':'a','frcsNm':'A주유소','frcsAddr':'광주 북문대로 190','latitude':35.1852,'longitude':126.8708,'paperYn':'Y','cardYn':'Y','qrYn':'Y'}
+        rows,_=m.merge([], [row,{**row,'frCd':'b','cardYn':'N'}],[],'today')
+        self.assertEqual(rows[0]['payment_types'],['onnuri'])
+        self.assertEqual(rows[0]['verification']['onnuri']['source_ids'],['a','b'])
+        self.assertFalse(rows[0]['onnuri_methods']['card'])
+
     def test_false_positive_excluded(self):
         rows,review=m.merge([], [{'frCd':'x','frcsNm':'메가커피 광주유촌점'}],[], 'today')
         self.assertFalse(rows)
@@ -46,6 +53,7 @@ class Merchants(unittest.TestCase):
         data=json.loads((ROOT/'output/gas_stations.json').read_text(encoding='utf-8'))
         self.assertEqual(len({s['id'] for s in data}),len(data))
         self.assertTrue(all(s.get('verification') for s in data))
+        self.assertTrue(all(len(s['payment_types']) == len(set(s['payment_types'])) for s in data))
         self.assertTrue(all(s['lat'] is not None and s['lng'] is not None for s in data if s['route_eligible']))
         paper=next(s for s in data if s['name']=='일자석유')
         self.assertFalse(paper['onnuri_methods']['card'])

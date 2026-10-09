@@ -114,18 +114,25 @@ def merge(sangsaeng, onnuri, old, checked):
         # Do not merge neighboring forecourts merely because their coordinates are close.
         if len(candidates) == 1:
             target = candidates[0]
-            target['payment_types'].append('onnuri')
-            target['source'].append('onnuri_place')
+            if 'onnuri' not in target['payment_types']:
+                target['payment_types'].append('onnuri')
+            if 'onnuri_place' not in target['source']:
+                target['source'].append('onnuri_place')
             if name != target['name']:
                 target['aliases'].append(name)
         else:
             target = station
             target['verification'] = {}
             result.append(target)
+        prior = target.get('onnuri_methods')
         target['onnuri_methods'] = {k: row.get(v) == 'Y' for k, v in
                                    [('paper', 'paperYn'), ('card', 'cardYn'), ('qr', 'qrYn')]}
+        if prior:
+            target['onnuri_methods'] = {k: prior[k] and v for k, v in target['onnuri_methods'].items()}
+        previous = target['verification'].get('onnuri', {})
+        ids = previous.get('source_ids', [previous['source_id']] if previous.get('source_id') else [])
         target['verification']['onnuri'] = {'checked_at': '2026-03-03', 'status': 'stale',
-                                            'source_id': row['frCd']}
+                                            'source_id': row['frCd'], 'source_ids': sorted(set(ids + [row['frCd']]))}
     for station in result:
         if not station['route_eligible']:
             review.append({'reason': '내비 추천 제외: 좌표 또는 자동차 주유 업종 확인 필요',
