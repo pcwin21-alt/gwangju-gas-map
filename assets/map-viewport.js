@@ -16,8 +16,8 @@
         }
         const bounds = new sdk.LatLngBounds();
         points.forEach(p => bounds.extend(new sdk.LatLng(p.lat, p.lng)));
-        map.setBounds(bounds, Math.min(96, Math.round(container.clientHeight * .22)),
-          28, Math.min(36, Math.round(container.clientHeight * .1)), 28);
+        map.setBounds(bounds, Math.min(32, Math.round(container.clientHeight * .15)),
+          28, Math.min(82, Math.round(container.clientHeight * .22)), 28);
       });
     }
     let resizeFrame = 0;
