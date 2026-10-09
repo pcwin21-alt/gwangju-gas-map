@@ -22,10 +22,10 @@
   <script type="text/javascript"
     src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=f912bbe9346dcc939b3ecabee03a4dff&libraries=services"
     onerror="document.body.innerHTML='<div style=padding:40px;font-family:sans-serif><h2 style=color:#dc2626>카카오맵 SDK 로드 실패</h2><p style=margin-top:12px>원인: API 키 오류 또는 허용 도메인 미등록</p><ul style=margin-top:8px;line-height:2><li>카카오 개발자센터 → 앱 → 플랫폼 → Web에 <b>http://localhost:8080</b> 추가</li><li>.env의 KAKAO_MAPS_APP_KEY가 <b>JavaScript 키</b>인지 확인 (REST API 키 아님)</li></ul></div>'"></script>
-  <link rel="stylesheet" href="assets/route-planner.css">
-  <link rel="stylesheet" href="assets/price-display.css">
-  <script src="assets/price-display.js"></script>
-  <script src="assets/merchant-display.js"></script>
+  <link rel="stylesheet" href="assets/route-planner.css?v=a59a26d7f5a1">
+  <link rel="stylesheet" href="assets/price-display.css?v=7aa9555f0e95">
+  <script src="assets/price-display.js?v=c638a9941b8f"></script>
+  <script src="assets/merchant-display.js?v=9f4f6647ac98"></script>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -2495,7 +2495,7 @@ if (!localStorage.getItem('helpSeen')) {
   });
 })();
 </script>
-<script src="assets/route-core.js"></script>
-<script src="assets/route-planner.js"></script>
+<script src="assets/route-core.js?v=0c268acfbbeb"></script>
+<script src="assets/route-planner.js?v=ba0a7a53e625"></script>
 </body>
 </html>
