@@ -70,6 +70,16 @@
     for(const value of [estimate ? `추가 이동 약 ${Math.ceil(estimate.addedSeconds/60)}분 · ${(estimate.addedMeters/1000).toFixed(1)}km` : '추가 이동시간 미계산',methods(station),station.address]){
       const p=document.createElement('p');p.textContent=value;card.append(p);
     }
+    const prices=PRICES[station.name];
+    if(prices){
+      const block=document.createElement('div');block.className='trip-prices';
+      for(const fuel of ['휘발유','경유','LPG']){
+        if(!GasPriceDisplay.effectivePrice(prices[fuel],station))continue;
+        const row=document.createElement('div');row.className='trip-fuel-price';
+        row.innerHTML=fuel+' '+GasPriceDisplay.html(prices[fuel],station);block.append(row);
+      }
+      card.append(block);
+    }
     const v=station.verification?.saengsaeng;
     const info=document.createElement('p');info.className='trip-note';
     info.textContent=v ? `상생카드 조회: ${v.checked_at.slice(0,10)}` : '온누리 마지막 확인: 2026-03-03 · 결제 가능 여부 재확인 필요';card.append(info);
