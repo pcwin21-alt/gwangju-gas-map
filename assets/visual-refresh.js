@@ -6,6 +6,7 @@
   const syncFilters = () => filters.forEach(button => button.setAttribute('aria-pressed', String(button.classList.contains('active'))));
   syncFilters();
   filters.forEach(button => button.addEventListener('click', syncFilters));
+  document.getElementById('resetBtn').addEventListener('click', syncFilters);
   open.addEventListener('click', () => tools.showModal());
   document.getElementById('toolsHelpBtn').addEventListener('click', () => document.getElementById('helpBtn').click());
   document.getElementById('toolsCloseBtn').addEventListener('click', () => tools.close());
