@@ -773,6 +773,7 @@
       <p>상생카드·온누리 할인 가맹점 모음<span hidden> 오늘 <b id="cnt-today">-</b> · 전체 <b id="cnt-total">-</b></span></p>
     </div>
     <div class="header-actions">
+      <button id="languageBtn" class="language-btn" type="button" aria-label="Switch to English" data-no-i18n>EN</button>
       <button class="tools-trigger" id="toolsOpenBtn" type="button" aria-haspopup="dialog" aria-controls="mapTools">더보기 <span aria-hidden="true">⋯</span></button>
       <button class="help-btn" id="helpBtn" title="사용법 안내" aria-label="사용법 안내">?</button>
       <a class="feedback-btn"
@@ -916,6 +917,10 @@
         <p id="merchantFreshness" role="status"></p>
         <p>유가: 3시간마다 갱신 · 가맹점: 매일 오전 6시 30분 확인</p>
         <p>온누리는 연간 공식 자료입니다. 매칭되지 않은 곳은 과거 기록으로 표시합니다.</p>
+      </section>
+      <section class="updates-release">
+        <h3><time datetime="2026-10-13">2026.10.13</time></h3>
+        <ul><li>한국어·영어 전환 버튼을 추가했습니다. 선택한 언어는 다음 방문에도 유지됩니다. 주유소명과 주소는 원문을 유지합니다.</li></ul>
       </section>
       <section class="updates-release">
         <h3><time datetime="2026-10-10">2026.10.10</time></h3>
@@ -2575,5 +2580,6 @@ if (!localStorage.getItem('helpSeen')) {
 <script src="assets/route-planner.js"></script>
 <script src="assets/updates.js"></script>
 <script src="assets/visual-refresh.js"></script>
+<script src="assets/i18n.js"></script>
 </body>
 </html>
