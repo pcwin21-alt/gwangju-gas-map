@@ -118,3 +118,8 @@ button,a,summary {touch-action:manipulation;}
 .trip-panel[open] .trip-trigger-hint,.trip-selected {color:#233e78;}
 .distance-row {background:#eef2f9;border-color:#cbd5e8;color:#233e78;}
 .distance-value {color:#233e78;}
+
+.language-btn {min-width:48px;min-height:44px;padding:8px;border:1px solid var(--line);border-radius:12px;background:#eef2f9;color:var(--accent);font-size:13px;font-weight:700;cursor:pointer;}
+@media(max-width:700px){.controls-bottom button {white-space:normal;}.header-actions {gap:5px;}.tools-trigger {padding:0 8px;font-size:13px;}}
+@media(max-width:380px){.header-logo {display:none;}.header-text h1 {font-size:16px;}}
+html[lang="en"] .trip-trigger-state {font-size:12px;}
