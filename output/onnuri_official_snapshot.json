@@ -2,7 +2,7 @@
   "source_url": "https://www.data.go.kr/data/3060079/fileData.do",
   "download_url": "https://www.data.go.kr/cmm/cmm/fileDownload.do?atchFileId=FILE_000000007663918&fileDetailSn=1&insertDataPrcus=N",
   "source_date": "2026-07-31",
-  "retrieved_at": "2026-10-10T03:27:16+09:00",
+  "retrieved_at": "2026-10-17T08:44:04+09:00",
   "sha256": "66173bf934ad24d3195e9e0c1be0e62adcca0e4767e19a80c435f8e1aead4df6",
   "total_rows": 225803,
   "regional_fuel_rows": 164,
