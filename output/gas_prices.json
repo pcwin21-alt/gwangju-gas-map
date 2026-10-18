@@ -15,7 +15,7 @@
     "prices": {}
   },
   "SK시민주유소": {
-    "uni_id": "A0020175",
+    "uni_id": "A0020269",
     "matched_name": null,
     "prices": {}
   },
@@ -50,7 +50,7 @@
     "prices": {}
   },
   "신광주주유소": {
-    "uni_id": "A0020392",
+    "uni_id": null,
     "matched_name": null,
     "prices": {}
   },
@@ -220,7 +220,7 @@
     "prices": {}
   },
   "SK코끼리주유소": {
-    "uni_id": "A0019786",
+    "uni_id": null,
     "matched_name": null,
     "prices": {}
   },
@@ -285,7 +285,7 @@
     "prices": {}
   },
   "시민주유소": {
-    "uni_id": "A0020175",
+    "uni_id": "A0020269",
     "matched_name": null,
     "prices": {}
   },
@@ -545,7 +545,7 @@
     "prices": {}
   },
   "(주)대창석유직영 지산주유소": {
-    "uni_id": null,
+    "uni_id": "A0019476",
     "matched_name": null,
     "prices": {}
   },
@@ -715,7 +715,7 @@
     "prices": {}
   },
   "첨단용두주유소": {
-    "uni_id": "A0032994",
+    "uni_id": null,
     "matched_name": null,
     "prices": {}
   },
