@@ -1,17 +1,17 @@
 {
   "saengsaeng": {
     "status": "confirmed",
-    "checked_at": "2026-10-19T08:25:17+09:00",
+    "checked_at": "2026-10-20T09:28:34+09:00",
     "count": 77
   },
   "onnuri": {
     "status": "published_snapshot",
     "source_date": "2026-07-31",
     "checked_at": "2026-10-17T08:44:04+09:00",
-    "attempted_at": "2026-10-19T08:25:17+09:00",
+    "attempted_at": "2026-10-20T09:28:34+09:00",
     "source_url": "https://www.data.go.kr/data/3060079/fileData.do",
     "total_rows": 225803,
-    "refresh_error": "ConnectTimeout",
+    "refresh_error": null,
     "reason": "연간 공식 자료; 상호·상점가 일치 기록만 갱신. 실시간 가맹 여부 미확인",
     "matched_count": 100,
     "unmatched_count": 3
