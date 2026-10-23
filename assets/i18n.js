@@ -3,6 +3,10 @@
   'use strict';
   const messages = {
     '전국 온누리 주유소 지도':'Onnuri fuel stations across Korea',
+    '상생카드와 온누리 공식 검색 결과를 표시합니다. 현행 검색과 대조되지 않은 곳은 과거 기록으로 구분합니다. 유가와 가맹점 확인일은 별개입니다.':'Sangsaeng and Onnuri use official search results. Unmatched older records are marked historical. Price and merchant check dates are separate.',
+    '유가: 하루 1회 조회 · 가맹점: 매일 오전 6시 30분 확인':'Prices: daily lookup · Merchants: daily at 06:30 KST',
+    '공식 검색·품목 자료로 확인한 주유소입니다. 전국 모든 가맹점이 포함된 것은 아닙니다.':'Stations are checked against official search and product records. Coverage is not exhaustive.',
+    '온누리 공식 검색 ↗':'Search official Onnuri merchants ↗',
     '전국 온누리 · 광주상생카드 가맹점':'National Onnuri · Gwangju Sangsaeng merchants',
     '시·도':'Province', '온누리 유형':'Onnuri type','유종':'Fuel','전국':'All regions',
     '디지털':'Digital','지류':'Paper','지류·디지털':'Paper · Digital','휘발유·경유':'Petrol · Diesel','전체 시·군·구':'All districts',
@@ -126,7 +130,7 @@
     const raw = String(value), text = raw.trim();
     let result = messages[text];
     if (/^지도 표시 \d+곳$/.test(text)) result = text.replace(/^지도 표시 (\d+)곳$/, '$1 mapped stations');
-    if (/^주소 확인 대기 \d+건$/.test(text)) result = text.replace(/^주소 확인 대기 (\d+)건$/, '$1 locations awaiting review');
+    if (/^주소(?:·업종)? 확인 대기 \d+건$/.test(text)) result = text.replace(/^주소(?:·업종)? 확인 대기 (\d+)건$/, '$1 locations awaiting review');
     if (/^공식 온누리 자료 /.test(text)) result = text.replace('공식 온누리 자료 ', 'Official Onnuri source: ');
     if (result === undefined) {
       if ((text.includes(' / ') || text.includes(' · ')) && !text.startsWith('추가 이동 약 ')) result = text.split(/( \/ | · )/).map(part => /[가-힣]/.test(part) ? translate(part) : part).join('');
@@ -139,9 +143,12 @@
       else if (/^매칭 미완료 \d+곳$/.test(text)) result = text.replace(/^매칭 미완료 (\d+)곳$/, '$1 unmatched');
       else if (/^총 \d+개$/.test(text)) result = text.replace(/^총 (\d+)개$/, '$1 stations');
       else if (/^상생 \d+$/.test(text)) result = text.replace('상생 ', 'Sangsaeng ');
+      else if (/^공식 검색 확인 /.test(text)) result = text.replace('공식 검색 확인 ','Official search checked: ');
+      else if (/^공식 검색 [\d-]+ 확인 \d+곳$/.test(text)) result = text.replace(/^공식 검색 ([\d-]+) 확인 (\d+)곳$/, 'Official search: $1, $2 checked');
+      else if (/^온누리 공식 검색 [\d-]+$/.test(text)) result = text.replace('온누리 공식 검색 ','Onnuri official search: ');
       else if (/^공식 자료 /.test(text)) result = text.replace('공식 자료 ','Official source: ');
       else if (/^과거 기록 /.test(text)) result = text.replace('과거 기록 ','Historical record: ').replace('미확인','unverified').replace('최근 unverified','not recently verified');
-      else if (/^온누리 (공식 자료|과거 기록|디지털|지류|종류 미확인)/.test(text)) result = 'Onnuri '+translate(text.slice(4));
+      else if (/^온누리 (공식 자료|공식 검색|과거 기록|디지털|지류|종류 미확인)/.test(text)) result = 'Onnuri '+translate(text.slice(4));
       else if (/^경로 주변 후보 \d+곳의 도로 이동시간 계산 중…$/.test(text)) result = text.replace(/^경로 주변 후보 (\d+)곳의 도로 이동시간 계산 중…$/, 'Calculating road times for $1 candidates…');
       else if (/^경로 주변 \d+곳 중 추가 이동이 적은 \d+곳입니다\. 교통·주유시간 제외\.$/.test(text)) result = text.replace(/^경로 주변 (\d+)곳 중 추가 이동이 적은 (\d+)곳입니다\. 교통·주유시간 제외\.$/, 'Top $2 detours from $1 candidates. Traffic and refueling excluded.');
       else if (/^".*" 복사됨$/.test(text)) result = text.replace(/ 복사됨$/, ' copied');

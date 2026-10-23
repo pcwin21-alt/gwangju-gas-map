@@ -27,8 +27,8 @@
     const direct = distance(start, end);
     return stations.filter(s => validPoint(s) && s.route_eligible !== false &&
       (!s.verification || (scheme === 'saengsaeng' ? s.verification.saengsaeng?.status === 'confirmed' :
-        scheme === 'onnuri' ? s.verification.onnuri?.status === 'published_snapshot' :
-        s.verification.saengsaeng?.status === 'confirmed' || s.verification.onnuri?.status === 'published_snapshot')) &&
+        scheme === 'onnuri' ? ['confirmed','published_snapshot'].includes(s.verification.onnuri?.status) :
+        s.verification.saengsaeng?.status === 'confirmed' || ['confirmed','published_snapshot'].includes(s.verification.onnuri?.status))) &&
       (scheme === 'all' || s.payment_types.includes(scheme)) &&
       (fuel === 'all' || s.fuel_kind === fuel) &&
       (scheme !== 'onnuri' || method === 'any' ||

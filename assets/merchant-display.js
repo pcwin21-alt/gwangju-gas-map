@@ -3,6 +3,7 @@
   const digital = m => Boolean(m?.digital || m?.card || m?.qr);
   function onnuriNote(station) {
     const v = station.verification?.onnuri;
+    if(v?.status === 'confirmed') return `공식 검색 확인 ${v.checked_at.slice(0,10)}`;
     return v?.status === 'published_snapshot' ? `공식 자료 ${v.source_date}` : `과거 기록 ${v?.checked_at?.slice(0,10) || '미확인'} · 최근 미확인`;
   }
   function verificationText(station) {
