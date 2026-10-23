@@ -86,8 +86,8 @@ def main():
                 usage['attempts']+=1
                 write('opinet_usage.json',usage)
                 r=requests.get('https://www.opinet.co.kr/api/detailById.do',
-                    # Existing keys use code; current documentation uses certkey.
-                    params={'code':api_key,'certkey':api_key,'out':'json','id':uid},timeout=15)
+                    # Keep the previously verified legacy key contract. New keys can opt in.
+                    params={os.getenv('OPINET_KEY_PARAM','code'):api_key,'out':'json','id':uid},timeout=15)
                 if r.status_code in (401,403):
                     print('가격 API 인증 확인 필요; 추가 요청 중단')
                     break
@@ -96,6 +96,10 @@ def main():
                 result=body.get('RESULT',{})
                 oils=result.get('OIL',[])
                 if not oils:
+                    if 'ERROR' not in result:
+                        # Retired station IDs return an empty OIL array, not a global auth error.
+                        fetched[uid]={}
+                        continue
                     error=result.get('ERROR',{})
                     if isinstance(error,list):error=error[0] if error else {}
                     code=str(error.get('CODE',error.get('code','unknown'))) if isinstance(error,dict) else 'unknown'
