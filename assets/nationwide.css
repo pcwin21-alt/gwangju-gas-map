@@ -1,0 +1,17 @@
+.controls-bottom{flex-wrap:wrap;gap:8px!important;}
+.controls-bottom .district-btn{display:none!important;}
+.controls-bottom .mobile-district{display:block!important;}
+.national-select{display:flex;flex-direction:column;gap:3px;min-width:0;}
+.national-select span{font-size:13px;color:var(--muted);}
+.national-select select,.controls-bottom select{min-height:44px;max-width:100%;font-size:16px;border:1px solid var(--line);border-radius:10px;background:#fff;padding:6px 9px;color:var(--ink);}
+.national-results{position:absolute;z-index:5;top:12px;right:12px;width:min(340px,calc(100% - 24px));max-height:calc(100% - 76px);overflow:auto;background:white;border:1px solid var(--line);border-radius:12px;box-shadow:0 3px 14px #18243c14;}
+.national-results>summary{padding:12px;min-height:44px;font-size:16px;font-weight:700;cursor:pointer;}
+.national-results p,.national-results li{font-size:16px;line-height:1.5;}
+.national-results #nationalSummary{margin:0;padding:0 12px 10px;}
+.station-list-row{display:flex;flex-direction:column;gap:4px;width:100%;text-align:left;cursor:pointer;border:0;border-top:1px solid var(--line);background:white;padding:12px;font-size:16px;line-height:1.5;color:var(--ink);}
+.station-list-row:hover{background:var(--surface);}.station-list-row span:last-child{font-size:14px;color:var(--muted);}
+.pending-section{border-top:1px solid var(--line);padding:12px;}.pending-section summary{min-height:44px;cursor:pointer;font-size:16px;}
+.pending-section ul{padding-left:20px;}.pending-section li{margin-bottom:12px;}
+#moreStations{min-height:44px;width:100%;font-size:16px;background:var(--surface);border:0;cursor:pointer;}
+.header-text h1{font-size:20px!important;}.help-item{font-size:16px;line-height:1.5;}
+@media(max-width:600px){.national-select{flex:1 1 calc(33% - 8px);}.national-select select{width:100%;}.controls-bottom .mobile-district{flex:1 1 100%;}.national-results{top:8px;right:8px;width:calc(100% - 16px);max-height:70%;}.national-results:not([open]){width:auto;left:auto;}.header-text h1{font-size:18px!important;}.header-text p{font-size:12px!important;}.controls{padding:8px 12px!important;}}

@@ -2,6 +2,14 @@
 (function(root) {
   'use strict';
   const messages = {
+    '전국 온누리 주유소 지도':'Onnuri fuel stations across Korea',
+    '전국 온누리 · 광주상생카드 가맹점':'National Onnuri · Gwangju Sangsaeng merchants',
+    '시·도':'Province', '온누리 유형':'Onnuri type','유종':'Fuel','전국':'All regions',
+    '디지털':'Digital','지류':'Paper','전체 시·군·구':'All districts',
+    '주유소 목록':'Station list','더 보기':'Show more','공식 가맹점 자료':'Official merchant data',
+    '조건에 맞는 확인된 등록이 없습니다. 지역이나 결제 유형을 바꿔보세요.':'No verified listings match. Try another region or payment type.',
+    '공식 온누리 자료의 후보 중 상세주소 또는 자동차 주유 업종 확인이 필요한 기록입니다. 지도와 길찾기에서는 제외합니다.':'These official-file candidates still need a street address or vehicle-fueling category check. They are excluded from the map and directions.',
+
     '(구)광주광역시 주유소 지도':'Gas stations in former Gwangju',
     '주유소 지도 로고':'Gas station map logo',
     '상생카드·온누리 할인 가맹점 모음':'Sangsaeng Card & Onnuri discount merchants',
@@ -117,6 +125,9 @@
   function translate(value) {
     const raw = String(value), text = raw.trim();
     let result = messages[text];
+    if (/^지도 표시 \d+곳$/.test(text)) result = text.replace(/^지도 표시 (\d+)곳$/, '$1 mapped stations');
+    if (/^주소 확인 대기 \d+건$/.test(text)) result = text.replace(/^주소 확인 대기 (\d+)건$/, '$1 locations awaiting review');
+    if (/^공식 온누리 자료 /.test(text)) result = text.replace('공식 온누리 자료 ', 'Official Onnuri source: ');
     if (result === undefined) {
       if ((text.includes(' / ') || text.includes(' · ')) && !text.startsWith('추가 이동 약 ')) result = text.split(/( \/ | · )/).map(part => /[가-힣]/.test(part) ? translate(part) : part).join('');
       else if (/^\d+(곳|개)$/.test(text)) result = text.replace(/(곳|개)$/, Number.parseInt(text,10) === 1 ? ' station' : ' stations');
@@ -190,7 +201,7 @@
     observer.disconnect();
     scan(document.body);
     document.documentElement.lang = language;
-    document.title = language === 'en' ? messages['(구)광주광역시 주유소 지도'] : '(구)광주광역시 주유소 지도';
+    document.title = language === 'en' ? messages['전국 온누리 주유소 지도'] : '전국 온누리 주유소 지도';
     button.textContent = language === 'en' ? '한국어' : 'EN';
     button.setAttribute('aria-label',language === 'en' ? '한국어로 전환' : 'Switch to English');
     button.setAttribute('lang',language === 'en' ? 'ko' : 'en');

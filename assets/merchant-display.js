@@ -9,6 +9,7 @@
     const labels=[];
     if(station.verification?.saengsaeng) labels.push('상생카드 조회: '+station.verification.saengsaeng.checked_at.slice(0,10));
     if(station.payment_types?.includes('onnuri')) labels.push('온누리 '+onnuriNote(station));
+    if(station.location_evidence) labels.push('위치: 지자체 주유소 자료 '+(station.location_evidence.source_date||'기준일 미확인'));
     return labels.join(' / ');
   }
   const api = {digital, onnuriNote, verificationText};
