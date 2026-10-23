@@ -86,7 +86,11 @@ def main():
                 usage['attempts']+=1
                 write('opinet_usage.json',usage)
                 r=requests.get('https://www.opinet.co.kr/api/detailById.do',
-                    params={'certkey':api_key,'out':'json','id':uid},timeout=15)
+                    # Existing keys use code; current documentation uses certkey.
+                    params={'code':api_key,'certkey':api_key,'out':'json','id':uid},timeout=15)
+                if r.status_code in (401,403):
+                    print('가격 API 인증 확인 필요; 추가 요청 중단')
+                    break
                 r.raise_for_status()
                 oils=r.json().get('RESULT',{}).get('OIL',[])
                 if not oils:raise ValueError('no detail')
