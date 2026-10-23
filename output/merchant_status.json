@@ -8,7 +8,7 @@
     "status": "confirmed",
     "source_date": "2026-10-24",
     "checked_at": "2026-10-24T00:36:43+09:00",
-    "attempted_at": "2026-10-24T00:34:46+09:00",
+    "attempted_at": "2026-10-24T08:54:15+09:00",
     "source_url": "https://www.onnuri.gift/place",
     "scope": "nationwide_keyword_search",
     "query_count": 53,
@@ -17,9 +17,10 @@
     "matched_count": 168,
     "unmatched_count": 1,
     "pending_count": 42,
-    "refresh_environment": "local",
-    "refresh_run_url": null,
-    "refresh_error": null,
-    "reason": "공식 검색 결과 확인. 검색어·품목·등록자료 기반이며 전국 모든 가맹 주유소의 완전성은 보장하지 않음"
+    "refresh_environment": "github_actions",
+    "refresh_run_url": "https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/40042204443",
+    "refresh_error": "ConnectTimeout",
+    "reason": "공식 검색 결과 확인. 검색어·품목·등록자료 기반이며 전국 모든 가맹 주유소의 완전성은 보장하지 않음",
+    "refresh_stage": "public_search"
   }
 }
