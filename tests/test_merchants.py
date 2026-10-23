@@ -1,5 +1,6 @@
 import importlib.util
 import json
+import tempfile
 import unittest
 from pathlib import Path
 from unittest.mock import patch
@@ -65,5 +66,46 @@ class Merchants(unittest.TestCase):
         b={'frCd':'b','frcsNm':'주공주유소','frcsAddr':'광주 북문대로 190','latitude':35.1852,'longitude':126.8708}
         rows,_=m.merge([a],[b],[],'today')
         self.assertIn('saengsaeng',rows[0]['payment_types'])
+
+    def test_failed_annual_or_live_request_preserves_data_and_last_success(self):
+        for stage in ('annual_snapshot', 'public_search'):
+            with self.subTest(stage=stage), tempfile.TemporaryDirectory() as directory:
+                out = Path(directory)
+                old = [{'id': 'existing', 'name': '기존주유소'}]
+                status = {'onnuri': {'checked_at': '2026-10-23T23:00:00+09:00',
+                                    'refresh_run_url': 'https://github.com/old/run/1'},
+                          'saengsaeng': {'checked_at': '2026-10-23T22:00:00+09:00'}}
+                now = m.datetime.now(m.KST).isoformat()
+                files = {'gas_stations.json': old, 'merchant_status.json': status,
+                         'station_locations.json': {'retrieved_at': now, 'complete_registry': True, 'rows': []},
+                         'lpg_locations.json': {'retrieved_at': now, 'rows': []},
+                         'onnuri_live_snapshot.json': {'rows': [], 'checked_at': status['onnuri']['checked_at']}}
+                for name, content in files.items():
+                    (out/name).write_text(json.dumps(content), encoding='utf-8')
+                (out/'map.html').write_text('const STATIONS = [];\n', encoding='utf-8')
+                original = (out/'gas_stations.json').read_bytes()
+                snapshot = (out/'onnuri_live_snapshot.json').read_bytes()
+                with (patch.object(m, 'OUT', out), patch('sys.argv', ['refresh_merchants.py']),
+                      patch.object(m, 'fetch_sangsaeng', return_value=[{}]*30),
+                      patch.object(m, 'fetch_snapshot', return_value={'rows': []},
+                                   side_effect=m.requests.ConnectTimeout() if stage == 'annual_snapshot' else None),
+                      patch.object(m, 'collect', side_effect=m.requests.ConnectTimeout()),
+                      patch.dict(m.os.environ, {'GITHUB_ACTIONS': 'true', 'GITHUB_REPOSITORY': 'owner/repo',
+                                                'GITHUB_RUN_ID': '123'}, clear=True)):
+                    with self.assertRaises(m.requests.ConnectTimeout):
+                        m.main()
+                current = json.loads((out/'merchant_status.json').read_text(encoding='utf-8'))
+                self.assertEqual(current['onnuri']['checked_at'], status['onnuri']['checked_at'])
+                self.assertEqual(current['saengsaeng'], status['saengsaeng'])
+                self.assertEqual(current['onnuri']['refresh_stage'], stage)
+                self.assertEqual(current['onnuri']['refresh_run_url'], 'https://github.com/owner/repo/actions/runs/123')
+                self.assertEqual((out/'gas_stations.json').read_bytes(), original)
+                self.assertEqual((out/'onnuri_live_snapshot.json').read_bytes(), snapshot)
+                self.assertIn('기존주유소', (out/'map.html').read_text(encoding='utf-8'))
+                self.assertIn('ConnectTimeout', (out/'map.html').read_text(encoding='utf-8'))
+
+    def test_local_attempt_clears_previous_hosted_run_link(self):
+        with patch.dict(m.os.environ, {}, clear=True):
+            self.assertEqual(m.refresh_context(), {'refresh_environment': 'local', 'refresh_run_url': None})
 
 if __name__=='__main__':unittest.main()

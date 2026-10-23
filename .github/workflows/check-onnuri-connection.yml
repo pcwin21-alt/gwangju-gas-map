@@ -1,6 +1,12 @@
 name: 온누리 공개 검색 연결 진단
 on:
   workflow_dispatch:
+    inputs:
+      platform:
+        description: 진단할 표준 실행 환경
+        type: choice
+        default: ubuntu-latest
+        options: [ubuntu-latest, windows-latest, macos-latest, all]
 permissions:
   contents: read
 jobs:
@@ -8,7 +14,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
+        os: ${{ fromJSON(inputs.platform == 'all' && '["ubuntu-latest","windows-latest","macos-latest"]' || format('["{0}"]', inputs.platform)) }}
     runs-on: ${{ matrix.os }}
     timeout-minutes: 4
     env:

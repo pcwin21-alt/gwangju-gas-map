@@ -138,7 +138,9 @@ def collect(session, extra_names=(), progress=print, candidates=()):
             'status': 'complete', 'scope': 'nationwide_keyword_search',
             'keywords': list(KEYWORDS), 'queries': queries,
             'rows': sorted(by_id.values(), key=lambda r: r['frCd'])}
-    return expand_names(session, snapshot, candidates, progress)
+    snapshot = expand_names(session, snapshot, candidates, progress)
+    snapshot['checked_at'] = datetime.now(KST).isoformat(timespec='seconds')
+    return snapshot
 
 
 def write_snapshot(path, snapshot):

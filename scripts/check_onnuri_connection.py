@@ -54,6 +54,8 @@ def main():
     except OSError as error:
         print(json.dumps({'probe': 'dns', 'ok': False, 'error': type(error).__name__}), flush=True)
         return 1
+    print(json.dumps({'probe': 'dns', 'ok': True,
+                      'addresses': sorted({address[4][0] for address in addresses})}), flush=True)
     seen = set()
     for family, _, _, _, address in addresses:
         if family in seen:

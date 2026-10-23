@@ -1,6 +1,7 @@
 """Refresh complete merchant snapshots; never replace a source with partial data."""
 import json
 import math
+import os
 import re
 import time
 from datetime import datetime, timezone, timedelta
@@ -24,6 +25,16 @@ except ModuleNotFoundError:
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'output'
 KST = timezone(timedelta(hours=9))
+
+def refresh_context():
+    """Identify this attempt, never carry a previous failed run's URL forward."""
+    hosted = os.environ.get('GITHUB_ACTIONS') == 'true'
+    repository = os.environ.get('GITHUB_REPOSITORY', '')
+    run = os.environ.get('GITHUB_RUN_ID', '')
+    url = (f'https://github.com/{repository}/actions/runs/{run}'
+           if hosted and re.fullmatch(r'[\w.-]+/[\w.-]+', repository) and run.isdigit() else None)
+    return {'refresh_environment': 'github_actions' if hosted else 'local',
+            'refresh_run_url': url}
 
 def load(name, default=None):
     path = OUT / name
@@ -217,6 +228,10 @@ def sync_map(stations, status):
     path.write_text(html, encoding='utf-8')
 
 def main():
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--live-snapshot', help='Use a complete saved search run for reproducible publication')
+    args = parser.parse_args()
     checked = datetime.now(KST).isoformat(timespec='seconds')
     session = requests.Session()
     session.headers.update({'User-Agent': 'Mozilla/5.0', 'Referer': 'https://www.gwangju.go.kr/'})
@@ -236,10 +251,6 @@ def main():
     # The live public search supplies identity/address/payment together. The
     # annual file and registry discover legal-name candidates; neither supplies
     # an unverified address by same-name/province inference.
-    import argparse
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--live-snapshot', help='Use a complete saved search run for reproducible publication')
-    args = parser.parse_args()
     location_cache = load('station_locations.json', {})
     try:
         age = (datetime.now(KST) - datetime.fromisoformat(location_cache['retrieved_at'])).days if location_cache else 999
@@ -261,7 +272,6 @@ def main():
         pass
     locations = location_cache.get('rows', []) + lpg_cache.get('rows', [])
     registry_keys = {(region(r.get('CTPV_NM')), name_key(r['CONM_NM'])) for r in locations}
-    snapshot = fetch_snapshot(session, load('onnuri_official_snapshot.json'), checked, registry_keys)
     live_session = requests.Session()
     live_session.headers.update({'User-Agent': 'Mozilla/5.0', 'Referer': SOURCE,
                                  'Origin': 'https://www.onnuri.gift'})
@@ -275,7 +285,10 @@ def main():
             historical_by_id[row['frCd']] = {**row, '_verification': {
                 'status': 'stale', 'checked_at': previous_snapshot['checked_at'],
                 'source_url': SOURCE, 'source_id': row['frCd'], 'market': row['mrktNm']}}
+    stage = 'annual_snapshot'
     try:
+        snapshot = fetch_snapshot(session, load('onnuri_official_snapshot.json'), checked, registry_keys)
+        stage = 'public_search'
         places = (json.loads(Path(args.live_snapshot).read_text(encoding='utf-8')) if args.live_snapshot else
                   collect(live_session, candidates=snapshot['rows']))
         historical, official_review, ledger, compact = prepare(
@@ -286,7 +299,8 @@ def main():
             raise ValueError('온누리 검색 결과 급감: 이전 지도 유지')
     except (requests.RequestException, ValueError, KeyError) as error:
         status = load('merchant_status.json', {})
-        status['onnuri'] = {**status.get('onnuri', {}), 'refresh_error': type(error).__name__, 'attempted_at': checked}
+        status['onnuri'] = {**status.get('onnuri', {}), **refresh_context(),
+                            'refresh_error': type(error).__name__, 'refresh_stage': stage, 'attempted_at': checked}
         save('merchant_status.json', status)
         sync_map(old, status)
         raise
@@ -299,7 +313,7 @@ def main():
         'matched_count': sum(s.get('verification', {}).get('onnuri', {}).get('status') == 'confirmed' for s in stations),
         'unmatched_count': sum(s.get('verification', {}).get('onnuri', {}).get('status') == 'stale' for s in stations),
         'pending_count': sum(r.get('show_pending', False) for r in official_review),
-        'refresh_error': None,
+        **refresh_context(), 'refresh_error': None,
         'reason': '공식 검색 결과 확인. 검색어·품목·등록자료 기반이며 전국 모든 가맹 주유소의 완전성은 보장하지 않음'}
     save('onnuri_official_snapshot.json', snapshot)
     save('onnuri_live_snapshot.json', places)
