@@ -591,6 +591,18 @@
     "show_pending": false
   },
   {
+    "source_id": "03407200034",
+    "name": "최고당돈가스범어점",
+    "market": "상록로스퀘어 골목형상점가",
+    "region": "대구",
+    "address": "대구광역시 수성구 상록로 15 (범어동, 범어센트럴푸르지오)",
+    "status": "excluded_non_vehicle_fuel",
+    "reason": "공식 업종: 음식점업",
+    "candidate_id": "live-03407200034",
+    "annual_candidate_ids": [],
+    "show_pending": false
+  },
+  {
     "source_id": "04020200146",
     "name": "엠케이에너지",
     "market": "인천산업유통센터",
@@ -2748,6 +2760,18 @@
     "show_pending": false
   },
   {
+    "source_id": "12327200055",
+    "name": "뚱보아저씨수제돈가스",
+    "market": "내포중심 골목형상점가",
+    "region": "충남",
+    "address": "충청남도 홍성군 홍북읍 청사로174번길 17",
+    "status": "excluded_non_vehicle_fuel",
+    "reason": "공식 업종: 음식점업",
+    "candidate_id": "live-12327200055",
+    "annual_candidate_ids": [],
+    "show_pending": false
+  },
+  {
     "source_id": "13011300101",
     "name": "전주유통",
     "market": "경동광성상가",
@@ -4304,6 +4328,13 @@
     "status": "needs_review",
     "reason": "과거 연료 기록 재검토",
     "source_id": "50210300089",
+    "show_pending": false
+  },
+  {
+    "name": "세븐일레븐 광주유촌버들점",
+    "status": "needs_review",
+    "reason": "과거 연료 기록 재검토",
+    "source_id": "05169200084",
     "show_pending": false
   },
   {

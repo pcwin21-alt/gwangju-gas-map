@@ -1,25 +1,25 @@
 {
   "saengsaeng": {
     "status": "confirmed",
-    "checked_at": "2026-10-24T00:02:46+09:00",
+    "checked_at": "2026-10-24T00:34:46+09:00",
     "count": 77
   },
   "onnuri": {
     "status": "confirmed",
-    "source_date": "2026-10-23",
-    "checked_at": "2026-10-23T23:57:03+09:00",
-    "attempted_at": "2026-10-24T00:11:17+09:00",
+    "source_date": "2026-10-24",
+    "checked_at": "2026-10-24T00:36:43+09:00",
+    "attempted_at": "2026-10-24T00:34:46+09:00",
     "source_url": "https://www.onnuri.gift/place",
     "scope": "nationwide_keyword_search",
     "query_count": 53,
     "candidate_rows": 226,
-    "raw_search_rows": 522,
+    "raw_search_rows": 524,
     "matched_count": 168,
     "unmatched_count": 1,
     "pending_count": 42,
-    "refresh_error": "ConnectTimeout",
-    "reason": "공식 검색 결과 확인. 검색어·품목·등록자료 기반이며 전국 모든 가맹 주유소의 완전성은 보장하지 않음",
-    "refresh_environment": "github_actions",
-    "refresh_run_url": "https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/39975434038"
+    "refresh_environment": "local",
+    "refresh_run_url": null,
+    "refresh_error": null,
+    "reason": "공식 검색 결과 확인. 검색어·품목·등록자료 기반이며 전국 모든 가맹 주유소의 완전성은 보장하지 않음"
   }
 }

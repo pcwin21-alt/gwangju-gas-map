@@ -2,7 +2,7 @@
   "schema_version": 1,
   "source_url": "https://www.onnuri.gift/place",
   "endpoint": "https://www.onnuri.gift/api/v3/onrgt/place/search",
-  "checked_at": "2026-10-23T23:57:03+09:00",
+  "checked_at": "2026-10-24T00:36:43+09:00",
   "status": "complete",
   "scope": "nationwide_keyword_search",
   "keywords": [
@@ -85,8 +85,8 @@
       "keyword": "가스",
       "area_code": "",
       "status": "complete",
-      "expected": 151,
-      "received": 151,
+      "expected": 153,
+      "received": 153,
       "pages": 1
     },
     {
@@ -1169,6 +1169,20 @@
       "addrCd": "27260",
       "latitude": 35.857223,
       "longitude": 128.633213,
+      "paperYn": "Y",
+      "cardYn": "Y",
+      "qrYn": "Y"
+    },
+    {
+      "frCd": "03407200034",
+      "frcsNm": "최고당돈가스범어점",
+      "frcsAddr": "대구광역시 수성구 상록로 15 (범어동, 범어센트럴푸르지오)",
+      "mrktNm": "상록로스퀘어 골목형상점가",
+      "placeTypeCd": "07",
+      "placeTypeNm": "음식점업",
+      "addrCd": "27260",
+      "latitude": 35.861116,
+      "longitude": 128.623036,
       "paperYn": "Y",
       "cardYn": "Y",
       "qrYn": "Y"
@@ -5551,6 +5565,20 @@
       "addrCd": "44130",
       "latitude": 36.781185,
       "longitude": 127.154716,
+      "paperYn": "Y",
+      "cardYn": "Y",
+      "qrYn": "Y"
+    },
+    {
+      "frCd": "12327200055",
+      "frcsNm": "뚱보아저씨수제돈가스",
+      "frcsAddr": "충청남도 홍성군 홍북읍 청사로174번길 17",
+      "mrktNm": "내포중심 골목형상점가",
+      "placeTypeCd": "07",
+      "placeTypeNm": "음식점업",
+      "addrCd": "44800",
+      "latitude": 36.660237,
+      "longitude": 126.680079,
       "paperYn": "Y",
       "cardYn": "Y",
       "qrYn": "Y"
