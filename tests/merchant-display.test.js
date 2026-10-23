@@ -14,3 +14,10 @@ test('combined digital support passes route filter without inventing card or QR'
  assert.equal(core.shortlist([s],a,b,'onnuri','digital').length,1);
  assert.equal(core.shortlist([s],a,b,'onnuri','paper').length,0);
 });
+
+test('live official date is shown and verified stops are eligible',()=>{
+ const s={name:'함덕주유소',payment_types:['onnuri'],lat:33.54,lng:126.67,route_eligible:true,
+   onnuri_methods:{paper:true,card:true,qr:true,digital:true},verification:{onnuri:{status:'confirmed',checked_at:'2026-10-23T23:00:00+09:00'}}};
+ assert.equal(display.onnuriNote(s),'공식 검색 확인 2026-10-23');
+ assert.equal(core.shortlist([s],{lat:33.5,lng:126.5},{lat:33.55,lng:126.7},'onnuri','digital').length,1);
+});

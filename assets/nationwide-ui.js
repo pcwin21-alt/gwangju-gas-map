@@ -21,7 +21,7 @@
       });
       document.getElementById('countBadge').textContent=rows.length+'곳';
       document.getElementById('listCount').textContent=rows.length+'곳';
-      document.getElementById('nationalSummary').textContent='공식 온누리 자료 '+MERCHANT_STATUS.onnuri.source_date+' · 지도 대신 목록 제공';
+      document.getElementById('nationalSummary').textContent='온누리 공식 검색 '+MERCHANT_STATUS.onnuri.source_date+' · 지도 대신 목록 제공';
       document.getElementById('moreStations').hidden=true;
       document.getElementById('pendingSummary').parentElement.hidden=true;
     }
@@ -65,9 +65,9 @@
     const visible=allMarkers.filter(m=>m.visible);
     const waiting=(typeof NATIONAL_PENDING==='undefined'?[]:NATIONAL_PENDING).filter(r=>
       state.region==='all'||r.region===state.region||(['광주','전남'].includes(state.region)&&r.region==='전남광주'));
-    summary.textContent=`지도 표시 ${visible.length}곳 · 공식 온누리 자료 ${MERCHANT_STATUS.onnuri?.source_date||'미확인'}`;
+    summary.textContent=`지도 표시 ${visible.length}곳 · 온누리 공식 검색 ${MERCHANT_STATUS.onnuri?.source_date||'미확인'}`;
     const title=document.getElementById('pendingSummary');
-    title.textContent=`주소 확인 대기 ${waiting.length}건`;
+    title.textContent=`주소·업종 확인 대기 ${waiting.length}건`;
     pending.replaceChildren();
     waiting.forEach(r=>{
       const li=document.createElement('li');
@@ -96,8 +96,10 @@
   const original=applyFilters;
   applyFilters=function(){original();render();};
   function change() {
+    const regionChanged=state.region!==regionInput.value;
     state.region=regionInput.value;state.method=method.value;state.fuel=fuel.value;limit=20;
-    districts();applyFilters();clearRankMapOverlays();mapViewport.fit();syncURL();
+    if(regionChanged||restoring)districts();
+    applyFilters();clearRankMapOverlays();mapViewport.fit();syncURL();
   }
   [regionInput,method,fuel].forEach(el=>el.addEventListener('change',change));
   document.getElementById('moreStations').addEventListener('click',()=>{limit+=20;render();});

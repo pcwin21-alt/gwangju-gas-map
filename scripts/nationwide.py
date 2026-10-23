@@ -6,9 +6,13 @@ import hashlib
 import json
 import math
 import re
+import csv
+import io
+from datetime import datetime
 from pathlib import Path
 
 STANDARD_URL = 'https://www.data.go.kr/data/15129441/standard.do'
+LPG_URL = 'https://www.data.go.kr/data/15001643/fileData.do'
 REGIONS = {'서울':'서울', '부산':'부산', '대구':'대구', '인천':'인천', '광주':'광주',
            '대전':'대전', '울산':'울산', '세종':'세종', '경기':'경기', '강원':'강원',
            '충북':'충북', '충남':'충남', '전북':'전북', '전남':'전남', '경북':'경북',
@@ -32,7 +36,7 @@ def row_id(row):
     return hashlib.sha256(text.encode()).hexdigest()[:24]
 
 def non_vehicle(row):
-    return bool(re.search(r'음식|한식|중식|식당|주류|주점|술집|소주|맥주|건강|학원|과자|화장품|의류|카페|스낵|편의점',row.get('취급품목','')) or
+    return bool(re.search(r'음식|한식|중식|식당|주류|주점|술집|소주|맥주|건강|학원|과자|화장품|의류|카페|스낵|편의점|피부|체형|조명|생선|숯|위생용품',row.get('취급품목','')) or
                 re.search(r'기사식당|^CU.*주유소점$|알콜주유소|주류\s*충전소|뻥튀기충전소|비타민충전소|단짠충전소|인생충전소|기술학원',row['가맹점명']))
 
 def valid_coords(lat, lng):
@@ -64,6 +68,35 @@ def fetch_locations(session):
                         'LCTN_LOTNO_ADDR','LAT','LOT','TELNO','DATA_CRTR_YMD')})
     if len(rows) != total: raise ValueError('주유소 위치 페이지 불완전')
     return rows
+
+
+def fetch_lpg_locations(session):
+    response = session.get(LPG_URL, timeout=30)
+    response.raise_for_status()
+    link = re.search(r'"contentUrl"\s*:\s*"(https://www\.data\.go\.kr/cmm/cmm/fileDownload\.do\?[^"\s]+)"', response.text)
+    dates = re.findall(r'전국 LPG 충전소 현황_(\d{8})', response.text)
+    if not link or not dates:
+        raise ValueError('LPG registry download metadata changed')
+    source_date = datetime.strptime(max(dates), '%Y%m%d').date().isoformat()
+    response = session.get(link.group(1).replace('&amp;', '&'), timeout=(10, 60))
+    response.raise_for_status()
+    for encoding in ('utf-8-sig', 'cp949'):
+        try:
+            content = response.content.decode(encoding)
+            break
+        except UnicodeDecodeError:
+            continue
+    else:
+        raise ValueError('LPG CSV encoding changed')
+    reader = csv.DictReader(io.StringIO(content))
+    if not {'업소명', '주소', '관리구분', '위도', '경도'}.issubset(reader.fieldnames or []):
+        raise ValueError('LPG CSV columns changed')
+    raw = list(reader)
+    if not 1000 < len(raw) < 10000:
+        raise ValueError('Incomplete LPG registry')
+    return [{'CONM_NM': r['업소명'], 'CTPV_NM': r['주소'].split()[0], 'LCTN_ROAD_NM': r['주소'],
+             'LAT': r['위도'], 'LOT': r['경도'], 'DATA_CRTR_YMD': source_date, '_fuel_kind': 'lpg'}
+            for r in raw if '자동차' in r['관리구분']]
 
 def resolve(snapshot, historical, locations):
     index={}

@@ -19,11 +19,15 @@ def normalize(value):
 
 
 def fuel_row(row):
-    return bool(re.search(r'주유소|충전소|석유|에너지', row['가맹점명']) or
-                re.search(r'휘발유|경유|등유|^유류$|^주유', row['취급품목']))
+    return bool(re.search(r'주유소|충전소|석유|에너지|엘피지|lpg|오일뱅크', row['가맹점명'], re.I) or
+                re.search(r'휘발유|경유|등유|석유류|차량용.*(?:가스|엘피지|lpg)|^유류$|^주유', row['취급품목'], re.I))
 
 
-def parse_csv(content, source_date, checked, download_url):
+def parse_csv(content, source_date, checked, download_url, registry_keys=()):
+    try:
+        from nationwide import region, name_key
+    except ModuleNotFoundError:
+        from scripts.nationwide import region, name_key
     for encoding in ('utf-8-sig', 'cp949'):
         try:
             text = content.decode(encoding)
@@ -41,16 +45,18 @@ def parse_csv(content, source_date, checked, download_url):
         row = {key: (row.get(key) or '').strip() for key in FIELDS}
         if any(row[key] not in ('Y', 'N', '') for key in FIELDS[4:6]):
             raise ValueError('온누리 결제수단 값 변경')
-        if fuel_row(row):
+        areas = ['광주', '전남'] if row['소재지'] == '전남광주' else [region(row['소재지'])]
+        if fuel_row(row) or any((area, name_key(row['가맹점명'])) in registry_keys for area in areas):
             rows.append(row)
     if total < 100000 or len(rows) < 50:
         raise ValueError('온누리 CSV 불완전 또는 지역 형식 변경')
     return {'source_url': PORTAL, 'download_url': download_url, 'source_date': source_date,
             'retrieved_at': checked, 'sha256': hashlib.sha256(content).hexdigest(),
-            'total_rows': total, 'regional_fuel_rows': len(rows), 'scope': 'nationwide-v1', 'rows': rows}
+            'total_rows': total, 'regional_fuel_rows': len(rows), 'scope': 'nationwide-v3',
+            'registry_signature': hashlib.sha256(repr(sorted(registry_keys)).encode()).hexdigest(), 'rows': rows}
 
 
-def fetch_snapshot(session, cached, checked):
+def fetch_snapshot(session, cached, checked, registry_keys=None):
     response = session.get(PORTAL, timeout=30)
     response.raise_for_status()
     # Structured metadata is published with the file page; do not guess file IDs.
@@ -61,13 +67,14 @@ def fetch_snapshot(session, cached, checked):
     source_date = datetime.strptime(max(dates), '%Y%m%d').date().isoformat()
     url = match.group(1).replace('&amp;', '&')
     # Recheck the page daily; re-download unchanged 17 MB files once a week.
-    if cached and cached.get('scope') == 'nationwide-v1' and cached['source_date'] == source_date and cached['download_url'] == url:
+    signature = hashlib.sha256(repr(sorted(registry_keys)).encode()).hexdigest() if registry_keys is not None else None
+    if cached and cached.get('scope') == 'nationwide-v3' and (signature is None or cached.get('registry_signature') == signature) and cached['source_date'] == source_date and cached['download_url'] == url:
         age = datetime.fromisoformat(checked) - datetime.fromisoformat(cached['retrieved_at'])
         if age < timedelta(days=7):
             return cached
     response = session.get(url, timeout=(20, 90))
     response.raise_for_status()
-    return parse_csv(response.content, source_date, checked, url)
+    return parse_csv(response.content, source_date, checked, url, registry_keys or ())
 
 
 def reconcile(snapshot, historical):

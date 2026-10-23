@@ -45,8 +45,8 @@ class OfficialOnnuri(unittest.TestCase):
         self.assertEqual(session.get.call_count,1)
 
     def test_published_snapshot_metadata_preserved(self):
-        stations=load('gas_stations.json')
-        official=[s for s in stations if s.get('verification',{}).get('onnuri',{}).get('status')=='published_snapshot']
-        self.assertGreater(len(official),50)
-        self.assertTrue(all(s['verification']['onnuri']['source_date']==load('onnuri_official_snapshot.json')['source_date'] for s in official))
-        self.assertTrue(all('digital' in s['onnuri_methods'] for s in official))
+        rows,_=reconcile(self.snapshot,[self.old])
+        official,_=merge([],rows,[],'2026-10-23')
+        self.assertEqual(official[0]['verification']['onnuri']['source_date'],self.snapshot['source_date'])
+        self.assertEqual(official[0]['verification']['onnuri']['checked_at'],self.snapshot['retrieved_at'])
+        self.assertTrue(official[0]['onnuri_methods']['digital'])

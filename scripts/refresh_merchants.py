@@ -7,13 +7,19 @@ from datetime import datetime, timezone, timedelta
 from pathlib import Path
 import requests
 try:
-    from official_onnuri import fetch_snapshot, reconcile
+    from onnuri_live import collect, SOURCE
+    from live_merchants import prepare, address_key
 except ModuleNotFoundError:
-    from scripts.official_onnuri import fetch_snapshot, reconcile
+    from scripts.onnuri_live import collect, SOURCE
+    from scripts.live_merchants import prepare, address_key
 try:
-    from nationwide import fetch_locations, resolve, region, name_key, valid_coords, row_id
+    from official_onnuri import fetch_snapshot
 except ModuleNotFoundError:
-    from scripts.nationwide import fetch_locations, resolve, region, name_key, valid_coords, row_id
+    from scripts.official_onnuri import fetch_snapshot
+try:
+    from nationwide import fetch_locations, fetch_lpg_locations, region, name_key, valid_coords
+except ModuleNotFoundError:
+    from scripts.nationwide import fetch_locations, fetch_lpg_locations, region, name_key, valid_coords
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'output'
@@ -91,11 +97,19 @@ def merge(sangsaeng, onnuri, old, checked):
     for row in sangsaeng:
         lat, lng = coords(row.get('lot'), row.get('lalt'))
         key = road_key(row['storeAddr'])
-        previous = [s for s in old if key and road_key(s.get('address')) == key]
+        previous = [s for s in old if key and road_key(s.get('address')) == key and
+                    (not region(row['storeAddr']) or region(s.get('address')) == region(row['storeAddr']))]
         # Only borrow a coordinate when the full road address identifies one location.
         locations = {(s.get('lat'), s.get('lng')) for s in previous if s.get('lat') and s.get('lng')}
-        if lat is None and len(locations) == 1:
-            lat, lng = next(iter(locations))
+        live_locations = {(float(s['latitude']), float(s['longitude'])) for s in onnuri
+                          if s.get('_verification', {}).get('status') == 'confirmed' and
+                          address_key(s.get('frcsAddr')) == address_key(row['storeAddr']) and
+                          valid_coords(s.get('latitude'), s.get('longitude'))}
+        if lat is None:
+            if len(live_locations) == 1:
+                lat, lng = next(iter(live_locations))
+            elif not live_locations and len(locations) == 1:
+                lat, lng = next(iter(locations))
         station = {'id': 'sangsaeng:' + str(row['sn']), 'name': row['storeNm'].strip(),
                    'address': row['storeAddr'].strip(), 'lat': lat, 'lng': lng,
                    'payment_types': ['saengsaeng'], 'source': ['gwangju'],
@@ -104,21 +118,28 @@ def merge(sangsaeng, onnuri, old, checked):
                    'aliases': sorted({n for s in previous for n in [s['name'], *s.get('aliases', [])] if n != row['storeNm'].strip()}),
                    'fuel_kind': 'lpg' if '가스' in row.get('storeCtgy', '') else 'liquid',
                    'route_eligible': lat is not None}
-        result.append(station)
+        duplicates = [s for s in result if key and road_key(s['address']) == key and distance(s, station) < 40 and s['fuel_kind'] == station['fuel_kind']]
+        if len(duplicates) == 1:
+            target = duplicates[0]
+            target['aliases'] = sorted(set(target['aliases'] + station['aliases'] + [station['name']]) - {target['name']})
+            v = target['verification']['saengsaeng']
+            v['source_ids'] = sorted(set(v.get('source_ids', [v['source_id']]) + [str(row['sn'])]))
+        else:
+            result.append(station)
     for row in onnuri:
         name = row.get('frcsNm', '').strip()
         # Avoid substring false positives such as "광주유촌점" cafes and convenience stores.
-        if not re.search(r'주유소|충전소|석유|에너지', name):
+        if not row.get('_fuel_kind') and not re.search(r'주유소|충전소|석유|에너지', name):
             review.append({'reason': '업종 확인 필요', 'name': name, 'source_id': row.get('frCd')})
             continue
         lat, lng = coords(row.get('latitude'), row.get('longitude'))
         station = {'id': 'onnuri:' + row['frCd'], 'name': name,
                    'address': row.get('frcsAddr', ''), 'lat': lat, 'lng': lng,
-                   'payment_types': ['onnuri'], 'source': ['onnuri_csv' if row.get('_verification') else 'onnuri_place'], 'aliases': [],
-                   'fuel_kind': 'lpg' if '충전소' in name else 'liquid',
-                   'route_eligible': lat is not None and bool(re.search(r'주유소|충전소', name))}
+                   'payment_types': ['onnuri'], 'source': ['onnuri_place' if row.get('_verification', {}).get('status') == 'confirmed' or not row.get('_verification') else 'onnuri_csv'], 'aliases': [],
+                   'fuel_kind': row.get('_fuel_kind') or ('lpg' if '충전소' in name else 'liquid'),
+                   'route_eligible': lat is not None and bool(row.get('_fuel_kind') or re.search(r'주유소|충전소', name))}
         key = road_key(station['address'])
-        candidates = [s for s in result if key and road_key(s['address']) == key and distance(s, station) < 40]
+        candidates = [s for s in result if key and road_key(s['address']) == key and distance(s, station) < 40 and s['fuel_kind'] == station['fuel_kind']]
         # Do not merge neighboring forecourts merely because their coordinates are close.
         if len(candidates) == 1:
             target = candidates[0]
@@ -135,17 +156,27 @@ def merge(sangsaeng, onnuri, old, checked):
             result.append(target)
         if row.get('_location_evidence'):
             target['location_evidence'] = row['_location_evidence']
+        if row.get('_verification', {}).get('status') == 'confirmed':
+            target['fuel_kind'] = station['fuel_kind']
+            # Prefer current official coordinates for a unique physical site.
+            target['address'], target['lat'], target['lng'] = station['address'], lat, lng
+            target['route_eligible'] = station['route_eligible']
         prior = target.get('onnuri_methods')
         target['onnuri_methods'] = {k: row.get(v) == 'Y' for k, v in
                                    [('paper', 'paperYn'), ('card', 'cardYn'), ('qr', 'qrYn')]}
-        if row.get('_verification'):
+        if row.get('_verification', {}).get('status') == 'published_snapshot':
             target['onnuri_methods']['card'] = None
             target['onnuri_methods']['qr'] = None
         target['onnuri_methods']['digital'] = (row['digitalYn'] == 'Y' if 'digitalYn' in row
             else target['onnuri_methods']['card'] or target['onnuri_methods']['qr'])
-        if prior:
-            target['onnuri_methods'] = {k: prior.get(k, False) and v for k, v in target['onnuri_methods'].items()}
         previous = target['verification'].get('onnuri', {})
+        current_verified = row.get('_verification', {}).get('status') == 'confirmed'
+        if prior and previous.get('status') == 'confirmed' and not current_verified:
+            # A legacy alias cannot downgrade a current place's payment evidence.
+            target['onnuri_methods'] = prior
+            continue
+        if prior and (previous.get('status') == 'confirmed') == current_verified:
+            target['onnuri_methods'] = {k: prior.get(k, False) and v for k, v in target['onnuri_methods'].items()}
         ids = previous.get('source_ids', [previous['source_id']] if previous.get('source_id') else [])
         target['verification']['onnuri'] = {'checked_at': '2026-03-03', 'status': 'stale',
                                             'source_id': row['frCd'], 'source_ids': sorted(set(ids + [row['frCd']]))}
@@ -159,17 +190,22 @@ def merge(sangsaeng, onnuri, old, checked):
                            'name': station['name'], 'id': station['id']})
     return result, review
 
+def script_json(value):
+    # Public merchant names are data, including in an inline script element.
+    return json.dumps(value, ensure_ascii=False).replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
+
+
 def sync_map(stations, status):
     path = OUT / 'map.html'
     html = path.read_text(encoding='utf-8')
     html, count = re.subn(r'const STATIONS = \[.*?\];',
-        lambda _: 'const STATIONS = ' + json.dumps(stations, ensure_ascii=False) + ';', html, flags=re.S)
+        lambda _: 'const STATIONS = ' + script_json(stations) + ';', html, flags=re.S)
     if count != 1:
         raise ValueError('지도 STATIONS 상수 없음 또는 중복')
-    metadata = 'const MERCHANT_STATUS = ' + json.dumps(status, ensure_ascii=False) + ';'
-    pending = [r for r in load('merchant_review.json', []) if r.get('status') == 'needs_review']
+    metadata = 'const MERCHANT_STATUS = ' + script_json(status) + ';'
+    pending = [r for r in load('merchant_review.json', []) if r.get('status') == 'needs_review' and r.get('show_pending', True) and r.get('candidate_id')]
     pending = list({r['candidate_id']:r for r in pending}.values())
-    pending_const = 'const NATIONAL_PENDING = ' + json.dumps(pending, ensure_ascii=False) + ';'
+    pending_const = 'const NATIONAL_PENDING = ' + script_json(pending) + ';'
     if 'const NATIONAL_PENDING = ' in html:
         html = re.sub(r'const NATIONAL_PENDING = .*?;\n', lambda _: pending_const+'\n', html)
     else:
@@ -197,61 +233,79 @@ def main():
         save('merchant_status.json', status)
         sync_map(old, status)
         raise
-    # Official annual file replaces the unavailable historical endpoint.
-    historical = load('raw_onnuri_place.json', [])
-    official_review = []
+    # The live public search supplies identity/address/payment together. The
+    # annual file and registry discover legal-name candidates; neither supplies
+    # an unverified address by same-name/province inference.
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--live-snapshot', help='Use a complete saved search run for reproducible publication')
+    args = parser.parse_args()
+    location_cache = load('station_locations.json', {})
     try:
-        snapshot = fetch_snapshot(session, load('onnuri_official_snapshot.json'), checked)
-        save('onnuri_official_snapshot.json', snapshot)
-        source_error = None
+        age = (datetime.now(KST) - datetime.fromisoformat(location_cache['retrieved_at'])).days if location_cache else 999
+        if age >= 7 or not location_cache.get('complete_registry'):
+            locations = fetch_locations(session)
+            location_cache = {'retrieved_at': checked, 'complete_registry': True,
+                              'source_url': 'https://www.data.go.kr/data/15129441/standard.do',
+                              'total_rows': len(locations), 'rows': locations}
+    except (requests.RequestException, ValueError, KeyError):
+        # Current official addresses remain usable without this supplementary registry.
+        pass
+    lpg_cache = load('lpg_locations.json', {})
+    try:
+        age = (datetime.now(KST) - datetime.fromisoformat(lpg_cache['retrieved_at'])).days if lpg_cache else 999
+        if age >= 7:
+            lpg_cache = {'retrieved_at': checked, 'source_url': 'https://www.data.go.kr/data/15001643/fileData.do',
+                         'rows': fetch_lpg_locations(session)}
+    except (requests.RequestException, ValueError, KeyError):
+        pass
+    locations = location_cache.get('rows', []) + lpg_cache.get('rows', [])
+    registry_keys = {(region(r.get('CTPV_NM')), name_key(r['CONM_NM'])) for r in locations}
+    snapshot = fetch_snapshot(session, load('onnuri_official_snapshot.json'), checked, registry_keys)
+    live_session = requests.Session()
+    live_session.headers.update({'User-Agent': 'Mozilla/5.0', 'Referer': SOURCE,
+                                 'Origin': 'https://www.onnuri.gift'})
+    historical_by_id = {r['frCd']: r for r in load('raw_onnuri_place.json', [])}
+    previous_snapshot = load('onnuri_live_snapshot.json', {})
+    for row in previous_snapshot.get('retained_history', []):
+        historical_by_id[row['frCd']] = row
+    previous_ids = {sid for s in old for sid in s.get('verification', {}).get('onnuri', {}).get('source_ids', [])}
+    for row in previous_snapshot.get('rows', []):
+        if row['frCd'] in previous_ids:
+            historical_by_id[row['frCd']] = {**row, '_verification': {
+                'status': 'stale', 'checked_at': previous_snapshot['checked_at'],
+                'source_url': SOURCE, 'source_id': row['frCd'], 'market': row['mrktNm']}}
+    try:
+        places = (json.loads(Path(args.live_snapshot).read_text(encoding='utf-8')) if args.live_snapshot else
+                  collect(live_session, candidates=snapshot['rows']))
+        historical, official_review, ledger, compact = prepare(
+            places, snapshot, list(historical_by_id.values()), live,
+            locations)
+        places['retained_history'] = [r for r in historical if r.get('_verification', {}).get('status') != 'confirmed']
+        if len(compact['rows']) < 80:
+            raise ValueError('온누리 검색 결과 급감: 이전 지도 유지')
     except (requests.RequestException, ValueError, KeyError) as error:
-        snapshot = load('onnuri_official_snapshot.json')
-        source_error = type(error).__name__
-    if snapshot:
-        location_cache = load('station_locations.json', {})
-        location_error = None
-        try:
-            age = (datetime.now(KST) - datetime.fromisoformat(location_cache['retrieved_at'])).days if location_cache else 999
-            if age >= 7:
-                locations = fetch_locations(session)
-                relevant = {name_key(r['가맹점명']) for r in snapshot['rows']}
-                location_cache = {'retrieved_at': checked, 'source_url': 'https://www.data.go.kr/data/15129441/standard.do',
-                                  'total_rows': len(locations),
-                                  'rows': [r for r in locations if name_key(r['CONM_NM']) in relevant]}
-                save('station_locations.json', location_cache)
-        except (requests.RequestException, ValueError, KeyError) as error:
-            location_error = type(error).__name__
-        new_locations, location_review = resolve(snapshot, historical, location_cache.get('rows', []))
-        historical.extend(new_locations)
-        historical, official_review = reconcile(snapshot, historical)
-        located = {r['_verification']['candidate_id'] for r in historical if r.get('_verification')}
-        pending_index = {r['candidate_id']:r for r in location_review}
-        ledger = []
-        for number, row in enumerate(snapshot['rows'], 1):
-            cid = row_id(row)
-            decision = pending_index.get(cid, {})
-            ledger.append({'row_number':number, 'candidate_id':cid,
-                           'name':row['가맹점명'], 'market':row['소속 시장명(또는 상점가)'],
-                           'region':row['소재지'],
-                           'status':'located' if cid in located else decision.get('status','needs_review'),
-                           'reason':decision.get('reason','공식 가맹점·위치 기록 대조' if cid in located else '상호·시장 대조 확인 필요')})
-        save('nationwide_candidates.json', {'source_sha256':snapshot['sha256'], 'source_date':snapshot['source_date'],
-                                          'candidate_rows':len(ledger), 'rows':ledger})
-        official_review = location_review + [r for r in official_review if r.get('reason') != '공식 가맹점 상세주소·좌표 확인 필요']
-        status['onnuri'] = {'status': 'published_snapshot', 'source_date': snapshot['source_date'],
-            'checked_at': snapshot['retrieved_at'], 'attempted_at': checked,
-            'source_url': snapshot['source_url'], 'total_rows': snapshot['total_rows'],
-            'refresh_error': source_error, 'reason': '연간 공식 자료; 상호·상점가 일치 기록만 갱신. 실시간 가맹 여부 미확인'}
-        status['onnuri'].update(scope='nationwide', candidate_rows=len(snapshot['rows']),
-                              location_error=location_error, pending_count=sum(r['status']=='needs_review' for r in location_review),
-                              location_source='https://www.data.go.kr/data/15129441/standard.do')
-    else:
-        status['onnuri'] = {**status.get('onnuri', {}), 'status': 'stale',
-            'attempted_at': checked, 'refresh_error': source_error, 'reason': '공식 파일 조회 실패. 과거 기록 유지'}
+        status['onnuri'] = {**status.get('onnuri', {}), 'refresh_error': type(error).__name__, 'attempted_at': checked}
+        save('merchant_status.json', status)
+        sync_map(old, status)
+        raise
     stations, review = merge(live, historical, old, checked)
     review.extend(official_review)
-    status['onnuri']['matched_count'] = sum(s.get('verification', {}).get('onnuri', {}).get('status') == 'published_snapshot' for s in stations)
-    status['onnuri']['unmatched_count'] = sum(s.get('verification', {}).get('onnuri', {}).get('status') == 'stale' for s in stations)
+    status['onnuri'] = {'status': 'confirmed', 'source_date': places['checked_at'][:10],
+        'checked_at': places['checked_at'], 'attempted_at': checked, 'source_url': SOURCE,
+        'scope': places['scope'], 'query_count': len(places['queries']),
+        'candidate_rows': len(snapshot['rows']), 'raw_search_rows': len(places['rows']),
+        'matched_count': sum(s.get('verification', {}).get('onnuri', {}).get('status') == 'confirmed' for s in stations),
+        'unmatched_count': sum(s.get('verification', {}).get('onnuri', {}).get('status') == 'stale' for s in stations),
+        'pending_count': sum(r.get('show_pending', False) for r in official_review),
+        'refresh_error': None,
+        'reason': '공식 검색 결과 확인. 검색어·품목·등록자료 기반이며 전국 모든 가맹 주유소의 완전성은 보장하지 않음'}
+    save('onnuri_official_snapshot.json', snapshot)
+    save('onnuri_live_snapshot.json', places)
+    save('station_locations.json', location_cache)
+    save('lpg_locations.json', lpg_cache)
+    save('nationwide_candidates.json', {'source_sha256': snapshot['sha256'], 'source_date': snapshot['source_date'],
+                                      'candidate_rows': len(ledger), 'rows': ledger})
     # Legacy rows with only a city as address cannot establish a navigation destination.
     review.extend({'reason': '기존 상세주소 없음', 'name': s['name']} for s in old if not road_key(s.get('address')))
     save('filtered_sangsaeng.json', live)

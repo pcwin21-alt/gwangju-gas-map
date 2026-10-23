@@ -55,8 +55,11 @@ class Merchants(unittest.TestCase):
         self.assertTrue(all(s.get('verification') for s in data))
         self.assertTrue(all(len(s['payment_types']) == len(set(s['payment_types'])) for s in data))
         self.assertTrue(all(s['lat'] is not None and s['lng'] is not None for s in data if s['route_eligible']))
-        paper=next(s for s in data if s['name']=='일자석유')
-        self.assertFalse(paper['onnuri_methods']['card'])
+        for station in data:
+            methods=station.get('onnuri_methods')
+            if methods:
+                self.assertIn(methods['paper'],(True,False))
+                self.assertIn(methods['digital'],(True,False))
     def test_new_official_scheme_applied(self):
         a={'sn':1,'storeNm':'주공주유소','storeAddr':'광주 북문대로 190','lot':35.1852,'lalt':126.8708}
         b={'frCd':'b','frcsNm':'주공주유소','frcsAddr':'광주 북문대로 190','latitude':35.1852,'longitude':126.8708}

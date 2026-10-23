@@ -1,24 +1,23 @@
 {
   "saengsaeng": {
     "status": "confirmed",
-    "checked_at": "2026-10-23T21:19:29+09:00",
+    "checked_at": "2026-10-24T00:02:46+09:00",
     "count": 77
   },
   "onnuri": {
-    "status": "published_snapshot",
-    "source_date": "2026-07-31",
-    "checked_at": "2026-10-23T20:21:35+09:00",
-    "attempted_at": "2026-10-23T21:19:29+09:00",
-    "source_url": "https://www.data.go.kr/data/3060079/fileData.do",
-    "total_rows": 225803,
+    "status": "confirmed",
+    "source_date": "2026-10-23",
+    "checked_at": "2026-10-23T23:57:03+09:00",
+    "attempted_at": "2026-10-24T00:02:46+09:00",
+    "source_url": "https://www.onnuri.gift/place",
+    "scope": "nationwide_keyword_search",
+    "query_count": 53,
+    "candidate_rows": 226,
+    "raw_search_rows": 522,
+    "matched_count": 168,
+    "unmatched_count": 1,
+    "pending_count": 42,
     "refresh_error": null,
-    "reason": "연간 공식 자료; 상호·상점가 일치 기록만 갱신. 실시간 가맹 여부 미확인",
-    "scope": "nationwide",
-    "candidate_rows": 217,
-    "location_error": null,
-    "pending_count": 93,
-    "location_source": "https://www.data.go.kr/data/15129441/standard.do",
-    "matched_count": 112,
-    "unmatched_count": 3
+    "reason": "공식 검색 결과 확인. 검색어·품목·등록자료 기반이며 전국 모든 가맹 주유소의 완전성은 보장하지 않음"
   }
 }
