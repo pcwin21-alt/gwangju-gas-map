@@ -567,8 +567,8 @@
       "name": "주유소기사식당",
       "market": "우방이어라 골목형상점가",
       "region": "전남광주",
-      "status": "located",
-      "reason": "공식 가맹점·위치 기록 대조"
+      "status": "excluded_non_vehicle_fuel",
+      "reason": "자동차 주유 업종 아님: 간이음식"
     },
     {
       "row_number": 64,
@@ -1593,8 +1593,8 @@
       "name": "곱창충전소",
       "market": "행복먹방 골목형상점가",
       "region": "전남광주",
-      "status": "needs_review",
-      "reason": "위치 후보 없음"
+      "status": "excluded_non_vehicle_fuel",
+      "reason": "자동차 주유 업종 아님: 한식"
     },
     {
       "row_number": 178,
@@ -1701,8 +1701,8 @@
       "name": "CU망월주유소점",
       "market": "석곡동 골목형상점가",
       "region": "전남광주",
-      "status": "located",
-      "reason": "공식 가맹점·위치 기록 대조"
+      "status": "excluded_non_vehicle_fuel",
+      "reason": "자동차 주유 업종 아님: 생활용품"
     },
     {
       "row_number": 190,
@@ -1935,8 +1935,8 @@
       "name": "만땅주유소",
       "market": "직산읍삼은1번가골목형상점가",
       "region": "충남",
-      "status": "needs_review",
-      "reason": "위치 후보 없음"
+      "status": "excluded_non_vehicle_fuel",
+      "reason": "자동차 주유 업종 아님: 한식"
     },
     {
       "row_number": 216,

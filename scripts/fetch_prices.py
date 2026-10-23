@@ -76,9 +76,30 @@ def main():
     ordered=stations[offset:]+stations[:offset]
     fetched={}
     errors=0
+    discovered={}
+    # Refresh legacy IDs using the existing, documented Gwangju search centres.
+    # The returned name is only a candidate; detail address/region still must match.
+    centres=[(287723,276570),(293641,276515),(302952,286259),(293078,279735),(302761,281296)]
+    for x,y in centres:
+        for prodcd in ('B027','D047','K015'):
+            if usage['attempts']>=budget or errors>=5:break
+            try:
+                usage['attempts']+=1
+                write('opinet_usage.json',usage)
+                response=requests.get('https://www.opinet.co.kr/api/aroundAll.do',params={
+                    os.getenv('OPINET_KEY_PARAM','code'):api_key,'out':'json',
+                    'x':x,'y':y,'radius':5000,'prodcd':prodcd,'sort':1},timeout=10)
+                response.raise_for_status()
+                for item in response.json().get('RESULT',{}).get('OIL',[]):
+                    if item.get('UNI_ID') and item.get('OS_NM'):
+                        discovered.setdefault(key(item['OS_NM']),set()).add(item['UNI_ID'])
+            except (requests.RequestException,ValueError,KeyError):
+                errors+=1
+    print(f'현재 이름 기준 ID 후보 {len(discovered)}개 (가격 확정 전 주소 대조)')
     for s in ordered:
         if usage['attempts']>=budget or errors>=5:break
-        uid=s.get('opinet_id') or old.get(s['id'],{}).get('uni_id')
+        candidate_ids=set().union(*(discovered.get(key(n),set()) for n in [s['name'],*s.get('aliases',[])]))
+        uid=next(iter(candidate_ids)) if len(candidate_ids)==1 else s.get('opinet_id') or old.get(s['id'],{}).get('uni_id')
         if not uid and counts[s['name']]==1:uid=legacy.get(s['name'],{}).get('uni_id')
         if not uid:continue
         try:

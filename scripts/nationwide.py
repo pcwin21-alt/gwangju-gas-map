@@ -31,6 +31,10 @@ def row_id(row):
     text = '\x1f'.join(row.get(k,'') for k in ('소재지','소속 시장명(또는 상점가)','가맹점명'))
     return hashlib.sha256(text.encode()).hexdigest()[:24]
 
+def non_vehicle(row):
+    return bool(re.search(r'음식|한식|중식|식당|주류|주점|술집|소주|맥주|건강|학원|과자|화장품|의류|카페|스낵|편의점',row.get('취급품목','')) or
+                re.search(r'기사식당|^CU.*주유소점$|알콜주유소|주류\s*충전소|뻥튀기충전소|비타민충전소|단짠충전소|인생충전소|기술학원',row['가맹점명']))
+
 def valid_coords(lat, lng):
     try:
         a,b=float(lat),float(lng)
@@ -70,7 +74,6 @@ def resolve(snapshot, historical, locations):
     added, review=[],[]
     for row in snapshot['rows']:
         identity=(name_key(row['가맹점명']),re.sub(r'\W','',row['소속 시장명(또는 상점가)']))
-        if identity in known: continue
         raw_region=row['소재지']
         regions=['광주','전남'] if raw_region=='전남광주' else [region(raw_region)]
         candidates=[r for reg in regions for r in index.get((reg,identity[0]),[])]
@@ -79,9 +82,10 @@ def resolve(snapshot, historical, locations):
         candidates=list(unique.values())
         item={'candidate_id':row_id(row),'name':row['가맹점명'],'market':row['소속 시장명(또는 상점가)'],
               'region':raw_region,'paper':row['지류형 가맹 여부'],'digital':row['디지털형 가맹 여부']}
-        if re.search(r'음식|주류|술집|소주|맥주|건강|학원|과자|화장품|의류|카페|스낵',row.get('취급품목','')) or re.search(r'알콜주유소|주류\s*충전소|뻥튀기충전소|비타민충전소|단짠충전소|인생충전소|기술학원',row['가맹점명']):
+        if non_vehicle(row):
             review.append({**item,'status':'excluded_non_vehicle_fuel','reason':'자동차 주유 업종 아님: '+row['취급품목']})
             continue
+        if identity in known: continue
         if len(candidates)!=1:
             review.append({**item,'status':'needs_review','reason':'위치 후보 없음' if not candidates else '동명 지점 구분 필요'})
             continue

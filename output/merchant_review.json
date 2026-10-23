@@ -555,6 +555,16 @@
     "reason": "위치 후보 없음"
   },
   {
+    "candidate_id": "3bf9bdc01c32c6af4a851d0e",
+    "name": "주유소기사식당",
+    "market": "우방이어라 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "excluded_non_vehicle_fuel",
+    "reason": "자동차 주유 업종 아님: 간이음식"
+  },
+  {
     "candidate_id": "cfd3c43f6db4396b48882f3a",
     "name": "주식회사 혁신에너지",
     "market": "빛가람 호수로 골목형상점가",
@@ -981,8 +991,8 @@
     "region": "전남광주",
     "paper": "Y",
     "digital": "Y",
-    "status": "needs_review",
-    "reason": "위치 후보 없음"
+    "status": "excluded_non_vehicle_fuel",
+    "reason": "자동차 주유 업종 아님: 한식"
   },
   {
     "candidate_id": "e372dec9b50c553fa2108033",
@@ -1013,6 +1023,16 @@
     "digital": "Y",
     "status": "needs_review",
     "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "09095339e36e91e5697b31a3",
+    "name": "CU망월주유소점",
+    "market": "석곡동 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "excluded_non_vehicle_fuel",
+    "reason": "자동차 주유 업종 아님: 생활용품"
   },
   {
     "candidate_id": "13eb72b964fa7c4235eaadbb",
@@ -1141,8 +1161,8 @@
     "region": "충남",
     "paper": "Y",
     "digital": "Y",
-    "status": "needs_review",
-    "reason": "위치 후보 없음"
+    "status": "excluded_non_vehicle_fuel",
+    "reason": "자동차 주유 업종 아님: 한식"
   },
   {
     "candidate_id": "dfea2f84be984c283e41bfe9",
@@ -1171,6 +1191,12 @@
     "source_id": "05378200035"
   },
   {
+    "reason": "공식 품목 또는 상호가 자동차 주유 업종 아님",
+    "name": "주유소기사식당",
+    "candidate_id": "3bf9bdc01c32c6af4a851d0e",
+    "status": "excluded_non_vehicle_fuel"
+  },
+  {
     "reason": "공식 파일 상호·상점가 매칭 미완료: 과거 기록 유지",
     "name": "새론주유소",
     "market": "대남마주길 골목형상점가",
@@ -1181,6 +1207,12 @@
     "name": "일자석유",
     "market": "양동시장",
     "source_id": "50210300089"
+  },
+  {
+    "reason": "공식 품목 또는 상호가 자동차 주유 업종 아님",
+    "name": "CU망월주유소점",
+    "candidate_id": "09095339e36e91e5697b31a3",
+    "status": "excluded_non_vehicle_fuel"
   },
   {
     "reason": "기존 상세주소 없음",

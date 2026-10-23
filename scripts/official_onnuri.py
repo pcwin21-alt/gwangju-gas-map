@@ -72,9 +72,9 @@ def fetch_snapshot(session, cached, checked):
 
 def reconcile(snapshot, historical):
     try:
-        from nationwide import row_id
+        from nationwide import row_id, non_vehicle
     except ModuleNotFoundError:
-        from scripts.nationwide import row_id
+        from scripts.nationwide import row_id, non_vehicle
     index = {}
     for row in snapshot['rows']:
         key = (normalize(row['가맹점명']), normalize(row['소속 시장명(또는 상점가)']))
@@ -88,6 +88,10 @@ def reconcile(snapshot, historical):
         if len(matches) == 1:
             row = matches[0]
             used.add(key)
+            if non_vehicle(row):
+                review.append({'reason':'공식 품목 또는 상호가 자동차 주유 업종 아님',
+                               'name':row['가맹점명'], 'candidate_id':row_id(row), 'status':'excluded_non_vehicle_fuel'})
+                continue
             # A combined digital flag proves neither individual card nor QR support.
             item.update(paperYn=row['지류형 가맹 여부'], digitalYn=row['디지털형 가맹 여부'],
                         cardYn='', qrYn='')

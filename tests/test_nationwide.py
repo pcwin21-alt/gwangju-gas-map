@@ -29,6 +29,16 @@ class Nationwide(unittest.TestCase):
         self.assertFalse(rows)
         self.assertTrue(review)
 
+    def test_restaurant_and_convenience_store_do_not_inherit_fuel_eligibility(self):
+        from scripts.nationwide import non_vehicle
+        from scripts.official_onnuri import reconcile
+        row={**self.row,'가맹점명':'주유소기사식당','취급품목':'한식'}
+        self.assertTrue(non_vehicle(row))
+        historical={'frCd':'restaurant','frcsNm':row['가맹점명'],'mrktNm':row['소속 시장명(또는 상점가)']}
+        rows,review=reconcile({**self.snap,'rows':[row]},[historical])
+        self.assertFalse(rows)
+        self.assertEqual(review[0]['status'],'excluded_non_vehicle_fuel')
+
     def test_no_market_centre_or_nan_coordinates(self):
         rows,review=resolve(self.snap,[],[{**self.loc,'LAT':'NaN'}])
         self.assertFalse(rows)
