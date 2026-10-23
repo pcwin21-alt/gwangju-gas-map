@@ -2,7 +2,7 @@ name: 오피넷 가격 자동 업데이트
 
 on:
   schedule:
-    - cron: '0 */3 * * *'  # 3시간마다 (하루 8회)
+    - cron: '15 0 * * *'  # KST 09:15, 기본 일일 호출 예산 내
   workflow_dispatch:       # 수동 실행 가능
 
 concurrency:
@@ -31,37 +31,16 @@ jobs:
         env:
           OPINET_API_KEY: ${{ secrets.OPINET_API_KEY }}
         run: |
-          echo "OPINET_API_KEY=$OPINET_API_KEY" > .env
           python scripts/fetch_prices.py
 
       - name: map.html 가격 반영
-        run: |
-          python - <<'EOF'
-          import json, re, sys
-          sys.stdout.reconfigure(encoding='utf-8')
-
-          with open('output/gas_prices.json', encoding='utf-8') as f:
-              raw = json.load(f)
-
-          prices = {name: v['prices'] for name, v in raw.items() if v.get('prices')}
-
-          with open('output/map.html', encoding='utf-8') as f:
-              html = f.read()
-
-          new_const = 'const PRICES = ' + json.dumps(prices, ensure_ascii=False) + ';'
-          result = re.sub(r'const PRICES = \{.*?\};', new_const, html, flags=re.DOTALL)
-
-          with open('output/map.html', 'w', encoding='utf-8') as f:
-              f.write(result)
-
-          print(f'완료: {len(prices)}건 가격 반영')
-          EOF
+        run: python scripts/sync_prices.py
 
       - name: 커밋 & 푸시
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add output/map.html output/gas_prices.json
+          git add output/map.html output/gas_prices.json output/opinet_usage.json
           git diff --staged --quiet || git commit -m "chore: 오피넷 가격 자동 업데이트 $(TZ=Asia/Seoul date +'%Y-%m-%d %H:%M KST')"
           git push
 

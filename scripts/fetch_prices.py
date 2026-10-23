@@ -1,205 +1,115 @@
-"""
-Opinet 유가정보 수집 (3단계 방식)
-1단계: aroundAll(휘발유/경유) — 구별 중심점 10회 호출로 UNI_ID 수집
-2단계: detailById — 1단계 미매칭 중 캐시에 UNI_ID 있는 것 보완
-3단계: detailById — 매칭된 주유소의 전체 연료 가격(휘발유/경유/LPG) 조회
-
-aroundAll D047(LPG)는 주유소 휘발유 가격을 반환하는 오류가 있어 제외.
-detailById는 해당 주유소가 실제 판매하는 연료만 정확하게 반환.
-
-총 호출: 10(aroundAll) + 보완건수 + 매칭건수(~90)
-일 8회 실행 시 최대 ~1,000회 / 일 1,500회 한도 이내
-
-실행: python scripts/fetch_prices.py
-출력: output/gas_prices.json
-"""
-
+"""Budgeted Opinet detail refresh. Keys are station IDs, never merchant names."""
 import json
 import os
-import sys
-import time
+import re
+from collections import Counter
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
-
 import requests
-from dotenv import load_dotenv
 
-sys.stdout.reconfigure(encoding="utf-8")
+ROOT=Path(__file__).resolve().parents[1]
+OUT=ROOT/'output'
+FUEL_NAMES={'B027':'휘발유','D047':'경유','B034':'고급휘발유','C004':'등유','K015':'LPG'}
+KST=timezone(timedelta(hours=9))
 
-ROOT = Path(__file__).parent.parent
-load_dotenv(ROOT / ".env")
+def read(name,default):
+    p=OUT/name
+    return json.loads(p.read_text(encoding='utf-8')) if p.exists() else default
 
-OUTPUT_FILE = ROOT / "output" / "gas_prices.json"
+def write(name,value):
+    p=OUT/name
+    tmp=p.with_suffix('.tmp')
+    tmp.write_text(json.dumps(value,ensure_ascii=False,indent=2),encoding='utf-8')
+    tmp.replace(p)
 
-API_KEY = os.getenv("OPINET_API_KEY")
-BASE = "https://www.opinet.co.kr/api"
+def key(name):
+    return re.sub(r'[^가-힣a-z0-9]','',re.sub(r'주식회사|유한회사|\(주\)|\(유\)|㈜','',name or '').lower())
 
-# 광주 5개 구 중심 KATEC 좌표
-GU_CENTERS = {
-    "광산구": (287723, 276570),
-    "남구":   (293641, 276515),
-    "북구":   (302952, 286259),
-    "서구":   (293078, 279735),
-    "동구":   (302761, 281296),
-}
+def road(address):
+    m=re.search(r'([가-힣0-9]+(?:대로|로|길))\s*[, ]?\s*(\d+(?:-\d+)?)',address or '')
+    return ''.join(m.groups()) if m else None
 
-# aroundAll은 휘발유/경유만 사용 (D047 LPG는 오피넷 API 오류로 제외)
-FUELS = [("B027", "휘발유"), ("B034", "경유")]
-RADIUS = 15000
-PRODCD_NAME = {"B027": "휘발유", "B034": "경유", "D047": "LPG"}
+def same_station(station,detail):
+    from scripts.nationwide import region
+    names={key(n) for n in [station['name'],*station.get('aliases',[])]}
+    address=detail.get('NEW_ADR') or detail.get('VAN_ADR') or ''
+    return bool(key(detail.get('OS_NM')) in names and road(address) and
+                road(address)==road(station.get('address')) and
+                len(address.split())>1 and len(station.get('address','').split())>1 and
+                address.split()[1]==station['address'].split()[1] and
+                region(address)==region(station.get('address')))
 
-
-def normalize(s: str) -> str:
-    return (s.lower()
-            .replace(" ", "")
-            .replace("(주)", "").replace("㈜", "")
-            .replace("(유)", "").replace("유한회사", "")
-            .replace("주식회사", "").replace("(주)", ""))
-
-
-def fetch_around(x, y, prodcd) -> list:
-    resp = requests.get(f"{BASE}/aroundAll.do", params={
-        "code": API_KEY, "out": "json",
-        "x": x, "y": y, "radius": RADIUS, "prodcd": prodcd, "sort": 1,
-    }, timeout=10)
-    resp.raise_for_status()
-    return resp.json().get("RESULT", {}).get("OIL", [])
-
-
-def fetch_detail(uni_id: str) -> dict:
-    resp = requests.get(f"{BASE}/detailById.do",
-        params={"code": API_KEY, "out": "json", "id": uni_id}, timeout=10)
-    resp.raise_for_status()
-    oils = resp.json().get("RESULT", {}).get("OIL", [])
-    if not oils:
-        return {}
-    return {
-        p["PRODCD"]: p["PRICE"]
-        for p in oils[0].get("OIL_PRICE", [])
-        if p["PRODCD"] in ("B027", "B034", "D047") and p.get("PRICE")
-    }
-
+def parse_prices(detail):
+    prices={}
+    for row in detail.get('OIL_PRICE',[]):
+        code=row.get('PRODCD')
+        price=row.get('PRICE')
+        if code not in FUEL_NAMES or isinstance(price,bool):continue
+        try: price=float(price)
+        except (ValueError,TypeError):continue
+        if not 0<price<10000:continue
+        day=str(row.get('TRADE_DT',''))
+        if not re.fullmatch(r'\d{8}',day):continue
+        prices[FUEL_NAMES[code]]={'price':price,'source_date':day,'source_time':str(row.get('TRADE_TM',''))}
+    return prices
 
 def main():
-    if not API_KEY:
-        print("[ESCALATE] OPINET_API_KEY가 .env에 없습니다.")
-        sys.exit(1)
-
-    with open(ROOT / "output" / "gas_stations.json", encoding="utf-8") as f:
-        stations = json.load(f)
-
-    cache_file = ROOT / "output" / "opinet_cache.json"
-    cached_ids: dict[str, str] = {}
-    if cache_file.exists():
-        with open(cache_file, encoding="utf-8") as f:
-            cache_data = json.load(f)
-        for name, v in cache_data.items():
-            if v.get("uni_id"):
-                cached_ids[name] = v["uni_id"]
-        print(f"캐시 로드: {len(cached_ids)}건의 UNI_ID")
-
-    # ── 1단계: aroundAll (휘발유/경유) ───────────────────────
-    print("\n[1단계] aroundAll 수집...")
-    collected: dict[str, dict] = {}  # UNI_ID → {OS_NM, prices}
-    calls = 0
-
-    for gu, (x, y) in GU_CENTERS.items():
-        for prodcd, fuel_name in FUELS:
-            try:
-                oils = fetch_around(x, y, prodcd)
-                calls += 1
-                for o in oils:
-                    uid = o["UNI_ID"]
-                    if uid not in collected:
-                        collected[uid] = {"OS_NM": o["OS_NM"], "prices": {}}
-                    if o.get("PRICE"):
-                        collected[uid]["prices"][fuel_name] = o["PRICE"]
-            except Exception as e:
-                print(f"  [{gu} {fuel_name}] 오류: {e}")
-            time.sleep(0.15)
-
-    print(f"  → {calls}회 호출, {len(collected)}개 주유소 수집")
-
-    opinet_idx = {normalize(v["OS_NM"]): uid for uid, v in collected.items()}
-
-    def match_by_name(name: str) -> str | None:
-        key = normalize(name)
-        uid = opinet_idx.get(key)
-        if not uid:
-            for okey, ouid in opinet_idx.items():
-                if key and okey and (key in okey or okey in key):
-                    uid = ouid
-                    break
-        return uid
-
-    # ── 2단계: detailById 보완 (미매칭 캐시) ─────────────────
-    need_detail = []
-    for st in stations:
-        name = st["name"]
-        if not match_by_name(name) and name in cached_ids:
-            need_detail.append((name, cached_ids[name]))
-
-    if need_detail:
-        print(f"\n[2단계] detailById 보완 ({len(need_detail)}건)...")
-        for name, uid in need_detail:
-            try:
-                raw = fetch_detail(uid)
-                prices = {PRODCD_NAME[k]: v for k, v in raw.items()}
-                collected[uid] = {"OS_NM": name, "prices": prices}
-                opinet_idx[normalize(name)] = uid
-                calls += 1
-            except Exception as e:
-                print(f"  {name}: 오류 {e}")
-            time.sleep(0.15)
-        print(f"  → 완료")
-
-    # ── 3단계: detailById로 LPG 포함 전체 가격 조회 ──────────
-    # aroundAll D047은 오류가 있으므로, 매칭된 주유소에 대해
-    # detailById를 호출하여 실제 판매 연료(LPG 포함)를 정확히 가져옴
-    matched_uids = []
-    for st in stations:
-        uid = match_by_name(st["name"])
-        if uid and uid not in [u for _, u in matched_uids]:
-            matched_uids.append((st["name"], uid))
-
-    print(f"\n[3단계] detailById LPG 포함 전체 가격 조회 ({len(matched_uids)}건)...")
-    for name, uid in matched_uids:
+    from dotenv import load_dotenv
+    load_dotenv(ROOT/'.env')
+    api_key=os.getenv('OPINET_API_KEY')
+    if not api_key:raise SystemExit('OPINET_API_KEY 미설정: 가격 수집 미실행')
+    checked=datetime.now(KST)
+    today=checked.date().isoformat()
+    budget=min(200,max(0,int(os.getenv('OPINET_DAILY_BUDGET','200'))))
+    usage=read('opinet_usage.json',{})
+    if usage.get('date')!=today:usage={'date':today,'attempts':0}
+    stations=read('gas_stations.json',[])
+    legacy=read('opinet_cache.json',{})
+    old=read('gas_prices.json',{})
+    counts=Counter(s['name'] for s in stations)
+    results={}
+    for s in stations:
+        previous=old.get(s['id'],{})
+        if previous.get('schema_version')==2:results[s['id']]=previous
+    # Rotate the start so a restricted quota does not permanently starve later IDs.
+    offset=int(checked.strftime('%j'))%max(1,len(stations))
+    ordered=stations[offset:]+stations[:offset]
+    fetched={}
+    errors=0
+    for s in ordered:
+        if usage['attempts']>=budget or errors>=5:break
+        uid=s.get('opinet_id') or old.get(s['id'],{}).get('uni_id')
+        if not uid and counts[s['name']]==1:uid=legacy.get(s['name'],{}).get('uni_id')
+        if not uid:continue
         try:
-            raw = fetch_detail(uid)
-            if raw:
-                prices = {PRODCD_NAME[k]: v for k, v in raw.items()}
-                collected[uid]["prices"] = prices
-                calls += 1
-        except Exception as e:
-            print(f"  {name}: 오류 {e}")
-        time.sleep(0.1)
-    print(f"  → 완료")
+            if uid not in fetched:
+                usage['attempts']+=1
+                write('opinet_usage.json',usage)
+                r=requests.get('https://www.opinet.co.kr/api/detailById.do',
+                    params={'certkey':api_key,'out':'json','id':uid},timeout=15)
+                r.raise_for_status()
+                oils=r.json().get('RESULT',{}).get('OIL',[])
+                if not oils:raise ValueError('no detail')
+                fetched[uid]=oils[0]
+            detail=fetched[uid]
+            if not same_station(s,detail):continue
+            parsed=parse_prices(detail)
+            if parsed:
+                results[s['id']]={'schema_version':2,'uni_id':uid,'matched_name':detail.get('OS_NM'),
+                    'checked_at':checked.isoformat(timespec='seconds'),
+                    'prices':{k:v['price'] for k,v in parsed.items()},'price_evidence':parsed}
+        except (requests.RequestException,ValueError,KeyError):
+            errors+=1
+            # Never print exceptions containing authenticated request URLs.
+            print('가격 응답 확인 실패; 기존 정상 가격 유지')
+    # Drop stale price entries after 72h; never mislabel old diesel/LPG caches.
+    for sid,v in list(results.items()):
+        v['prices']={k:p for k,p in v['prices'].items() if k in v.get('price_evidence',{}) and
+            (checked.date()-datetime.strptime(v['price_evidence'][k]['source_date'],'%Y%m%d').date()).days<=3}
+    write('gas_prices.json',results)
+    print(f'ID 기준 가격 {len(results)}개 / 오늘 요청 {usage["attempts"]}/{budget} / 오류 {errors}회')
 
-    # ── 최종 매칭 ─────────────────────────────────────────────
-    results = {}
-    matched = 0
-    for st in stations:
-        name = st["name"]
-        uid = match_by_name(name)
-        if uid and collected.get(uid, {}).get("prices"):
-            results[name] = {
-                "uni_id": uid,
-                "matched_name": collected[uid]["OS_NM"],
-                "prices": collected[uid]["prices"],
-            }
-            matched += 1
-        else:
-            results[name] = {
-                "uni_id": uid or cached_ids.get(name),
-                "matched_name": None,
-                "prices": {},
-            }
-
-    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        json.dump(results, f, ensure_ascii=False, indent=2)
-
-    print(f"\n완료: {matched}/{len(stations)}건 매칭")
-    print(f"API 사용량: {calls}회 / 일 1500회 한도")
-
-
-if __name__ == "__main__":
+if __name__=='__main__':
+    import sys
+    sys.path.insert(0,str(ROOT))
     main()

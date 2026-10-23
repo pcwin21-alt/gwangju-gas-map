@@ -70,7 +70,7 @@
     for(const value of [estimate ? `추가 이동 약 ${Math.ceil(estimate.addedSeconds/60)}분 · ${(estimate.addedMeters/1000).toFixed(1)}km` : '추가 이동시간 미계산',methods(station),station.address]){
       const p=document.createElement('p');p.textContent=value;card.append(p);
     }
-    const prices=PRICES[station.name];
+    const prices=PRICES[station.id];
     if(prices){
       const block=document.createElement('div');block.className='trip-prices';
       for(const fuel of ['휘발유','경유','LPG']){

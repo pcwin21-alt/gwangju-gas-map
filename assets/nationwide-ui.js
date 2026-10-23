@@ -1,0 +1,128 @@
+(() => {
+  'use strict';
+  if (!window.kakao?.maps) {
+    // Public merchant lookup remains usable when a map domain is unavailable.
+    const state=GasNationalState, regionInput=document.getElementById('regionSelect');
+    GasNational.regions.forEach(name=>regionInput.add(new Option(name,name)));
+    let payment='all';
+    const panel=document.getElementById('nationalResults');panel.open=true;
+    document.getElementById('map').textContent='지도를 불러오지 못했습니다. 주유소 목록에서 주소와 길찾기를 확인하세요.';
+    for(const id of ['myLocBtn','rankBtn','fitResultsBtn','districtSelect'])document.getElementById(id).disabled=true;
+    document.getElementById('tripPanel').hidden=true;
+    function renderFallback() {
+      state.region=regionInput.value;state.method=document.getElementById('onnuriMethod').value;state.fuel=document.getElementById('fuelSelect').value;
+      const q=document.getElementById('searchInput').value.trim().toLowerCase();
+      const rows=STATIONS.filter(s=>GasNational.matches(s,state)&&(payment==='all'||s.payment_types.includes(payment))&&(!q||(s.name+' '+s.address).toLowerCase().includes(q)));
+      const list=document.getElementById('stationList');list.replaceChildren();
+      rows.forEach(s=>{
+        const a=document.createElement('a');a.className='station-list-row';a.target='_blank';a.rel='noopener';
+        a.href='https://map.kakao.com/link/search/'+encodeURIComponent(s.name+' '+s.address);
+        a.textContent=s.name+' · '+s.address+' · 길찾기';list.append(a);
+      });
+      document.getElementById('countBadge').textContent=rows.length+'곳';
+      document.getElementById('listCount').textContent=rows.length+'곳';
+      document.getElementById('nationalSummary').textContent='공식 온누리 자료 '+MERCHANT_STATUS.onnuri.source_date+' · 지도 대신 목록 제공';
+      document.getElementById('moreStations').hidden=true;
+      document.getElementById('pendingSummary').parentElement.hidden=true;
+    }
+    for(const id of ['regionSelect','onnuriMethod','fuelSelect'])document.getElementById(id).addEventListener('change',renderFallback);
+    document.getElementById('searchInput').addEventListener('input',renderFallback);
+    document.querySelectorAll('.filter-btn').forEach(b=>b.addEventListener('click',()=>{
+      payment=b.dataset.filter;document.querySelectorAll('.filter-btn').forEach(x=>x.classList.toggle('active',x===b));renderFallback();
+    }));
+    renderFallback();return;
+  }
+  const state=GasNationalState;
+  const regionInput=document.getElementById('regionSelect');
+  const method=document.getElementById('onnuriMethod');
+  const fuel=document.getElementById('fuelSelect');
+  const summary=document.getElementById('nationalSummary');
+  const list=document.getElementById('stationList');
+  const pending=document.getElementById('pendingList');
+  let limit=20, restoring=true;
+  GasNational.regions.forEach(name=>regionInput.add(new Option(name,name)));
+  function districts() {
+    const select=document.getElementById('districtSelect');
+    select.replaceChildren(new Option('전체 시·군·구','all'));
+    select.disabled=state.region==='all';
+    if (!select.disabled) {
+      [...new Set(STATIONS.filter(s=>s.region===state.region).map(s=>s.address?.split(/\s+/)[1]).filter(Boolean))]
+        .sort().forEach(name=>select.add(new Option(name,name)));
+    }
+    currentDistrict='all';
+  }
+  function syncURL() {
+    const u=new URL(location.href);
+    for(const k of ['region','method','fuel']) {
+      if(state[k]==='all')u.searchParams.delete(k);else u.searchParams.set(k,state[k]);
+    }
+    if(currentFilter==='all')u.searchParams.delete('payment');else u.searchParams.set('payment',currentFilter);
+    if(currentDistrict==='all')u.searchParams.delete('district');else u.searchParams.set('district',currentDistrict);
+    // Exact GPS, search text and trip endpoints are never included.
+    if (u.href!==location.href) history[restoring?'replaceState':'pushState'](null,'',u);
+  }
+  function render() {
+    const visible=allMarkers.filter(m=>m.visible);
+    const waiting=(typeof NATIONAL_PENDING==='undefined'?[]:NATIONAL_PENDING).filter(r=>
+      state.region==='all'||r.region===state.region||(['광주','전남'].includes(state.region)&&r.region==='전남광주'));
+    summary.textContent=`지도 표시 ${visible.length}곳 · 공식 온누리 자료 ${MERCHANT_STATUS.onnuri?.source_date||'미확인'}`;
+    const title=document.getElementById('pendingSummary');
+    title.textContent=`주소 확인 대기 ${waiting.length}건`;
+    pending.replaceChildren();
+    waiting.forEach(r=>{
+      const li=document.createElement('li');
+      li.textContent=`${r.name} · ${r.market} · ${r.region} — ${r.reason}`;
+      pending.append(li);
+    });
+    list.replaceChildren();
+    visible.slice(0,limit).forEach(item=>{
+      const button=document.createElement('button');button.type='button';button.className='station-list-row';
+      const name=document.createElement('strong');name.textContent=item.station.name;
+      const address=document.createElement('span');address.textContent=item.station.address;
+      const types=document.createElement('span');
+      types.textContent=item.station.payment_types.includes('onnuri')?
+        '온누리 '+[item.station.onnuri_methods?.paper===true&&'지류',item.station.onnuri_methods?.digital===true&&'디지털'].filter(Boolean).join('·'):'광주상생카드';
+      button.append(name,address,types);
+      button.addEventListener('click',()=>{
+        if(activeOverlay)activeOverlay.setMap(null);
+        map.setCenter(new kakao.maps.LatLng(item.station.lat,item.station.lng));map.setLevel(4);
+        item.overlay.setMap(map);activeOverlay=item.overlay;
+      });list.append(button);
+    });
+    if(!visible.length){const p=document.createElement('p');p.textContent='조건에 맞는 확인된 등록이 없습니다. 지역이나 결제 유형을 바꿔보세요.';list.append(p);}
+    const more=document.getElementById('moreStations');more.hidden=visible.length<=limit;
+    document.getElementById('listCount').textContent=`${Math.min(limit,visible.length)} / ${visible.length}곳`;
+  }
+  const original=applyFilters;
+  applyFilters=function(){original();render();};
+  function change() {
+    state.region=regionInput.value;state.method=method.value;state.fuel=fuel.value;limit=20;
+    districts();applyFilters();clearRankMapOverlays();mapViewport.fit();syncURL();
+  }
+  [regionInput,method,fuel].forEach(el=>el.addEventListener('change',change));
+  document.getElementById('moreStations').addEventListener('click',()=>{limit+=20;render();});
+  document.querySelectorAll('.filter-btn').forEach(el=>el.addEventListener('click',syncURL));
+  document.getElementById('districtSelect').addEventListener('change',syncURL);
+  document.getElementById('resetBtn').addEventListener('click',()=>{
+    regionInput.value=method.value=fuel.value='all';change();
+  });
+  function restore() {
+    restoring=true;
+    const url=new URL(location.href);
+    const district=url.searchParams.get('district');
+    regionInput.value=GasNational.regions.includes(url.searchParams.get('region'))?url.searchParams.get('region'):'all';
+    method.value=['paper','digital'].includes(url.searchParams.get('method'))?url.searchParams.get('method'):'all';
+    fuel.value=['liquid','lpg'].includes(url.searchParams.get('fuel'))?url.searchParams.get('fuel'):'all';
+    const payment=url.searchParams.get('payment');
+    currentFilter=['onnuri','saengsaeng'].includes(payment)?payment:'all';
+    document.querySelectorAll('.filter-btn').forEach(b=>{
+      b.classList.toggle('active',b.dataset.filter===currentFilter);
+      b.setAttribute('aria-pressed',String(b.dataset.filter===currentFilter));
+    });
+    change();
+    if(district && [...document.getElementById('districtSelect').options].some(o=>o.value===district))triggerDistrictSelect(district);
+    syncURL();restoring=false;
+  }
+  window.addEventListener('popstate',restore);
+  restore();
+})();

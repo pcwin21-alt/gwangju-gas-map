@@ -19,7 +19,7 @@ class OfficialOnnuri(unittest.TestCase):
         self.assertEqual(rows[0]['latitude'],self.old['latitude'])
         self.assertEqual(rows[0]['paperYn'],'N')
         stations,_=merge([],rows,[],'2026-10-10')
-        self.assertEqual(stations[0]['onnuri_methods'],{'paper':False,'card':False,'qr':False,'digital':True})
+        self.assertEqual(stations[0]['onnuri_methods'],{'paper':False,'card':None,'qr':None,'digital':True})
         self.assertEqual(stations[0]['verification']['onnuri']['source_date'],'2026-07-31')
 
     def test_same_name_other_market_not_promoted(self):

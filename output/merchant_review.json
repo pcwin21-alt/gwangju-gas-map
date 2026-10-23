@@ -130,6 +130,1041 @@
     "id": "onnuri:05491200023"
   },
   {
+    "reason": "내비 추천 제외: 좌표 또는 자동차 주유 업종 확인 필요",
+    "name": "공항에너지",
+    "id": "onnuri:national-687b6a4379f9c9fa511001a2"
+  },
+  {
+    "candidate_id": "16a88dfca2230dd8ff8ba54b",
+    "name": "종합에너지",
+    "market": "춘천번개시장",
+    "region": "강원",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "9dec80805a1819465008ab06",
+    "name": "에너지샵",
+    "market": "태백중앙로상점가",
+    "region": "강원",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "06ca4cbb106fcd117a5cdd0e",
+    "name": "㈜틸에너지",
+    "market": "한대앞역상점가",
+    "region": "경기",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "033df7fcee2a459246c7f3e1",
+    "name": "동현 주유소",
+    "market": "조종시장",
+    "region": "경기",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "동명 지점 구분 필요"
+  },
+  {
+    "candidate_id": "641598d6b273582aace81796",
+    "name": "대우종합석유얼음",
+    "market": "평택통복시장",
+    "region": "경기",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "92734b9ac135bd9384bff97d",
+    "name": "대성주유소",
+    "market": "조종시장",
+    "region": "경기",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "동명 지점 구분 필요"
+  },
+  {
+    "candidate_id": "316b767e6eb027db782d1617",
+    "name": "고성석유",
+    "market": "마산 산호시장",
+    "region": "경남",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "9bac956594d57fc596495e2a",
+    "name": "포항에너지기술학원",
+    "market": "포항 해도새록새로 골목형상점가",
+    "region": "경북",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "excluded_non_vehicle_fuel",
+    "reason": "자동차 주유 업종 아님: 기술학원"
+  },
+  {
+    "candidate_id": "c426c12d7c844ac0a2d91bd1",
+    "name": "춘양주유소",
+    "market": "억지춘향시장(구 봉화춘향시장)",
+    "region": "경북",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "1b3a812aaf08bb7dafab3fe4",
+    "name": "주류 충전소",
+    "market": "포항 해도새록새로 골목형상점가",
+    "region": "경북",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "excluded_non_vehicle_fuel",
+    "reason": "자동차 주유 업종 아님: 과메기"
+  },
+  {
+    "candidate_id": "c5224cf2c01fa857bf83cbd3",
+    "name": "예천용궁시장제유소",
+    "market": "용궁시장",
+    "region": "경북",
+    "paper": "Y",
+    "digital": "N",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "6cf6b5291c36bdd9f7fb20d1",
+    "name": "세진석유",
+    "market": "캐롤타운상점가 골목형상점가",
+    "region": "경북",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "ff23f383096d8ef00074227d",
+    "name": "문희주유소",
+    "market": "문경전통시장",
+    "region": "경북",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "04d09d1a8156d44b38db83c0",
+    "name": "명륜주유소",
+    "market": "북문시장",
+    "region": "경북",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "04d09d1a8156d44b38db83c0",
+    "name": "명륜주유소",
+    "market": "북문시장",
+    "region": "경북",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "59162c8be20105050a334a35",
+    "name": "디와이에너지",
+    "market": "경주중심상가",
+    "region": "경북",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "9e96e2c352e1ca4224036944",
+    "name": "기성주유소",
+    "market": "척산시장",
+    "region": "경북",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "a8c33b2f05e51f31f9a2b04a",
+    "name": "행복제1주유소",
+    "market": "원대가구명물거리 골목형상점가",
+    "region": "대구",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "ddffae2c53ec18facab2a700",
+    "name": "청정에너지솔루션",
+    "market": "산업용재관",
+    "region": "대구",
+    "paper": "Y",
+    "digital": "N",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "0bf8e875e8a47f8917b48c5c",
+    "name": "대성석유",
+    "market": "평화시장",
+    "region": "대구",
+    "paper": "Y",
+    "digital": "N",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "3e899bebcd2405782f29f5a5",
+    "name": "(주)에너지소방",
+    "market": "동먹골상가 골목형상점가",
+    "region": "대구",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "457d035cee1ad0066f275e7b",
+    "name": "인생충전소본점",
+    "market": "문창동 보물찾(Chat)길 골목형상점가",
+    "region": "대전",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "excluded_non_vehicle_fuel",
+    "reason": "자동차 주유 업종 아님: 보쌈"
+  },
+  {
+    "candidate_id": "e971399ca41505931d7d9ca4",
+    "name": "영주석유",
+    "market": "중앙종합시장",
+    "region": "대전",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "085f0ed8c217e513130788c1",
+    "name": "신화석유",
+    "market": "오정동상점가",
+    "region": "대전",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "dd45b3693f8382297aa4feb6",
+    "name": "관저주유소",
+    "market": "대전관저가구단지 골목형상점가",
+    "region": "대전",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "256794a262f8852a5d1f69f1",
+    "name": "원석유통",
+    "market": "가락타운상가시장",
+    "region": "부산",
+    "paper": "Y",
+    "digital": "N",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "4d5eae88858abeae5eac386d",
+    "name": "주식회사누리에너지",
+    "market": "왕십리무학봉상점가",
+    "region": "서울",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "0ced8ebefe26d1abf2791766",
+    "name": "신양주유소",
+    "market": "신월7동골목형상점가",
+    "region": "서울",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "e82e0d788d65b3725b4e43d5",
+    "name": "뻥튀기충전소",
+    "market": "우장산역 골목형상점가",
+    "region": "서울",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "excluded_non_vehicle_fuel",
+    "reason": "자동차 주유 업종 아님: 뻥튀기"
+  },
+  {
+    "candidate_id": "2032c5af36654a5d3994b1f5",
+    "name": "대한에너지석유,등유,경유배달,얼음배달",
+    "market": "반드레길골목형상점가",
+    "region": "서울",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "e39024824efcd270bfa3cd99",
+    "name": "단짠충전소",
+    "market": "화곡중앙시장",
+    "region": "서울",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "excluded_non_vehicle_fuel",
+    "reason": "자동차 주유 업종 아님: 파스타,호떡"
+  },
+  {
+    "candidate_id": "32e61c29b3f94e236221d473",
+    "name": "주식회사 엠제이에너지",
+    "market": "인천산업유통센터",
+    "region": "인천",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "e249ee9d7b77cdd6761e65cf",
+    "name": "엠케이에너지",
+    "market": "인천산업유통센터",
+    "region": "인천",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "725d770d8e8157d1e1bff8d4",
+    "name": "비타민충전소",
+    "market": "남부종합시장",
+    "region": "인천",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "excluded_non_vehicle_fuel",
+    "reason": "자동차 주유 업종 아님: 과일"
+  },
+  {
+    "candidate_id": "39774a4ec7933b356a046ef0",
+    "name": "호남주유소",
+    "market": "장천동상가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "동명 지점 구분 필요"
+  },
+  {
+    "candidate_id": "1054803b1165f961c8cb5967",
+    "name": "현대주유소",
+    "market": "웃장",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "동명 지점 구분 필요"
+  },
+  {
+    "candidate_id": "1ccde7346429a7e2de7c7e1b",
+    "name": "행복가득양산주유소",
+    "market": "양산동 하서로 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "2490ba7ae1f01a4f0448bd4c",
+    "name": "한백석유첨단주유소",
+    "market": "첨단과기로 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "0aa8cdf72ea9f40f30c3e03c",
+    "name": "패밀리LPG충전소",
+    "market": "일곡동(제8지역:롯데,벽산,동아,삼호,월드스파)",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "37440f8b0e05b9c6b295bb94",
+    "name": "테크노파크주유소",
+    "market": "정부청사 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "badaf1066867bde046275626",
+    "name": "청우에너지(주)",
+    "market": "매월동상인회 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "9028e400c8d44a49a811f1b4",
+    "name": "진남주유소",
+    "market": "장흥시장 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "cfd3c43f6db4396b48882f3a",
+    "name": "주식회사 혁신에너지",
+    "market": "빛가람 호수로 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "5ab35ea992b50c98f9a72695",
+    "name": "주식회사 우성고속관광 효천산업주유소",
+    "market": "신효천 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "8447a5bfd6ae50799a5c426b",
+    "name": "주식회사 아승클린",
+    "market": "용봉우치로 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "466e6b1196a429bb71813335",
+    "name": "㈜동행",
+    "market": "신창동가구의거리일번국도상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "33ce6a47d9fd4415ed0b9b33",
+    "name": "주) 무등LPG충전소",
+    "market": "본촌 하서로 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "1971e423881e57e12ffe9add",
+    "name": "장성농협주유소",
+    "market": "장성읍 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "5b39b253518c26c0e48ff958",
+    "name": "유한회사신상무",
+    "market": "운천테라스길상인회 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "8edc76825b375b2fb2f7f514",
+    "name": "유창석유",
+    "market": "큰방림길 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "a8eba44351591f0565aeba94",
+    "name": "웰컴신가주유소",
+    "market": "수등로 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "9d01063bbbce784de3a7e55c",
+    "name": "용앙주유소",
+    "market": "삼호읍 중앙 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "20c01e1b3ffe7769ce5b37cc",
+    "name": "에스케이(SK)금호석유",
+    "market": "월산4동 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "dd6f0cc875d93344ca9a73ed",
+    "name": "양촌주유소",
+    "market": "지석사거리 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "46e34e974f40c59990b85ff2",
+    "name": "신용 구도일주유소",
+    "market": "임방울대로 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "3bff9ce581e16ea04d883d81",
+    "name": "슬림에너지짱",
+    "market": "상무중앙공원상인회 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "excluded_non_vehicle_fuel",
+    "reason": "자동차 주유 업종 아님: 건강지능식품"
+  },
+  {
+    "candidate_id": "c3015a5826421f62d7bc94a5",
+    "name": "수완엘피지충전소",
+    "market": "왕버들 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "fa0f801871214cdd5ffd2b6d",
+    "name": "수완 구도일주유소",
+    "market": "흑석동 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "3b2fbcfcf6f33c30eb688d72",
+    "name": "성진에너지",
+    "market": "각화도매 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "3b2fbcfcf6f33c30eb688d72",
+    "name": "성진에너지",
+    "market": "각화도매 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "76ce41be9eed4c5a2696b79a",
+    "name": "서부에너지",
+    "market": "맛조이상인회 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "ae5dad8b52088ca201fef748",
+    "name": "산월SELF주유소",
+    "market": "상하완길 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "1ccc57db74db1b01d1a1a7d3",
+    "name": "빛고을충전소",
+    "market": "목련 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "9350d7a01a4c5d76bf1aa02c",
+    "name": "브이넥스 주식회사",
+    "market": "달아실 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "088d654f82aa6f0b4ef5433b",
+    "name": "부원주유소",
+    "market": "죽녹원 북문 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "0772cff2f912b4ae47336b0c",
+    "name": "백일셀프오일뱅크",
+    "market": "쌍학로상인회 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "1a18e59b46f90bcd63bafffb",
+    "name": "바로오케이충전소",
+    "market": "공구의거리",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "467f474880666061c1fbeee0",
+    "name": "미래LPG충전소",
+    "market": "임방울대로 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "99a16ec1f905b70a99edcfc8",
+    "name": "무등에너지협동조합",
+    "market": "학소로 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "4b6f05de86fcd5859a9fc021",
+    "name": "매일LPG충전소",
+    "market": "일곡동(제11지역:용전동) 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "6c9507f5c377b6de341e1b21",
+    "name": "드림에너지",
+    "market": "대남마주길 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "6aecf152e71ae4addd981fd8",
+    "name": "두암주유소",
+    "market": "두암시장주변 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "7117c52e34da33438412e21b",
+    "name": "동부충전소",
+    "market": "동구문화센터인근 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "36df9cddfa49c10fabac2ec1",
+    "name": "동광주LPG충전소",
+    "market": "석곡동 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "9048d648f7164ac10b9d7aaa",
+    "name": "도시에너지 주식회사",
+    "market": "신안동용봉초건너편 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "0d59abadeddce79e285d8ca2",
+    "name": "도동재주유소",
+    "market": "석곡동 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "fed39f15ce90b5feefe54519",
+    "name": "더푸른주식회사",
+    "market": "늘해랑상인회 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "4358c398e727d6f8cc92c32e",
+    "name": "더푸른 주식회사 첨단충전소",
+    "market": "정부청사 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "ed66938b7d2f6debb5dc0ceb",
+    "name": "대주에너지",
+    "market": "봉선중앙로 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "873fddc3887654d789eb4063",
+    "name": "대나무주유소",
+    "market": "박물관거리 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "85a501b43ad360759ac3cf36",
+    "name": "대근주유소",
+    "market": "상하완길 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "16c76726db45d997f4abf7cd",
+    "name": "다올에너지산업(주)",
+    "market": "신창동가구의거리일번국도상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "377b06613fb18e0acc104682",
+    "name": "남평주유소",
+    "market": "남평읍1로 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "d8649006e8f025dc123dffbf",
+    "name": "그대에너지",
+    "market": "일곡동(제8지역:롯데,벽산,동아,삼호,월드스파)",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "53e9781024b367f9f2977e68",
+    "name": "곱창충전소",
+    "market": "행복먹방 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "e372dec9b50c553fa2108033",
+    "name": "경훈에너지",
+    "market": "오치1동 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "3d8d8f19bfe620a6108e4c04",
+    "name": "SK삼성에너지",
+    "market": "두암초주변 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "aec951dbdb417bcb46318c53",
+    "name": "SK경인석유",
+    "market": "두암1동군왕로 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "13eb72b964fa7c4235eaadbb",
+    "name": "77번가주유소",
+    "market": "매화 하백로 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "84b4ca11d60b7efb7b2712c6",
+    "name": "(주)터미널주유소",
+    "market": "박물관거리 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "37fbbe6ccc9e669b85fd04f5",
+    "name": "(주)지에스종합에너지 (사운드 동명 카페)",
+    "market": "동명동 카페거리 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "c5a5fead3541e930d57bc535",
+    "name": "(주)도시에너지신안영업소",
+    "market": "신안동용봉초 골목형상점가",
+    "region": "전남광주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "72b74f96b9a163135fbd08fa",
+    "name": "주식회사해뜨는여의동",
+    "market": "여의동 골목형상점가",
+    "region": "전북",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "3dbfcee8c5f9decdc44cff4a",
+    "name": "주식회사 현 마트24주유소",
+    "market": "경암동 서래장터 골목형상점가",
+    "region": "전북",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "6f5468df95454820ea49f00b",
+    "name": "은석유통",
+    "market": "석소 골목형상점가",
+    "region": "전북",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "9bf38d0f1db08d978bcb70da",
+    "name": "(주)고객행복룰루랄라",
+    "market": "장승배기로 골목형상점가",
+    "region": "전북",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "9ada969f9140731d07105285",
+    "name": "현대주유소",
+    "market": "용문 골목형상점가",
+    "region": "제주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "7e27d0c945210e4c5d6e58a3",
+    "name": "함덕주유소",
+    "market": "함덕4구상점가",
+    "region": "제주",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "228c63f25ee0f932e8c8b506",
+    "name": "제일주유소",
+    "market": "공산성골목형상점가",
+    "region": "충남",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "29b4e0aac4c8e50d12c2d620",
+    "name": "모산석유",
+    "market": "배방상점가",
+    "region": "충남",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "27cf40b1caa2b3fbf586960c",
+    "name": "만땅주유소",
+    "market": "직산읍삼은1번가골목형상점가",
+    "region": "충남",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "dfea2f84be984c283e41bfe9",
+    "name": "원남주유소",
+    "market": "음성시장",
+    "region": "충북",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "needs_review",
+    "reason": "위치 후보 없음"
+  },
+  {
+    "candidate_id": "88c6229be00acab937d1979f",
+    "name": "알콜주유소",
+    "market": "단양팔경 골목형상점가",
+    "region": "충북",
+    "paper": "Y",
+    "digital": "Y",
+    "status": "excluded_non_vehicle_fuel",
+    "reason": "자동차 주유 업종 아님: "
+  },
+  {
     "reason": "공식 파일 상호·상점가 매칭 미완료: 과거 기록 유지",
     "name": "효천산업주유소",
     "market": "신효천 골목형상점가",
@@ -146,384 +1181,6 @@
     "name": "일자석유",
     "market": "양동시장",
     "source_id": "50210300089"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "화산주유소",
-    "market": "화산면 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "호남주유소",
-    "market": "장천동상가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "현대주유소",
-    "market": "웃장",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "행복가득양산주유소",
-    "market": "양산동 하서로 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "한백석유첨단주유소",
-    "market": "첨단과기로 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "패밀리LPG충전소",
-    "market": "일곡동(제8지역:롯데,벽산,동아,삼호,월드스파)",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "테크노파크주유소",
-    "market": "정부청사 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "청우에너지(주)",
-    "market": "매월동상인회 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "진남주유소",
-    "market": "장흥시장 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "주식회사 혁신에너지",
-    "market": "빛가람 호수로 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "주식회사 우성고속관광 효천산업주유소",
-    "market": "신효천 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "주식회사 아승클린",
-    "market": "용봉우치로 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "㈜동행",
-    "market": "신창동가구의거리일번국도상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "주) 무등LPG충전소",
-    "market": "본촌 하서로 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "장성농협주유소",
-    "market": "장성읍 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "유한회사신상무",
-    "market": "운천테라스길상인회 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "유창석유",
-    "market": "큰방림길 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "웰컴신가주유소",
-    "market": "수등로 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "용앙주유소",
-    "market": "삼호읍 중앙 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "에스케이(SK)금호석유",
-    "market": "월산4동 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "양촌주유소",
-    "market": "지석사거리 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "신용 구도일주유소",
-    "market": "임방울대로 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "슬림에너지짱",
-    "market": "상무중앙공원상인회 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "순천주유소",
-    "market": "장천동상가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "수완엘피지충전소",
-    "market": "왕버들 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "수완 구도일주유소",
-    "market": "흑석동 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "성진에너지",
-    "market": "각화도매 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "성진에너지",
-    "market": "각화도매 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "서부에너지",
-    "market": "맛조이상인회 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "산월SELF주유소",
-    "market": "상하완길 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "빛고을충전소",
-    "market": "목련 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "브이넥스 주식회사",
-    "market": "달아실 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "부원주유소",
-    "market": "죽녹원 북문 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "백일셀프오일뱅크",
-    "market": "쌍학로상인회 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "바로오케이충전소",
-    "market": "공구의거리",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "미래LPG충전소",
-    "market": "임방울대로 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "미래 주유소",
-    "market": "토지면 섬진강대로 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "무등에너지협동조합",
-    "market": "학소로 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "매일LPG충전소",
-    "market": "일곡동(제11지역:용전동) 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "드림에너지",
-    "market": "대남마주길 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "두암주유소",
-    "market": "두암시장주변 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "동부충전소",
-    "market": "동구문화센터인근 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "동광주LPG충전소",
-    "market": "석곡동 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "도시에너지 주식회사",
-    "market": "신안동용봉초건너편 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "도동재주유소",
-    "market": "석곡동 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "더푸른주식회사",
-    "market": "늘해랑상인회 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "더푸른 주식회사 첨단충전소",
-    "market": "정부청사 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "대창주유소",
-    "market": "함평천지 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "대주에너지",
-    "market": "봉선중앙로 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "대나무주유소",
-    "market": "박물관거리 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "대근주유소",
-    "market": "상하완길 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "다올에너지산업(주)",
-    "market": "신창동가구의거리일번국도상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "남평주유소",
-    "market": "남평읍1로 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "그대에너지",
-    "market": "일곡동(제8지역:롯데,벽산,동아,삼호,월드스파)",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "공항에너지",
-    "market": "톱머리 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "곱창충전소",
-    "market": "행복먹방 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "경훈에너지",
-    "market": "오치1동 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "SK삼성에너지",
-    "market": "두암초주변 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "SK경인석유",
-    "market": "두암1동군왕로 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "77번가주유소",
-    "market": "매화 하백로 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "(주)터미널주유소",
-    "market": "박물관거리 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "(주)지에스종합에너지 (사운드 동명 카페)",
-    "market": "동명동 카페거리 골목형상점가",
-    "region": "전남광주"
-  },
-  {
-    "reason": "전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요",
-    "name": "(주)도시에너지신안영업소",
-    "market": "신안동용봉초 골목형상점가",
-    "region": "전남광주"
   },
   {
     "reason": "기존 상세주소 없음",

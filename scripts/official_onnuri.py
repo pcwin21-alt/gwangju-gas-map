@@ -41,13 +41,13 @@ def parse_csv(content, source_date, checked, download_url):
         row = {key: (row.get(key) or '').strip() for key in FIELDS}
         if any(row[key] not in ('Y', 'N', '') for key in FIELDS[4:6]):
             raise ValueError('온누리 결제수단 값 변경')
-        if row['소재지'] in ('전남광주', '광주', '광주광역시') and fuel_row(row):
+        if fuel_row(row):
             rows.append(row)
     if total < 100000 or len(rows) < 50:
         raise ValueError('온누리 CSV 불완전 또는 지역 형식 변경')
     return {'source_url': PORTAL, 'download_url': download_url, 'source_date': source_date,
             'retrieved_at': checked, 'sha256': hashlib.sha256(content).hexdigest(),
-            'total_rows': total, 'regional_fuel_rows': len(rows), 'rows': rows}
+            'total_rows': total, 'regional_fuel_rows': len(rows), 'scope': 'nationwide-v1', 'rows': rows}
 
 
 def fetch_snapshot(session, cached, checked):
@@ -61,7 +61,7 @@ def fetch_snapshot(session, cached, checked):
     source_date = datetime.strptime(max(dates), '%Y%m%d').date().isoformat()
     url = match.group(1).replace('&amp;', '&')
     # Recheck the page daily; re-download unchanged 17 MB files once a week.
-    if cached and cached['source_date'] == source_date and cached['download_url'] == url:
+    if cached and cached.get('scope') == 'nationwide-v1' and cached['source_date'] == source_date and cached['download_url'] == url:
         age = datetime.fromisoformat(checked) - datetime.fromisoformat(cached['retrieved_at'])
         if age < timedelta(days=7):
             return cached
@@ -71,6 +71,10 @@ def fetch_snapshot(session, cached, checked):
 
 
 def reconcile(snapshot, historical):
+    try:
+        from nationwide import row_id
+    except ModuleNotFoundError:
+        from scripts.nationwide import row_id
     index = {}
     for row in snapshot['rows']:
         key = (normalize(row['가맹점명']), normalize(row['소속 시장명(또는 상점가)']))
@@ -92,6 +96,7 @@ def reconcile(snapshot, historical):
                 'status': 'published_snapshot', 'source_url': PORTAL,
                 'match_basis': 'merchant_name_and_market', 'source_id': old['frCd'],
                 'source_ids': [old['frCd']], 'market': row['소속 시장명(또는 상점가)']}
+            item['_verification']['candidate_id'] = row_id(row)
         elif re.search(r'주유소|충전소|석유|에너지', old.get('frcsNm', '')):
             review.append({'reason': '공식 파일 상호·상점가 매칭 미완료: 과거 기록 유지',
                            'name': old['frcsNm'], 'market': old.get('mrktNm'), 'source_id': old['frCd']})
@@ -99,7 +104,7 @@ def reconcile(snapshot, historical):
     for key, rows in index.items():
         if key not in used:
             for row in rows:
-                review.append({'reason': '전남광주 통합 지역 자료: 광주 상세주소·좌표 확인 필요',
+                review.append({'reason': '공식 가맹점 상세주소·좌표 확인 필요',
                                'name': row['가맹점명'], 'market': row['소속 시장명(또는 상점가)'],
                                'region': row['소재지']})
     return result, review

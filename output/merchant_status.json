@@ -1,19 +1,24 @@
 {
   "saengsaeng": {
     "status": "confirmed",
-    "checked_at": "2026-10-23T09:02:48+09:00",
+    "checked_at": "2026-10-23T21:04:29+09:00",
     "count": 77
   },
   "onnuri": {
     "status": "published_snapshot",
     "source_date": "2026-07-31",
-    "checked_at": "2026-10-17T08:44:04+09:00",
-    "attempted_at": "2026-10-23T09:02:48+09:00",
+    "checked_at": "2026-10-23T20:21:35+09:00",
+    "attempted_at": "2026-10-23T21:04:29+09:00",
     "source_url": "https://www.data.go.kr/data/3060079/fileData.do",
     "total_rows": 225803,
     "refresh_error": null,
     "reason": "연간 공식 자료; 상호·상점가 일치 기록만 갱신. 실시간 가맹 여부 미확인",
-    "matched_count": 100,
+    "scope": "nationwide",
+    "candidate_rows": 217,
+    "location_error": null,
+    "pending_count": 95,
+    "location_source": "https://www.data.go.kr/data/15129441/standard.do",
+    "matched_count": 113,
     "unmatched_count": 3
   }
 }

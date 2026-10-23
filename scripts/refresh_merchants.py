@@ -10,6 +10,10 @@ try:
     from official_onnuri import fetch_snapshot, reconcile
 except ModuleNotFoundError:
     from scripts.official_onnuri import fetch_snapshot, reconcile
+try:
+    from nationwide import fetch_locations, resolve, region, name_key, valid_coords, row_id
+except ModuleNotFoundError:
+    from scripts.nationwide import fetch_locations, resolve, region, name_key, valid_coords, row_id
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'output'
@@ -76,7 +80,7 @@ def distance(a, b):
 def coords(lat, lng):
     try:
         lat, lng = float(lat), float(lng)
-        if 34.8 < lat < 35.5 and 126.5 < lng < 127.2:
+        if valid_coords(lat, lng):
             return lat, lng
     except (TypeError, ValueError):
         pass
@@ -129,9 +133,14 @@ def merge(sangsaeng, onnuri, old, checked):
             target = station
             target['verification'] = {}
             result.append(target)
+        if row.get('_location_evidence'):
+            target['location_evidence'] = row['_location_evidence']
         prior = target.get('onnuri_methods')
         target['onnuri_methods'] = {k: row.get(v) == 'Y' for k, v in
                                    [('paper', 'paperYn'), ('card', 'cardYn'), ('qr', 'qrYn')]}
+        if row.get('_verification'):
+            target['onnuri_methods']['card'] = None
+            target['onnuri_methods']['qr'] = None
         target['onnuri_methods']['digital'] = (row['digitalYn'] == 'Y' if 'digitalYn' in row
             else target['onnuri_methods']['card'] or target['onnuri_methods']['qr'])
         if prior:
@@ -144,6 +153,7 @@ def merge(sangsaeng, onnuri, old, checked):
             target['verification']['onnuri'].update(row['_verification'])
             target['verification']['onnuri']['source_ids'] = sorted(set(ids + [row['frCd']]))
     for station in result:
+        station['region'] = region(station.get('address'))
         if not station['route_eligible']:
             review.append({'reason': '내비 추천 제외: 좌표 또는 자동차 주유 업종 확인 필요',
                            'name': station['name'], 'id': station['id']})
@@ -157,6 +167,13 @@ def sync_map(stations, status):
     if count != 1:
         raise ValueError('지도 STATIONS 상수 없음 또는 중복')
     metadata = 'const MERCHANT_STATUS = ' + json.dumps(status, ensure_ascii=False) + ';'
+    pending = [r for r in load('merchant_review.json', []) if r.get('status') == 'needs_review']
+    pending = list({r['candidate_id']:r for r in pending}.values())
+    pending_const = 'const NATIONAL_PENDING = ' + json.dumps(pending, ensure_ascii=False) + ';'
+    if 'const NATIONAL_PENDING = ' in html:
+        html = re.sub(r'const NATIONAL_PENDING = .*?;\n', lambda _: pending_const+'\n', html)
+    else:
+        html = html.replace('const STATIONS = ', pending_const+'\nconst STATIONS = ', 1)
     if 'const MERCHANT_STATUS = ' in html:
         html = re.sub(r'const MERCHANT_STATUS = .*?;\n', lambda _: metadata+'\n', html)
     else:
@@ -191,11 +208,43 @@ def main():
         snapshot = load('onnuri_official_snapshot.json')
         source_error = type(error).__name__
     if snapshot:
+        location_cache = load('station_locations.json', {})
+        location_error = None
+        try:
+            age = (datetime.now(KST) - datetime.fromisoformat(location_cache['retrieved_at'])).days if location_cache else 999
+            if age >= 7:
+                locations = fetch_locations(session)
+                relevant = {name_key(r['가맹점명']) for r in snapshot['rows']}
+                location_cache = {'retrieved_at': checked, 'source_url': 'https://www.data.go.kr/data/15129441/standard.do',
+                                  'total_rows': len(locations),
+                                  'rows': [r for r in locations if name_key(r['CONM_NM']) in relevant]}
+                save('station_locations.json', location_cache)
+        except (requests.RequestException, ValueError, KeyError) as error:
+            location_error = type(error).__name__
+        new_locations, location_review = resolve(snapshot, historical, location_cache.get('rows', []))
+        historical.extend(new_locations)
         historical, official_review = reconcile(snapshot, historical)
+        located = {r['_verification']['candidate_id'] for r in historical if r.get('_verification')}
+        pending_index = {r['candidate_id']:r for r in location_review}
+        ledger = []
+        for number, row in enumerate(snapshot['rows'], 1):
+            cid = row_id(row)
+            decision = pending_index.get(cid, {})
+            ledger.append({'row_number':number, 'candidate_id':cid,
+                           'name':row['가맹점명'], 'market':row['소속 시장명(또는 상점가)'],
+                           'region':row['소재지'],
+                           'status':'located' if cid in located else decision.get('status','needs_review'),
+                           'reason':decision.get('reason','공식 가맹점·위치 기록 대조' if cid in located else '상호·시장 대조 확인 필요')})
+        save('nationwide_candidates.json', {'source_sha256':snapshot['sha256'], 'source_date':snapshot['source_date'],
+                                          'candidate_rows':len(ledger), 'rows':ledger})
+        official_review = location_review + [r for r in official_review if r.get('reason') != '공식 가맹점 상세주소·좌표 확인 필요']
         status['onnuri'] = {'status': 'published_snapshot', 'source_date': snapshot['source_date'],
             'checked_at': snapshot['retrieved_at'], 'attempted_at': checked,
             'source_url': snapshot['source_url'], 'total_rows': snapshot['total_rows'],
             'refresh_error': source_error, 'reason': '연간 공식 자료; 상호·상점가 일치 기록만 갱신. 실시간 가맹 여부 미확인'}
+        status['onnuri'].update(scope='nationwide', candidate_rows=len(snapshot['rows']),
+                              location_error=location_error, pending_count=sum(r['status']=='needs_review' for r in location_review),
+                              location_source='https://www.data.go.kr/data/15129441/standard.do')
     else:
         status['onnuri'] = {**status.get('onnuri', {}), 'status': 'stale',
             'attempted_at': checked, 'refresh_error': source_error, 'reason': '공식 파일 조회 실패. 과거 기록 유지'}
