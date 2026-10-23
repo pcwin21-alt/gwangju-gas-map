@@ -7,6 +7,7 @@
     '유가: 하루 1회 조회 · 가맹점: 매일 오전 6시 30분 확인':'Prices: daily lookup · Merchants: daily at 06:30 KST',
     '공식 검색·품목 자료로 확인한 주유소입니다. 전국 모든 가맹점이 포함된 것은 아닙니다.':'Stations are checked against official search and product records. Coverage is not exhaustive.',
     '온누리 공식 검색 ↗':'Search official Onnuri merchants ↗',
+    '최근 조회 실패, 이전 자료 유지':'Latest lookup failed; previous data retained',
     '전국 온누리 · 광주상생카드 가맹점':'National Onnuri · Gwangju Sangsaeng merchants',
     '시·도':'Province', '온누리 유형':'Onnuri type','유종':'Fuel','전국':'All regions',
     '디지털':'Digital','지류':'Paper','지류·디지털':'Paper · Digital','휘발유·경유':'Petrol · Diesel','전체 시·군·구':'All districts',

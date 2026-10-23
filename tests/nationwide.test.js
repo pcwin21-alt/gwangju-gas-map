@@ -1,6 +1,13 @@
 const test=require('node:test');const assert=require('node:assert/strict');
 const {matches}=require('../assets/nationwide.js');
 const station={region:'경기',fuel_kind:'liquid',payment_types:['onnuri'],onnuri_methods:{paper:true,digital:false}};
+
+test('merged sites remain searchable by their former merchant names',()=>{
+ const {searchMatches}=require('../assets/nationwide.js');
+ const s={name:'77번가주유소',address:'광주 북구 서하로 77',aliases:['SK코끼리주유소']};
+ assert.equal(searchMatches(s,'코끼리'),true);
+ assert.equal(searchMatches(s,'다른지점'),false);
+});
 test('paper-only merchant cannot leak into digital or LPG results',()=>{
  assert.equal(matches(station,{region:'경기',fuel:'all',method:'digital'}),false);
  assert.equal(matches(station,{region:'경기',fuel:'lpg',method:'paper'}),false);

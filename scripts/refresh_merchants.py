@@ -285,6 +285,7 @@ def main():
         if len(compact['rows']) < 80:
             raise ValueError('온누리 검색 결과 급감: 이전 지도 유지')
     except (requests.RequestException, ValueError, KeyError) as error:
+        status = load('merchant_status.json', {})
         status['onnuri'] = {**status.get('onnuri', {}), 'refresh_error': type(error).__name__, 'attempted_at': checked}
         save('merchant_status.json', status)
         sync_map(old, status)

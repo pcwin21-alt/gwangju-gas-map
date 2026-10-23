@@ -12,7 +12,7 @@
     function renderFallback() {
       state.region=regionInput.value;state.method=document.getElementById('onnuriMethod').value;state.fuel=document.getElementById('fuelSelect').value;
       const q=document.getElementById('searchInput').value.trim().toLowerCase();
-      const rows=STATIONS.filter(s=>GasNational.matches(s,state)&&(payment==='all'||s.payment_types.includes(payment))&&(!q||(s.name+' '+s.address).toLowerCase().includes(q)));
+      const rows=STATIONS.filter(s=>GasNational.matches(s,state)&&(payment==='all'||s.payment_types.includes(payment))&&GasNational.searchMatches(s,q));
       const list=document.getElementById('stationList');list.replaceChildren();
       rows.forEach(s=>{
         const a=document.createElement('a');a.className='station-list-row';a.target='_blank';a.rel='noopener';
@@ -21,7 +21,7 @@
       });
       document.getElementById('countBadge').textContent=rows.length+'곳';
       document.getElementById('listCount').textContent=rows.length+'곳';
-      document.getElementById('nationalSummary').textContent='온누리 공식 검색 '+MERCHANT_STATUS.onnuri.source_date+' · 지도 대신 목록 제공';
+      document.getElementById('nationalSummary').textContent='온누리 공식 검색 '+MERCHANT_STATUS.onnuri.source_date+' · 지도 대신 목록 제공'+(MERCHANT_STATUS.onnuri.refresh_error?' · 최근 조회 실패, 이전 자료 유지':'');
       document.getElementById('moreStations').hidden=true;
       document.getElementById('pendingSummary').parentElement.hidden=true;
     }
@@ -65,7 +65,7 @@
     const visible=allMarkers.filter(m=>m.visible);
     const waiting=(typeof NATIONAL_PENDING==='undefined'?[]:NATIONAL_PENDING).filter(r=>
       state.region==='all'||r.region===state.region||(['광주','전남'].includes(state.region)&&r.region==='전남광주'));
-    summary.textContent=`지도 표시 ${visible.length}곳 · 온누리 공식 검색 ${MERCHANT_STATUS.onnuri?.source_date||'미확인'}`;
+    summary.textContent=`지도 표시 ${visible.length}곳 · 온누리 공식 검색 ${MERCHANT_STATUS.onnuri?.source_date||'미확인'}${MERCHANT_STATUS.onnuri?.refresh_error?' · 최근 조회 실패, 이전 자료 유지':''}`;
     const title=document.getElementById('pendingSummary');
     title.textContent=`주소·업종 확인 대기 ${waiting.length}건`;
     pending.replaceChildren();
