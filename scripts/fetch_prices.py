@@ -92,8 +92,16 @@ def main():
                     print('가격 API 인증 확인 필요; 추가 요청 중단')
                     break
                 r.raise_for_status()
-                oils=r.json().get('RESULT',{}).get('OIL',[])
-                if not oils:raise ValueError('no detail')
+                body=r.json()
+                result=body.get('RESULT',{})
+                oils=result.get('OIL',[])
+                if not oils:
+                    error=result.get('ERROR',{})
+                    if isinstance(error,list):error=error[0] if error else {}
+                    code=str(error.get('CODE',error.get('code','unknown'))) if isinstance(error,dict) else 'unknown'
+                    code=code if re.fullmatch(r'[A-Za-z0-9_-]{1,24}',code) else 'unavailable'
+                    print('가격 API 오류 코드: '+code+'; 응답 필드: '+','.join(str(k) for k in result.keys()))
+                    break
                 fetched[uid]=oils[0]
             detail=fetched[uid]
             if not same_station(s,detail):continue
