@@ -1,0 +1,171 @@
+{
+  "status": "complete",
+  "source_url": "https://www.onnuri.gift/place",
+  "checked_at": "2026-10-24T00:53:23+09:00",
+  "scope": "regional_keyword_search",
+  "region": "세종",
+  "queries": [
+    {
+      "keyword": "주유",
+      "area_code": "",
+      "status": "complete",
+      "expected": 175,
+      "received": 175,
+      "pages": 1,
+      "region": "세종",
+      "strategy": "national_search_address_filter"
+    },
+    {
+      "keyword": "충전",
+      "area_code": "",
+      "status": "complete",
+      "expected": 21,
+      "received": 21,
+      "pages": 1,
+      "region": "세종",
+      "strategy": "national_search_address_filter"
+    },
+    {
+      "keyword": "석유",
+      "area_code": "",
+      "status": "complete",
+      "expected": 26,
+      "received": 26,
+      "pages": 1,
+      "region": "세종",
+      "strategy": "national_search_address_filter"
+    },
+    {
+      "keyword": "에너지",
+      "area_code": "",
+      "status": "complete",
+      "expected": 26,
+      "received": 26,
+      "pages": 1,
+      "region": "세종",
+      "strategy": "national_search_address_filter"
+    },
+    {
+      "keyword": "LPG",
+      "area_code": "",
+      "status": "complete",
+      "expected": 5,
+      "received": 5,
+      "pages": 1,
+      "region": "세종",
+      "strategy": "national_search_address_filter"
+    },
+    {
+      "keyword": "엘피지",
+      "area_code": "",
+      "status": "complete",
+      "expected": 4,
+      "received": 4,
+      "pages": 1,
+      "region": "세종",
+      "strategy": "national_search_address_filter"
+    },
+    {
+      "keyword": "오일",
+      "area_code": "",
+      "status": "complete",
+      "expected": 50,
+      "received": 50,
+      "pages": 1,
+      "region": "세종",
+      "strategy": "national_search_address_filter"
+    },
+    {
+      "keyword": "유류",
+      "area_code": "",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "세종",
+      "strategy": "national_search_address_filter"
+    },
+    {
+      "keyword": "가스",
+      "area_code": "",
+      "status": "complete",
+      "expected": 153,
+      "received": 153,
+      "pages": 1,
+      "region": "세종",
+      "strategy": "national_search_address_filter"
+    }
+  ],
+  "rows": [
+    {
+      "frCd": "08014200026",
+      "frcsNm": "세종엔돈가스 아름본점",
+      "frcsAddr": "세종특별자치시 보듬3로 92 (아름동)",
+      "mrktNm": "아름동상점가",
+      "placeTypeCd": "07",
+      "placeTypeNm": "음식점업",
+      "addrCd": "36110",
+      "latitude": 36.511911,
+      "longitude": 127.249475,
+      "paperYn": "Y",
+      "cardYn": "Y",
+      "qrYn": "Y"
+    },
+    {
+      "frCd": "08026200117",
+      "frcsNm": "요가스튜디오 흐름",
+      "frcsAddr": "세종특별자치시  아름서1길 23 (아름동)",
+      "mrktNm": "아름드리 골목형상점가",
+      "placeTypeCd": "09",
+      "placeTypeNm": "근린상권서비스",
+      "addrCd": "36110",
+      "latitude": 36.510937,
+      "longitude": 127.243601,
+      "paperYn": "Y",
+      "cardYn": "Y",
+      "qrYn": "Y"
+    },
+    {
+      "frCd": "08022200059",
+      "frcsNm": "최고당돈가스 세종지점",
+      "frcsAddr": "세종특별자치시 한누리대로 193 (나성동)",
+      "mrktNm": "나성동 소방청 골목형상점가",
+      "placeTypeCd": "07",
+      "placeTypeNm": "음식점업",
+      "addrCd": "36110",
+      "latitude": 36.482077,
+      "longitude": 127.260498,
+      "paperYn": "Y",
+      "cardYn": "Y",
+      "qrYn": "Y"
+    },
+    {
+      "frCd": "08024200042",
+      "frcsNm": "뚱보아저씨  수제돈가스",
+      "frcsAddr": "세종특별자치시 소담1로 12 (소담동)",
+      "mrktNm": "소담마실길 골목형상점가",
+      "placeTypeCd": "07",
+      "placeTypeNm": "음식점업",
+      "addrCd": "36110",
+      "latitude": 36.485018,
+      "longitude": 127.301474,
+      "paperYn": "Y",
+      "cardYn": "Y",
+      "qrYn": "Y"
+    },
+    {
+      "frCd": "08019200071",
+      "frcsNm": "최고당돈가스 세종보람점",
+      "frcsAddr": "세종특별자치시 호려울로 45 (보람동)",
+      "mrktNm": "보람동 골목형상점가",
+      "placeTypeCd": "07",
+      "placeTypeNm": "음식점업",
+      "addrCd": "36110",
+      "latitude": 36.478228,
+      "longitude": 127.290018,
+      "paperYn": "Y",
+      "cardYn": "Y",
+      "qrYn": "Y"
+    }
+  ]
+}

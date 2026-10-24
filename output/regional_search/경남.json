@@ -1,0 +1,559 @@
+{
+  "status": "complete",
+  "source_url": "https://www.onnuri.gift/place",
+  "checked_at": "2026-10-24T00:47:41+09:00",
+  "scope": "regional_keyword_search",
+  "region": "경남",
+  "queries": [
+    {
+      "keyword": "주유",
+      "area_code": "",
+      "status": "complete",
+      "expected": 175,
+      "received": 175,
+      "pages": 1,
+      "region": "경남",
+      "strategy": "national_search_address_filter"
+    },
+    {
+      "keyword": "충전",
+      "area_code": "",
+      "status": "complete",
+      "expected": 21,
+      "received": 21,
+      "pages": 1,
+      "region": "경남",
+      "strategy": "national_search_address_filter"
+    },
+    {
+      "keyword": "석유",
+      "area_code": "",
+      "status": "complete",
+      "expected": 26,
+      "received": 26,
+      "pages": 1,
+      "region": "경남",
+      "strategy": "national_search_address_filter"
+    },
+    {
+      "keyword": "에너지",
+      "area_code": "",
+      "status": "complete",
+      "expected": 26,
+      "received": 26,
+      "pages": 1,
+      "region": "경남",
+      "strategy": "national_search_address_filter"
+    },
+    {
+      "keyword": "LPG",
+      "area_code": "",
+      "status": "complete",
+      "expected": 5,
+      "received": 5,
+      "pages": 1,
+      "region": "경남",
+      "strategy": "national_search_address_filter"
+    },
+    {
+      "keyword": "엘피지",
+      "area_code": "",
+      "status": "complete",
+      "expected": 4,
+      "received": 4,
+      "pages": 1,
+      "region": "경남",
+      "strategy": "national_search_address_filter"
+    },
+    {
+      "keyword": "오일",
+      "area_code": "",
+      "status": "complete",
+      "expected": 50,
+      "received": 50,
+      "pages": 1,
+      "region": "경남",
+      "strategy": "national_search_address_filter"
+    },
+    {
+      "keyword": "유류",
+      "area_code": "",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "경남",
+      "strategy": "national_search_address_filter"
+    },
+    {
+      "keyword": "가스",
+      "area_code": "",
+      "status": "complete",
+      "expected": 153,
+      "received": 153,
+      "pages": 1,
+      "region": "경남",
+      "strategy": "national_search_address_filter"
+    },
+    {
+      "keyword": "주유소",
+      "area_code": "48120",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "경남",
+      "district": "창원시"
+    },
+    {
+      "keyword": "충전소",
+      "area_code": "48120",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "경남",
+      "district": "창원시"
+    },
+    {
+      "keyword": "주유소",
+      "area_code": "48170",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "경남",
+      "district": "진주시"
+    },
+    {
+      "keyword": "충전소",
+      "area_code": "48170",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "경남",
+      "district": "진주시"
+    },
+    {
+      "keyword": "주유소",
+      "area_code": "48220",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "경남",
+      "district": "통영시"
+    },
+    {
+      "keyword": "충전소",
+      "area_code": "48220",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "경남",
+      "district": "통영시"
+    },
+    {
+      "keyword": "주유소",
+      "area_code": "48240",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "경남",
+      "district": "사천시"
+    },
+    {
+      "keyword": "충전소",
+      "area_code": "48240",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "경남",
+      "district": "사천시"
+    },
+    {
+      "keyword": "주유소",
+      "area_code": "48250",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "경남",
+      "district": "김해시"
+    },
+    {
+      "keyword": "충전소",
+      "area_code": "48250",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "경남",
+      "district": "김해시"
+    },
+    {
+      "keyword": "주유소",
+      "area_code": "48270",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "경남",
+      "district": "밀양시"
+    },
+    {
+      "keyword": "충전소",
+      "area_code": "48270",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "경남",
+      "district": "밀양시"
+    },
+    {
+      "keyword": "주유소",
+      "area_code": "48310",
+      "status": "complete",
+      "expected": 1,
+      "received": 1,
+      "pages": 1,
+      "region": "경남",
+      "district": "거제시"
+    },
+    {
+      "keyword": "충전소",
+      "area_code": "48310",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "경남",
+      "district": "거제시"
+    },
+    {
+      "keyword": "주유소",
+      "area_code": "48330",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "경남",
+      "district": "양산시"
+    },
+    {
+      "keyword": "충전소",
+      "area_code": "48330",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "경남",
+      "district": "양산시"
+    },
+    {
+      "keyword": "주유소",
+      "area_code": "48720",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "경남",
+      "district": "의령군"
+    },
+    {
+      "keyword": "충전소",
+      "area_code": "48720",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "경남",
+      "district": "의령군"
+    },
+    {
+      "keyword": "주유소",
+      "area_code": "48730",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "경남",
+      "district": "함안군"
+    },
+    {
+      "keyword": "충전소",
+      "area_code": "48730",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "경남",
+      "district": "함안군"
+    },
+    {
+      "keyword": "주유소",
+      "area_code": "48740",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "경남",
+      "district": "창녕군"
+    },
+    {
+      "keyword": "충전소",
+      "area_code": "48740",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "경남",
+      "district": "창녕군"
+    },
+    {
+      "keyword": "주유소",
+      "area_code": "48820",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "경남",
+      "district": "고성군"
+    },
+    {
+      "keyword": "충전소",
+      "area_code": "48820",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "경남",
+      "district": "고성군"
+    },
+    {
+      "keyword": "주유소",
+      "area_code": "48840",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "경남",
+      "district": "남해군"
+    },
+    {
+      "keyword": "충전소",
+      "area_code": "48840",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "경남",
+      "district": "남해군"
+    },
+    {
+      "keyword": "주유소",
+      "area_code": "48850",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "경남",
+      "district": "하동군"
+    },
+    {
+      "keyword": "충전소",
+      "area_code": "48850",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "경남",
+      "district": "하동군"
+    },
+    {
+      "keyword": "주유소",
+      "area_code": "48860",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "경남",
+      "district": "산청군"
+    },
+    {
+      "keyword": "충전소",
+      "area_code": "48860",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "경남",
+      "district": "산청군"
+    },
+    {
+      "keyword": "주유소",
+      "area_code": "48870",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "경남",
+      "district": "함양군"
+    },
+    {
+      "keyword": "충전소",
+      "area_code": "48870",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "경남",
+      "district": "함양군"
+    },
+    {
+      "keyword": "주유소",
+      "area_code": "48880",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "경남",
+      "district": "거창군"
+    },
+    {
+      "keyword": "충전소",
+      "area_code": "48880",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "경남",
+      "district": "거창군"
+    },
+    {
+      "keyword": "주유소",
+      "area_code": "48890",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "경남",
+      "district": "합천군"
+    },
+    {
+      "keyword": "충전소",
+      "area_code": "48890",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "경남",
+      "district": "합천군"
+    }
+  ],
+  "rows": [
+    {
+      "frCd": "66011700115",
+      "frcsNm": "진주유통",
+      "frcsAddr": "경상남도 진주시 향교로28번길 8 (수정동)",
+      "mrktNm": "진주 청과시장",
+      "placeTypeCd": "01",
+      "placeTypeNm": "농산물",
+      "addrCd": "48170",
+      "latitude": 35.19741,
+      "longitude": 128.085839,
+      "paperYn": "Y",
+      "cardYn": "Y",
+      "qrYn": "Y"
+    },
+    {
+      "frCd": "16502200035",
+      "frcsNm": "오엘르주유소",
+      "frcsAddr": "경상남도 거제시 사등면 거제대로 5770",
+      "mrktNm": "거제 성포 골목형상점가",
+      "placeTypeCd": "08",
+      "placeTypeNm": "기타소매업",
+      "addrCd": "48310",
+      "latitude": 34.915358,
+      "longitude": 128.519537,
+      "paperYn": "Y",
+      "cardYn": "Y",
+      "qrYn": "Y"
+    },
+    {
+      "frCd": "63110400004",
+      "frcsNm": "고성석유",
+      "frcsAddr": "경상남도 창원시 마산합포구 산호북14길 34(산호동) ",
+      "mrktNm": "마산 산호시장",
+      "placeTypeCd": "04",
+      "placeTypeNm": "가공식품",
+      "addrCd": "48120",
+      "latitude": 35.217168,
+      "longitude": 128.583398,
+      "paperYn": "Y",
+      "cardYn": "Y",
+      "qrYn": "Y"
+    },
+    {
+      "frCd": "63110200142",
+      "frcsNm": "대성종합가스",
+      "frcsAddr": "경상남도 창원시 마산합포구 어시장8길 58(남성동) ",
+      "mrktNm": "마산어시장",
+      "placeTypeCd": "08",
+      "placeTypeNm": "기타소매업",
+      "addrCd": "48120",
+      "latitude": 35.203471,
+      "longitude": 128.576711,
+      "paperYn": "Y",
+      "cardYn": "Y",
+      "qrYn": "Y"
+    },
+    {
+      "frCd": "63110200708",
+      "frcsNm": "삼익가스",
+      "frcsAddr": "경상남도 창원시 마산합포구 어시장8길 103-1 (남성동) ",
+      "mrktNm": "마산어시장",
+      "placeTypeCd": "08",
+      "placeTypeNm": "기타소매업",
+      "addrCd": "48120",
+      "latitude": 35.203471,
+      "longitude": 128.576711,
+      "paperYn": "Y",
+      "cardYn": "Y",
+      "qrYn": "Y"
+    },
+    {
+      "frCd": "16239200038",
+      "frcsNm": "사량가스",
+      "frcsAddr": "경상남도 통영시 사량면 진촌1길 28-6",
+      "mrktNm": "통영 사량도 진촌상가",
+      "placeTypeCd": "08",
+      "placeTypeNm": "기타소매업",
+      "addrCd": "48220",
+      "latitude": 34.844706,
+      "longitude": 128.223418,
+      "paperYn": "Y",
+      "cardYn": "Y",
+      "qrYn": "Y"
+    },
+    {
+      "frCd": "16231200039",
+      "frcsNm": "거제제일가스",
+      "frcsAddr": "경상남도 거제시 거제면 기성로 35",
+      "mrktNm": "거제 읍내시장",
+      "placeTypeCd": "08",
+      "placeTypeNm": "기타소매업",
+      "addrCd": "48310",
+      "latitude": 34.850927,
+      "longitude": 128.588986,
+      "paperYn": "Y",
+      "cardYn": "Y",
+      "qrYn": "Y"
+    }
+  ]
+}

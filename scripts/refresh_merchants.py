@@ -291,6 +291,12 @@ def main():
         stage = 'public_search'
         places = (json.loads(Path(args.live_snapshot).read_text(encoding='utf-8')) if args.live_snapshot else
                   collect(live_session, candidates=snapshot['rows']))
+        if places.get('scope') == 'nationwide_sequential_regional_search':
+            try:
+                from refresh_regions import validate_combined
+            except ModuleNotFoundError:
+                from scripts.refresh_regions import validate_combined
+            validate_combined(places)
         historical, official_review, ledger, compact = prepare(
             places, snapshot, list(historical_by_id.values()), live,
             locations)
@@ -315,6 +321,11 @@ def main():
         'pending_count': sum(r.get('show_pending', False) for r in official_review),
         **refresh_context(), 'refresh_error': None,
         'reason': '공식 검색 결과 확인. 검색어·품목·등록자료 기반이며 전국 모든 가맹 주유소의 완전성은 보장하지 않음'}
+    if places.get('regions'):
+        status['onnuri']['regions'] = [{**entry,
+            'visible_count': sum(region(s['address']) == entry['region'] and valid_coords(s.get('lat'), s.get('lng')) for s in stations),
+            'confirmed_count': sum(region(s['address']) == entry['region'] and s.get('verification', {}).get('onnuri', {}).get('status') == 'confirmed' for s in stations)
+        } for entry in places['regions']]
     save('onnuri_official_snapshot.json', snapshot)
     save('onnuri_live_snapshot.json', places)
     save('station_locations.json', location_cache)

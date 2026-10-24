@@ -29,42 +29,6 @@
     "show_pending": false
   },
   {
-    "source_id": "01122200014",
-    "name": "삼보한우탁탁",
-    "market": "마장축산물시장",
-    "region": "서울",
-    "address": "서울특별시 성동구 마장로31길 44 (마장동)",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "공식 업종: 축산물",
-    "candidate_id": "live-01122200014",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
-    "source_id": "01125200022",
-    "name": "기영이숯불두마리치킨 성동행당점",
-    "market": "행당시장상점가",
-    "region": "서울",
-    "address": "서울특별시 성동구 행당로17길 21(행당동)",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "공식 업종: 음식점업",
-    "candidate_id": "live-01125200022",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
-    "source_id": "01125200057",
-    "name": "씨유성동행당점",
-    "market": "행당시장상점가",
-    "region": "서울",
-    "address": "서울특별시 성동구 행당로 133 (행당동)",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "자동차 연료 상호·품목 근거 없음",
-    "candidate_id": "live-01125200057",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
     "source_id": "01128200016",
     "name": "경남가스",
     "market": "왕십리무학봉상점가",
@@ -139,42 +103,6 @@
     "show_pending": false
   },
   {
-    "source_id": "01293200003",
-    "name": "삼보 닭꼬치",
-    "market": "전곡골목형상점가",
-    "region": "서울",
-    "address": "서울특별시 동대문구 한천로 186(장안동)",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "공식 업종: 음식점업",
-    "candidate_id": "live-01293200003",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
-    "source_id": "01321200021",
-    "name": "삼보당",
-    "market": "솔샘시장 골목형상점가",
-    "region": "서울",
-    "address": "서울특별시 강북구 솔샘로 238 (미아동)",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "자동차 연료 상호·품목 근거 없음",
-    "candidate_id": "live-01321200021",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
-    "source_id": "01354200026",
-    "name": "삼보사랑 동서울지점",
-    "market": "홍제골목형상점가",
-    "region": "서울",
-    "address": "서울특별시 서대문구 통일로40안길 13-4 (홍제동)",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "자동차 연료 상호·품목 근거 없음",
-    "candidate_id": "live-01354200026",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
     "source_id": "01457200050",
     "name": "오일장터",
     "market": "봉리단길골목형상점가",
@@ -207,18 +135,6 @@
     "status": "excluded_non_vehicle_fuel",
     "reason": "공식 업종: 음식점업",
     "candidate_id": "live-01460200028",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
-    "source_id": "01477200266",
-    "name": "삼보",
-    "market": "아트프라자",
-    "region": "서울",
-    "address": "서울특별시 중구 마장로1길 28 (신당동)",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "공식 업종: 의류및신발",
-    "candidate_id": "live-01477200266",
     "annual_candidate_ids": [],
     "show_pending": false
   },
@@ -271,18 +187,6 @@
     "show_pending": false
   },
   {
-    "source_id": "01547200031",
-    "name": "동행한의원",
-    "market": "자양15번가골목형상점가",
-    "region": "서울",
-    "address": "서울특별시 광진구 자양로15길 46 (자양동)",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "자동차 연료 상호·품목 근거 없음",
-    "candidate_id": "live-01547200031",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
     "source_id": "01581200156",
     "name": "대한에너지석유,등유,경유배달,얼음배달",
     "market": "반드레길골목형상점가",
@@ -321,30 +225,6 @@
     "show_pending": false
   },
   {
-    "source_id": "01613200021",
-    "name": "삼보건업",
-    "market": "촬영소사거리골목형상점가",
-    "region": "서울",
-    "address": "서울특별시 동대문구 답십리로 241 (장안동)",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "자동차 연료 상호·품목 근거 없음",
-    "candidate_id": "live-01613200021",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
-    "source_id": "01637200020",
-    "name": "삼보성",
-    "market": "신수동토정로 골목형상점가",
-    "region": "서울",
-    "address": "서울특별시 마포구 창전로 32 (구수동)",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "공식 업종: 음식점업",
-    "candidate_id": "live-01637200020",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
     "source_id": "01662200012",
     "name": "뻥튀기충전소",
     "market": "우장산역 골목형상점가",
@@ -367,18 +247,6 @@
     "status": "excluded_non_vehicle_fuel",
     "reason": "공식 업종: 음식점업",
     "candidate_id": "live-01702200010",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
-    "source_id": "01739200018",
-    "name": "이마트24 항동행정센터점",
-    "market": "항동 골목형상점가",
-    "region": "서울",
-    "address": "서울특별시 구로구 연동로 197 (항동)",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "연료 외 상품 또는 업종",
-    "candidate_id": "live-01739200018",
     "annual_candidate_ids": [],
     "show_pending": false
   },
@@ -445,18 +313,6 @@
     "show_pending": false
   },
   {
-    "source_id": "02307200039",
-    "name": "아름다운동행",
-    "market": "초량 이음자율상권",
-    "region": "부산",
-    "address": "부산광역시 동구 초량로14번길 4 (초량동)",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "공식 업종: 음식점업",
-    "candidate_id": "live-02307200039",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
     "source_id": "03082200039",
     "name": "극동가스케트",
     "market": "산업용재관",
@@ -477,18 +333,6 @@
     "status": "excluded_non_vehicle_fuel",
     "reason": "공식 업종: 음식점업",
     "candidate_id": "live-03125200023",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
-    "source_id": "03158200034",
-    "name": "삼보상회",
-    "market": "번개시장",
-    "region": "대구",
-    "address": "대구광역시 중구 태평로 177-3 (태평로1가)",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "공식 업종: 농산물",
-    "candidate_id": "live-03158200034",
     "annual_candidate_ids": [],
     "show_pending": false
   },
@@ -687,18 +531,6 @@
     "status": "excluded_non_vehicle_fuel",
     "reason": "공식 업종: 음식점업",
     "candidate_id": "live-04119200081",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
-    "source_id": "04120200019",
-    "name": "디지탈컴퓨터(삼보컴퓨터)",
-    "market": "청학동골목형상점가",
-    "region": "인천",
-    "address": "인천광역시 연수구 용담로62번길 3 (청학동)",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "자동차 연료 상호·품목 근거 없음",
-    "candidate_id": "live-04120200019",
     "annual_candidate_ids": [],
     "show_pending": false
   },
@@ -1136,18 +968,6 @@
     "show_pending": false
   },
   {
-    "source_id": "05234200053",
-    "name": "삼보모터스 ",
-    "market": "상무백운상인회 골목형상점가",
-    "region": "광주",
-    "address": "광주광역시 서구 운천로 151 (쌍촌동)",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "자동차 연료 상호·품목 근거 없음",
-    "candidate_id": "live-05234200053",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
     "source_id": "05253200035",
     "name": "수제돈가스 청연 용봉운암점",
     "market": "용봉지구 골목형상점가",
@@ -1208,18 +1028,6 @@
       "58bf924a52d2ce1fb7de7c8e"
     ],
     "show_pending": true
-  },
-  {
-    "source_id": "05273200102",
-    "name": "삼보물산",
-    "market": "매월동상인회 골목형상점가",
-    "region": "광주",
-    "address": "광주광역시 서구 매월1로 50 (매월동)",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "공식 업종: 수산물",
-    "candidate_id": "live-05273200102",
-    "annual_candidate_ids": [],
-    "show_pending": false
   },
   {
     "source_id": "05287200002",
@@ -1622,18 +1430,6 @@
     "show_pending": false
   },
   {
-    "source_id": "06004200077",
-    "name": "농업회사법인(주)삼보농산",
-    "market": "오정동상점가",
-    "region": "대전",
-    "address": "대전광역시 대덕구 한밭대로1003번길 161-53 (오정동)",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "공식 업종: 농산물",
-    "candidate_id": "live-06004200077",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
     "source_id": "06004200110",
     "name": "신화석유",
     "market": "오정동상점가",
@@ -1660,18 +1456,6 @@
     "show_pending": false
   },
   {
-    "source_id": "06029200096",
-    "name": "삼보종합보일러",
-    "market": "문창시장",
-    "region": "대전",
-    "address": "대전광역시 중구 보문로 18-2 (문창동)",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "공식 업종: 가정용품",
-    "candidate_id": "live-06029200096",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
     "source_id": "06040200014",
     "name": "정다함돈가스",
     "market": "태평시장",
@@ -1692,18 +1476,6 @@
     "status": "excluded_non_vehicle_fuel",
     "reason": "공식 업종: 음식점업",
     "candidate_id": "live-06068200045",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
-    "source_id": "06068200061",
-    "name": "삼보식당",
-    "market": "진잠 골목형상점가",
-    "region": "대전",
-    "address": "대전광역시 유성구 진잠로74번길 30(원내동)",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "공식 업종: 음식점업",
-    "candidate_id": "live-06068200061",
     "annual_candidate_ids": [],
     "show_pending": false
   },
@@ -1782,30 +1554,6 @@
     "show_pending": false
   },
   {
-    "source_id": "07134200011",
-    "name": "삼보칼국수",
-    "market": "양정 골목형상점가",
-    "region": "울산",
-    "address": "울산광역시 북구 치전2길 6-1 (양정동)",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "공식 업종: 음식점업",
-    "candidate_id": "live-07134200011",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
-    "source_id": "07134200017",
-    "name": "동행",
-    "market": "양정 골목형상점가",
-    "region": "울산",
-    "address": "울산광역시 북구 치전2길 6-1 (양정동)",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "공식 업종: 음식점업",
-    "candidate_id": "live-07134200017",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
     "source_id": "08014200026",
     "name": "세종엔돈가스 아름본점",
     "market": "아름동상점가",
@@ -1866,30 +1614,6 @@
     "show_pending": false
   },
   {
-    "source_id": "08042200067",
-    "name": "동행정신건강의학과",
-    "market": "어진동 골목형상점가",
-    "region": "세종",
-    "address": "세종특별자치시  절재로 194 (어진동)",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "자동차 연료 상호·품목 근거 없음",
-    "candidate_id": "live-08042200067",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
-    "source_id": "08135200015",
-    "name": "동행복권 아이스크림",
-    "market": "한뜰누리 골목형상점가",
-    "region": "세종",
-    "address": "세종특별자치시 다솜1로 21 (어진동)",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "자동차 연료 상호·품목 근거 없음",
-    "candidate_id": "live-08135200015",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
     "source_id": "09003200047",
     "name": "라스베가스",
     "market": "청평여울시장",
@@ -1922,18 +1646,6 @@
     "status": "excluded_non_vehicle_fuel",
     "reason": "공식 업종: 음식점업",
     "candidate_id": "live-09022200682",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
-    "source_id": "09041200119",
-    "name": "삼보옛날통닭",
-    "market": "부천자유시장",
-    "region": "경기",
-    "address": "경기도 부천시 소사구 신흥로 8 (심곡본동)",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "공식 업종: 음식점업",
-    "candidate_id": "live-09041200119",
     "annual_candidate_ids": [],
     "show_pending": false
   },
@@ -2022,18 +1734,6 @@
     "show_pending": false
   },
   {
-    "source_id": "09200200012",
-    "name": "소중한 동행",
-    "market": "발안만세시장(구 발안시장)",
-    "region": "경기",
-    "address": "경기도 화성시 만세구 향남읍 평2길 6",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "자동차 연료 상호·품목 근거 없음",
-    "candidate_id": "live-09200200012",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
     "source_id": "09203200027",
     "name": "최고당돈가스 사강점",
     "market": "사강시장",
@@ -2042,18 +1742,6 @@
     "status": "excluded_non_vehicle_fuel",
     "reason": "공식 업종: 음식점업",
     "candidate_id": "live-09203200027",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
-    "source_id": "09207200101",
-    "name": "삼보기물",
-    "market": "평택국제중앙시장",
-    "region": "경기",
-    "address": "경기도 평택시 중앙시장로25번길 9 (신장동)",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "공식 업종: 가정용품",
-    "candidate_id": "live-09207200101",
     "annual_candidate_ids": [],
     "show_pending": false
   },
@@ -2370,18 +2058,6 @@
     "show_pending": false
   },
   {
-    "source_id": "09646200008",
-    "name": "삼보청과",
-    "market": "안정리 상인회 골목형상점가",
-    "region": "경기",
-    "address": "경기도 평택시 팽성읍 안정로39번길 25",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "자동차 연료 상호·품목 근거 없음",
-    "candidate_id": "live-09646200008",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
     "source_id": "09666200005",
     "name": "생생돈가스",
     "market": "1939음악역 골목형상점가",
@@ -2418,18 +2094,6 @@
     "show_pending": false
   },
   {
-    "source_id": "10010100757",
-    "name": "삼보상사",
-    "market": "남대문시장",
-    "region": "서울",
-    "address": "서울특별시 중구 남대문시장4길 9(남창동) ",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "공식 업종: 가정용품",
-    "candidate_id": "live-10010100757",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
     "source_id": "10013200427",
     "name": "오일장수선집",
     "market": "북평민속시장(북평민속5일장)",
@@ -2438,18 +2102,6 @@
     "status": "excluded_non_vehicle_fuel",
     "reason": "공식 업종: 의류및신발",
     "candidate_id": "live-10013200427",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
-    "source_id": "10022200010",
-    "name": "삼보상회",
-    "market": "양양전통시장",
-    "region": "강원",
-    "address": "강원특별자치도 양양군 양양읍 남문5길 9",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "자동차 연료 상호·품목 근거 없음",
-    "candidate_id": "live-10022200010",
     "annual_candidate_ids": [],
     "show_pending": false
   },
@@ -2528,18 +2180,6 @@
     "show_pending": false
   },
   {
-    "source_id": "11012100004",
-    "name": "삼보라사",
-    "market": "종로4가지하쇼핑센터",
-    "region": "서울",
-    "address": "서울특별시 종로구 창경궁로 지하 81 (예지동) ",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "공식 업종: 의류및신발",
-    "candidate_id": "live-11012100004",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
     "source_id": "11022200013",
     "name": "음성돈가스 앤 파스타",
     "market": "음성시장",
@@ -2576,18 +2216,6 @@
     "show_pending": false
   },
   {
-    "source_id": "11048200114",
-    "name": "속리산동행",
-    "market": "청주육거리종합시장",
-    "region": "충북",
-    "address": "충청북도 청주시 상당구 무심동로 280 (석교동)",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "공식 업종: 농산물",
-    "candidate_id": "live-11048200114",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
     "source_id": "11070200055",
     "name": "충주유리",
     "market": "충주자유시장",
@@ -2614,18 +2242,6 @@
     "show_pending": false
   },
   {
-    "source_id": "11088200012",
-    "name": "삼보약국",
-    "market": "증평군 중앙로 골목형상점가",
-    "region": "충북",
-    "address": "충청북도 증평군 증평읍 중앙로 154",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "연료 외 상품 또는 업종",
-    "candidate_id": "live-11088200012",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
     "source_id": "11244200018",
     "name": "고가네왕돈가스",
     "market": "청주대중앙로골목형상점가",
@@ -2634,18 +2250,6 @@
     "status": "excluded_non_vehicle_fuel",
     "reason": "공식 업종: 음식점업",
     "candidate_id": "live-11244200018",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
-    "source_id": "12001200027",
-    "name": "동행정육점",
-    "market": "금암동 골목형상점가",
-    "region": "충남",
-    "address": "충청남도 계룡시 장안1길 6 (금암동)",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "공식 업종: 축산물",
-    "candidate_id": "live-12001200027",
     "annual_candidate_ids": [],
     "show_pending": false
   },
@@ -2662,30 +2266,6 @@
     "show_pending": false
   },
   {
-    "source_id": "12010800003",
-    "name": "삼보상회",
-    "market": "유진상가",
-    "region": "서울",
-    "address": "서울특별시 서대문구 통일로 484(홍제동) ",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "공식 업종: 의류및신발",
-    "candidate_id": "live-12010800003",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
-    "source_id": "12015200028",
-    "name": "삼보상회",
-    "market": "논산화지중앙시장",
-    "region": "충남",
-    "address": "충청남도 논산시 대화로70번길 12-12(화지동)",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "공식 업종: 농산물",
-    "candidate_id": "live-12015200028",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
     "source_id": "12028200005",
     "name": "대창가스",
     "market": "웅천시장",
@@ -2694,18 +2274,6 @@
     "status": "needs_review",
     "reason": "자동차 주유·충전 업종 확인 필요",
     "candidate_id": "live-12028200005",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
-    "source_id": "12060200012",
-    "name": "동행약국",
-    "market": "천안신부문화거리상점가",
-    "region": "충남",
-    "address": "충청남도 천안시 동남구 만남로 42 (신부동)",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "연료 외 상품 또는 업종",
-    "candidate_id": "live-12060200012",
     "annual_candidate_ids": [],
     "show_pending": false
   },
@@ -2796,42 +2364,6 @@
     "show_pending": false
   },
   {
-    "source_id": "13050200001",
-    "name": "삼보청과",
-    "market": "익산황등시장",
-    "region": "전북",
-    "address": "전라북도 익산시 황등면 황등7길 25",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "공식 업종: 농산물",
-    "candidate_id": "live-13050200001",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
-    "source_id": "13070200051",
-    "name": "동행파크골프",
-    "market": "전주풍남문상점가",
-    "region": "전북",
-    "address": "전북특별자치도 전주시 완산구 풍남문3길 19 (전동)",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "자동차 연료 상호·품목 근거 없음",
-    "candidate_id": "live-13070200051",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
-    "source_id": "13072200091",
-    "name": "삼보숯불갈비",
-    "market": "정읍샘고을시장",
-    "region": "전북",
-    "address": "전북특별자치도 정읍시 중앙로 158-8 (시기동)",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "공식 업종: 음식점업",
-    "candidate_id": "live-13072200091",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
     "source_id": "13110600059",
     "name": "이삭칼국수돈가스",
     "market": "면목골목시장",
@@ -2916,18 +2448,6 @@
     "show_pending": false
   },
   {
-    "source_id": "13310500508",
-    "name": "삼보식품",
-    "market": "마장축산물시장",
-    "region": "서울",
-    "address": "서울특별시 성동구 마장로31길 44 (마장동)",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "공식 업종: 축산물",
-    "candidate_id": "live-13310500508",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
     "source_id": "13366200070",
     "name": "오일공방소소",
     "market": "봉곡우전로 골목형상점가",
@@ -2962,18 +2482,6 @@
     "status": "needs_review",
     "reason": "자동차 주유·충전 업종 확인 필요",
     "candidate_id": "live-13380200156",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
-    "source_id": "13388200041",
-    "name": "희망동행",
-    "market": "대명 오손도손 골목형상점가",
-    "region": "전북",
-    "address": "전북특별자치도 군산시 구암3.1로 6 (장재동)",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "공식 업종: 농산물",
-    "candidate_id": "live-13388200041",
     "annual_candidate_ids": [],
     "show_pending": false
   },
@@ -3232,18 +2740,6 @@
     "show_pending": false
   },
   {
-    "source_id": "15243200017",
-    "name": "행복한동행",
-    "market": "구미역중앙 골목형상점가",
-    "region": "경북",
-    "address": "경상북도 구미시 금오산로 70 (원평동)",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "자동차 연료 상호·품목 근거 없음",
-    "candidate_id": "live-15243200017",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
     "source_id": "15250200066",
     "name": "주류 충전소",
     "market": "포항 해도새록새로 골목형상점가",
@@ -3284,18 +2780,6 @@
     "show_pending": false
   },
   {
-    "source_id": "15254200045",
-    "name": "삼보불교사",
-    "market": "안동광석거리 골목형상점가",
-    "region": "경북",
-    "address": "경상북도 안동시 대안로 103 (광석동)",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "자동차 연료 상호·품목 근거 없음",
-    "candidate_id": "live-15254200045",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
     "source_id": "15484200005",
     "name": "냠냠돈가스",
     "market": "학사골목 골목형상점가 ",
@@ -3304,30 +2788,6 @@
     "status": "excluded_non_vehicle_fuel",
     "reason": "공식 업종: 음식점업",
     "candidate_id": "live-15484200005",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
-    "source_id": "15515200102",
-    "name": "삼보Com&Tel",
-    "market": "북삼로인평 골목형상점가",
-    "region": "경북",
-    "address": "경상북도 칠곡군 북삼읍 북삼로 118",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "자동차 연료 상호·품목 근거 없음",
-    "candidate_id": "live-15515200102",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
-    "source_id": "15610300101",
-    "name": "삼보지업사",
-    "market": "남성사계시장",
-    "region": "서울",
-    "address": "서울특별시 동작구 동작대로29나길 14(사당동) ",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "자동차 연료 상호·품목 근거 없음",
-    "candidate_id": "live-15610300101",
     "annual_candidate_ids": [],
     "show_pending": false
   },
@@ -3356,18 +2816,6 @@
     "show_pending": false
   },
   {
-    "source_id": "15810300067",
-    "name": "삼보유통",
-    "market": "신영시장",
-    "region": "서울",
-    "address": "서울특별시 양천구 곰달래로13길 25(신월동) ",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "자동차 연료 상호·품목 근거 없음",
-    "candidate_id": "live-15810300067",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
     "source_id": "16231200039",
     "name": "거제제일가스",
     "market": "거제 읍내시장",
@@ -3388,18 +2836,6 @@
     "status": "needs_review",
     "reason": "자동차 주유·충전 업종 확인 필요",
     "candidate_id": "live-16239200038",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
-    "source_id": "16253200005",
-    "name": "동행서림",
-    "market": "밀양 원도심 햇살문화 상권활성화 구역",
-    "region": "경남",
-    "address": "경상남도 밀양시 남천강변로 39 (내일동)",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "자동차 연료 상호·품목 근거 없음",
-    "candidate_id": "live-16253200005",
     "annual_candidate_ids": [],
     "show_pending": false
   },
@@ -3436,18 +2872,6 @@
     "status": "excluded_non_vehicle_fuel",
     "reason": "공식 업종: 농산물",
     "candidate_id": "live-17023200080",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
-    "source_id": "17026200053",
-    "name": "아름다운 동행 마실",
-    "market": "칠성로상점가",
-    "region": "제주",
-    "address": "제주특별자치도 제주시 칠성로길 37-1 (일도일동)",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "공식 업종: 음식점업",
-    "candidate_id": "live-17026200053",
     "annual_candidate_ids": [],
     "show_pending": false
   },
@@ -3596,18 +3020,6 @@
     "show_pending": false
   },
   {
-    "source_id": "33610300157",
-    "name": "삼보청과",
-    "market": "온양온천시장(온양재래시장,  전통시장)",
-    "region": "충남",
-    "address": "충청남도 아산시 시민로 396 (온천동) ",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "공식 업종: 농산물",
-    "candidate_id": "live-33610300157",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
     "source_id": "33610300567",
     "name": "모산석유",
     "market": "배방상점가",
@@ -3620,42 +3032,6 @@
       "29b4e0aac4c8e50d12c2d620"
     ],
     "show_pending": true
-  },
-  {
-    "source_id": "35610100273",
-    "name": "삼보식육점",
-    "market": "서산동부전통시장",
-    "region": "충남",
-    "address": "충청남도 서산시 시장3길 13 (동문동)",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "공식 업종: 축산물",
-    "candidate_id": "live-35610100273",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
-    "source_id": "35710200010",
-    "name": "삼보수산",
-    "market": "서부시장(서부재래시장)",
-    "region": "충남",
-    "address": "충청남도 태안군 태안읍 시장3길 7 ",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "공식 업종: 수산물",
-    "candidate_id": "live-35710200010",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
-    "source_id": "36810100118",
-    "name": "삼보페인트",
-    "market": "증평장뜰재래시장",
-    "region": "충북",
-    "address": "충청북도 증평군 증평읍 장뜰로 39",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "자동차 연료 상호·품목 근거 없음",
-    "candidate_id": "live-36810100118",
-    "annual_candidate_ids": [],
-    "show_pending": false
   },
   {
     "source_id": "40210600003",
@@ -3776,18 +3152,6 @@
     "status": "excluded_non_vehicle_fuel",
     "reason": "자동차 연료 상호·품목 근거 없음",
     "candidate_id": "live-44010200106",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
-    "source_id": "44211300127",
-    "name": "삼보종합인테리어",
-    "market": "화서시장",
-    "region": "경기",
-    "address": "경기도 수원시 팔달구 동말로 72(화서동) ",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "자동차 연료 상호·품목 근거 없음",
-    "candidate_id": "live-44211300127",
     "annual_candidate_ids": [],
     "show_pending": false
   },
@@ -4024,42 +3388,6 @@
     "show_pending": false
   },
   {
-    "source_id": "64110100125",
-    "name": "삼보고려인삼",
-    "market": "창원 가음정시장",
-    "region": "경남",
-    "address": "경상남도 창원시 성산구 대정로35번길 7 (가음동)",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "자동차 연료 상호·품목 근거 없음",
-    "candidate_id": "live-64110100125",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
-    "source_id": "64110700113",
-    "name": "삼보어패럴",
-    "market": "창원 상남시장",
-    "region": "경남",
-    "address": "경상남도 창원시 성산구 마디미로 28(상남동) ",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "공식 업종: 의류및신발",
-    "candidate_id": "live-64110700113",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
-    "source_id": "65610300053",
-    "name": "중앙인삼보신원",
-    "market": "거제 옥포중앙시장",
-    "region": "경남",
-    "address": "경상남도 거제시 옥포로 215 (옥포동)",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "자동차 연료 상호·품목 근거 없음",
-    "candidate_id": "live-65610300053",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
     "source_id": "66011700115",
     "name": "진주유통",
     "market": "진주 청과시장",
@@ -4144,54 +3472,6 @@
     "show_pending": false
   },
   {
-    "source_id": "69710200065",
-    "name": "삼보상회",
-    "market": "서귀포매일올레시장",
-    "region": "제주",
-    "address": "제주특별자치도 서귀포시 중앙로42번길 35(서귀동) ",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "공식 업종: 의류및신발",
-    "candidate_id": "live-69710200065",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
-    "source_id": "70010300082",
-    "name": "삼보당약업사",
-    "market": "대구약령시장",
-    "region": "대구",
-    "address": "대구광역시 중구 남성로 47-1 (남성로)",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "공식 업종: 가정용품",
-    "candidate_id": "live-70010300082",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
-    "source_id": "70011100172",
-    "name": "(주)교동삼보상사",
-    "market": "교동시장1길 상점가",
-    "region": "대구",
-    "address": "대구광역시 중구 교동2길 25(교동) ",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "자동차 연료 상호·품목 근거 없음",
-    "candidate_id": "live-70011100172",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
-    "source_id": "70212400006",
-    "name": "삼보수산",
-    "market": "칠성본시장",
-    "region": "대구",
-    "address": "대구광역시 북구 칠성시장로 15-1(칠성동1가) ",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "공식 업종: 수산물",
-    "candidate_id": "live-70212400006",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
     "source_id": "70310100329",
     "name": "서문돈가스",
     "market": "서문시장2지구 종합상가",
@@ -4240,18 +3520,6 @@
     "show_pending": false
   },
   {
-    "source_id": "74210800035",
-    "name": "삼보마트",
-    "market": "상주남성시장",
-    "region": "경북",
-    "address": "경상북도 상주시 남성4길 32 (남성동) ",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "자동차 연료 상호·품목 근거 없음",
-    "candidate_id": "live-74210800035",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
     "source_id": "74510100212",
     "name": "이백장돈가스.수유리혼밥왕.국제시장국밥 문경점촌점",
     "market": "(유)문경중앙시장",
@@ -4284,42 +3552,6 @@
     "status": "excluded_non_vehicle_fuel",
     "reason": "공식 업종: 음식점업",
     "candidate_id": "live-78010100341",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
-    "source_id": "79010200091",
-    "name": "삼보수산",
-    "market": "죽도어시장",
-    "region": "경북",
-    "address": "경상북도 포항시 북구 칠성천길 136 (죽도동) ",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "공식 업종: 수산물",
-    "candidate_id": "live-79010200091",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
-    "source_id": "79110200818",
-    "name": "신삼보수산",
-    "market": "죽도어시장",
-    "region": "경북",
-    "address": "경상북도 포항시 북구 칠성천길 136(죽도동)",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "공식 업종: 수산물",
-    "candidate_id": "live-79110200818",
-    "annual_candidate_ids": [],
-    "show_pending": false
-  },
-  {
-    "source_id": "79111900074",
-    "name": "삼보당",
-    "market": "장량성도시장",
-    "region": "경북",
-    "address": "경상북도 포항시 북구 용두산길 48 (두호동)",
-    "status": "excluded_non_vehicle_fuel",
-    "reason": "자동차 연료 상호·품목 근거 없음",
-    "candidate_id": "live-79111900074",
     "annual_candidate_ids": [],
     "show_pending": false
   },

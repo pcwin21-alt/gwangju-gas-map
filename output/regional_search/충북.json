@@ -1,0 +1,405 @@
+{
+  "status": "complete",
+  "source_url": "https://www.onnuri.gift/place",
+  "checked_at": "2026-10-24T00:53:04+09:00",
+  "scope": "regional_keyword_search",
+  "region": "충북",
+  "queries": [
+    {
+      "keyword": "주유",
+      "area_code": "",
+      "status": "complete",
+      "expected": 175,
+      "received": 175,
+      "pages": 1,
+      "region": "충북",
+      "strategy": "national_search_address_filter"
+    },
+    {
+      "keyword": "충전",
+      "area_code": "",
+      "status": "complete",
+      "expected": 21,
+      "received": 21,
+      "pages": 1,
+      "region": "충북",
+      "strategy": "national_search_address_filter"
+    },
+    {
+      "keyword": "석유",
+      "area_code": "",
+      "status": "complete",
+      "expected": 26,
+      "received": 26,
+      "pages": 1,
+      "region": "충북",
+      "strategy": "national_search_address_filter"
+    },
+    {
+      "keyword": "에너지",
+      "area_code": "",
+      "status": "complete",
+      "expected": 26,
+      "received": 26,
+      "pages": 1,
+      "region": "충북",
+      "strategy": "national_search_address_filter"
+    },
+    {
+      "keyword": "LPG",
+      "area_code": "",
+      "status": "complete",
+      "expected": 5,
+      "received": 5,
+      "pages": 1,
+      "region": "충북",
+      "strategy": "national_search_address_filter"
+    },
+    {
+      "keyword": "엘피지",
+      "area_code": "",
+      "status": "complete",
+      "expected": 4,
+      "received": 4,
+      "pages": 1,
+      "region": "충북",
+      "strategy": "national_search_address_filter"
+    },
+    {
+      "keyword": "오일",
+      "area_code": "",
+      "status": "complete",
+      "expected": 50,
+      "received": 50,
+      "pages": 1,
+      "region": "충북",
+      "strategy": "national_search_address_filter"
+    },
+    {
+      "keyword": "유류",
+      "area_code": "",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "충북",
+      "strategy": "national_search_address_filter"
+    },
+    {
+      "keyword": "가스",
+      "area_code": "",
+      "status": "complete",
+      "expected": 153,
+      "received": 153,
+      "pages": 1,
+      "region": "충북",
+      "strategy": "national_search_address_filter"
+    },
+    {
+      "keyword": "주유소",
+      "area_code": "43110",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "충북",
+      "district": "청주시"
+    },
+    {
+      "keyword": "충전소",
+      "area_code": "43110",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "충북",
+      "district": "청주시"
+    },
+    {
+      "keyword": "주유소",
+      "area_code": "43130",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "충북",
+      "district": "충주시"
+    },
+    {
+      "keyword": "충전소",
+      "area_code": "43130",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "충북",
+      "district": "충주시"
+    },
+    {
+      "keyword": "주유소",
+      "area_code": "43150",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "충북",
+      "district": "제천시"
+    },
+    {
+      "keyword": "충전소",
+      "area_code": "43150",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "충북",
+      "district": "제천시"
+    },
+    {
+      "keyword": "주유소",
+      "area_code": "43720",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "충북",
+      "district": "보은군"
+    },
+    {
+      "keyword": "충전소",
+      "area_code": "43720",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "충북",
+      "district": "보은군"
+    },
+    {
+      "keyword": "주유소",
+      "area_code": "43730",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "충북",
+      "district": "옥천군"
+    },
+    {
+      "keyword": "충전소",
+      "area_code": "43730",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "충북",
+      "district": "옥천군"
+    },
+    {
+      "keyword": "주유소",
+      "area_code": "43740",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "충북",
+      "district": "영동군"
+    },
+    {
+      "keyword": "충전소",
+      "area_code": "43740",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "충북",
+      "district": "영동군"
+    },
+    {
+      "keyword": "주유소",
+      "area_code": "43745",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "충북",
+      "district": "증평군"
+    },
+    {
+      "keyword": "충전소",
+      "area_code": "43745",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "충북",
+      "district": "증평군"
+    },
+    {
+      "keyword": "주유소",
+      "area_code": "43750",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "충북",
+      "district": "진천군"
+    },
+    {
+      "keyword": "충전소",
+      "area_code": "43750",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "충북",
+      "district": "진천군"
+    },
+    {
+      "keyword": "주유소",
+      "area_code": "43760",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "충북",
+      "district": "괴산군"
+    },
+    {
+      "keyword": "충전소",
+      "area_code": "43760",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "충북",
+      "district": "괴산군"
+    },
+    {
+      "keyword": "주유소",
+      "area_code": "43770",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "충북",
+      "district": "음성군"
+    },
+    {
+      "keyword": "충전소",
+      "area_code": "43770",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "충북",
+      "district": "음성군"
+    },
+    {
+      "keyword": "주유소",
+      "area_code": "43800",
+      "status": "complete",
+      "expected": 1,
+      "received": 1,
+      "pages": 1,
+      "region": "충북",
+      "district": "단양군"
+    },
+    {
+      "keyword": "충전소",
+      "area_code": "43800",
+      "status": "complete",
+      "expected": 0,
+      "received": 0,
+      "pages": 0,
+      "region": "충북",
+      "district": "단양군"
+    }
+  ],
+  "rows": [
+    {
+      "frCd": "11070200055",
+      "frcsNm": "충주유리",
+      "frcsAddr": "충청북도 충주시 충인5길 2(충인동)",
+      "mrktNm": "충주자유시장",
+      "placeTypeCd": "08",
+      "placeTypeNm": "기타소매업",
+      "addrCd": "43130",
+      "latitude": 36.973868,
+      "longitude": 127.932188,
+      "paperYn": "Y",
+      "cardYn": "Y",
+      "qrYn": "Y"
+    },
+    {
+      "frCd": "11080200051",
+      "frcsNm": "알콜주유소",
+      "frcsAddr": "충청북도 단양군 단양읍 별곡7길 12 (성원아파트)",
+      "mrktNm": "단양팔경 골목형상점가",
+      "placeTypeCd": "07",
+      "placeTypeNm": "음식점업",
+      "addrCd": "43800",
+      "latitude": 36.985732,
+      "longitude": 128.370179,
+      "paperYn": "Y",
+      "cardYn": "Y",
+      "qrYn": "Y"
+    },
+    {
+      "frCd": "11022200013",
+      "frcsNm": "음성돈가스 앤 파스타",
+      "frcsAddr": "충청북도 음성군 음성읍 문화1길 13",
+      "mrktNm": "음성시장",
+      "placeTypeCd": "07",
+      "placeTypeNm": "음식점업",
+      "addrCd": "43770",
+      "latitude": 36.938236,
+      "longitude": 127.691737,
+      "paperYn": "Y",
+      "cardYn": "Y",
+      "qrYn": "Y"
+    },
+    {
+      "frCd": "11244200018",
+      "frcsNm": "고가네왕돈가스",
+      "frcsAddr": "충청북도 청주시 청원구 중앙로 135-2 (우암동)",
+      "mrktNm": "청주대중앙로골목형상점가",
+      "placeTypeCd": "07",
+      "placeTypeNm": "음식점업",
+      "addrCd": "43110",
+      "latitude": 36.649398,
+      "longitude": 127.487733,
+      "paperYn": "Y",
+      "cardYn": "Y",
+      "qrYn": "Y"
+    },
+    {
+      "frCd": "11039200006",
+      "frcsNm": "경아 정다함 돈가스",
+      "frcsAddr": "충청북도 청주시 흥덕구 복대로146번길 12 (복대동)",
+      "mrktNm": "복대가경시장",
+      "placeTypeCd": "04",
+      "placeTypeNm": "가공식품",
+      "addrCd": "43110",
+      "latitude": 36.6295,
+      "longitude": 127.441674,
+      "paperYn": "Y",
+      "cardYn": "Y",
+      "qrYn": "Y"
+    },
+    {
+      "frCd": "11024200010",
+      "frcsNm": "미미수제왕돈가스",
+      "frcsAddr": "충청북도 제천시 덕산면 약초로3안길 5-1",
+      "mrktNm": "덕산전통시장",
+      "placeTypeCd": "07",
+      "placeTypeNm": "음식점업",
+      "addrCd": "43150",
+      "latitude": 36.908585,
+      "longitude": 128.167089,
+      "paperYn": "Y",
+      "cardYn": "Y",
+      "qrYn": "Y"
+    }
+  ]
+}
