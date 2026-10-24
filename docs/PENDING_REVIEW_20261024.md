@@ -70,3 +70,12 @@
 ## 검증 및 운영
 Python 45개·Node 19개 검사 통과. 좌표 없는 지역 코드 조회 차단, 실제 기준점 전달, 명시적 비연료 품목 분류, 업체별 정정이 동명 타지역/품목에 전이되지 않는 것을 검사했다. 기존 지도 데이터 수 202곳 유지.
 지역 순차 수집·반영은 python scripts/refresh_regions.py --publish, 대기 후보 재검토 장부는 python scripts/review_pending.py로 재현한다. 후속 장부는 지도 추가 권한을 대신하지 않으며 수동 검토 없이 자동 승격하지 않는다. GitHub 서버 연결 문제 및 노트북 종료 중 자동 갱신의 한계는 남아 있다.
+
+### 공개 배포 확인
+
+- 반영 커밋: `de8a31c2534a9eacdda7e10348d694bdbb7cb361`.
+- [데이터 및 경유 연결 검사](https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/40061607953), [사이트 생성·배포](https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/40061607956), [GitHub Pages 게시](https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/40061619765) 모두 성공.
+- 공개 사이트 브라우저에서 전국 202곳·추가 확인 대기 33건, 전남 22곳, 서울 1곳·추가 확인 대기 1건을 확인했다. 공식 검색 기준일은 2026-10-24로 표시된다.
+- 서울 대기 목록에는 대한에너지석유·등유·경유배달·얼음배달만 남고, 비주유 업종인 주식회사누리에너지는 제외됐다.
+- 모바일 390×844 화면에서 문서 너비 390px로 가로 넘침이 없음을 확인했다. 실제 기기 검증은 수행하지 않았다.
+- 로컬 증빙 이미지: `C:/Users/unw/OneDrive/Documents/Playground/output/onnuri-pending-review-20261024.png`.
