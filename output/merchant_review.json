@@ -46,13 +46,13 @@
     "market": "왕십리무학봉상점가",
     "region": "서울",
     "address": "서울특별시 성동구 행당로9길 42 (하왕십리동)",
-    "status": "needs_review",
-    "reason": "자동차 주유·충전 업종 확인 필요",
+    "status": "excluded_non_vehicle_fuel",
+    "reason": "연료 외 상품 또는 업종",
     "candidate_id": "live-01128200049",
     "annual_candidate_ids": [
       "4d5eae88858abeae5eac386d"
     ],
-    "show_pending": true
+    "show_pending": false
   },
   {
     "source_id": "01178200018",
@@ -390,13 +390,13 @@
     "market": "동먹골상가 골목형상점가",
     "region": "대구",
     "address": "대구광역시 북구 동변로 106-24 (동변동)",
-    "status": "needs_review",
-    "reason": "자동차 주유·충전 업종 확인 필요",
+    "status": "excluded_non_vehicle_fuel",
+    "reason": "연료 외 상품 또는 업종",
     "candidate_id": "live-03242200114",
     "annual_candidate_ids": [
       "3e899bebcd2405782f29f5a5"
     ],
-    "show_pending": true
+    "show_pending": false
   },
   {
     "source_id": "03247200072",
@@ -452,13 +452,13 @@
     "market": "인천산업유통센터",
     "region": "인천",
     "address": "인천광역시 동구 방축로83번길 23 (송림동)",
-    "status": "needs_review",
-    "reason": "자동차 주유·충전 업종 확인 필요",
+    "status": "excluded_non_vehicle_fuel",
+    "reason": "연료 외 상품 또는 업종",
     "candidate_id": "live-04020200146",
     "annual_candidate_ids": [
       "e249ee9d7b77cdd6761e65cf"
     ],
-    "show_pending": true
+    "show_pending": false
   },
   {
     "source_id": "04020200174",
@@ -466,13 +466,13 @@
     "market": "인천산업유통센터",
     "region": "인천",
     "address": "인천광역시 동구 방축로 105 (송림동)",
-    "status": "needs_review",
-    "reason": "자동차 주유·충전 업종 확인 필요",
+    "status": "excluded_non_vehicle_fuel",
+    "reason": "연료 외 상품 또는 업종",
     "candidate_id": "live-04020200174",
     "annual_candidate_ids": [
       "32e61c29b3f94e236221d473"
     ],
-    "show_pending": true
+    "show_pending": false
   },
   {
     "source_id": "04022200080",
@@ -3570,24 +3570,6 @@
     "show_pending": false
   },
   {
-    "candidate_id": "06ca4cbb106fcd117a5cdd0e",
-    "name": "㈜틸에너지",
-    "market": "한대앞역상점가",
-    "region": "경기",
-    "status": "needs_review",
-    "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조",
-    "show_pending": true
-  },
-  {
-    "candidate_id": "641598d6b273582aace81796",
-    "name": "대우종합석유얼음",
-    "market": "평택통복시장",
-    "region": "경기",
-    "status": "needs_review",
-    "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조",
-    "show_pending": true
-  },
-  {
     "candidate_id": "b924551d561010aaeffebdda",
     "name": "광탄주유소",
     "market": "광탄전통시장",
@@ -3609,15 +3591,6 @@
     "candidate_id": "80abcbfbeaccee97f1fe852f",
     "name": "제일가스",
     "market": "양북시장",
-    "region": "경북",
-    "status": "needs_review",
-    "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조",
-    "show_pending": true
-  },
-  {
-    "candidate_id": "c5224cf2c01fa857bf83cbd3",
-    "name": "예천용궁시장제유소",
-    "market": "용궁시장",
     "region": "경북",
     "status": "needs_review",
     "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조",
@@ -3654,15 +3627,6 @@
     "candidate_id": "04d09d1a8156d44b38db83c0",
     "name": "명륜주유소",
     "market": "북문시장",
-    "region": "경북",
-    "status": "needs_review",
-    "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조",
-    "show_pending": true
-  },
-  {
-    "candidate_id": "59162c8be20105050a334a35",
-    "name": "디와이에너지",
-    "market": "경주중심상가",
     "region": "경북",
     "status": "needs_review",
     "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조",

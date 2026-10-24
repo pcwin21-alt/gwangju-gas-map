@@ -3,6 +3,20 @@ from scripts.nationwide import resolve, region, valid_coords
 from scripts.fetch_prices import parse_prices, same_station
 
 class Nationwide(unittest.TestCase):
+    def test_explicit_nonfuel_items_do_not_inherit_energy_name(self):
+        from scripts.nationwide import non_vehicle
+        for items in ('소방설비공사','가스보일러','피비씨 보드','전기온수기,냉난방기','소품','얼음'):
+            self.assertTrue(non_vehicle({'가맹점명':'에너지','취급품목':items}))
+        for items in ('등유','등유,경유','휘발유 경유','차량용 LPG'):
+            self.assertFalse(non_vehicle({'가맹점명':'에너지','취급품목':items}))
+
+    def test_reviewed_food_oil_exception_does_not_transfer_by_name(self):
+        from scripts.nationwide import non_vehicle
+        row={'가맹점명':'예천용궁시장제유소','소속 시장명(또는 상점가)':'용궁시장','소재지':'경북','취급품목':'주유소'}
+        self.assertTrue(non_vehicle(row))
+        self.assertFalse(non_vehicle(dict(row, 소재지='서울')))
+        self.assertFalse(non_vehicle(dict(row, 취급품목='휘발유')))
+
     def setUp(self):
         self.row={'가맹점명':'현리주유소','소속 시장명(또는 상점가)':'조종시장','소재지':'경기',
                   '취급품목':'주유소','지류형 가맹 여부':'Y','디지털형 가맹 여부':'Y'}

@@ -16,6 +16,21 @@ def merchant(**changes):
 
 
 class LiveSearch(unittest.TestCase):
+    def test_area_code_without_real_anchor_is_rejected(self):
+        with patch.object(live, 'post') as request:
+            with self.assertRaises(ValueError):
+                live.search(None, '현대', '12150', pause=0)
+            request.assert_not_called()
+
+    def test_nearby_probe_sends_registry_anchor_not_default_seoul(self):
+        with patch.object(live, 'post', return_value=dict(totalCnt=0, totalPage=0, currPage=1, list=[])) as request:
+            _, query = live.search(None, '', pause=0, center=(34.96097252,127.4847157), radius=2)
+            sent = request.call_args.args[2]
+            self.assertEqual(sent['latitude'], '34.96097252')
+            self.assertEqual(sent['longitude'], '127.4847157')
+            self.assertEqual(sent['baseRange'], 2)
+            self.assertEqual(query['center'], [34.96097252,127.4847157])
+
     def test_missing_page_and_repeated_page_fail(self):
         first = dict(totalCnt=2, totalPage=2, currPage=1, list=[merchant()])
         for batch in ([], [merchant()]):

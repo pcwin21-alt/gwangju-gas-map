@@ -8,6 +8,9 @@ import math
 import re
 import csv
 import io
+import json
+from pathlib import Path
+from functools import lru_cache
 from datetime import datetime
 from pathlib import Path
 
@@ -35,7 +38,21 @@ def row_id(row):
     text = '\x1f'.join(row.get(k,'') for k in ('소재지','소속 시장명(또는 상점가)','가맹점명'))
     return hashlib.sha256(text.encode()).hexdigest()[:24]
 
+@lru_cache(maxsize=1)
+def reviewed_exclusions():
+    path = Path(__file__).resolve().parents[1]/'output'/'candidate_exclusions.json'
+    return json.loads(path.read_text(encoding='utf-8'))['rows'] if path.exists() else []
+
+
 def non_vehicle(row):
+    # Curated corrections are scoped to all identifying fields AND the original
+    # product value. An unrelated same-name shop cannot inherit the decision.
+    if any(all(row.get(k) == e['match'].get(k) for k in
+               ('가맹점명', '소속 시장명(또는 상점가)', '소재지', '취급품목')) for e in reviewed_exclusions()):
+        return True
+    items = re.sub(r'\s+', '', row.get('취급품목', ''))
+    if re.fullmatch(r'소방설비공사|가스보일러|피비씨보드|전기온수기,냉난방기|여행컨설팅,상품종합도매,전자상거래소|소품|얼음', items):
+        return True
     return bool(re.search(r'음식|한식|중식|식당|주류|주점|술집|소주|맥주|건강|학원|과자|화장품|의류|카페|스낵|편의점|피부|체형|조명|생선|숯|위생용품',row.get('취급품목','')) or
                 re.search(r'기사식당|^CU.*주유소점$|알콜주유소|주류\s*충전소|뻥튀기충전소|비타민충전소|단짠충전소|인생충전소|기술학원',row['가맹점명']))
 

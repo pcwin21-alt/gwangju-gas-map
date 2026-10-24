@@ -86,15 +86,12 @@ def main():
     session = requests.Session()
     session.headers.update({'User-Agent': 'Mozilla/5.0', 'Referer': SOURCE,
                             'Origin': 'https://www.onnuri.gift'})
-    provinces = post(session, '/addr', {})['list']
-    codes = {r['addrAbbrNm']: r['addrCd'] for r in provinces}
     annual = json.loads((OUT/'onnuri_official_snapshot.json').read_text(encoding='utf-8'))
     snapshots, completed, cache = [], [], {}
     folder = OUT/'regional_search'
     folder.mkdir(exist_ok=True)
     (folder/'progress.json').write_text(json.dumps({'order': ORDER, 'completed': [], 'remaining': ORDER}, ensure_ascii=False), encoding='utf-8')
     for area in ORDER:
-        code = codes['전남광주' if area in ('전남', '광주') else area]
         names = []
         for item in annual['rows']:
             if non_vehicle(item):
@@ -111,17 +108,6 @@ def main():
             query = dict(original_query, region=area, strategy='national_search_address_filter')
             local_queries.append(query)
             merge_rows(local_rows, batch, area)
-        districts = post(session, '/addr/' + code, {})['list']
-        if area in ('전남', '광주'):
-            districts = [d for d in districts if (d['addrNm'] in ('동구','서구','남구','북구','광산구')) == (area == '광주')]
-        if not districts and area != '세종':
-            raise ValueError('Missing district catalog: ' + area)
-        for district in districts:
-            for keyword in ('주유소', '충전소'):
-                batch, query = search(session, keyword, district['addrCd'])
-                query.update(region=area, district=district['addrNm'])
-                local_queries.append(query)
-                merge_rows(local_rows, batch, area)
         checked = datetime.now(KST).isoformat(timespec='seconds')
         regional = {'status': 'complete', 'source_url': SOURCE, 'checked_at': checked,
                     'scope': 'regional_keyword_search', 'region': area,

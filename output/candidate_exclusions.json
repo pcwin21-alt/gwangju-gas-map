@@ -1,0 +1,11 @@
+{
+  "rows": [
+    {
+      "match": {"가맹점명": "예천용궁시장제유소", "소속 시장명(또는 상점가)": "용궁시장", "소재지": "경북", "취급품목": "주유소"},
+      "status": "excluded_non_vehicle_fuel",
+      "reason": "업체 공식 상품 목록은 참기름·들기름·참깨·들깨가루이며 자동차 주유 업장이 아님. 연간 자료의 주유소 품목 오기 정정.",
+      "checked_at": "2026-10-24",
+      "sources": ["https://www.ygsijangjeyuso.kr/shop_goods/goods_list.htm?category=03000000", "https://m.ygsijangjeyuso.kr/shop_info/company_addr.htm"]
+    }
+  ]
+}

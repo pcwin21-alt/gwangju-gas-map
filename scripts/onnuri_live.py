@@ -45,13 +45,18 @@ def post(session, path, payload):
     return body['data']
 
 
-def search(session, keyword, area='', pause=1):
+def search(session, keyword, area='', pause=1, *, center=None, radius=0):
+    # addrCd alone does not constrain the current service to that district:
+    # a Seoul anchor can return Seoul shops for a Suncheon district code.
+    if area and center is None:
+        raise ValueError('Area search requires an explicit verified coordinate anchor')
+    latitude, longitude = center or ('37.5667', '126.9784')
     rows, ids, pages, expected = [], set(), None, None
     page = 1
     while pages is None or page <= pages:
         payload = dict(keyword=keyword, addrNm='', addrCd=area, placeTypeList=[],
-                       paperYn='', cardYn='', qrYn='', latitude='37.5667',
-                       longitude='126.9784', baseRange=0, currPage=page)
+                       paperYn='', cardYn='', qrYn='', latitude=str(latitude),
+                       longitude=str(longitude), baseRange=radius, currPage=page)
         data = post(session, '/place/search', payload)
         total, last = int(data['totalCnt']), int(data['totalPage'])
         if pages is None:
@@ -76,8 +81,11 @@ def search(session, keyword, area='', pause=1):
         time.sleep(pause)
     if len(rows) != expected:
         raise ValueError('Incomplete Onnuri result: expected %s, got %s' % (expected, len(rows)))
-    return rows, {'keyword': keyword, 'area_code': area, 'status': 'complete',
-                  'expected': expected, 'received': len(rows), 'pages': pages}
+    query = {'keyword': keyword, 'area_code': area, 'status': 'complete',
+             'expected': expected, 'received': len(rows), 'pages': pages}
+    if center is not None:
+        query.update(center=[float(latitude), float(longitude)], radius=radius)
+    return rows, query
 
 
 def expand_names(session, snapshot, candidates, progress=print):
@@ -117,22 +125,8 @@ def collect(session, extra_names=(), progress=print, candidates=()):
             by_id[row['frCd']] = row
         queries.append(query)
         progress(f'{keyword}: {len(rows)} records', flush=True)
-    # Independently check known small areas, including Gwangju's five districts.
-    districts = {}
-    for province in ('11000', '12000', '41000', '50000'):
-        for item in post(session, '/addr/' + province, {})['list']:
-            districts[(province, item['addrNm'])] = item['addrCd']
-    pilots = [('11000', '양천구'), ('41000', '가평군'), ('50000', '제주시')]
-    pilots += [('12000', name) for name in ('동구', '서구', '남구', '북구', '광산구')]
-    for province, district in pilots:
-        code = districts[(province, district)]
-        for keyword in ('주유소', '충전소'):
-            rows, query = search(session, keyword, code)
-            if any(row['frCd'] not in by_id for row in rows):
-                raise ValueError('National query missed pilot merchant: ' + district)
-            query.update(pilot=district)
-            queries.append(query)
-        progress('Pilot verified: ' + district, flush=True)
+    # Region membership is established by the returned street address. Do not
+    # claim an independent district check using addrCd with the default anchor.
     snapshot = {'schema_version': 1, 'source_url': SOURCE, 'endpoint': BASE + '/place/search',
             'checked_at': datetime.now(KST).isoformat(timespec='seconds'),
             'status': 'complete', 'scope': 'nationwide_keyword_search',

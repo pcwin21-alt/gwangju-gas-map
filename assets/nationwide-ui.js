@@ -67,7 +67,7 @@
       state.region==='all'||r.region===state.region||(['광주','전남'].includes(state.region)&&r.region==='전남광주'));
     summary.textContent=`지도 표시 ${visible.length}곳 · 온누리 공식 검색 ${MERCHANT_STATUS.onnuri?.source_date||'미확인'}${MERCHANT_STATUS.onnuri?.refresh_error?' · 최근 조회 실패, 이전 자료 유지':''}`;
     const title=document.getElementById('pendingSummary');
-    title.textContent=`주소·업종 확인 대기 ${waiting.length}건`;
+    title.textContent=`추가 확인 대기 ${waiting.length}건`;
     pending.replaceChildren();
     waiting.forEach(r=>{
       const li=document.createElement('li');

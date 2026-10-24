@@ -1,7 +1,7 @@
 {
   "status": "complete",
   "source_url": "https://www.onnuri.gift/place",
-  "checked_at": "2026-10-24T00:53:23+09:00",
+  "checked_at": "2026-10-24T13:08:17+09:00",
   "scope": "regional_keyword_search",
   "region": "대전",
   "queries": [
@@ -94,106 +94,6 @@
       "pages": 1,
       "region": "대전",
       "strategy": "national_search_address_filter"
-    },
-    {
-      "keyword": "주유소",
-      "area_code": "30110",
-      "status": "complete",
-      "expected": 0,
-      "received": 0,
-      "pages": 0,
-      "region": "대전",
-      "district": "동구"
-    },
-    {
-      "keyword": "충전소",
-      "area_code": "30110",
-      "status": "complete",
-      "expected": 0,
-      "received": 0,
-      "pages": 0,
-      "region": "대전",
-      "district": "동구"
-    },
-    {
-      "keyword": "주유소",
-      "area_code": "30140",
-      "status": "complete",
-      "expected": 0,
-      "received": 0,
-      "pages": 0,
-      "region": "대전",
-      "district": "중구"
-    },
-    {
-      "keyword": "충전소",
-      "area_code": "30140",
-      "status": "complete",
-      "expected": 1,
-      "received": 1,
-      "pages": 1,
-      "region": "대전",
-      "district": "중구"
-    },
-    {
-      "keyword": "주유소",
-      "area_code": "30170",
-      "status": "complete",
-      "expected": 0,
-      "received": 0,
-      "pages": 0,
-      "region": "대전",
-      "district": "서구"
-    },
-    {
-      "keyword": "충전소",
-      "area_code": "30170",
-      "status": "complete",
-      "expected": 0,
-      "received": 0,
-      "pages": 0,
-      "region": "대전",
-      "district": "서구"
-    },
-    {
-      "keyword": "주유소",
-      "area_code": "30200",
-      "status": "complete",
-      "expected": 1,
-      "received": 1,
-      "pages": 1,
-      "region": "대전",
-      "district": "유성구"
-    },
-    {
-      "keyword": "충전소",
-      "area_code": "30200",
-      "status": "complete",
-      "expected": 0,
-      "received": 0,
-      "pages": 0,
-      "region": "대전",
-      "district": "유성구"
-    },
-    {
-      "keyword": "주유소",
-      "area_code": "30230",
-      "status": "complete",
-      "expected": 0,
-      "received": 0,
-      "pages": 0,
-      "region": "대전",
-      "district": "대덕구"
-    },
-    {
-      "keyword": "충전소",
-      "area_code": "30230",
-      "status": "complete",
-      "expected": 0,
-      "received": 0,
-      "pages": 0,
-      "region": "대전",
-      "district": "대덕구"
     }
   ],
   "rows": [

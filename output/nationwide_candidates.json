@@ -36,8 +36,8 @@
       "name": "㈜틸에너지",
       "market": "한대앞역상점가",
       "region": "경기",
-      "status": "needs_review",
-      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조"
+      "status": "excluded_non_vehicle_fuel",
+      "reason": "자동차 연료 업종 아님"
     },
     {
       "row_number": 5,
@@ -72,8 +72,8 @@
       "name": "대우종합석유얼음",
       "market": "평택통복시장",
       "region": "경기",
-      "status": "needs_review",
-      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조"
+      "status": "excluded_non_vehicle_fuel",
+      "reason": "자동차 연료 업종 아님"
     },
     {
       "row_number": 9,
@@ -153,8 +153,8 @@
       "name": "예천용궁시장제유소",
       "market": "용궁시장",
       "region": "경북",
-      "status": "needs_review",
-      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조"
+      "status": "excluded_non_vehicle_fuel",
+      "reason": "자동차 연료 업종 아님"
     },
     {
       "row_number": 18,
@@ -207,8 +207,8 @@
       "name": "디와이에너지",
       "market": "경주중심상가",
       "region": "경북",
-      "status": "needs_review",
-      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조"
+      "status": "excluded_non_vehicle_fuel",
+      "reason": "자동차 연료 업종 아님"
     },
     {
       "row_number": 24,
@@ -252,8 +252,8 @@
       "name": "(주)에너지소방",
       "market": "동먹골상가 골목형상점가",
       "region": "대구",
-      "status": "needs_review",
-      "reason": "자동차 주유·충전 업종 확인 필요"
+      "status": "excluded_non_vehicle_fuel",
+      "reason": "연료 외 상품 또는 업종"
     },
     {
       "row_number": 29,
@@ -315,8 +315,8 @@
       "name": "주식회사누리에너지",
       "market": "왕십리무학봉상점가",
       "region": "서울",
-      "status": "needs_review",
-      "reason": "자동차 주유·충전 업종 확인 필요"
+      "status": "excluded_non_vehicle_fuel",
+      "reason": "연료 외 상품 또는 업종"
     },
     {
       "row_number": 36,
@@ -360,8 +360,8 @@
       "name": "주식회사 엠제이에너지",
       "market": "인천산업유통센터",
       "region": "인천",
-      "status": "needs_review",
-      "reason": "자동차 주유·충전 업종 확인 필요"
+      "status": "excluded_non_vehicle_fuel",
+      "reason": "연료 외 상품 또는 업종"
     },
     {
       "row_number": 41,
@@ -369,8 +369,8 @@
       "name": "엠케이에너지",
       "market": "인천산업유통센터",
       "region": "인천",
-      "status": "needs_review",
-      "reason": "자동차 주유·충전 업종 확인 필요"
+      "status": "excluded_non_vehicle_fuel",
+      "reason": "연료 외 상품 또는 업종"
     },
     {
       "row_number": 42,

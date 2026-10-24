@@ -1,7 +1,7 @@
 {
   "status": "complete",
   "source_url": "https://www.onnuri.gift/place",
-  "checked_at": "2026-10-24T00:54:41+09:00",
+  "checked_at": "2026-10-24T13:08:17+09:00",
   "scope": "regional_keyword_search",
   "region": "제주",
   "queries": [
@@ -94,46 +94,6 @@
       "pages": 1,
       "region": "제주",
       "strategy": "national_search_address_filter"
-    },
-    {
-      "keyword": "주유소",
-      "area_code": "50110",
-      "status": "complete",
-      "expected": 2,
-      "received": 2,
-      "pages": 1,
-      "region": "제주",
-      "district": "제주시"
-    },
-    {
-      "keyword": "충전소",
-      "area_code": "50110",
-      "status": "complete",
-      "expected": 0,
-      "received": 0,
-      "pages": 0,
-      "region": "제주",
-      "district": "제주시"
-    },
-    {
-      "keyword": "주유소",
-      "area_code": "50130",
-      "status": "complete",
-      "expected": 0,
-      "received": 0,
-      "pages": 0,
-      "region": "제주",
-      "district": "서귀포시"
-    },
-    {
-      "keyword": "충전소",
-      "area_code": "50130",
-      "status": "complete",
-      "expected": 0,
-      "received": 0,
-      "pages": 0,
-      "region": "제주",
-      "district": "서귀포시"
     }
   ],
   "rows": [

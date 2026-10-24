@@ -1,7 +1,7 @@
 {
   "status": "complete",
   "source_url": "https://www.onnuri.gift/place",
-  "checked_at": "2026-10-24T00:51:18+09:00",
+  "checked_at": "2026-10-24T13:08:17+09:00",
   "scope": "regional_keyword_search",
   "region": "울산",
   "queries": [
@@ -94,106 +94,6 @@
       "pages": 1,
       "region": "울산",
       "strategy": "national_search_address_filter"
-    },
-    {
-      "keyword": "주유소",
-      "area_code": "31110",
-      "status": "complete",
-      "expected": 0,
-      "received": 0,
-      "pages": 0,
-      "region": "울산",
-      "district": "중구"
-    },
-    {
-      "keyword": "충전소",
-      "area_code": "31110",
-      "status": "complete",
-      "expected": 0,
-      "received": 0,
-      "pages": 0,
-      "region": "울산",
-      "district": "중구"
-    },
-    {
-      "keyword": "주유소",
-      "area_code": "31140",
-      "status": "complete",
-      "expected": 0,
-      "received": 0,
-      "pages": 0,
-      "region": "울산",
-      "district": "남구"
-    },
-    {
-      "keyword": "충전소",
-      "area_code": "31140",
-      "status": "complete",
-      "expected": 0,
-      "received": 0,
-      "pages": 0,
-      "region": "울산",
-      "district": "남구"
-    },
-    {
-      "keyword": "주유소",
-      "area_code": "31170",
-      "status": "complete",
-      "expected": 0,
-      "received": 0,
-      "pages": 0,
-      "region": "울산",
-      "district": "동구"
-    },
-    {
-      "keyword": "충전소",
-      "area_code": "31170",
-      "status": "complete",
-      "expected": 0,
-      "received": 0,
-      "pages": 0,
-      "region": "울산",
-      "district": "동구"
-    },
-    {
-      "keyword": "주유소",
-      "area_code": "31200",
-      "status": "complete",
-      "expected": 0,
-      "received": 0,
-      "pages": 0,
-      "region": "울산",
-      "district": "북구"
-    },
-    {
-      "keyword": "충전소",
-      "area_code": "31200",
-      "status": "complete",
-      "expected": 0,
-      "received": 0,
-      "pages": 0,
-      "region": "울산",
-      "district": "북구"
-    },
-    {
-      "keyword": "주유소",
-      "area_code": "31710",
-      "status": "complete",
-      "expected": 0,
-      "received": 0,
-      "pages": 0,
-      "region": "울산",
-      "district": "울주군"
-    },
-    {
-      "keyword": "충전소",
-      "area_code": "31710",
-      "status": "complete",
-      "expected": 0,
-      "received": 0,
-      "pages": 0,
-      "region": "울산",
-      "district": "울주군"
     }
   ],
   "rows": [

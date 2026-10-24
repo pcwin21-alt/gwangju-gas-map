@@ -131,7 +131,7 @@
     const raw = String(value), text = raw.trim();
     let result = messages[text];
     if (/^지도 표시 \d+곳$/.test(text)) result = text.replace(/^지도 표시 (\d+)곳$/, '$1 mapped stations');
-    if (/^주소(?:·업종)? 확인 대기 \d+건$/.test(text)) result = text.replace(/^주소(?:·업종)? 확인 대기 (\d+)건$/, '$1 locations awaiting review');
+    if (/^(?:추가|주소(?:·업종)?) 확인 대기 \d+건$/.test(text)) result = text.replace(/^(?:추가|주소(?:·업종)?) 확인 대기 (\d+)건$/, '$1 locations awaiting review');
     if (/^공식 온누리 자료 /.test(text)) result = text.replace('공식 온누리 자료 ', 'Official Onnuri source: ');
     if (result === undefined) {
       if ((text.includes(' / ') || text.includes(' · ')) && !text.startsWith('추가 이동 약 ')) result = text.split(/( \/ | · )/).map(part => /[가-힣]/.test(part) ? translate(part) : part).join('');

@@ -1,7 +1,7 @@
 {
   "status": "complete",
   "source_url": "https://www.onnuri.gift/place",
-  "checked_at": "2026-10-24T00:45:19+09:00",
+  "checked_at": "2026-10-24T13:08:10+09:00",
   "scope": "regional_keyword_search",
   "region": "광주",
   "queries": [
@@ -144,106 +144,6 @@
       "pages": 1,
       "region": "광주",
       "strategy": "national_search_address_filter"
-    },
-    {
-      "keyword": "주유소",
-      "area_code": "12210",
-      "status": "complete",
-      "expected": 0,
-      "received": 0,
-      "pages": 0,
-      "region": "광주",
-      "district": "동구"
-    },
-    {
-      "keyword": "충전소",
-      "area_code": "12210",
-      "status": "complete",
-      "expected": 0,
-      "received": 0,
-      "pages": 0,
-      "region": "광주",
-      "district": "동구"
-    },
-    {
-      "keyword": "주유소",
-      "area_code": "12240",
-      "status": "complete",
-      "expected": 0,
-      "received": 0,
-      "pages": 0,
-      "region": "광주",
-      "district": "서구"
-    },
-    {
-      "keyword": "충전소",
-      "area_code": "12240",
-      "status": "complete",
-      "expected": 0,
-      "received": 0,
-      "pages": 0,
-      "region": "광주",
-      "district": "서구"
-    },
-    {
-      "keyword": "주유소",
-      "area_code": "12270",
-      "status": "complete",
-      "expected": 0,
-      "received": 0,
-      "pages": 0,
-      "region": "광주",
-      "district": "남구"
-    },
-    {
-      "keyword": "충전소",
-      "area_code": "12270",
-      "status": "complete",
-      "expected": 0,
-      "received": 0,
-      "pages": 0,
-      "region": "광주",
-      "district": "남구"
-    },
-    {
-      "keyword": "주유소",
-      "area_code": "12300",
-      "status": "complete",
-      "expected": 0,
-      "received": 0,
-      "pages": 0,
-      "region": "광주",
-      "district": "북구"
-    },
-    {
-      "keyword": "충전소",
-      "area_code": "12300",
-      "status": "complete",
-      "expected": 0,
-      "received": 0,
-      "pages": 0,
-      "region": "광주",
-      "district": "북구"
-    },
-    {
-      "keyword": "주유소",
-      "area_code": "12330",
-      "status": "complete",
-      "expected": 0,
-      "received": 0,
-      "pages": 0,
-      "region": "광주",
-      "district": "광산구"
-    },
-    {
-      "keyword": "충전소",
-      "area_code": "12330",
-      "status": "complete",
-      "expected": 0,
-      "received": 0,
-      "pages": 0,
-      "region": "광주",
-      "district": "광산구"
     }
   ],
   "rows": [

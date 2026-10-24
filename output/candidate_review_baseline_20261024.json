@@ -1,0 +1,382 @@
+{
+  "rows": [
+    {
+      "row_number": 4,
+      "candidate_id": "06ca4cbb106fcd117a5cdd0e",
+      "name": "㈜틸에너지",
+      "market": "한대앞역상점가",
+      "region": "경기",
+      "status": "needs_review",
+      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조"
+    },
+    {
+      "row_number": 8,
+      "candidate_id": "641598d6b273582aace81796",
+      "name": "대우종합석유얼음",
+      "market": "평택통복시장",
+      "region": "경기",
+      "status": "needs_review",
+      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조"
+    },
+    {
+      "row_number": 10,
+      "candidate_id": "b924551d561010aaeffebdda",
+      "name": "광탄주유소",
+      "market": "광탄전통시장",
+      "region": "경기",
+      "status": "needs_review",
+      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조"
+    },
+    {
+      "row_number": 14,
+      "candidate_id": "c426c12d7c844ac0a2d91bd1",
+      "name": "춘양주유소",
+      "market": "억지춘향시장(구 봉화춘향시장)",
+      "region": "경북",
+      "status": "needs_review",
+      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조"
+    },
+    {
+      "row_number": 16,
+      "candidate_id": "80abcbfbeaccee97f1fe852f",
+      "name": "제일가스",
+      "market": "양북시장",
+      "region": "경북",
+      "status": "needs_review",
+      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조"
+    },
+    {
+      "row_number": 17,
+      "candidate_id": "c5224cf2c01fa857bf83cbd3",
+      "name": "예천용궁시장제유소",
+      "market": "용궁시장",
+      "region": "경북",
+      "status": "needs_review",
+      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조"
+    },
+    {
+      "row_number": 18,
+      "candidate_id": "081a17a302be89e37dca8737",
+      "name": "양북주유소",
+      "market": "양북시장",
+      "region": "경북",
+      "status": "needs_review",
+      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조"
+    },
+    {
+      "row_number": 19,
+      "candidate_id": "6cf6b5291c36bdd9f7fb20d1",
+      "name": "세진석유",
+      "market": "캐롤타운상점가 골목형상점가",
+      "region": "경북",
+      "status": "needs_review",
+      "reason": "자동차 주유·충전 업종 확인 필요"
+    },
+    {
+      "row_number": 20,
+      "candidate_id": "ff23f383096d8ef00074227d",
+      "name": "문희주유소",
+      "market": "문경전통시장",
+      "region": "경북",
+      "status": "needs_review",
+      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조"
+    },
+    {
+      "row_number": 21,
+      "candidate_id": "04d09d1a8156d44b38db83c0",
+      "name": "명륜주유소",
+      "market": "북문시장",
+      "region": "경북",
+      "status": "needs_review",
+      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조"
+    },
+    {
+      "row_number": 22,
+      "candidate_id": "04d09d1a8156d44b38db83c0",
+      "name": "명륜주유소",
+      "market": "북문시장",
+      "region": "경북",
+      "status": "needs_review",
+      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조"
+    },
+    {
+      "row_number": 23,
+      "candidate_id": "59162c8be20105050a334a35",
+      "name": "디와이에너지",
+      "market": "경주중심상가",
+      "region": "경북",
+      "status": "needs_review",
+      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조"
+    },
+    {
+      "row_number": 24,
+      "candidate_id": "9e96e2c352e1ca4224036944",
+      "name": "기성주유소",
+      "market": "척산시장",
+      "region": "경북",
+      "status": "needs_review",
+      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조"
+    },
+    {
+      "row_number": 27,
+      "candidate_id": "0bf8e875e8a47f8917b48c5c",
+      "name": "대성석유",
+      "market": "평화시장",
+      "region": "대구",
+      "status": "needs_review",
+      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조"
+    },
+    {
+      "row_number": 28,
+      "candidate_id": "3e899bebcd2405782f29f5a5",
+      "name": "(주)에너지소방",
+      "market": "동먹골상가 골목형상점가",
+      "region": "대구",
+      "status": "needs_review",
+      "reason": "자동차 주유·충전 업종 확인 필요"
+    },
+    {
+      "row_number": 30,
+      "candidate_id": "e971399ca41505931d7d9ca4",
+      "name": "영주석유",
+      "market": "중앙종합시장",
+      "region": "대전",
+      "status": "needs_review",
+      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조"
+    },
+    {
+      "row_number": 31,
+      "candidate_id": "085f0ed8c217e513130788c1",
+      "name": "신화석유",
+      "market": "오정동상점가",
+      "region": "대전",
+      "status": "needs_review",
+      "reason": "자동차 주유·충전 업종 확인 필요"
+    },
+    {
+      "row_number": 35,
+      "candidate_id": "4d5eae88858abeae5eac386d",
+      "name": "주식회사누리에너지",
+      "market": "왕십리무학봉상점가",
+      "region": "서울",
+      "status": "needs_review",
+      "reason": "자동차 주유·충전 업종 확인 필요"
+    },
+    {
+      "row_number": 38,
+      "candidate_id": "2032c5af36654a5d3994b1f5",
+      "name": "대한에너지석유,등유,경유배달,얼음배달",
+      "market": "반드레길골목형상점가",
+      "region": "서울",
+      "status": "needs_review",
+      "reason": "자동차 주유·충전 업종 확인 필요"
+    },
+    {
+      "row_number": 40,
+      "candidate_id": "32e61c29b3f94e236221d473",
+      "name": "주식회사 엠제이에너지",
+      "market": "인천산업유통센터",
+      "region": "인천",
+      "status": "needs_review",
+      "reason": "자동차 주유·충전 업종 확인 필요"
+    },
+    {
+      "row_number": 41,
+      "candidate_id": "e249ee9d7b77cdd6761e65cf",
+      "name": "엠케이에너지",
+      "market": "인천산업유통센터",
+      "region": "인천",
+      "status": "needs_review",
+      "reason": "자동차 주유·충전 업종 확인 필요"
+    },
+    {
+      "row_number": 47,
+      "candidate_id": "1054803b1165f961c8cb5967",
+      "name": "현대주유소",
+      "market": "웃장",
+      "region": "전남광주",
+      "status": "needs_review",
+      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조"
+    },
+    {
+      "row_number": 59,
+      "candidate_id": "badaf1066867bde046275626",
+      "name": "청우에너지(주)",
+      "market": "매월동상인회 골목형상점가",
+      "region": "전남광주",
+      "status": "needs_review",
+      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조"
+    },
+    {
+      "row_number": 75,
+      "candidate_id": "466e6b1196a429bb71813335",
+      "name": "㈜동행",
+      "market": "신창동가구의거리일번국도상점가",
+      "region": "전남광주",
+      "status": "needs_review",
+      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조"
+    },
+    {
+      "row_number": 88,
+      "candidate_id": "8edc76825b375b2fb2f7f514",
+      "name": "유창석유",
+      "market": "큰방림길 골목형상점가",
+      "region": "전남광주",
+      "status": "needs_review",
+      "reason": "자동차 주유·충전 업종 확인 필요"
+    },
+    {
+      "row_number": 102,
+      "candidate_id": "f0bceeeee30bceb8d97290ef",
+      "name": "에스케이신안석유",
+      "market": "임동 골목형상점가",
+      "region": "전남광주",
+      "status": "needs_review",
+      "reason": "자동차 주유·충전 업종 확인 필요"
+    },
+    {
+      "row_number": 103,
+      "candidate_id": "cb99f02bfb07308115f48728",
+      "name": "에스케이(sk)만국석유",
+      "market": "호랑꼬두메마을 골목형상점가",
+      "region": "전남광주",
+      "status": "needs_review",
+      "reason": "자동차 주유·충전 업종 확인 필요"
+    },
+    {
+      "row_number": 104,
+      "candidate_id": "20c01e1b3ffe7769ce5b37cc",
+      "name": "에스케이(SK)금호석유",
+      "market": "월산4동 골목형상점가",
+      "region": "전남광주",
+      "status": "needs_review",
+      "reason": "자동차 주유·충전 업종 확인 필요"
+    },
+    {
+      "row_number": 127,
+      "candidate_id": "76ce41be9eed4c5a2696b79a",
+      "name": "서부에너지",
+      "market": "맛조이상인회 골목형상점가",
+      "region": "전남광주",
+      "status": "needs_review",
+      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조"
+    },
+    {
+      "row_number": 156,
+      "candidate_id": "604ad71bee3d9a8881951202",
+      "name": "동신 석유",
+      "market": "광주고인근 골목형상점가",
+      "region": "전남광주",
+      "status": "needs_review",
+      "reason": "자동차 주유·충전 업종 확인 필요"
+    },
+    {
+      "row_number": 169,
+      "candidate_id": "ed66938b7d2f6debb5dc0ceb",
+      "name": "대주에너지",
+      "market": "봉선중앙로 골목형상점가",
+      "region": "전남광주",
+      "status": "needs_review",
+      "reason": "자동차 주유·충전 업종 확인 필요"
+    },
+    {
+      "row_number": 171,
+      "candidate_id": "58bf924a52d2ce1fb7de7c8e",
+      "name": "대성석유",
+      "market": "매월동상인회 골목형상점가",
+      "region": "전남광주",
+      "status": "needs_review",
+      "reason": "자동차 주유·충전 업종 확인 필요"
+    },
+    {
+      "row_number": 177,
+      "candidate_id": "16c76726db45d997f4abf7cd",
+      "name": "다올에너지산업(주)",
+      "market": "신창동가구의거리일번국도상점가",
+      "region": "전남광주",
+      "status": "needs_review",
+      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조"
+    },
+    {
+      "row_number": 180,
+      "candidate_id": "ffa12c23f1c57296633c7b4c",
+      "name": "금호석유",
+      "market": "송정매일시장",
+      "region": "전남광주",
+      "status": "needs_review",
+      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조"
+    },
+    {
+      "row_number": 183,
+      "candidate_id": "4eb982df05bfb19162812c4b",
+      "name": "광주석유판매협동조합",
+      "market": "신안동광주역앞상가 골목형상점가",
+      "region": "전남광주",
+      "status": "needs_review",
+      "reason": "자동차 주유·충전 업종 확인 필요"
+    },
+    {
+      "row_number": 187,
+      "candidate_id": "e372dec9b50c553fa2108033",
+      "name": "경훈에너지",
+      "market": "오치1동 골목형상점가",
+      "region": "전남광주",
+      "status": "needs_review",
+      "reason": "자동차 주유·충전 업종 확인 필요"
+    },
+    {
+      "row_number": 194,
+      "candidate_id": "3d8d8f19bfe620a6108e4c04",
+      "name": "SK삼성에너지",
+      "market": "두암초주변 골목형상점가",
+      "region": "전남광주",
+      "status": "needs_review",
+      "reason": "자동차 주유·충전 업종 확인 필요"
+    },
+    {
+      "row_number": 195,
+      "candidate_id": "6fed398149a3ddc242eb314c",
+      "name": "SK동진석유",
+      "market": "중흥중가로 골목형상점가",
+      "region": "전남광주",
+      "status": "needs_review",
+      "reason": "자동차 주유·충전 업종 확인 필요"
+    },
+    {
+      "row_number": 196,
+      "candidate_id": "aec951dbdb417bcb46318c53",
+      "name": "SK경인석유",
+      "market": "두암1동군왕로 골목형상점가",
+      "region": "전남광주",
+      "status": "needs_review",
+      "reason": "자동차 주유·충전 업종 확인 필요"
+    },
+    {
+      "row_number": 222,
+      "candidate_id": "3e5913425369e021c3f3bad8",
+      "name": "부흥주유소",
+      "market": "공산성골목형상점가",
+      "region": "충남",
+      "status": "needs_review",
+      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조"
+    },
+    {
+      "row_number": 223,
+      "candidate_id": "29b4e0aac4c8e50d12c2d620",
+      "name": "모산석유",
+      "market": "배방상점가",
+      "region": "충남",
+      "status": "needs_review",
+      "reason": "자동차 주유·충전 업종 확인 필요"
+    },
+    {
+      "row_number": 225,
+      "candidate_id": "dfea2f84be984c283e41bfe9",
+      "name": "원남주유소",
+      "market": "음성시장",
+      "region": "충북",
+      "status": "needs_review",
+      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조"
+    }
+  ]
+}
