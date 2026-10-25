@@ -2,7 +2,7 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
-from unittest.mock import patch
+from unittest.mock import patch, Mock
 
 from scripts import onnuri_live as live
 from scripts.live_merchants import classify, prepare
@@ -16,6 +16,15 @@ def merchant(**changes):
 
 
 class LiveSearch(unittest.TestCase):
+    def test_explicit_request_block_is_not_retried_as_transient_400(self):
+        session = Mock()
+        session.post.return_value = Mock(status_code=400, text='<H1>Request Blocked</H1>')
+        with patch.object(live.time, 'sleep') as sleep:
+            with self.assertRaises(PermissionError):
+                live.post(session, '/place/search', {})
+        self.assertEqual(session.post.call_count, 1)
+        sleep.assert_not_called()
+
     def test_area_code_without_real_anchor_is_rejected(self):
         with patch.object(live, 'post') as request:
             with self.assertRaises(ValueError):

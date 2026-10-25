@@ -1,0 +1,41 @@
+{
+  "order": [
+    "전남",
+    "광주",
+    "전북",
+    "경남",
+    "경북",
+    "부산",
+    "대구",
+    "울산",
+    "충남",
+    "충북",
+    "대전",
+    "세종",
+    "강원",
+    "제주",
+    "경기",
+    "인천",
+    "서울"
+  ],
+  "plans": [
+    {"region":"전남","plan":"output/grid_search/jeonnam_plan_20261025.json","planned_tiles":2810},
+    {"region":"광주","plan":"output/grid_search/plan_광주_20261025.json","planned_tiles":106},
+    {"region":"전북","plan":"output/grid_search/plan_전북_20261025.json","planned_tiles":1407},
+    {"region":"경남","plan":"output/grid_search/plan_경남_20261025.json","planned_tiles":1951},
+    {"region":"경북","plan":"output/grid_search/plan_경북_20261025.json","planned_tiles":3046},
+    {"region":"부산","plan":"output/grid_search/plan_부산_20261025.json","planned_tiles":177},
+    {"region":"대구","plan":"output/grid_search/plan_대구_20261025.json","planned_tiles":311},
+    {"region":"울산","plan":"output/grid_search/plan_울산_20261025.json","planned_tiles":206},
+    {"region":"충남","plan":"output/grid_search/plan_충남_20261025.json","planned_tiles":1535},
+    {"region":"충북","plan":"output/grid_search/plan_충북_20261025.json","planned_tiles":1281},
+    {"region":"대전","plan":"output/grid_search/plan_대전_20261025.json","planned_tiles":117},
+    {"region":"세종","plan":"output/grid_search/plan_세종_20261025.json","planned_tiles":104},
+    {"region":"강원","plan":"output/grid_search/plan_강원_20261025.json","planned_tiles":2718},
+    {"region":"제주","plan":"output/grid_search/plan_제주_20261025.json","planned_tiles":371},
+    {"region":"경기","plan":"output/grid_search/plan_경기_20261025.json","planned_tiles":1754},
+    {"region":"인천","plan":"output/grid_search/plan_인천_20261025.json","planned_tiles":426},
+    {"region":"서울","plan":"output/grid_search/plan_서울_20261025.json","planned_tiles":129}
+  ],
+  "note": "Planning is not execution; only a complete per-region snapshot proves a finished scan."
+}

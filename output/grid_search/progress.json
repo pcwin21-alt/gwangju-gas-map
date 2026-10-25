@@ -1,0 +1,28 @@
+{
+  "status": "blocked",
+  "updated_at": "2026-10-25T11:41:47+09:00",
+  "completed_regions": [],
+  "current_region": "전남",
+  "completed_tiles": 415,
+  "planned_tiles": 2810,
+  "remaining_regions": [
+    "광주",
+    "전북",
+    "경남",
+    "경북",
+    "부산",
+    "대구",
+    "울산",
+    "충남",
+    "충북",
+    "대전",
+    "세종",
+    "강원",
+    "제주",
+    "경기",
+    "인천",
+    "서울"
+  ],
+  "reason": "HTTP 400 Request Blocked",
+  "publication": "partial results reviewed; no complete geographic snapshot"
+}

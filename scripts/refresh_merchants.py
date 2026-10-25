@@ -288,7 +288,7 @@ def main():
     for row in previous_snapshot.get('rows', []):
         if row['frCd'] in previous_ids:
             historical_by_id[row['frCd']] = {**row, '_verification': {
-                'status': 'stale', 'checked_at': previous_snapshot['checked_at'],
+                'status': 'stale', 'checked_at': row.get('_observed_at', previous_snapshot['checked_at']),
                 'source_url': SOURCE, 'source_id': row['frCd'], 'market': row['mrktNm']}}
     stage = 'annual_snapshot'
     try:
@@ -308,7 +308,7 @@ def main():
         places['retained_history'] = [r for r in historical if r.get('_verification', {}).get('status') != 'confirmed']
         if len(compact['rows']) < 80:
             raise ValueError('온누리 검색 결과 급감: 이전 지도 유지')
-    except (requests.RequestException, ValueError, KeyError) as error:
+    except (requests.RequestException, ValueError, KeyError, PermissionError) as error:
         status = load('merchant_status.json', {})
         status['onnuri'] = {**status.get('onnuri', {}), **refresh_context(),
                             'refresh_error': type(error).__name__, 'refresh_stage': stage, 'attempted_at': checked}
@@ -332,6 +332,8 @@ def main():
             'visible_count': sum(region(s['address']) == entry['region'] and valid_coords(s.get('lat'), s.get('lng')) for s in stations),
             'confirmed_count': sum(region(s['address']) == entry['region'] and s.get('verification', {}).get('onnuri', {}).get('status') == 'confirmed' for s in stations)
         } for entry in places['regions']]
+    if places.get('regional_grids'):
+        status['onnuri']['regional_grids'] = places['regional_grids']
     save('onnuri_official_snapshot.json', snapshot)
     save('onnuri_live_snapshot.json', places)
     save('station_locations.json', location_cache)

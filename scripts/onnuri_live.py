@@ -33,8 +33,12 @@ def post(session, path, payload):
                 raise
             time.sleep(2 * (attempt + 1))
             continue
-        # The public service intermittently returns 400 for an identical valid
-        # request. Bound retries; never retry authentication/permission failures.
+        # Some perimeter filters use HTTP 400 rather than 403/429. An explicit
+        # access block is not a transient application validation error.
+        if response.status_code == 400 and 'request blocked' in response.text.lower():
+            raise PermissionError('Onnuri returned Request Blocked; collection stopped without retry')
+        # Bound retries for ordinary application/transport failures; never
+        # retry explicit blocking, authentication or permission failures.
         if response.status_code not in (400, 500, 502, 503, 504) or attempt == 2:
             break
         time.sleep(2 * (attempt + 1))

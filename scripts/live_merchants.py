@@ -69,8 +69,9 @@ def classify(row, annual_rows, known_fuel_addresses, fuel_evidence=()):
 
 def prepare(snapshot, annual, historical, sangsaeng, locations=(), fuel_evidence=()):
     from datetime import date
+    evidence_as_of = max([snapshot['checked_at']] + [r.get('_observed_at', snapshot['checked_at']) for r in snapshot['rows']])
     fuel_evidence = [e for e in fuel_evidence if
-        0 <= (date.fromisoformat(snapshot['checked_at'][:10]) - date.fromisoformat(e['checked_at'][:10])).days <= 90]
+        0 <= (date.fromisoformat(evidence_as_of[:10]) - date.fromisoformat(e['checked_at'][:10])).days <= 90]
     if snapshot.get('status') != 'complete' or not snapshot.get('queries') or any(
             q['status'] != 'complete' or q['expected'] != q['received'] for q in snapshot['queries']):
         raise ValueError('Incomplete live snapshot')
@@ -113,8 +114,10 @@ def prepare(snapshot, annual, historical, sangsaeng, locations=(), fuel_evidence
         item['_fuel_kind'] = kind
         item['_annual_aliases'] = [r['가맹점명'] for r in resolved_aliases if r in annual_rows and r['가맹점명'] != row['frcsNm']]
         item['_fuel_evidence'] = [e for e in fuel_evidence if e['source_id'] == row['frCd'] and e['address'] == row['frcsAddr'] and e['merchant_name'] == row['frcsNm'] and e['market'] == row['mrktNm']]
-        item['_verification'] = {'status': 'confirmed', 'checked_at': snapshot['checked_at'],
-            'source_date': snapshot['checked_at'][:10], 'source_url': snapshot['source_url'],
+        # A regional grid refresh must not redate merchants in other provinces.
+        observed_at = row.get('_observed_at', snapshot['checked_at'])
+        item['_verification'] = {'status': 'confirmed', 'checked_at': observed_at,
+            'source_date': observed_at[:10], 'source_url': snapshot['source_url'],
             'source_id': row['frCd'], 'source_ids': [row['frCd']],
             'match_basis': 'official_place_id_address_coordinates', 'market': row['mrktNm'],
             'candidate_ids': candidate_ids}
