@@ -1,14 +1,14 @@
 {
   "saengsaeng": {
     "status": "confirmed",
-    "checked_at": "2026-10-25T10:35:59+09:00",
+    "checked_at": "2026-10-25T10:51:12+09:00",
     "count": 77
   },
   "onnuri": {
     "status": "confirmed",
     "source_date": "2026-10-25",
-    "checked_at": "2026-10-25T10:16:16+09:00",
-    "attempted_at": "2026-10-25T10:35:59+09:00",
+    "checked_at": "2026-10-25T10:51:11+09:00",
+    "attempted_at": "2026-10-25T10:51:12+09:00",
     "source_url": "https://www.onnuri.gift/place",
     "scope": "nationwide_sequential_regional_search",
     "query_count": 166,
@@ -24,7 +24,7 @@
     "regions": [
       {
         "region": "전남",
-        "checked_at": "2026-10-25T10:16:10+09:00",
+        "checked_at": "2026-10-25T10:51:05+09:00",
         "query_count": 14,
         "raw_count": 36,
         "visible_count": 22,
@@ -32,7 +32,7 @@
       },
       {
         "region": "광주",
-        "checked_at": "2026-10-25T10:16:10+09:00",
+        "checked_at": "2026-10-25T10:51:05+09:00",
         "query_count": 14,
         "raw_count": 204,
         "visible_count": 163,
@@ -40,7 +40,7 @@
       },
       {
         "region": "전북",
-        "checked_at": "2026-10-25T10:16:15+09:00",
+        "checked_at": "2026-10-25T10:51:10+09:00",
         "query_count": 11,
         "raw_count": 16,
         "visible_count": 5,
@@ -48,7 +48,7 @@
       },
       {
         "region": "경남",
-        "checked_at": "2026-10-25T10:16:15+09:00",
+        "checked_at": "2026-10-25T10:51:10+09:00",
         "query_count": 9,
         "raw_count": 7,
         "visible_count": 1,
@@ -56,7 +56,7 @@
       },
       {
         "region": "경북",
-        "checked_at": "2026-10-25T10:16:15+09:00",
+        "checked_at": "2026-10-25T10:51:10+09:00",
         "query_count": 9,
         "raw_count": 13,
         "visible_count": 1,
@@ -64,7 +64,7 @@
       },
       {
         "region": "부산",
-        "checked_at": "2026-10-25T10:16:16+09:00",
+        "checked_at": "2026-10-25T10:51:11+09:00",
         "query_count": 10,
         "raw_count": 13,
         "visible_count": 0,
@@ -72,7 +72,7 @@
       },
       {
         "region": "대구",
-        "checked_at": "2026-10-25T10:16:16+09:00",
+        "checked_at": "2026-10-25T10:51:11+09:00",
         "query_count": 9,
         "raw_count": 16,
         "visible_count": 1,
@@ -80,7 +80,7 @@
       },
       {
         "region": "울산",
-        "checked_at": "2026-10-25T10:16:16+09:00",
+        "checked_at": "2026-10-25T10:51:11+09:00",
         "query_count": 9,
         "raw_count": 1,
         "visible_count": 0,
@@ -88,7 +88,7 @@
       },
       {
         "region": "충남",
-        "checked_at": "2026-10-25T10:16:16+09:00",
+        "checked_at": "2026-10-25T10:51:11+09:00",
         "query_count": 9,
         "raw_count": 12,
         "visible_count": 2,
@@ -96,7 +96,7 @@
       },
       {
         "region": "충북",
-        "checked_at": "2026-10-25T10:16:16+09:00",
+        "checked_at": "2026-10-25T10:51:11+09:00",
         "query_count": 9,
         "raw_count": 6,
         "visible_count": 0,
@@ -104,7 +104,7 @@
       },
       {
         "region": "대전",
-        "checked_at": "2026-10-25T10:16:16+09:00",
+        "checked_at": "2026-10-25T10:51:11+09:00",
         "query_count": 9,
         "raw_count": 12,
         "visible_count": 1,
@@ -112,7 +112,7 @@
       },
       {
         "region": "세종",
-        "checked_at": "2026-10-25T10:16:16+09:00",
+        "checked_at": "2026-10-25T10:51:11+09:00",
         "query_count": 9,
         "raw_count": 5,
         "visible_count": 0,
@@ -120,7 +120,7 @@
       },
       {
         "region": "강원",
-        "checked_at": "2026-10-25T10:16:16+09:00",
+        "checked_at": "2026-10-25T10:51:11+09:00",
         "query_count": 9,
         "raw_count": 11,
         "visible_count": 0,
@@ -128,7 +128,7 @@
       },
       {
         "region": "제주",
-        "checked_at": "2026-10-25T10:16:16+09:00",
+        "checked_at": "2026-10-25T10:51:11+09:00",
         "query_count": 9,
         "raw_count": 12,
         "visible_count": 2,
@@ -136,7 +136,7 @@
       },
       {
         "region": "경기",
-        "checked_at": "2026-10-25T10:16:16+09:00",
+        "checked_at": "2026-10-25T10:51:11+09:00",
         "query_count": 9,
         "raw_count": 52,
         "visible_count": 4,
@@ -144,7 +144,7 @@
       },
       {
         "region": "인천",
-        "checked_at": "2026-10-25T10:16:16+09:00",
+        "checked_at": "2026-10-25T10:51:11+09:00",
         "query_count": 9,
         "raw_count": 12,
         "visible_count": 0,
@@ -152,7 +152,7 @@
       },
       {
         "region": "서울",
-        "checked_at": "2026-10-25T10:16:16+09:00",
+        "checked_at": "2026-10-25T10:51:11+09:00",
         "query_count": 9,
         "raw_count": 32,
         "visible_count": 1,
