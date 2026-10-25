@@ -36,4 +36,6 @@
 ## 근거와 검증
 공식 원천: https://www.onnuri.gift/place
 지역별 원천: output/regional_search/*.json, 전체 원천: output/onnuri_regional_snapshot.json, 진행 완료: output/regional_search/progress.json.
-실행: python scripts/refresh_regions.py --publish. 17개 순서·응답 완결성 검증과 확인 시각을 제외한 지점 데이터 동일성 비교 통과. 검사 및 공개 배포 결과는 완료 후 기록한다.
+실행: python scripts/refresh_regions.py --publish. 17개 순서·응답 완결성 검증과 확인 시각을 제외한 지점 데이터 동일성 비교 통과. Python 54개·Node 19개 검사, JavaScript 문법 검사, 공개 파일 생성 및 diff 검사 통과.
+
+구현 커밋 a5c23b1의 CI 40152285304, 배포 생성 40152285087, Pages 40152293216이 모두 성공했다. 공개 지도에서 전남부터 서울까지 17개 필터를 직접 바꾸어 위 표의 표시 수와 모두 일치함을 확인했다. 전남 22곳 화면은 Playground/output/onnuri-regional-update-20261025-1051.png에 저장했다. 원래 유지 단계 프로젝트에도 동기화했고 사용자 수정 파일은 보존했다. Global Eval: 이번 순차 갱신·공개 반영 수락 조건 충족. 31개 후보 확정과 전국 전수성은 미완료로 유지한다.
