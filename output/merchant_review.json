@@ -192,13 +192,43 @@
     "market": "반드레길골목형상점가",
     "region": "서울",
     "address": "서울특별시 서초구 주흥3길 26 (반포동)",
-    "status": "needs_review",
-    "reason": "자동차 주유·충전 업종 확인 필요",
+    "status": "excluded_non_vehicle_fuel",
+    "reason": "공식 상권정보의 가정용 연료 소매업 분류(2026-06-30): 차량 주유 지도 대상 제외",
     "candidate_id": "live-01581200156",
     "annual_candidate_ids": [
       "2032c5af36654a5d3994b1f5"
     ],
-    "show_pending": true
+    "fuel_evidence": [
+      {
+        "source_id": "01581200156",
+        "merchant_name": "대한에너지석유,등유,경유배달,얼음배달",
+        "market": "반드레길골목형상점가",
+        "address": "서울특별시 서초구 주흥3길 26 (반포동)",
+        "fuel_kind": "non_vehicle",
+        "registry_category": "가정용 연료 소매업",
+        "checked_at": "2026-10-25T11:05:30+09:00",
+        "source_date": "2026-06-30",
+        "reason": "공식 상권정보의 가정용 연료 소매업 분류(2026-06-30): 차량 주유 지도 대상 제외",
+        "sources": [
+          "https://www.data.go.kr/data/15083033/fileData.do"
+        ],
+        "commercial_evidence": {
+          "상가업소번호": "MA010120220800793305",
+          "상호명": "대한에너지석유;등유;경유배달;얼음배달",
+          "지점명": "",
+          "상권업종소분류코드": "G21403",
+          "상권업종소분류명": "가정용 연료 소매업",
+          "표준산업분류코드": "G47722",
+          "표준산업분류명": "가정용 액체 연료 소매업",
+          "시도명": "서울특별시",
+          "시군구명": "서초구",
+          "도로명주소": "서울특별시 서초구 주흥3길 26",
+          "지번주소": "서울특별시 서초구 반포동 743-4"
+        },
+        "basis": "Exact street address and merchant name; only duplicate SK parenthesis, spacing and punctuation variants normalized. Industry scope only; Onnuri membership is not revoked."
+      }
+    ],
+    "show_pending": false
   },
   {
     "source_id": "01581200159",
@@ -600,13 +630,43 @@
     "market": "중흥중가로 골목형상점가",
     "region": "광주",
     "address": "광주광역시 북구 중가로85번길 28 (중흥동)",
-    "status": "needs_review",
-    "reason": "자동차 주유·충전 업종 확인 필요",
+    "status": "excluded_non_vehicle_fuel",
+    "reason": "공식 상권정보의 가정용 연료 소매업 분류(2026-06-30): 차량 주유 지도 대상 제외",
     "candidate_id": "live-05023200024",
     "annual_candidate_ids": [
       "6fed398149a3ddc242eb314c"
     ],
-    "show_pending": true
+    "fuel_evidence": [
+      {
+        "source_id": "05023200024",
+        "merchant_name": "SK동진석유",
+        "market": "중흥중가로 골목형상점가",
+        "address": "광주광역시 북구 중가로85번길 28 (중흥동)",
+        "fuel_kind": "non_vehicle",
+        "registry_category": "가정용 연료 소매업",
+        "checked_at": "2026-10-25T11:05:30+09:00",
+        "source_date": "2026-06-30",
+        "reason": "공식 상권정보의 가정용 연료 소매업 분류(2026-06-30): 차량 주유 지도 대상 제외",
+        "sources": [
+          "https://www.data.go.kr/data/15083033/fileData.do"
+        ],
+        "commercial_evidence": {
+          "상가업소번호": "MA010120220807529690",
+          "상호명": "SK동진석유",
+          "지점명": "",
+          "상권업종소분류코드": "G21403",
+          "상권업종소분류명": "가정용 연료 소매업",
+          "표준산업분류코드": "G47722",
+          "표준산업분류명": "가정용 액체 연료 소매업",
+          "시도명": "전남광주통합특별시",
+          "시군구명": "북구",
+          "도로명주소": "전남광주통합특별시 북구 중가로85번길 28",
+          "지번주소": "전남광주통합특별시 북구 중흥동 712-30"
+        },
+        "basis": "Exact street address and merchant name; only duplicate SK parenthesis, spacing and punctuation variants normalized. Industry scope only; Onnuri membership is not revoked."
+      }
+    ],
+    "show_pending": false
   },
   {
     "source_id": "05032200036",
@@ -734,13 +794,43 @@
     "market": "임동 골목형상점가",
     "region": "광주",
     "address": "광주광역시 북구 중흥로7번길 15 (임동)",
-    "status": "needs_review",
-    "reason": "자동차 주유·충전 업종 확인 필요",
+    "status": "excluded_non_vehicle_fuel",
+    "reason": "공식 상권정보의 가정용 연료 소매업 분류(2026-06-30): 차량 주유 지도 대상 제외",
     "candidate_id": "live-05104200133",
     "annual_candidate_ids": [
       "f0bceeeee30bceb8d97290ef"
     ],
-    "show_pending": true
+    "fuel_evidence": [
+      {
+        "source_id": "05104200133",
+        "merchant_name": "에스케이신안석유",
+        "market": "임동 골목형상점가",
+        "address": "광주광역시 북구 중흥로7번길 15 (임동)",
+        "fuel_kind": "non_vehicle",
+        "registry_category": "가정용 연료 소매업",
+        "checked_at": "2026-10-25T11:05:30+09:00",
+        "source_date": "2026-06-30",
+        "reason": "공식 상권정보의 가정용 연료 소매업 분류(2026-06-30): 차량 주유 지도 대상 제외",
+        "sources": [
+          "https://www.data.go.kr/data/15083033/fileData.do"
+        ],
+        "commercial_evidence": {
+          "상가업소번호": "MA0101202509A0027169",
+          "상호명": "에스케이신안석유",
+          "지점명": "",
+          "상권업종소분류코드": "G21403",
+          "상권업종소분류명": "가정용 연료 소매업",
+          "표준산업분류코드": "G47722",
+          "표준산업분류명": "가정용 액체 연료 소매업",
+          "시도명": "전남광주통합특별시",
+          "시군구명": "북구",
+          "도로명주소": "전남광주통합특별시 북구 중흥로7번길 15",
+          "지번주소": "전남광주통합특별시 북구 임동 134-5"
+        },
+        "basis": "Exact street address and merchant name; only duplicate SK parenthesis, spacing and punctuation variants normalized. Industry scope only; Onnuri membership is not revoked."
+      }
+    ],
+    "show_pending": false
   },
   {
     "source_id": "05112200070",
@@ -837,13 +927,43 @@
     "market": "큰방림길 골목형상점가",
     "region": "광주",
     "address": "광주광역시 남구 천변좌로542번길 20 (방림동)",
-    "status": "needs_review",
-    "reason": "자동차 주유·충전 업종 확인 필요",
+    "status": "excluded_non_vehicle_fuel",
+    "reason": "공식 상권정보의 가정용 연료 소매업 분류(2026-06-30): 차량 주유 지도 대상 제외",
     "candidate_id": "live-05163200052",
     "annual_candidate_ids": [
       "8edc76825b375b2fb2f7f514"
     ],
-    "show_pending": true
+    "fuel_evidence": [
+      {
+        "source_id": "05163200052",
+        "merchant_name": "유창석유",
+        "market": "큰방림길 골목형상점가",
+        "address": "광주광역시 남구 천변좌로542번길 20 (방림동)",
+        "fuel_kind": "non_vehicle",
+        "registry_category": "가정용 연료 소매업",
+        "checked_at": "2026-10-25T11:05:30+09:00",
+        "source_date": "2026-06-30",
+        "reason": "공식 상권정보의 가정용 연료 소매업 분류(2026-06-30): 차량 주유 지도 대상 제외",
+        "sources": [
+          "https://www.data.go.kr/data/15083033/fileData.do"
+        ],
+        "commercial_evidence": {
+          "상가업소번호": "MA010120220808831320",
+          "상호명": "유창석유",
+          "지점명": "",
+          "상권업종소분류코드": "G21403",
+          "상권업종소분류명": "가정용 연료 소매업",
+          "표준산업분류코드": "G47722",
+          "표준산업분류명": "가정용 액체 연료 소매업",
+          "시도명": "전남광주통합특별시",
+          "시군구명": "남구",
+          "도로명주소": "전남광주통합특별시 남구 천변좌로542번길 20",
+          "지번주소": "전남광주통합특별시 남구 방림동 71-4"
+        },
+        "basis": "Exact street address and merchant name; only duplicate SK parenthesis, spacing and punctuation variants normalized. Industry scope only; Onnuri membership is not revoked."
+      }
+    ],
+    "show_pending": false
   },
   {
     "source_id": "05164200042",
@@ -1151,13 +1271,43 @@
     "market": "월산4동 골목형상점가",
     "region": "광주",
     "address": "광주광역시 남구 금화로 476 (월산동)",
-    "status": "needs_review",
-    "reason": "자동차 주유·충전 업종 확인 필요",
+    "status": "excluded_non_vehicle_fuel",
+    "reason": "공식 상권정보의 가정용 연료 소매업 분류(2026-06-30): 차량 주유 지도 대상 제외",
     "candidate_id": "live-05421200052",
     "annual_candidate_ids": [
       "20c01e1b3ffe7769ce5b37cc"
     ],
-    "show_pending": true
+    "fuel_evidence": [
+      {
+        "source_id": "05421200052",
+        "merchant_name": "에스케이(SK)금호석유",
+        "market": "월산4동 골목형상점가",
+        "address": "광주광역시 남구 금화로 476 (월산동)",
+        "fuel_kind": "non_vehicle",
+        "registry_category": "가정용 연료 소매업",
+        "checked_at": "2026-10-25T11:05:30+09:00",
+        "source_date": "2026-06-30",
+        "reason": "공식 상권정보의 가정용 연료 소매업 분류(2026-06-30): 차량 주유 지도 대상 제외",
+        "sources": [
+          "https://www.data.go.kr/data/15083033/fileData.do"
+        ],
+        "commercial_evidence": {
+          "상가업소번호": "MA0101202305A0194118",
+          "상호명": "에스케이금호석유",
+          "지점명": "",
+          "상권업종소분류코드": "G21403",
+          "상권업종소분류명": "가정용 연료 소매업",
+          "표준산업분류코드": "G47722",
+          "표준산업분류명": "가정용 액체 연료 소매업",
+          "시도명": "전남광주통합특별시",
+          "시군구명": "남구",
+          "도로명주소": "전남광주통합특별시 남구 금화로 476",
+          "지번주소": "전남광주통합특별시 남구 월산동 913-37"
+        },
+        "basis": "Exact street address and merchant name; only duplicate SK parenthesis, spacing and punctuation variants normalized. Industry scope only; Onnuri membership is not revoked."
+      }
+    ],
+    "show_pending": false
   },
   {
     "source_id": "05470200079",
@@ -1291,13 +1441,43 @@
     "market": "두암1동군왕로 골목형상점가",
     "region": "광주",
     "address": "광주광역시 북구 동문대로30번길 24 (풍향동)",
-    "status": "needs_review",
-    "reason": "자동차 주유·충전 업종 확인 필요",
+    "status": "excluded_non_vehicle_fuel",
+    "reason": "공식 상권정보의 가정용 연료 소매업 분류(2026-06-30): 차량 주유 지도 대상 제외",
     "candidate_id": "live-05626200027",
     "annual_candidate_ids": [
       "aec951dbdb417bcb46318c53"
     ],
-    "show_pending": true
+    "fuel_evidence": [
+      {
+        "source_id": "05626200027",
+        "merchant_name": "SK경인석유",
+        "market": "두암1동군왕로 골목형상점가",
+        "address": "광주광역시 북구 동문대로30번길 24 (풍향동)",
+        "fuel_kind": "non_vehicle",
+        "registry_category": "가정용 연료 소매업",
+        "checked_at": "2026-10-25T11:05:30+09:00",
+        "source_date": "2026-06-30",
+        "reason": "공식 상권정보의 가정용 연료 소매업 분류(2026-06-30): 차량 주유 지도 대상 제외",
+        "sources": [
+          "https://www.data.go.kr/data/15083033/fileData.do"
+        ],
+        "commercial_evidence": {
+          "상가업소번호": "MA010120220814082638",
+          "상호명": "SK경인석유",
+          "지점명": "",
+          "상권업종소분류코드": "G21403",
+          "상권업종소분류명": "가정용 연료 소매업",
+          "표준산업분류코드": "G47722",
+          "표준산업분류명": "가정용 액체 연료 소매업",
+          "시도명": "전남광주통합특별시",
+          "시군구명": "북구",
+          "도로명주소": "전남광주통합특별시 북구 동문대로30번길 24",
+          "지번주소": "전남광주통합특별시 북구 풍향동 513-2"
+        },
+        "basis": "Exact street address and merchant name; only duplicate SK parenthesis, spacing and punctuation variants normalized. Industry scope only; Onnuri membership is not revoked."
+      }
+    ],
+    "show_pending": false
   },
   {
     "source_id": "05634200002",
@@ -1317,13 +1497,43 @@
     "market": "광주고인근 골목형상점가",
     "region": "광주",
     "address": "광주광역시 동구 경양로223번길 14-24 (계림동)",
-    "status": "needs_review",
-    "reason": "자동차 주유·충전 업종 확인 필요",
+    "status": "excluded_non_vehicle_fuel",
+    "reason": "공식 상권정보의 가정용 연료 소매업 분류(2026-06-30): 차량 주유 지도 대상 제외",
     "candidate_id": "live-05639200037",
     "annual_candidate_ids": [
       "604ad71bee3d9a8881951202"
     ],
-    "show_pending": true
+    "fuel_evidence": [
+      {
+        "source_id": "05639200037",
+        "merchant_name": "동신 석유",
+        "market": "광주고인근 골목형상점가",
+        "address": "광주광역시 동구 경양로223번길 14-24 (계림동)",
+        "fuel_kind": "non_vehicle",
+        "registry_category": "가정용 연료 소매업",
+        "checked_at": "2026-10-25T11:05:30+09:00",
+        "source_date": "2026-06-30",
+        "reason": "공식 상권정보의 가정용 연료 소매업 분류(2026-06-30): 차량 주유 지도 대상 제외",
+        "sources": [
+          "https://www.data.go.kr/data/15083033/fileData.do"
+        ],
+        "commercial_evidence": {
+          "상가업소번호": "MA010120220807456126",
+          "상호명": "동신석유",
+          "지점명": "",
+          "상권업종소분류코드": "G21403",
+          "상권업종소분류명": "가정용 연료 소매업",
+          "표준산업분류코드": "G47722",
+          "표준산업분류명": "가정용 액체 연료 소매업",
+          "시도명": "전남광주통합특별시",
+          "시군구명": "동구",
+          "도로명주소": "전남광주통합특별시 동구 경양로223번길 14-24",
+          "지번주소": "전남광주통합특별시 동구 계림동 586-6"
+        },
+        "basis": "Exact street address and merchant name; only duplicate SK parenthesis, spacing and punctuation variants normalized. Industry scope only; Onnuri membership is not revoked."
+      }
+    ],
+    "show_pending": false
   },
   {
     "source_id": "05646200012",
@@ -1355,13 +1565,43 @@
     "market": "두암초주변 골목형상점가",
     "region": "광주",
     "address": "광주광역시 북구 탁영로15번길 10 (두암동)",
-    "status": "needs_review",
-    "reason": "자동차 주유·충전 업종 확인 필요",
+    "status": "excluded_non_vehicle_fuel",
+    "reason": "공식 상권정보의 가정용 연료 소매업 분류(2026-06-30): 차량 주유 지도 대상 제외",
     "candidate_id": "live-05658200021",
     "annual_candidate_ids": [
       "3d8d8f19bfe620a6108e4c04"
     ],
-    "show_pending": true
+    "fuel_evidence": [
+      {
+        "source_id": "05658200021",
+        "merchant_name": "SK삼성에너지",
+        "market": "두암초주변 골목형상점가",
+        "address": "광주광역시 북구 탁영로15번길 10 (두암동)",
+        "fuel_kind": "non_vehicle",
+        "registry_category": "가정용 연료 소매업",
+        "checked_at": "2026-10-25T11:05:30+09:00",
+        "source_date": "2026-06-30",
+        "reason": "공식 상권정보의 가정용 연료 소매업 분류(2026-06-30): 차량 주유 지도 대상 제외",
+        "sources": [
+          "https://www.data.go.kr/data/15083033/fileData.do"
+        ],
+        "commercial_evidence": {
+          "상가업소번호": "MA010120220805806605",
+          "상호명": "SK삼성에너지",
+          "지점명": "",
+          "상권업종소분류코드": "G21403",
+          "상권업종소분류명": "가정용 연료 소매업",
+          "표준산업분류코드": "G47722",
+          "표준산업분류명": "가정용 액체 연료 소매업",
+          "시도명": "전남광주통합특별시",
+          "시군구명": "북구",
+          "도로명주소": "전남광주통합특별시 북구 탁영로15번길 10",
+          "지번주소": "전남광주통합특별시 북구 두암동 948-7"
+        },
+        "basis": "Exact street address and merchant name; only duplicate SK parenthesis, spacing and punctuation variants normalized. Industry scope only; Onnuri membership is not revoked."
+      }
+    ],
+    "show_pending": false
   },
   {
     "source_id": "05666200010",
@@ -1369,13 +1609,43 @@
     "market": "호랑꼬두메마을 골목형상점가",
     "region": "광주",
     "address": "광주광역시 동구 무등로 499-5 (산수동)",
-    "status": "needs_review",
-    "reason": "자동차 주유·충전 업종 확인 필요",
+    "status": "excluded_non_vehicle_fuel",
+    "reason": "공식 상권정보의 가정용 연료 소매업 분류(2026-06-30): 차량 주유 지도 대상 제외",
     "candidate_id": "live-05666200010",
     "annual_candidate_ids": [
       "cb99f02bfb07308115f48728"
     ],
-    "show_pending": true
+    "fuel_evidence": [
+      {
+        "source_id": "05666200010",
+        "merchant_name": "에스케이(sk)만국석유",
+        "market": "호랑꼬두메마을 골목형상점가",
+        "address": "광주광역시 동구 무등로 499-5 (산수동)",
+        "fuel_kind": "non_vehicle",
+        "registry_category": "가정용 연료 소매업",
+        "checked_at": "2026-10-25T11:05:30+09:00",
+        "source_date": "2026-06-30",
+        "reason": "공식 상권정보의 가정용 연료 소매업 분류(2026-06-30): 차량 주유 지도 대상 제외",
+        "sources": [
+          "https://www.data.go.kr/data/15083033/fileData.do"
+        ],
+        "commercial_evidence": {
+          "상가업소번호": "MA010120220807460988",
+          "상호명": "에스케이만국석유",
+          "지점명": "",
+          "상권업종소분류코드": "G21403",
+          "상권업종소분류명": "가정용 연료 소매업",
+          "표준산업분류코드": "G47722",
+          "표준산업분류명": "가정용 액체 연료 소매업",
+          "시도명": "전남광주통합특별시",
+          "시군구명": "동구",
+          "도로명주소": "전남광주통합특별시 동구 무등로 499-5",
+          "지번주소": "전남광주통합특별시 동구 산수동 526-49"
+        },
+        "basis": "Exact street address and merchant name; only duplicate SK parenthesis, spacing and punctuation variants normalized. Industry scope only; Onnuri membership is not revoked."
+      }
+    ],
+    "show_pending": false
   },
   {
     "source_id": "05793200020",
@@ -2997,13 +3267,43 @@
     "market": "배방상점가",
     "region": "충남",
     "address": "충청남도 아산시 배방읍 배방로229번길 30-8",
-    "status": "needs_review",
-    "reason": "자동차 주유·충전 업종 확인 필요",
+    "status": "excluded_non_vehicle_fuel",
+    "reason": "공식 상권정보의 가정용 연료 소매업 분류(2026-06-30): 차량 주유 지도 대상 제외",
     "candidate_id": "live-33610300567",
     "annual_candidate_ids": [
       "29b4e0aac4c8e50d12c2d620"
     ],
-    "show_pending": true
+    "fuel_evidence": [
+      {
+        "source_id": "33610300567",
+        "merchant_name": "모산석유",
+        "market": "배방상점가",
+        "address": "충청남도 아산시 배방읍 배방로229번길 30-8",
+        "fuel_kind": "non_vehicle",
+        "registry_category": "가정용 연료 소매업",
+        "checked_at": "2026-10-25T11:05:30+09:00",
+        "source_date": "2026-06-30",
+        "reason": "공식 상권정보의 가정용 연료 소매업 분류(2026-06-30): 차량 주유 지도 대상 제외",
+        "sources": [
+          "https://www.data.go.kr/data/15083033/fileData.do"
+        ],
+        "commercial_evidence": {
+          "상가업소번호": "MA010120220806065676",
+          "상호명": "모산석유",
+          "지점명": "",
+          "상권업종소분류코드": "G21403",
+          "상권업종소분류명": "가정용 연료 소매업",
+          "표준산업분류코드": "G47722",
+          "표준산업분류명": "가정용 액체 연료 소매업",
+          "시도명": "충청남도",
+          "시군구명": "아산시",
+          "도로명주소": "충청남도 아산시 배방읍 배방로229번길 30-8",
+          "지번주소": "충청남도 아산시 배방읍 북수리 687-28"
+        },
+        "basis": "Exact street address and merchant name; only duplicate SK parenthesis, spacing and punctuation variants normalized. Industry scope only; Onnuri membership is not revoked."
+      }
+    ],
+    "show_pending": false
   },
   {
     "source_id": "40210600003",
@@ -3738,22 +4038,6 @@
           "checked_at": "2026-10-25T10:25:47+09:00"
         }
       ],
-      "scope": "province_only_no_station_address_or_membership_inference"
-    }
-  },
-  {
-    "candidate_id": "16c76726db45d997f4abf7cd",
-    "name": "다올에너지산업(주)",
-    "market": "신창동가구의거리일번국도상점가",
-    "region": "지역 미확정",
-    "status": "needs_review",
-    "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조",
-    "show_pending": true,
-    "source_region": "전남광주",
-    "region_resolution": {
-      "status": "unresolved",
-      "match_basis": "insufficient_or_conflicting_market_evidence",
-      "evidence": [],
       "scope": "province_only_no_station_address_or_membership_inference"
     }
   },

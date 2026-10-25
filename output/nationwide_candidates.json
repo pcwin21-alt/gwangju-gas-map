@@ -342,8 +342,8 @@
       "name": "대한에너지석유,등유,경유배달,얼음배달",
       "market": "반드레길골목형상점가",
       "region": "서울",
-      "status": "needs_review",
-      "reason": "자동차 주유·충전 업종 확인 필요"
+      "status": "excluded_non_vehicle_fuel",
+      "reason": "공식 상권정보의 가정용 연료 소매업 분류(2026-06-30): 차량 주유 지도 대상 제외"
     },
     {
       "row_number": 39,
@@ -792,8 +792,8 @@
       "name": "유창석유",
       "market": "큰방림길 골목형상점가",
       "region": "전남광주",
-      "status": "needs_review",
-      "reason": "자동차 주유·충전 업종 확인 필요"
+      "status": "excluded_non_vehicle_fuel",
+      "reason": "공식 상권정보의 가정용 연료 소매업 분류(2026-06-30): 차량 주유 지도 대상 제외"
     },
     {
       "row_number": 89,
@@ -918,8 +918,8 @@
       "name": "에스케이신안석유",
       "market": "임동 골목형상점가",
       "region": "전남광주",
-      "status": "needs_review",
-      "reason": "자동차 주유·충전 업종 확인 필요"
+      "status": "excluded_non_vehicle_fuel",
+      "reason": "공식 상권정보의 가정용 연료 소매업 분류(2026-06-30): 차량 주유 지도 대상 제외"
     },
     {
       "row_number": 103,
@@ -927,8 +927,8 @@
       "name": "에스케이(sk)만국석유",
       "market": "호랑꼬두메마을 골목형상점가",
       "region": "전남광주",
-      "status": "needs_review",
-      "reason": "자동차 주유·충전 업종 확인 필요"
+      "status": "excluded_non_vehicle_fuel",
+      "reason": "공식 상권정보의 가정용 연료 소매업 분류(2026-06-30): 차량 주유 지도 대상 제외"
     },
     {
       "row_number": 104,
@@ -936,8 +936,8 @@
       "name": "에스케이(SK)금호석유",
       "market": "월산4동 골목형상점가",
       "region": "전남광주",
-      "status": "needs_review",
-      "reason": "자동차 주유·충전 업종 확인 필요"
+      "status": "excluded_non_vehicle_fuel",
+      "reason": "공식 상권정보의 가정용 연료 소매업 분류(2026-06-30): 차량 주유 지도 대상 제외"
     },
     {
       "row_number": 105,
@@ -1404,8 +1404,8 @@
       "name": "동신 석유",
       "market": "광주고인근 골목형상점가",
       "region": "전남광주",
-      "status": "needs_review",
-      "reason": "자동차 주유·충전 업종 확인 필요"
+      "status": "excluded_non_vehicle_fuel",
+      "reason": "공식 상권정보의 가정용 연료 소매업 분류(2026-06-30): 차량 주유 지도 대상 제외"
     },
     {
       "row_number": 157,
@@ -1593,8 +1593,8 @@
       "name": "다올에너지산업(주)",
       "market": "신창동가구의거리일번국도상점가",
       "region": "전남광주",
-      "status": "needs_review",
-      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조"
+      "status": "located",
+      "reason": "현행 공식 검색으로 주소·결제수단 확인"
     },
     {
       "row_number": 178,
@@ -1746,8 +1746,8 @@
       "name": "SK삼성에너지",
       "market": "두암초주변 골목형상점가",
       "region": "전남광주",
-      "status": "needs_review",
-      "reason": "자동차 주유·충전 업종 확인 필요"
+      "status": "excluded_non_vehicle_fuel",
+      "reason": "공식 상권정보의 가정용 연료 소매업 분류(2026-06-30): 차량 주유 지도 대상 제외"
     },
     {
       "row_number": 195,
@@ -1755,8 +1755,8 @@
       "name": "SK동진석유",
       "market": "중흥중가로 골목형상점가",
       "region": "전남광주",
-      "status": "needs_review",
-      "reason": "자동차 주유·충전 업종 확인 필요"
+      "status": "excluded_non_vehicle_fuel",
+      "reason": "공식 상권정보의 가정용 연료 소매업 분류(2026-06-30): 차량 주유 지도 대상 제외"
     },
     {
       "row_number": 196,
@@ -1764,8 +1764,8 @@
       "name": "SK경인석유",
       "market": "두암1동군왕로 골목형상점가",
       "region": "전남광주",
-      "status": "needs_review",
-      "reason": "자동차 주유·충전 업종 확인 필요"
+      "status": "excluded_non_vehicle_fuel",
+      "reason": "공식 상권정보의 가정용 연료 소매업 분류(2026-06-30): 차량 주유 지도 대상 제외"
     },
     {
       "row_number": 197,
@@ -2007,8 +2007,8 @@
       "name": "모산석유",
       "market": "배방상점가",
       "region": "충남",
-      "status": "needs_review",
-      "reason": "자동차 주유·충전 업종 확인 필요"
+      "status": "excluded_non_vehicle_fuel",
+      "reason": "공식 상권정보의 가정용 연료 소매업 분류(2026-06-30): 차량 주유 지도 대상 제외"
     },
     {
       "row_number": 224,

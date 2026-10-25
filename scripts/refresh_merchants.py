@@ -171,6 +171,7 @@ def merge(sangsaeng, onnuri, old, checked):
             target['location_evidence'] = row['_location_evidence']
         if row.get('_fuel_evidence'):
             target['fuel_evidence'] = row['_fuel_evidence']
+        target['aliases'] = sorted(set(target['aliases'] + row.get('_annual_aliases', [])) - {target['name']})
         if row.get('_verification', {}).get('status') == 'confirmed':
             target['fuel_kind'] = station['fuel_kind']
             # Prefer current official coordinates for a unique physical site.

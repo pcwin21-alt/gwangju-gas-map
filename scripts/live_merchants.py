@@ -18,6 +18,21 @@ def address_key(address):
     return (region(address), parts[1] if len(parts) > 1 else '', ''.join(road.groups())) if road else None
 
 
+def evidence_matches(row, evidence):
+    return all(evidence.get(e) == row.get(r) for e, r in (
+        ('source_id', 'frCd'), ('merchant_name', 'frcsNm'),
+        ('market', 'mrktNm'), ('address', 'frcsAddr'))) and bool(evidence.get('sources'))
+
+
+def annual_aliases(row, annual_rows, fuel_evidence):
+    """Only curated exact annual identities may bridge legal and trading names."""
+    aliases = [e['annual_match'] for e in fuel_evidence if
+               evidence_matches(row, e) and e.get('fuel_kind') == 'liquid' and
+               e.get('annual_match') and all(e['annual_match'].get(k) for k in
+               ('가맹점명', '소속 시장명(또는 상점가)', '소재지', '취급품목'))]
+    return [r for r in annual_rows if any(all(r.get(k) == v for k, v in a.items()) for a in aliases)]
+
+
 def classify(row, annual_rows, known_fuel_addresses, fuel_evidence=()):
     name, category = row['frcsNm'], row.get('placeTypeNm', '')
     items = ' '.join(r.get('취급품목', '') for r in annual_rows)
@@ -26,13 +41,17 @@ def classify(row, annual_rows, known_fuel_addresses, fuel_evidence=()):
     if any(non_vehicle(r) for r in annual_rows) or re.search(
             r'기사식당|^CU|^GS25|^Gs25|세븐일레븐|쎄븐일레븐|이마트24|약국|다이어트|댄스|주류|알콜|카페|커피|가스케트|보일러|가스기구|가스설비|가스엔지니어링', name):
         return 'excluded_non_vehicle_fuel', '연료 외 상품 또는 업종', None
-    corroborated = any(e.get('source_id') == row['frCd'] and
-        e.get('merchant_name') == name and e.get('market') == row.get('mrktNm') and
-        e.get('address') == row['frcsAddr'] and e.get('fuel_kind') == 'liquid' and
-        e.get('sources') for e in fuel_evidence)
+    matched_evidence = [e for e in fuel_evidence if evidence_matches(row, e)]
+    corroborated = any(e.get('fuel_kind') == 'liquid' for e in matched_evidence)
     vehicle = bool(corroborated or re.search(r'주유소|충전소|오일뱅크', name) or
                    re.search(r'휘발유|무연|차량용.*(?:기름|가스|엘피지|충전)|^주유소|^주유$|^충전소|가스충전소', items) or
                    address_key(row['frcsAddr']) in known_fuel_addresses)
+    retail_only = [e for e in matched_evidence if e.get('fuel_kind') == 'non_vehicle' and
+                   e.get('registry_category') in ('가정용 연료 소매업', '일반판매소')]
+    if retail_only:
+        if vehicle:
+            return 'needs_review', '주유 업종과 일반 연료판매 업종 근거 충돌: 재확인 필요', None
+        return 'excluded_non_vehicle_fuel', retail_only[0]['reason'], None
     if not vehicle:
         # Heating-oil delivery, gas cylinders and energy companies are not
         # automatically places where a motorist can fill a vehicle.
@@ -67,6 +86,11 @@ def prepare(snapshot, annual, historical, sangsaeng, locations=(), fuel_evidence
         seen_ids.add(row['frCd'])
         seen_keys.add((identity(row), address_key(row['frcsAddr'])))
         annual_rows = index.get(identity(row), [])
+        annual_rows = list(annual_rows)
+        resolved_aliases = annual_aliases(row, annual['rows'], fuel_evidence)
+        for alias in resolved_aliases:
+            if alias not in annual_rows:
+                annual_rows.append(alias)
         # A name/market can recur in another province. Never transfer its items.
         annual_rows = [r for r in annual_rows if region(row['frcsAddr']) in
                        (['광주', '전남'] if r['소재지'] == '전남광주' else [region(r['소재지'])])]
@@ -77,6 +101,9 @@ def prepare(snapshot, annual, historical, sangsaeng, locations=(), fuel_evidence
                     'status': decision, 'reason': reason, 'candidate_id': 'live-' + row['frCd'],
                     'annual_candidate_ids': candidate_ids}
         if decision != 'located':
+            matched = [e for e in fuel_evidence if e['source_id'] == row['frCd'] and e['address'] == row['frcsAddr'] and e['merchant_name'] == row['frcsNm'] and e['market'] == row['mrktNm']]
+            if matched:
+                evidence['fuel_evidence'] = matched
             # Keep an audit decision, without flooding the user with unrelated
             # shops returned by a broad substring search such as "가스".
             evidence['show_pending'] = bool(annual_rows) and decision == 'needs_review'
@@ -84,6 +111,7 @@ def prepare(snapshot, annual, historical, sangsaeng, locations=(), fuel_evidence
             continue
         item = dict(row)
         item['_fuel_kind'] = kind
+        item['_annual_aliases'] = [r['가맹점명'] for r in resolved_aliases if r in annual_rows and r['가맹점명'] != row['frcsNm']]
         item['_fuel_evidence'] = [e for e in fuel_evidence if e['source_id'] == row['frCd'] and e['address'] == row['frcsAddr'] and e['merchant_name'] == row['frcsNm'] and e['market'] == row['mrktNm']]
         item['_verification'] = {'status': 'confirmed', 'checked_at': snapshot['checked_at'],
             'source_date': snapshot['checked_at'][:10], 'source_url': snapshot['source_url'],
