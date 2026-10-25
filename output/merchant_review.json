@@ -3663,55 +3663,151 @@
     "candidate_id": "1054803b1165f961c8cb5967",
     "name": "현대주유소",
     "market": "웃장",
-    "region": "전남광주",
+    "region": "전남",
     "status": "needs_review",
     "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조",
-    "show_pending": true
+    "show_pending": true,
+    "source_region": "전남광주",
+    "region_resolution": {
+      "status": "resolved",
+      "match_basis": "exact_market_name_consistent_region",
+      "evidence": [
+        {
+          "market": "웃장",
+          "reference_address": "전라남도 순천시 북문길 40",
+          "source_kind": "official_market_registry",
+          "source_url": "https://www.data.go.kr/data/15012894/standard.do",
+          "source_date": "2025-11-10"
+        }
+      ],
+      "scope": "province_only_no_station_address_or_membership_inference"
+    }
   },
   {
     "candidate_id": "badaf1066867bde046275626",
     "name": "청우에너지(주)",
     "market": "매월동상인회 골목형상점가",
-    "region": "전남광주",
+    "region": "광주",
     "status": "needs_review",
     "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조",
-    "show_pending": true
+    "show_pending": true,
+    "source_region": "전남광주",
+    "region_resolution": {
+      "status": "resolved",
+      "match_basis": "exact_market_name_consistent_region",
+      "evidence": [
+        {
+          "market": "매월동상인회 골목형상점가",
+          "reference_address": "광주광역시 서구 회재로 845 (매월동)",
+          "source_kind": "official_place_search",
+          "source_id": "05273200024",
+          "merchant_name": "(유)매월주유소",
+          "source_url": "https://www.onnuri.gift/place",
+          "checked_at": "2026-10-25T10:16:16+09:00"
+        },
+        {
+          "market": "매월동상인회 골목형상점가",
+          "reference_address": "광주광역시 서구 화개길 24-3 (매월동)",
+          "source_kind": "official_place_search",
+          "source_id": "05273200078",
+          "merchant_name": "대성석유",
+          "source_url": "https://www.onnuri.gift/place",
+          "checked_at": "2026-10-25T10:16:16+09:00"
+        }
+      ],
+      "scope": "province_only_no_station_address_or_membership_inference"
+    }
   },
   {
     "candidate_id": "466e6b1196a429bb71813335",
     "name": "㈜동행",
     "market": "신창동가구의거리일번국도상점가",
-    "region": "전남광주",
+    "region": "지역 미확정",
     "status": "needs_review",
     "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조",
-    "show_pending": true
+    "show_pending": true,
+    "source_region": "전남광주",
+    "region_resolution": {
+      "status": "unresolved",
+      "match_basis": "insufficient_or_conflicting_market_evidence",
+      "evidence": [],
+      "scope": "province_only_no_station_address_or_membership_inference"
+    }
   },
   {
     "candidate_id": "76ce41be9eed4c5a2696b79a",
     "name": "서부에너지",
     "market": "맛조이상인회 골목형상점가",
-    "region": "전남광주",
+    "region": "광주",
     "status": "needs_review",
     "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조",
-    "show_pending": true
+    "show_pending": true,
+    "source_region": "전남광주",
+    "region_resolution": {
+      "status": "resolved",
+      "match_basis": "exact_market_name_consistent_region",
+      "evidence": [
+        {
+          "market": "맛조이상인회 골목형상점가",
+          "reference_address": "광주광역시 서구 내방로 316 (내방동)",
+          "source_kind": "official_place_search",
+          "source_id": "05238200025",
+          "merchant_name": "힐링산야초 ",
+          "source_url": "https://www.onnuri.gift/place",
+          "checked_at": "2026-10-25T10:25:47+09:00"
+        },
+        {
+          "market": "맛조이상인회 골목형상점가",
+          "reference_address": "광주광역시 서구 화운로175번길 22 (내방동)",
+          "source_kind": "official_place_search",
+          "source_id": "05238200049",
+          "merchant_name": "내방체육관",
+          "source_url": "https://www.onnuri.gift/place",
+          "checked_at": "2026-10-25T10:25:47+09:00"
+        }
+      ],
+      "scope": "province_only_no_station_address_or_membership_inference"
+    }
   },
   {
     "candidate_id": "16c76726db45d997f4abf7cd",
     "name": "다올에너지산업(주)",
     "market": "신창동가구의거리일번국도상점가",
-    "region": "전남광주",
+    "region": "지역 미확정",
     "status": "needs_review",
     "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조",
-    "show_pending": true
+    "show_pending": true,
+    "source_region": "전남광주",
+    "region_resolution": {
+      "status": "unresolved",
+      "match_basis": "insufficient_or_conflicting_market_evidence",
+      "evidence": [],
+      "scope": "province_only_no_station_address_or_membership_inference"
+    }
   },
   {
     "candidate_id": "ffa12c23f1c57296633c7b4c",
     "name": "금호석유",
     "market": "송정매일시장",
-    "region": "전남광주",
+    "region": "광주",
     "status": "needs_review",
     "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조",
-    "show_pending": true
+    "show_pending": true,
+    "source_region": "전남광주",
+    "region_resolution": {
+      "status": "resolved",
+      "match_basis": "exact_market_name_consistent_region",
+      "evidence": [
+        {
+          "market": "송정매일시장",
+          "reference_address": "광주광역시 광산구 송정로 29번길 64",
+          "source_kind": "official_market_registry",
+          "source_url": "https://www.data.go.kr/data/15012894/standard.do",
+          "source_date": "2025-11-10"
+        }
+      ],
+      "scope": "province_only_no_station_address_or_membership_inference"
+    }
   },
   {
     "candidate_id": "3e5913425369e021c3f3bad8",

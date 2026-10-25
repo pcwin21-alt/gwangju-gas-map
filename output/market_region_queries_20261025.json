@@ -1,0 +1,157 @@
+{
+  "status": "complete",
+  "checked_at": "2026-10-25T10:25:47+09:00",
+  "source_url": "https://www.onnuri.gift/place",
+  "queries": [
+    {
+      "query": {
+        "keyword": "힐링산야초",
+        "area_code": "",
+        "status": "complete",
+        "expected": 1,
+        "received": 1,
+        "pages": 1
+      },
+      "rows": [
+        {
+          "frCd": "05238200025",
+          "frcsNm": "힐링산야초 ",
+          "frcsAddr": "광주광역시 서구 내방로 316 (내방동)",
+          "mrktNm": "맛조이상인회 골목형상점가",
+          "placeTypeCd": "08",
+          "placeTypeNm": "기타소매업",
+          "addrCd": "12240",
+          "latitude": 35.157391,
+          "longitude": 126.875002,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        }
+      ]
+    },
+    {
+      "query": {
+        "keyword": "타임뷰티",
+        "area_code": "",
+        "status": "complete",
+        "expected": 3,
+        "received": 3,
+        "pages": 1
+      },
+      "rows": [
+        {
+          "frCd": "09315200119",
+          "frcsNm": "리타임뷰티 다산점",
+          "frcsAddr": "경기도 남양주시 다산중앙로123번길 21-7 (다산동)",
+          "mrktNm": "다산역 로데오 상점가",
+          "placeTypeCd": "08",
+          "placeTypeNm": "기타소매업",
+          "addrCd": "41360",
+          "latitude": 37.622844,
+          "longitude": 127.15174,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        },
+        {
+          "frCd": "76010300275",
+          "frcsNm": "아모레 카운셀러(타임뷰티센터)",
+          "frcsAddr": "경상북도 안동시 경동로 862 (용상동)",
+          "mrktNm": "용상공설시장",
+          "placeTypeCd": "08",
+          "placeTypeNm": "기타소매업",
+          "addrCd": "47170",
+          "latitude": 36.559471,
+          "longitude": 128.750162,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        },
+        {
+          "frCd": "05238200048",
+          "frcsNm": "타임뷰티",
+          "frcsAddr": "전남광주통합특별시 서구 풍암순환로 172 (풍암동)",
+          "mrktNm": "금당산길상인회 골목형상점가",
+          "placeTypeCd": "09",
+          "placeTypeNm": "근린상권서비스",
+          "addrCd": "12240",
+          "latitude": 35.1258353731,
+          "longitude": 126.8830295218,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        }
+      ]
+    },
+    {
+      "query": {
+        "keyword": "템퍼신창점",
+        "area_code": "",
+        "status": "complete",
+        "expected": 0,
+        "received": 0,
+        "pages": 0
+      },
+      "rows": []
+    },
+    {
+      "query": {
+        "keyword": "신창가구갤러리",
+        "area_code": "",
+        "status": "complete",
+        "expected": 0,
+        "received": 0,
+        "pages": 0
+      },
+      "rows": []
+    },
+    {
+      "query": {
+        "keyword": "내방체육관",
+        "area_code": "",
+        "status": "complete",
+        "expected": 1,
+        "received": 1,
+        "pages": 1
+      },
+      "rows": [
+        {
+          "frCd": "05238200049",
+          "frcsNm": "내방체육관",
+          "frcsAddr": "광주광역시 서구 화운로175번길 22 (내방동)",
+          "mrktNm": "맛조이상인회 골목형상점가",
+          "placeTypeCd": "09",
+          "placeTypeNm": "근린상권서비스",
+          "addrCd": "12240",
+          "latitude": 35.154736,
+          "longitude": 126.874446,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        }
+      ]
+    },
+    {
+      "query": {
+        "keyword": "산동교청국장",
+        "area_code": "",
+        "status": "complete",
+        "expected": 0,
+        "received": 0,
+        "pages": 0
+      },
+      "rows": []
+    },
+    {
+      "query": {
+        "keyword": "우드앤",
+        "area_code": "",
+        "status": "complete",
+        "expected": 0,
+        "received": 0,
+        "pages": 0
+      },
+      "rows": []
+    }
+  ]
+}

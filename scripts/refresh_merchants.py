@@ -10,9 +10,11 @@ import requests
 try:
     from onnuri_live import collect, SOURCE
     from live_merchants import prepare, address_key
+    from market_regions import resolve_pending_regions
 except ModuleNotFoundError:
     from scripts.onnuri_live import collect, SOURCE
     from scripts.live_merchants import prepare, address_key
+    from scripts.market_regions import resolve_pending_regions
 try:
     from official_onnuri import fetch_snapshot
 except ModuleNotFoundError:
@@ -312,6 +314,7 @@ def main():
         raise
     stations, review = merge(live, historical, old, checked)
     review.extend(official_review)
+    review = resolve_pending_regions(review, load('market_region_evidence.json', {}).get('rows', []))
     status['onnuri'] = {'status': 'confirmed', 'source_date': places['checked_at'][:10],
         'checked_at': places['checked_at'], 'attempted_at': checked, 'source_url': SOURCE,
         'scope': places['scope'], 'query_count': len(places['queries']),

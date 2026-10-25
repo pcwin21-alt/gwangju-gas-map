@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-25T10:27:21+09:00",
+  "scope": "market_region_only_not_station_locations",
+  "rows": [
+    {
+      "market": "웃장",
+      "reference_address": "전라남도 순천시 북문길 40",
+      "source_kind": "official_market_registry",
+      "source_url": "https://www.data.go.kr/data/15012894/standard.do",
+      "source_date": "2025-11-10"
+    },
+    {
+      "market": "송정매일시장",
+      "reference_address": "광주광역시 광산구 송정로 29번길 64",
+      "source_kind": "official_market_registry",
+      "source_url": "https://www.data.go.kr/data/15012894/standard.do",
+      "source_date": "2025-11-10"
+    },
+    {
+      "market": "매월동상인회 골목형상점가",
+      "reference_address": "광주광역시 서구 회재로 845 (매월동)",
+      "source_kind": "official_place_search",
+      "source_id": "05273200024",
+      "merchant_name": "(유)매월주유소",
+      "source_url": "https://www.onnuri.gift/place",
+      "checked_at": "2026-10-25T10:16:16+09:00"
+    },
+    {
+      "market": "매월동상인회 골목형상점가",
+      "reference_address": "광주광역시 서구 화개길 24-3 (매월동)",
+      "source_kind": "official_place_search",
+      "source_id": "05273200078",
+      "merchant_name": "대성석유",
+      "source_url": "https://www.onnuri.gift/place",
+      "checked_at": "2026-10-25T10:16:16+09:00"
+    },
+    {
+      "market": "맛조이상인회 골목형상점가",
+      "reference_address": "광주광역시 서구 내방로 316 (내방동)",
+      "source_kind": "official_place_search",
+      "source_id": "05238200025",
+      "merchant_name": "힐링산야초 ",
+      "source_url": "https://www.onnuri.gift/place",
+      "checked_at": "2026-10-25T10:25:47+09:00"
+    },
+    {
+      "market": "맛조이상인회 골목형상점가",
+      "reference_address": "광주광역시 서구 화운로175번길 22 (내방동)",
+      "source_kind": "official_place_search",
+      "source_id": "05238200049",
+      "merchant_name": "내방체육관",
+      "source_url": "https://www.onnuri.gift/place",
+      "checked_at": "2026-10-25T10:25:47+09:00"
+    }
+  ]
+}
