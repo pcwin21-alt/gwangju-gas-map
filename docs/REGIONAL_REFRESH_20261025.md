@@ -47,4 +47,9 @@ Python 45개·Node 19개 검사와 공개 파일 생성이 통과했다. 현재 
 
 ## 공개 배포 검증
 
-배포 후 실제 기준일과 지역별 표시를 확인해 기록한다.
+- 반영 커밋: `cd70f2b175c3874c0df1501f83498d80a1e9e689`.
+- [데이터 및 경유 연결 검사](https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/40150039515), [사이트 생성·배포](https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/40150039511), [GitHub Pages 게시](https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/40150046894) 모두 성공.
+- 실제 공개 브라우저에서 전국 202곳·대기 33건, 전남 22곳, 서울 1곳과 공식 검색일 `2026-10-25`를 확인했다.
+- 전남 390×844 화면 증빙: `C:/Users/unw/OneDrive/Documents/Playground/output/onnuri-jeonnam-refresh-20261025.png`.
+- 원본 프로젝트 폴더에 fast-forward로 동기화했으며 기존 `CLAUDE.md` 수정 및 미추적 사용자 파일은 보존했다.
+- Global Eval: 완료. 실제 수집·순서·비교·검사·배포·화면 증거를 확인했다. 전국 전수성 및 GitHub 서버의 원천 연결 제약은 미해결 한계로 유지한다.
