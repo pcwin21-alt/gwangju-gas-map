@@ -1,0 +1,1572 @@
+{
+  "source": "Kakao Local via k-skill-proxy",
+  "checked_at": "2026-10-25T11:15:28.613926+09:00",
+  "rows": [
+    {
+      "query": "순천 현대주유소",
+      "response": {
+        "documents": [
+          {
+            "address_name": "전남광주통합특별시 순천시 서면 학구리 654-3",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > HD현대오일뱅크주유소",
+            "distance": "",
+            "id": "7962960",
+            "phone": "061-755-5144",
+            "place_name": "스타트주유소",
+            "place_url": "http://place.map.kakao.com/7962960",
+            "road_address_name": "전남광주통합특별시 순천시 서면 순천로 710",
+            "x": "127.442052738719",
+            "y": "35.0373043970702"
+          },
+          {
+            "address_name": "전남광주통합특별시 순천시 가곡동 159-1",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > HD현대오일뱅크주유소",
+            "distance": "",
+            "id": "2072510296",
+            "phone": "061-755-0053",
+            "place_name": "팔마주유소",
+            "place_url": "http://place.map.kakao.com/2072510296",
+            "road_address_name": "전남광주통합특별시 순천시 중앙로 480",
+            "x": "127.488798653042",
+            "y": "34.9869584196126"
+          },
+          {
+            "address_name": "전남광주통합특별시 순천시 석현동 1",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > HD현대오일뱅크주유소",
+            "distance": "",
+            "id": "8167935",
+            "phone": "061-752-4837",
+            "place_name": "강변주유소",
+            "place_url": "http://place.map.kakao.com/8167935",
+            "road_address_name": "전남광주통합특별시 순천시 강변로 961",
+            "x": "127.48808611616876",
+            "y": "34.97079512003696"
+          },
+          {
+            "address_name": "전남광주통합특별시 순천시 장천동 14-10",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > HD현대오일뱅크주유소",
+            "distance": "",
+            "id": "9208299",
+            "phone": "061-744-4887",
+            "place_name": "순천주유소",
+            "place_url": "http://place.map.kakao.com/9208299",
+            "road_address_name": "전남광주통합특별시 순천시 강남로 45",
+            "x": "127.491213981482",
+            "y": "34.949772290651"
+          },
+          {
+            "address_name": "전남광주통합특별시 순천시 남정동 538-16",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > HD현대오일뱅크주유소",
+            "distance": "",
+            "id": "7977505",
+            "phone": "061-741-7189",
+            "place_name": "순천 제일주유소",
+            "place_url": "http://place.map.kakao.com/7977505",
+            "road_address_name": "전남광주통합특별시 순천시 우석로 124",
+            "x": "127.48861001655",
+            "y": "34.9396981498591"
+          },
+          {
+            "address_name": "전남광주통합특별시 순천시 남정동 481",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > HD현대오일뱅크주유소",
+            "distance": "",
+            "id": "8230209",
+            "phone": "061-744-6337",
+            "place_name": "남정행운주유소",
+            "place_url": "http://place.map.kakao.com/8230209",
+            "road_address_name": "전남광주통합특별시 순천시 우석로 83",
+            "x": "127.488623317153",
+            "y": "34.9360348826259"
+          },
+          {
+            "address_name": "전남광주통합특별시 순천시 생목동 28-4",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > HD현대오일뱅크주유소",
+            "distance": "",
+            "id": "11295442",
+            "phone": "061-744-8411",
+            "place_name": "생목주유소",
+            "place_url": "http://place.map.kakao.com/11295442",
+            "road_address_name": "전남광주통합특별시 순천시 이수로 182",
+            "x": "127.50553357516777",
+            "y": "34.949281779364256"
+          },
+          {
+            "address_name": "전남광주통합특별시 순천시 조례동 1417-3",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > HD현대오일뱅크주유소",
+            "distance": "",
+            "id": "1949473374",
+            "phone": "061-721-5189",
+            "place_name": "봉화터널주유소",
+            "place_url": "http://place.map.kakao.com/1949473374",
+            "road_address_name": "전남광주통합특별시 순천시 봉화로 208",
+            "x": "127.512692008624",
+            "y": "34.9580591398586"
+          },
+          {
+            "address_name": "전남광주통합특별시 순천시 덕월동 887-4",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > HD현대오일뱅크주유소",
+            "distance": "",
+            "id": "11572373",
+            "phone": "061-743-4485",
+            "place_name": "덕월주유소",
+            "place_url": "http://place.map.kakao.com/11572373",
+            "road_address_name": "전남광주통합특별시 순천시 상사호길 46",
+            "x": "127.48480443825771",
+            "y": "34.92246454030874"
+          },
+          {
+            "address_name": "전남광주통합특별시 순천시 왕지동 719-1",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > HD현대오일뱅크주유소",
+            "distance": "",
+            "id": "11308057",
+            "phone": "061-721-4894",
+            "place_name": "판교",
+            "place_url": "http://place.map.kakao.com/11308057",
+            "road_address_name": "전남광주통합특별시 순천시 백강로 492",
+            "x": "127.523338107179",
+            "y": "34.9772959541738"
+          },
+          {
+            "address_name": "전남광주통합특별시 순천시 서면 구상리 151-1",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > HD현대오일뱅크주유소",
+            "distance": "",
+            "id": "7829109",
+            "phone": "061-755-5368",
+            "place_name": "대지주유소",
+            "place_url": "http://place.map.kakao.com/7829109",
+            "road_address_name": "전남광주통합특별시 순천시 서면 매천로 385",
+            "x": "127.545492230889",
+            "y": "34.9881915840214"
+          },
+          {
+            "address_name": "전남광주통합특별시 순천시 해룡면 상삼리 464-3",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > HD현대오일뱅크주유소",
+            "distance": "",
+            "id": "26425978",
+            "phone": "061-724-5599",
+            "place_name": "신대셀프주유소",
+            "place_url": "http://place.map.kakao.com/26425978",
+            "road_address_name": "전남광주통합특별시 순천시 해룡면 상성길 286",
+            "x": "127.536445544828",
+            "y": "34.943866223311"
+          },
+          {
+            "address_name": "전남광주통합특별시 순천시 별량면 봉림리 833-1",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > HD현대오일뱅크주유소",
+            "distance": "",
+            "id": "11093982",
+            "phone": "061-742-7711",
+            "place_name": "신석주유소",
+            "place_url": "http://place.map.kakao.com/11093982",
+            "road_address_name": "",
+            "x": "127.443663475132",
+            "y": "34.867799199634"
+          },
+          {
+            "address_name": "전남광주통합특별시 곡성군 석곡면 능파리 365-5",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > HD현대오일뱅크주유소",
+            "distance": "",
+            "id": "10487217",
+            "phone": "061-363-5041",
+            "place_name": "석곡주유소",
+            "place_url": "http://place.map.kakao.com/10487217",
+            "road_address_name": "전남광주통합특별시 곡성군 석곡면 석곡로 96",
+            "x": "127.254823211632",
+            "y": "35.1353519909796"
+          },
+          {
+            "address_name": "전남광주통합특별시 순천시 별량면 금치리 1353-1",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > HD현대오일뱅크주유소",
+            "distance": "",
+            "id": "25503672",
+            "phone": "061-744-6332",
+            "place_name": "해바라기주유소",
+            "place_url": "http://place.map.kakao.com/25503672",
+            "road_address_name": "",
+            "x": "127.37946483612969",
+            "y": "34.84603500080152"
+          }
+        ],
+        "meta": {
+          "is_end": false,
+          "pageable_count": 19,
+          "same_name": {
+            "keyword": "현대주유소",
+            "region": [],
+            "selected_region": "전남광주 순천시"
+          },
+          "total_count": 19
+        },
+        "proxy": {
+          "name": "k-skill-proxy",
+          "cache": {
+            "hit": false,
+            "ttl_ms": 300000
+          },
+          "requested_at": "2026-10-25T02:15:28.648Z"
+        }
+      }
+    },
+    {
+      "query": "순천 중앙로 172",
+      "checked_at": "2026-10-25T11:15:52+09:00",
+      "response": {
+        "documents": [
+          {
+            "address_name": "전남광주통합특별시 순천시 매곡동 55-1",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > GS칼텍스",
+            "distance": "",
+            "id": "10987549",
+            "phone": "061-752-3327",
+            "place_name": "현대주유소",
+            "place_url": "http://place.map.kakao.com/10987549",
+            "road_address_name": "전남광주통합특별시 순천시 중앙로 172",
+            "x": "127.484715707748",
+            "y": "34.9609574662447"
+          },
+          {
+            "address_name": "전남광주통합특별시 순천시 매곡동 55-1",
+            "category_group_code": "AG2",
+            "category_group_name": "중개업소",
+            "category_name": "부동산 > 부동산서비스 > 부동산중개업",
+            "distance": "",
+            "id": "23924703",
+            "phone": "061-751-5100",
+            "place_name": "모이세부동산",
+            "place_url": "http://place.map.kakao.com/23924703",
+            "road_address_name": "전남광주통합특별시 순천시 중앙로 172",
+            "x": "127.484695275157",
+            "y": "34.9612063281408"
+          }
+        ],
+        "meta": {
+          "is_end": true,
+          "pageable_count": 2,
+          "same_name": {
+            "keyword": "",
+            "region": [],
+            "selected_region": "전남광주 순천시 중앙로"
+          },
+          "total_count": 2
+        },
+        "proxy": {
+          "name": "k-skill-proxy",
+          "cache": {
+            "hit": false,
+            "ttl_ms": 300000
+          },
+          "requested_at": "2026-10-25T02:15:52.646Z"
+        }
+      }
+    },
+    {
+      "query": "광주 대성석유",
+      "checked_at": "2026-10-25T11:15:53+09:00",
+      "response": {
+        "documents": [
+          {
+            "address_name": "전남광주통합특별시 서구 매월동 154-1",
+            "category_group_code": "",
+            "category_group_name": "",
+            "category_name": "서비스,산업 > 에너지 > 석유",
+            "distance": "",
+            "id": "15911190",
+            "phone": "062-382-9944",
+            "place_name": "대성석유",
+            "place_url": "http://place.map.kakao.com/15911190",
+            "road_address_name": "전남광주통합특별시 서구 화개길 24-3",
+            "x": "126.856857579284",
+            "y": "35.1206808897726"
+          }
+        ],
+        "meta": {
+          "is_end": true,
+          "pageable_count": 1,
+          "same_name": {
+            "keyword": "대성석유",
+            "region": [],
+            "selected_region": "전남광주통합특별시"
+          },
+          "total_count": 1
+        },
+        "proxy": {
+          "name": "k-skill-proxy",
+          "cache": {
+            "hit": false,
+            "ttl_ms": 300000
+          },
+          "requested_at": "2026-10-25T02:15:53.643Z"
+        }
+      }
+    },
+    {
+      "query": "광주 광주석유판매협동조합",
+      "checked_at": "2026-10-25T11:15:54+09:00",
+      "response": {
+        "documents": [
+          {
+            "address_name": "전남광주통합특별시 북구 신안동 128-14",
+            "category_group_code": "",
+            "category_group_name": "",
+            "category_name": "서비스,산업 > 에너지 > 석유",
+            "distance": "",
+            "id": "1378209397",
+            "phone": "062-525-5353",
+            "place_name": "광주석유판매협동조합",
+            "place_url": "http://place.map.kakao.com/1378209397",
+            "road_address_name": "전남광주통합특별시 북구 자미로10번길 11",
+            "x": "126.903543734748",
+            "y": "35.1669073924839"
+          }
+        ],
+        "meta": {
+          "is_end": true,
+          "pageable_count": 1,
+          "same_name": {
+            "keyword": "광주석유판매협동조합",
+            "region": [],
+            "selected_region": "전남광주통합특별시"
+          },
+          "total_count": 1
+        },
+        "proxy": {
+          "name": "k-skill-proxy",
+          "cache": {
+            "hit": false,
+            "ttl_ms": 300000
+          },
+          "requested_at": "2026-10-25T02:15:54.641Z"
+        }
+      }
+    },
+    {
+      "query": "광주 청우주유소",
+      "checked_at": "2026-10-25T11:15:55+09:00",
+      "response": {
+        "documents": [],
+        "meta": {
+          "is_end": true,
+          "pageable_count": 0,
+          "same_name": {
+            "keyword": "광주 청우주유소",
+            "region": [],
+            "selected_region": ""
+          },
+          "total_count": 0
+        },
+        "proxy": {
+          "name": "k-skill-proxy",
+          "cache": {
+            "hit": false,
+            "ttl_ms": 300000
+          },
+          "requested_at": "2026-10-25T02:15:55.769Z"
+        }
+      }
+    },
+    {
+      "query": "광주 서부에너지",
+      "checked_at": "2026-10-25T11:15:56+09:00",
+      "response": {
+        "documents": [
+          {
+            "address_name": "경기 광주시 장지동 77-11",
+            "category_group_code": "",
+            "category_group_name": "",
+            "category_name": "서비스,산업 > 에너지 > 가스",
+            "distance": "",
+            "id": "77831468",
+            "phone": "1599-3366",
+            "place_name": "코원에너지 광주서부고객센터",
+            "place_url": "http://place.map.kakao.com/77831468",
+            "road_address_name": "경기 광주시 순암로 46",
+            "x": "127.244248478415",
+            "y": "37.3950127493493"
+          },
+          {
+            "address_name": "경기 성남시 수정구 수진동 2963",
+            "category_group_code": "",
+            "category_group_name": "",
+            "category_name": "서비스,산업 > 에너지",
+            "distance": "",
+            "id": "26083812",
+            "phone": "1599-3366",
+            "place_name": "코원에너지서비스 성남서부센타",
+            "place_url": "http://place.map.kakao.com/26083812",
+            "road_address_name": "경기 성남시 수정구 수정로 86",
+            "x": "127.129976502426",
+            "y": "37.4401471655685"
+          }
+        ],
+        "meta": {
+          "is_end": true,
+          "pageable_count": 2,
+          "same_name": {
+            "keyword": "서부에너지",
+            "region": [],
+            "selected_region": "경기 광주시"
+          },
+          "total_count": 2
+        },
+        "proxy": {
+          "name": "k-skill-proxy",
+          "cache": {
+            "hit": false,
+            "ttl_ms": 300000
+          },
+          "requested_at": "2026-10-25T02:15:56.848Z"
+        }
+      }
+    },
+    {
+      "query": "광주 송정동 금호석유",
+      "checked_at": "2026-10-25T11:15:57+09:00",
+      "response": {
+        "documents": [
+          {
+            "address_name": "전남광주통합특별시 광산구 송정동 820-5",
+            "category_group_code": "",
+            "category_group_name": "",
+            "category_name": "서비스,산업 > 에너지",
+            "distance": "",
+            "id": "10217365",
+            "phone": "062-942-5141",
+            "place_name": "금호석유",
+            "place_url": "http://place.map.kakao.com/10217365",
+            "road_address_name": "전남광주통합특별시 광산구 송정로15번길 71",
+            "x": "126.79625606685471",
+            "y": "35.138632236471906"
+          },
+          {
+            "address_name": "전남광주통합특별시 남구 월산동 913-37",
+            "category_group_code": "",
+            "category_group_name": "",
+            "category_name": "서비스,산업 > 에너지 > 석유",
+            "distance": "",
+            "id": "1545009314",
+            "phone": "010-2592-8877",
+            "place_name": "에스케이금호석유",
+            "place_url": "http://place.map.kakao.com/1545009314",
+            "road_address_name": "전남광주통합특별시 남구 금화로 476",
+            "x": "126.89158605612333",
+            "y": "35.14849242315269"
+          }
+        ],
+        "meta": {
+          "is_end": true,
+          "pageable_count": 2,
+          "same_name": {
+            "keyword": "금호석유",
+            "region": [],
+            "selected_region": "전남광주 광산구 송정동"
+          },
+          "total_count": 2
+        },
+        "proxy": {
+          "name": "k-skill-proxy",
+          "cache": {
+            "hit": false,
+            "ttl_ms": 300000
+          },
+          "requested_at": "2026-10-25T02:15:57.911Z"
+        }
+      }
+    },
+    {
+      "query": "광주 동행 주유소",
+      "checked_at": "2026-10-25T11:15:58+09:00",
+      "response": {
+        "documents": [],
+        "meta": {
+          "is_end": true,
+          "pageable_count": 0,
+          "same_name": {
+            "keyword": "광주 동행 주유소",
+            "region": [],
+            "selected_region": ""
+          },
+          "total_count": 0
+        },
+        "proxy": {
+          "name": "k-skill-proxy",
+          "cache": {
+            "hit": false,
+            "ttl_ms": 300000
+          },
+          "requested_at": "2026-10-25T02:15:59.011Z"
+        }
+      }
+    },
+    {
+      "query": "칠곡 세진석유",
+      "checked_at": "2026-10-25T11:16:00+09:00",
+      "response": {
+        "documents": [],
+        "meta": {
+          "is_end": true,
+          "pageable_count": 0,
+          "same_name": {
+            "keyword": "세진석유",
+            "region": [],
+            "selected_region": "경북 칠곡군"
+          },
+          "total_count": 0
+        },
+        "proxy": {
+          "name": "k-skill-proxy",
+          "cache": {
+            "hit": false,
+            "ttl_ms": 300000
+          },
+          "requested_at": "2026-10-25T02:16:00.116Z"
+        }
+      }
+    },
+    {
+      "query": "봉화 춘양주유소",
+      "checked_at": "2026-10-25T11:16:01+09:00",
+      "response": {
+        "documents": [
+          {
+            "address_name": "경북 봉화군 춘양면 의양리 427-5",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > SK주유소",
+            "distance": "",
+            "id": "8585293",
+            "phone": "054-672-3355",
+            "place_name": "춘양주유소",
+            "place_url": "http://place.map.kakao.com/8585293",
+            "road_address_name": "경북 봉화군 춘양면 의양로 81",
+            "x": "128.912825825609",
+            "y": "36.9346070019049"
+          },
+          {
+            "address_name": "경북 봉화군 춘양면 소로리 636-5",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > 농협주유소",
+            "distance": "",
+            "id": "27432181",
+            "phone": "054-672-3395",
+            "place_name": "춘양농협주유소",
+            "place_url": "http://place.map.kakao.com/27432181",
+            "road_address_name": "경북 봉화군 춘양면 소천로 36",
+            "x": "128.92195807386",
+            "y": "36.922318309458"
+          },
+          {
+            "address_name": "경북 봉화군 춘양면 서벽리 506-6",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > SK주유소",
+            "distance": "",
+            "id": "11075826",
+            "phone": "054-673-0098",
+            "place_name": "수목원주유소",
+            "place_url": "http://place.map.kakao.com/11075826",
+            "road_address_name": "경북 봉화군 춘양면 춘양로 1437",
+            "x": "128.83218760561783",
+            "y": "37.008149977500054"
+          }
+        ],
+        "meta": {
+          "is_end": true,
+          "pageable_count": 3,
+          "same_name": {
+            "keyword": "춘양주유소",
+            "region": [],
+            "selected_region": "경북 봉화군"
+          },
+          "total_count": 3
+        },
+        "proxy": {
+          "name": "k-skill-proxy",
+          "cache": {
+            "hit": false,
+            "ttl_ms": 300000
+          },
+          "requested_at": "2026-10-25T02:16:01.178Z"
+        }
+      }
+    },
+    {
+      "query": "경주 제일가스",
+      "checked_at": "2026-10-25T11:16:02+09:00",
+      "response": {
+        "documents": [],
+        "meta": {
+          "is_end": true,
+          "pageable_count": 0,
+          "same_name": {
+            "keyword": "제일가스",
+            "region": [],
+            "selected_region": "경북 경주시"
+          },
+          "total_count": 0
+        },
+        "proxy": {
+          "name": "k-skill-proxy",
+          "cache": {
+            "hit": false,
+            "ttl_ms": 300000
+          },
+          "requested_at": "2026-10-25T02:16:02.240Z"
+        }
+      }
+    },
+    {
+      "query": "경주 양북주유소",
+      "checked_at": "2026-10-25T11:16:03+09:00",
+      "response": {
+        "documents": [
+          {
+            "address_name": "경북 경주시 문무대왕면 어일리 1295-175",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > HD현대오일뱅크주유소",
+            "distance": "",
+            "id": "10574363",
+            "phone": "054-744-2103",
+            "place_name": "양북주유소",
+            "place_url": "http://place.map.kakao.com/10574363",
+            "road_address_name": "경북 경주시 문무대왕면 감은로 23",
+            "x": "129.439518317075",
+            "y": "35.7930651628584"
+          }
+        ],
+        "meta": {
+          "is_end": true,
+          "pageable_count": 1,
+          "same_name": {
+            "keyword": "양북주유소",
+            "region": [],
+            "selected_region": "경북 경주시"
+          },
+          "total_count": 1
+        },
+        "proxy": {
+          "name": "k-skill-proxy",
+          "cache": {
+            "hit": false,
+            "ttl_ms": 300000
+          },
+          "requested_at": "2026-10-25T02:16:03.377Z"
+        }
+      }
+    },
+    {
+      "query": "문경 문희주유소",
+      "checked_at": "2026-10-25T11:16:04+09:00",
+      "response": {
+        "documents": [
+          {
+            "address_name": "경북 문경시 문경읍 하리 105-1",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > S-OIL",
+            "distance": "",
+            "id": "11324977",
+            "phone": "054-571-5182",
+            "place_name": "문희주유소",
+            "place_url": "http://place.map.kakao.com/11324977",
+            "road_address_name": "경북 문경시 문경읍 청운로 47",
+            "x": "128.106225312473",
+            "y": "36.7367057107188"
+          }
+        ],
+        "meta": {
+          "is_end": true,
+          "pageable_count": 1,
+          "same_name": {
+            "keyword": "문희주유소",
+            "region": [],
+            "selected_region": "경북 문경시"
+          },
+          "total_count": 1
+        },
+        "proxy": {
+          "name": "k-skill-proxy",
+          "cache": {
+            "hit": false,
+            "ttl_ms": 300000
+          },
+          "requested_at": "2026-10-25T02:16:04.455Z"
+        }
+      }
+    },
+    {
+      "query": "안동 명륜주유소",
+      "checked_at": "2026-10-25T11:16:05+09:00",
+      "response": {
+        "documents": [
+          {
+            "address_name": "경북 안동시 명륜동 315",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > SK주유소",
+            "distance": "",
+            "id": "9030647",
+            "phone": "054-859-8251",
+            "place_name": "대원석유직영 명륜주유소",
+            "place_url": "http://place.map.kakao.com/9030647",
+            "road_address_name": "경북 안동시 퇴계로 134",
+            "x": "128.731677472305",
+            "y": "36.5690178839556"
+          },
+          {
+            "address_name": "경북 안동시 안기동 92-33",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > S-OIL",
+            "distance": "",
+            "id": "8198022",
+            "phone": "054-842-0051",
+            "place_name": "경안주유소",
+            "place_url": "http://place.map.kakao.com/8198022",
+            "road_address_name": "경북 안동시 제비원로 224",
+            "x": "128.719337106914",
+            "y": "36.5718635879498"
+          },
+          {
+            "address_name": "경북 안동시 법흥동 64-1",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > SK주유소",
+            "distance": "",
+            "id": "11572431",
+            "phone": "054-853-8881",
+            "place_name": "법흥주유소",
+            "place_url": "http://place.map.kakao.com/11572431",
+            "road_address_name": "경북 안동시 경동로 741",
+            "x": "128.738912812358",
+            "y": "36.5645011127523"
+          },
+          {
+            "address_name": "경북 안동시 안기동 180-29",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > SK주유소",
+            "distance": "",
+            "id": "8666349",
+            "phone": "054-852-2815",
+            "place_name": "현대주유소",
+            "place_url": "http://place.map.kakao.com/8666349",
+            "road_address_name": "경북 안동시 제비원로 243",
+            "x": "128.71887819322",
+            "y": "36.573737138756"
+          },
+          {
+            "address_name": "경북 안동시 법흥동 59-39",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > S-OIL",
+            "distance": "",
+            "id": "17135882",
+            "phone": "054-843-0855",
+            "place_name": "동부주유소",
+            "place_url": "http://place.map.kakao.com/17135882",
+            "road_address_name": "경북 안동시 경동로 754",
+            "x": "128.74040408485115",
+            "y": "36.56415858106328"
+          },
+          {
+            "address_name": "경북 안동시 태화동 227-2",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > GS칼텍스",
+            "distance": "",
+            "id": "8473447",
+            "phone": "054-841-5151",
+            "place_name": "아리랑 주유소",
+            "place_url": "http://place.map.kakao.com/8473447",
+            "road_address_name": "경북 안동시 태화중앙로 90",
+            "x": "128.713426547547",
+            "y": "36.5601776482215"
+          },
+          {
+            "address_name": "경북 안동시 정하동 313-12",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > SK주유소",
+            "distance": "",
+            "id": "10242470",
+            "phone": "054-841-0051",
+            "place_name": "대원주유소",
+            "place_url": "http://place.map.kakao.com/10242470",
+            "road_address_name": "경북 안동시 강남로 293",
+            "x": "128.733431963638",
+            "y": "36.5537577948661"
+          },
+          {
+            "address_name": "경북 안동시 용상동 1432-2",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > GS칼텍스",
+            "distance": "",
+            "id": "11009736",
+            "phone": "054-821-2728",
+            "place_name": "낙동강주유소",
+            "place_url": "http://place.map.kakao.com/11009736",
+            "road_address_name": "경북 안동시 경동로 823",
+            "x": "128.747278499652",
+            "y": "36.5618090424078"
+          },
+          {
+            "address_name": "경북 안동시 정하동 381-2",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > HD현대오일뱅크주유소",
+            "distance": "",
+            "id": "26563165",
+            "phone": "054-858-5178",
+            "place_name": "신풍주유소",
+            "place_url": "http://place.map.kakao.com/26563165",
+            "road_address_name": "경북 안동시 강남로 163",
+            "x": "128.71911986020905",
+            "y": "36.55228553624793"
+          },
+          {
+            "address_name": "경북 안동시 정하동 384-5",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > S-OIL",
+            "distance": "",
+            "id": "9262668",
+            "phone": "054-858-6451",
+            "place_name": "안동주유소",
+            "place_url": "http://place.map.kakao.com/9262668",
+            "road_address_name": "경북 안동시 강남로 154",
+            "x": "128.7181633919082",
+            "y": "36.551556875982904"
+          },
+          {
+            "address_name": "경북 안동시 옥동 639-16",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > GS칼텍스",
+            "distance": "",
+            "id": "8001381",
+            "phone": "054-842-5151",
+            "place_name": "안동대성주유소",
+            "place_url": "http://place.map.kakao.com/8001381",
+            "road_address_name": "경북 안동시 경북대로 350",
+            "x": "128.70370384915802",
+            "y": "36.56134419030959"
+          },
+          {
+            "address_name": "경북 안동시 수상동 820-65",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > SK주유소",
+            "distance": "",
+            "id": "8205211",
+            "phone": "054-859-2092",
+            "place_name": "금호주유소",
+            "place_url": "http://place.map.kakao.com/8205211",
+            "road_address_name": "경북 안동시 강남로 75-1",
+            "x": "128.709615606725",
+            "y": "36.5498344554384"
+          },
+          {
+            "address_name": "경북 안동시 옥동 800",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > GS칼텍스",
+            "distance": "",
+            "id": "24208231",
+            "phone": "054-852-9116",
+            "place_name": "GS칼텍스 이마트안동점주유소",
+            "place_url": "http://place.map.kakao.com/24208231",
+            "road_address_name": "경북 안동시 옥서로 44",
+            "x": "128.69921092568578",
+            "y": "36.55754018921925"
+          },
+          {
+            "address_name": "경북 안동시 송현동 422-5",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > SK주유소",
+            "distance": "",
+            "id": "8012611",
+            "phone": "054-855-3673",
+            "place_name": "영풍주유소",
+            "place_url": "http://place.map.kakao.com/8012611",
+            "road_address_name": "경북 안동시 경북대로 543",
+            "x": "128.697630097937",
+            "y": "36.5769610380794"
+          },
+          {
+            "address_name": "경북 안동시 용상동 1078-114",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > HD현대오일뱅크주유소",
+            "distance": "",
+            "id": "12721799",
+            "phone": "054-821-1005",
+            "place_name": "진영에너지 착한VIP주유소",
+            "place_url": "http://place.map.kakao.com/12721799",
+            "road_address_name": "경북 안동시 경동로 962",
+            "x": "128.759069951877",
+            "y": "36.553984100378"
+          }
+        ],
+        "meta": {
+          "is_end": false,
+          "pageable_count": 37,
+          "same_name": {
+            "keyword": "주유소",
+            "region": [],
+            "selected_region": "경북 안동시 명륜동"
+          },
+          "total_count": 37
+        },
+        "proxy": {
+          "name": "k-skill-proxy",
+          "cache": {
+            "hit": false,
+            "ttl_ms": 300000
+          },
+          "requested_at": "2026-10-25T02:16:05.509Z"
+        }
+      }
+    },
+    {
+      "query": "울진 기성주유소",
+      "checked_at": "2026-10-25T11:16:06+09:00",
+      "response": {
+        "documents": [
+          {
+            "address_name": "경북 울진군 기성면 척산리 290-1",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > S-OIL",
+            "distance": "",
+            "id": "8227202",
+            "phone": "054-787-7551",
+            "place_name": "기성주유소",
+            "place_url": "http://place.map.kakao.com/8227202",
+            "road_address_name": "경북 울진군 기성면 기성로 633",
+            "x": "129.451865051211",
+            "y": "36.7957551407477"
+          }
+        ],
+        "meta": {
+          "is_end": true,
+          "pageable_count": 1,
+          "same_name": {
+            "keyword": "기성주유소",
+            "region": [],
+            "selected_region": "경북 울진군"
+          },
+          "total_count": 1
+        },
+        "proxy": {
+          "name": "k-skill-proxy",
+          "cache": {
+            "hit": false,
+            "ttl_ms": 300000
+          },
+          "requested_at": "2026-10-25T02:16:06.561Z"
+        }
+      }
+    },
+    {
+      "query": "대구 평화시장 대성석유",
+      "checked_at": "2026-10-25T11:16:07+09:00",
+      "response": {
+        "documents": [
+          {
+            "address_name": "대구 동구 신암동 609-24",
+            "category_group_code": "",
+            "category_group_name": "",
+            "category_name": "서비스,산업 > 에너지 > 석유",
+            "distance": "",
+            "id": "26004514",
+            "phone": "053-952-1119",
+            "place_name": "대성석유",
+            "place_url": "http://place.map.kakao.com/26004514",
+            "road_address_name": "대구 동구 평화로 69",
+            "x": "128.6212341566051",
+            "y": "35.884863733155704"
+          },
+          {
+            "address_name": "대구 북구 칠성동2가 67-1",
+            "category_group_code": "",
+            "category_group_name": "",
+            "category_name": "서비스,산업 > 에너지 > 석유",
+            "distance": "",
+            "id": "10246892",
+            "phone": "053-668-5151",
+            "place_name": "대성산업 대구석유사업부",
+            "place_url": "http://place.map.kakao.com/10246892",
+            "road_address_name": "대구 북구 침산로 56",
+            "x": "128.58986704103157",
+            "y": "35.881356844357256"
+          }
+        ],
+        "meta": {
+          "is_end": true,
+          "pageable_count": 2,
+          "same_name": {
+            "keyword": "대성석유",
+            "region": [],
+            "selected_region": "대구 동구 대구평화시장"
+          },
+          "total_count": 2
+        },
+        "proxy": {
+          "name": "k-skill-proxy",
+          "cache": {
+            "hit": false,
+            "ttl_ms": 300000
+          },
+          "requested_at": "2026-10-25T02:16:07.647Z"
+        }
+      }
+    },
+    {
+      "query": "공주 부흥주유소",
+      "checked_at": "2026-10-25T11:16:08+09:00",
+      "response": {
+        "documents": [],
+        "meta": {
+          "is_end": true,
+          "pageable_count": 0,
+          "same_name": {
+            "keyword": "부흥주유소",
+            "region": [],
+            "selected_region": "충남 공주시"
+          },
+          "total_count": 0
+        },
+        "proxy": {
+          "name": "k-skill-proxy",
+          "cache": {
+            "hit": false,
+            "ttl_ms": 300000
+          },
+          "requested_at": "2026-10-25T02:16:08.699Z"
+        }
+      }
+    },
+    {
+      "query": "음성 원남주유소",
+      "checked_at": "2026-10-25T11:16:09+09:00",
+      "response": {
+        "documents": [
+          {
+            "address_name": "충북 음성군 원남면 하당리 9-2",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > GS칼텍스",
+            "distance": "",
+            "id": "8480449",
+            "phone": "043-872-6684",
+            "place_name": "원남주유소",
+            "place_url": "http://place.map.kakao.com/8480449",
+            "road_address_name": "충북 음성군 원남면 충청대로 1139",
+            "x": "127.685993564654",
+            "y": "36.911675661176"
+          },
+          {
+            "address_name": "충북 음성군 원남면 상당리 658-1",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > S-OIL",
+            "distance": "",
+            "id": "8160225",
+            "phone": "043-873-5189",
+            "place_name": "백마산주유소",
+            "place_url": "http://place.map.kakao.com/8160225",
+            "road_address_name": "충북 음성군 원남면 충청대로 835",
+            "x": "127.66601291962301",
+            "y": "36.89140692361244"
+          },
+          {
+            "address_name": "충북 음성군 원남면 문암리 1054-1",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > S-OIL",
+            "distance": "",
+            "id": "1787757397",
+            "phone": "043-872-8951",
+            "place_name": "문암주유소",
+            "place_url": "http://place.map.kakao.com/1787757397",
+            "road_address_name": "충북 음성군 원남면 충청대로 60",
+            "x": "127.6173112992873",
+            "y": "36.83892743251022"
+          },
+          {
+            "address_name": "충북 음성군 원남면 마송리 15",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > S-OIL",
+            "distance": "",
+            "id": "595629260",
+            "phone": "043-872-7507",
+            "place_name": "한금령주유소",
+            "place_url": "http://place.map.kakao.com/595629260",
+            "road_address_name": "충북 음성군 원남면 충청대로 790",
+            "x": "127.665224647664",
+            "y": "36.8873132179886"
+          },
+          {
+            "address_name": "충북 음성군 원남면 보천리 403-1",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > GS칼텍스",
+            "distance": "",
+            "id": "7903150",
+            "phone": "043-872-6372",
+            "place_name": "보천주유소",
+            "place_url": "http://place.map.kakao.com/7903150",
+            "road_address_name": "충북 음성군 원남면 충청대로 623",
+            "x": "127.654133674635",
+            "y": "36.8753471229826"
+          },
+          {
+            "address_name": "충북 음성군 원남면 상당리 658-1",
+            "category_group_code": "CS2",
+            "category_group_name": "편의점",
+            "category_name": "가정,생활 > 편의점 > 세븐일레븐",
+            "distance": "",
+            "id": "1676896678",
+            "phone": "",
+            "place_name": "세븐일레븐 음성백마산주유소점",
+            "place_url": "http://place.map.kakao.com/1676896678",
+            "road_address_name": "충북 음성군 원남면 충청대로 835",
+            "x": "127.665783992998",
+            "y": "36.8916569051107"
+          },
+          {
+            "address_name": "충북 음성군 원남면 마송리 15",
+            "category_group_code": "",
+            "category_group_name": "",
+            "category_name": "교통,수송 > 자동차 > 전기차 충전소",
+            "distance": "",
+            "id": "849945173",
+            "phone": "",
+            "place_name": "한금령주유소 전기차충전소",
+            "place_url": "http://place.map.kakao.com/849945173",
+            "road_address_name": "충북 음성군 원남면 충청대로 790",
+            "x": "127.66541553975",
+            "y": "36.8874644320967"
+          }
+        ],
+        "meta": {
+          "is_end": true,
+          "pageable_count": 7,
+          "same_name": {
+            "keyword": "원남주유소",
+            "region": [],
+            "selected_region": "충북 음성군"
+          },
+          "total_count": 7
+        },
+        "proxy": {
+          "name": "k-skill-proxy",
+          "cache": {
+            "hit": false,
+            "ttl_ms": 300000
+          },
+          "requested_at": "2026-10-25T02:16:09.767Z"
+        }
+      }
+    },
+    {
+      "query": "대전 오정동 신화석유",
+      "checked_at": "2026-10-25T11:16:10+09:00",
+      "response": {
+        "documents": [
+          {
+            "address_name": "대전 대덕구 오정동 90-2",
+            "category_group_code": "",
+            "category_group_name": "",
+            "category_name": "서비스,산업 > 에너지 > 석유",
+            "distance": "",
+            "id": "9183053",
+            "phone": "010-2496-0114",
+            "place_name": "신화석유",
+            "place_url": "http://place.map.kakao.com/9183053",
+            "road_address_name": "대전 대덕구 한밭대로988번길 77",
+            "x": "127.411072684517",
+            "y": "36.3547843632166"
+          }
+        ],
+        "meta": {
+          "is_end": true,
+          "pageable_count": 1,
+          "same_name": {
+            "keyword": "신화석유",
+            "region": [],
+            "selected_region": "대전 대덕구 오정동"
+          },
+          "total_count": 1
+        },
+        "proxy": {
+          "name": "k-skill-proxy",
+          "cache": {
+            "hit": false,
+            "ttl_ms": 300000
+          },
+          "requested_at": "2026-10-25T02:16:10.905Z"
+        }
+      }
+    },
+    {
+      "query": "대전 영주석유",
+      "checked_at": "2026-10-25T11:16:11+09:00",
+      "response": {
+        "documents": [
+          {
+            "address_name": "대전 동구 원동 43-1",
+            "category_group_code": "",
+            "category_group_name": "",
+            "category_name": "서비스,산업 > 에너지 > 석유",
+            "distance": "",
+            "id": "11193512",
+            "phone": "042-252-9566",
+            "place_name": "영주석유",
+            "place_url": "http://place.map.kakao.com/11193512",
+            "road_address_name": "대전 동구 대전로 767",
+            "x": "127.4340593509537",
+            "y": "36.32820043220544"
+          }
+        ],
+        "meta": {
+          "is_end": true,
+          "pageable_count": 1,
+          "same_name": {
+            "keyword": "영주석유",
+            "region": [],
+            "selected_region": "대전광역시"
+          },
+          "total_count": 1
+        },
+        "proxy": {
+          "name": "k-skill-proxy",
+          "cache": {
+            "hit": false,
+            "ttl_ms": 300000
+          },
+          "requested_at": "2026-10-25T02:16:11.944Z"
+        }
+      }
+    },
+    {
+      "query": "파주 광탄주유소",
+      "checked_at": "2026-10-25T11:16:12+09:00",
+      "response": {
+        "documents": [
+          {
+            "address_name": "경기 파주시 광탄면 신산리 352-5",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > SK주유소",
+            "distance": "",
+            "id": "10154681",
+            "phone": "031-947-7420",
+            "place_name": "광탄셀프주유소",
+            "place_url": "http://place.map.kakao.com/10154681",
+            "road_address_name": "경기 파주시 광탄면 혜음로 1178",
+            "x": "126.845229792423",
+            "y": "37.7863273265193"
+          },
+          {
+            "address_name": "경기 파주시 광탄면 신산리 217-27",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > 농협주유소",
+            "distance": "",
+            "id": "11029278",
+            "phone": "031-947-7876",
+            "place_name": "광탄농협주유소",
+            "place_url": "http://place.map.kakao.com/11029278",
+            "road_address_name": "경기 파주시 광탄면 동거리길 41",
+            "x": "126.849481023133",
+            "y": "37.7814171859777"
+          },
+          {
+            "address_name": "경기 파주시 광탄면 용미리 292",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > HD현대오일뱅크주유소",
+            "distance": "",
+            "id": "8015296",
+            "phone": "031-942-6060",
+            "place_name": "용미주유소",
+            "place_url": "http://place.map.kakao.com/8015296",
+            "road_address_name": "경기 파주시 광탄면 혜음로 396",
+            "x": "126.88949059966",
+            "y": "37.7314722798471"
+          },
+          {
+            "address_name": "경기 파주시 광탄면 마장리 7-12",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > SK주유소",
+            "distance": "",
+            "id": "487907287",
+            "phone": "031-945-5185",
+            "place_name": "대성에너지주유소",
+            "place_url": "http://place.map.kakao.com/487907287",
+            "road_address_name": "경기 파주시 광탄면 보광로 814",
+            "x": "126.892588955406",
+            "y": "37.7728745828615"
+          },
+          {
+            "address_name": "경기 파주시 광탄면 창만리 72-3",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > SK주유소",
+            "distance": "",
+            "id": "7951676",
+            "phone": "031-941-0675",
+            "place_name": "세광주유소",
+            "place_url": "http://place.map.kakao.com/7951676",
+            "road_address_name": "경기 파주시 광탄면 부흥로 303",
+            "x": "126.880560955679",
+            "y": "37.8017892800255"
+          },
+          {
+            "address_name": "경기 파주시 광탄면 마장리 413-1",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > S-OIL",
+            "distance": "",
+            "id": "15288669",
+            "phone": "031-948-5144",
+            "place_name": "유림주유소",
+            "place_url": "http://place.map.kakao.com/15288669",
+            "road_address_name": "경기 파주시 광탄면 보광로 940",
+            "x": "126.880649475571",
+            "y": "37.7778201963327"
+          },
+          {
+            "address_name": "경기 파주시 광탄면 분수리 473-1",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > GS칼텍스",
+            "distance": "",
+            "id": "11325961",
+            "phone": "031-948-7088",
+            "place_name": "신산주유소",
+            "place_url": "http://place.map.kakao.com/11325961",
+            "road_address_name": "경기 파주시 광탄면 혜음로 964",
+            "x": "126.852288186298",
+            "y": "37.7694919856793"
+          },
+          {
+            "address_name": "경기 파주시 광탄면 창만리 72-3",
+            "category_group_code": "CS2",
+            "category_group_name": "편의점",
+            "category_name": "가정,생활 > 편의점 > 이마트24",
+            "distance": "",
+            "id": "501077966",
+            "phone": "",
+            "place_name": "이마트24 세광주유소점",
+            "place_url": "http://place.map.kakao.com/501077966",
+            "road_address_name": "경기 파주시 광탄면 부흥로 303",
+            "x": "126.88083097540492",
+            "y": "37.80192920217746"
+          },
+          {
+            "address_name": "경기 파주시 광탄면 창만리 72-3",
+            "category_group_code": "",
+            "category_group_name": "",
+            "category_name": "교통,수송 > 자동차 > 전기차 충전소",
+            "distance": "",
+            "id": "282472612",
+            "phone": "1661-9408",
+            "place_name": "세광주유소 전기차충전소",
+            "place_url": "http://place.map.kakao.com/282472612",
+            "road_address_name": "경기 파주시 광탄면 부흥로 303",
+            "x": "126.88015704819304",
+            "y": "37.80158885684802"
+          }
+        ],
+        "meta": {
+          "is_end": true,
+          "pageable_count": 9,
+          "same_name": {
+            "keyword": "광탄주유소",
+            "region": [],
+            "selected_region": "경기 파주시"
+          },
+          "total_count": 9
+        },
+        "proxy": {
+          "name": "k-skill-proxy",
+          "cache": {
+            "hit": false,
+            "ttl_ms": 300000
+          },
+          "requested_at": "2026-10-25T02:16:13.012Z"
+        }
+      }
+    },
+    {
+      "query": "광주 회재로 807",
+      "checked_at": "2026-10-25T11:16:56+09:00",
+      "response": {
+        "documents": [
+          {
+            "address_name": "전남광주통합특별시 서구 매월동 597-3",
+            "category_group_code": "",
+            "category_group_name": "",
+            "category_name": "교통,수송 > 자동차 > 자동차정비 > 스피드메이트",
+            "distance": "",
+            "id": "7962421",
+            "phone": "062-681-8850",
+            "place_name": "스피드메이트 금남점",
+            "place_url": "http://place.map.kakao.com/7962421",
+            "road_address_name": "전남광주통합특별시 서구 회재로 807",
+            "x": "126.8552411406152",
+            "y": "35.11723846076756"
+          }
+        ],
+        "meta": {
+          "is_end": true,
+          "pageable_count": 1,
+          "same_name": {
+            "keyword": "",
+            "region": [],
+            "selected_region": "전남광주 서구 회재로"
+          },
+          "total_count": 1
+        },
+        "proxy": {
+          "name": "k-skill-proxy",
+          "cache": {
+            "hit": false,
+            "ttl_ms": 300000
+          },
+          "requested_at": "2026-10-25T02:16:56.375Z"
+        }
+      }
+    },
+    {
+      "query": "광주 북문대로 364-5",
+      "checked_at": "2026-10-25T11:16:57+09:00",
+      "response": {
+        "documents": [
+          {
+            "address_name": "전남광주통합특별시 광산구 신창동 1083-8",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > SK주유소",
+            "distance": "",
+            "id": "27606537",
+            "phone": "062-971-0344",
+            "place_name": "행복한주유소",
+            "place_url": "http://place.map.kakao.com/27606537",
+            "road_address_name": "전남광주통합특별시 광산구 북문대로 364-5",
+            "x": "126.853233623812",
+            "y": "35.1911916922726"
+          }
+        ],
+        "meta": {
+          "is_end": true,
+          "pageable_count": 1,
+          "same_name": {
+            "keyword": "",
+            "region": [],
+            "selected_region": "전남광주 북구 북문대로"
+          },
+          "total_count": 1
+        },
+        "proxy": {
+          "name": "k-skill-proxy",
+          "cache": {
+            "hit": false,
+            "ttl_ms": 300000
+          },
+          "requested_at": "2026-10-25T02:16:57.328Z"
+        }
+      }
+    },
+    {
+      "query": "전남광주 서부에너지",
+      "checked_at": "2026-10-25T11:16:58+09:00",
+      "response": {
+        "documents": [],
+        "meta": {
+          "is_end": true,
+          "pageable_count": 0,
+          "same_name": {
+            "keyword": "서부에너지",
+            "region": [],
+            "selected_region": "전남광주통합특별시"
+          },
+          "total_count": 0
+        },
+        "proxy": {
+          "name": "k-skill-proxy",
+          "cache": {
+            "hit": false,
+            "ttl_ms": 300000
+          },
+          "requested_at": "2026-10-25T02:16:58.305Z"
+        }
+      }
+    },
+    {
+      "query": "칠곡 석전로12길 5-2",
+      "checked_at": "2026-10-25T11:16:59+09:00",
+      "response": {
+        "documents": [],
+        "meta": {
+          "is_end": true,
+          "pageable_count": 0,
+          "same_name": {
+            "keyword": "",
+            "region": [],
+            "selected_region": "경북 칠곡군 왜관읍 석전로12길"
+          },
+          "total_count": 0
+        },
+        "proxy": {
+          "name": "k-skill-proxy",
+          "cache": {
+            "hit": false,
+            "ttl_ms": 300000
+          },
+          "requested_at": "2026-10-25T02:16:59.398Z"
+        }
+      }
+    }
+  ]
+}

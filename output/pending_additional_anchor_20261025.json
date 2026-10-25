@@ -1,0 +1,33 @@
+{
+  "name": "청우에너지(주)",
+  "anchor": {
+    "address_name": "전남광주통합특별시 서구 매월동 597-3",
+    "category_group_code": "",
+    "category_group_name": "",
+    "category_name": "교통,수송 > 자동차 > 자동차정비 > 스피드메이트",
+    "distance": "",
+    "id": "7962421",
+    "phone": "062-681-8850",
+    "place_name": "스피드메이트 금남점",
+    "place_url": "http://place.map.kakao.com/7962421",
+    "road_address_name": "전남광주통합특별시 서구 회재로 807",
+    "x": "126.8552411406152",
+    "y": "35.11723846076756"
+  },
+  "query": {
+    "keyword": "",
+    "area_code": "",
+    "status": "complete",
+    "expected": 1445,
+    "received": 1445,
+    "pages": 2,
+    "center": [
+      35.11723846076756,
+      126.8552411406152
+    ],
+    "radius": 2
+  },
+  "source": "Kakao place anchor; current Onnuri matching",
+  "same_address": [],
+  "checked_at": "2026-10-25T11:17:34+09:00"
+}

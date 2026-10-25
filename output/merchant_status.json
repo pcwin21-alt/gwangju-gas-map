@@ -1,14 +1,14 @@
 {
   "saengsaeng": {
     "status": "confirmed",
-    "checked_at": "2026-10-25T11:07:19+09:00",
+    "checked_at": "2026-10-25T11:18:17+09:00",
     "count": 77
   },
   "onnuri": {
     "status": "confirmed",
     "source_date": "2026-10-25",
     "checked_at": "2026-10-25T10:51:11+09:00",
-    "attempted_at": "2026-10-25T11:07:19+09:00",
+    "attempted_at": "2026-10-25T11:18:17+09:00",
     "source_url": "https://www.onnuri.gift/place",
     "scope": "nationwide_sequential_regional_search",
     "query_count": 166,
@@ -16,7 +16,7 @@
     "raw_search_rows": 460,
     "matched_count": 169,
     "unmatched_count": 1,
-    "pending_count": 21,
+    "pending_count": 19,
     "refresh_environment": "local",
     "refresh_run_url": null,
     "refresh_error": null,

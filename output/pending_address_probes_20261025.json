@@ -1,0 +1,1885 @@
+{
+  "status": "complete",
+  "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+  "source_date": "2026-06-30",
+  "archive_sha256": "57aa361544108ff4fc73334f87d2ced61e41fe8638dd70bcd842930f865d2386",
+  "scope": "commercial_address_anchors_not_verified_merchant_identity",
+  "rows": [
+    {
+      "candidate_id": "1054803b1165f961c8cb5967",
+      "region": "전남",
+      "name": "현대주유소",
+      "market": "웃장",
+      "probes": [
+        {
+          "anchor": {
+            "상가업소번호": "MA010120220814192562",
+            "상호명": "현대주유소",
+            "지점명": "",
+            "상권업종소분류코드": "G21401",
+            "상권업종소분류명": "주유소",
+            "표준산업분류코드": "G47711",
+            "표준산업분류명": "운송장비용 주유소 운영업",
+            "시도명": "전남광주통합특별시",
+            "시군구명": "영광군",
+            "도로명주소": "전남광주통합특별시 영광군 홍농읍 연우로 334",
+            "지번주소": "전남광주통합특별시 영광군 홍농읍 칠곡리 31-7",
+            "latitude": 35.391068780308,
+            "longitude": 126.441323366758
+          },
+          "query": {
+            "keyword": "",
+            "area_code": "",
+            "status": "complete",
+            "expected": 0,
+            "received": 0,
+            "pages": 0,
+            "center": [
+              35.391068780308,
+              126.441323366758
+            ],
+            "radius": 2
+          },
+          "same_address": [],
+          "nearby_fuel_names": []
+        },
+        {
+          "anchor": {
+            "상가업소번호": "MA010120220807846418",
+            "상호명": "현대주유소",
+            "지점명": "",
+            "상권업종소분류코드": "G21401",
+            "상권업종소분류명": "주유소",
+            "표준산업분류코드": "G47711",
+            "표준산업분류명": "운송장비용 주유소 운영업",
+            "시도명": "전남광주통합특별시",
+            "시군구명": "순천시",
+            "도로명주소": "전남광주통합특별시 순천시 중앙로 172",
+            "지번주소": "전남광주통합특별시 순천시 매곡동 55-1",
+            "latitude": 34.9609772960504,
+            "longitude": 127.484715824515
+          },
+          "query": {
+            "keyword": "",
+            "area_code": "",
+            "status": "complete",
+            "expected": 472,
+            "received": 472,
+            "pages": 1,
+            "center": [
+              34.9609772960504,
+              127.484715824515
+            ],
+            "radius": 2
+          },
+          "same_address": [],
+          "nearby_fuel_names": [
+            {
+              "frCd": "14077200010",
+              "frcsNm": "순천주유소",
+              "frcsAddr": "전라남도 순천시 강남로 45(장천동)",
+              "mrktNm": "장천동상가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12150",
+              "latitude": 34.95002,
+              "longitude": 127.488458,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "14077200045",
+              "frcsNm": "호남주유소",
+              "frcsAddr": "전라남도 순천시 팔마로 9(장천동)",
+              "mrktNm": "장천동상가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12150",
+              "latitude": 34.95002,
+              "longitude": 127.488458,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            }
+          ]
+        },
+        {
+          "anchor": {
+            "상가업소번호": "MA010120220807858769",
+            "상호명": "현대주유소",
+            "지점명": "",
+            "상권업종소분류코드": "G21401",
+            "상권업종소분류명": "주유소",
+            "표준산업분류코드": "G47711",
+            "표준산업분류명": "운송장비용 주유소 운영업",
+            "시도명": "전남광주통합특별시",
+            "시군구명": "여수시",
+            "도로명주소": "전남광주통합특별시 여수시 좌수영로 1246",
+            "지번주소": "전남광주통합특별시 여수시 해산동 419",
+            "latitude": 34.8013067205252,
+            "longitude": 127.645488639203
+          },
+          "query": {
+            "keyword": "",
+            "area_code": "",
+            "status": "complete",
+            "expected": 7,
+            "received": 7,
+            "pages": 1,
+            "center": [
+              34.8013067205252,
+              127.645488639203
+            ],
+            "radius": 2
+          },
+          "same_address": [],
+          "nearby_fuel_names": []
+        },
+        {
+          "anchor": {
+            "상가업소번호": "MA010120220807526025",
+            "상호명": "현대주유소",
+            "지점명": "",
+            "상권업종소분류코드": "G21401",
+            "상권업종소분류명": "주유소",
+            "표준산업분류코드": "G47711",
+            "표준산업분류명": "운송장비용 주유소 운영업",
+            "시도명": "전남광주통합특별시",
+            "시군구명": "장성군",
+            "도로명주소": "전남광주통합특별시 장성군 장성읍 역전로 160",
+            "지번주소": "전남광주통합특별시 장성군 장성읍 영천리 1475-27",
+            "latitude": 35.3052940817048,
+            "longitude": 126.782182950762
+          },
+          "query": {
+            "keyword": "",
+            "area_code": "",
+            "status": "complete",
+            "expected": 322,
+            "received": 322,
+            "pages": 1,
+            "center": [
+              35.3052940817048,
+              126.782182950762
+            ],
+            "radius": 2
+          },
+          "same_address": [],
+          "nearby_fuel_names": [
+            {
+              "frCd": "14500200210",
+              "frcsNm": "장성농협주유소",
+              "frcsAddr": "전라남도 장성군 장성읍 뱃나드리로 245",
+              "mrktNm": "장성읍 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12840",
+              "latitude": 35.292198,
+              "longitude": 126.779717,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            }
+          ]
+        }
+      ],
+      "checked_at": "2026-10-25T11:13:33+09:00"
+    },
+    {
+      "candidate_id": "live-05273200078",
+      "region": "광주",
+      "name": "대성석유",
+      "market": "매월동상인회 골목형상점가",
+      "probes": [],
+      "checked_at": "2026-10-25T11:13:33+09:00"
+    },
+    {
+      "candidate_id": "live-05491200023",
+      "region": "광주",
+      "name": "광주석유판매협동조합",
+      "market": "신안동광주역앞상가 골목형상점가",
+      "probes": [
+        {
+          "anchor": {
+            "상가업소번호": "MA010120220813108786",
+            "상호명": "광주석유판매협동조합",
+            "지점명": "",
+            "상권업종소분류코드": "G21403",
+            "상권업종소분류명": "가정용 연료 소매업",
+            "표준산업분류코드": "G47722",
+            "표준산업분류명": "가정용 액체 연료 소매업",
+            "시도명": "전남광주통합특별시",
+            "시군구명": "북구",
+            "도로명주소": "전남광주통합특별시 북구 자미로10번길 11",
+            "지번주소": "전남광주통합특별시 북구 신안동 128-14",
+            "latitude": 35.1669145980553,
+            "longitude": 126.903537140248
+          },
+          "query": {
+            "keyword": "",
+            "area_code": "",
+            "status": "complete",
+            "expected": 5507,
+            "received": 5507,
+            "pages": 6,
+            "center": [
+              35.1669145980553,
+              126.903537140248
+            ],
+            "radius": 2
+          },
+          "same_address": [
+            {
+              "frCd": "05491200023",
+              "frcsNm": "광주석유판매협동조합",
+              "frcsAddr": "광주광역시 북구 자미로10번길 11 (신안동)",
+              "mrktNm": "신안동광주역앞상가 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12300",
+              "latitude": 35.166919,
+              "longitude": 126.903532,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            }
+          ],
+          "nearby_fuel_names": [
+            {
+              "frCd": "05491200023",
+              "frcsNm": "광주석유판매협동조합",
+              "frcsAddr": "광주광역시 북구 자미로10번길 11 (신안동)",
+              "mrktNm": "신안동광주역앞상가 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12300",
+              "latitude": 35.166919,
+              "longitude": 126.903532,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05598200008",
+              "frcsNm": "전대주유소",
+              "frcsAddr": "광주광역시 북구 무등로 165 (신안동)",
+              "mrktNm": "신안동용봉초건너편 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12300",
+              "latitude": 35.166511,
+              "longitude": 126.902308,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05599200021",
+              "frcsNm": "(주)도시에너지신안영업소",
+              "frcsAddr": "광주광역시 북구 무등로137번길 8 (신안동)",
+              "mrktNm": "신안동용봉초 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12300",
+              "latitude": 35.167303,
+              "longitude": 126.899245,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05598200003",
+              "frcsNm": "도시에너지 주식회사",
+              "frcsAddr": "광주광역시 북구 무등로137번길 8 (신안동)",
+              "mrktNm": "신안동용봉초건너편 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12300",
+              "latitude": 35.167303,
+              "longitude": 126.899245,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05596200020",
+              "frcsNm": "에코주유소",
+              "frcsAddr": "광주광역시 북구 무등로 213 (신안동)",
+              "mrktNm": "신안동광주역앞상가 골목형상점가",
+              "placeTypeCd": "09",
+              "placeTypeNm": "근린상권서비스",
+              "addrCd": "12300",
+              "latitude": 35.168421,
+              "longitude": 126.899274,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05602200001",
+              "frcsNm": "서림주유소",
+              "frcsAddr": "광주광역시 북구 무등로 126 (신안동)",
+              "mrktNm": "무등로해피 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12300",
+              "latitude": 35.167055,
+              "longitude": 126.897668,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05589200001",
+              "frcsNm": "자모셀프주유소",
+              "frcsAddr": "광주광역시 북구 우치로 7 (중흥동)",
+              "mrktNm": "추억담은광주역뒷길 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12300",
+              "latitude": 35.168385,
+              "longitude": 126.910175,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05104200133",
+              "frcsNm": "에스케이신안석유",
+              "frcsAddr": "광주광역시 북구 중흥로7번길 15 (임동)",
+              "mrktNm": "임동 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12300",
+              "latitude": 35.166299,
+              "longitude": 126.894879,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05593200026",
+              "frcsNm": "북성주유소",
+              "frcsAddr": "광주광역시 북구 금남로 49 (임동)",
+              "mrktNm": "임동오거리 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12300",
+              "latitude": 35.159004,
+              "longitude": 126.901465,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05023200024",
+              "frcsNm": "SK동진석유",
+              "frcsAddr": "광주광역시 북구 중가로85번길 28 (중흥동)",
+              "mrktNm": "중흥중가로 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12300",
+              "latitude": 35.15978,
+              "longitude": 126.909609,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05602200024",
+              "frcsNm": "경기장주유소",
+              "frcsAddr": "광주광역시 북구 무등로 76 (임동)",
+              "mrktNm": "무등로해피 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12300",
+              "latitude": 35.168458,
+              "longitude": 126.892424,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05300200021",
+              "frcsNm": "주식회사 스피드주유소",
+              "frcsAddr": "광주광역시 북구 설죽로 226 (용봉동)",
+              "mrktNm": "설죽로 패션의거리 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12300",
+              "latitude": 35.179761,
+              "longitude": 126.898331,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05639200037",
+              "frcsNm": "동신 석유",
+              "frcsAddr": "광주광역시 동구 경양로223번길 14-24 (계림동)",
+              "mrktNm": "광주고인근 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12210",
+              "latitude": 35.158578,
+              "longitude": 126.917265,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05167200033",
+              "frcsNm": "골든타임 주유소",
+              "frcsAddr": "광주광역시 서구 상무대로1206번길 3 (농성동)",
+              "mrktNm": "월산로상인회 골목형상점가",
+              "placeTypeCd": "09",
+              "placeTypeNm": "근린상권서비스",
+              "addrCd": "12240",
+              "latitude": 35.155338,
+              "longitude": 126.893864,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05626200027",
+              "frcsNm": "SK경인석유",
+              "frcsAddr": "광주광역시 북구 동문대로30번길 24 (풍향동)",
+              "mrktNm": "두암1동군왕로 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12300",
+              "latitude": 35.167184,
+              "longitude": 126.921058,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05606200001",
+              "frcsNm": "세본주유소",
+              "frcsAddr": "광주광역시 북구 용주로 21 (용봉동)",
+              "mrktNm": "용주로사랑길 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12300",
+              "latitude": 35.181484,
+              "longitude": 126.900394,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05219200013",
+              "frcsNm": "한강주유소",
+              "frcsAddr": "광주광역시 서구 천변좌로 6 (광천동)",
+              "mrktNm": "광천동상인회 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12240",
+              "latitude": 35.167105,
+              "longitude": 126.884451,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05216200026",
+              "frcsNm": "상록 주유소",
+              "frcsAddr": "광주광역시 서구 상무대로 1180 (농성동)",
+              "mrktNm": "월산로상인회 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12240",
+              "latitude": 35.154353,
+              "longitude": 126.890617,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05528200007",
+              "frcsNm": "SK오치한전주유소",
+              "frcsAddr": "광주광역시 북구 천지인로 91 (오치동)",
+              "mrktNm": "오치동 천지인로 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12300",
+              "latitude": 35.184307,
+              "longitude": 126.908612,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05023200021",
+              "frcsNm": "(주)반디석유 본점",
+              "frcsAddr": "광주광역시 북구 하남대로 819 (운암동)",
+              "mrktNm": "공구의거리",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12300",
+              "latitude": 35.171268,
+              "longitude": 126.882287,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            }
+          ]
+        },
+        {
+          "anchor": {
+            "상가업소번호": "MA010120220807510780",
+            "상호명": "SK석유에너지",
+            "지점명": "",
+            "상권업종소분류코드": "G21401",
+            "상권업종소분류명": "주유소",
+            "표준산업분류코드": "G47711",
+            "표준산업분류명": "운송장비용 주유소 운영업",
+            "시도명": "전남광주통합특별시",
+            "시군구명": "북구",
+            "도로명주소": "전남광주통합특별시 북구 자미로10번길 11",
+            "지번주소": "전남광주통합특별시 북구 신안동 128-14",
+            "latitude": 35.1669145980553,
+            "longitude": 126.903537140248
+          },
+          "query": {
+            "keyword": "",
+            "area_code": "",
+            "status": "complete",
+            "expected": 5507,
+            "received": 5507,
+            "pages": 6,
+            "center": [
+              35.1669145980553,
+              126.903537140248
+            ],
+            "radius": 2
+          },
+          "same_address": [
+            {
+              "frCd": "05491200023",
+              "frcsNm": "광주석유판매협동조합",
+              "frcsAddr": "광주광역시 북구 자미로10번길 11 (신안동)",
+              "mrktNm": "신안동광주역앞상가 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12300",
+              "latitude": 35.166919,
+              "longitude": 126.903532,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            }
+          ],
+          "nearby_fuel_names": [
+            {
+              "frCd": "05491200023",
+              "frcsNm": "광주석유판매협동조합",
+              "frcsAddr": "광주광역시 북구 자미로10번길 11 (신안동)",
+              "mrktNm": "신안동광주역앞상가 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12300",
+              "latitude": 35.166919,
+              "longitude": 126.903532,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05598200008",
+              "frcsNm": "전대주유소",
+              "frcsAddr": "광주광역시 북구 무등로 165 (신안동)",
+              "mrktNm": "신안동용봉초건너편 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12300",
+              "latitude": 35.166511,
+              "longitude": 126.902308,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05599200021",
+              "frcsNm": "(주)도시에너지신안영업소",
+              "frcsAddr": "광주광역시 북구 무등로137번길 8 (신안동)",
+              "mrktNm": "신안동용봉초 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12300",
+              "latitude": 35.167303,
+              "longitude": 126.899245,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05598200003",
+              "frcsNm": "도시에너지 주식회사",
+              "frcsAddr": "광주광역시 북구 무등로137번길 8 (신안동)",
+              "mrktNm": "신안동용봉초건너편 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12300",
+              "latitude": 35.167303,
+              "longitude": 126.899245,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05596200020",
+              "frcsNm": "에코주유소",
+              "frcsAddr": "광주광역시 북구 무등로 213 (신안동)",
+              "mrktNm": "신안동광주역앞상가 골목형상점가",
+              "placeTypeCd": "09",
+              "placeTypeNm": "근린상권서비스",
+              "addrCd": "12300",
+              "latitude": 35.168421,
+              "longitude": 126.899274,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05602200001",
+              "frcsNm": "서림주유소",
+              "frcsAddr": "광주광역시 북구 무등로 126 (신안동)",
+              "mrktNm": "무등로해피 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12300",
+              "latitude": 35.167055,
+              "longitude": 126.897668,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05589200001",
+              "frcsNm": "자모셀프주유소",
+              "frcsAddr": "광주광역시 북구 우치로 7 (중흥동)",
+              "mrktNm": "추억담은광주역뒷길 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12300",
+              "latitude": 35.168385,
+              "longitude": 126.910175,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05104200133",
+              "frcsNm": "에스케이신안석유",
+              "frcsAddr": "광주광역시 북구 중흥로7번길 15 (임동)",
+              "mrktNm": "임동 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12300",
+              "latitude": 35.166299,
+              "longitude": 126.894879,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05593200026",
+              "frcsNm": "북성주유소",
+              "frcsAddr": "광주광역시 북구 금남로 49 (임동)",
+              "mrktNm": "임동오거리 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12300",
+              "latitude": 35.159004,
+              "longitude": 126.901465,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05023200024",
+              "frcsNm": "SK동진석유",
+              "frcsAddr": "광주광역시 북구 중가로85번길 28 (중흥동)",
+              "mrktNm": "중흥중가로 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12300",
+              "latitude": 35.15978,
+              "longitude": 126.909609,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05602200024",
+              "frcsNm": "경기장주유소",
+              "frcsAddr": "광주광역시 북구 무등로 76 (임동)",
+              "mrktNm": "무등로해피 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12300",
+              "latitude": 35.168458,
+              "longitude": 126.892424,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05300200021",
+              "frcsNm": "주식회사 스피드주유소",
+              "frcsAddr": "광주광역시 북구 설죽로 226 (용봉동)",
+              "mrktNm": "설죽로 패션의거리 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12300",
+              "latitude": 35.179761,
+              "longitude": 126.898331,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05639200037",
+              "frcsNm": "동신 석유",
+              "frcsAddr": "광주광역시 동구 경양로223번길 14-24 (계림동)",
+              "mrktNm": "광주고인근 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12210",
+              "latitude": 35.158578,
+              "longitude": 126.917265,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05167200033",
+              "frcsNm": "골든타임 주유소",
+              "frcsAddr": "광주광역시 서구 상무대로1206번길 3 (농성동)",
+              "mrktNm": "월산로상인회 골목형상점가",
+              "placeTypeCd": "09",
+              "placeTypeNm": "근린상권서비스",
+              "addrCd": "12240",
+              "latitude": 35.155338,
+              "longitude": 126.893864,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05626200027",
+              "frcsNm": "SK경인석유",
+              "frcsAddr": "광주광역시 북구 동문대로30번길 24 (풍향동)",
+              "mrktNm": "두암1동군왕로 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12300",
+              "latitude": 35.167184,
+              "longitude": 126.921058,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05606200001",
+              "frcsNm": "세본주유소",
+              "frcsAddr": "광주광역시 북구 용주로 21 (용봉동)",
+              "mrktNm": "용주로사랑길 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12300",
+              "latitude": 35.181484,
+              "longitude": 126.900394,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05219200013",
+              "frcsNm": "한강주유소",
+              "frcsAddr": "광주광역시 서구 천변좌로 6 (광천동)",
+              "mrktNm": "광천동상인회 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12240",
+              "latitude": 35.167105,
+              "longitude": 126.884451,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05216200026",
+              "frcsNm": "상록 주유소",
+              "frcsAddr": "광주광역시 서구 상무대로 1180 (농성동)",
+              "mrktNm": "월산로상인회 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12240",
+              "latitude": 35.154353,
+              "longitude": 126.890617,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05528200007",
+              "frcsNm": "SK오치한전주유소",
+              "frcsAddr": "광주광역시 북구 천지인로 91 (오치동)",
+              "mrktNm": "오치동 천지인로 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12300",
+              "latitude": 35.184307,
+              "longitude": 126.908612,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05023200021",
+              "frcsNm": "(주)반디석유 본점",
+              "frcsAddr": "광주광역시 북구 하남대로 819 (운암동)",
+              "mrktNm": "공구의거리",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12300",
+              "latitude": 35.171268,
+              "longitude": 126.882287,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            }
+          ]
+        }
+      ],
+      "checked_at": "2026-10-25T11:13:50+09:00"
+    },
+    {
+      "candidate_id": "badaf1066867bde046275626",
+      "region": "광주",
+      "name": "청우에너지(주)",
+      "market": "매월동상인회 골목형상점가",
+      "probes": [],
+      "checked_at": "2026-10-25T11:13:50+09:00"
+    },
+    {
+      "candidate_id": "76ce41be9eed4c5a2696b79a",
+      "region": "광주",
+      "name": "서부에너지",
+      "market": "맛조이상인회 골목형상점가",
+      "probes": [],
+      "checked_at": "2026-10-25T11:13:50+09:00"
+    },
+    {
+      "candidate_id": "ffa12c23f1c57296633c7b4c",
+      "region": "광주",
+      "name": "금호석유",
+      "market": "송정매일시장",
+      "probes": [
+        {
+          "anchor": {
+            "상가업소번호": "MA010120220807595712",
+            "상호명": "금호석유",
+            "지점명": "",
+            "상권업종소분류코드": "G21403",
+            "상권업종소분류명": "가정용 연료 소매업",
+            "표준산업분류코드": "G47722",
+            "표준산업분류명": "가정용 액체 연료 소매업",
+            "시도명": "전남광주통합특별시",
+            "시군구명": "광산구",
+            "도로명주소": "전남광주통합특별시 광산구 송정로15번길 71",
+            "지번주소": "전남광주통합특별시 광산구 송정동 820-5",
+            "latitude": 35.1386321995303,
+            "longitude": 126.796234121273
+          },
+          "query": {
+            "keyword": "",
+            "area_code": "",
+            "status": "complete",
+            "expected": 1214,
+            "received": 1214,
+            "pages": 2,
+            "center": [
+              35.1386321995303,
+              126.796234121273
+            ],
+            "radius": 2
+          },
+          "same_address": [
+            {
+              "frCd": "50610100062",
+              "frcsNm": "금호석유",
+              "frcsAddr": "전남광주통합특별시 광산구 송정로15번길 71 (송정동)",
+              "mrktNm": "내상로 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12330",
+              "latitude": 35.138634,
+              "longitude": 126.796231,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05004200017",
+              "frcsNm": "자연생활",
+              "frcsAddr": "광주광역시 광산구 송정로15번길 71 (송정동)",
+              "mrktNm": "내상로 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12330",
+              "latitude": 35.138634,
+              "longitude": 126.796231,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            }
+          ],
+          "nearby_fuel_names": [
+            {
+              "frCd": "50610100062",
+              "frcsNm": "금호석유",
+              "frcsAddr": "전남광주통합특별시 광산구 송정로15번길 71 (송정동)",
+              "mrktNm": "내상로 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12330",
+              "latitude": 35.138634,
+              "longitude": 126.796231,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05699200002",
+              "frcsNm": "진영주유소",
+              "frcsAddr": "광주광역시 광산구 송도로 292 (송정동)",
+              "mrktNm": "송도용보 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12330",
+              "latitude": 35.139065,
+              "longitude": 126.800548,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05553200007",
+              "frcsNm": "순양주유소",
+              "frcsAddr": "광주광역시 광산구 어등대로 667 (소촌동)",
+              "mrktNm": "소촌중앙 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12330",
+              "latitude": 35.144684,
+              "longitude": 126.79093,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05559200015",
+              "frcsNm": "주유소기사식당",
+              "frcsAddr": "광주광역시 광산구 상무대로 107 (도산동)",
+              "mrktNm": "우방이어라 골목형상점가",
+              "placeTypeCd": "07",
+              "placeTypeNm": "음식점업",
+              "addrCd": "12330",
+              "latitude": 35.130073,
+              "longitude": 126.786438,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05553200004",
+              "frcsNm": "유한회사 모우리주유소",
+              "frcsAddr": "광주광역시 광산구 소촌로 68 (소촌동)",
+              "mrktNm": "소촌중앙 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12330",
+              "latitude": 35.150497,
+              "longitude": 126.793543,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05711200012",
+              "frcsNm": "신공항엘피지충전소 ",
+              "frcsAddr": "전남광주통합특별시 광산구 상무대로 404 (신촌동)",
+              "mrktNm": "상무대로 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12330",
+              "latitude": 35.143928,
+              "longitude": 126.810189,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05076200204",
+              "frcsNm": "송정현대주유소",
+              "frcsAddr": "광주광역시 광산구 송도로 104 (도산동)",
+              "mrktNm": "임방울거리1구역 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12330",
+              "latitude": 35.126343,
+              "longitude": 126.788392,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05310200127",
+              "frcsNm": "전송주유소",
+              "frcsAddr": "광주광역시 광산구 어등대로 583 (운수동)",
+              "mrktNm": "선운별 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12330",
+              "latitude": 35.151024,
+              "longitude": 126.786709,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            }
+          ]
+        }
+      ],
+      "checked_at": "2026-10-25T11:13:56+09:00"
+    },
+    {
+      "candidate_id": "466e6b1196a429bb71813335",
+      "region": "지역 미확정",
+      "name": "㈜동행",
+      "market": "신창동가구의거리일번국도상점가",
+      "probes": [
+        {
+          "anchor": {
+            "상가업소번호": "MA010120220809878430",
+            "상호명": "동행",
+            "지점명": "",
+            "상권업종소분류코드": "G21401",
+            "상권업종소분류명": "주유소",
+            "표준산업분류코드": "G47711",
+            "표준산업분류명": "운송장비용 주유소 운영업",
+            "시도명": "전남광주통합특별시",
+            "시군구명": "광산구",
+            "도로명주소": "전남광주통합특별시 광산구 북문대로 364-5",
+            "지번주소": "전남광주통합특별시 광산구 신창동 1083-8",
+            "latitude": 35.1912457839957,
+            "longitude": 126.853242310473
+          },
+          "query": {
+            "keyword": "",
+            "area_code": "",
+            "status": "complete",
+            "expected": 1798,
+            "received": 1798,
+            "pages": 2,
+            "center": [
+              35.1912457839957,
+              126.853242310473
+            ],
+            "radius": 2
+          },
+          "same_address": [],
+          "nearby_fuel_names": [
+            {
+              "frCd": "05562200034",
+              "frcsNm": "다올주유소",
+              "frcsAddr": "전남광주통합특별시 광산구 북문대로 393 (신창동)",
+              "mrktNm": "신창동일번국도가구의거리 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12330",
+              "latitude": 35.192126,
+              "longitude": 126.850499,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05653200002",
+              "frcsNm": "동림주유소(현대오일뱅크)",
+              "frcsAddr": "광주광역시 북구 북문대로 257 (동림동)",
+              "mrktNm": "동림4단지 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12300",
+              "latitude": 35.187234,
+              "longitude": 126.864182,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            },
+            {
+              "frCd": "05653200008",
+              "frcsNm": "주공주유소",
+              "frcsAddr": "광주광역시 북구 북문대로 190 (운암동)",
+              "mrktNm": "동림4단지 골목형상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "12300",
+              "latitude": 35.185214,
+              "longitude": 126.870787,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            }
+          ]
+        }
+      ],
+      "checked_at": "2026-10-25T11:14:02+09:00"
+    },
+    {
+      "candidate_id": "live-15238200020",
+      "region": "경북",
+      "name": "세진석유",
+      "market": "캐롤타운상점가 골목형상점가",
+      "probes": [],
+      "checked_at": "2026-10-25T11:14:02+09:00"
+    },
+    {
+      "candidate_id": "c426c12d7c844ac0a2d91bd1",
+      "region": "경북",
+      "name": "춘양주유소",
+      "market": "억지춘향시장(구 봉화춘향시장)",
+      "probes": [
+        {
+          "anchor": {
+            "상가업소번호": "MA010120220806047363",
+            "상호명": "춘양주유소",
+            "지점명": "",
+            "상권업종소분류코드": "G21401",
+            "상권업종소분류명": "주유소",
+            "표준산업분류코드": "G47711",
+            "표준산업분류명": "운송장비용 주유소 운영업",
+            "시도명": "경상북도",
+            "시군구명": "봉화군",
+            "도로명주소": "경상북도 봉화군 춘양면 의양로 81",
+            "지번주소": "경상북도 봉화군 춘양면 의양리 427-5",
+            "latitude": 36.9346011284347,
+            "longitude": 128.912854858881
+          },
+          "query": {
+            "keyword": "",
+            "area_code": "",
+            "status": "complete",
+            "expected": 77,
+            "received": 77,
+            "pages": 1,
+            "center": [
+              36.9346011284347,
+              128.912854858881
+            ],
+            "radius": 2
+          },
+          "same_address": [],
+          "nearby_fuel_names": []
+        }
+      ],
+      "checked_at": "2026-10-25T11:14:03+09:00"
+    },
+    {
+      "candidate_id": "80abcbfbeaccee97f1fe852f",
+      "region": "경북",
+      "name": "제일가스",
+      "market": "양북시장",
+      "probes": [
+        {
+          "anchor": {
+            "상가업소번호": "MA010120220809397503",
+            "상호명": "제일가스",
+            "지점명": "",
+            "상권업종소분류코드": "G21403",
+            "상권업종소분류명": "가정용 연료 소매업",
+            "표준산업분류코드": "G47723",
+            "표준산업분류명": "가정용 가스 연료 소매업",
+            "시도명": "경상북도",
+            "시군구명": "영주시",
+            "도로명주소": "경상북도 영주시 영봉로 68-1",
+            "지번주소": "경상북도 영주시 휴천동 1304",
+            "latitude": 36.8163540540156,
+            "longitude": 128.645287690265
+          },
+          "query": {
+            "keyword": "",
+            "area_code": "",
+            "status": "complete",
+            "expected": 118,
+            "received": 118,
+            "pages": 1,
+            "center": [
+              36.8163540540156,
+              128.645287690265
+            ],
+            "radius": 2
+          },
+          "same_address": [],
+          "nearby_fuel_names": []
+        },
+        {
+          "anchor": {
+            "상가업소번호": "MA010120220809107439",
+            "상호명": "제일가스",
+            "지점명": "",
+            "상권업종소분류코드": "G21403",
+            "상권업종소분류명": "가정용 연료 소매업",
+            "표준산업분류코드": "G47723",
+            "표준산업분류명": "가정용 가스 연료 소매업",
+            "시도명": "경상북도",
+            "시군구명": "영천시",
+            "도로명주소": "경상북도 영천시 어봉길 88",
+            "지번주소": "경상북도 영천시 대전동 360-3",
+            "latitude": 35.9859667178882,
+            "longitude": 128.915132070925
+          },
+          "query": {
+            "keyword": "",
+            "area_code": "",
+            "status": "complete",
+            "expected": 0,
+            "received": 0,
+            "pages": 0,
+            "center": [
+              35.9859667178882,
+              128.915132070925
+            ],
+            "radius": 2
+          },
+          "same_address": [],
+          "nearby_fuel_names": []
+        },
+        {
+          "anchor": {
+            "상가업소번호": "MA010120220809392251",
+            "상호명": "제일가스",
+            "지점명": "",
+            "상권업종소분류코드": "G21403",
+            "상권업종소분류명": "가정용 연료 소매업",
+            "표준산업분류코드": "G47723",
+            "표준산업분류명": "가정용 가스 연료 소매업",
+            "시도명": "경상북도",
+            "시군구명": "예천군",
+            "도로명주소": "경상북도 예천군 예천읍 용문경천로 1728",
+            "지번주소": "경상북도 예천군 예천읍 백전리 1-3",
+            "latitude": 36.6749129241067,
+            "longitude": 128.458643318181
+          },
+          "query": {
+            "keyword": "",
+            "area_code": "",
+            "status": "complete",
+            "expected": 3,
+            "received": 3,
+            "pages": 1,
+            "center": [
+              36.6749129241067,
+              128.458643318181
+            ],
+            "radius": 2
+          },
+          "same_address": [],
+          "nearby_fuel_names": []
+        },
+        {
+          "anchor": {
+            "상가업소번호": "MA010120220811640952",
+            "상호명": "제일가스",
+            "지점명": "",
+            "상권업종소분류코드": "G21402",
+            "상권업종소분류명": "가스 충전소",
+            "표준산업분류코드": "G47712",
+            "표준산업분류명": "운송장비용 가스 충전업",
+            "시도명": "경상북도",
+            "시군구명": "경산시",
+            "도로명주소": "경상북도 경산시 삼성현로 196",
+            "지번주소": "경상북도 경산시 사정동 232",
+            "latitude": 35.8155364406133,
+            "longitude": 128.723968322292
+          },
+          "query": {
+            "keyword": "",
+            "area_code": "",
+            "status": "complete",
+            "expected": 382,
+            "received": 382,
+            "pages": 1,
+            "center": [
+              35.8155364406133,
+              128.723968322292
+            ],
+            "radius": 2
+          },
+          "same_address": [],
+          "nearby_fuel_names": []
+        },
+        {
+          "anchor": {
+            "상가업소번호": "MA010120220809200149",
+            "상호명": "제일가스",
+            "지점명": "",
+            "상권업종소분류코드": "G21403",
+            "상권업종소분류명": "가정용 연료 소매업",
+            "표준산업분류코드": "G47723",
+            "표준산업분류명": "가정용 가스 연료 소매업",
+            "시도명": "경상북도",
+            "시군구명": "포항시 남구",
+            "도로명주소": "경상북도 포항시 남구 연일읍 동문로53번길 41",
+            "지번주소": "경상북도 포항시 남구 연일읍 동문리 289",
+            "latitude": 35.9938326797608,
+            "longitude": 129.348029847258
+          },
+          "query": {
+            "keyword": "",
+            "area_code": "",
+            "status": "complete",
+            "expected": 143,
+            "received": 143,
+            "pages": 1,
+            "center": [
+              35.9938326797608,
+              129.348029847258
+            ],
+            "radius": 2
+          },
+          "same_address": [],
+          "nearby_fuel_names": []
+        }
+      ],
+      "checked_at": "2026-10-25T11:14:14+09:00"
+    },
+    {
+      "candidate_id": "081a17a302be89e37dca8737",
+      "region": "경북",
+      "name": "양북주유소",
+      "market": "양북시장",
+      "probes": [
+        {
+          "anchor": {
+            "상가업소번호": "MA010120220809102801",
+            "상호명": "양북주유소",
+            "지점명": "",
+            "상권업종소분류코드": "G21401",
+            "상권업종소분류명": "주유소",
+            "표준산업분류코드": "G47711",
+            "표준산업분류명": "운송장비용 주유소 운영업",
+            "시도명": "경상북도",
+            "시군구명": "경주시",
+            "도로명주소": "경상북도 경주시 문무대왕면 감은로 23",
+            "지번주소": "경상북도 경주시 문무대왕면 어일리 1295-175",
+            "latitude": 35.7930492689021,
+            "longitude": 129.439502348491
+          },
+          "query": {
+            "keyword": "",
+            "area_code": "",
+            "status": "complete",
+            "expected": 6,
+            "received": 6,
+            "pages": 1,
+            "center": [
+              35.7930492689021,
+              129.439502348491
+            ],
+            "radius": 2
+          },
+          "same_address": [],
+          "nearby_fuel_names": []
+        }
+      ],
+      "checked_at": "2026-10-25T11:14:15+09:00"
+    },
+    {
+      "candidate_id": "ff23f383096d8ef00074227d",
+      "region": "경북",
+      "name": "문희주유소",
+      "market": "문경전통시장",
+      "probes": [
+        {
+          "anchor": {
+            "상가업소번호": "MA010120220809352586",
+            "상호명": "문희주유소",
+            "지점명": "",
+            "상권업종소분류코드": "G21401",
+            "상권업종소분류명": "주유소",
+            "표준산업분류코드": "G47711",
+            "표준산업분류명": "운송장비용 주유소 운영업",
+            "시도명": "경상북도",
+            "시군구명": "문경시",
+            "도로명주소": "경상북도 문경시 문경읍 청운로 47",
+            "지번주소": "경상북도 문경시 문경읍 하리 105-1",
+            "latitude": 36.7367111372361,
+            "longitude": 128.106223151258
+          },
+          "query": {
+            "keyword": "",
+            "area_code": "",
+            "status": "complete",
+            "expected": 42,
+            "received": 42,
+            "pages": 1,
+            "center": [
+              36.7367111372361,
+              128.106223151258
+            ],
+            "radius": 2
+          },
+          "same_address": [],
+          "nearby_fuel_names": []
+        }
+      ],
+      "checked_at": "2026-10-25T11:14:16+09:00"
+    },
+    {
+      "candidate_id": "04d09d1a8156d44b38db83c0",
+      "region": "경북",
+      "name": "명륜주유소",
+      "market": "북문시장",
+      "probes": [
+        {
+          "anchor": {
+            "상가업소번호": "MA010120220813246743",
+            "상호명": "명륜주유소",
+            "지점명": "",
+            "상권업종소분류코드": "G21401",
+            "상권업종소분류명": "주유소",
+            "표준산업분류코드": "G47711",
+            "표준산업분류명": "운송장비용 주유소 운영업",
+            "시도명": "경상북도",
+            "시군구명": "안동시",
+            "도로명주소": "경상북도 안동시 퇴계로 134",
+            "지번주소": "경상북도 안동시 명륜동 315",
+            "latitude": 36.5690056148742,
+            "longitude": 128.731777730577
+          },
+          "query": {
+            "keyword": "",
+            "area_code": "",
+            "status": "complete",
+            "expected": 769,
+            "received": 769,
+            "pages": 1,
+            "center": [
+              36.5690056148742,
+              128.731777730577
+            ],
+            "radius": 2
+          },
+          "same_address": [],
+          "nearby_fuel_names": []
+        }
+      ],
+      "checked_at": "2026-10-25T11:14:19+09:00"
+    },
+    {
+      "candidate_id": "9e96e2c352e1ca4224036944",
+      "region": "경북",
+      "name": "기성주유소",
+      "market": "척산시장",
+      "probes": [
+        {
+          "anchor": {
+            "상가업소번호": "MA010120220809222326",
+            "상호명": "기성주유소",
+            "지점명": "",
+            "상권업종소분류코드": "G21401",
+            "상권업종소분류명": "주유소",
+            "표준산업분류코드": "G47711",
+            "표준산업분류명": "운송장비용 주유소 운영업",
+            "시도명": "경상북도",
+            "시군구명": "울진군",
+            "도로명주소": "경상북도 울진군 기성면 기성로 633",
+            "지번주소": "경상북도 울진군 기성면 척산리 290-1",
+            "latitude": 36.7957603115358,
+            "longitude": 129.451876417758
+          },
+          "query": {
+            "keyword": "",
+            "area_code": "",
+            "status": "complete",
+            "expected": 0,
+            "received": 0,
+            "pages": 0,
+            "center": [
+              36.7957603115358,
+              129.451876417758
+            ],
+            "radius": 2
+          },
+          "same_address": [],
+          "nearby_fuel_names": []
+        }
+      ],
+      "checked_at": "2026-10-25T11:14:21+09:00"
+    },
+    {
+      "candidate_id": "0bf8e875e8a47f8917b48c5c",
+      "region": "대구",
+      "name": "대성석유",
+      "market": "평화시장",
+      "probes": [
+        {
+          "anchor": {
+            "상가업소번호": "MA010120220808847250",
+            "상호명": "대성석유",
+            "지점명": "",
+            "상권업종소분류코드": "G21403",
+            "상권업종소분류명": "가정용 연료 소매업",
+            "표준산업분류코드": "G47722",
+            "표준산업분류명": "가정용 액체 연료 소매업",
+            "시도명": "대구광역시",
+            "시군구명": "동구",
+            "도로명주소": "대구광역시 동구 평화로 69",
+            "지번주소": "대구광역시 동구 신암동 609-16",
+            "latitude": 35.8849845718552,
+            "longitude": 128.621227761324
+          },
+          "query": {
+            "keyword": "",
+            "area_code": "",
+            "status": "complete",
+            "expected": 1113,
+            "received": 1113,
+            "pages": 2,
+            "center": [
+              35.8849845718552,
+              128.621227761324
+            ],
+            "radius": 2
+          },
+          "same_address": [],
+          "nearby_fuel_names": []
+        }
+      ],
+      "checked_at": "2026-10-25T11:14:26+09:00"
+    },
+    {
+      "candidate_id": "3e5913425369e021c3f3bad8",
+      "region": "충남",
+      "name": "부흥주유소",
+      "market": "공산성골목형상점가",
+      "probes": [
+        {
+          "anchor": {
+            "상가업소번호": "MA010120220805035213",
+            "상호명": "부흥주유소",
+            "지점명": "",
+            "상권업종소분류코드": "G21401",
+            "상권업종소분류명": "주유소",
+            "표준산업분류코드": "G47711",
+            "표준산업분류명": "운송장비용 주유소 운영업",
+            "시도명": "충청남도",
+            "시군구명": "홍성군",
+            "도로명주소": "충청남도 홍성군 광천읍 광천로329번길 11",
+            "지번주소": "충청남도 홍성군 광천읍 광천리 185-22",
+            "latitude": 36.5027318438102,
+            "longitude": 126.625061986194
+          },
+          "query": {
+            "keyword": "",
+            "area_code": "",
+            "status": "complete",
+            "expected": 155,
+            "received": 155,
+            "pages": 1,
+            "center": [
+              36.5027318438102,
+              126.625061986194
+            ],
+            "radius": 2
+          },
+          "same_address": [],
+          "nearby_fuel_names": []
+        }
+      ],
+      "checked_at": "2026-10-25T11:14:27+09:00"
+    },
+    {
+      "candidate_id": "dfea2f84be984c283e41bfe9",
+      "region": "충북",
+      "name": "원남주유소",
+      "market": "음성시장",
+      "probes": [
+        {
+          "anchor": {
+            "상가업소번호": "MA010120220810462171",
+            "상호명": "원남주유소",
+            "지점명": "",
+            "상권업종소분류코드": "G21401",
+            "상권업종소분류명": "주유소",
+            "표준산업분류코드": "G47711",
+            "표준산업분류명": "운송장비용 주유소 운영업",
+            "시도명": "충청북도",
+            "시군구명": "보은군",
+            "도로명주소": "충청북도 보은군 삼승면 원남로 8",
+            "지번주소": "충청북도 보은군 삼승면 원남리 185-1",
+            "latitude": 36.3945966586739,
+            "longitude": 127.733382238697
+          },
+          "query": {
+            "keyword": "",
+            "area_code": "",
+            "status": "complete",
+            "expected": 3,
+            "received": 3,
+            "pages": 1,
+            "center": [
+              36.3945966586739,
+              127.733382238697
+            ],
+            "radius": 2
+          },
+          "same_address": [],
+          "nearby_fuel_names": []
+        },
+        {
+          "anchor": {
+            "상가업소번호": "MA010120220805664888",
+            "상호명": "원남주유소",
+            "지점명": "",
+            "상권업종소분류코드": "G21401",
+            "상권업종소분류명": "주유소",
+            "표준산업분류코드": "G47711",
+            "표준산업분류명": "운송장비용 주유소 운영업",
+            "시도명": "충청북도",
+            "시군구명": "음성군",
+            "도로명주소": "충청북도 음성군 원남면 충청대로 1139",
+            "지번주소": "충청북도 음성군 원남면 하당리 9-2",
+            "latitude": 36.9117679161991,
+            "longitude": 127.685933795773
+          },
+          "query": {
+            "keyword": "",
+            "area_code": "",
+            "status": "complete",
+            "expected": 0,
+            "received": 0,
+            "pages": 0,
+            "center": [
+              36.9117679161991,
+              127.685933795773
+            ],
+            "radius": 2
+          },
+          "same_address": [],
+          "nearby_fuel_names": []
+        }
+      ],
+      "checked_at": "2026-10-25T11:14:32+09:00"
+    },
+    {
+      "candidate_id": "live-06004200110",
+      "region": "대전",
+      "name": "신화석유",
+      "market": "오정동상점가",
+      "probes": [
+        {
+          "anchor": {
+            "상가업소번호": "MA010120220803735980",
+            "상호명": "신화",
+            "지점명": "",
+            "상권업종소분류코드": "G21403",
+            "상권업종소분류명": "가정용 연료 소매업",
+            "표준산업분류코드": "G47722",
+            "표준산업분류명": "가정용 액체 연료 소매업",
+            "시도명": "대전광역시",
+            "시군구명": "대덕구",
+            "도로명주소": "대전광역시 대덕구 한밭대로988번길 77",
+            "지번주소": "대전광역시 대덕구 오정동 90-2",
+            "latitude": 36.3549936308984,
+            "longitude": 127.411015851639
+          },
+          "query": {
+            "keyword": "",
+            "area_code": "",
+            "status": "complete",
+            "expected": 795,
+            "received": 795,
+            "pages": 1,
+            "center": [
+              36.3549936308984,
+              127.411015851639
+            ],
+            "radius": 2
+          },
+          "same_address": [
+            {
+              "frCd": "06004200110",
+              "frcsNm": "신화석유",
+              "frcsAddr": "대전광역시 대덕구 한밭대로988번길 77 (오정동)",
+              "mrktNm": "오정동상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "30230",
+              "latitude": 36.354991,
+              "longitude": 127.411012,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            }
+          ],
+          "nearby_fuel_names": [
+            {
+              "frCd": "06004200110",
+              "frcsNm": "신화석유",
+              "frcsAddr": "대전광역시 대덕구 한밭대로988번길 77 (오정동)",
+              "mrktNm": "오정동상점가",
+              "placeTypeCd": "08",
+              "placeTypeNm": "기타소매업",
+              "addrCd": "30230",
+              "latitude": 36.354991,
+              "longitude": 127.411012,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            }
+          ]
+        }
+      ],
+      "checked_at": "2026-10-25T11:14:33+09:00"
+    },
+    {
+      "candidate_id": "e971399ca41505931d7d9ca4",
+      "region": "대전",
+      "name": "영주석유",
+      "market": "중앙종합시장",
+      "probes": [
+        {
+          "anchor": {
+            "상가업소번호": "MA010120220805829464",
+            "상호명": "영주석유",
+            "지점명": "",
+            "상권업종소분류코드": "G21403",
+            "상권업종소분류명": "가정용 연료 소매업",
+            "표준산업분류코드": "G47722",
+            "표준산업분류명": "가정용 액체 연료 소매업",
+            "시도명": "대전광역시",
+            "시군구명": "동구",
+            "도로명주소": "대전광역시 동구 대전로 767",
+            "지번주소": "대전광역시 동구 원동 43-1",
+            "latitude": 36.3282013212304,
+            "longitude": 127.434062697037
+          },
+          "query": {
+            "keyword": "",
+            "area_code": "",
+            "status": "complete",
+            "expected": 1910,
+            "received": 1910,
+            "pages": 2,
+            "center": [
+              36.3282013212304,
+              127.434062697037
+            ],
+            "radius": 2
+          },
+          "same_address": [],
+          "nearby_fuel_names": [
+            {
+              "frCd": "06125200020",
+              "frcsNm": "인생충전소본점",
+              "frcsAddr": "대전광역시 중구 대종로274번길 16 (문창동)",
+              "mrktNm": "문창동 보물찾(Chat)길 골목형상점가",
+              "placeTypeCd": "07",
+              "placeTypeNm": "음식점업",
+              "addrCd": "30140",
+              "latitude": 36.312124,
+              "longitude": 127.438439,
+              "paperYn": "Y",
+              "cardYn": "Y",
+              "qrYn": "Y"
+            }
+          ]
+        }
+      ],
+      "checked_at": "2026-10-25T11:14:38+09:00"
+    },
+    {
+      "candidate_id": "b924551d561010aaeffebdda",
+      "region": "경기",
+      "name": "광탄주유소",
+      "market": "광탄전통시장",
+      "probes": [
+        {
+          "anchor": {
+            "상가업소번호": "MA010120220801753318",
+            "상호명": "광탄주유소",
+            "지점명": "",
+            "상권업종소분류코드": "G21401",
+            "상권업종소분류명": "주유소",
+            "표준산업분류코드": "G47711",
+            "표준산업분류명": "운송장비용 주유소 운영업",
+            "시도명": "경기도",
+            "시군구명": "파주시",
+            "도로명주소": "경기도 파주시 광탄면 혜음로 1178",
+            "지번주소": "경기도 파주시 광탄면 신산리 352-5",
+            "latitude": 37.7862480600179,
+            "longitude": 126.84524358065
+          },
+          "query": {
+            "keyword": "",
+            "area_code": "",
+            "status": "complete",
+            "expected": 57,
+            "received": 57,
+            "pages": 1,
+            "center": [
+              37.7862480600179,
+              126.84524358065
+            ],
+            "radius": 2
+          },
+          "same_address": [],
+          "nearby_fuel_names": []
+        },
+        {
+          "anchor": {
+            "상가업소번호": "MA0101202512A0007012",
+            "상호명": "광탄주유소",
+            "지점명": "",
+            "상권업종소분류코드": "G21401",
+            "상권업종소분류명": "주유소",
+            "표준산업분류코드": "G47711",
+            "표준산업분류명": "운송장비용 주유소 운영업",
+            "시도명": "경기도",
+            "시군구명": "양평군",
+            "도로명주소": "경기도 양평군 용문면 용문로 794",
+            "지번주소": "경기도 양평군 용문면 광탄리 74-6",
+            "latitude": 37.5064829560216,
+            "longitude": 127.629813316167
+          },
+          "query": {
+            "keyword": "",
+            "area_code": "",
+            "status": "complete",
+            "expected": 0,
+            "received": 0,
+            "pages": 0,
+            "center": [
+              37.5064829560216,
+              127.629813316167
+            ],
+            "radius": 2
+          },
+          "same_address": [],
+          "nearby_fuel_names": []
+        }
+      ],
+      "checked_at": "2026-10-25T11:14:41+09:00"
+    }
+  ],
+  "checked_at": "2026-10-25T11:14:41+09:00",
+  "unique_queries": 25
+}

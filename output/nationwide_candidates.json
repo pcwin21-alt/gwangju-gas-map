@@ -279,8 +279,8 @@
       "name": "신화석유",
       "market": "오정동상점가",
       "region": "대전",
-      "status": "needs_review",
-      "reason": "자동차 주유·충전 업종 확인 필요"
+      "status": "excluded_non_vehicle_fuel",
+      "reason": "공식 상권정보의 가정용 연료 소매업 분류와 현행 신화석유 상호·주소 교차 확인"
     },
     {
       "row_number": 32,
@@ -1539,8 +1539,8 @@
       "name": "대성석유",
       "market": "매월동상인회 골목형상점가",
       "region": "전남광주",
-      "status": "needs_review",
-      "reason": "자동차 주유·충전 업종 확인 필요"
+      "status": "excluded_non_vehicle_fuel",
+      "reason": "서구 석유판매업 등록자료의 일반판매소와 현행 장소정보의 석유 판매업 분류 교차 확인"
     },
     {
       "row_number": 172,
