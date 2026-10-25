@@ -18,7 +18,7 @@ def address_key(address):
     return (region(address), parts[1] if len(parts) > 1 else '', ''.join(road.groups())) if road else None
 
 
-def classify(row, annual_rows, known_fuel_addresses):
+def classify(row, annual_rows, known_fuel_addresses, fuel_evidence=()):
     name, category = row['frcsNm'], row.get('placeTypeNm', '')
     items = ' '.join(r.get('취급품목', '') for r in annual_rows)
     if category and category not in ('기타소매업', '근린상권서비스'):
@@ -26,7 +26,11 @@ def classify(row, annual_rows, known_fuel_addresses):
     if any(non_vehicle(r) for r in annual_rows) or re.search(
             r'기사식당|^CU|^GS25|^Gs25|세븐일레븐|쎄븐일레븐|이마트24|약국|다이어트|댄스|주류|알콜|카페|커피|가스케트|보일러|가스기구|가스설비|가스엔지니어링', name):
         return 'excluded_non_vehicle_fuel', '연료 외 상품 또는 업종', None
-    vehicle = bool(re.search(r'주유소|충전소|오일뱅크', name) or
+    corroborated = any(e.get('source_id') == row['frCd'] and
+        e.get('merchant_name') == name and e.get('market') == row.get('mrktNm') and
+        e.get('address') == row['frcsAddr'] and e.get('fuel_kind') == 'liquid' and
+        e.get('sources') for e in fuel_evidence)
+    vehicle = bool(corroborated or re.search(r'주유소|충전소|오일뱅크', name) or
                    re.search(r'휘발유|무연|차량용.*(?:기름|가스|엘피지|충전)|^주유소|^주유$|^충전소|가스충전소', items) or
                    address_key(row['frcsAddr']) in known_fuel_addresses)
     if not vehicle:
@@ -44,7 +48,10 @@ def classify(row, annual_rows, known_fuel_addresses):
     return 'located', '공식 검색의 가맹점 ID·주소·좌표·결제수단 확인', kind
 
 
-def prepare(snapshot, annual, historical, sangsaeng, locations=()):
+def prepare(snapshot, annual, historical, sangsaeng, locations=(), fuel_evidence=()):
+    from datetime import date
+    fuel_evidence = [e for e in fuel_evidence if
+        0 <= (date.fromisoformat(snapshot['checked_at'][:10]) - date.fromisoformat(e['checked_at'][:10])).days <= 90]
     if snapshot.get('status') != 'complete' or not snapshot.get('queries') or any(
             q['status'] != 'complete' or q['expected'] != q['received'] for q in snapshot['queries']):
         raise ValueError('Incomplete live snapshot')
@@ -63,7 +70,7 @@ def prepare(snapshot, annual, historical, sangsaeng, locations=()):
         # A name/market can recur in another province. Never transfer its items.
         annual_rows = [r for r in annual_rows if region(row['frcsAddr']) in
                        (['광주', '전남'] if r['소재지'] == '전남광주' else [region(r['소재지'])])]
-        decision, reason, kind = classify(row, annual_rows, known_addresses)
+        decision, reason, kind = classify(row, annual_rows, known_addresses, fuel_evidence)
         candidate_ids = [row_id(r) for r in annual_rows]
         evidence = {'source_id': row['frCd'], 'name': row['frcsNm'], 'market': row['mrktNm'],
                     'region': region(row['frcsAddr']), 'address': row['frcsAddr'],
@@ -77,6 +84,7 @@ def prepare(snapshot, annual, historical, sangsaeng, locations=()):
             continue
         item = dict(row)
         item['_fuel_kind'] = kind
+        item['_fuel_evidence'] = [e for e in fuel_evidence if e['source_id'] == row['frCd'] and e['address'] == row['frcsAddr'] and e['merchant_name'] == row['frcsNm'] and e['market'] == row['mrktNm']]
         item['_verification'] = {'status': 'confirmed', 'checked_at': snapshot['checked_at'],
             'source_date': snapshot['checked_at'][:10], 'source_url': snapshot['source_url'],
             'source_id': row['frCd'], 'source_ids': [row['frCd']],

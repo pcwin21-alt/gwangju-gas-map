@@ -1521,8 +1521,8 @@
       "name": "대주에너지",
       "market": "봉선중앙로 골목형상점가",
       "region": "전남광주",
-      "status": "needs_review",
-      "reason": "자동차 주유·충전 업종 확인 필요"
+      "status": "located",
+      "reason": "현행 공식 검색으로 주소·결제수단 확인"
     },
     {
       "row_number": 170,
@@ -1683,8 +1683,8 @@
       "name": "경훈에너지",
       "market": "오치1동 골목형상점가",
       "region": "전남광주",
-      "status": "needs_review",
-      "reason": "자동차 주유·충전 업종 확인 필요"
+      "status": "located",
+      "reason": "현행 공식 검색으로 주소·결제수단 확인"
     },
     {
       "row_number": 188,

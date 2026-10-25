@@ -1,0 +1,1605 @@
+{
+  "checked_at": "2026-10-25T10:34:17+09:00",
+  "status": "complete",
+  "rows": [
+    {
+      "candidate_id": "1054803b1165f961c8cb5967",
+      "name": "현대주유소",
+      "market": "웃장",
+      "region": "전남",
+      "status": "needs_review",
+      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조",
+      "show_pending": true,
+      "source_region": "전남광주",
+      "region_resolution": {
+        "status": "resolved",
+        "match_basis": "exact_market_name_consistent_region",
+        "evidence": [
+          {
+            "market": "웃장",
+            "reference_address": "전라남도 순천시 북문길 40",
+            "source_kind": "official_market_registry",
+            "source_url": "https://www.data.go.kr/data/15012894/standard.do",
+            "source_date": "2025-11-10"
+          }
+        ],
+        "scope": "province_only_no_station_address_or_membership_inference"
+      },
+      "registry_candidates": [
+        {
+          "CONM_NM": "현대주유소",
+          "CTPV_NM": "전라남도",
+          "SGG_NM": "영광군",
+          "LCTN_ROAD_NM": "전라남도 영광군 홍농읍 연우로 334",
+          "LCTN_LOTNO_ADDR": "",
+          "LAT": "35.39107029",
+          "LOT": "126.4413187",
+          "TELNO": "",
+          "DATA_CRTR_YMD": "2025-09-24"
+        },
+        {
+          "CONM_NM": "현대주유소",
+          "CTPV_NM": "전라남도",
+          "SGG_NM": "순천시",
+          "LCTN_ROAD_NM": "전라남도 순천시 중앙로 172 (매곡동)",
+          "LCTN_LOTNO_ADDR": "전라남도 순천시 매곡동 55-1",
+          "LAT": "34.96097252",
+          "LOT": "127.4847157",
+          "TELNO": "061-752-3327",
+          "DATA_CRTR_YMD": "2025-12-01"
+        }
+      ],
+      "queries": [
+        {
+          "keyword": "현대주유소",
+          "area_code": "",
+          "status": "complete",
+          "expected": 3,
+          "received": 3,
+          "pages": 1
+        },
+        {
+          "keyword": "",
+          "area_code": "",
+          "status": "complete",
+          "expected": 0,
+          "received": 0,
+          "pages": 0,
+          "center": [
+            35.39107029,
+            126.4413187
+          ],
+          "radius": 2
+        },
+        {
+          "keyword": "",
+          "area_code": "",
+          "status": "complete",
+          "expected": 472,
+          "received": 472,
+          "pages": 1,
+          "center": [
+            34.96097252,
+            127.4847157
+          ],
+          "radius": 2
+        }
+      ],
+      "official_matches": [],
+      "nearby_same_address": [],
+      "result": "needs_current_membership",
+      "same_name_candidates": []
+    },
+    {
+      "source_id": "05023200024",
+      "name": "SK동진석유",
+      "market": "중흥중가로 골목형상점가",
+      "region": "광주",
+      "address": "광주광역시 북구 중가로85번길 28 (중흥동)",
+      "status": "needs_review",
+      "reason": "자동차 주유·충전 업종 확인 필요",
+      "candidate_id": "live-05023200024",
+      "annual_candidate_ids": [
+        "6fed398149a3ddc242eb314c"
+      ],
+      "show_pending": true,
+      "registry_candidates": [],
+      "queries": [
+        {
+          "keyword": "SK동진석유",
+          "area_code": "",
+          "status": "complete",
+          "expected": 1,
+          "received": 1,
+          "pages": 1
+        }
+      ],
+      "official_matches": [
+        {
+          "frCd": "05023200024",
+          "frcsNm": "SK동진석유",
+          "frcsAddr": "광주광역시 북구 중가로85번길 28 (중흥동)",
+          "mrktNm": "중흥중가로 골목형상점가",
+          "placeTypeCd": "08",
+          "placeTypeNm": "기타소매업",
+          "addrCd": "12300",
+          "latitude": 35.15978,
+          "longitude": 126.909609,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        }
+      ],
+      "result": "needs_vehicle_type",
+      "same_name_candidates": [
+        {
+          "frCd": "05023200024",
+          "frcsNm": "SK동진석유",
+          "frcsAddr": "광주광역시 북구 중가로85번길 28 (중흥동)",
+          "mrktNm": "중흥중가로 골목형상점가",
+          "placeTypeCd": "08",
+          "placeTypeNm": "기타소매업",
+          "addrCd": "12300",
+          "latitude": 35.15978,
+          "longitude": 126.909609,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        }
+      ]
+    },
+    {
+      "source_id": "05104200133",
+      "name": "에스케이신안석유",
+      "market": "임동 골목형상점가",
+      "region": "광주",
+      "address": "광주광역시 북구 중흥로7번길 15 (임동)",
+      "status": "needs_review",
+      "reason": "자동차 주유·충전 업종 확인 필요",
+      "candidate_id": "live-05104200133",
+      "annual_candidate_ids": [
+        "f0bceeeee30bceb8d97290ef"
+      ],
+      "show_pending": true,
+      "registry_candidates": [],
+      "queries": [
+        {
+          "keyword": "에스케이신안석유",
+          "area_code": "",
+          "status": "complete",
+          "expected": 1,
+          "received": 1,
+          "pages": 1
+        }
+      ],
+      "official_matches": [
+        {
+          "frCd": "05104200133",
+          "frcsNm": "에스케이신안석유",
+          "frcsAddr": "광주광역시 북구 중흥로7번길 15 (임동)",
+          "mrktNm": "임동 골목형상점가",
+          "placeTypeCd": "08",
+          "placeTypeNm": "기타소매업",
+          "addrCd": "12300",
+          "latitude": 35.166299,
+          "longitude": 126.894879,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        }
+      ],
+      "result": "needs_vehicle_type",
+      "same_name_candidates": [
+        {
+          "frCd": "05104200133",
+          "frcsNm": "에스케이신안석유",
+          "frcsAddr": "광주광역시 북구 중흥로7번길 15 (임동)",
+          "mrktNm": "임동 골목형상점가",
+          "placeTypeCd": "08",
+          "placeTypeNm": "기타소매업",
+          "addrCd": "12300",
+          "latitude": 35.166299,
+          "longitude": 126.894879,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        }
+      ]
+    },
+    {
+      "source_id": "05163200052",
+      "name": "유창석유",
+      "market": "큰방림길 골목형상점가",
+      "region": "광주",
+      "address": "광주광역시 남구 천변좌로542번길 20 (방림동)",
+      "status": "needs_review",
+      "reason": "자동차 주유·충전 업종 확인 필요",
+      "candidate_id": "live-05163200052",
+      "annual_candidate_ids": [
+        "8edc76825b375b2fb2f7f514"
+      ],
+      "show_pending": true,
+      "registry_candidates": [],
+      "queries": [
+        {
+          "keyword": "유창석유",
+          "area_code": "",
+          "status": "complete",
+          "expected": 1,
+          "received": 1,
+          "pages": 1
+        }
+      ],
+      "official_matches": [
+        {
+          "frCd": "05163200052",
+          "frcsNm": "유창석유",
+          "frcsAddr": "광주광역시 남구 천변좌로542번길 20 (방림동)",
+          "mrktNm": "큰방림길 골목형상점가",
+          "placeTypeCd": "08",
+          "placeTypeNm": "기타소매업",
+          "addrCd": "12270",
+          "latitude": 35.132413,
+          "longitude": 126.921637,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        }
+      ],
+      "result": "needs_vehicle_type",
+      "same_name_candidates": [
+        {
+          "frCd": "05163200052",
+          "frcsNm": "유창석유",
+          "frcsAddr": "광주광역시 남구 천변좌로542번길 20 (방림동)",
+          "mrktNm": "큰방림길 골목형상점가",
+          "placeTypeCd": "08",
+          "placeTypeNm": "기타소매업",
+          "addrCd": "12270",
+          "latitude": 35.132413,
+          "longitude": 126.921637,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        }
+      ]
+    },
+    {
+      "source_id": "05164200084",
+      "name": "대주에너지",
+      "market": "봉선중앙로 골목형상점가",
+      "region": "광주",
+      "address": "광주광역시 남구 대남대로 153 (봉선동)",
+      "status": "needs_review",
+      "reason": "자동차 주유·충전 업종 확인 필요",
+      "candidate_id": "live-05164200084",
+      "annual_candidate_ids": [
+        "ed66938b7d2f6debb5dc0ceb"
+      ],
+      "show_pending": true,
+      "registry_candidates": [],
+      "queries": [
+        {
+          "keyword": "대주에너지",
+          "area_code": "",
+          "status": "complete",
+          "expected": 1,
+          "received": 1,
+          "pages": 1
+        }
+      ],
+      "official_matches": [
+        {
+          "frCd": "05164200084",
+          "frcsNm": "대주에너지",
+          "frcsAddr": "광주광역시 남구 대남대로 153 (봉선동)",
+          "mrktNm": "봉선중앙로 골목형상점가",
+          "placeTypeCd": "08",
+          "placeTypeNm": "기타소매업",
+          "addrCd": "12270",
+          "latitude": 35.133555,
+          "longitude": 126.908236,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        }
+      ],
+      "result": "verified_fuel_identity",
+      "same_name_candidates": [
+        {
+          "frCd": "05164200084",
+          "frcsNm": "대주에너지",
+          "frcsAddr": "광주광역시 남구 대남대로 153 (봉선동)",
+          "mrktNm": "봉선중앙로 골목형상점가",
+          "placeTypeCd": "08",
+          "placeTypeNm": "기타소매업",
+          "addrCd": "12270",
+          "latitude": 35.133555,
+          "longitude": 126.908236,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        }
+      ],
+      "fuel_evidence_file": "verified_fuel_evidence.json"
+    },
+    {
+      "source_id": "05273200078",
+      "name": "대성석유",
+      "market": "매월동상인회 골목형상점가",
+      "region": "광주",
+      "address": "광주광역시 서구 화개길 24-3 (매월동)",
+      "status": "needs_review",
+      "reason": "자동차 주유·충전 업종 확인 필요",
+      "candidate_id": "live-05273200078",
+      "annual_candidate_ids": [
+        "58bf924a52d2ce1fb7de7c8e"
+      ],
+      "show_pending": true,
+      "registry_candidates": [],
+      "queries": [
+        {
+          "keyword": "대성석유",
+          "area_code": "",
+          "status": "complete",
+          "expected": 1,
+          "received": 1,
+          "pages": 1
+        }
+      ],
+      "official_matches": [
+        {
+          "frCd": "05273200078",
+          "frcsNm": "대성석유",
+          "frcsAddr": "광주광역시 서구 화개길 24-3 (매월동)",
+          "mrktNm": "매월동상인회 골목형상점가",
+          "placeTypeCd": "08",
+          "placeTypeNm": "기타소매업",
+          "addrCd": "12240",
+          "latitude": 35.120688,
+          "longitude": 126.856856,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        }
+      ],
+      "result": "needs_vehicle_type",
+      "same_name_candidates": [
+        {
+          "frCd": "05273200078",
+          "frcsNm": "대성석유",
+          "frcsAddr": "광주광역시 서구 화개길 24-3 (매월동)",
+          "mrktNm": "매월동상인회 골목형상점가",
+          "placeTypeCd": "08",
+          "placeTypeNm": "기타소매업",
+          "addrCd": "12240",
+          "latitude": 35.120688,
+          "longitude": 126.856856,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        }
+      ]
+    },
+    {
+      "source_id": "05290200001",
+      "name": "경훈에너지",
+      "market": "오치1동 골목형상점가",
+      "region": "광주",
+      "address": "광주광역시 북구 서하로 237 (오치동)",
+      "status": "needs_review",
+      "reason": "자동차 주유·충전 업종 확인 필요",
+      "candidate_id": "live-05290200001",
+      "annual_candidate_ids": [
+        "e372dec9b50c553fa2108033"
+      ],
+      "show_pending": true,
+      "registry_candidates": [],
+      "queries": [
+        {
+          "keyword": "경훈에너지",
+          "area_code": "",
+          "status": "complete",
+          "expected": 1,
+          "received": 1,
+          "pages": 1
+        }
+      ],
+      "official_matches": [
+        {
+          "frCd": "05290200001",
+          "frcsNm": "경훈에너지",
+          "frcsAddr": "광주광역시 북구 서하로 237 (오치동)",
+          "mrktNm": "오치1동 골목형상점가",
+          "placeTypeCd": "08",
+          "placeTypeNm": "기타소매업",
+          "addrCd": "12300",
+          "latitude": 35.187299,
+          "longitude": 126.906585,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        }
+      ],
+      "result": "verified_fuel_identity",
+      "same_name_candidates": [
+        {
+          "frCd": "05290200001",
+          "frcsNm": "경훈에너지",
+          "frcsAddr": "광주광역시 북구 서하로 237 (오치동)",
+          "mrktNm": "오치1동 골목형상점가",
+          "placeTypeCd": "08",
+          "placeTypeNm": "기타소매업",
+          "addrCd": "12300",
+          "latitude": 35.187299,
+          "longitude": 126.906585,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        }
+      ],
+      "fuel_evidence_file": "verified_fuel_evidence.json"
+    },
+    {
+      "source_id": "05421200052",
+      "name": "에스케이(SK)금호석유",
+      "market": "월산4동 골목형상점가",
+      "region": "광주",
+      "address": "광주광역시 남구 금화로 476 (월산동)",
+      "status": "needs_review",
+      "reason": "자동차 주유·충전 업종 확인 필요",
+      "candidate_id": "live-05421200052",
+      "annual_candidate_ids": [
+        "20c01e1b3ffe7769ce5b37cc"
+      ],
+      "show_pending": true,
+      "registry_candidates": [],
+      "queries": [
+        {
+          "keyword": "에스케이(SK)금호석유",
+          "area_code": "",
+          "status": "complete",
+          "expected": 1,
+          "received": 1,
+          "pages": 1
+        }
+      ],
+      "official_matches": [
+        {
+          "frCd": "05421200052",
+          "frcsNm": "에스케이(SK)금호석유",
+          "frcsAddr": "광주광역시 남구 금화로 476 (월산동)",
+          "mrktNm": "월산4동 골목형상점가",
+          "placeTypeCd": "08",
+          "placeTypeNm": "기타소매업",
+          "addrCd": "12270",
+          "latitude": 35.148494,
+          "longitude": 126.891586,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        }
+      ],
+      "result": "needs_vehicle_type",
+      "same_name_candidates": [
+        {
+          "frCd": "05421200052",
+          "frcsNm": "에스케이(SK)금호석유",
+          "frcsAddr": "광주광역시 남구 금화로 476 (월산동)",
+          "mrktNm": "월산4동 골목형상점가",
+          "placeTypeCd": "08",
+          "placeTypeNm": "기타소매업",
+          "addrCd": "12270",
+          "latitude": 35.148494,
+          "longitude": 126.891586,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        }
+      ]
+    },
+    {
+      "source_id": "05491200023",
+      "name": "광주석유판매협동조합",
+      "market": "신안동광주역앞상가 골목형상점가",
+      "region": "광주",
+      "address": "광주광역시 북구 자미로10번길 11 (신안동)",
+      "status": "needs_review",
+      "reason": "자동차 주유·충전 업종 확인 필요",
+      "candidate_id": "live-05491200023",
+      "annual_candidate_ids": [
+        "4eb982df05bfb19162812c4b"
+      ],
+      "show_pending": true,
+      "registry_candidates": [],
+      "queries": [
+        {
+          "keyword": "광주석유판매협동조합",
+          "area_code": "",
+          "status": "complete",
+          "expected": 1,
+          "received": 1,
+          "pages": 1
+        }
+      ],
+      "official_matches": [
+        {
+          "frCd": "05491200023",
+          "frcsNm": "광주석유판매협동조합",
+          "frcsAddr": "광주광역시 북구 자미로10번길 11 (신안동)",
+          "mrktNm": "신안동광주역앞상가 골목형상점가",
+          "placeTypeCd": "08",
+          "placeTypeNm": "기타소매업",
+          "addrCd": "12300",
+          "latitude": 35.166919,
+          "longitude": 126.903532,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        }
+      ],
+      "result": "needs_vehicle_type",
+      "same_name_candidates": [
+        {
+          "frCd": "05491200023",
+          "frcsNm": "광주석유판매협동조합",
+          "frcsAddr": "광주광역시 북구 자미로10번길 11 (신안동)",
+          "mrktNm": "신안동광주역앞상가 골목형상점가",
+          "placeTypeCd": "08",
+          "placeTypeNm": "기타소매업",
+          "addrCd": "12300",
+          "latitude": 35.166919,
+          "longitude": 126.903532,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        }
+      ]
+    },
+    {
+      "source_id": "05626200027",
+      "name": "SK경인석유",
+      "market": "두암1동군왕로 골목형상점가",
+      "region": "광주",
+      "address": "광주광역시 북구 동문대로30번길 24 (풍향동)",
+      "status": "needs_review",
+      "reason": "자동차 주유·충전 업종 확인 필요",
+      "candidate_id": "live-05626200027",
+      "annual_candidate_ids": [
+        "aec951dbdb417bcb46318c53"
+      ],
+      "show_pending": true,
+      "registry_candidates": [],
+      "queries": [
+        {
+          "keyword": "SK경인석유",
+          "area_code": "",
+          "status": "complete",
+          "expected": 1,
+          "received": 1,
+          "pages": 1
+        }
+      ],
+      "official_matches": [
+        {
+          "frCd": "05626200027",
+          "frcsNm": "SK경인석유",
+          "frcsAddr": "광주광역시 북구 동문대로30번길 24 (풍향동)",
+          "mrktNm": "두암1동군왕로 골목형상점가",
+          "placeTypeCd": "08",
+          "placeTypeNm": "기타소매업",
+          "addrCd": "12300",
+          "latitude": 35.167184,
+          "longitude": 126.921058,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        }
+      ],
+      "result": "needs_vehicle_type",
+      "same_name_candidates": [
+        {
+          "frCd": "05626200027",
+          "frcsNm": "SK경인석유",
+          "frcsAddr": "광주광역시 북구 동문대로30번길 24 (풍향동)",
+          "mrktNm": "두암1동군왕로 골목형상점가",
+          "placeTypeCd": "08",
+          "placeTypeNm": "기타소매업",
+          "addrCd": "12300",
+          "latitude": 35.167184,
+          "longitude": 126.921058,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        }
+      ]
+    },
+    {
+      "source_id": "05639200037",
+      "name": "동신 석유",
+      "market": "광주고인근 골목형상점가",
+      "region": "광주",
+      "address": "광주광역시 동구 경양로223번길 14-24 (계림동)",
+      "status": "needs_review",
+      "reason": "자동차 주유·충전 업종 확인 필요",
+      "candidate_id": "live-05639200037",
+      "annual_candidate_ids": [
+        "604ad71bee3d9a8881951202"
+      ],
+      "show_pending": true,
+      "registry_candidates": [],
+      "queries": [
+        {
+          "keyword": "동신 석유",
+          "area_code": "",
+          "status": "complete",
+          "expected": 1,
+          "received": 1,
+          "pages": 1
+        }
+      ],
+      "official_matches": [
+        {
+          "frCd": "05639200037",
+          "frcsNm": "동신 석유",
+          "frcsAddr": "광주광역시 동구 경양로223번길 14-24 (계림동)",
+          "mrktNm": "광주고인근 골목형상점가",
+          "placeTypeCd": "08",
+          "placeTypeNm": "기타소매업",
+          "addrCd": "12210",
+          "latitude": 35.158578,
+          "longitude": 126.917265,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        }
+      ],
+      "result": "needs_vehicle_type",
+      "same_name_candidates": [
+        {
+          "frCd": "05639200037",
+          "frcsNm": "동신 석유",
+          "frcsAddr": "광주광역시 동구 경양로223번길 14-24 (계림동)",
+          "mrktNm": "광주고인근 골목형상점가",
+          "placeTypeCd": "08",
+          "placeTypeNm": "기타소매업",
+          "addrCd": "12210",
+          "latitude": 35.158578,
+          "longitude": 126.917265,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        }
+      ]
+    },
+    {
+      "source_id": "05658200021",
+      "name": "SK삼성에너지",
+      "market": "두암초주변 골목형상점가",
+      "region": "광주",
+      "address": "광주광역시 북구 탁영로15번길 10 (두암동)",
+      "status": "needs_review",
+      "reason": "자동차 주유·충전 업종 확인 필요",
+      "candidate_id": "live-05658200021",
+      "annual_candidate_ids": [
+        "3d8d8f19bfe620a6108e4c04"
+      ],
+      "show_pending": true,
+      "registry_candidates": [],
+      "queries": [
+        {
+          "keyword": "SK삼성에너지",
+          "area_code": "",
+          "status": "complete",
+          "expected": 1,
+          "received": 1,
+          "pages": 1
+        }
+      ],
+      "official_matches": [
+        {
+          "frCd": "05658200021",
+          "frcsNm": "SK삼성에너지",
+          "frcsAddr": "광주광역시 북구 탁영로15번길 10 (두암동)",
+          "mrktNm": "두암초주변 골목형상점가",
+          "placeTypeCd": "08",
+          "placeTypeNm": "기타소매업",
+          "addrCd": "12300",
+          "latitude": 35.16705,
+          "longitude": 126.934441,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        }
+      ],
+      "result": "needs_vehicle_type",
+      "same_name_candidates": [
+        {
+          "frCd": "05658200021",
+          "frcsNm": "SK삼성에너지",
+          "frcsAddr": "광주광역시 북구 탁영로15번길 10 (두암동)",
+          "mrktNm": "두암초주변 골목형상점가",
+          "placeTypeCd": "08",
+          "placeTypeNm": "기타소매업",
+          "addrCd": "12300",
+          "latitude": 35.16705,
+          "longitude": 126.934441,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        }
+      ]
+    },
+    {
+      "source_id": "05666200010",
+      "name": "에스케이(sk)만국석유",
+      "market": "호랑꼬두메마을 골목형상점가",
+      "region": "광주",
+      "address": "광주광역시 동구 무등로 499-5 (산수동)",
+      "status": "needs_review",
+      "reason": "자동차 주유·충전 업종 확인 필요",
+      "candidate_id": "live-05666200010",
+      "annual_candidate_ids": [
+        "cb99f02bfb07308115f48728"
+      ],
+      "show_pending": true,
+      "registry_candidates": [],
+      "queries": [
+        {
+          "keyword": "에스케이(sk)만국석유",
+          "area_code": "",
+          "status": "complete",
+          "expected": 1,
+          "received": 1,
+          "pages": 1
+        }
+      ],
+      "official_matches": [
+        {
+          "frCd": "05666200010",
+          "frcsNm": "에스케이(sk)만국석유",
+          "frcsAddr": "광주광역시 동구 무등로 499-5 (산수동)",
+          "mrktNm": "호랑꼬두메마을 골목형상점가",
+          "placeTypeCd": "08",
+          "placeTypeNm": "기타소매업",
+          "addrCd": "12210",
+          "latitude": 35.155754,
+          "longitude": 126.934259,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        }
+      ],
+      "result": "needs_vehicle_type",
+      "same_name_candidates": [
+        {
+          "frCd": "05666200010",
+          "frcsNm": "에스케이(sk)만국석유",
+          "frcsAddr": "광주광역시 동구 무등로 499-5 (산수동)",
+          "mrktNm": "호랑꼬두메마을 골목형상점가",
+          "placeTypeCd": "08",
+          "placeTypeNm": "기타소매업",
+          "addrCd": "12210",
+          "latitude": 35.155754,
+          "longitude": 126.934259,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        }
+      ]
+    },
+    {
+      "candidate_id": "badaf1066867bde046275626",
+      "name": "청우에너지(주)",
+      "market": "매월동상인회 골목형상점가",
+      "region": "광주",
+      "status": "needs_review",
+      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조",
+      "show_pending": true,
+      "source_region": "전남광주",
+      "region_resolution": {
+        "status": "resolved",
+        "match_basis": "exact_market_name_consistent_region",
+        "evidence": [
+          {
+            "market": "매월동상인회 골목형상점가",
+            "reference_address": "광주광역시 서구 회재로 845 (매월동)",
+            "source_kind": "official_place_search",
+            "source_id": "05273200024",
+            "merchant_name": "(유)매월주유소",
+            "source_url": "https://www.onnuri.gift/place",
+            "checked_at": "2026-10-25T10:16:16+09:00"
+          },
+          {
+            "market": "매월동상인회 골목형상점가",
+            "reference_address": "광주광역시 서구 화개길 24-3 (매월동)",
+            "source_kind": "official_place_search",
+            "source_id": "05273200078",
+            "merchant_name": "대성석유",
+            "source_url": "https://www.onnuri.gift/place",
+            "checked_at": "2026-10-25T10:16:16+09:00"
+          }
+        ],
+        "scope": "province_only_no_station_address_or_membership_inference"
+      },
+      "registry_candidates": [],
+      "queries": [
+        {
+          "keyword": "청우에너지",
+          "area_code": "",
+          "status": "complete",
+          "expected": 0,
+          "received": 0,
+          "pages": 0
+        }
+      ],
+      "official_matches": [],
+      "result": "needs_current_membership",
+      "same_name_candidates": []
+    },
+    {
+      "candidate_id": "76ce41be9eed4c5a2696b79a",
+      "name": "서부에너지",
+      "market": "맛조이상인회 골목형상점가",
+      "region": "광주",
+      "status": "needs_review",
+      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조",
+      "show_pending": true,
+      "source_region": "전남광주",
+      "region_resolution": {
+        "status": "resolved",
+        "match_basis": "exact_market_name_consistent_region",
+        "evidence": [
+          {
+            "market": "맛조이상인회 골목형상점가",
+            "reference_address": "광주광역시 서구 내방로 316 (내방동)",
+            "source_kind": "official_place_search",
+            "source_id": "05238200025",
+            "merchant_name": "힐링산야초 ",
+            "source_url": "https://www.onnuri.gift/place",
+            "checked_at": "2026-10-25T10:25:47+09:00"
+          },
+          {
+            "market": "맛조이상인회 골목형상점가",
+            "reference_address": "광주광역시 서구 화운로175번길 22 (내방동)",
+            "source_kind": "official_place_search",
+            "source_id": "05238200049",
+            "merchant_name": "내방체육관",
+            "source_url": "https://www.onnuri.gift/place",
+            "checked_at": "2026-10-25T10:25:47+09:00"
+          }
+        ],
+        "scope": "province_only_no_station_address_or_membership_inference"
+      },
+      "registry_candidates": [],
+      "queries": [
+        {
+          "keyword": "서부에너지",
+          "area_code": "",
+          "status": "complete",
+          "expected": 0,
+          "received": 0,
+          "pages": 0
+        }
+      ],
+      "official_matches": [],
+      "result": "needs_current_membership",
+      "same_name_candidates": []
+    },
+    {
+      "candidate_id": "ffa12c23f1c57296633c7b4c",
+      "name": "금호석유",
+      "market": "송정매일시장",
+      "region": "광주",
+      "status": "needs_review",
+      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조",
+      "show_pending": true,
+      "source_region": "전남광주",
+      "region_resolution": {
+        "status": "resolved",
+        "match_basis": "exact_market_name_consistent_region",
+        "evidence": [
+          {
+            "market": "송정매일시장",
+            "reference_address": "광주광역시 광산구 송정로 29번길 64",
+            "source_kind": "official_market_registry",
+            "source_url": "https://www.data.go.kr/data/15012894/standard.do",
+            "source_date": "2025-11-10"
+          }
+        ],
+        "scope": "province_only_no_station_address_or_membership_inference"
+      },
+      "registry_candidates": [],
+      "queries": [
+        {
+          "keyword": "금호석유",
+          "area_code": "",
+          "status": "complete",
+          "expected": 2,
+          "received": 2,
+          "pages": 1
+        }
+      ],
+      "official_matches": [],
+      "result": "needs_current_membership",
+      "same_name_candidates": [
+        {
+          "frCd": "50610100062",
+          "frcsNm": "금호석유",
+          "frcsAddr": "전남광주통합특별시 광산구 송정로15번길 71 (송정동)",
+          "mrktNm": "내상로 골목형상점가",
+          "placeTypeCd": "08",
+          "placeTypeNm": "기타소매업",
+          "addrCd": "12330",
+          "latitude": 35.138634,
+          "longitude": 126.796231,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        }
+      ]
+    },
+    {
+      "candidate_id": "466e6b1196a429bb71813335",
+      "name": "㈜동행",
+      "market": "신창동가구의거리일번국도상점가",
+      "region": "지역 미확정",
+      "status": "needs_review",
+      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조",
+      "show_pending": true,
+      "source_region": "전남광주",
+      "region_resolution": {
+        "status": "unresolved",
+        "match_basis": "insufficient_or_conflicting_market_evidence",
+        "evidence": [],
+        "scope": "province_only_no_station_address_or_membership_inference"
+      },
+      "registry_candidates": [],
+      "queries": [
+        {
+          "keyword": "동행",
+          "area_code": "",
+          "status": "complete",
+          "expected": 24,
+          "received": 24,
+          "pages": 1
+        }
+      ],
+      "official_matches": [],
+      "result": "needs_current_membership",
+      "same_name_candidates": [
+        {
+          "frCd": "05373200009",
+          "frcsNm": "동행",
+          "frcsAddr": "광주광역시 남구 광복마을1길 2 (진월동)",
+          "mrktNm": "서문대로663번길 골목형상점가",
+          "placeTypeCd": "07",
+          "placeTypeNm": "음식점업",
+          "addrCd": "12270",
+          "latitude": 35.118427,
+          "longitude": 126.897917,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        },
+        {
+          "frCd": "07134200017",
+          "frcsNm": "동행",
+          "frcsAddr": "울산광역시 북구 치전2길 6-1 (양정동)",
+          "mrktNm": "양정 골목형상점가",
+          "placeTypeCd": "07",
+          "placeTypeNm": "음식점업",
+          "addrCd": "31200",
+          "latitude": 35.539918,
+          "longitude": 129.38694,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        }
+      ]
+    },
+    {
+      "candidate_id": "16c76726db45d997f4abf7cd",
+      "name": "다올에너지산업(주)",
+      "market": "신창동가구의거리일번국도상점가",
+      "region": "지역 미확정",
+      "status": "needs_review",
+      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조",
+      "show_pending": true,
+      "source_region": "전남광주",
+      "region_resolution": {
+        "status": "unresolved",
+        "match_basis": "insufficient_or_conflicting_market_evidence",
+        "evidence": [],
+        "scope": "province_only_no_station_address_or_membership_inference"
+      },
+      "registry_candidates": [],
+      "queries": [
+        {
+          "keyword": "다올에너지산업",
+          "area_code": "",
+          "status": "complete",
+          "expected": 0,
+          "received": 0,
+          "pages": 0
+        }
+      ],
+      "official_matches": [],
+      "result": "needs_current_membership",
+      "same_name_candidates": []
+    },
+    {
+      "source_id": "15238200020",
+      "name": "세진석유",
+      "market": "캐롤타운상점가 골목형상점가",
+      "region": "경북",
+      "address": "경상북도 칠곡군 왜관읍 석전로12길 5-2",
+      "status": "needs_review",
+      "reason": "자동차 주유·충전 업종 확인 필요",
+      "candidate_id": "live-15238200020",
+      "annual_candidate_ids": [
+        "6cf6b5291c36bdd9f7fb20d1"
+      ],
+      "show_pending": true,
+      "registry_candidates": [],
+      "queries": [
+        {
+          "keyword": "세진석유",
+          "area_code": "",
+          "status": "complete",
+          "expected": 1,
+          "received": 1,
+          "pages": 1
+        }
+      ],
+      "official_matches": [
+        {
+          "frCd": "15238200020",
+          "frcsNm": "세진석유",
+          "frcsAddr": "경상북도 칠곡군 왜관읍 석전로12길 5-2",
+          "mrktNm": "캐롤타운상점가 골목형상점가",
+          "placeTypeCd": "08",
+          "placeTypeNm": "기타소매업",
+          "addrCd": "47850",
+          "latitude": 36.003057,
+          "longitude": 128.411925,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        }
+      ],
+      "result": "needs_vehicle_type",
+      "same_name_candidates": [
+        {
+          "frCd": "15238200020",
+          "frcsNm": "세진석유",
+          "frcsAddr": "경상북도 칠곡군 왜관읍 석전로12길 5-2",
+          "mrktNm": "캐롤타운상점가 골목형상점가",
+          "placeTypeCd": "08",
+          "placeTypeNm": "기타소매업",
+          "addrCd": "47850",
+          "latitude": 36.003057,
+          "longitude": 128.411925,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        }
+      ]
+    },
+    {
+      "candidate_id": "c426c12d7c844ac0a2d91bd1",
+      "name": "춘양주유소",
+      "market": "억지춘향시장(구 봉화춘향시장)",
+      "region": "경북",
+      "status": "needs_review",
+      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조",
+      "show_pending": true,
+      "registry_candidates": [],
+      "queries": [
+        {
+          "keyword": "춘양주유소",
+          "area_code": "",
+          "status": "complete",
+          "expected": 0,
+          "received": 0,
+          "pages": 0
+        }
+      ],
+      "official_matches": [],
+      "result": "needs_current_membership",
+      "same_name_candidates": []
+    },
+    {
+      "candidate_id": "80abcbfbeaccee97f1fe852f",
+      "name": "제일가스",
+      "market": "양북시장",
+      "region": "경북",
+      "status": "needs_review",
+      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조",
+      "show_pending": true,
+      "registry_candidates": [
+        {
+          "CONM_NM": "유한회사 제일가스",
+          "CTPV_NM": "경상북도",
+          "LCTN_ROAD_NM": "경상북도 경산시 삼성현로 196",
+          "LAT": "35.8156113",
+          "LOT": "128.723759",
+          "DATA_CRTR_YMD": "2026-09-11",
+          "_fuel_kind": "lpg"
+        }
+      ],
+      "queries": [
+        {
+          "keyword": "제일가스",
+          "area_code": "",
+          "status": "complete",
+          "expected": 1,
+          "received": 1,
+          "pages": 1
+        }
+      ],
+      "official_matches": [],
+      "result": "needs_current_membership",
+      "same_name_candidates": []
+    },
+    {
+      "candidate_id": "081a17a302be89e37dca8737",
+      "name": "양북주유소",
+      "market": "양북시장",
+      "region": "경북",
+      "status": "needs_review",
+      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조",
+      "show_pending": true,
+      "registry_candidates": [
+        {
+          "CONM_NM": "양북주유소",
+          "CTPV_NM": "경상북도",
+          "SGG_NM": "경주시",
+          "LCTN_ROAD_NM": "경상북도 경주시 문무대왕면 감은로 23",
+          "LCTN_LOTNO_ADDR": "",
+          "LAT": "35.79294285",
+          "LOT": "129.4395053",
+          "TELNO": "054-744-2103",
+          "DATA_CRTR_YMD": "2026-09-02"
+        }
+      ],
+      "queries": [
+        {
+          "keyword": "양북주유소",
+          "area_code": "",
+          "status": "complete",
+          "expected": 0,
+          "received": 0,
+          "pages": 0
+        },
+        {
+          "keyword": "",
+          "area_code": "",
+          "status": "complete",
+          "expected": 6,
+          "received": 6,
+          "pages": 1,
+          "center": [
+            35.79294285,
+            129.4395053
+          ],
+          "radius": 2
+        }
+      ],
+      "official_matches": [],
+      "nearby_same_address": [],
+      "result": "needs_current_membership",
+      "same_name_candidates": []
+    },
+    {
+      "candidate_id": "ff23f383096d8ef00074227d",
+      "name": "문희주유소",
+      "market": "문경전통시장",
+      "region": "경북",
+      "status": "needs_review",
+      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조",
+      "show_pending": true,
+      "registry_candidates": [],
+      "queries": [
+        {
+          "keyword": "문희주유소",
+          "area_code": "",
+          "status": "complete",
+          "expected": 0,
+          "received": 0,
+          "pages": 0
+        }
+      ],
+      "official_matches": [],
+      "result": "needs_current_membership",
+      "same_name_candidates": []
+    },
+    {
+      "candidate_id": "04d09d1a8156d44b38db83c0",
+      "name": "명륜주유소",
+      "market": "북문시장",
+      "region": "경북",
+      "status": "needs_review",
+      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조",
+      "show_pending": true,
+      "registry_candidates": [],
+      "queries": [
+        {
+          "keyword": "명륜주유소",
+          "area_code": "",
+          "status": "complete",
+          "expected": 0,
+          "received": 0,
+          "pages": 0
+        }
+      ],
+      "official_matches": [],
+      "result": "needs_current_membership",
+      "same_name_candidates": []
+    },
+    {
+      "candidate_id": "9e96e2c352e1ca4224036944",
+      "name": "기성주유소",
+      "market": "척산시장",
+      "region": "경북",
+      "status": "needs_review",
+      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조",
+      "show_pending": true,
+      "registry_candidates": [],
+      "queries": [
+        {
+          "keyword": "기성주유소",
+          "area_code": "",
+          "status": "complete",
+          "expected": 0,
+          "received": 0,
+          "pages": 0
+        }
+      ],
+      "official_matches": [],
+      "result": "needs_current_membership",
+      "same_name_candidates": []
+    },
+    {
+      "candidate_id": "0bf8e875e8a47f8917b48c5c",
+      "name": "대성석유",
+      "market": "평화시장",
+      "region": "대구",
+      "status": "needs_review",
+      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조",
+      "show_pending": true,
+      "registry_candidates": [],
+      "queries": [
+        {
+          "keyword": "대성석유",
+          "area_code": "",
+          "status": "complete",
+          "expected": 1,
+          "received": 1,
+          "pages": 1
+        }
+      ],
+      "official_matches": [],
+      "result": "needs_current_membership",
+      "same_name_candidates": []
+    },
+    {
+      "source_id": "33610300567",
+      "name": "모산석유",
+      "market": "배방상점가",
+      "region": "충남",
+      "address": "충청남도 아산시 배방읍 배방로229번길 30-8",
+      "status": "needs_review",
+      "reason": "자동차 주유·충전 업종 확인 필요",
+      "candidate_id": "live-33610300567",
+      "annual_candidate_ids": [
+        "29b4e0aac4c8e50d12c2d620"
+      ],
+      "show_pending": true,
+      "registry_candidates": [],
+      "queries": [
+        {
+          "keyword": "모산석유",
+          "area_code": "",
+          "status": "complete",
+          "expected": 1,
+          "received": 1,
+          "pages": 1
+        }
+      ],
+      "official_matches": [
+        {
+          "frCd": "33610300567",
+          "frcsNm": "모산석유",
+          "frcsAddr": "충청남도 아산시 배방읍 배방로229번길 30-8",
+          "mrktNm": "배방상점가",
+          "placeTypeCd": "08",
+          "placeTypeNm": "기타소매업",
+          "addrCd": "44200",
+          "latitude": 36.771107,
+          "longitude": 127.073066,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        }
+      ],
+      "result": "needs_vehicle_type",
+      "same_name_candidates": [
+        {
+          "frCd": "33610300567",
+          "frcsNm": "모산석유",
+          "frcsAddr": "충청남도 아산시 배방읍 배방로229번길 30-8",
+          "mrktNm": "배방상점가",
+          "placeTypeCd": "08",
+          "placeTypeNm": "기타소매업",
+          "addrCd": "44200",
+          "latitude": 36.771107,
+          "longitude": 127.073066,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        }
+      ]
+    },
+    {
+      "candidate_id": "3e5913425369e021c3f3bad8",
+      "name": "부흥주유소",
+      "market": "공산성골목형상점가",
+      "region": "충남",
+      "status": "needs_review",
+      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조",
+      "show_pending": true,
+      "registry_candidates": [
+        {
+          "CONM_NM": "부흥주유소",
+          "CTPV_NM": "충청남도",
+          "SGG_NM": "홍성군",
+          "LCTN_ROAD_NM": "충청남도 홍성군 광천읍 광천로329번길 11",
+          "LCTN_LOTNO_ADDR": "충청남도 홍성군 광천읍 광천리 185번지 22",
+          "LAT": "36.50273184",
+          "LOT": "126.625062",
+          "TELNO": "041-641-2195",
+          "DATA_CRTR_YMD": "2026-09-19"
+        }
+      ],
+      "queries": [
+        {
+          "keyword": "부흥주유소",
+          "area_code": "",
+          "status": "complete",
+          "expected": 0,
+          "received": 0,
+          "pages": 0
+        },
+        {
+          "keyword": "",
+          "area_code": "",
+          "status": "complete",
+          "expected": 155,
+          "received": 155,
+          "pages": 1,
+          "center": [
+            36.50273184,
+            126.625062
+          ],
+          "radius": 2
+        }
+      ],
+      "official_matches": [],
+      "nearby_same_address": [],
+      "result": "needs_current_membership",
+      "same_name_candidates": []
+    },
+    {
+      "candidate_id": "dfea2f84be984c283e41bfe9",
+      "name": "원남주유소",
+      "market": "음성시장",
+      "region": "충북",
+      "status": "needs_review",
+      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조",
+      "show_pending": true,
+      "registry_candidates": [],
+      "queries": [
+        {
+          "keyword": "원남주유소",
+          "area_code": "",
+          "status": "complete",
+          "expected": 0,
+          "received": 0,
+          "pages": 0
+        }
+      ],
+      "official_matches": [],
+      "result": "needs_current_membership",
+      "same_name_candidates": []
+    },
+    {
+      "source_id": "06004200110",
+      "name": "신화석유",
+      "market": "오정동상점가",
+      "region": "대전",
+      "address": "대전광역시 대덕구 한밭대로988번길 77 (오정동)",
+      "status": "needs_review",
+      "reason": "자동차 주유·충전 업종 확인 필요",
+      "candidate_id": "live-06004200110",
+      "annual_candidate_ids": [
+        "085f0ed8c217e513130788c1"
+      ],
+      "show_pending": true,
+      "registry_candidates": [],
+      "queries": [
+        {
+          "keyword": "신화석유",
+          "area_code": "",
+          "status": "complete",
+          "expected": 1,
+          "received": 1,
+          "pages": 1
+        }
+      ],
+      "official_matches": [
+        {
+          "frCd": "06004200110",
+          "frcsNm": "신화석유",
+          "frcsAddr": "대전광역시 대덕구 한밭대로988번길 77 (오정동)",
+          "mrktNm": "오정동상점가",
+          "placeTypeCd": "08",
+          "placeTypeNm": "기타소매업",
+          "addrCd": "30230",
+          "latitude": 36.354991,
+          "longitude": 127.411012,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        }
+      ],
+      "result": "needs_vehicle_type",
+      "same_name_candidates": [
+        {
+          "frCd": "06004200110",
+          "frcsNm": "신화석유",
+          "frcsAddr": "대전광역시 대덕구 한밭대로988번길 77 (오정동)",
+          "mrktNm": "오정동상점가",
+          "placeTypeCd": "08",
+          "placeTypeNm": "기타소매업",
+          "addrCd": "30230",
+          "latitude": 36.354991,
+          "longitude": 127.411012,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        }
+      ]
+    },
+    {
+      "candidate_id": "e971399ca41505931d7d9ca4",
+      "name": "영주석유",
+      "market": "중앙종합시장",
+      "region": "대전",
+      "status": "needs_review",
+      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조",
+      "show_pending": true,
+      "registry_candidates": [],
+      "queries": [
+        {
+          "keyword": "영주석유",
+          "area_code": "",
+          "status": "complete",
+          "expected": 0,
+          "received": 0,
+          "pages": 0
+        }
+      ],
+      "official_matches": [],
+      "result": "needs_current_membership",
+      "same_name_candidates": []
+    },
+    {
+      "candidate_id": "b924551d561010aaeffebdda",
+      "name": "광탄주유소",
+      "market": "광탄전통시장",
+      "region": "경기",
+      "status": "needs_review",
+      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조",
+      "show_pending": true,
+      "registry_candidates": [
+        {
+          "CONM_NM": "광탄주유소",
+          "CTPV_NM": "경기도",
+          "SGG_NM": "파주시",
+          "LCTN_ROAD_NM": "경기도 파주시 광탄면 혜음로 1178",
+          "LCTN_LOTNO_ADDR": "경기도 파주시 광탄면 신산리 352-5",
+          "LAT": "37.7862448175",
+          "LOT": "126.8452442686",
+          "TELNO": "031-947-7421",
+          "DATA_CRTR_YMD": "2026-07-15"
+        }
+      ],
+      "queries": [
+        {
+          "keyword": "광탄주유소",
+          "area_code": "",
+          "status": "complete",
+          "expected": 0,
+          "received": 0,
+          "pages": 0
+        },
+        {
+          "keyword": "",
+          "area_code": "",
+          "status": "complete",
+          "expected": 57,
+          "received": 57,
+          "pages": 1,
+          "center": [
+            37.7862448175,
+            126.8452442686
+          ],
+          "radius": 2
+        }
+      ],
+      "official_matches": [],
+      "nearby_same_address": [],
+      "result": "needs_current_membership",
+      "same_name_candidates": []
+    },
+    {
+      "source_id": "01581200156",
+      "name": "대한에너지석유,등유,경유배달,얼음배달",
+      "market": "반드레길골목형상점가",
+      "region": "서울",
+      "address": "서울특별시 서초구 주흥3길 26 (반포동)",
+      "status": "needs_review",
+      "reason": "자동차 주유·충전 업종 확인 필요",
+      "candidate_id": "live-01581200156",
+      "annual_candidate_ids": [
+        "2032c5af36654a5d3994b1f5"
+      ],
+      "show_pending": true,
+      "registry_candidates": [],
+      "queries": [
+        {
+          "keyword": "대한에너지석유,등유,경유배달,얼음배달",
+          "area_code": "",
+          "status": "complete",
+          "expected": 1,
+          "received": 1,
+          "pages": 1
+        }
+      ],
+      "official_matches": [
+        {
+          "frCd": "01581200156",
+          "frcsNm": "대한에너지석유,등유,경유배달,얼음배달",
+          "frcsAddr": "서울특별시 서초구 주흥3길 26 (반포동)",
+          "mrktNm": "반드레길골목형상점가",
+          "placeTypeCd": "08",
+          "placeTypeNm": "기타소매업",
+          "addrCd": "11650",
+          "latitude": 37.504267,
+          "longitude": 127.019031,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        }
+      ],
+      "result": "needs_vehicle_type",
+      "same_name_candidates": [
+        {
+          "frCd": "01581200156",
+          "frcsNm": "대한에너지석유,등유,경유배달,얼음배달",
+          "frcsAddr": "서울특별시 서초구 주흥3길 26 (반포동)",
+          "mrktNm": "반드레길골목형상점가",
+          "placeTypeCd": "08",
+          "placeTypeNm": "기타소매업",
+          "addrCd": "11650",
+          "latitude": 37.504267,
+          "longitude": 127.019031,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        }
+      ]
+    }
+  ]
+}

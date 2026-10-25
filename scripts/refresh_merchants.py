@@ -169,6 +169,8 @@ def merge(sangsaeng, onnuri, old, checked):
             result.append(target)
         if row.get('_location_evidence'):
             target['location_evidence'] = row['_location_evidence']
+        if row.get('_fuel_evidence'):
+            target['fuel_evidence'] = row['_fuel_evidence']
         if row.get('_verification', {}).get('status') == 'confirmed':
             target['fuel_kind'] = station['fuel_kind']
             # Prefer current official coordinates for a unique physical site.
@@ -301,7 +303,7 @@ def main():
             validate_combined(places)
         historical, official_review, ledger, compact = prepare(
             places, snapshot, list(historical_by_id.values()), live,
-            locations)
+            locations, load('verified_fuel_evidence.json', {}).get('rows', []))
         places['retained_history'] = [r for r in historical if r.get('_verification', {}).get('status') != 'confirmed']
         if len(compact['rows']) < 80:
             raise ValueError('온누리 검색 결과 급감: 이전 지도 유지')

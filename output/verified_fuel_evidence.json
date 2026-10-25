@@ -1,0 +1,30 @@
+{
+  "rows": [
+    {
+      "source_id": "05164200084",
+      "merchant_name": "대주에너지",
+      "market": "봉선중앙로 골목형상점가",
+      "address": "광주광역시 남구 대남대로 153 (봉선동)",
+      "fuel_kind": "liquid",
+      "checked_at": "2026-10-25T10:34:17+09:00",
+      "sources": [
+        "https://www.oilnow.co.kr/gas-station/A0020488/대동주유소-(주)대주에너지",
+        "https://car.kimgoon.kr/gas/detail/A0020488"
+      ],
+      "basis": "Official Onnuri identity and address plus public fuel-service listing with matching operator and street number. Fuel type only; payments and coordinates remain official Onnuri fields."
+    },
+    {
+      "source_id": "05290200001",
+      "merchant_name": "경훈에너지",
+      "market": "오치1동 골목형상점가",
+      "address": "광주광역시 북구 서하로 237 (오치동)",
+      "fuel_kind": "liquid",
+      "checked_at": "2026-10-25T10:34:17+09:00",
+      "sources": [
+        "https://www.oilnow.co.kr/gas-station/A0019350/무지개주유소-경훈에너지",
+        "https://www.daangn.com/kr/local-profile/경훈에너지-fdf3yfz8egbe/"
+      ],
+      "basis": "Official Onnuri identity and address plus public fuel-service listing with matching operator and street number. Fuel type only; payments and coordinates remain official Onnuri fields."
+    }
+  ]
+}

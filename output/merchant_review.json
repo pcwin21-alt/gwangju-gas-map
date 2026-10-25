@@ -858,20 +858,6 @@
     "show_pending": false
   },
   {
-    "source_id": "05164200084",
-    "name": "대주에너지",
-    "market": "봉선중앙로 골목형상점가",
-    "region": "광주",
-    "address": "광주광역시 남구 대남대로 153 (봉선동)",
-    "status": "needs_review",
-    "reason": "자동차 주유·충전 업종 확인 필요",
-    "candidate_id": "live-05164200084",
-    "annual_candidate_ids": [
-      "ed66938b7d2f6debb5dc0ceb"
-    ],
-    "show_pending": true
-  },
-  {
     "source_id": "05169200062",
     "name": "메가엠지씨커피 광주유촌점",
     "market": "유촌동상인회 골목형상점가",
@@ -1042,20 +1028,6 @@
       "d8649006e8f025dc123dffbf"
     ],
     "show_pending": false
-  },
-  {
-    "source_id": "05290200001",
-    "name": "경훈에너지",
-    "market": "오치1동 골목형상점가",
-    "region": "광주",
-    "address": "광주광역시 북구 서하로 237 (오치동)",
-    "status": "needs_review",
-    "reason": "자동차 주유·충전 업종 확인 필요",
-    "candidate_id": "live-05290200001",
-    "annual_candidate_ids": [
-      "e372dec9b50c553fa2108033"
-    ],
-    "show_pending": true
   },
   {
     "source_id": "05329200125",
