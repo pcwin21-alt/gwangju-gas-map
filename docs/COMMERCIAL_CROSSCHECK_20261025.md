@@ -61,4 +61,4 @@ output/verified_fuel_evidence.json에 근거 11건을 추가했다(기존 2건 �
 법인명 연결은 연간 원문 상호·상점가·지역·품목과 현행 ID·상호·상점가·주소를 모두 고정한 수동 근거로 제한했다. 유사 이름이나 상점가 단어 순서만으로 자동 병합하지 않는다. 이 근거도 90일 뒤 재확인이 없으면 연간 후보가 다시 대기가 된다.
 추후 새 추출: python scripts/crosscheck_commercial.py <ZIP 경로> --output <새 JSON 경로>. 기존 검토 파일 덮어쓰기를 거부한다. 원천 UTF-8 CSV, ZIP CP949 파일명, 전남광주 통합 파일과 전체 시도 파일 집합을 검사한다.
 실행: python scripts/refresh_merchants.py --live-snapshot output/onnuri_regional_snapshot.json, python scripts/prepare_site.py. Python 59개·Node 19개(총 78개), JavaScript 문법·diff 검사 통과. 기존 지점 ID·주소·좌표·결제수단·차량 연료 종류·경유 자격은 모두 유지됐고 검색 별칭의 중복만 정리했다.
-배포·공개 브라우저 검증은 아래에 완료 후 기록한다.
+구현 커밋 bf4faac의 CI 40153314568, 배포 생성 40153314578, Pages 40153322843 모두 성공했다. 공개 브라우저에서 전국 지도 203곳·대기 20곳을 확인했고, 다올에너지산업 검색으로 북문대로 393의 다올주유소 1곳이 나오는 것을 확인했다. 전남 → 광주 → 충남 → 서울의 표시/대기는 각각 22/1, 163/5, 2/1, 1/0으로 대조됐다. 390×844 모바일 화면도 확인했다. 증거 화면: Playground/output/onnuri-commercial-crosscheck-20261025.png. 원래 유지 단계 프로젝트에 동기화했고 사용자 수정 CLAUDE.md의 SHA-256과 미추적 파일 상태를 보존했다. Global Eval: 이번 31개 후보 교차검증·공개 반영 수락 조건 충족. 남은 20개 후보 확정 및 전국 전수성은 미완료로 유지한다.
