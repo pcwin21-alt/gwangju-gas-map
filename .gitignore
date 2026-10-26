@@ -33,3 +33,8 @@ output/alternatives/vehicle_fuel_index_*.json
 output/alternatives/*initial_false_matches*.json
 output/alternatives/*.html
 output/alternatives/kb_location_cache/
+
+output/alternatives/kb_unfiltered_*.json
+output/alternatives/kb_region_queue*.json
+output/alternatives/kb_region_queue.lock
+output/alternatives/kb_registry_gap_*.json

@@ -589,6 +589,68 @@
       },
       "annual_candidate_ids": [],
       "identity_support": "Reviewed corporate-branch name (주)대창석유 (태인) against 태인주유소. Fuel classification and 태인동 agree; commercial coordinates 13m from bank, same premises 백운1로107. No generalized fuzzy alias rule."
+    },
+    {
+      "identity_review": "same_premise_confirmed",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "checked_at": "2026-10-26T20:31:44+09:00",
+      "bank_record": {
+        "location": {
+          "lat": "34.9281354878",
+          "lng": "127.4912519472"
+        },
+        "content": {
+          "tel": "061)744-5680",
+          "title": "(주)대창석유 (갑산)",
+          "category": "주유소",
+          "address": "전남 순천시 덕월동 ",
+          "distance": "6",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000055922242",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-26T20:31:44+09:00",
+        "query_id": "6649a4721b6e2d2a"
+      },
+      "commercial_record": {
+        "상가업소번호": "MA0101202503A0053009",
+        "상호명": "갑산주유소",
+        "지점명": "",
+        "상권업종소분류코드": "G21401",
+        "상권업종소분류명": "주유소",
+        "표준산업분류코드": "G47711",
+        "표준산업분류명": "운송장비용 주유소 운영업",
+        "시군구명": "순천시",
+        "도로명주소": "전남광주통합특별시 순천시 녹색로 1656",
+        "지번주소": "전남광주통합특별시 순천시 덕월동 355-44",
+        "위도": "34.9281857676441",
+        "경도": "127.491275722294",
+        "region": "전남"
+      },
+      "commercial_source": {
+        "archive_sha256": "57aa361544108ff4fc73334f87d2ced61e41fe8638dd70bcd842930f865d2386",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+        "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
+      },
+      "annual_candidate_ids": [],
+      "identity_support": "Current commercial fuel record and bank agree on branch name, locality and coordinates (6m). Municipal Suncheon fuel list additionally gives corporate full name, 녹색로1656 and matching phone 061-744-5680; older municipal list is identity support, not current membership.",
+      "municipal_identity_support": {
+        "source_url": "https://www.data.go.kr/data/15117815/fileData.do",
+        "sha256": "8456a982b74aa01b7d8cc3428e73884ba133abbacad95296e00f42e0367f35ac",
+        "raw_record": {
+          "연번": "82",
+          "상호명": "(주)대창석유 직영 갑산주유소",
+          "도로명주소": "전라남도 순천시 녹색로 1656 (덕월동)",
+          "지번주소": "전라남도 순천시 덕월동  342 번지1 호 ",
+          "전화번호": "061-744-5680"
+        }
+      }
     }
   ]
 }

@@ -8653,5 +8653,57 @@
       "source_id": "MA0101202503A0025892",
       "bank_distance_m": 12.7
     }
+  },
+  {
+    "id": "onnuri:kb:000000055922242",
+    "name": "(주)대창석유 (갑산)",
+    "address": "전남광주통합특별시 순천시 녹색로 1656",
+    "lat": 34.9281857676441,
+    "lng": 127.491275722294,
+    "payment_types": [
+      "onnuri"
+    ],
+    "source": [
+      "kb_onnuri"
+    ],
+    "aliases": [
+      "대창석유 직영 갑산주유소",
+      "갑산주유소"
+    ],
+    "fuel_kind": "liquid",
+    "route_eligible": true,
+    "region": "전남",
+    "onnuri_methods": {
+      "paper": null,
+      "card": true,
+      "qr": null,
+      "digital": true
+    },
+    "verification": {
+      "onnuri": {
+        "status": "confirmed",
+        "checked_at": "2026-10-26T20:31:44+09:00",
+        "source_date": null,
+        "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+        "source_id": "kb:000000055922242",
+        "source_ids": [
+          "kb:000000055922242"
+        ],
+        "provider": "kbcard",
+        "issuer_scope": [
+          "KB국민카드"
+        ],
+        "match_basis": "bank_onnuri_flag_fuel_category_name_locality_coordinates_commercial_address",
+        "candidate_ids": [],
+        "note": "KB국민카드 온누리 사용처 조회 기준. 카드사 반영 지연 가능. 지류·QR·다른 카드사는 별도 확인."
+      }
+    },
+    "location_evidence": {
+      "source_type": "commercial_registry",
+      "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+      "source_date": "2026-06-30",
+      "source_id": "MA0101202503A0053009",
+      "bank_distance_m": 6.0
+    }
   }
 ]
