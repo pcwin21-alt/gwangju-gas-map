@@ -1,0 +1,21 @@
+{
+  "implementation_commit": "c97a256",
+  "released_commit": "67cdedc3fe2fa96c909a04793a8cd64110acaa5a",
+  "ci": "https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/40290087511",
+  "deploy": "https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/40290087440",
+  "pages": "https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/40290102744",
+  "all_runs": "success",
+  "public_browser_verified": {
+    "national_map_visible": 203,
+    "national_pending": 17,
+    "dated_identity_annotations": 5,
+    "jeonnam_visible": 22,
+    "jeonnam_pending": 1,
+    "official_search_date": "2026-10-25",
+    "failed_refresh_notice_visible": true
+  },
+  "original_workspace_synced": true,
+  "user_files_preserved": true,
+  "latest_price_json_semantically_equal_to": "09ee498",
+  "merge_note": "Raw-byte assertion differed under CRLF checkout; parsed JSON equality subsequently passed for gas_prices, opinet_usage, gas_stations."
+}
