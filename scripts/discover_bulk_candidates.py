@@ -20,17 +20,26 @@ from onnuri_live import KST
 from refresh_regions import ORDER
 
 OUT = Path(__file__).resolve().parents[1] / 'output'
-FIELDS = ('상가업소번호', '상호명', '지점명', '상권업종소분류명',
-          '표준산업분류명', '시군구명', '도로명주소', '위도', '경도')
+FIELDS = ('상가업소번호', '상호명', '지점명', '상권업종소분류코드', '상권업종소분류명',
+          '표준산업분류코드', '표준산업분류명', '시군구명', '도로명주소', '지번주소', '위도', '경도')
+
+
+def vehicle_fuel(row):
+    # The source calls G21402 "가스 충전소", not "차량용 가스 충전소".
+    # Keep conflicting industry records as discovery candidates, never proof.
+    return row.get('상권업종소분류코드') in ('G21401', 'G21402')
 
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('archive', type=Path)
     parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--fuel-index', type=Path, help='Optional complete discovery inventory, not an Onnuri list')
     args = parser.parse_args()
     if args.output.exists():
         raise FileExistsError(args.output)
+    if args.fuel_index and args.fuel_index.exists():
+        raise FileExistsError(args.fuel_index)
     sys.stdout.reconfigure(encoding='utf-8')
     with args.archive.open('rb') as source:
         archive_hash = hashlib.file_digest(source, 'sha256').hexdigest()
@@ -53,7 +62,7 @@ def main():
             count = 0
             for row in reader:
                 count += 1
-                if row['상권업종소분류명'] not in ('주유소', '차량용 가스 충전소'):
+                if not vehicle_fuel(row):
                     continue
                 area = region(row['도로명주소'])
                 if area not in ORDER:
@@ -64,6 +73,11 @@ def main():
             counts[filename] = count
             print(filename, count, flush=True)
     index = defaultdict(dict)
+    if args.fuel_index:
+        args.fuel_index.write_text(json.dumps({'archive_sha256':archive_hash,
+            'source_date':provenance['source_date'], 'source_url':provenance['source_url'],
+            'scope':'all_vehicle_fuel_candidates_not_Onnuri_verification', 'rows':fuels},
+            ensure_ascii=False,indent=2),encoding='utf-8')
     for fuel in fuels:
         names = [fuel['상호명']]
         if fuel['지점명']:

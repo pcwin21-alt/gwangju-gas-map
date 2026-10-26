@@ -29,3 +29,5 @@ output/*.tmp
 output/grid_cache/
 output/alternatives/*.csv
 output/alternatives/*.xlsx
+output/alternatives/vehicle_fuel_index_*.json
+output/alternatives/*initial_false_matches*.json
