@@ -6997,8 +6997,8 @@
     "id": "onnuri:14077200045",
     "name": "호남주유소",
     "address": "전라남도 순천시 팔마로 9(장천동)",
-    "lat": 34.95002,
-    "lng": 127.488458,
+    "lat": 34.9470230784057,
+    "lng": 127.489428526916,
     "payment_types": [
       "onnuri"
     ],
@@ -7031,7 +7031,17 @@
       "qr": true,
       "digital": true
     },
-    "region": "전남"
+    "region": "전남",
+    "location_evidence": {
+      "source_type": "commercial_registry",
+      "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+      "source_date": "2026-06-30",
+      "source_id": "MA0101202406A0144191",
+      "bank_distance_m": 10.8,
+      "municipal_source_url": "https://www.data.go.kr/data/15129441/standard.do",
+      "municipal_source_date": "2025-12-01",
+      "note": "상권자료·지자체 좌표·KB 좌표 교차확인으로 위치 보정. 운영사 가맹정보는 유지."
+    }
   },
   {
     "id": "onnuri:14215200029",

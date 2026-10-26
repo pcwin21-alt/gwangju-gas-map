@@ -713,6 +713,21 @@
             "전화번호": "061-744-3677"
           }
         ]
+      },
+      "correct_existing_location": {
+        "target_id": "onnuri:14077200045",
+        "source_url": "https://www.data.go.kr/data/15129441/standard.do",
+        "municipal_record": {
+          "CONM_NM": "호남주유소",
+          "CTPV_NM": "전라남도",
+          "SGG_NM": "순천시",
+          "LCTN_ROAD_NM": "전라남도 순천시 팔마로 9 (장천동)",
+          "LCTN_LOTNO_ADDR": "전라남도 순천시 장천동 84-10",
+          "LAT": "34.947028",
+          "LOT": "127.489429",
+          "TELNO": "061-744-3677",
+          "DATA_CRTR_YMD": "2025-12-01"
+        }
       }
     }
   ]

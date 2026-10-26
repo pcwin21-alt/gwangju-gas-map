@@ -158,6 +158,23 @@ def apply_evidence(stations, review, evidence_rows, as_of):
         same=[r for r in result if address_key(r['address'])==address_key(s['address']) and
               r.get('fuel_kind')==s['fuel_kind']]
         if same:
+            correction=e.get('correct_existing_location')
+            if correction:
+                target=next((r for r in same if r['id']==correction['target_id']),None)
+                official=correction['municipal_record']
+                point=(float(official['LAT']),float(official['LOT']))
+                if (not target or name_key(target['name'])!=name_key(s['name']) or
+                    name_key(official['CONM_NM'])!=name_key(s['name']) or
+                    address_key(official['LCTN_ROAD_NM'])!=address_key(s['address']) or
+                    correction['source_url']!='https://www.data.go.kr/data/15129441/standard.do' or
+                    not valid_coords(*point) or meters(point,(s['lat'],s['lng']))>100):
+                    raise ValueError('Existing location correction identity mismatch')
+                # Three location sources agree. Preserve all operator membership
+                # IDs, payment methods and dates; correct only the map location.
+                target.update(lat=s['lat'],lng=s['lng'],location_evidence={
+                    **s['location_evidence'],'municipal_source_url':correction['source_url'],
+                    'municipal_source_date':official['DATA_CRTR_YMD'],
+                    'note':'상권자료·지자체 좌표·KB 좌표 교차확인으로 위치 보정. 운영사 가맹정보는 유지.'})
             # Do not transfer a bank registration across an operator/name change
             # or add another marker to a site already represented in the map.
             continue

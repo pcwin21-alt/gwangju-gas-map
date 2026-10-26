@@ -89,3 +89,17 @@ class SupplementalTests(unittest.TestCase):
             with self.assertRaises(ValueError):station_from_evidence(wrong,'2026-10-26')
         wrong=deepcopy(e);wrong['bank_record']['content']['franchiseNo']='000000055922364'
         with self.assertRaises(ValueError):station_from_evidence(wrong,'2026-10-26')
+
+    def test_location_correction_preserves_operator_membership_and_count(self):
+        evidence=json.loads((ROOT/'output/supplemental_onnuri_evidence.json').read_text(encoding='utf-8'))['rows']
+        e=next(e for e in evidence if e.get('correct_existing_location'))
+        original={'id':'onnuri:14077200045','name':'호남주유소','address':'전라남도 순천시 팔마로 9(장천동)',
+                  'lat':34.95002,'lng':127.488458,'fuel_kind':'liquid','source':['onnuri_place'],
+                  'onnuri_methods':{'paper':True,'qr':True},'verification':{'onnuri':{'checked_at':'2026-10-25','source_id':'14077200045'}}}
+        rows,_,meta=apply_evidence([original],[],[e],'2026-10-26')
+        self.assertEqual(len(rows),1);self.assertEqual(meta['confirmed_count'],0)
+        self.assertEqual(rows[0]['verification'],original['verification'])
+        self.assertEqual(rows[0]['onnuri_methods'],original['onnuri_methods'])
+        self.assertNotEqual(rows[0]['lat'],original['lat'])
+        wrong=deepcopy(e);wrong['correct_existing_location']['municipal_record']['LCTN_ROAD_NM']='전라남도 순천시 팔마로 99'
+        with self.assertRaises(ValueError):apply_evidence([original],[],[wrong],'2026-10-26')
