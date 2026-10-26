@@ -31,7 +31,7 @@
     "schema_version": 2,
     "uni_id": "A0020680",
     "matched_name": "운천주유소",
-    "checked_at": "2026-10-25T13:44:49+09:00",
+    "checked_at": "2026-10-26T13:50:41+09:00",
     "prices": {
       "휘발유": 1828.0,
       "경유": 1818.0
@@ -39,13 +39,13 @@
     "price_evidence": {
       "휘발유": {
         "price": 1828.0,
-        "source_date": "20261025",
-        "source_time": "105911"
+        "source_date": "20261026",
+        "source_time": "105230"
       },
       "경유": {
         "price": 1818.0,
-        "source_date": "20261025",
-        "source_time": "104600"
+        "source_date": "20261026",
+        "source_time": "100732"
       }
     }
   },
@@ -53,27 +53,27 @@
     "schema_version": 2,
     "uni_id": "A0020204",
     "matched_name": "예향주유소",
-    "checked_at": "2026-10-25T13:44:49+09:00",
+    "checked_at": "2026-10-26T13:50:41+09:00",
     "prices": {
-      "고급휘발유": 2489.0,
+      "고급휘발유": 2449.0,
       "휘발유": 1849.0,
       "경유": 1849.0
     },
     "price_evidence": {
       "고급휘발유": {
-        "price": 2489.0,
-        "source_date": "20261024",
-        "source_time": "183934"
+        "price": 2449.0,
+        "source_date": "20261026",
+        "source_time": "105815"
       },
       "휘발유": {
         "price": 1849.0,
-        "source_date": "20261025",
-        "source_time": "105358"
+        "source_date": "20261026",
+        "source_time": "105549"
       },
       "경유": {
         "price": 1849.0,
-        "source_date": "20261025",
-        "source_time": "105734"
+        "source_date": "20261026",
+        "source_time": "105640"
       }
     }
   },
@@ -81,7 +81,7 @@
     "schema_version": 2,
     "uni_id": "A0019726",
     "matched_name": "대광주유소",
-    "checked_at": "2026-10-25T13:44:49+09:00",
+    "checked_at": "2026-10-26T13:50:41+09:00",
     "prices": {
       "등유": 1600.0,
       "휘발유": 1869.0,
@@ -95,13 +95,13 @@
       },
       "휘발유": {
         "price": 1869.0,
-        "source_date": "20261025",
-        "source_time": "105831"
+        "source_date": "20261026",
+        "source_time": "105922"
       },
       "경유": {
         "price": 1829.0,
-        "source_date": "20261025",
-        "source_time": "104513"
+        "source_date": "20261026",
+        "source_time": "104424"
       }
     }
   },
@@ -109,7 +109,7 @@
     "schema_version": 2,
     "uni_id": "A0020216",
     "matched_name": "상록주유소",
-    "checked_at": "2026-10-25T13:44:49+09:00",
+    "checked_at": "2026-10-26T13:50:41+09:00",
     "prices": {
       "등유": 1600.0,
       "고급휘발유": 2385.0,
@@ -129,13 +129,13 @@
       },
       "휘발유": {
         "price": 1839.0,
-        "source_date": "20261024",
-        "source_time": "202950"
+        "source_date": "20261026",
+        "source_time": "104617"
       },
       "경유": {
         "price": 1829.0,
-        "source_date": "20261024",
-        "source_time": "205621"
+        "source_date": "20261026",
+        "source_time": "085451"
       }
     }
   },
@@ -143,7 +143,7 @@
     "schema_version": 2,
     "uni_id": "A0020197",
     "matched_name": "한강주유소",
-    "checked_at": "2026-10-24T13:39:59+09:00",
+    "checked_at": "2026-10-26T13:50:41+09:00",
     "prices": {
       "등유": 1600.0,
       "휘발유": 1859.0,
@@ -157,13 +157,13 @@
       },
       "휘발유": {
         "price": 1859.0,
-        "source_date": "20261024",
-        "source_time": "103116"
+        "source_date": "20261026",
+        "source_time": "105259"
       },
       "경유": {
         "price": 1849.0,
-        "source_date": "20261024",
-        "source_time": "105636"
+        "source_date": "20261026",
+        "source_time": "102809"
       }
     }
   },
@@ -171,7 +171,7 @@
     "schema_version": 2,
     "uni_id": "A0019743",
     "matched_name": "성실주유소",
-    "checked_at": "2026-10-25T13:44:49+09:00",
+    "checked_at": "2026-10-26T13:50:41+09:00",
     "prices": {
       "휘발유": 1829.0,
       "경유": 1809.0
@@ -179,13 +179,13 @@
     "price_evidence": {
       "휘발유": {
         "price": 1829.0,
-        "source_date": "20261025",
-        "source_time": "105916"
+        "source_date": "20261026",
+        "source_time": "105853"
       },
       "경유": {
         "price": 1809.0,
-        "source_date": "20261025",
-        "source_time": "101637"
+        "source_date": "20261026",
+        "source_time": "101614"
       }
     }
   },
@@ -193,7 +193,7 @@
     "schema_version": 2,
     "uni_id": "A0020612",
     "matched_name": "(유)매월주유소",
-    "checked_at": "2026-10-25T13:44:49+09:00",
+    "checked_at": "2026-10-26T13:50:41+09:00",
     "prices": {
       "등유": 1600.0,
       "고급휘발유": 2349.0,
@@ -204,22 +204,22 @@
       "등유": {
         "price": 1600.0,
         "source_date": "20261025",
-        "source_time": "104652"
+        "source_time": "161648"
       },
       "고급휘발유": {
         "price": 2349.0,
-        "source_date": "20261025",
-        "source_time": "103451"
+        "source_date": "20261026",
+        "source_time": "105811"
       },
       "휘발유": {
         "price": 1799.0,
-        "source_date": "20261025",
-        "source_time": "105901"
+        "source_date": "20261026",
+        "source_time": "105948"
       },
       "경유": {
         "price": 1789.0,
-        "source_date": "20261025",
-        "source_time": "105949"
+        "source_date": "20261026",
+        "source_time": "105828"
       }
     }
   },
@@ -227,7 +227,7 @@
     "schema_version": 2,
     "uni_id": "A0019792",
     "matched_name": "(주)스피드주유소",
-    "checked_at": "2026-10-25T13:44:49+09:00",
+    "checked_at": "2026-10-26T13:50:41+09:00",
     "prices": {
       "경유": 1809.0,
       "휘발유": 1829.0
@@ -235,13 +235,13 @@
     "price_evidence": {
       "경유": {
         "price": 1809.0,
-        "source_date": "20261025",
-        "source_time": "104810"
+        "source_date": "20261026",
+        "source_time": "105243"
       },
       "휘발유": {
         "price": 1829.0,
-        "source_date": "20261025",
-        "source_time": "104810"
+        "source_date": "20261026",
+        "source_time": "105949"
       }
     }
   },
@@ -249,7 +249,7 @@
     "schema_version": 2,
     "uni_id": "A0020645",
     "matched_name": "(주)대창석유직영 지산주유소",
-    "checked_at": "2026-10-25T13:44:49+09:00",
+    "checked_at": "2026-10-26T13:50:41+09:00",
     "prices": {},
     "price_evidence": {
       "고급휘발유": {
@@ -278,7 +278,7 @@
     "schema_version": 2,
     "uni_id": "A0033410",
     "matched_name": "주남셀프주유소",
-    "checked_at": "2026-10-25T13:44:49+09:00",
+    "checked_at": "2026-10-26T13:50:41+09:00",
     "prices": {
       "휘발유": 1865.0,
       "고급휘발유": 2385.0,
@@ -287,18 +287,18 @@
     "price_evidence": {
       "휘발유": {
         "price": 1865.0,
-        "source_date": "20261025",
-        "source_time": "105956"
+        "source_date": "20261026",
+        "source_time": "104813"
       },
       "고급휘발유": {
         "price": 2385.0,
-        "source_date": "20261025",
-        "source_time": "100408"
+        "source_date": "20261026",
+        "source_time": "105138"
       },
       "경유": {
         "price": 1845.0,
-        "source_date": "20261025",
-        "source_time": "101448"
+        "source_date": "20261026",
+        "source_time": "105820"
       }
     }
   },
@@ -309,8 +309,7 @@
     "checked_at": "2026-10-25T13:44:49+09:00",
     "prices": {
       "휘발유": 1848.0,
-      "경유": 1838.0,
-      "등유": 1550.0
+      "경유": 1838.0
     },
     "price_evidence": {
       "휘발유": {
