@@ -53,3 +53,22 @@ class SupplementalTests(unittest.TestCase):
         with self.assertRaises(ValueError):parse_response('총 0건 <script>var resultJson = '+json.dumps([bank])+';</script>')
         bank=deepcopy(bank);bank['content']['onNuliGb']='0'
         with self.assertRaises(ValueError):parse_response('총 1건 <script>var resultJson = '+json.dumps([bank])+';</script>')
+
+    def test_reviewed_alias_and_renamed_locality_do_not_widen_other_matches(self):
+        evidence=json.loads((ROOT/'output/supplemental_onnuri_evidence.json').read_text(encoding='utf-8'))['rows']
+        renamed=next(e for e in evidence if e['bank_record']['content']['title']=='양북주유소')
+        self.assertEqual(station_from_evidence(renamed,'2026-10-26')['region'],'경북')
+        wrong=deepcopy(renamed);wrong['bank_record']['content']['address']='경북 다른시 양북면'
+        with self.assertRaises(ValueError):station_from_evidence(wrong,'2026-10-26')
+        alias=next(e for e in evidence if e['bank_record']['content']['franchiseNo']=='000000070023590')
+        self.assertIn('명륜주유소',station_from_evidence(alias,'2026-10-26')['aliases'])
+        wrong=deepcopy(alias);wrong['bank_record']['content']['franchiseNo']='000000070023591'
+        with self.assertRaises(ValueError):station_from_evidence(wrong,'2026-10-26')
+
+    def test_unlinked_same_name_historical_candidate_stays_pending(self):
+        evidence=json.loads((ROOT/'output/supplemental_onnuri_evidence.json').read_text(encoding='utf-8'))['rows']
+        current=next(e for e in evidence if e['bank_record']['content']['title']=='원남주유소')
+        pending=[{'candidate_id':'dfea2f84be984c283e41bfe9','name':'원남주유소','region':'충북','show_pending':True}]
+        stations,review,_=apply_evidence([],pending,[current],'2026-10-26')
+        self.assertEqual(len(stations),1)
+        self.assertTrue(review[0]['show_pending'])

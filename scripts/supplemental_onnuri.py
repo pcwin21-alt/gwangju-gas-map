@@ -15,6 +15,21 @@ except ModuleNotFoundError:
     from scripts.discover_address_candidates import address_key
 
 SOURCE = 'https://card.kbcard.com/BON/DVIEW/HBGV0701'
+# Reviewed exact record pair: the commercial file contains both the short name
+# and corporate trading name at the same lot and road address. Never apply
+# this spelling exception to another merchant or to arbitrary suffix matches.
+REVIEWED_NAMES = {
+    ('000000070023590', 'MA010120220809284963'):
+        ('대원석유주식회사직영명륜주유소', '대원석유직영명륜주유소주', ['명륜주유소'])
+}
+
+
+def locality_tokens(address):
+    tokens=address.split()[1:]
+    # Official rename effective 2021-04-01 (MOIS notice nttId=83647).
+    if tokens[:2]==['경주시','양북면']:
+        tokens[1]='문무대왕면'
+    return tokens
 
 
 def meters(a,b):
@@ -33,14 +48,18 @@ def station_from_evidence(evidence, as_of):
         raise ValueError('Not a bank-classified vehicle fuel business')
     if f['상권업종소분류코드'] not in ('G21401','G21402'):
         raise ValueError('Not a commercial vehicle fuel business')
-    if name_key(c['title']) != name_key(f['상호명']):
+    reviewed=REVIEWED_NAMES.get((c['franchiseNo'], f['상가업소번호']))
+    aliases=[]
+    if reviewed and (c['title'],f['상호명'])==reviewed[:2]:
+        aliases=reviewed[2]+[f['상호명']]
+    elif name_key(c['title']) != name_key(f['상호명']):
         raise ValueError('Names disagree')
     addr=f['도로명주소']
     if not address_key(addr) or region(c['address'])!=region(addr):
         raise ValueError('Address/region mismatch')
     # Card-company address ends at town level; all published locality tokens
     # must agree with the commercial detailed address (province labels vary).
-    if not any(c['address'].split()[1:] == full.split()[1:len(c['address'].split())]
+    if not any(locality_tokens(c['address']) == locality_tokens(full)[:len(locality_tokens(c['address']))]
                for full in (addr, f.get('지번주소',''))):
         raise ValueError('Locality mismatch')
     a=tuple(float(bank['location'][k]) for k in ('lat','lng'))
@@ -52,7 +71,7 @@ def station_from_evidence(evidence, as_of):
     current=age<=30
     sid='kb:'+c['franchiseNo']
     return {'id':'onnuri:'+sid,'name':c['title'],'address':addr,'lat':b[0],'lng':b[1],
-        'payment_types':['onnuri'],'source':['kb_onnuri'],'aliases':[],
+        'payment_types':['onnuri'],'source':['kb_onnuri'],'aliases':aliases,
         'fuel_kind':'lpg' if f['상권업종소분류코드']=='G21402' else 'liquid',
         'route_eligible':current,'region':region(addr),
         'onnuri_methods':{'paper':None,'card':True,'qr':None,'digital':True},
@@ -86,7 +105,7 @@ def apply_evidence(stations, review, evidence_rows, as_of):
         if s['verification']['onnuri']['status']=='confirmed':
             for r in rows:
                 if r.get('candidate_id') in s['verification']['onnuri']['candidate_ids']:
-                    if name_key(r['name'])!=name_key(s['name']) or r.get('region')!=s['region']:
+                    if name_key(r['name']) not in {name_key(n) for n in [s['name']]+s['aliases']} or r.get('region')!=s['region']:
                         raise ValueError('Pending identity mismatch')
                     r.update(status='located',show_pending=False,
                         reason='KB국민카드 온누리 조회와 상권자료의 상호·주소권역·좌표 일치',

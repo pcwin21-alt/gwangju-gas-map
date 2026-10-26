@@ -53,6 +53,392 @@
         "1054803b1165f961c8cb5967"
       ],
       "identity_support": "2021 official paper list and 2026 commercial file agree on 순천시 중앙로 172. KB name, fuel category, locality, phone and coordinate agree."
+    },
+    {
+      "identity_review": "same_premise_confirmed",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "checked_at": "2026-10-26T18:56:15+09:00",
+      "bank_record": {
+        "location": {
+          "lat": "35.7930324724",
+          "lng": "129.4396241642"
+        },
+        "content": {
+          "tel": "054)744-2103",
+          "title": "양북주유소",
+          "category": "주유소",
+          "address": "경북 경주시 양북면 ",
+          "distance": "11",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000009960605",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-26T18:56:15+09:00",
+        "query_id": "5d82f51205f3ec64"
+      },
+      "commercial_record": {
+        "상가업소번호": "MA010120220809102801",
+        "상호명": "양북주유소",
+        "지점명": "",
+        "상권업종소분류코드": "G21401",
+        "상권업종소분류명": "주유소",
+        "표준산업분류코드": "G47711",
+        "표준산업분류명": "운송장비용 주유소 운영업",
+        "시군구명": "경주시",
+        "도로명주소": "경상북도 경주시 문무대왕면 감은로 23",
+        "지번주소": "경상북도 경주시 문무대왕면 어일리 1295-175",
+        "위도": "35.7930492689021",
+        "경도": "129.439502348491",
+        "region": "경북"
+      },
+      "commercial_source": {
+        "archive_sha256": "57aa361544108ff4fc73334f87d2ced61e41fe8638dd70bcd842930f865d2386",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+        "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
+      },
+      "annual_candidate_ids": [
+        "081a17a302be89e37dca8737"
+      ],
+      "identity_support": "KB Onnuri flag, vehicle-fuel category, current commercial name/locality and coordinates agree within 12 metres. 양북면 renamed 문무대왕면 effective 2021-04-01; original bank locality retained.",
+      "locality_source": "https://www.mois.go.kr/frt/bbs/type001/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000052&nttId=83647"
+    },
+    {
+      "identity_review": "same_premise_confirmed",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "checked_at": "2026-10-26T18:56:18+09:00",
+      "bank_record": {
+        "location": {
+          "lat": "36.7367655647",
+          "lng": "128.1061811362"
+        },
+        "content": {
+          "tel": "054)571-5182",
+          "title": "문희주유소",
+          "category": "주유소",
+          "address": "경북 문경시 문경읍 ",
+          "distance": "7",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000026632870",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-26T18:56:18+09:00",
+        "query_id": "84c496702e7583b9"
+      },
+      "commercial_record": {
+        "상가업소번호": "MA010120220809352586",
+        "상호명": "문희주유소",
+        "지점명": "",
+        "상권업종소분류코드": "G21401",
+        "상권업종소분류명": "주유소",
+        "표준산업분류코드": "G47711",
+        "표준산업분류명": "운송장비용 주유소 운영업",
+        "시군구명": "문경시",
+        "도로명주소": "경상북도 문경시 문경읍 청운로 47",
+        "지번주소": "경상북도 문경시 문경읍 하리 105-1",
+        "위도": "36.7367111372361",
+        "경도": "128.106223151258",
+        "region": "경북"
+      },
+      "commercial_source": {
+        "archive_sha256": "57aa361544108ff4fc73334f87d2ced61e41fe8638dd70bcd842930f865d2386",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+        "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
+      },
+      "annual_candidate_ids": [],
+      "identity_support": "KB Onnuri flag, vehicle-fuel category, current commercial name/locality and coordinates agree within 12 metres.",
+      "historical_candidate_link": "Not asserted: historical lot/locality differs. Publish current KB premises independently; keep annual candidate pending."
+    },
+    {
+      "identity_review": "same_premise_confirmed",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "checked_at": "2026-10-26T18:56:21+09:00",
+      "bank_record": {
+        "location": {
+          "lat": "36.9346346833",
+          "lng": "128.9129047757"
+        },
+        "content": {
+          "tel": "054)672-3355",
+          "title": "춘양주유소",
+          "category": "주유소",
+          "address": "경북 봉화군 춘양면 ",
+          "distance": "6",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000033881821",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-26T18:56:21+09:00",
+        "query_id": "3f05ff9feba8e812"
+      },
+      "commercial_record": {
+        "상가업소번호": "MA010120220806047363",
+        "상호명": "춘양주유소",
+        "지점명": "",
+        "상권업종소분류코드": "G21401",
+        "상권업종소분류명": "주유소",
+        "표준산업분류코드": "G47711",
+        "표준산업분류명": "운송장비용 주유소 운영업",
+        "시군구명": "봉화군",
+        "도로명주소": "경상북도 봉화군 춘양면 의양로 81",
+        "지번주소": "경상북도 봉화군 춘양면 의양리 427-5",
+        "위도": "36.9346011284347",
+        "경도": "128.912854858881",
+        "region": "경북"
+      },
+      "commercial_source": {
+        "archive_sha256": "57aa361544108ff4fc73334f87d2ced61e41fe8638dd70bcd842930f865d2386",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+        "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
+      },
+      "annual_candidate_ids": [
+        "c426c12d7c844ac0a2d91bd1"
+      ],
+      "identity_support": "KB Onnuri flag, vehicle-fuel category, current commercial name/locality and coordinates agree within 12 metres."
+    },
+    {
+      "identity_review": "same_premise_confirmed",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "checked_at": "2026-10-26T18:56:23+09:00",
+      "bank_record": {
+        "location": {
+          "lat": "36.5690248594",
+          "lng": "128.7316777507"
+        },
+        "content": {
+          "tel": "054)859-8251",
+          "title": "대원석유주식회사직영명륜주유소",
+          "category": "주유소",
+          "address": "경북 안동시 명륜동 ",
+          "distance": "9",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000070023590",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-26T18:56:23+09:00",
+        "query_id": "311895e860586120"
+      },
+      "commercial_record": {
+        "상가업소번호": "MA010120220809284963",
+        "상호명": "대원석유직영명륜주유소주",
+        "지점명": "",
+        "상권업종소분류코드": "G21401",
+        "상권업종소분류명": "주유소",
+        "표준산업분류코드": "G47711",
+        "표준산업분류명": "운송장비용 주유소 운영업",
+        "시군구명": "안동시",
+        "도로명주소": "경상북도 안동시 퇴계로 134",
+        "지번주소": "경상북도 안동시 명륜동 315",
+        "위도": "36.5690056148742",
+        "경도": "128.731777730577",
+        "region": "경북"
+      },
+      "commercial_source": {
+        "archive_sha256": "57aa361544108ff4fc73334f87d2ced61e41fe8638dd70bcd842930f865d2386",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+        "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
+      },
+      "annual_candidate_ids": [
+        "04d09d1a8156d44b38db83c0"
+      ],
+      "identity_support": "KB Onnuri flag, vehicle-fuel category, current commercial name/locality and coordinates agree within 12 metres. Exact reviewed corporate name pair and short-name commercial record share 안동시 퇴계로 134 / 명륜동 315. No generic fuzzy-name match.",
+      "supporting_commercial_records": [
+        {
+          "상가업소번호": "MA010120220813246743",
+          "상호명": "명륜주유소",
+          "지점명": "",
+          "상권업종소분류코드": "G21401",
+          "상권업종소분류명": "주유소",
+          "표준산업분류코드": "G47711",
+          "표준산업분류명": "운송장비용 주유소 운영업",
+          "시군구명": "안동시",
+          "도로명주소": "경상북도 안동시 퇴계로 134",
+          "지번주소": "경상북도 안동시 명륜동 315",
+          "위도": "36.5690056148742",
+          "경도": "128.731777730577",
+          "region": "경북"
+        }
+      ]
+    },
+    {
+      "identity_review": "same_premise_confirmed",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "checked_at": "2026-10-26T18:56:26+09:00",
+      "bank_record": {
+        "location": {
+          "lat": "36.7956638909",
+          "lng": "129.4518435808"
+        },
+        "content": {
+          "tel": "054)787-7551",
+          "title": "기성주유소",
+          "category": "주유소",
+          "address": "경북 울진군 기성면 ",
+          "distance": "11",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000045010896",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-26T18:56:26+09:00",
+        "query_id": "4a41cb9ef03b7767"
+      },
+      "commercial_record": {
+        "상가업소번호": "MA010120220809222326",
+        "상호명": "기성주유소",
+        "지점명": "",
+        "상권업종소분류코드": "G21401",
+        "상권업종소분류명": "주유소",
+        "표준산업분류코드": "G47711",
+        "표준산업분류명": "운송장비용 주유소 운영업",
+        "시군구명": "울진군",
+        "도로명주소": "경상북도 울진군 기성면 기성로 633",
+        "지번주소": "경상북도 울진군 기성면 척산리 290-1",
+        "위도": "36.7957603115358",
+        "경도": "129.451876417758",
+        "region": "경북"
+      },
+      "commercial_source": {
+        "archive_sha256": "57aa361544108ff4fc73334f87d2ced61e41fe8638dd70bcd842930f865d2386",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+        "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
+      },
+      "annual_candidate_ids": [
+        "9e96e2c352e1ca4224036944"
+      ],
+      "identity_support": "KB Onnuri flag, vehicle-fuel category, current commercial name/locality and coordinates agree within 12 metres."
+    },
+    {
+      "identity_review": "same_premise_confirmed",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "checked_at": "2026-10-26T18:56:38+09:00",
+      "bank_record": {
+        "location": {
+          "lat": "36.9116767732",
+          "lng": "127.6858980224"
+        },
+        "content": {
+          "tel": "043)872-6684",
+          "title": "원남주유소",
+          "category": "주유소",
+          "address": "충북 음성군 원남면 ",
+          "distance": "11",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000037466937",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-26T18:56:38+09:00",
+        "query_id": "7b4abd75d7e5c9a8"
+      },
+      "commercial_record": {
+        "상가업소번호": "MA010120220805664888",
+        "상호명": "원남주유소",
+        "지점명": "",
+        "상권업종소분류코드": "G21401",
+        "상권업종소분류명": "주유소",
+        "표준산업분류코드": "G47711",
+        "표준산업분류명": "운송장비용 주유소 운영업",
+        "시군구명": "음성군",
+        "도로명주소": "충청북도 음성군 원남면 충청대로 1139",
+        "지번주소": "충청북도 음성군 원남면 하당리 9-2",
+        "위도": "36.9117679161991",
+        "경도": "127.685933795773",
+        "region": "충북"
+      },
+      "commercial_source": {
+        "archive_sha256": "57aa361544108ff4fc73334f87d2ced61e41fe8638dd70bcd842930f865d2386",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+        "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
+      },
+      "annual_candidate_ids": [],
+      "identity_support": "KB Onnuri flag, vehicle-fuel category, current commercial name/locality and coordinates agree within 12 metres.",
+      "historical_candidate_link": "Not asserted: historical lot/locality differs. Publish current KB premises independently; keep annual candidate pending."
+    },
+    {
+      "identity_review": "same_premise_confirmed",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "checked_at": "2026-10-26T18:56:42+09:00",
+      "bank_record": {
+        "location": {
+          "lat": "37.7862516385",
+          "lng": "126.8451193881"
+        },
+        "content": {
+          "tel": "031)947-7421",
+          "title": "광탄주유소",
+          "category": "주유소",
+          "address": "경기 파주시 광탄면 ",
+          "distance": "11",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000023712293",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-26T18:56:42+09:00",
+        "query_id": "14f22e50b06972c7"
+      },
+      "commercial_record": {
+        "상가업소번호": "MA010120220801753318",
+        "상호명": "광탄주유소",
+        "지점명": "",
+        "상권업종소분류코드": "G21401",
+        "상권업종소분류명": "주유소",
+        "표준산업분류코드": "G47711",
+        "표준산업분류명": "운송장비용 주유소 운영업",
+        "시군구명": "파주시",
+        "도로명주소": "경기도 파주시 광탄면 혜음로 1178",
+        "지번주소": "경기도 파주시 광탄면 신산리 352-5",
+        "위도": "37.7862480600179",
+        "경도": "126.84524358065",
+        "region": "경기"
+      },
+      "commercial_source": {
+        "archive_sha256": "57aa361544108ff4fc73334f87d2ced61e41fe8638dd70bcd842930f865d2386",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+        "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
+      },
+      "annual_candidate_ids": [],
+      "identity_support": "KB Onnuri flag, vehicle-fuel category, current commercial name/locality and coordinates agree within 12 metres.",
+      "historical_candidate_link": "Not asserted: historical lot/locality differs. Publish current KB premises independently; keep annual candidate pending."
     }
   ]
 }

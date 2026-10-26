@@ -16,7 +16,7 @@
     "raw_search_rows": 460,
     "matched_count": 169,
     "unmatched_count": 1,
-    "pending_count": 16,
+    "pending_count": 12,
     "refresh_environment": "github_actions",
     "refresh_run_url": "https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/40244583508",
     "refresh_error": "ConnectTimeout",
@@ -163,8 +163,8 @@
   },
   "supplemental_onnuri": {
     "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
-    "checked_at": "2026-10-26T18:32:23+09:00",
-    "confirmed_count": 1,
+    "checked_at": "2026-10-26T18:56:42+09:00",
+    "confirmed_count": 8,
     "stale_count": 0,
     "scope": "issuer_specific_corroboration_not_nationwide_refresh"
   }

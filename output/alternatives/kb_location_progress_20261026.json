@@ -1,0 +1,502 @@
+{
+  "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+  "checked_at": "2026-10-26T18:55:57+09:00",
+  "region": "전남",
+  "scope": "candidate_location_name_search_not_geographic_census",
+  "status": "candidate_queue_complete",
+  "planned_queries": 945,
+  "completed_queries": 945,
+  "error": null,
+  "unique_merchants": 21,
+  "rows": [
+    {
+      "location": {
+        "lat": "34.961063692",
+        "lng": "127.4847504375"
+      },
+      "content": {
+        "tel": "061)752-3327",
+        "title": "현대주유소",
+        "category": "주유소",
+        "address": "전남 순천시 매곡동 ",
+        "distance": "287",
+        "kindGb": "0",
+        "onNuliGb": "1",
+        "tradiGb": "0",
+        "liveHoodGb": "1",
+        "sangsaengGb": "1",
+        "franchiseNo": "000000004645863",
+        "highOilGb": "1",
+        "seoulGb": "0"
+      },
+      "checked_at": "2026-10-26T18:44:22+09:00",
+      "query_id": "8c52c15d965c3071"
+    },
+    {
+      "location": {
+        "lat": "35.0358689352",
+        "lng": "126.7525723357"
+      },
+      "content": {
+        "tel": "061)337-0875",
+        "title": "부건주유소",
+        "category": "주유소",
+        "address": "전남 나주시 금천면 ",
+        "distance": "33",
+        "kindGb": "0",
+        "onNuliGb": "1",
+        "tradiGb": "0",
+        "liveHoodGb": "1",
+        "sangsaengGb": "1",
+        "franchiseNo": "000000120167132",
+        "highOilGb": "1",
+        "seoulGb": "0"
+      },
+      "checked_at": "2026-10-26T18:55:22+09:00",
+      "query_id": "6af36a7ba6afc903"
+    },
+    {
+      "location": {
+        "lat": "34.9469480851",
+        "lng": "127.4893540096"
+      },
+      "content": {
+        "tel": "",
+        "title": "호남주유소",
+        "category": "주유소",
+        "address": "전남 순천시 장천동 ",
+        "distance": "11",
+        "kindGb": "0",
+        "onNuliGb": "1",
+        "tradiGb": "0",
+        "liveHoodGb": "1",
+        "sangsaengGb": "1",
+        "franchiseNo": "000000113153165",
+        "highOilGb": "1",
+        "seoulGb": "0"
+      },
+      "checked_at": "2026-10-26T18:55:39+09:00",
+      "query_id": "7712c31c5309cb90"
+    },
+    {
+      "location": {
+        "lat": "35.0623586819",
+        "lng": "126.5228518338"
+      },
+      "content": {
+        "tel": "061)322-2140",
+        "title": "대창주유소",
+        "category": "주유소",
+        "address": "전남 함평군 함평읍 ",
+        "distance": "20",
+        "kindGb": "0",
+        "onNuliGb": "1",
+        "tradiGb": "0",
+        "liveHoodGb": "1",
+        "sangsaengGb": "1",
+        "franchiseNo": "000000065992690",
+        "highOilGb": "1",
+        "seoulGb": "0"
+      },
+      "checked_at": "2026-10-26T18:55:51+09:00",
+      "query_id": "faebe6a31858b6ca"
+    },
+    {
+      "location": {
+        "lat": "34.4928350465",
+        "lng": "126.5147580063"
+      },
+      "content": {
+        "tel": "061)535-0021",
+        "title": "화산주유소",
+        "category": "주유소",
+        "address": "전남 해남군 화산면 ",
+        "distance": "15",
+        "kindGb": "0",
+        "onNuliGb": "1",
+        "tradiGb": "0",
+        "liveHoodGb": "1",
+        "sangsaengGb": "1",
+        "franchiseNo": "000000063753887",
+        "highOilGb": "1",
+        "seoulGb": "0"
+      },
+      "checked_at": "2026-10-26T18:55:55+09:00",
+      "query_id": "b174f4349b6c190c"
+    },
+    {
+      "location": {
+        "lat": "35.1989829156",
+        "lng": "127.5225629465"
+      },
+      "content": {
+        "tel": "061)782-5189",
+        "title": "미래주유소",
+        "category": "주유소",
+        "address": "전남 구례군 토지면 ",
+        "distance": "6",
+        "kindGb": "0",
+        "onNuliGb": "1",
+        "tradiGb": "0",
+        "liveHoodGb": "1",
+        "sangsaengGb": "1",
+        "franchiseNo": "000000064282436",
+        "highOilGb": "1",
+        "seoulGb": "0"
+      },
+      "checked_at": "2026-10-26T18:55:19+09:00",
+      "query_id": "1001f69bce78ad3d"
+    },
+    {
+      "location": {
+        "lat": "35.0468513218",
+        "lng": "126.8414562348"
+      },
+      "content": {
+        "tel": "061)331-2008",
+        "title": "남평주유소",
+        "category": "주유소",
+        "address": "전남 나주시 남평읍 ",
+        "distance": "197",
+        "kindGb": "0",
+        "onNuliGb": "1",
+        "tradiGb": "0",
+        "liveHoodGb": "1",
+        "sangsaengGb": "1",
+        "franchiseNo": "000000078287556",
+        "highOilGb": "1",
+        "seoulGb": "0"
+      },
+      "checked_at": "2026-10-26T18:55:27+09:00",
+      "query_id": "7e6a4c581ee5bfd3"
+    },
+    {
+      "location": {
+        "lat": "35.0471940076",
+        "lng": "126.8436075806"
+      },
+      "content": {
+        "tel": "061)331-2331",
+        "title": "광남주유소",
+        "category": "주유소",
+        "address": "전남 나주시 남평읍 ",
+        "distance": "4",
+        "kindGb": "0",
+        "onNuliGb": "1",
+        "tradiGb": "0",
+        "liveHoodGb": "1",
+        "sangsaengGb": "1",
+        "franchiseNo": "000000034326741",
+        "highOilGb": "1",
+        "seoulGb": "0"
+      },
+      "checked_at": "2026-10-26T18:55:27+09:00",
+      "query_id": "7e6a4c581ee5bfd3"
+    },
+    {
+      "location": {
+        "lat": "34.9221517596",
+        "lng": "126.7479655283"
+      },
+      "content": {
+        "tel": "061)331-5188",
+        "title": "백제주유소",
+        "category": "주유소",
+        "address": "전남 나주시 세지면 ",
+        "distance": "9",
+        "kindGb": "0",
+        "onNuliGb": "1",
+        "tradiGb": "0",
+        "liveHoodGb": "1",
+        "sangsaengGb": "1",
+        "franchiseNo": "000000110113418",
+        "highOilGb": "1",
+        "seoulGb": "0"
+      },
+      "checked_at": "2026-10-26T18:55:28+09:00",
+      "query_id": "2d3eb25e8d96a673"
+    },
+    {
+      "location": {
+        "lat": "35.3312578683",
+        "lng": "126.9885043042"
+      },
+      "content": {
+        "tel": "061)381-1567",
+        "title": "부원주유소",
+        "category": "주유소",
+        "address": "전남 담양군 담양읍 ",
+        "distance": "9",
+        "kindGb": "0",
+        "onNuliGb": "1",
+        "tradiGb": "0",
+        "liveHoodGb": "1",
+        "sangsaengGb": "1",
+        "franchiseNo": "000000047115107",
+        "highOilGb": "1",
+        "seoulGb": "0"
+      },
+      "checked_at": "2026-10-26T18:55:30+09:00",
+      "query_id": "9d64a1634e915bb5"
+    },
+    {
+      "location": {
+        "lat": "35.3111466663",
+        "lng": "126.9811048273"
+      },
+      "content": {
+        "tel": "061)383-5179",
+        "title": "대나무주유소",
+        "category": "주유소",
+        "address": "전남 담양군 담양읍 ",
+        "distance": "9",
+        "kindGb": "0",
+        "onNuliGb": "1",
+        "tradiGb": "0",
+        "liveHoodGb": "1",
+        "sangsaengGb": "1",
+        "franchiseNo": "000000037510191",
+        "highOilGb": "1",
+        "seoulGb": "0"
+      },
+      "checked_at": "2026-10-26T18:55:31+09:00",
+      "query_id": "62c5a82f010fc961"
+    },
+    {
+      "location": {
+        "lat": "34.9703233967",
+        "lng": "126.3854175071"
+      },
+      "content": {
+        "tel": "061)802-0021",
+        "title": "공항에너지",
+        "category": "주유소",
+        "address": "전남 무안군 망운면 ",
+        "distance": "10",
+        "kindGb": "0",
+        "onNuliGb": "1",
+        "tradiGb": "0",
+        "liveHoodGb": "1",
+        "sangsaengGb": "1",
+        "franchiseNo": "000000108555012",
+        "highOilGb": "1",
+        "seoulGb": "0"
+      },
+      "checked_at": "2026-10-26T18:55:33+09:00",
+      "query_id": "df23b854b7116136"
+    },
+    {
+      "location": {
+        "lat": "34.7768886668",
+        "lng": "127.0891189623"
+      },
+      "content": {
+        "tel": "061)852-2357",
+        "title": "광주주유소",
+        "category": "주유소",
+        "address": "전남 보성군 보성읍 ",
+        "distance": "1",
+        "kindGb": "0",
+        "onNuliGb": "1",
+        "tradiGb": "0",
+        "liveHoodGb": "1",
+        "sangsaengGb": "1",
+        "franchiseNo": "000000025825147",
+        "highOilGb": "1",
+        "seoulGb": "0"
+      },
+      "checked_at": "2026-10-26T18:55:34+09:00",
+      "query_id": "4e8ff61ca5b27f31"
+    },
+    {
+      "location": {
+        "lat": "34.7719225187",
+        "lng": "127.093531174"
+      },
+      "content": {
+        "tel": "061)853-9731",
+        "title": "다향에너지주식회사",
+        "category": "충전소",
+        "address": "전남 보성군 보성읍 ",
+        "distance": "8",
+        "kindGb": "0",
+        "onNuliGb": "1",
+        "tradiGb": "0",
+        "liveHoodGb": "1",
+        "sangsaengGb": "1",
+        "franchiseNo": "000000121636039",
+        "highOilGb": "1",
+        "seoulGb": "0"
+      },
+      "checked_at": "2026-10-26T18:55:36+09:00",
+      "query_id": "ceee42ff6ba35275"
+    },
+    {
+      "location": {
+        "lat": "34.9497466291",
+        "lng": "127.4911607758"
+      },
+      "content": {
+        "tel": "061)744-4887",
+        "title": "순천주유소",
+        "category": "주유소",
+        "address": "전남 순천시 장천동 ",
+        "distance": "4",
+        "kindGb": "0",
+        "onNuliGb": "1",
+        "tradiGb": "0",
+        "liveHoodGb": "1",
+        "sangsaengGb": "1",
+        "franchiseNo": "000000009989174",
+        "highOilGb": "1",
+        "seoulGb": "0"
+      },
+      "checked_at": "2026-10-26T18:55:37+09:00",
+      "query_id": "2917ab739294e785"
+    },
+    {
+      "location": {
+        "lat": "34.7462511276",
+        "lng": "126.4768178394"
+      },
+      "content": {
+        "tel": "061)462-5188",
+        "title": "용앙주유소",
+        "category": "주유소",
+        "address": "전남 영암군 삼호읍 ",
+        "distance": "17",
+        "kindGb": "0",
+        "onNuliGb": "1",
+        "tradiGb": "0",
+        "liveHoodGb": "1",
+        "sangsaengGb": "1",
+        "franchiseNo": "000000013496826",
+        "highOilGb": "1",
+        "seoulGb": "0"
+      },
+      "checked_at": "2026-10-26T18:55:42+09:00",
+      "query_id": "3bfda13db4d6a1c4"
+    },
+    {
+      "location": {
+        "lat": "35.3384396748",
+        "lng": "126.8149397213"
+      },
+      "content": {
+        "tel": "061)394-0572",
+        "title": "재봉주유소",
+        "category": "주유소",
+        "address": "전남 장성군 장성읍 ",
+        "distance": "21",
+        "kindGb": "0",
+        "onNuliGb": "1",
+        "tradiGb": "0",
+        "liveHoodGb": "1",
+        "sangsaengGb": "1",
+        "franchiseNo": "000000033093565",
+        "highOilGb": "1",
+        "seoulGb": "0"
+      },
+      "checked_at": "2026-10-26T18:55:43+09:00",
+      "query_id": "171439109882771b"
+    },
+    {
+      "location": {
+        "lat": "35.2924363629",
+        "lng": "126.779621544"
+      },
+      "content": {
+        "tel": "061)393-1000",
+        "title": "장성농협주유소",
+        "category": "세차장",
+        "address": "전남 장성군 장성읍 ",
+        "distance": "28",
+        "kindGb": "0",
+        "onNuliGb": "1",
+        "tradiGb": "0",
+        "liveHoodGb": "0",
+        "sangsaengGb": "1",
+        "franchiseNo": "000000100747978",
+        "highOilGb": "0",
+        "seoulGb": "0"
+      },
+      "checked_at": "2026-10-26T18:55:45+09:00",
+      "query_id": "583c7af930f0f1c4"
+    },
+    {
+      "location": {
+        "lat": "35.2924363629",
+        "lng": "126.779621544"
+      },
+      "content": {
+        "tel": "061)393-1000",
+        "title": "장성농협주유소",
+        "category": "주유소",
+        "address": "전남 장성군 장성읍 ",
+        "distance": "28",
+        "kindGb": "0",
+        "onNuliGb": "1",
+        "tradiGb": "0",
+        "liveHoodGb": "1",
+        "sangsaengGb": "1",
+        "franchiseNo": "000000100745478",
+        "highOilGb": "1",
+        "seoulGb": "0"
+      },
+      "checked_at": "2026-10-26T18:55:45+09:00",
+      "query_id": "583c7af930f0f1c4"
+    },
+    {
+      "location": {
+        "lat": "35.2672847973",
+        "lng": "126.8046897626"
+      },
+      "content": {
+        "tel": "061)392-3337",
+        "title": "영신주유소",
+        "category": "주유소",
+        "address": "전남 장성군 진원면 ",
+        "distance": "13",
+        "kindGb": "0",
+        "onNuliGb": "1",
+        "tradiGb": "0",
+        "liveHoodGb": "1",
+        "sangsaengGb": "1",
+        "franchiseNo": "000000099959398",
+        "highOilGb": "1",
+        "seoulGb": "0"
+      },
+      "checked_at": "2026-10-26T18:55:46+09:00",
+      "query_id": "311d1a9a332db218"
+    },
+    {
+      "location": {
+        "lat": "34.6755529657",
+        "lng": "126.901164572"
+      },
+      "content": {
+        "tel": "061)863-9305",
+        "title": "진남주유소",
+        "category": "주유소",
+        "address": "전남 장흥군 장흥읍 ",
+        "distance": "8",
+        "kindGb": "0",
+        "onNuliGb": "1",
+        "tradiGb": "0",
+        "liveHoodGb": "1",
+        "sangsaengGb": "1",
+        "franchiseNo": "000000052037478",
+        "highOilGb": "1",
+        "seoulGb": "0"
+      },
+      "checked_at": "2026-10-26T18:55:49+09:00",
+      "query_id": "312eba5e32b3b3b2"
+    }
+  ],
+  "limitations": [
+    "Bank selection updates are not real time.",
+    "No result does not prove nonmembership.",
+    "Bank address is coarse; exact premises need independent matching.",
+    "This does not verify all card issuers, paper acceptance or actual payment."
+  ]
+}

@@ -8138,5 +8138,359 @@
       "source_id": "MA010120220807846418",
       "bank_distance_m": 10.1
     }
+  },
+  {
+    "id": "onnuri:kb:000000009960605",
+    "name": "양북주유소",
+    "address": "경상북도 경주시 문무대왕면 감은로 23",
+    "lat": 35.7930492689021,
+    "lng": 129.439502348491,
+    "payment_types": [
+      "onnuri"
+    ],
+    "source": [
+      "kb_onnuri"
+    ],
+    "aliases": [],
+    "fuel_kind": "liquid",
+    "route_eligible": true,
+    "region": "경북",
+    "onnuri_methods": {
+      "paper": null,
+      "card": true,
+      "qr": null,
+      "digital": true
+    },
+    "verification": {
+      "onnuri": {
+        "status": "confirmed",
+        "checked_at": "2026-10-26T18:56:15+09:00",
+        "source_date": null,
+        "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+        "source_id": "kb:000000009960605",
+        "source_ids": [
+          "kb:000000009960605"
+        ],
+        "provider": "kbcard",
+        "issuer_scope": [
+          "KB국민카드"
+        ],
+        "match_basis": "bank_onnuri_flag_fuel_category_name_locality_coordinates_commercial_address",
+        "candidate_ids": [
+          "081a17a302be89e37dca8737"
+        ],
+        "note": "KB국민카드 온누리 사용처 조회 기준. 카드사 반영 지연 가능. 지류·QR·다른 카드사는 별도 확인."
+      }
+    },
+    "location_evidence": {
+      "source_type": "commercial_registry",
+      "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+      "source_date": "2026-06-30",
+      "source_id": "MA010120220809102801",
+      "bank_distance_m": 11.1
+    }
+  },
+  {
+    "id": "onnuri:kb:000000026632870",
+    "name": "문희주유소",
+    "address": "경상북도 문경시 문경읍 청운로 47",
+    "lat": 36.7367111372361,
+    "lng": 128.106223151258,
+    "payment_types": [
+      "onnuri"
+    ],
+    "source": [
+      "kb_onnuri"
+    ],
+    "aliases": [],
+    "fuel_kind": "liquid",
+    "route_eligible": true,
+    "region": "경북",
+    "onnuri_methods": {
+      "paper": null,
+      "card": true,
+      "qr": null,
+      "digital": true
+    },
+    "verification": {
+      "onnuri": {
+        "status": "confirmed",
+        "checked_at": "2026-10-26T18:56:18+09:00",
+        "source_date": null,
+        "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+        "source_id": "kb:000000026632870",
+        "source_ids": [
+          "kb:000000026632870"
+        ],
+        "provider": "kbcard",
+        "issuer_scope": [
+          "KB국민카드"
+        ],
+        "match_basis": "bank_onnuri_flag_fuel_category_name_locality_coordinates_commercial_address",
+        "candidate_ids": [],
+        "note": "KB국민카드 온누리 사용처 조회 기준. 카드사 반영 지연 가능. 지류·QR·다른 카드사는 별도 확인."
+      }
+    },
+    "location_evidence": {
+      "source_type": "commercial_registry",
+      "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+      "source_date": "2026-06-30",
+      "source_id": "MA010120220809352586",
+      "bank_distance_m": 7.1
+    }
+  },
+  {
+    "id": "onnuri:kb:000000033881821",
+    "name": "춘양주유소",
+    "address": "경상북도 봉화군 춘양면 의양로 81",
+    "lat": 36.9346011284347,
+    "lng": 128.912854858881,
+    "payment_types": [
+      "onnuri"
+    ],
+    "source": [
+      "kb_onnuri"
+    ],
+    "aliases": [],
+    "fuel_kind": "liquid",
+    "route_eligible": true,
+    "region": "경북",
+    "onnuri_methods": {
+      "paper": null,
+      "card": true,
+      "qr": null,
+      "digital": true
+    },
+    "verification": {
+      "onnuri": {
+        "status": "confirmed",
+        "checked_at": "2026-10-26T18:56:21+09:00",
+        "source_date": null,
+        "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+        "source_id": "kb:000000033881821",
+        "source_ids": [
+          "kb:000000033881821"
+        ],
+        "provider": "kbcard",
+        "issuer_scope": [
+          "KB국민카드"
+        ],
+        "match_basis": "bank_onnuri_flag_fuel_category_name_locality_coordinates_commercial_address",
+        "candidate_ids": [
+          "c426c12d7c844ac0a2d91bd1"
+        ],
+        "note": "KB국민카드 온누리 사용처 조회 기준. 카드사 반영 지연 가능. 지류·QR·다른 카드사는 별도 확인."
+      }
+    },
+    "location_evidence": {
+      "source_type": "commercial_registry",
+      "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+      "source_date": "2026-06-30",
+      "source_id": "MA010120220806047363",
+      "bank_distance_m": 5.8
+    }
+  },
+  {
+    "id": "onnuri:kb:000000070023590",
+    "name": "대원석유주식회사직영명륜주유소",
+    "address": "경상북도 안동시 퇴계로 134",
+    "lat": 36.5690056148742,
+    "lng": 128.731777730577,
+    "payment_types": [
+      "onnuri"
+    ],
+    "source": [
+      "kb_onnuri"
+    ],
+    "aliases": [
+      "명륜주유소",
+      "대원석유직영명륜주유소주"
+    ],
+    "fuel_kind": "liquid",
+    "route_eligible": true,
+    "region": "경북",
+    "onnuri_methods": {
+      "paper": null,
+      "card": true,
+      "qr": null,
+      "digital": true
+    },
+    "verification": {
+      "onnuri": {
+        "status": "confirmed",
+        "checked_at": "2026-10-26T18:56:23+09:00",
+        "source_date": null,
+        "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+        "source_id": "kb:000000070023590",
+        "source_ids": [
+          "kb:000000070023590"
+        ],
+        "provider": "kbcard",
+        "issuer_scope": [
+          "KB국민카드"
+        ],
+        "match_basis": "bank_onnuri_flag_fuel_category_name_locality_coordinates_commercial_address",
+        "candidate_ids": [
+          "04d09d1a8156d44b38db83c0"
+        ],
+        "note": "KB국민카드 온누리 사용처 조회 기준. 카드사 반영 지연 가능. 지류·QR·다른 카드사는 별도 확인."
+      }
+    },
+    "location_evidence": {
+      "source_type": "commercial_registry",
+      "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+      "source_date": "2026-06-30",
+      "source_id": "MA010120220809284963",
+      "bank_distance_m": 9.2
+    }
+  },
+  {
+    "id": "onnuri:kb:000000045010896",
+    "name": "기성주유소",
+    "address": "경상북도 울진군 기성면 기성로 633",
+    "lat": 36.7957603115358,
+    "lng": 129.451876417758,
+    "payment_types": [
+      "onnuri"
+    ],
+    "source": [
+      "kb_onnuri"
+    ],
+    "aliases": [],
+    "fuel_kind": "liquid",
+    "route_eligible": true,
+    "region": "경북",
+    "onnuri_methods": {
+      "paper": null,
+      "card": true,
+      "qr": null,
+      "digital": true
+    },
+    "verification": {
+      "onnuri": {
+        "status": "confirmed",
+        "checked_at": "2026-10-26T18:56:26+09:00",
+        "source_date": null,
+        "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+        "source_id": "kb:000000045010896",
+        "source_ids": [
+          "kb:000000045010896"
+        ],
+        "provider": "kbcard",
+        "issuer_scope": [
+          "KB국민카드"
+        ],
+        "match_basis": "bank_onnuri_flag_fuel_category_name_locality_coordinates_commercial_address",
+        "candidate_ids": [
+          "9e96e2c352e1ca4224036944"
+        ],
+        "note": "KB국민카드 온누리 사용처 조회 기준. 카드사 반영 지연 가능. 지류·QR·다른 카드사는 별도 확인."
+      }
+    },
+    "location_evidence": {
+      "source_type": "commercial_registry",
+      "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+      "source_date": "2026-06-30",
+      "source_id": "MA010120220809222326",
+      "bank_distance_m": 11.1
+    }
+  },
+  {
+    "id": "onnuri:kb:000000037466937",
+    "name": "원남주유소",
+    "address": "충청북도 음성군 원남면 충청대로 1139",
+    "lat": 36.9117679161991,
+    "lng": 127.685933795773,
+    "payment_types": [
+      "onnuri"
+    ],
+    "source": [
+      "kb_onnuri"
+    ],
+    "aliases": [],
+    "fuel_kind": "liquid",
+    "route_eligible": true,
+    "region": "충북",
+    "onnuri_methods": {
+      "paper": null,
+      "card": true,
+      "qr": null,
+      "digital": true
+    },
+    "verification": {
+      "onnuri": {
+        "status": "confirmed",
+        "checked_at": "2026-10-26T18:56:38+09:00",
+        "source_date": null,
+        "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+        "source_id": "kb:000000037466937",
+        "source_ids": [
+          "kb:000000037466937"
+        ],
+        "provider": "kbcard",
+        "issuer_scope": [
+          "KB국민카드"
+        ],
+        "match_basis": "bank_onnuri_flag_fuel_category_name_locality_coordinates_commercial_address",
+        "candidate_ids": [],
+        "note": "KB국민카드 온누리 사용처 조회 기준. 카드사 반영 지연 가능. 지류·QR·다른 카드사는 별도 확인."
+      }
+    },
+    "location_evidence": {
+      "source_type": "commercial_registry",
+      "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+      "source_date": "2026-06-30",
+      "source_id": "MA010120220805664888",
+      "bank_distance_m": 10.6
+    }
+  },
+  {
+    "id": "onnuri:kb:000000023712293",
+    "name": "광탄주유소",
+    "address": "경기도 파주시 광탄면 혜음로 1178",
+    "lat": 37.7862480600179,
+    "lng": 126.84524358065,
+    "payment_types": [
+      "onnuri"
+    ],
+    "source": [
+      "kb_onnuri"
+    ],
+    "aliases": [],
+    "fuel_kind": "liquid",
+    "route_eligible": true,
+    "region": "경기",
+    "onnuri_methods": {
+      "paper": null,
+      "card": true,
+      "qr": null,
+      "digital": true
+    },
+    "verification": {
+      "onnuri": {
+        "status": "confirmed",
+        "checked_at": "2026-10-26T18:56:42+09:00",
+        "source_date": null,
+        "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+        "source_id": "kb:000000023712293",
+        "source_ids": [
+          "kb:000000023712293"
+        ],
+        "provider": "kbcard",
+        "issuer_scope": [
+          "KB국민카드"
+        ],
+        "match_basis": "bank_onnuri_flag_fuel_category_name_locality_coordinates_commercial_address",
+        "candidate_ids": [],
+        "note": "KB국민카드 온누리 사용처 조회 기준. 카드사 반영 지연 가능. 지류·QR·다른 카드사는 별도 확인."
+      }
+    },
+    "location_evidence": {
+      "source_type": "commercial_registry",
+      "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+      "source_date": "2026-06-30",
+      "source_id": "MA010120220801753318",
+      "bank_distance_m": 10.9
+    }
   }
 ]

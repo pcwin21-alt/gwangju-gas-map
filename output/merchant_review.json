@@ -3939,9 +3939,9 @@
     "name": "춘양주유소",
     "market": "억지춘향시장(구 봉화춘향시장)",
     "region": "경북",
-    "status": "needs_review",
-    "reason": "주소 대조: 경상북도 봉화군 춘양면 의양로 81 (과거 가맹 명부 2021-09-28, 상권자료 2026-06-30). 현재 온누리 가맹 재확인 필요",
-    "show_pending": true,
+    "status": "located",
+    "reason": "KB국민카드 온누리 조회와 상권자료의 상호·주소권역·좌표 일치",
+    "show_pending": false,
     "identity_evidence": {
       "candidate_id": "c426c12d7c844ac0a2d91bd1",
       "name": "춘양주유소",
@@ -3979,7 +3979,8 @@
         "도로명주소": "경상북도 봉화군 춘양면 의양로 81",
         "지번주소": "경상북도 봉화군 춘양면 의양리 427-5"
       }
-    }
+    },
+    "supplemental_source_id": "kb:000000033881821"
   },
   {
     "candidate_id": "80abcbfbeaccee97f1fe852f",
@@ -3995,9 +3996,9 @@
     "name": "양북주유소",
     "market": "양북시장",
     "region": "경북",
-    "status": "needs_review",
-    "reason": "주소 대조: 경상북도 경주시 문무대왕면 감은로 23 (과거 가맹 명부 2021-09-28, 상권자료 2026-06-30). 현재 온누리 가맹 재확인 필요",
-    "show_pending": true,
+    "status": "located",
+    "reason": "KB국민카드 온누리 조회와 상권자료의 상호·주소권역·좌표 일치",
+    "show_pending": false,
     "identity_evidence": {
       "candidate_id": "081a17a302be89e37dca8737",
       "name": "양북주유소",
@@ -4036,7 +4037,8 @@
         "도로명주소": "경상북도 경주시 문무대왕면 감은로 23",
         "지번주소": "경상북도 경주시 문무대왕면 어일리 1295-175"
       }
-    }
+    },
+    "supplemental_source_id": "kb:000000009960605"
   },
   {
     "candidate_id": "ff23f383096d8ef00074227d",
@@ -4052,9 +4054,9 @@
     "name": "명륜주유소",
     "market": "북문시장",
     "region": "경북",
-    "status": "needs_review",
-    "reason": "주소 대조: 경상북도 안동시 퇴계로 134 (과거 가맹 명부 2021-09-28, 상권자료 2026-06-30). 현재 온누리 가맹 재확인 필요",
-    "show_pending": true,
+    "status": "located",
+    "reason": "KB국민카드 온누리 조회와 상권자료의 상호·주소권역·좌표 일치",
+    "show_pending": false,
     "identity_evidence": {
       "candidate_id": "04d09d1a8156d44b38db83c0",
       "name": "명륜주유소",
@@ -4092,16 +4094,17 @@
         "도로명주소": "경상북도 안동시 퇴계로 134",
         "지번주소": "경상북도 안동시 명륜동 315"
       }
-    }
+    },
+    "supplemental_source_id": "kb:000000070023590"
   },
   {
     "candidate_id": "04d09d1a8156d44b38db83c0",
     "name": "명륜주유소",
     "market": "북문시장",
     "region": "경북",
-    "status": "needs_review",
-    "reason": "주소 대조: 경상북도 안동시 퇴계로 134 (과거 가맹 명부 2021-09-28, 상권자료 2026-06-30). 현재 온누리 가맹 재확인 필요",
-    "show_pending": true,
+    "status": "located",
+    "reason": "KB국민카드 온누리 조회와 상권자료의 상호·주소권역·좌표 일치",
+    "show_pending": false,
     "identity_evidence": {
       "candidate_id": "04d09d1a8156d44b38db83c0",
       "name": "명륜주유소",
@@ -4139,16 +4142,17 @@
         "도로명주소": "경상북도 안동시 퇴계로 134",
         "지번주소": "경상북도 안동시 명륜동 315"
       }
-    }
+    },
+    "supplemental_source_id": "kb:000000070023590"
   },
   {
     "candidate_id": "9e96e2c352e1ca4224036944",
     "name": "기성주유소",
     "market": "척산시장",
     "region": "경북",
-    "status": "needs_review",
-    "reason": "주소 대조: 경상북도 울진군 기성면 기성로 633 (과거 가맹 명부 2021-09-28, 상권자료 2026-06-30). 현재 온누리 가맹 재확인 필요",
-    "show_pending": true,
+    "status": "located",
+    "reason": "KB국민카드 온누리 조회와 상권자료의 상호·주소권역·좌표 일치",
+    "show_pending": false,
     "identity_evidence": {
       "candidate_id": "9e96e2c352e1ca4224036944",
       "name": "기성주유소",
@@ -4186,7 +4190,8 @@
         "도로명주소": "경상북도 울진군 기성면 기성로 633",
         "지번주소": "경상북도 울진군 기성면 척산리 290-1"
       }
-    }
+    },
+    "supplemental_source_id": "kb:000000045010896"
   },
   {
     "candidate_id": "0bf8e875e8a47f8917b48c5c",
