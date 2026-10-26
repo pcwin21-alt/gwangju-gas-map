@@ -4211,9 +4211,9 @@
     "name": "현대주유소",
     "market": "웃장",
     "region": "전남",
-    "status": "needs_review",
-    "reason": "주소 대조: 전남광주통합특별시 순천시 중앙로 172 (과거 가맹 명부 2021-09-28, 상권자료 2026-06-30). 현재 온누리 가맹 재확인 필요",
-    "show_pending": true,
+    "status": "located",
+    "reason": "KB국민카드 온누리 조회와 상권자료의 상호·주소권역·좌표 일치",
+    "show_pending": false,
     "source_region": "전남광주",
     "region_resolution": {
       "status": "resolved",
@@ -4266,7 +4266,8 @@
         "도로명주소": "전남광주통합특별시 순천시 중앙로 172",
         "지번주소": "전남광주통합특별시 순천시 매곡동 55-1"
       }
-    }
+    },
+    "supplemental_source_id": "kb:000000004645863"
   },
   {
     "candidate_id": "badaf1066867bde046275626",

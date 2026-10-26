@@ -1,0 +1,64 @@
+{
+  "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+  "interpretation": "Same name search with default zero coordinates misses a merchant returned at its actual public address. Zero results are not evidence of absence.",
+  "checks": [
+    {
+      "label": "public_form_initial_zero",
+      "query": {
+        "mainCC": "a",
+        "isNoFrame": "Y",
+        "situXCdnt": 0,
+        "situYCdnt": 0,
+        "useCase": "1",
+        "locationType": "1",
+        "startRow": 0,
+        "endRow": 10,
+        "mmcNm": "현대주유소",
+        "페이지번호": 1
+      },
+      "total": 0,
+      "rows": [],
+      "sha256": "27b227eae383955f414ecb8713a498e75accc6be340d4cb82c55cf792e94305d"
+    },
+    {
+      "label": "actual_premise",
+      "query": {
+        "mainCC": "a",
+        "isNoFrame": "Y",
+        "situXCdnt": 34.9609772960504,
+        "situYCdnt": 127.484715824515,
+        "useCase": "1",
+        "locationType": "1",
+        "startRow": 0,
+        "endRow": 10,
+        "mmcNm": "현대주유소",
+        "페이지번호": 1
+      },
+      "total": 1,
+      "rows": [
+        {
+          "location": {
+            "lat": "34.961063692",
+            "lng": "127.4847504375"
+          },
+          "content": {
+            "tel": "061)752-3327",
+            "title": "현대주유소",
+            "category": "주유소",
+            "address": "전남 순천시 매곡동 ",
+            "distance": "10",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000004645863",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        }
+      ],
+      "sha256": "624937fa9e70af2837c83eda2c5ba8b07ed058290eeccf0f9f36ccc7363b1995"
+    }
+  ]
+}

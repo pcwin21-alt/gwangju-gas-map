@@ -8087,5 +8087,56 @@
       "digital": true
     },
     "region": "광주"
+  },
+  {
+    "id": "onnuri:kb:000000004645863",
+    "name": "현대주유소",
+    "address": "전남광주통합특별시 순천시 중앙로 172",
+    "lat": 34.9609772960504,
+    "lng": 127.484715824515,
+    "payment_types": [
+      "onnuri"
+    ],
+    "source": [
+      "kb_onnuri"
+    ],
+    "aliases": [],
+    "fuel_kind": "liquid",
+    "route_eligible": true,
+    "region": "전남",
+    "onnuri_methods": {
+      "paper": null,
+      "card": true,
+      "qr": null,
+      "digital": true
+    },
+    "verification": {
+      "onnuri": {
+        "status": "confirmed",
+        "checked_at": "2026-10-26T18:32:23+09:00",
+        "source_date": null,
+        "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+        "source_id": "kb:000000004645863",
+        "source_ids": [
+          "kb:000000004645863"
+        ],
+        "provider": "kbcard",
+        "issuer_scope": [
+          "KB국민카드"
+        ],
+        "match_basis": "bank_onnuri_flag_fuel_category_name_locality_coordinates_commercial_address",
+        "candidate_ids": [
+          "1054803b1165f961c8cb5967"
+        ],
+        "note": "KB국민카드 온누리 사용처 조회 기준. 카드사 반영 지연 가능. 지류·QR·다른 카드사는 별도 확인."
+      }
+    },
+    "location_evidence": {
+      "source_type": "commercial_registry",
+      "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+      "source_date": "2026-06-30",
+      "source_id": "MA010120220807846418",
+      "bank_distance_m": 10.1
+    }
   }
 ]

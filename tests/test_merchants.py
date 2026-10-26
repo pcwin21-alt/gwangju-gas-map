@@ -59,7 +59,12 @@ class Merchants(unittest.TestCase):
         for station in data:
             methods=station.get('onnuri_methods')
             if methods:
-                self.assertIn(methods['paper'],(True,False))
+                if station.get('verification',{}).get('onnuri',{}).get('provider')=='kbcard':
+                    self.assertIsNone(methods['paper'])
+                    self.assertIsNone(methods['qr'])
+                    self.assertTrue(methods['card'])
+                else:
+                    self.assertIn(methods['paper'],(True,False))
                 self.assertIn(methods['digital'],(True,False))
     def test_new_official_scheme_applied(self):
         a={'sn':1,'storeNm':'주공주유소','storeAddr':'광주 북문대로 190','lot':35.1852,'lalt':126.8708}

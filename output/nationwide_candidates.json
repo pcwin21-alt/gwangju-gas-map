@@ -423,8 +423,9 @@
       "name": "현대주유소",
       "market": "웃장",
       "region": "전남광주",
-      "status": "needs_review",
-      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조"
+      "status": "located",
+      "reason": "KB국민카드 온누리 조회와 상세주소 교차확인",
+      "supplemental_source_id": "kb:000000004645863"
     },
     {
       "row_number": 48,

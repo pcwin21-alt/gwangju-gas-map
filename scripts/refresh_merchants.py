@@ -12,11 +12,13 @@ try:
     from live_merchants import prepare, address_key
     from market_regions import resolve_pending_regions
     from pending_evidence import annotate_pending
+    from supplemental_onnuri import apply_evidence, reconcile_ledger
 except ModuleNotFoundError:
     from scripts.onnuri_live import collect, SOURCE
     from scripts.live_merchants import prepare, address_key
     from scripts.market_regions import resolve_pending_regions
     from scripts.pending_evidence import annotate_pending
+    from scripts.supplemental_onnuri import apply_evidence, reconcile_ledger
 try:
     from official_onnuri import fetch_snapshot
 except ModuleNotFoundError:
@@ -312,8 +314,17 @@ def main():
             raise ValueError('온누리 검색 결과 급감: 이전 지도 유지')
     except (requests.RequestException, ValueError, KeyError, PermissionError) as error:
         status = load('merchant_status.json', {})
+        previous_stations, previous_review = old, load('merchant_review.json', [])
+        old, retained_review, supplemental = apply_evidence(old, previous_review,
+            load('supplemental_onnuri_evidence.json', {}).get('rows', []), checked)
+        status['supplemental_onnuri'] = supplemental
+        if old != previous_stations:
+            save('gas_stations.json', old)
+        if retained_review != previous_review:
+            save('merchant_review.json', retained_review)
         status['onnuri'] = {**status.get('onnuri', {}), **refresh_context(),
                             'refresh_error': type(error).__name__, 'refresh_stage': stage, 'attempted_at': checked}
+        status['onnuri']['pending_count'] = len({r['candidate_id'] for r in retained_review if r.get('show_pending') and r.get('candidate_id')})
         save('merchant_status.json', status)
         sync_map(old, status)
         raise
@@ -321,11 +332,15 @@ def main():
     review.extend(official_review)
     review = resolve_pending_regions(review, load('market_region_evidence.json', {}).get('rows', []))
     review = annotate_pending(review, load('pending_identity_evidence.json', {}).get('rows', []))
+    stations, review, supplemental = apply_evidence(stations, review,
+        load('supplemental_onnuri_evidence.json', {}).get('rows', []), checked)
+    status['supplemental_onnuri'] = supplemental
+    ledger = reconcile_ledger(ledger, stations)
     status['onnuri'] = {'status': 'confirmed', 'source_date': places['checked_at'][:10],
         'checked_at': places['checked_at'], 'attempted_at': checked, 'source_url': SOURCE,
         'scope': places['scope'], 'query_count': len(places['queries']),
         'candidate_rows': len(snapshot['rows']), 'raw_search_rows': len(places['rows']),
-        'matched_count': sum(s.get('verification', {}).get('onnuri', {}).get('status') == 'confirmed' for s in stations),
+        'matched_count': sum(s.get('verification', {}).get('onnuri', {}).get('status') == 'confirmed' and s.get('source') != ['kb_onnuri'] for s in stations),
         'unmatched_count': sum(s.get('verification', {}).get('onnuri', {}).get('status') == 'stale' for s in stations),
         'pending_count': len({r['candidate_id'] for r in review if r.get('show_pending') and r.get('candidate_id')}),
         **refresh_context(), 'refresh_error': None,

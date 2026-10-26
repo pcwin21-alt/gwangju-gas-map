@@ -31,3 +31,5 @@ output/alternatives/*.csv
 output/alternatives/*.xlsx
 output/alternatives/vehicle_fuel_index_*.json
 output/alternatives/*initial_false_matches*.json
+output/alternatives/*.html
+output/alternatives/kb_location_cache/

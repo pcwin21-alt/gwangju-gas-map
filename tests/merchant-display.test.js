@@ -2,6 +2,16 @@ const test=require('node:test');
 const assert=require('node:assert/strict');
 const display=require('../assets/merchant-display.js');
 const core=require('../assets/route-core.js');
+
+test('bank corroboration is labelled by issuer and unknown methods stay unknown',()=>{
+ const s={payment_types:['onnuri'],onnuri_methods:{card:true,digital:true,paper:null,qr:null},
+ verification:{onnuri:{provider:'kbcard',status:'confirmed',checked_at:'2026-10-26T18:32:23+09:00'}},
+ location_evidence:{source_type:'commercial_registry',source_date:'2026-06-30'}};
+ assert.match(display.onnuriNote(s),/KB국민카드 조회/);
+ assert.match(display.onnuriNote(s),/지류·QR 별도 확인/);
+ assert.doesNotMatch(display.onnuriNote(s),/공식 검색 확인/);
+ assert.match(display.verificationText(s),/상권자료 2026-06-30/);
+});
 test('annual data date is separate from retrieval and stale status',()=>{
  const s={payment_types:['onnuri'],verification:{onnuri:{status:'published_snapshot',source_date:'2026-07-31',checked_at:'2026-10-10'}}};
  assert.equal(display.onnuriNote(s),'공식 자료 2026-07-31');

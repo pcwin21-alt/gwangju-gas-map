@@ -6,6 +6,14 @@
 ## 최상위 구조
 JSON Array — 각 원소가 주유소 1개.
 
+## 카드사 교차확인 보완 자료
+
+`source: ["kb_onnuri"]`, `verification.onnuri.provider: "kbcard"`는 온누리 운영사 검색과 별개의 KB국민카드 공개 사용처 조회 근거다. ID는 `onnuri:kb:<카드사 가맹점 ID>`로 분리한다. 카드사의 온누리 표시·차량 연료 업종·상호·주소권역·좌표와 공식 상권자료의 상세주소를 함께 확인한 경우에만 추가한다. 현재 운영사 확정 기록이 같은 장소에 있으면 그것을 유지한다.
+
+`onnuri_methods.card/digital`은 true, `paper/qr`은 미확인을 뜻하는 null이다. 지류·QR·다른 카드사의 사용 가능 여부를 추정하지 않는다. `issuer_scope: ["KB국민카드"]` 및 조회일을 화면에 구분한다. 카드사 데이터의 원천 기준일은 알 수 없어 `source_date`는 null이며, `checked_at`만 기록한다. 30일 경과하면 stale로 표시하고 경유 추천에서 제외한다.
+
+`output/supplemental_onnuri_evidence.json`이 검토된 근거 정본이다. 재갱신·실패 시 기존 온누리 검색 스냅샷을 덮어쓰지 않고 별도로 합친다. 발견용 전체 조회 결과를 자동 승격하지 않는다.
+
 ## 필드 정의
 
 | 필드 | 타입 | 필수 | 설명 |

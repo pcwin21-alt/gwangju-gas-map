@@ -1,10 +1,20 @@
 (() => {
   'use strict';
+  const bankSummary=()=>MERCHANT_STATUS.supplemental_onnuri?.confirmed_count?
+    ` · KB국민카드 조회 추가 ${MERCHANT_STATUS.supplemental_onnuri.confirmed_count}곳 (${MERCHANT_STATUS.supplemental_onnuri.checked_at.slice(0,10)})`:'';
   if (!window.kakao?.maps) {
     // Public merchant lookup remains usable when a map domain is unavailable.
     const state=GasNationalState, regionInput=document.getElementById('regionSelect');
     GasNational.regions.forEach(name=>regionInput.add(new Option(name,name)));
     let payment='all';
+    const url=new URL(location.href);
+    if(GasNational.regions.includes(url.searchParams.get('region')))regionInput.value=url.searchParams.get('region');
+    if(['onnuri','saengsaeng'].includes(url.searchParams.get('payment')))payment=url.searchParams.get('payment');
+    if(['paper','digital'].includes(url.searchParams.get('method')))document.getElementById('onnuriMethod').value=url.searchParams.get('method');
+    if(['liquid','lpg'].includes(url.searchParams.get('fuel')))document.getElementById('fuelSelect').value=url.searchParams.get('fuel');
+    document.querySelectorAll('.filter-btn').forEach(b=>{
+      b.classList.toggle('active',b.dataset.filter===payment);b.setAttribute('aria-pressed',String(b.dataset.filter===payment));
+    });
     const panel=document.getElementById('nationalResults');panel.open=true;
     document.getElementById('map').textContent='지도를 불러오지 못했습니다. 주유소 목록에서 주소와 길찾기를 확인하세요.';
     for(const id of ['myLocBtn','rankBtn','fitResultsBtn','districtSelect'])document.getElementById(id).disabled=true;
@@ -18,10 +28,11 @@
         const a=document.createElement('a');a.className='station-list-row';a.target='_blank';a.rel='noopener';
         a.href='https://map.kakao.com/link/search/'+encodeURIComponent(s.name+' '+s.address);
         a.textContent=s.name+' · '+s.address+' · 길찾기';list.append(a);
+        if(s.verification?.onnuri?.provider==='kbcard')a.textContent+=' · '+GasMerchantDisplay.onnuriNote(s);
       });
       document.getElementById('countBadge').textContent=rows.length+'곳';
       document.getElementById('listCount').textContent=rows.length+'곳';
-      document.getElementById('nationalSummary').textContent='온누리 공식 검색 '+MERCHANT_STATUS.onnuri.source_date+' · 지도 대신 목록 제공'+(MERCHANT_STATUS.onnuri.refresh_error?' · 최근 조회 실패, 이전 자료 유지':'');
+      document.getElementById('nationalSummary').textContent='온누리 공식 검색 '+MERCHANT_STATUS.onnuri.source_date+' · 지도 대신 목록 제공'+(MERCHANT_STATUS.onnuri.refresh_error?' · 최근 조회 실패, 이전 자료 유지':'')+bankSummary();
       document.getElementById('moreStations').hidden=true;
       document.getElementById('pendingSummary').parentElement.hidden=true;
     }
@@ -65,7 +76,7 @@
     const visible=allMarkers.filter(m=>m.visible);
     const waiting=(typeof NATIONAL_PENDING==='undefined'?[]:NATIONAL_PENDING).filter(r=>
       state.region==='all'||r.region===state.region||(['광주','전남'].includes(state.region)&&r.region==='전남광주'));
-    summary.textContent=`지도 표시 ${visible.length}곳 · 온누리 공식 검색 ${MERCHANT_STATUS.onnuri?.source_date||'미확인'}${MERCHANT_STATUS.onnuri?.refresh_error?' · 최근 조회 실패, 이전 자료 유지':''}`;
+    summary.textContent=`지도 표시 ${visible.length}곳 · 온누리 공식 검색 ${MERCHANT_STATUS.onnuri?.source_date||'미확인'}${MERCHANT_STATUS.onnuri?.refresh_error?' · 최근 조회 실패, 이전 자료 유지':''}`+bankSummary();
     const title=document.getElementById('pendingSummary');
     title.textContent=`추가 확인 대기 ${waiting.length}건`;
     pending.replaceChildren();
@@ -82,6 +93,7 @@
       const types=document.createElement('span');
       types.textContent=item.station.payment_types.includes('onnuri')?
         '온누리 '+[item.station.onnuri_methods?.paper===true&&'지류',item.station.onnuri_methods?.digital===true&&'디지털'].filter(Boolean).join('·'):'광주상생카드';
+      if(item.station.verification?.onnuri?.provider==='kbcard') types.textContent+=' · KB국민카드 조회 기준';
       button.append(name,address,types);
       button.addEventListener('click',()=>{
         if(activeOverlay)activeOverlay.setMap(null);

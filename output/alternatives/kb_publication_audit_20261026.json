@@ -1,0 +1,17 @@
+{
+  "added": [
+    {
+      "name": "현대주유소",
+      "address": "전남광주통합특별시 순천시 중앙로 172",
+      "id": "onnuri:kb:000000004645863"
+    }
+  ],
+  "unchanged_existing_records": 206,
+  "old_visible": 203,
+  "new_visible": 204,
+  "jeonnam_visible": 23,
+  "pending_count": 16,
+  "main_source_checked_at_preserved": true,
+  "prices_unchanged": true,
+  "main_snapshot_unchanged": true
+}

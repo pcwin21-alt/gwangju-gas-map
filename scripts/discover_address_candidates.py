@@ -9,8 +9,12 @@ import json
 import re
 from collections import defaultdict
 from pathlib import Path
-from nationwide import name_key, region, row_id
-from refresh_regions import ORDER
+try:
+    from nationwide import name_key, region, row_id
+    from refresh_regions import ORDER
+except ModuleNotFoundError:
+    from scripts.nationwide import name_key, region, row_id
+    from scripts.refresh_regions import ORDER
 
 OUT = Path(__file__).resolve().parents[1] / 'output'
 

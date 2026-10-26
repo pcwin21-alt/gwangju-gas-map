@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "rows": [
+    {
+      "identity_review": "same_premise_confirmed",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "checked_at": "2026-10-26T18:32:23+09:00",
+      "bank_record": {
+        "location": {
+          "lat": "34.961063692",
+          "lng": "127.4847504375"
+        },
+        "content": {
+          "tel": "061)752-3327",
+          "title": "현대주유소",
+          "category": "주유소",
+          "address": "전남 순천시 매곡동 ",
+          "distance": "10",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000004645863",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-26T18:32:23+09:00",
+        "query_id": "79898a9834079f71"
+      },
+      "commercial_record": {
+        "상가업소번호": "MA010120220807846418",
+        "상호명": "현대주유소",
+        "지점명": "",
+        "상권업종소분류코드": "G21401",
+        "상권업종소분류명": "주유소",
+        "표준산업분류코드": "G47711",
+        "표준산업분류명": "운송장비용 주유소 운영업",
+        "시군구명": "순천시",
+        "도로명주소": "전남광주통합특별시 순천시 중앙로 172",
+        "지번주소": "전남광주통합특별시 순천시 매곡동 55-1",
+        "위도": "34.9609772960504",
+        "경도": "127.484715824515",
+        "region": "전남"
+      },
+      "commercial_source": {
+        "archive_sha256": "57aa361544108ff4fc73334f87d2ced61e41fe8638dd70bcd842930f865d2386",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+        "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
+      },
+      "annual_candidate_ids": [
+        "1054803b1165f961c8cb5967"
+      ],
+      "identity_support": "2021 official paper list and 2026 commercial file agree on 순천시 중앙로 172. KB name, fuel category, locality, phone and coordinate agree."
+    }
+  ]
+}
