@@ -1620,8 +1620,8 @@
       "name": "금호석유",
       "market": "송정매일시장",
       "region": "전남광주",
-      "status": "needs_review",
-      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조"
+      "status": "excluded_non_vehicle_fuel",
+      "reason": "송정동 820-5 지번 정확 일치. 2026 공식 상권정보 가정용 액체 연료 소매업이므로 차량 주유 후보에서 제외. 온누리 가맹 자체를 부정하지 않음."
     },
     {
       "row_number": 181,

@@ -1,0 +1,26 @@
+{
+  "checked_at": "2026-10-26T12:34:41+09:00",
+  "purpose": "single user-requested availability recheck",
+  "requests": 1,
+  "endpoint": "https://www.onnuri.gift/api/v3/onrgt/place/search",
+  "request": {
+    "keyword": "",
+    "addrNm": "",
+    "addrCd": "",
+    "placeTypeList": [],
+    "paperYn": "",
+    "cardYn": "",
+    "qrYn": "",
+    "latitude": "34.4899676",
+    "longitude": "127.2418704",
+    "baseRange": 2,
+    "currPage": 1
+  },
+  "collection_resumed": false,
+  "http_status": 200,
+  "retry_after": null,
+  "status": "response_received",
+  "response_code": "0000",
+  "total_count": 0,
+  "total_pages": 0
+}

@@ -11,10 +11,12 @@ try:
     from onnuri_live import collect, SOURCE
     from live_merchants import prepare, address_key
     from market_regions import resolve_pending_regions
+    from pending_evidence import annotate_pending
 except ModuleNotFoundError:
     from scripts.onnuri_live import collect, SOURCE
     from scripts.live_merchants import prepare, address_key
     from scripts.market_regions import resolve_pending_regions
+    from scripts.pending_evidence import annotate_pending
 try:
     from official_onnuri import fetch_snapshot
 except ModuleNotFoundError:
@@ -318,13 +320,14 @@ def main():
     stations, review = merge(live, historical, old, checked)
     review.extend(official_review)
     review = resolve_pending_regions(review, load('market_region_evidence.json', {}).get('rows', []))
+    review = annotate_pending(review, load('pending_identity_evidence.json', {}).get('rows', []))
     status['onnuri'] = {'status': 'confirmed', 'source_date': places['checked_at'][:10],
         'checked_at': places['checked_at'], 'attempted_at': checked, 'source_url': SOURCE,
         'scope': places['scope'], 'query_count': len(places['queries']),
         'candidate_rows': len(snapshot['rows']), 'raw_search_rows': len(places['rows']),
         'matched_count': sum(s.get('verification', {}).get('onnuri', {}).get('status') == 'confirmed' for s in stations),
         'unmatched_count': sum(s.get('verification', {}).get('onnuri', {}).get('status') == 'stale' for s in stations),
-        'pending_count': sum(r.get('show_pending', False) for r in official_review),
+        'pending_count': len({r['candidate_id'] for r in review if r.get('show_pending') and r.get('candidate_id')}),
         **refresh_context(), 'refresh_error': None,
         'reason': '공식 검색 결과 확인. 검색어·품목·등록자료 기반이며 전국 모든 가맹 주유소의 완전성은 보장하지 않음'}
     if places.get('regions'):

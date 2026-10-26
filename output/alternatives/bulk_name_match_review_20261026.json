@@ -1,0 +1,604 @@
+{
+  "checked_at": "2026-10-26T16:15:47+09:00",
+  "reviewed_rows": 35,
+  "new_confirmed_stations": 0,
+  "scope": "Review of 35 additional name matches only; no membership revocation conclusions",
+  "rows": [
+    {
+      "candidate_id": "b7bc7ce3957efa25dcc2b305",
+      "annual_row": {
+        "가맹점명": "오케이",
+        "소속 시장명(또는 상점가)": "첨단이웃사랑 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": "수산물",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2025"
+      },
+      "decision": "do_not_promote",
+      "reason": "Annual source lists non-fuel products; name agreement does not justify a vehicle-fuel identity link.",
+      "sources": [
+        "https://www.data.go.kr/data/3060079/fileData.do"
+      ]
+    },
+    {
+      "candidate_id": "e061fa9f9442e97f096c9f93",
+      "annual_row": {
+        "가맹점명": "세븐",
+        "소속 시장명(또는 상점가)": "광주송정역세권 상권활성화구역",
+        "소재지": "전남광주",
+        "취급품목": "신발",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2022"
+      },
+      "decision": "do_not_promote",
+      "reason": "Annual source lists non-fuel products; name agreement does not justify a vehicle-fuel identity link.",
+      "sources": [
+        "https://www.data.go.kr/data/3060079/fileData.do"
+      ]
+    },
+    {
+      "candidate_id": "4aa645e064d146a5398a8518",
+      "annual_row": {
+        "가맹점명": "성산",
+        "소속 시장명(또는 상점가)": "동구청앞 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": "문서작성및 복사업",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2025"
+      },
+      "decision": "do_not_promote",
+      "reason": "Annual source lists non-fuel products; name agreement does not justify a vehicle-fuel identity link.",
+      "sources": [
+        "https://www.data.go.kr/data/3060079/fileData.do"
+      ]
+    },
+    {
+      "candidate_id": "84933c3564f2347528fdf67e",
+      "annual_row": {
+        "가맹점명": "나이스",
+        "소속 시장명(또는 상점가)": "쌍촌역상인회 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": "숙박",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2026"
+      },
+      "decision": "do_not_promote",
+      "reason": "Annual source lists non-fuel products; name agreement does not justify a vehicle-fuel identity link.",
+      "sources": [
+        "https://www.data.go.kr/data/3060079/fileData.do"
+      ]
+    },
+    {
+      "candidate_id": "18e4b27ae0513ecf68bef672",
+      "annual_row": {
+        "가맹점명": "해인",
+        "소속 시장명(또는 상점가)": "용봉지구 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": "한식",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2025"
+      },
+      "decision": "do_not_promote",
+      "reason": "Annual source lists non-fuel products; name agreement does not justify a vehicle-fuel identity link.",
+      "sources": [
+        "https://www.data.go.kr/data/3060079/fileData.do"
+      ]
+    },
+    {
+      "candidate_id": "0914260069cc332e96d22da3",
+      "annual_row": {
+        "가맹점명": "동행",
+        "소속 시장명(또는 상점가)": "서문대로663번길 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": "한식",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2025"
+      },
+      "decision": "do_not_promote",
+      "reason": "Annual source lists non-fuel products; name agreement does not justify a vehicle-fuel identity link.",
+      "sources": [
+        "https://www.data.go.kr/data/3060079/fileData.do"
+      ]
+    },
+    {
+      "candidate_id": "c00ec94d40bc1a650e17654c",
+      "annual_row": {
+        "가맹점명": "해뜰날",
+        "소속 시장명(또는 상점가)": "전주중앙상가시장",
+        "소재지": "전북",
+        "취급품목": "의류",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2017"
+      },
+      "decision": "do_not_promote",
+      "reason": "Annual source lists non-fuel products; name agreement does not justify a vehicle-fuel identity link.",
+      "sources": [
+        "https://www.data.go.kr/data/3060079/fileData.do"
+      ]
+    },
+    {
+      "candidate_id": "aac4e40cc9e716621cae9675",
+      "annual_row": {
+        "가맹점명": "으뜸",
+        "소속 시장명(또는 상점가)": "작은모래내 골목형상점가",
+        "소재지": "전북",
+        "취급품목": "",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2026"
+      },
+      "decision": "do_not_promote",
+      "reason": "Jeonju designated market versus commercial candidate in Buan; reject this name-only identity link.",
+      "sources": [
+        "https://www.data.go.kr/data/3060079/fileData.do",
+        "https://www.jeonju.go.kr/deokjingu/planweb/board/view.9is?boardUid=9be517a7914528ce01930aa3ddc26cf0&contentUid=ff8080818990c349018b041a879f395a&dataUid=5d083c3883fe436396ab8ed3512e63ee&page=128&subPath=%2Fdeokjingu&tmpField14="
+      ]
+    },
+    {
+      "candidate_id": "044e4961b3d4ed882086d6ca",
+      "annual_row": {
+        "가맹점명": "우리",
+        "소속 시장명(또는 상점가)": "하동 화개장터",
+        "소재지": "경남",
+        "취급품목": "음료",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2020"
+      },
+      "decision": "do_not_promote",
+      "reason": "Annual source lists non-fuel products; name agreement does not justify a vehicle-fuel identity link.",
+      "sources": [
+        "https://www.data.go.kr/data/3060079/fileData.do"
+      ]
+    },
+    {
+      "candidate_id": "c5c8b95e1c39a52cb329aa51",
+      "annual_row": {
+        "가맹점명": "유성",
+        "소속 시장명(또는 상점가)": "부산진시장",
+        "소재지": "부산",
+        "취급품목": "의류",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2021"
+      },
+      "decision": "do_not_promote",
+      "reason": "Annual source lists non-fuel products; name agreement does not justify a vehicle-fuel identity link.",
+      "sources": [
+        "https://www.data.go.kr/data/3060079/fileData.do"
+      ]
+    },
+    {
+      "candidate_id": "0078094d52377216778ec3ed",
+      "annual_row": {
+        "가맹점명": "명수",
+        "소속 시장명(또는 상점가)": "괴정골목시장",
+        "소재지": "부산",
+        "취급품목": "수삼",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2025"
+      },
+      "decision": "do_not_promote",
+      "reason": "Annual source lists non-fuel products; name agreement does not justify a vehicle-fuel identity link.",
+      "sources": [
+        "https://www.data.go.kr/data/3060079/fileData.do"
+      ]
+    },
+    {
+      "candidate_id": "51d30af5df2827747988dc6a",
+      "annual_row": {
+        "가맹점명": "청해",
+        "소속 시장명(또는 상점가)": "신평리시장",
+        "소재지": "대구",
+        "취급품목": "건어물",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2022"
+      },
+      "decision": "do_not_promote",
+      "reason": "Annual source lists non-fuel products; name agreement does not justify a vehicle-fuel identity link.",
+      "sources": [
+        "https://www.data.go.kr/data/3060079/fileData.do"
+      ]
+    },
+    {
+      "candidate_id": "efa4fada40069eaed30626e5",
+      "annual_row": {
+        "가맹점명": "해오름",
+        "소속 시장명(또는 상점가)": "동울산만세대 골목형상점가",
+        "소재지": "울산",
+        "취급품목": "반찬",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2025"
+      },
+      "decision": "do_not_promote",
+      "reason": "Annual source lists non-fuel products; name agreement does not justify a vehicle-fuel identity link.",
+      "sources": [
+        "https://www.data.go.kr/data/3060079/fileData.do"
+      ]
+    },
+    {
+      "candidate_id": "aec0776ee1dee82929aa11b2",
+      "annual_row": {
+        "가맹점명": "해오름",
+        "소속 시장명(또는 상점가)": "수암종합시장",
+        "소재지": "울산",
+        "취급품목": "한식",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2023"
+      },
+      "decision": "do_not_promote",
+      "reason": "Annual source lists non-fuel products; name agreement does not justify a vehicle-fuel identity link.",
+      "sources": [
+        "https://www.data.go.kr/data/3060079/fileData.do"
+      ]
+    },
+    {
+      "candidate_id": "83710e827d4764a7a8ffad90",
+      "annual_row": {
+        "가맹점명": "엄마네",
+        "소속 시장명(또는 상점가)": "부여도심 상권활성화구역",
+        "소재지": "충남",
+        "취급품목": "한식",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2025"
+      },
+      "decision": "do_not_promote",
+      "reason": "Annual source lists non-fuel products; name agreement does not justify a vehicle-fuel identity link.",
+      "sources": [
+        "https://www.data.go.kr/data/3060079/fileData.do"
+      ]
+    },
+    {
+      "candidate_id": "6527d77f46ac8b9235a4ac03",
+      "annual_row": {
+        "가맹점명": "수정",
+        "소속 시장명(또는 상점가)": "묵호항자연산수산물판매시장",
+        "소재지": "강원",
+        "취급품목": "수산물",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2022"
+      },
+      "decision": "do_not_promote",
+      "reason": "Annual source lists non-fuel products; name agreement does not justify a vehicle-fuel identity link.",
+      "sources": [
+        "https://www.data.go.kr/data/3060079/fileData.do"
+      ]
+    },
+    {
+      "candidate_id": "4d5e24caf134c21440ab6f1b",
+      "annual_row": {
+        "가맹점명": "대원",
+        "소속 시장명(또는 상점가)": "동송시장",
+        "소재지": "강원",
+        "취급품목": "한식",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2017"
+      },
+      "decision": "do_not_promote",
+      "reason": "Annual source lists non-fuel products; name agreement does not justify a vehicle-fuel identity link.",
+      "sources": [
+        "https://www.data.go.kr/data/3060079/fileData.do"
+      ]
+    },
+    {
+      "candidate_id": "4eecbdc7a200ced80ae8e008",
+      "annual_row": {
+        "가맹점명": "대원",
+        "소속 시장명(또는 상점가)": "원주중앙로문화의거리",
+        "소재지": "강원",
+        "취급품목": "생필품",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2022"
+      },
+      "decision": "do_not_promote",
+      "reason": "Annual source lists non-fuel products; name agreement does not justify a vehicle-fuel identity link.",
+      "sources": [
+        "https://www.data.go.kr/data/3060079/fileData.do"
+      ]
+    },
+    {
+      "candidate_id": "55f77ab1e8bf54399688b153",
+      "annual_row": {
+        "가맹점명": "플러스",
+        "소속 시장명(또는 상점가)": "덕정골목형상점가",
+        "소재지": "경기",
+        "취급품목": "의류",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2026"
+      },
+      "decision": "do_not_promote",
+      "reason": "Annual source lists non-fuel products; name agreement does not justify a vehicle-fuel identity link.",
+      "sources": [
+        "https://www.data.go.kr/data/3060079/fileData.do"
+      ]
+    },
+    {
+      "candidate_id": "1a7dbd3010207f9d2bd100bc",
+      "annual_row": {
+        "가맹점명": "태광상사",
+        "소속 시장명(또는 상점가)": "오정시장",
+        "소재지": "경기",
+        "취급품목": "속옷",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2017"
+      },
+      "decision": "do_not_promote",
+      "reason": "Annual source lists non-fuel products; name agreement does not justify a vehicle-fuel identity link.",
+      "sources": [
+        "https://www.data.go.kr/data/3060079/fileData.do"
+      ]
+    },
+    {
+      "candidate_id": "eea2b0a43cc08794b524e8ba",
+      "annual_row": {
+        "가맹점명": "이든",
+        "소속 시장명(또는 상점가)": "이동 골목형상점가",
+        "소재지": "경기",
+        "취급품목": "커피",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2025"
+      },
+      "decision": "do_not_promote",
+      "reason": "Annual source lists non-fuel products; name agreement does not justify a vehicle-fuel identity link.",
+      "sources": [
+        "https://www.data.go.kr/data/3060079/fileData.do"
+      ]
+    },
+    {
+      "candidate_id": "50f4763abe63576692b6dee1",
+      "annual_row": {
+        "가맹점명": "대흥",
+        "소속 시장명(또는 상점가)": "전곡중앙상가 골목형상점가",
+        "소재지": "경기",
+        "취급품목": "소고기돼지고기",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2025"
+      },
+      "decision": "do_not_promote",
+      "reason": "Annual source lists non-fuel products; name agreement does not justify a vehicle-fuel identity link.",
+      "sources": [
+        "https://www.data.go.kr/data/3060079/fileData.do"
+      ]
+    },
+    {
+      "candidate_id": "5729894a53b28e5e0153f660",
+      "annual_row": {
+        "가맹점명": "대성상사",
+        "소속 시장명(또는 상점가)": "시화공구상가",
+        "소재지": "경기",
+        "취급품목": "기계부품",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2024"
+      },
+      "decision": "do_not_promote",
+      "reason": "Annual source lists non-fuel products; name agreement does not justify a vehicle-fuel identity link.",
+      "sources": [
+        "https://www.data.go.kr/data/3060079/fileData.do"
+      ]
+    },
+    {
+      "candidate_id": "b90ab52f1ea7ab1783796db0",
+      "annual_row": {
+        "가맹점명": "대성상사",
+        "소속 시장명(또는 상점가)": "부천강남시장",
+        "소재지": "경기",
+        "취급품목": "속옷",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2011"
+      },
+      "decision": "do_not_promote",
+      "reason": "Annual source lists non-fuel products; name agreement does not justify a vehicle-fuel identity link.",
+      "sources": [
+        "https://www.data.go.kr/data/3060079/fileData.do"
+      ]
+    },
+    {
+      "candidate_id": "f3479702628c1291ca7f817c",
+      "annual_row": {
+        "가맹점명": "대명",
+        "소속 시장명(또는 상점가)": "궁평항해오름수산시장",
+        "소재지": "경기",
+        "취급품목": "도매및소매업(수산물)",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2021"
+      },
+      "decision": "do_not_promote",
+      "reason": "Annual source lists non-fuel products; name agreement does not justify a vehicle-fuel identity link.",
+      "sources": [
+        "https://www.data.go.kr/data/3060079/fileData.do"
+      ]
+    },
+    {
+      "candidate_id": "508a6eb04c7710864b70644e",
+      "annual_row": {
+        "가맹점명": "대명",
+        "소속 시장명(또는 상점가)": "안산다농마트전통시장",
+        "소재지": "경기",
+        "취급품목": "주방용품, 홈데코",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2022"
+      },
+      "decision": "do_not_promote",
+      "reason": "Annual source lists non-fuel products; name agreement does not justify a vehicle-fuel identity link.",
+      "sources": [
+        "https://www.data.go.kr/data/3060079/fileData.do"
+      ]
+    },
+    {
+      "candidate_id": "b4181058bb01d11c6271a06a",
+      "annual_row": {
+        "가맹점명": "금강산",
+        "소속 시장명(또는 상점가)": "오이도전통수산시장",
+        "소재지": "경기",
+        "취급품목": "소매(패류)",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2019"
+      },
+      "decision": "do_not_promote",
+      "reason": "Annual source lists non-fuel products; name agreement does not justify a vehicle-fuel identity link.",
+      "sources": [
+        "https://www.data.go.kr/data/3060079/fileData.do"
+      ]
+    },
+    {
+      "candidate_id": "02ee2b1b943fc853096f0139",
+      "annual_row": {
+        "가맹점명": "(주)한성",
+        "소속 시장명(또는 상점가)": "신안프라자전통시장",
+        "소재지": "경기",
+        "취급품목": "슈퍼마켓",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2024"
+      },
+      "decision": "do_not_promote",
+      "reason": "Annual source lists non-fuel products; name agreement does not justify a vehicle-fuel identity link.",
+      "sources": [
+        "https://www.data.go.kr/data/3060079/fileData.do"
+      ]
+    },
+    {
+      "candidate_id": "e53356beb7e902b788c28fb2",
+      "annual_row": {
+        "가맹점명": "현대상사",
+        "소속 시장명(또는 상점가)": "방학동도깨비시장",
+        "소재지": "서울",
+        "취급품목": "여성,남성의류",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2011"
+      },
+      "decision": "do_not_promote",
+      "reason": "Annual source lists non-fuel products; name agreement does not justify a vehicle-fuel identity link.",
+      "sources": [
+        "https://www.data.go.kr/data/3060079/fileData.do"
+      ]
+    },
+    {
+      "candidate_id": "9a5116074807a0d90224afc6",
+      "annual_row": {
+        "가맹점명": "현대상사",
+        "소속 시장명(또는 상점가)": "평화시장",
+        "소재지": "서울",
+        "취급품목": "속옷",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2019"
+      },
+      "decision": "do_not_promote",
+      "reason": "Annual source lists non-fuel products; name agreement does not justify a vehicle-fuel identity link.",
+      "sources": [
+        "https://www.data.go.kr/data/3060079/fileData.do"
+      ]
+    },
+    {
+      "candidate_id": "c4241d69227694a2c68d540a",
+      "annual_row": {
+        "가맹점명": "현대상사",
+        "소속 시장명(또는 상점가)": "방산종합시장",
+        "소재지": "서울",
+        "취급품목": "도소매(장갑,잡화)",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2015"
+      },
+      "decision": "do_not_promote",
+      "reason": "Annual source lists non-fuel products; name agreement does not justify a vehicle-fuel identity link.",
+      "sources": [
+        "https://www.data.go.kr/data/3060079/fileData.do"
+      ]
+    },
+    {
+      "candidate_id": "89caf3c560b7c008a16a2aad",
+      "annual_row": {
+        "가맹점명": "한양",
+        "소속 시장명(또는 상점가)": "숭례문수입상가",
+        "소재지": "서울",
+        "취급품목": "도소매(문구,일용잡화)",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2016"
+      },
+      "decision": "do_not_promote",
+      "reason": "Annual source lists non-fuel products; name agreement does not justify a vehicle-fuel identity link.",
+      "sources": [
+        "https://www.data.go.kr/data/3060079/fileData.do"
+      ]
+    },
+    {
+      "candidate_id": "4c7dda997c7a37ec69063e4d",
+      "annual_row": {
+        "가맹점명": "한양",
+        "소속 시장명(또는 상점가)": "영등포전통시장",
+        "소재지": "서울",
+        "취급품목": "정육점",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2020"
+      },
+      "decision": "do_not_promote",
+      "reason": "Annual source lists non-fuel products; name agreement does not justify a vehicle-fuel identity link.",
+      "sources": [
+        "https://www.data.go.kr/data/3060079/fileData.do"
+      ]
+    },
+    {
+      "candidate_id": "0aa025b30832f704584774e1",
+      "annual_row": {
+        "가맹점명": "한양",
+        "소속 시장명(또는 상점가)": "평화시장",
+        "소재지": "서울",
+        "취급품목": "도소매(외의)",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2018"
+      },
+      "decision": "do_not_promote",
+      "reason": "Annual source lists non-fuel products; name agreement does not justify a vehicle-fuel identity link.",
+      "sources": [
+        "https://www.data.go.kr/data/3060079/fileData.do"
+      ]
+    },
+    {
+      "candidate_id": "812429eab4039373e302ad85",
+      "annual_row": {
+        "가맹점명": "선우상사",
+        "소속 시장명(또는 상점가)": "세운상가 가동",
+        "소재지": "서울",
+        "취급품목": "전기기기",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2020"
+      },
+      "decision": "do_not_promote",
+      "reason": "Annual source lists non-fuel products; name agreement does not justify a vehicle-fuel identity link.",
+      "sources": [
+        "https://www.data.go.kr/data/3060079/fileData.do"
+      ]
+    }
+  ]
+}

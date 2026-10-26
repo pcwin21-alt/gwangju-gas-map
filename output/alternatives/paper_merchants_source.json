@@ -1,0 +1,13 @@
+{
+  "source_url": "https://www.data.go.kr/data/15091227/fileData.do",
+  "download_url": "https://www.data.go.kr/cmm/cmm/fileDownload.do?atchFileId=FILE_000000002449406&fileDetailSn=1&insertDataPrcus=N",
+  "source_date": "2021-09-28",
+  "sha256": "8dd6f7431b467dad014f96440f79b452729341dbe5cd5ef6d4616ad5a645812c",
+  "total_rows": 155519,
+  "fields": [
+    "시장명",
+    "점포명",
+    "취급품목",
+    "주소"
+  ]
+}

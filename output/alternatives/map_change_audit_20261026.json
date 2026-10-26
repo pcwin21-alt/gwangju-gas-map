@@ -1,0 +1,9 @@
+{
+  "station_data_sha256_unchanged": "70d46400042085619c847c21e84daf277dab56d3fa51f2e74a0108af060aa0c2",
+  "new_confirmed_stations": 0,
+  "pending_before": 18,
+  "pending_after": 17,
+  "pending_identity_annotations": 5,
+  "official_search_checked_at_unchanged": "2026-10-25T10:51:11+09:00",
+  "map_marker_count": 206
+}

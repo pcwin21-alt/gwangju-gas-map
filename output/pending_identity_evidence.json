@@ -1,0 +1,196 @@
+{
+  "scope": "No payment confirmation, no coordinates or navigation promotion",
+  "rows": [
+    {
+      "candidate_id": "c426c12d7c844ac0a2d91bd1",
+      "name": "춘양주유소",
+      "market": "억지춘향시장(구 봉화춘향시장)",
+      "region": "경북",
+      "scope": "historical_physical_identity_only",
+      "address": "경상북도 봉화군 춘양면 의양로 81",
+      "historical_source_date": "2021-09-28",
+      "commercial_source_date": "2026-06-30",
+      "annual_source_date": "2026-07-31",
+      "sources": [
+        "https://www.data.go.kr/data/15091227/fileData.do",
+        "https://www.data.go.kr/data/15083033/fileData.do",
+        "https://www.data.go.kr/data/3060079/fileData.do"
+      ],
+      "basis": "봉화군 춘양면 의양리 427-5 정확히 일치. 시장명 별칭은 주소 대조와 구 봉화춘향시장 표기를 함께 검토.",
+      "historical_matches": [
+        {
+          "시장명": "봉화춘향시장(춘양시장)",
+          "점포명": "춘양주유소",
+          "취급품목": "주유소",
+          "주소": "경북 봉화군 춘양면 의양리 427-5"
+        }
+      ],
+      "commercial_evidence": {
+        "상가업소번호": "MA010120220806047363",
+        "상호명": "춘양주유소",
+        "지점명": "",
+        "상권업종소분류코드": "G21401",
+        "상권업종소분류명": "주유소",
+        "표준산업분류코드": "G47711",
+        "표준산업분류명": "운송장비용 주유소 운영업",
+        "시도명": "경상북도",
+        "시군구명": "봉화군",
+        "도로명주소": "경상북도 봉화군 춘양면 의양로 81",
+        "지번주소": "경상북도 봉화군 춘양면 의양리 427-5"
+      }
+    },
+    {
+      "candidate_id": "081a17a302be89e37dca8737",
+      "name": "양북주유소",
+      "market": "양북시장",
+      "region": "경북",
+      "scope": "historical_physical_identity_only",
+      "address": "경상북도 경주시 문무대왕면 감은로 23",
+      "historical_source_date": "2021-09-28",
+      "commercial_source_date": "2026-06-30",
+      "annual_source_date": "2026-07-31",
+      "sources": [
+        "https://www.data.go.kr/data/15091227/fileData.do",
+        "https://www.data.go.kr/data/15083033/fileData.do",
+        "https://www.data.go.kr/data/3060079/fileData.do",
+        "https://www.gyeongju.go.kr/news/page.do?mnu_uid=1336&parm_bod_uid=217447&step=258"
+      ],
+      "basis": "경주시 감은로 23 일치. 양북면→문무대왕면 공식 명칭 변경 확인.",
+      "historical_matches": [
+        {
+          "시장명": "양북시장",
+          "점포명": "양북주유소",
+          "취급품목": "주유",
+          "주소": "경북 경주시 양북면 감은로 23"
+        }
+      ],
+      "commercial_evidence": {
+        "상가업소번호": "MA010120220809102801",
+        "상호명": "양북주유소",
+        "지점명": "",
+        "상권업종소분류코드": "G21401",
+        "상권업종소분류명": "주유소",
+        "표준산업분류코드": "G47711",
+        "표준산업분류명": "운송장비용 주유소 운영업",
+        "시도명": "경상북도",
+        "시군구명": "경주시",
+        "도로명주소": "경상북도 경주시 문무대왕면 감은로 23",
+        "지번주소": "경상북도 경주시 문무대왕면 어일리 1295-175"
+      }
+    },
+    {
+      "candidate_id": "04d09d1a8156d44b38db83c0",
+      "name": "명륜주유소",
+      "market": "북문시장",
+      "region": "경북",
+      "scope": "historical_physical_identity_only",
+      "address": "경상북도 안동시 퇴계로 134",
+      "historical_source_date": "2021-09-28",
+      "commercial_source_date": "2026-06-30",
+      "annual_source_date": "2026-07-31",
+      "sources": [
+        "https://www.data.go.kr/data/15091227/fileData.do",
+        "https://www.data.go.kr/data/15083033/fileData.do",
+        "https://www.data.go.kr/data/3060079/fileData.do"
+      ],
+      "basis": "안동시 퇴계로 134 정확히 일치.",
+      "historical_matches": [
+        {
+          "시장명": "북문시장",
+          "점포명": "명륜주유소",
+          "취급품목": "석유",
+          "주소": "경북 안동시 퇴계로 134"
+        }
+      ],
+      "commercial_evidence": {
+        "상가업소번호": "MA010120220813246743",
+        "상호명": "명륜주유소",
+        "지점명": "",
+        "상권업종소분류코드": "G21401",
+        "상권업종소분류명": "주유소",
+        "표준산업분류코드": "G47711",
+        "표준산업분류명": "운송장비용 주유소 운영업",
+        "시도명": "경상북도",
+        "시군구명": "안동시",
+        "도로명주소": "경상북도 안동시 퇴계로 134",
+        "지번주소": "경상북도 안동시 명륜동 315"
+      }
+    },
+    {
+      "candidate_id": "9e96e2c352e1ca4224036944",
+      "name": "기성주유소",
+      "market": "척산시장",
+      "region": "경북",
+      "scope": "historical_physical_identity_only",
+      "address": "경상북도 울진군 기성면 기성로 633",
+      "historical_source_date": "2021-09-28",
+      "commercial_source_date": "2026-06-30",
+      "annual_source_date": "2026-07-31",
+      "sources": [
+        "https://www.data.go.kr/data/15091227/fileData.do",
+        "https://www.data.go.kr/data/15083033/fileData.do",
+        "https://www.data.go.kr/data/3060079/fileData.do"
+      ],
+      "basis": "울진군 기성로 633 정확히 일치. 옛 주소의 면명 누락은 보존.",
+      "historical_matches": [
+        {
+          "시장명": "척산시장",
+          "점포명": "기성주유소",
+          "취급품목": "주유",
+          "주소": "경북 울진군 기성로 633"
+        }
+      ],
+      "commercial_evidence": {
+        "상가업소번호": "MA010120220809222326",
+        "상호명": "기성주유소",
+        "지점명": "",
+        "상권업종소분류코드": "G21401",
+        "상권업종소분류명": "주유소",
+        "표준산업분류코드": "G47711",
+        "표준산업분류명": "운송장비용 주유소 운영업",
+        "시도명": "경상북도",
+        "시군구명": "울진군",
+        "도로명주소": "경상북도 울진군 기성면 기성로 633",
+        "지번주소": "경상북도 울진군 기성면 척산리 290-1"
+      }
+    },
+    {
+      "candidate_id": "1054803b1165f961c8cb5967",
+      "name": "현대주유소",
+      "market": "웃장",
+      "region": "전남",
+      "scope": "historical_physical_identity_only",
+      "address": "전남광주통합특별시 순천시 중앙로 172",
+      "historical_source_date": "2021-09-28",
+      "commercial_source_date": "2026-06-30",
+      "annual_source_date": "2026-07-31",
+      "sources": [
+        "https://www.data.go.kr/data/15091227/fileData.do",
+        "https://www.data.go.kr/data/15083033/fileData.do",
+        "https://www.data.go.kr/data/3060079/fileData.do"
+      ],
+      "basis": "도로명 중앙로 172와 지번 매곡동 55-1 모두 일치. 순천웃장/웃장 시장명 연결은 기존 공식 시장 지역 자료로 순천 확인.",
+      "historical_matches": [
+        {
+          "시장명": "순천웃장",
+          "점포명": "현대주유소",
+          "취급품목": "주유소",
+          "주소": "전남 순천시 중앙로 172(매곡동 55-1)"
+        }
+      ],
+      "commercial_evidence": {
+        "상가업소번호": "MA010120220807846418",
+        "상호명": "현대주유소",
+        "지점명": "",
+        "상권업종소분류코드": "G21401",
+        "상권업종소분류명": "주유소",
+        "표준산업분류코드": "G47711",
+        "표준산업분류명": "운송장비용 주유소 운영업",
+        "시도명": "전남광주통합특별시",
+        "시군구명": "순천시",
+        "도로명주소": "전남광주통합특별시 순천시 중앙로 172",
+        "지번주소": "전남광주통합특별시 순천시 매곡동 55-1"
+      }
+    }
+  ]
+}

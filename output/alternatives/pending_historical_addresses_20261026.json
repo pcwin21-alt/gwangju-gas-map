@@ -1,0 +1,268 @@
+{
+  "source_url": "https://www.data.go.kr/data/15091227/fileData.do",
+  "download_url": "https://www.data.go.kr/cmm/cmm/fileDownload.do?atchFileId=FILE_000000002449406&fileDetailSn=1&insertDataPrcus=N",
+  "source_date": "2021-09-28",
+  "sha256": "8dd6f7431b467dad014f96440f79b452729341dbe5cd5ef6d4616ad5a645812c",
+  "total_rows": 155519,
+  "fields": [
+    "시장명",
+    "점포명",
+    "취급품목",
+    "주소"
+  ],
+  "pending_candidates": 18,
+  "same_name_region_matches": 11,
+  "same_name_region_exact_market_matches": 8,
+  "scope": "historical_address_links_not_current_payment_verification",
+  "rows": [
+    {
+      "candidate_id": "1054803b1165f961c8cb5967",
+      "name": "현대주유소",
+      "region": "전남",
+      "annual_market": "웃장",
+      "historical_matches": [
+        {
+          "시장명": "순천웃장",
+          "점포명": "현대주유소",
+          "취급품목": "주유소",
+          "주소": "전남 순천시 중앙로 172(매곡동 55-1)"
+        }
+      ],
+      "exact_market_matches": [],
+      "status": "historical_address_evidence_requires_identity_review",
+      "current_membership_confirmed": false
+    },
+    {
+      "candidate_id": "ffa12c23f1c57296633c7b4c",
+      "name": "금호석유",
+      "region": "광주",
+      "annual_market": "송정매일시장",
+      "historical_matches": [
+        {
+          "시장명": "송정매일시장",
+          "점포명": "금호석유",
+          "취급품목": "석유",
+          "주소": "광주광역시 광산구 송정동 820-5"
+        }
+      ],
+      "exact_market_matches": [
+        {
+          "시장명": "송정매일시장",
+          "점포명": "금호석유",
+          "취급품목": "석유",
+          "주소": "광주광역시 광산구 송정동 820-5"
+        }
+      ],
+      "status": "historical_address_evidence_requires_identity_review",
+      "current_membership_confirmed": false
+    },
+    {
+      "candidate_id": "c426c12d7c844ac0a2d91bd1",
+      "name": "춘양주유소",
+      "region": "경북",
+      "annual_market": "억지춘향시장(구 봉화춘향시장)",
+      "historical_matches": [
+        {
+          "시장명": "봉화춘향시장(춘양시장)",
+          "점포명": "춘양주유소",
+          "취급품목": "주유소",
+          "주소": "경북 봉화군 춘양면 의양리 427-5"
+        }
+      ],
+      "exact_market_matches": [],
+      "status": "historical_address_evidence_requires_identity_review",
+      "current_membership_confirmed": false
+    },
+    {
+      "candidate_id": "80abcbfbeaccee97f1fe852f",
+      "name": "제일가스",
+      "region": "경북",
+      "annual_market": "양북시장",
+      "historical_matches": [
+        {
+          "시장명": "양북시장",
+          "점포명": "제일가스",
+          "취급품목": "가스",
+          "주소": "경북 경주시 양북면 어일중앙길"
+        },
+        {
+          "시장명": "은척시장",
+          "점포명": "제일가스",
+          "취급품목": "가스",
+          "주소": "경북 상주시 은척면 봉중리 382-4"
+        }
+      ],
+      "exact_market_matches": [
+        {
+          "시장명": "양북시장",
+          "점포명": "제일가스",
+          "취급품목": "가스",
+          "주소": "경북 경주시 양북면 어일중앙길"
+        }
+      ],
+      "status": "historical_address_evidence_requires_identity_review",
+      "current_membership_confirmed": false
+    },
+    {
+      "candidate_id": "081a17a302be89e37dca8737",
+      "name": "양북주유소",
+      "region": "경북",
+      "annual_market": "양북시장",
+      "historical_matches": [
+        {
+          "시장명": "양북시장",
+          "점포명": "양북주유소",
+          "취급품목": "주유",
+          "주소": "경북 경주시 양북면 감은로 23"
+        }
+      ],
+      "exact_market_matches": [
+        {
+          "시장명": "양북시장",
+          "점포명": "양북주유소",
+          "취급품목": "주유",
+          "주소": "경북 경주시 양북면 감은로 23"
+        }
+      ],
+      "status": "historical_address_evidence_requires_identity_review",
+      "current_membership_confirmed": false
+    },
+    {
+      "candidate_id": "ff23f383096d8ef00074227d",
+      "name": "문희주유소",
+      "region": "경북",
+      "annual_market": "문경전통시장",
+      "historical_matches": [
+        {
+          "시장명": "문경전통시장",
+          "점포명": "문희주유소",
+          "취급품목": "주유소",
+          "주소": "경북 문경시 문경읍 상리 526-10"
+        }
+      ],
+      "exact_market_matches": [
+        {
+          "시장명": "문경전통시장",
+          "점포명": "문희주유소",
+          "취급품목": "주유소",
+          "주소": "경북 문경시 문경읍 상리 526-10"
+        }
+      ],
+      "status": "historical_address_evidence_requires_identity_review",
+      "current_membership_confirmed": false
+    },
+    {
+      "candidate_id": "04d09d1a8156d44b38db83c0",
+      "name": "명륜주유소",
+      "region": "경북",
+      "annual_market": "북문시장",
+      "historical_matches": [
+        {
+          "시장명": "북문시장",
+          "점포명": "명륜주유소",
+          "취급품목": "석유",
+          "주소": "경북 안동시 퇴계로 134"
+        }
+      ],
+      "exact_market_matches": [
+        {
+          "시장명": "북문시장",
+          "점포명": "명륜주유소",
+          "취급품목": "석유",
+          "주소": "경북 안동시 퇴계로 134"
+        }
+      ],
+      "status": "historical_address_evidence_requires_identity_review",
+      "current_membership_confirmed": false
+    },
+    {
+      "candidate_id": "9e96e2c352e1ca4224036944",
+      "name": "기성주유소",
+      "region": "경북",
+      "annual_market": "척산시장",
+      "historical_matches": [
+        {
+          "시장명": "척산시장",
+          "점포명": "기성주유소",
+          "취급품목": "주유",
+          "주소": "경북 울진군 기성로 633"
+        }
+      ],
+      "exact_market_matches": [
+        {
+          "시장명": "척산시장",
+          "점포명": "기성주유소",
+          "취급품목": "주유",
+          "주소": "경북 울진군 기성로 633"
+        }
+      ],
+      "status": "historical_address_evidence_requires_identity_review",
+      "current_membership_confirmed": false
+    },
+    {
+      "candidate_id": "dfea2f84be984c283e41bfe9",
+      "name": "원남주유소",
+      "region": "충북",
+      "annual_market": "음성시장",
+      "historical_matches": [
+        {
+          "시장명": "음성시장",
+          "점포명": "원남주유소",
+          "취급품목": "유류",
+          "주소": "충북 음성군 음성읍 읍내리"
+        }
+      ],
+      "exact_market_matches": [
+        {
+          "시장명": "음성시장",
+          "점포명": "원남주유소",
+          "취급품목": "유류",
+          "주소": "충북 음성군 음성읍 읍내리"
+        }
+      ],
+      "status": "historical_address_evidence_requires_identity_review",
+      "current_membership_confirmed": false
+    },
+    {
+      "candidate_id": "e971399ca41505931d7d9ca4",
+      "name": "영주석유",
+      "region": "대전",
+      "annual_market": "중앙종합시장",
+      "historical_matches": [
+        {
+          "시장명": "중앙종합시장",
+          "점포명": "영주석유",
+          "취급품목": "석유",
+          "주소": "대전 동구 권동 43-1"
+        }
+      ],
+      "exact_market_matches": [
+        {
+          "시장명": "중앙종합시장",
+          "점포명": "영주석유",
+          "취급품목": "석유",
+          "주소": "대전 동구 권동 43-1"
+        }
+      ],
+      "status": "historical_address_evidence_requires_identity_review",
+      "current_membership_confirmed": false
+    },
+    {
+      "candidate_id": "b924551d561010aaeffebdda",
+      "name": "광탄주유소",
+      "region": "경기",
+      "annual_market": "광탄전통시장",
+      "historical_matches": [
+        {
+          "시장명": "광탄경매시장",
+          "점포명": "광탄주유소",
+          "취급품목": "주유소",
+          "주소": "경기 파주시 광탄면 신산리 352-9"
+        }
+      ],
+      "exact_market_matches": [],
+      "status": "historical_address_evidence_requires_identity_review",
+      "current_membership_confirmed": false
+    }
+  ]
+}

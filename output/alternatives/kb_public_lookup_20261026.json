@@ -1,0 +1,62 @@
+{
+  "checked_at": "2026-10-26",
+  "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+  "mobile_source_url": "https://mkbpay.kbcard.com/BON/DVIEW/MBAM0005",
+  "mobile_result": "ReferenceError: kbmobile is not defined; region selection did not apply. Not evidence of nonmembership.",
+  "desktop_queries": [
+    {
+      "method": "name",
+      "keywords": [
+        "현대주유소",
+        "순천주유소",
+        "주유소",
+        "주유",
+        "보해마트"
+      ],
+      "displayed_count": 0,
+      "interpretation": "Name lookup not validated: even 보해마트, which appears in the address result, returns zero. Never use a zero here as absence evidence."
+    },
+    {
+      "method": "address",
+      "area": [
+        "전남",
+        "순천시",
+        "매곡동"
+      ],
+      "filter": "온누리상품권 only",
+      "displayed_count": 4,
+      "rows": [
+        {
+          "name": "제일미곡상회",
+          "category": "미곡상",
+          "address": "전남 순천시 매곡동"
+        },
+        {
+          "name": "디망쉬",
+          "category": "악세사리점",
+          "address": "전남 순천시 매곡동"
+        },
+        {
+          "name": "디망쉬",
+          "category": "기타 신변잡화",
+          "address": "전남 순천시 매곡동"
+        },
+        {
+          "name": "보해마트",
+          "category": "슈퍼마켓",
+          "address": "전남 순천시 매곡동"
+        }
+      ],
+      "interpretation": "Address lookup returned real rows but coverage and sync are not guaranteed. Hyundai is not shown; this is not proof of nonmembership."
+    },
+    {
+      "method": "province_only",
+      "area": [
+        "전남"
+      ],
+      "result": "Validation alert: 시/군/구를 선택해주세요."
+    }
+  ],
+  "new_confirmed_stations": 0,
+  "site_notice": "사업별 선정은 카드사에 실시간 반영되지 않으며 카드사 등록 주소 기준."
+}

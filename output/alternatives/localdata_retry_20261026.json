@@ -1,0 +1,8 @@
+{
+  "source": "지방행정 인허가데이터(LOCALDATA) 업종별 영업상태 — 행정안전부 (file.localdata.go.kr 지역별 CSV, 매일 갱신·2일 전 기준 현행화)",
+  "looked_up_at": "2026-10-26T16:59:39+09:00",
+  "status": "unavailable",
+  "result": null,
+  "origin": "unauthenticated-public",
+  "note": "전 업종 다운로드 실패: 자원환경_석유판매업(HTTPError). 수동 확인: https://www.localdata.go.kr"
+}

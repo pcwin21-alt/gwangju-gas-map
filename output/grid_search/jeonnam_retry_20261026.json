@@ -1,0 +1,38 @@
+{
+  "checked_at": "2026-10-26T12:36:17+09:00",
+  "status": "blocked",
+  "recheck_evidence": "availability_recheck_2026-10-26T123441_0900.json",
+  "previous_completed": 415,
+  "completed_tiles": 418,
+  "planned_tiles": 2810,
+  "remaining_tiles": 2392,
+  "added_completed_tiles": 3,
+  "raw_unique_regional_merchants": 1552,
+  "fuel_candidates": 2,
+  "new_candidate_ids": [],
+  "block_responses": [
+    {
+      "observed_at": "2026-10-26T12:35:37+09:00",
+      "status_code": 400,
+      "request": {
+        "keyword": "",
+        "addrNm": "",
+        "addrCd": "",
+        "placeTypeList": [],
+        "paperYn": "",
+        "cardYn": "",
+        "qrYn": "",
+        "latitude": "34.5605261",
+        "longitude": "127.3833621",
+        "baseRange": 2,
+        "currPage": 1
+      },
+      "response_excerpt": "<!DOCTYPE HTML PUBLIC \"-//IETF/DTD HTML 2.0//EN\">\r\n<HTML><HEAD>\r\n<TITLE>400 Bad Request</TITLE>\r\n</HEAD><BODY>\r\n<H1>Request Blocked</H1>\r\n</BODY></HTML>\r\n<br><br><br>",
+      "retry_after": null
+    }
+  ],
+  "collection_resumed": true,
+  "collection_stopped": true,
+  "map_changed": false,
+  "notes": "Single same-request recheck succeeded. Sequential scan resumed at 1 request/second, 1 worker; explicit Request Blocked stopped the sequence immediately. No subsequent region started."
+}

@@ -1,11 +1,39 @@
 {
   "rows": [
     {
-      "match": {"가맹점명": "예천용궁시장제유소", "소속 시장명(또는 상점가)": "용궁시장", "소재지": "경북", "취급품목": "주유소"},
+      "match": {
+        "가맹점명": "예천용궁시장제유소",
+        "소속 시장명(또는 상점가)": "용궁시장",
+        "소재지": "경북",
+        "취급품목": "주유소"
+      },
       "status": "excluded_non_vehicle_fuel",
       "reason": "업체 공식 상품 목록은 참기름·들기름·참깨·들깨가루이며 자동차 주유 업장이 아님. 연간 자료의 주유소 품목 오기 정정.",
       "checked_at": "2026-10-24",
-      "sources": ["https://www.ygsijangjeyuso.kr/shop_goods/goods_list.htm?category=03000000", "https://m.ygsijangjeyuso.kr/shop_info/company_addr.htm"]
+      "sources": [
+        "https://www.ygsijangjeyuso.kr/shop_goods/goods_list.htm?category=03000000",
+        "https://m.ygsijangjeyuso.kr/shop_info/company_addr.htm"
+      ]
+    },
+    {
+      "match": {
+        "가맹점명": "금호석유",
+        "소속 시장명(또는 상점가)": "송정매일시장",
+        "소재지": "전남광주",
+        "취급품목": "석유"
+      },
+      "status": "excluded_non_vehicle_fuel",
+      "reason": "송정동 820-5 지번 정확 일치. 2026 공식 상권정보 가정용 액체 연료 소매업이므로 차량 주유 후보에서 제외. 온누리 가맹 자체를 부정하지 않음.",
+      "checked_at": "2026-10-26",
+      "sources": [
+        "https://www.data.go.kr/data/15091227/fileData.do",
+        "https://www.data.go.kr/data/15083033/fileData.do",
+        "https://www.data.go.kr/data/3060079/fileData.do"
+      ],
+      "historical_source_date": "2021-09-28",
+      "commercial_source_date": "2026-06-30",
+      "commercial_id": "MA010120220807595712",
+      "exact_lot_address": "광산구 송정동 820-5"
     }
   ]
 }
