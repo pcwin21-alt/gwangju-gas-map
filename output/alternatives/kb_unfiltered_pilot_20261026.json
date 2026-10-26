@@ -1,0 +1,1455 @@
+{
+  "method": "all nearby Onnuri merchants without name filter",
+  "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+  "checked_at": "2026-10-26T19:09:43.364182",
+  "rows": [
+    {
+      "seed": {
+        "상가업소번호": "MA010120220807846418",
+        "상호명": "현대주유소",
+        "지점명": "",
+        "상권업종소분류코드": "G21401",
+        "상권업종소분류명": "주유소",
+        "표준산업분류코드": "G47711",
+        "표준산업분류명": "운송장비용 주유소 운영업",
+        "시군구명": "순천시",
+        "도로명주소": "전남광주통합특별시 순천시 중앙로 172",
+        "지번주소": "전남광주통합특별시 순천시 매곡동 55-1",
+        "위도": "34.9609772960504",
+        "경도": "127.484715824515",
+        "region": "전남"
+      },
+      "total": 62,
+      "complete": true,
+      "rows": [
+        {
+          "location": {
+            "lat": "34.961063692",
+            "lng": "127.4847504375"
+          },
+          "content": {
+            "tel": "061)752-3327",
+            "title": "현대주유소",
+            "category": "주유소",
+            "address": "전남 순천시 매곡동 ",
+            "distance": "10",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000004645863",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9601429139",
+            "lng": "127.4842112964"
+          },
+          "content": {
+            "tel": "061)751-1771",
+            "title": "대경청과",
+            "category": "농.수.축산물점",
+            "address": "전남 순천시 매곡동 ",
+            "distance": "104",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000062643747",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9620626395",
+            "lng": "127.4848621824"
+          },
+          "content": {
+            "tel": "061)752-7247",
+            "title": "보해마트",
+            "category": "슈퍼마켓",
+            "address": "전남 순천시 매곡동 ",
+            "distance": "121",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000036618592",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9599183719",
+            "lng": "127.4852877481"
+          },
+          "content": {
+            "tel": "061)753-4655",
+            "title": "제일식당",
+            "category": "기타 식품",
+            "address": "전남 순천시 동외동 ",
+            "distance": "129",
+            "kindGb": "1",
+            "onNuliGb": "1",
+            "tradiGb": "1",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000045121962",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9596076098",
+            "lng": "127.4852349474"
+          },
+          "content": {
+            "tel": "061)900-9421",
+            "title": "풀꽃향기",
+            "category": "민예.공예.토산품",
+            "address": "전남 순천시 동외동 ",
+            "distance": "159",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000068456071",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9594922835",
+            "lng": "127.4846264498"
+          },
+          "content": {
+            "tel": "061)752-9260",
+            "title": "옛날맛김치",
+            "category": "기타 식품",
+            "address": "전남 순천시 매곡동 ",
+            "distance": "165",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "1",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000060788845",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9593916054",
+            "lng": "127.484763061"
+          },
+          "content": {
+            "tel": "061)752-5764",
+            "title": "협정종묘사",
+            "category": "농어업용품",
+            "address": "전남 순천시 매곡동 ",
+            "distance": "176",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000014904217",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9591480103",
+            "lng": "127.4847489758"
+          },
+          "content": {
+            "tel": "",
+            "title": "패션마트",
+            "category": "기성복점",
+            "address": "전남 순천시 매곡동 ",
+            "distance": "203",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000061045284",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.960328433",
+            "lng": "127.4868255454"
+          },
+          "content": {
+            "tel": "061)752-3619",
+            "title": "애플마트",
+            "category": "슈퍼마켓",
+            "address": "전남 순천시 동외동 ",
+            "distance": "205",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "1",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000013705563",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.960328433",
+            "lng": "127.4868255454"
+          },
+          "content": {
+            "tel": "061)751-8076",
+            "title": "엘에스생활마트(LS생활마트)",
+            "category": "주방 및 가정용품점",
+            "address": "전남 순천시 동외동 ",
+            "distance": "205",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "1",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000032102521",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9591390305",
+            "lng": "127.4845273849"
+          },
+          "content": {
+            "tel": "061)752-3263",
+            "title": "동방약국",
+            "category": "약국",
+            "address": "전남 순천시 매곡동 ",
+            "distance": "205",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000051641068",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9591933519",
+            "lng": "127.4853897356"
+          },
+          "content": {
+            "tel": "061)752-4742",
+            "title": "일오삼우리식당",
+            "category": "일반음식점 기타",
+            "address": "전남 순천시 동외동 ",
+            "distance": "208",
+            "kindGb": "1",
+            "onNuliGb": "1",
+            "tradiGb": "1",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000012486360",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9591933519",
+            "lng": "127.4853897356"
+          },
+          "content": {
+            "tel": "061)752-3718",
+            "title": "이마트",
+            "category": "슈퍼마켓",
+            "address": "전남 순천시 동외동 ",
+            "distance": "208",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000030007671",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9591933519",
+            "lng": "127.4853897356"
+          },
+          "content": {
+            "tel": "061)751-3327",
+            "title": "살찐식당",
+            "category": "한식",
+            "address": "전남 순천시 동외동 ",
+            "distance": "208",
+            "kindGb": "1",
+            "onNuliGb": "1",
+            "tradiGb": "1",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000052031049",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9591933519",
+            "lng": "127.4853897356"
+          },
+          "content": {
+            "tel": "061)752-3386",
+            "title": "쌍암식당",
+            "category": "한식",
+            "address": "전남 순천시 동외동 ",
+            "distance": "208",
+            "kindGb": "1",
+            "onNuliGb": "1",
+            "tradiGb": "1",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000060769966",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9591933519",
+            "lng": "127.4853897356"
+          },
+          "content": {
+            "tel": "061)755-0518",
+            "title": "강영상회",
+            "category": "제과점/아이스크림점",
+            "address": "전남 순천시 동외동 ",
+            "distance": "208",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "1",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000041164263",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9591933519",
+            "lng": "127.4853897356"
+          },
+          "content": {
+            "tel": "061)751-2054",
+            "title": "흥보흑혐소",
+            "category": "건강식품점",
+            "address": "전남 순천시 동외동 ",
+            "distance": "208",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "1",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000044357376",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9591933519",
+            "lng": "127.4853897356"
+          },
+          "content": {
+            "tel": "061)752-7027",
+            "title": "신화식당",
+            "category": "한식",
+            "address": "전남 순천시 동외동 ",
+            "distance": "208",
+            "kindGb": "1",
+            "onNuliGb": "1",
+            "tradiGb": "1",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000043240067",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9590646544",
+            "lng": "127.484708286"
+          },
+          "content": {
+            "tel": "061)751-1462",
+            "title": "순심이국밥",
+            "category": "한식",
+            "address": "광주 순천시 매곡동 ",
+            "distance": "213",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000123370457",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9589786352",
+            "lng": "127.4846999133"
+          },
+          "content": {
+            "tel": "061)753-5904",
+            "title": "행복커텐",
+            "category": "침구/커튼/카펫트점",
+            "address": "전남 순천시 매곡동 ",
+            "distance": "222",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000013818668",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9589434871",
+            "lng": "127.4847198941"
+          },
+          "content": {
+            "tel": "061)753-8889",
+            "title": "순복식당",
+            "category": "한식",
+            "address": "전남 순천시 매곡동 ",
+            "distance": "226",
+            "kindGb": "1",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000081018002",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9588601444",
+            "lng": "127.4847113659"
+          },
+          "content": {
+            "tel": "",
+            "title": "제일식당2호분점",
+            "category": "한식",
+            "address": "전남 순천시 매곡동 ",
+            "distance": "235",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000120113432",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.958830309",
+            "lng": "127.484705717"
+          },
+          "content": {
+            "tel": "061)903-9898",
+            "title": "북부제일식당2호점",
+            "category": "일반음식점 기타",
+            "address": "전남 순천시 매곡동 ",
+            "distance": "239",
+            "kindGb": "1",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000075244788",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9588230966",
+            "lng": "127.4852099935"
+          },
+          "content": {
+            "tel": "061)753-4655",
+            "title": "순흥식당",
+            "category": "일반음식점 기타",
+            "address": "전남 순천시 동외동 ",
+            "distance": "244",
+            "kindGb": "1",
+            "onNuliGb": "1",
+            "tradiGb": "1",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000083091686",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9588230966",
+            "lng": "127.4852099935"
+          },
+          "content": {
+            "tel": "061)752-8136",
+            "title": "풍년정육점",
+            "category": "정육점",
+            "address": "전남 순천시 동외동 ",
+            "distance": "244",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "1",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000069623005",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9588230966",
+            "lng": "127.4852099935"
+          },
+          "content": {
+            "tel": "",
+            "title": "은혜수산",
+            "category": "농.수.축산물점",
+            "address": "전남 순천시 동외동 ",
+            "distance": "244",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "1",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000120176498",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9588230966",
+            "lng": "127.4852099935"
+          },
+          "content": {
+            "tel": "061)753-2355",
+            "title": "세영회관",
+            "category": "일반음식점 기타",
+            "address": "전남 순천시 동외동 ",
+            "distance": "244",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "1",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000105864626",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9588230966",
+            "lng": "127.4852099935"
+          },
+          "content": {
+            "tel": "061)752-1214",
+            "title": "유성상회",
+            "category": "미곡상",
+            "address": "전남 순천시 동외동 ",
+            "distance": "244",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "1",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000079287163",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9588230966",
+            "lng": "127.4852099935"
+          },
+          "content": {
+            "tel": "061)752-9870",
+            "title": "순천국밥",
+            "category": "한식",
+            "address": "전남 순천시 동외동 ",
+            "distance": "244",
+            "kindGb": "1",
+            "onNuliGb": "1",
+            "tradiGb": "1",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000093227276",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9588230966",
+            "lng": "127.4852099935"
+          },
+          "content": {
+            "tel": "061)753-7878",
+            "title": "한우식당",
+            "category": "한식",
+            "address": "전남 순천시 동외동 ",
+            "distance": "244",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "1",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000119285595",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9588230966",
+            "lng": "127.4852099935"
+          },
+          "content": {
+            "tel": "061)752-2522",
+            "title": "향촌식당",
+            "category": "한식",
+            "address": "전남 순천시 동외동 ",
+            "distance": "244",
+            "kindGb": "1",
+            "onNuliGb": "1",
+            "tradiGb": "1",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000044356584",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9588230966",
+            "lng": "127.4852099935"
+          },
+          "content": {
+            "tel": "061)654-6651",
+            "title": "현이네건어물",
+            "category": "농.수.축산물점",
+            "address": "전남 순천시 동외동 ",
+            "distance": "244",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "1",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000069392627",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9588230966",
+            "lng": "127.4852099935"
+          },
+          "content": {
+            "tel": "061)753-4124",
+            "title": "괴목국밥",
+            "category": "한식",
+            "address": "전남 순천시 동외동 ",
+            "distance": "244",
+            "kindGb": "1",
+            "onNuliGb": "1",
+            "tradiGb": "1",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000052981977",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9588230966",
+            "lng": "127.4852099935"
+          },
+          "content": {
+            "tel": "061)753-3666",
+            "title": "대구청과",
+            "category": "농.수.축산물점",
+            "address": "전남 순천시 동외동 ",
+            "distance": "244",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "1",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000048240360",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9588230966",
+            "lng": "127.4852099935"
+          },
+          "content": {
+            "tel": "061)752-3637",
+            "title": "황전식당",
+            "category": "한식",
+            "address": "전남 순천시 동외동 ",
+            "distance": "244",
+            "kindGb": "1",
+            "onNuliGb": "1",
+            "tradiGb": "1",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000070413398",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9588230966",
+            "lng": "127.4852099935"
+          },
+          "content": {
+            "tel": "061)752-3072",
+            "title": "대성철물",
+            "category": "철물점",
+            "address": "전남 순천시 동외동 ",
+            "distance": "244",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "1",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000080362190",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9588230966",
+            "lng": "127.4852099935"
+          },
+          "content": {
+            "tel": "061)752-0345",
+            "title": "순북식당",
+            "category": "한식",
+            "address": "전남 순천시 동외동 ",
+            "distance": "244",
+            "kindGb": "1",
+            "onNuliGb": "1",
+            "tradiGb": "1",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000045502117",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9588230966",
+            "lng": "127.4852099935"
+          },
+          "content": {
+            "tel": "061)753-5566",
+            "title": "진양회수산",
+            "category": "일식/생선회집",
+            "address": "전남 순천시 동외동 ",
+            "distance": "244",
+            "kindGb": "1",
+            "onNuliGb": "1",
+            "tradiGb": "1",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000026387624",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9588230966",
+            "lng": "127.4852099935"
+          },
+          "content": {
+            "tel": "061)752-8471",
+            "title": "신미참기름",
+            "category": "기타 식품",
+            "address": "전남 순천시 동외동 ",
+            "distance": "244",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "1",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000083409391",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9588230966",
+            "lng": "127.4852099935"
+          },
+          "content": {
+            "tel": "061)752-8695",
+            "title": "또와줘국밥",
+            "category": "한식",
+            "address": "전남 순천시 동외동 ",
+            "distance": "244",
+            "kindGb": "1",
+            "onNuliGb": "1",
+            "tradiGb": "1",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000062207358",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9588230966",
+            "lng": "127.4852099935"
+          },
+          "content": {
+            "tel": "061)752-4094",
+            "title": "우성상회",
+            "category": "농.수.축산물점",
+            "address": "전남 순천시 동외동 ",
+            "distance": "244",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "1",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000087584275",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9588230966",
+            "lng": "127.4852099935"
+          },
+          "content": {
+            "tel": "061)752-5387",
+            "title": "대흥식품",
+            "category": "미곡상",
+            "address": "전남 순천시 동외동 ",
+            "distance": "244",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "1",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000024415294",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9588230966",
+            "lng": "127.4852099935"
+          },
+          "content": {
+            "tel": "061)753-1949",
+            "title": "광주식당",
+            "category": "한식",
+            "address": "전남 순천시 석현동 ",
+            "distance": "244",
+            "kindGb": "1",
+            "onNuliGb": "1",
+            "tradiGb": "1",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000044673000",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9588230966",
+            "lng": "127.4852099935"
+          },
+          "content": {
+            "tel": "061)752-4895",
+            "title": "세광식당",
+            "category": "한식",
+            "address": "전남 순천시 동외동 ",
+            "distance": "244",
+            "kindGb": "1",
+            "onNuliGb": "1",
+            "tradiGb": "1",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000075047647",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9588230966",
+            "lng": "127.4852099935"
+          },
+          "content": {
+            "tel": "061)752-5258",
+            "title": "성수국밥",
+            "category": "한식",
+            "address": "전남 순천시 동외동 ",
+            "distance": "244",
+            "kindGb": "1",
+            "onNuliGb": "1",
+            "tradiGb": "1",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000078051343",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9588230966",
+            "lng": "127.4852099935"
+          },
+          "content": {
+            "tel": "061)753-1583",
+            "title": "웃장가마솥국밥",
+            "category": "한식",
+            "address": "전남 순천시 동외동 ",
+            "distance": "244",
+            "kindGb": "1",
+            "onNuliGb": "1",
+            "tradiGb": "1",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000063090982",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9588230966",
+            "lng": "127.4852099935"
+          },
+          "content": {
+            "tel": "061)752-5639",
+            "title": "웃장통닭집",
+            "category": "정육점",
+            "address": "전남 순천시 동외동 ",
+            "distance": "244",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "1",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000069224469",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9588230966",
+            "lng": "127.4852099935"
+          },
+          "content": {
+            "tel": "061)751-4202",
+            "title": "가보세국밥",
+            "category": "한식",
+            "address": "전남 순천시 동외동 ",
+            "distance": "244",
+            "kindGb": "1",
+            "onNuliGb": "1",
+            "tradiGb": "1",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000077009638",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9587239507",
+            "lng": "127.4846765257"
+          },
+          "content": {
+            "tel": "061)753-0788",
+            "title": "호동국밥전골",
+            "category": "한식",
+            "address": "전남 순천시 매곡동 ",
+            "distance": "251",
+            "kindGb": "1",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000070826453",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9586983578",
+            "lng": "127.4845244647"
+          },
+          "content": {
+            "tel": "061)903-7788",
+            "title": "다솜요양보호사교육원",
+            "category": "기술/사무/가정계학원",
+            "address": "전남 순천시 매곡동 ",
+            "distance": "254",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000079751339",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9585959478",
+            "lng": "127.4845650937"
+          },
+          "content": {
+            "tel": "061)752-4342",
+            "title": "국제신발",
+            "category": "일반신발점",
+            "address": "전남 순천시 매곡동 ",
+            "distance": "265",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000079283735",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.959323204",
+            "lng": "127.482616556"
+          },
+          "content": {
+            "tel": "061)752-2679",
+            "title": "북부종묘사",
+            "category": "농어업용품",
+            "address": "전남 순천시 매곡동 ",
+            "distance": "265",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000016163854",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9633631793",
+            "lng": "127.4843914552"
+          },
+          "content": {
+            "tel": "",
+            "title": "디망쉬",
+            "category": "악세사리점",
+            "address": "전남 순천시 매곡동 ",
+            "distance": "267",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000094850617",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9633631793",
+            "lng": "127.4843914552"
+          },
+          "content": {
+            "tel": "",
+            "title": "디망쉬",
+            "category": "기타 신변잡화",
+            "address": "전남 순천시 매곡동 ",
+            "distance": "267",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000104123961",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9585703495",
+            "lng": "127.4846629675"
+          },
+          "content": {
+            "tel": "",
+            "title": "제일유통",
+            "category": "농.수.축산물점",
+            "address": "광주 순천시 매곡동 ",
+            "distance": "268",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000123240633",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9585165673",
+            "lng": "127.484658376"
+          },
+          "content": {
+            "tel": "061)751-2339",
+            "title": "동대문의류",
+            "category": "기성복점",
+            "address": "전남 순천시 매곡동 ",
+            "distance": "274",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000054610373",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.958496128",
+            "lng": "127.4840588244"
+          },
+          "content": {
+            "tel": "061)751-7276",
+            "title": "평강수예점",
+            "category": "수예점",
+            "address": "전남 순천시 매곡동 ",
+            "distance": "282",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000057769901",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9591187383",
+            "lng": "127.4881396238"
+          },
+          "content": {
+            "tel": "061)751-5275",
+            "title": "시선집중",
+            "category": "악세사리점",
+            "address": "전남 순천시 중앙동 ",
+            "distance": "374",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000012911363",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9591187383",
+            "lng": "127.4881396238"
+          },
+          "content": {
+            "tel": "061)755-2301",
+            "title": "리더스",
+            "category": "기성복점",
+            "address": "전남 순천시 남내동 ",
+            "distance": "374",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000031289794",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9591187383",
+            "lng": "127.4881396238"
+          },
+          "content": {
+            "tel": "061)751-3568",
+            "title": "뉴스",
+            "category": "시계전문점",
+            "address": "전남 순천시 남내동 ",
+            "distance": "374",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000006240313",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9591187383",
+            "lng": "127.4881396238"
+          },
+          "content": {
+            "tel": "061)752-3538",
+            "title": "백조",
+            "category": "기성복점",
+            "address": "전남 순천시 남내동 ",
+            "distance": "374",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000008670821",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "34.9587386699",
+            "lng": "127.4886191203"
+          },
+          "content": {
+            "tel": "061)752-6836",
+            "title": "초원양행",
+            "category": "맞춤복점",
+            "address": "전남 순천시 동외동 ",
+            "distance": "434",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "1",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000020410153",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        }
+      ]
+    },
+    {
+      "seed": {
+        "상가업소번호": "MA0101202409A0158040",
+        "상호명": "해제주유소",
+        "지점명": "",
+        "상권업종소분류코드": "G21401",
+        "상권업종소분류명": "주유소",
+        "표준산업분류코드": "G47711",
+        "표준산업분류명": "운송장비용 주유소 운영업",
+        "시군구명": "무안군",
+        "도로명주소": "전남광주통합특별시 무안군 해제면 현해로 1699",
+        "지번주소": "전남광주통합특별시 무안군 해제면 신정리 22-3",
+        "위도": "35.1102171513859",
+        "경도": "126.293423751995",
+        "region": "전남"
+      },
+      "total": 4,
+      "complete": true,
+      "rows": [
+        {
+          "location": {
+            "lat": "35.1101632769",
+            "lng": "126.2939293666"
+          },
+          "content": {
+            "tel": "061)452-6345",
+            "title": "광주상회",
+            "category": "농.수.축산물점",
+            "address": "전남 무안군 해제면 ",
+            "distance": "46",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000079307897",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "35.1120273917",
+            "lng": "126.2937447468"
+          },
+          "content": {
+            "tel": "061)453-0265",
+            "title": "하나마트",
+            "category": "슈퍼마켓",
+            "address": "전남 무안군 해제면 ",
+            "distance": "203",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000027299249",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "35.1102171638",
+            "lng": "126.2904131117"
+          },
+          "content": {
+            "tel": "061)453-1772",
+            "title": "남도카써비스센타",
+            "category": "차량 정비/부품/인테리어",
+            "address": "전남 무안군 해제면 ",
+            "distance": "274",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000052003956",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "35.1123077731",
+            "lng": "126.2917463191"
+          },
+          "content": {
+            "tel": "061)454-1046",
+            "title": "가나안떡방앗간",
+            "category": "미곡상",
+            "address": "전남 무안군 해제면 ",
+            "distance": "278",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000083877653",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        }
+      ]
+    },
+    {
+      "seed": {
+        "상가업소번호": "MA010120220807704164",
+        "상호명": "동부주유소",
+        "지점명": "",
+        "상권업종소분류코드": "G21401",
+        "상권업종소분류명": "주유소",
+        "표준산업분류코드": "G47711",
+        "표준산업분류명": "운송장비용 주유소 운영업",
+        "시군구명": "무안군",
+        "도로명주소": "전남광주통합특별시 무안군 해제면 현해로 1441",
+        "지번주소": "전남광주통합특별시 무안군 해제면 용학리 7-13",
+        "위도": "35.1053048875279",
+        "경도": "126.317025664469",
+        "region": "전남"
+      },
+      "total": 0,
+      "complete": true,
+      "rows": []
+    }
+  ]
+}

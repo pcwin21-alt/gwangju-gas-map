@@ -72,3 +72,20 @@ class SupplementalTests(unittest.TestCase):
         stations,review,_=apply_evidence([],pending,[current],'2026-10-26')
         self.assertEqual(len(stations),1)
         self.assertTrue(review[0]['show_pending'])
+
+    def test_municipal_identity_rejects_neighbor_and_wrong_phone(self):
+        evidence=json.loads((ROOT/'output/supplemental_onnuri_evidence.json').read_text(encoding='utf-8'))['rows']
+        e=next(e for e in evidence if e['bank_record']['content']['franchiseNo']=='000000055922363')
+        station=station_from_evidence(e,'2026-10-26')
+        self.assertEqual(station['location_evidence']['coordinate_source'],'kbcard')
+        self.assertEqual(station['address'],'전라남도 목포시 영산로 668')
+        self.assertIn('삼학(셀프)주유소',station['aliases'])
+        changes=[('municipal_record','address','전라남도 목포시 영산로 660'),
+                 ('identity_record','phone','061-283-5672'),
+                 ('identity_record','source_url','https://unreviewed.example/store'),
+                 ('municipal_record','category','세차장')]
+        for section,key,value in changes:
+            wrong=deepcopy(e);wrong[section][key]=value
+            with self.assertRaises(ValueError):station_from_evidence(wrong,'2026-10-26')
+        wrong=deepcopy(e);wrong['bank_record']['content']['franchiseNo']='000000055922364'
+        with self.assertRaises(ValueError):station_from_evidence(wrong,'2026-10-26')

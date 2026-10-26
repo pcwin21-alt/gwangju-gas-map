@@ -55,7 +55,7 @@ def parse_response(html):
     return total, rows
 
 
-def queue(area, targets=None):
+def queue(area, targets=None, unfiltered=False):
     fuels = json.loads((targets or OUT/'alternatives/vehicle_fuel_index_20261026.json').read_text(encoding='utf-8'))['rows']
     mapped = json.loads((OUT/'gas_stations.json').read_text(encoding='utf-8'))
     mapped_names = {name_key(r['name']) for r in mapped if region(r['address']) == area}
@@ -64,8 +64,8 @@ def queue(area, targets=None):
         if area != 'all' and f['region'] != area:
             continue
         name = f['상호명']
-        keyword = '주유' if '주유' in name else '충전' if '충전' in name else re.sub(r'주식회사|유한회사|\(주\)|\(유\)|㈜', '', name).strip()
-        if len(keyword) < 2:
+        keyword = '' if unfiltered else '주유' if '주유' in name else '충전' if '충전' in name else re.sub(r'주식회사|유한회사|\(주\)|\(유\)|㈜', '', name).strip()
+        if not unfiltered and len(keyword) < 2:
             continue
         point = [round(float(f[k]),6) for k in ('위도','경도')]
         if not (32 < point[0] < 40 and 124 < point[1] < 132):
@@ -84,14 +84,19 @@ def main():
     ap.add_argument('--limit',type=int,default=10000)
     ap.add_argument('--interval',type=float,default=1.5)
     ap.add_argument('--targets',type=Path)
+    ap.add_argument('--unfiltered',action='store_true',help='Collect all nearby Onnuri names and categories')
     ap.add_argument('--output',type=Path,default=OUT/'alternatives/kb_location_progress_20261026.json')
     args=ap.parse_args()
     if args.interval < 1.5:
         raise ValueError('Minimum interval 1.5 seconds')
-    directory=OUT/'alternatives/kb_location_cache'/args.region
+    # Preserve the original named cache; unfiltered requests have their own
+    # identity and cache namespace. A display-priority change is not a new query.
+    directory=OUT/'alternatives/kb_location_cache'
+    if args.unfiltered:directory=directory/'unfiltered'
+    directory=directory/args.region
     directory.mkdir(parents=True,exist_ok=True)
     progress_path=args.output
-    plan=queue(args.region,args.targets)
+    plan=queue(args.region,args.targets,args.unfiltered)
     session=requests.Session()
     done=0
     found={}
@@ -100,7 +105,7 @@ def main():
     error=None
     def save():
         result={'source_url':URL,'checked_at':datetime.now(KST).isoformat(timespec='seconds'),
-            'region':args.region,'scope':'candidate_location_name_search_not_geographic_census',
+            'region':args.region,'scope':'candidate_location_unfiltered_search_not_geographic_census' if args.unfiltered else 'candidate_location_name_search_not_geographic_census',
             'status':status,'planned_queries':len(plan),'completed_queries':done,'error':error,
             'unique_merchants':len(found),'rows':list(found.values()),
             'limitations':['Bank selection updates are not real time.',
@@ -113,7 +118,7 @@ def main():
         try:
             if path.exists():
                 cached=json.loads(path.read_text(encoding='utf-8'))
-                if cached['query']!=item or cached['status']!='complete':
+                if any(cached['query'].get(k)!=item[k] for k in ('id','center','keyword')) or cached['status']!='complete':
                     raise ValueError('Cache mismatch')
             else:
                 if done >= args.limit:
@@ -144,9 +149,10 @@ def main():
                 found[identity]={**row,'checked_at':cached['checked_at'],'query_id':item['id']}
             done+=1
             save()
-            if cached['rows'] or done%20==0:
+            fuel_rows=[r for r in cached['rows'] if re.search('주유|충전|석유|에너지',r['content']['title']+' '+r['content']['category'])]
+            if fuel_rows or done%20==0:
                 print(json.dumps({'done':done,'planned':len(plan),'seed':item['businesses'][0]['name'],
-                    'found':[r['content']['title'] for r in cached['rows']],'unique':len(found)},ensure_ascii=False),flush=True)
+                    'found':[r['content']['title'] for r in fuel_rows],'unique':len(found)},ensure_ascii=False),flush=True)
         except (requests.RequestException,ValueError,KeyError) as exc:
             status='stopped_error';error=type(exc).__name__+': '+str(exc);save();raise
     else:status='candidate_queue_complete'

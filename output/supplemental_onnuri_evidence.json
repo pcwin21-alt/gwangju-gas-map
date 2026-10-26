@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "rows": [
     {
       "identity_review": "same_premise_confirmed",
@@ -439,6 +439,156 @@
       "annual_candidate_ids": [],
       "identity_support": "KB Onnuri flag, vehicle-fuel category, current commercial name/locality and coordinates agree within 12 metres.",
       "historical_candidate_link": "Not asserted: historical lot/locality differs. Publish current KB premises independently; keep annual candidate pending."
+    },
+    {
+      "identity_review": "same_premise_confirmed",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "checked_at": "2026-10-26T20:17:28+09:00",
+      "bank_record": {
+        "location": {
+          "lat": "34.8244227459",
+          "lng": "126.4238800097"
+        },
+        "content": {
+          "tel": "061)283-5671",
+          "title": "(주)대창석유 (삼학)",
+          "category": "주유소",
+          "address": "전남 목포시 석현동 ",
+          "distance": "177",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000055922363",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-26T20:17:28+09:00",
+        "query_id": "c6c377c0fc1f5a11"
+      },
+      "municipal_record": {
+        "name": "삼학(셀프)주유소",
+        "address": "전라남도 목포시 영산로 668",
+        "category": "주유소",
+        "source_url": "https://www.data.go.kr/data/15116429/fileData.do",
+        "source_date": "2026-08-04"
+      },
+      "identity_record": {
+        "name": "sk대창석유 삼학주유소",
+        "address": "전라남도 목포시 영산로 668",
+        "phone": "061-283-5671",
+        "source_url": "https://www.daangn.com/kr/local-profile/sk대창석유-삼학주유소-동네업체-sk대창석유-삼학주유소-10540331/",
+        "access_method": "search_index_full_record",
+        "checked_at": "2026-10-26"
+      },
+      "annual_candidate_ids": [],
+      "identity_support": "Reviewed bank corporate/branch name, explicit fuel category, exact phone and locality against municipal fuel listing. Bank coordinates retained with separate provenance; no nearby commercial address substitution.",
+      "municipal_raw_record": {
+        "주유소명": "삼학(셀프)주유소",
+        "시도명": "전남광주통합특별시",
+        "시군구명": "목포시",
+        "소재지도로명주소": "영산로 668",
+        "상표구분명": "SK",
+        "데이터기준일자": "2026-08-04"
+      },
+      "municipal_file_sha256": "7fd79c4ab3bc737bff9e9564220fdc87bf14dc6f9de596ff1cf76b2942807361"
+    },
+    {
+      "identity_review": "same_premise_confirmed",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "checked_at": "2026-10-26T20:20:54+09:00",
+      "bank_record": {
+        "location": {
+          "lat": "35.2770071066",
+          "lng": "127.2916235046"
+        },
+        "content": {
+          "tel": "061)362-7778",
+          "title": "(주)대창석유 (대인)",
+          "category": "주유소",
+          "address": "전남 곡성군 곡성읍 ",
+          "distance": "439",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000055922645",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-26T20:20:54+09:00",
+        "query_id": "11d5f750d2a2fc32"
+      },
+      "municipal_record": {
+        "name": "㈜대창석유직영 대인주유소",
+        "address": "전라남도 곡성군 곡성읍 곡성로 796",
+        "category": "주유소",
+        "source_url": "https://www.gokseong.go.kr/kr/noticeViewFour.do?codeId=ANN0000027&menuNo=103009004003",
+        "source_date": null
+      },
+      "identity_record": {
+        "name": "㈜대창석유직영 대인주유소",
+        "address": "전라남도 곡성군 곡성읍 곡성로 796",
+        "phone": "061-362-7778",
+        "source_url": "https://www.gokseong.go.kr/kr/noticeViewFour.do?codeId=ANN0000027&menuNo=103009004003",
+        "access_method": "search_index_full_record",
+        "checked_at": "2026-10-26"
+      },
+      "annual_candidate_ids": [],
+      "identity_support": "Reviewed bank corporate/branch name, explicit fuel category, exact phone and locality against municipal fuel listing. Bank coordinates retained with separate provenance; no nearby commercial address substitution."
+    },
+    {
+      "identity_review": "same_premise_confirmed",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "checked_at": "2026-10-26T20:22:11+09:00",
+      "bank_record": {
+        "location": {
+          "lat": "34.940399796",
+          "lng": "127.7543484052"
+        },
+        "content": {
+          "tel": "061)792-3105",
+          "title": "(주)대창석유 (태인)",
+          "category": "주유소",
+          "address": "전남 광양시 태인동 ",
+          "distance": "325",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000055922220",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-26T20:22:11+09:00",
+        "query_id": "e7a25c88002e9214"
+      },
+      "commercial_record": {
+        "상가업소번호": "MA0101202503A0025892",
+        "상호명": "태인주유소",
+        "지점명": "",
+        "상권업종소분류코드": "G21401",
+        "상권업종소분류명": "주유소",
+        "표준산업분류코드": "G47711",
+        "표준산업분류명": "운송장비용 주유소 운영업",
+        "시군구명": "광양시",
+        "도로명주소": "전남광주통합특별시 광양시 백운1로 107",
+        "지번주소": "전남광주통합특별시 광양시 태인동 1653-2",
+        "위도": "34.940285652818",
+        "경도": "127.754350964769",
+        "region": "전남"
+      },
+      "commercial_source": {
+        "archive_sha256": "57aa361544108ff4fc73334f87d2ced61e41fe8638dd70bcd842930f865d2386",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+        "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
+      },
+      "annual_candidate_ids": [],
+      "identity_support": "Reviewed corporate-branch name (주)대창석유 (태인) against 태인주유소. Fuel classification and 태인동 agree; commercial coordinates 13m from bank, same premises 백운1로107. No generalized fuzzy alias rule."
     }
   ]
 }

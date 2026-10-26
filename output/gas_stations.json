@@ -8492,5 +8492,166 @@
       "source_id": "MA010120220801753318",
       "bank_distance_m": 10.9
     }
+  },
+  {
+    "id": "onnuri:kb:000000055922363",
+    "name": "(주)대창석유 (삼학)",
+    "address": "전라남도 목포시 영산로 668",
+    "lat": 34.8244227459,
+    "lng": 126.4238800097,
+    "payment_types": [
+      "onnuri"
+    ],
+    "source": [
+      "kb_onnuri"
+    ],
+    "aliases": [
+      "삼학(셀프)주유소",
+      "sk대창석유 삼학주유소"
+    ],
+    "fuel_kind": "liquid",
+    "route_eligible": true,
+    "region": "전남",
+    "onnuri_methods": {
+      "paper": null,
+      "card": true,
+      "qr": null,
+      "digital": true
+    },
+    "verification": {
+      "onnuri": {
+        "status": "confirmed",
+        "checked_at": "2026-10-26T20:17:28+09:00",
+        "source_date": null,
+        "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+        "source_id": "kb:000000055922363",
+        "source_ids": [
+          "kb:000000055922363"
+        ],
+        "provider": "kbcard",
+        "issuer_scope": [
+          "KB국민카드"
+        ],
+        "match_basis": "bank_onnuri_flag_fuel_category_reviewed_name_phone_municipal_address",
+        "candidate_ids": [],
+        "note": "KB국민카드 온누리 사용처 조회 기준. 카드사 반영 지연 가능. 지류·QR·다른 카드사는 별도 확인."
+      }
+    },
+    "location_evidence": {
+      "source_type": "municipal_registry",
+      "source_url": "https://www.data.go.kr/data/15116429/fileData.do",
+      "source_date": "2026-08-04",
+      "source_id": "삼학(셀프)주유소",
+      "coordinate_source": "kbcard",
+      "coordinate_source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "identity_source_url": "https://www.daangn.com/kr/local-profile/sk대창석유-삼학주유소-동네업체-sk대창석유-삼학주유소-10540331/",
+      "note": "상세주소는 지자체 명부, 좌표는 KB 가맹점 조회. 상호·전화·주소권역 교차확인."
+    }
+  },
+  {
+    "id": "onnuri:kb:000000055922645",
+    "name": "(주)대창석유 (대인)",
+    "address": "전라남도 곡성군 곡성읍 곡성로 796",
+    "lat": 35.2770071066,
+    "lng": 127.2916235046,
+    "payment_types": [
+      "onnuri"
+    ],
+    "source": [
+      "kb_onnuri"
+    ],
+    "aliases": [
+      "㈜대창석유직영 대인주유소"
+    ],
+    "fuel_kind": "liquid",
+    "route_eligible": true,
+    "region": "전남",
+    "onnuri_methods": {
+      "paper": null,
+      "card": true,
+      "qr": null,
+      "digital": true
+    },
+    "verification": {
+      "onnuri": {
+        "status": "confirmed",
+        "checked_at": "2026-10-26T20:20:54+09:00",
+        "source_date": null,
+        "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+        "source_id": "kb:000000055922645",
+        "source_ids": [
+          "kb:000000055922645"
+        ],
+        "provider": "kbcard",
+        "issuer_scope": [
+          "KB국민카드"
+        ],
+        "match_basis": "bank_onnuri_flag_fuel_category_reviewed_name_phone_municipal_address",
+        "candidate_ids": [],
+        "note": "KB국민카드 온누리 사용처 조회 기준. 카드사 반영 지연 가능. 지류·QR·다른 카드사는 별도 확인."
+      }
+    },
+    "location_evidence": {
+      "source_type": "municipal_registry",
+      "source_url": "https://www.gokseong.go.kr/kr/noticeViewFour.do?codeId=ANN0000027&menuNo=103009004003",
+      "source_date": null,
+      "source_id": "㈜대창석유직영 대인주유소",
+      "coordinate_source": "kbcard",
+      "coordinate_source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "identity_source_url": "https://www.gokseong.go.kr/kr/noticeViewFour.do?codeId=ANN0000027&menuNo=103009004003",
+      "note": "상세주소는 지자체 명부, 좌표는 KB 가맹점 조회. 상호·전화·주소권역 교차확인."
+    }
+  },
+  {
+    "id": "onnuri:kb:000000055922220",
+    "name": "(주)대창석유 (태인)",
+    "address": "전남광주통합특별시 광양시 백운1로 107",
+    "lat": 34.940285652818,
+    "lng": 127.754350964769,
+    "payment_types": [
+      "onnuri"
+    ],
+    "source": [
+      "kb_onnuri"
+    ],
+    "aliases": [
+      "대창석유 직영 태인주유소",
+      "태인주유소"
+    ],
+    "fuel_kind": "liquid",
+    "route_eligible": true,
+    "region": "전남",
+    "onnuri_methods": {
+      "paper": null,
+      "card": true,
+      "qr": null,
+      "digital": true
+    },
+    "verification": {
+      "onnuri": {
+        "status": "confirmed",
+        "checked_at": "2026-10-26T20:22:11+09:00",
+        "source_date": null,
+        "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+        "source_id": "kb:000000055922220",
+        "source_ids": [
+          "kb:000000055922220"
+        ],
+        "provider": "kbcard",
+        "issuer_scope": [
+          "KB국민카드"
+        ],
+        "match_basis": "bank_onnuri_flag_fuel_category_name_locality_coordinates_commercial_address",
+        "candidate_ids": [],
+        "note": "KB국민카드 온누리 사용처 조회 기준. 카드사 반영 지연 가능. 지류·QR·다른 카드사는 별도 확인."
+      }
+    },
+    "location_evidence": {
+      "source_type": "commercial_registry",
+      "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+      "source_date": "2026-06-30",
+      "source_id": "MA0101202503A0025892",
+      "bank_distance_m": 12.7
+    }
   }
 ]
