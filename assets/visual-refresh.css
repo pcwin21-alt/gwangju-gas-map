@@ -53,6 +53,7 @@ button,a,summary {touch-action:manipulation;}
 .info-overlay .name {font-size:16px;line-height:1.4;color:var(--ink);}
 .info-overlay .address {font-size:13px;line-height:1.5;}
 .info-overlay .prices {border-radius:10px;}
+.info-overlay .tag,.info-overlay .trip-note {white-space:normal;overflow-wrap:anywhere;}
 .info-overlay a {min-height:40px;display:inline-flex;align-items:center;justify-content:center;}
 .rank-panel,.nearby-panel-box,.help-panel,.react-panel-box {border-radius:24px 24px 0 0;box-shadow:0 -4px 32px #18243c26;}
 .rank-panel-close,.nearby-panel-close,.help-panel-close,.react-panel-close {min-width:44px;min-height:44px;}
