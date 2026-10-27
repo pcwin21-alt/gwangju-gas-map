@@ -1,0 +1,1293 @@
+{
+  "checked_at": "2026-10-27T16:05:05+09:00",
+  "scope": "Jeonnam alternative-source audit, not census or real payment verification",
+  "kb_runs": [
+    {
+      "file": "kb_unfiltered_jeonnam_20261026.json",
+      "sha256": "58e09741f8222784b80dcd73b41c490a189780a75e7a51e86902fc7fe6638e32",
+      "checked_at": "2026-10-26T20:53:45+09:00",
+      "status": "candidate_queue_complete",
+      "planned_queries": 902,
+      "completed_queries": 902,
+      "unique_merchants": 4273
+    },
+    {
+      "file": "kb_registry_gap_20261027.json",
+      "sha256": "39f6b87429c6378813a130531076067f6143d616e6ae79b3072c1f04136be7b9",
+      "checked_at": "2026-10-27T15:55:53+09:00",
+      "status": "candidate_queue_complete",
+      "planned_queries": 103,
+      "completed_queries": 103,
+      "unique_merchants": 778
+    },
+    {
+      "file": "kb_registry_gap_opinet_20261027.json",
+      "sha256": "3329a49123a80b09097c5feb985ae7c2560dcd17795e70b33daf50a74c0807ea",
+      "checked_at": "2026-10-27T16:02:48+09:00",
+      "status": "candidate_queue_complete",
+      "planned_queries": 8,
+      "completed_queries": 8,
+      "unique_merchants": 1
+    }
+  ],
+  "opinet": {
+    "source_url": "https://www.opinet.co.kr/user/custapi/openApiInfoDtl.do?apiId=3",
+    "transport_url": "https://k-skill-proxy.nomadamas.org/v1/opinet/around",
+    "status": "complete",
+    "districts": 22,
+    "requests": 44,
+    "unique_fuel_sites_in_circles": 445,
+    "additional_kb_query_points": 8,
+    "coordinate_crosschecks": 297,
+    "median_coordinate_difference_m": 14.53,
+    "controls": [
+      {
+        "uni_id": "A0021457",
+        "distance_m": 24.69
+      },
+      {
+        "uni_id": "A0021400",
+        "distance_m": 8.18
+      },
+      {
+        "uni_id": "A0021444",
+        "distance_m": 7.93
+      },
+      {
+        "uni_id": "A0008233",
+        "distance_m": 6.84
+      },
+      {
+        "uni_id": "A0021415",
+        "distance_m": 39.51
+      },
+      {
+        "uni_id": "A0021622",
+        "distance_m": 33.66
+      },
+      {
+        "uni_id": "A0021406",
+        "distance_m": 23.98
+      },
+      {
+        "uni_id": "A0021396",
+        "distance_m": 28.95
+      },
+      {
+        "uni_id": "A0020716",
+        "distance_m": 22.66
+      },
+      {
+        "uni_id": "A0019778",
+        "distance_m": 47.11
+      },
+      {
+        "uni_id": "A0021534",
+        "distance_m": 35.96
+      },
+      {
+        "uni_id": "A0021485",
+        "distance_m": 34.72
+      },
+      {
+        "uni_id": "A0021585",
+        "distance_m": 49.54
+      },
+      {
+        "uni_id": "A0021364",
+        "distance_m": 103.02
+      },
+      {
+        "uni_id": "A0022149",
+        "distance_m": 18.45
+      },
+      {
+        "uni_id": "A0022126",
+        "distance_m": 13.29
+      },
+      {
+        "uni_id": "A0021916",
+        "distance_m": 36.32
+      },
+      {
+        "uni_id": "A0021976",
+        "distance_m": 8.47
+      },
+      {
+        "uni_id": "A0021901",
+        "distance_m": 113.25
+      },
+      {
+        "uni_id": "A0019648",
+        "distance_m": 31.99
+      },
+      {
+        "uni_id": "A0019445",
+        "distance_m": 38.49
+      },
+      {
+        "uni_id": "A0019397",
+        "distance_m": 10.56
+      },
+      {
+        "uni_id": "A0019542",
+        "distance_m": 9.12
+      },
+      {
+        "uni_id": "A0019579",
+        "distance_m": 11.44
+      },
+      {
+        "uni_id": "A0019557",
+        "distance_m": 12.85
+      },
+      {
+        "uni_id": "A0019522",
+        "distance_m": 5.66
+      },
+      {
+        "uni_id": "A0022105",
+        "distance_m": 17.44
+      },
+      {
+        "uni_id": "A0021981",
+        "distance_m": 2.3
+      },
+      {
+        "uni_id": "A0021947",
+        "distance_m": 28.38
+      },
+      {
+        "uni_id": "A0021935",
+        "distance_m": 13.9
+      },
+      {
+        "uni_id": "A0033237",
+        "distance_m": 5.01
+      },
+      {
+        "uni_id": "A0022221",
+        "distance_m": 8.74
+      },
+      {
+        "uni_id": "A0021891",
+        "distance_m": 25.63
+      },
+      {
+        "uni_id": "A0022052",
+        "distance_m": 7.71
+      },
+      {
+        "uni_id": "A0022223",
+        "distance_m": 20.89
+      },
+      {
+        "uni_id": "A0033014",
+        "distance_m": 89.8
+      },
+      {
+        "uni_id": "A0020657",
+        "distance_m": 4.3
+      },
+      {
+        "uni_id": "A0022031",
+        "distance_m": 4.51
+      },
+      {
+        "uni_id": "A0019418",
+        "distance_m": 49.24
+      },
+      {
+        "uni_id": "A0022023",
+        "distance_m": 9.63
+      },
+      {
+        "uni_id": "A0022224",
+        "distance_m": 3.44
+      },
+      {
+        "uni_id": "A0021701",
+        "distance_m": 16.74
+      },
+      {
+        "uni_id": "A0022200",
+        "distance_m": 27.24
+      },
+      {
+        "uni_id": "A0021992",
+        "distance_m": 12.37
+      },
+      {
+        "uni_id": "A0021847",
+        "distance_m": 8.82
+      },
+      {
+        "uni_id": "A0022006",
+        "distance_m": 17.02
+      },
+      {
+        "uni_id": "A0021999",
+        "distance_m": 9.98
+      },
+      {
+        "uni_id": "A0018184",
+        "distance_m": 14.31
+      },
+      {
+        "uni_id": "A0021790",
+        "distance_m": 3.01
+      },
+      {
+        "uni_id": "A0021904",
+        "distance_m": 9.58
+      },
+      {
+        "uni_id": "A0021789",
+        "distance_m": 6.93
+      },
+      {
+        "uni_id": "A0021291",
+        "distance_m": 8.94
+      },
+      {
+        "uni_id": "A0021077",
+        "distance_m": 7.82
+      },
+      {
+        "uni_id": "A0021230",
+        "distance_m": 9.18
+      },
+      {
+        "uni_id": "A0021119",
+        "distance_m": 11.76
+      },
+      {
+        "uni_id": "A0033669",
+        "distance_m": 6.69
+      },
+      {
+        "uni_id": "A0021213",
+        "distance_m": 21.31
+      },
+      {
+        "uni_id": "A0021101",
+        "distance_m": 21.23
+      },
+      {
+        "uni_id": "A0021053",
+        "distance_m": 15.05
+      },
+      {
+        "uni_id": "A0021290",
+        "distance_m": 22.52
+      },
+      {
+        "uni_id": "A0021039",
+        "distance_m": 25.17
+      },
+      {
+        "uni_id": "A0021060",
+        "distance_m": 14.74
+      },
+      {
+        "uni_id": "A0021141",
+        "distance_m": 32.17
+      },
+      {
+        "uni_id": "A0019891",
+        "distance_m": 26.78
+      },
+      {
+        "uni_id": "A0019914",
+        "distance_m": 85.53
+      },
+      {
+        "uni_id": "A0019974",
+        "distance_m": 40.16
+      },
+      {
+        "uni_id": "A0019816",
+        "distance_m": 12.87
+      },
+      {
+        "uni_id": "A0019720",
+        "distance_m": 8.69
+      },
+      {
+        "uni_id": "A0019889",
+        "distance_m": 57.35
+      },
+      {
+        "uni_id": "A0019851",
+        "distance_m": 14.68
+      },
+      {
+        "uni_id": "A0020993",
+        "distance_m": 12.4
+      },
+      {
+        "uni_id": "A0020830",
+        "distance_m": 3.08
+      },
+      {
+        "uni_id": "A0020880",
+        "distance_m": 14.38
+      },
+      {
+        "uni_id": "A0020824",
+        "distance_m": 11.82
+      },
+      {
+        "uni_id": "A0020820",
+        "distance_m": 15.77
+      },
+      {
+        "uni_id": "A0020828",
+        "distance_m": 15.21
+      },
+      {
+        "uni_id": "A0020751",
+        "distance_m": 3.36
+      },
+      {
+        "uni_id": "A0020872",
+        "distance_m": 45.4
+      },
+      {
+        "uni_id": "A0020783",
+        "distance_m": 10.01
+      },
+      {
+        "uni_id": "A0032944",
+        "distance_m": 4.67
+      },
+      {
+        "uni_id": "A0020916",
+        "distance_m": 17.43
+      },
+      {
+        "uni_id": "A0020885",
+        "distance_m": 9.13
+      },
+      {
+        "uni_id": "A0020873",
+        "distance_m": 0.96
+      },
+      {
+        "uni_id": "A0020915",
+        "distance_m": 12.24
+      },
+      {
+        "uni_id": "A0020982",
+        "distance_m": 5.39
+      },
+      {
+        "uni_id": "A0020963",
+        "distance_m": 12.29
+      },
+      {
+        "uni_id": "A0021004",
+        "distance_m": 6.05
+      },
+      {
+        "uni_id": "A0020896",
+        "distance_m": 9.91
+      },
+      {
+        "uni_id": "A0020800",
+        "distance_m": 12.36
+      },
+      {
+        "uni_id": "A0020941",
+        "distance_m": 54.32
+      },
+      {
+        "uni_id": "A0032699",
+        "distance_m": 4.94
+      },
+      {
+        "uni_id": "A0020769",
+        "distance_m": 47.06
+      },
+      {
+        "uni_id": "A0020929",
+        "distance_m": 14.48
+      },
+      {
+        "uni_id": "A0020725",
+        "distance_m": 9.34
+      },
+      {
+        "uni_id": "A0020989",
+        "distance_m": 7.25
+      },
+      {
+        "uni_id": "A0032987",
+        "distance_m": 10.6
+      },
+      {
+        "uni_id": "A0020956",
+        "distance_m": 9.09
+      },
+      {
+        "uni_id": "A0020891",
+        "distance_m": 10.5
+      },
+      {
+        "uni_id": "A0020955",
+        "distance_m": 37.47
+      },
+      {
+        "uni_id": "A0020923",
+        "distance_m": 39.52
+      },
+      {
+        "uni_id": "A0020850",
+        "distance_m": 6.42
+      },
+      {
+        "uni_id": "A0020925",
+        "distance_m": 47.88
+      },
+      {
+        "uni_id": "A0020936",
+        "distance_m": 20.44
+      },
+      {
+        "uni_id": "A0005193",
+        "distance_m": 12.6
+      },
+      {
+        "uni_id": "A0020979",
+        "distance_m": 82.53
+      },
+      {
+        "uni_id": "A0020876",
+        "distance_m": 32.91
+      },
+      {
+        "uni_id": "A0020906",
+        "distance_m": 15.06
+      },
+      {
+        "uni_id": "A0020959",
+        "distance_m": 13.46
+      },
+      {
+        "uni_id": "A0020910",
+        "distance_m": 13.79
+      },
+      {
+        "uni_id": "A0020931",
+        "distance_m": 13.6
+      },
+      {
+        "uni_id": "A0020858",
+        "distance_m": 25.33
+      },
+      {
+        "uni_id": "A0020804",
+        "distance_m": 44.44
+      },
+      {
+        "uni_id": "A0021737",
+        "distance_m": 45.29
+      },
+      {
+        "uni_id": "A0021353",
+        "distance_m": 17.59
+      },
+      {
+        "uni_id": "A0020113",
+        "distance_m": 5.5
+      },
+      {
+        "uni_id": "A0021360",
+        "distance_m": 38.3
+      },
+      {
+        "uni_id": "A0021826",
+        "distance_m": 6.42
+      },
+      {
+        "uni_id": "A0021385",
+        "distance_m": 16.59
+      },
+      {
+        "uni_id": "A0021942",
+        "distance_m": 28.71
+      },
+      {
+        "uni_id": "A0021919",
+        "distance_m": 43.61
+      },
+      {
+        "uni_id": "A0021683",
+        "distance_m": 53.37
+      },
+      {
+        "uni_id": "A0022033",
+        "distance_m": 25.99
+      },
+      {
+        "uni_id": "A0021827",
+        "distance_m": 18.54
+      },
+      {
+        "uni_id": "A0022013",
+        "distance_m": 1.76
+      },
+      {
+        "uni_id": "A0021989",
+        "distance_m": 20.34
+      },
+      {
+        "uni_id": "A0021805",
+        "distance_m": 40.54
+      },
+      {
+        "uni_id": "A0021890",
+        "distance_m": 7.9
+      },
+      {
+        "uni_id": "A0021742",
+        "distance_m": 29.26
+      },
+      {
+        "uni_id": "A0021906",
+        "distance_m": 13.28
+      },
+      {
+        "uni_id": "A0022141",
+        "distance_m": 13.23
+      },
+      {
+        "uni_id": "A0020609",
+        "distance_m": 18.63
+      },
+      {
+        "uni_id": "A0021811",
+        "distance_m": 21.96
+      },
+      {
+        "uni_id": "A0021895",
+        "distance_m": 24.35
+      },
+      {
+        "uni_id": "A0021724",
+        "distance_m": 4.82
+      },
+      {
+        "uni_id": "A0021771",
+        "distance_m": 15.03
+      },
+      {
+        "uni_id": "A0021730",
+        "distance_m": 32.01
+      },
+      {
+        "uni_id": "A0021894",
+        "distance_m": 11.12
+      },
+      {
+        "uni_id": "A0033072",
+        "distance_m": 68.55
+      },
+      {
+        "uni_id": "A0021959",
+        "distance_m": 31.8
+      },
+      {
+        "uni_id": "A0021728",
+        "distance_m": 19.85
+      },
+      {
+        "uni_id": "A0020656",
+        "distance_m": 13.73
+      },
+      {
+        "uni_id": "A0022087",
+        "distance_m": 26.79
+      },
+      {
+        "uni_id": "A0021782",
+        "distance_m": 16.28
+      },
+      {
+        "uni_id": "A0021940",
+        "distance_m": 41.31
+      },
+      {
+        "uni_id": "A0021868",
+        "distance_m": 19.91
+      },
+      {
+        "uni_id": "A0021975",
+        "distance_m": 4.36
+      },
+      {
+        "uni_id": "A0021751",
+        "distance_m": 16.37
+      },
+      {
+        "uni_id": "A0021971",
+        "distance_m": 11.54
+      },
+      {
+        "uni_id": "A0022010",
+        "distance_m": 21.0
+      },
+      {
+        "uni_id": "A0022070",
+        "distance_m": 7.07
+      },
+      {
+        "uni_id": "A0021669",
+        "distance_m": 9.21
+      },
+      {
+        "uni_id": "A0020778",
+        "distance_m": 23.77
+      },
+      {
+        "uni_id": "A0021766",
+        "distance_m": 24.64
+      },
+      {
+        "uni_id": "A0022166",
+        "distance_m": 4.92
+      },
+      {
+        "uni_id": "A0021726",
+        "distance_m": 10.59
+      },
+      {
+        "uni_id": "A0022043",
+        "distance_m": 15.6
+      },
+      {
+        "uni_id": "A0021966",
+        "distance_m": 16.01
+      },
+      {
+        "uni_id": "A0021729",
+        "distance_m": 9.58
+      },
+      {
+        "uni_id": "A0021823",
+        "distance_m": 7.65
+      },
+      {
+        "uni_id": "A0021863",
+        "distance_m": 20.52
+      },
+      {
+        "uni_id": "A0021887",
+        "distance_m": 5.4
+      },
+      {
+        "uni_id": "A0021882",
+        "distance_m": 39.23
+      },
+      {
+        "uni_id": "A0021921",
+        "distance_m": 23.19
+      },
+      {
+        "uni_id": "A0020840",
+        "distance_m": 34.12
+      },
+      {
+        "uni_id": "A0020883",
+        "distance_m": 25.28
+      },
+      {
+        "uni_id": "A0020878",
+        "distance_m": 2.25
+      },
+      {
+        "uni_id": "A0020464",
+        "distance_m": 12.77
+      },
+      {
+        "uni_id": "A0020784",
+        "distance_m": 4.33
+      },
+      {
+        "uni_id": "A0022480",
+        "distance_m": 7.43
+      },
+      {
+        "uni_id": "A0022304",
+        "distance_m": 31.45
+      },
+      {
+        "uni_id": "A0017645",
+        "distance_m": 0.52
+      },
+      {
+        "uni_id": "A0010114",
+        "distance_m": 32.68
+      },
+      {
+        "uni_id": "A0022430",
+        "distance_m": 16.35
+      },
+      {
+        "uni_id": "A0022406",
+        "distance_m": 4.02
+      },
+      {
+        "uni_id": "A0022329",
+        "distance_m": 3.92
+      },
+      {
+        "uni_id": "A0022345",
+        "distance_m": 9.62
+      },
+      {
+        "uni_id": "A0022266",
+        "distance_m": 28.84
+      },
+      {
+        "uni_id": "A0022457",
+        "distance_m": 40.36
+      },
+      {
+        "uni_id": "A0022260",
+        "distance_m": 16.44
+      },
+      {
+        "uni_id": "A0022394",
+        "distance_m": 9.24
+      },
+      {
+        "uni_id": "A0022433",
+        "distance_m": 2.12
+      },
+      {
+        "uni_id": "A0022392",
+        "distance_m": 17.74
+      },
+      {
+        "uni_id": "A0022246",
+        "distance_m": 1.7
+      },
+      {
+        "uni_id": "A0033159",
+        "distance_m": 59.95
+      },
+      {
+        "uni_id": "A0021362",
+        "distance_m": 4.03
+      },
+      {
+        "uni_id": "A0022296",
+        "distance_m": 106.36
+      },
+      {
+        "uni_id": "A0022250",
+        "distance_m": 6.08
+      },
+      {
+        "uni_id": "A0022361",
+        "distance_m": 6.93
+      },
+      {
+        "uni_id": "A0022265",
+        "distance_m": 4.28
+      },
+      {
+        "uni_id": "A0022440",
+        "distance_m": 16.91
+      },
+      {
+        "uni_id": "A0021763",
+        "distance_m": 21.44
+      },
+      {
+        "uni_id": "A0022293",
+        "distance_m": 14.63
+      },
+      {
+        "uni_id": "A0022274",
+        "distance_m": 39.71
+      },
+      {
+        "uni_id": "A0022414",
+        "distance_m": 14.47
+      },
+      {
+        "uni_id": "A0022342",
+        "distance_m": 6.54
+      },
+      {
+        "uni_id": "A0022396",
+        "distance_m": 6.21
+      },
+      {
+        "uni_id": "A0022422",
+        "distance_m": 7.09
+      },
+      {
+        "uni_id": "A0022399",
+        "distance_m": 26.62
+      },
+      {
+        "uni_id": "A0022323",
+        "distance_m": 2.99
+      },
+      {
+        "uni_id": "A0022395",
+        "distance_m": 1.96
+      },
+      {
+        "uni_id": "A0022453",
+        "distance_m": 17.3
+      },
+      {
+        "uni_id": "A0022409",
+        "distance_m": 64.49
+      },
+      {
+        "uni_id": "A0019412",
+        "distance_m": 24.83
+      },
+      {
+        "uni_id": "A0022384",
+        "distance_m": 47.83
+      },
+      {
+        "uni_id": "A0022423",
+        "distance_m": 151.61
+      },
+      {
+        "uni_id": "A0022485",
+        "distance_m": 18.5
+      },
+      {
+        "uni_id": "A0022247",
+        "distance_m": 23.37
+      },
+      {
+        "uni_id": "A0022391",
+        "distance_m": 50.93
+      },
+      {
+        "uni_id": "A0022272",
+        "distance_m": 15.3
+      },
+      {
+        "uni_id": "A0020422",
+        "distance_m": 8.7
+      },
+      {
+        "uni_id": "A0020476",
+        "distance_m": 5.15
+      },
+      {
+        "uni_id": "A0020324",
+        "distance_m": 20.24
+      },
+      {
+        "uni_id": "A0020161",
+        "distance_m": 32.76
+      },
+      {
+        "uni_id": "A0020313",
+        "distance_m": 44.57
+      },
+      {
+        "uni_id": "A0020186",
+        "distance_m": 16.05
+      },
+      {
+        "uni_id": "A0020191",
+        "distance_m": 43.85
+      },
+      {
+        "uni_id": "A0020632",
+        "distance_m": 14.43
+      },
+      {
+        "uni_id": "A0020106",
+        "distance_m": 12.58
+      },
+      {
+        "uni_id": "A0020675",
+        "distance_m": 11.62
+      },
+      {
+        "uni_id": "A0020312",
+        "distance_m": 5.63
+      },
+      {
+        "uni_id": "A0020289",
+        "distance_m": 4.2
+      },
+      {
+        "uni_id": "A0018014",
+        "distance_m": 9.75
+      },
+      {
+        "uni_id": "A0020419",
+        "distance_m": 8.7
+      },
+      {
+        "uni_id": "A0020444",
+        "distance_m": 25.67
+      },
+      {
+        "uni_id": "A0020965",
+        "distance_m": 39.68
+      },
+      {
+        "uni_id": "A0020942",
+        "distance_m": 8.88
+      },
+      {
+        "uni_id": "A0020887",
+        "distance_m": 17.6
+      },
+      {
+        "uni_id": "A0021504",
+        "distance_m": 35.16
+      },
+      {
+        "uni_id": "A0021548",
+        "distance_m": 13.35
+      },
+      {
+        "uni_id": "A0021666",
+        "distance_m": 43.37
+      },
+      {
+        "uni_id": "A0021479",
+        "distance_m": 10.25
+      },
+      {
+        "uni_id": "A0021544",
+        "distance_m": 4.17
+      },
+      {
+        "uni_id": "A0021471",
+        "distance_m": 15.24
+      },
+      {
+        "uni_id": "A0021503",
+        "distance_m": 92.44
+      },
+      {
+        "uni_id": "A0019725",
+        "distance_m": 11.38
+      },
+      {
+        "uni_id": "A0019776",
+        "distance_m": 6.36
+      },
+      {
+        "uni_id": "A0019958",
+        "distance_m": 20.62
+      },
+      {
+        "uni_id": "A0033523",
+        "distance_m": 16.02
+      },
+      {
+        "uni_id": "A0020287",
+        "distance_m": 9.8
+      },
+      {
+        "uni_id": "A0019963",
+        "distance_m": 12.29
+      },
+      {
+        "uni_id": "A0020026",
+        "distance_m": 23.07
+      },
+      {
+        "uni_id": "A0019867",
+        "distance_m": 25.86
+      },
+      {
+        "uni_id": "A0019928",
+        "distance_m": 16.33
+      },
+      {
+        "uni_id": "A0019916",
+        "distance_m": 5.07
+      },
+      {
+        "uni_id": "A0019933",
+        "distance_m": 24.74
+      },
+      {
+        "uni_id": "A0019861",
+        "distance_m": 2.94
+      },
+      {
+        "uni_id": "A0019713",
+        "distance_m": 15.89
+      },
+      {
+        "uni_id": "A0021646",
+        "distance_m": 10.48
+      },
+      {
+        "uni_id": "A0021541",
+        "distance_m": 11.61
+      },
+      {
+        "uni_id": "A0021577",
+        "distance_m": 13.73
+      },
+      {
+        "uni_id": "A0021408",
+        "distance_m": 34.64
+      },
+      {
+        "uni_id": "A0021562",
+        "distance_m": 2.4
+      },
+      {
+        "uni_id": "A0021413",
+        "distance_m": 38.19
+      },
+      {
+        "uni_id": "A0021470",
+        "distance_m": 30.05
+      },
+      {
+        "uni_id": "A0021472",
+        "distance_m": 2.98
+      },
+      {
+        "uni_id": "A0021637",
+        "distance_m": 22.55
+      },
+      {
+        "uni_id": "A0021483",
+        "distance_m": 6.9
+      },
+      {
+        "uni_id": "A0021613",
+        "distance_m": 6.08
+      },
+      {
+        "uni_id": "A0021558",
+        "distance_m": 23.98
+      },
+      {
+        "uni_id": "A0021500",
+        "distance_m": 6.67
+      },
+      {
+        "uni_id": "A0021638",
+        "distance_m": 0.61
+      },
+      {
+        "uni_id": "A0021572",
+        "distance_m": 12.47
+      },
+      {
+        "uni_id": "A0033466",
+        "distance_m": 13.17
+      },
+      {
+        "uni_id": "A0021136",
+        "distance_m": 22.62
+      },
+      {
+        "uni_id": "A0021079",
+        "distance_m": 13.62
+      },
+      {
+        "uni_id": "A0021026",
+        "distance_m": 2.74
+      },
+      {
+        "uni_id": "A0021317",
+        "distance_m": 20.65
+      },
+      {
+        "uni_id": "A0021312",
+        "distance_m": 18.77
+      },
+      {
+        "uni_id": "A0021043",
+        "distance_m": 8.82
+      },
+      {
+        "uni_id": "A0021176",
+        "distance_m": 10.21
+      },
+      {
+        "uni_id": "A0007730",
+        "distance_m": 68.21
+      },
+      {
+        "uni_id": "A0021156",
+        "distance_m": 15.58
+      },
+      {
+        "uni_id": "A0021287",
+        "distance_m": 54.32
+      },
+      {
+        "uni_id": "A0021086",
+        "distance_m": 4.5
+      },
+      {
+        "uni_id": "A0021249",
+        "distance_m": 19.03
+      },
+      {
+        "uni_id": "A0021580",
+        "distance_m": 15.13
+      },
+      {
+        "uni_id": "A0021629",
+        "distance_m": 11.18
+      },
+      {
+        "uni_id": "A0021531",
+        "distance_m": 70.02
+      },
+      {
+        "uni_id": "A0021557",
+        "distance_m": 8.41
+      },
+      {
+        "uni_id": "A0021630",
+        "distance_m": 6.12
+      },
+      {
+        "uni_id": "A0006096",
+        "distance_m": 14.53
+      },
+      {
+        "uni_id": "A0021567",
+        "distance_m": 10.7
+      },
+      {
+        "uni_id": "A0021367",
+        "distance_m": 19.7
+      },
+      {
+        "uni_id": "A0019398",
+        "distance_m": 5.38
+      },
+      {
+        "uni_id": "A0019602",
+        "distance_m": 19.57
+      },
+      {
+        "uni_id": "A0021217",
+        "distance_m": 3.95
+      },
+      {
+        "uni_id": "A0019401",
+        "distance_m": 4.98
+      },
+      {
+        "uni_id": "A0019651",
+        "distance_m": 38.1
+      },
+      {
+        "uni_id": "A0019506",
+        "distance_m": 12.35
+      },
+      {
+        "uni_id": "A0019790",
+        "distance_m": 5.6
+      },
+      {
+        "uni_id": "A0019599",
+        "distance_m": 13.52
+      },
+      {
+        "uni_id": "A0019586",
+        "distance_m": 11.5
+      },
+      {
+        "uni_id": "A0019653",
+        "distance_m": 25.75
+      },
+      {
+        "uni_id": "A0019690",
+        "distance_m": 10.5
+      },
+      {
+        "uni_id": "A0019596",
+        "distance_m": 9.59
+      },
+      {
+        "uni_id": "A0019390",
+        "distance_m": 43.8
+      },
+      {
+        "uni_id": "A0019471",
+        "distance_m": 12.67
+      }
+    ]
+  },
+  "new_verified_jeonnam_stations": 0,
+  "map_jeonnam_rows": 27,
+  "map_changed": false,
+  "identity_review": [
+    {
+      "name": "(주)백동산업",
+      "bank_id": "000000094538059",
+      "status": "hold_conflicting_current_business",
+      "bank_onNuliGb": "1",
+      "bank_category": "주유소",
+      "reason": "Same phone/address also reported as hardware and paint retailer; cannot verify current vehicle fuel operation. Absence from nearby Opinet is not proof of closure.",
+      "sources": [
+        "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+        "https://bizno.net/article/3328801336",
+        "https://www.saramin.co.kr/zf_user/company-info/view/csn/ZFFVSWxXdm5YNVRzYlE0THZ4ZVdodz09/company_nm/%28%EC%A3%BC%29%EB%B0%B1%EB%8F%99"
+      ]
+    },
+    {
+      "name": "(주)일프로주유소",
+      "status": "already_mapped_gwangju_not_new_jeonnam",
+      "reason": "Found from a Jeonnam LPG source coordinate that falls in Gwangju."
+    }
+  ],
+  "source_coordinate_anomaly": {
+    "name": "(주)드림투게더LPG충전소",
+    "address": "나주시 혁신로 306",
+    "lat": 35.1500822,
+    "lng": 126.8559071,
+    "source_url": "https://www.data.go.kr/data/15001643/fileData.do",
+    "decision": "retain raw row, do not use as confirmed Naju location"
+  },
+  "reverse_matching": {
+    "merchant_count": 4926,
+    "nonfuel_category_close_matches": 32,
+    "exact_normalized_name_matches": 1,
+    "exact_match_name": "장성농협주유소",
+    "decision": "already mapped; others do not establish fuel payment"
+  },
+  "failed_paths": [
+    {
+      "path": "LOCALDATA skill 석유판매업 백동 전남담양군",
+      "status": "unavailable",
+      "reason": "download HTTPError",
+      "negative_membership_evidence": false
+    },
+    {
+      "path": "Samhwa dealer page direct request",
+      "status": "unavailable",
+      "reason": "RemoteDisconnected; web text has search template, no matched store record",
+      "negative_membership_evidence": false
+    }
+  ],
+  "limitations": [
+    "KB no-result does not prove nonmembership.",
+    "Opinet 22 dense circles omit rural/island gaps and may include cross-boundary sites.",
+    "Public standard fuel file covers only 11 of 22 Jeonnam districts.",
+    "All merchant counts include nonfuel businesses.",
+    "No new verification date was assigned to existing map rows."
+  ]
+}

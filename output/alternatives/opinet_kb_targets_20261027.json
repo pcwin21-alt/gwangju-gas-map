@@ -1,0 +1,500 @@
+{
+  "scope": "Opinet fuel sites more than 450m from completed KB centers; not guaranteed uncovered",
+  "completed_kb_centers": 1011,
+  "rows": [
+    {
+      "상가업소번호": "opinet:A0021361",
+      "상호명": "해피주유소",
+      "도로명주소": "전남광주통합특별시 고흥군 점암면 우주항공로 2901",
+      "상권업종소분류코드": "",
+      "위도": 34.655617987225426,
+      "경도": 127.34828431002406,
+      "region": "전남",
+      "source_url": "https://www.opinet.co.kr/user/custapi/openApiInfoDtl.do?apiId=3",
+      "opinet_record": {
+        "UNI_ID": "A0021361",
+        "POLL_DIV_CD": "SOL",
+        "OS_NM": "해피주유소",
+        "PRICE": 1875,
+        "DISTANCE": 539.0,
+        "GIS_X_COOR": 340460.0,
+        "GIS_Y_COOR": 228816.0,
+        "lat": 34.655617987225426,
+        "lng": 127.34828431002406,
+        "checked_at": "2026-10-27T15:58:21+09:00",
+        "product": "B027",
+        "nearest_completed_kb_query_m": 540.8
+      },
+      "opinet_detail": {
+        "UNI_ID": "A0021361",
+        "POLL_DIV_CO": "SOL",
+        "GPOLL_DIV_CO": "   ",
+        "OS_NM": "해피주유소",
+        "VAN_ADR": "전남광주통합특별시 고흥군 점암면 연봉리 186-6",
+        "NEW_ADR": "전남광주통합특별시 고흥군 점암면 우주항공로 2901",
+        "TEL": "061-832-3001",
+        "SIGUNCD": "2024",
+        "LPG_YN": "N",
+        "MAINT_YN": "N",
+        "CAR_WASH_YN": "N",
+        "KPETRO_YN": "N",
+        "CVS_YN": "N",
+        "GOOD_YN": "N",
+        "GOOD_YN5": "N",
+        "GIS_X_COOR": 340460.0,
+        "GIS_Y_COOR": 228816.0,
+        "OIL_PRICE": [
+          {
+            "PRODCD": "B027",
+            "PRICE": 1875,
+            "TRADE_DT": "20261027",
+            "TRADE_TM": "122358"
+          },
+          {
+            "PRODCD": "D047",
+            "PRICE": 1855,
+            "TRADE_DT": "20261027",
+            "TRADE_TM": "111814"
+          },
+          {
+            "PRODCD": "C004",
+            "PRICE": 1600,
+            "TRADE_DT": "20261025",
+            "TRADE_TM": "110303"
+          }
+        ]
+      },
+      "scope": "fuel_location_only_not_Onnuri_evidence"
+    },
+    {
+      "상가업소번호": "opinet:A0021348",
+      "상호명": "파랑새LPG충전소",
+      "도로명주소": "전남광주통합특별시 고흥군 점암면 우주항공로 2878",
+      "상권업종소분류코드": "",
+      "위도": 34.65629670255026,
+      "경도": 127.35385381408118,
+      "region": "전남",
+      "source_url": "https://www.opinet.co.kr/user/custapi/openApiInfoDtl.do?apiId=3",
+      "opinet_record": {
+        "UNI_ID": "A0021348",
+        "POLL_DIV_CD": "HDO",
+        "OS_NM": "파랑새LPG충전소",
+        "PRICE": 1182,
+        "DISTANCE": 450.5,
+        "GIS_X_COOR": 340971.0,
+        "GIS_Y_COOR": 228888.0,
+        "lat": 34.65629670255026,
+        "lng": 127.35385381408118,
+        "checked_at": "2026-10-27T15:58:24+09:00",
+        "product": "K015",
+        "nearest_completed_kb_query_m": 452.1
+      },
+      "opinet_detail": {
+        "UNI_ID": "A0021348",
+        "POLL_DIV_CO": "HDO",
+        "GPOLL_DIV_CO": "HDO",
+        "OS_NM": "파랑새LPG충전소",
+        "VAN_ADR": "전남광주통합특별시 고흥군 점암면 연봉리 483-1",
+        "NEW_ADR": "전남광주통합특별시 고흥군 점암면 우주항공로 2878",
+        "TEL": "061-834-2400",
+        "SIGUNCD": "2024",
+        "LPG_YN": "Y",
+        "MAINT_YN": "N",
+        "CAR_WASH_YN": "Y",
+        "KPETRO_YN": "N",
+        "CVS_YN": "Y",
+        "GOOD_YN": "N",
+        "GOOD_YN5": "N",
+        "GIS_X_COOR": 340971.0,
+        "GIS_Y_COOR": 228888.0,
+        "OIL_PRICE": [
+          {
+            "PRODCD": "K015",
+            "PRICE": 1182,
+            "TRADE_DT": "20261027",
+            "TRADE_TM": "111306"
+          }
+        ]
+      },
+      "scope": "fuel_location_only_not_Onnuri_evidence"
+    },
+    {
+      "상가업소번호": "opinet:A0021092",
+      "상호명": "양산주유소(SK)",
+      "도로명주소": "전남광주통합특별시 나주시 왕곡면 예향로 3379",
+      "상권업종소분류코드": "",
+      "위도": 34.95904180340421,
+      "경도": 126.70704465382973,
+      "region": "전남",
+      "source_url": "https://www.opinet.co.kr/user/custapi/openApiInfoDtl.do?apiId=3",
+      "opinet_record": {
+        "UNI_ID": "A0021092",
+        "POLL_DIV_CD": "SKE",
+        "OS_NM": "양산주유소(SK)",
+        "PRICE": 1869,
+        "DISTANCE": 2877.0,
+        "GIS_X_COOR": 282113.9316,
+        "GIS_Y_COOR": 263044.2285,
+        "lat": 34.95904180340421,
+        "lng": 126.70704465382973,
+        "checked_at": "2026-10-27T15:58:45+09:00",
+        "product": "B027",
+        "nearest_completed_kb_query_m": 1466.4
+      },
+      "opinet_detail": {
+        "UNI_ID": "A0021092",
+        "POLL_DIV_CO": "SKE",
+        "GPOLL_DIV_CO": "   ",
+        "OS_NM": "양산주유소(SK)",
+        "VAN_ADR": "전남광주통합특별시 나주시 왕곡면 양산리319-2",
+        "NEW_ADR": "전남광주통합특별시 나주시 왕곡면 예향로 3379",
+        "TEL": "061-337-8886",
+        "SIGUNCD": "2009",
+        "LPG_YN": "N",
+        "MAINT_YN": "N",
+        "CAR_WASH_YN": "Y",
+        "KPETRO_YN": "N",
+        "CVS_YN": "Y",
+        "GOOD_YN": "N",
+        "GOOD_YN5": "N",
+        "GIS_X_COOR": 282113.9316,
+        "GIS_Y_COOR": 263044.2285,
+        "OIL_PRICE": [
+          {
+            "PRODCD": "B027",
+            "PRICE": 1869,
+            "TRADE_DT": "20261027",
+            "TRADE_TM": "110316"
+          },
+          {
+            "PRODCD": "D047",
+            "PRICE": 1839,
+            "TRADE_DT": "20261027",
+            "TRADE_TM": "124125"
+          },
+          {
+            "PRODCD": "C004",
+            "PRICE": 1600,
+            "TRADE_DT": "20261023",
+            "TRADE_TM": "093141"
+          }
+        ]
+      },
+      "scope": "fuel_location_only_not_Onnuri_evidence"
+    },
+    {
+      "상가업소번호": "opinet:A0033143",
+      "상호명": "봉산농협주유소",
+      "도로명주소": "전남광주통합특별시 담양군 봉산면 면앙정로 266",
+      "상권업종소분류코드": "",
+      "위도": 35.274953615570595,
+      "경도": 126.95511503768111,
+      "region": "전남",
+      "source_url": "https://www.opinet.co.kr/user/custapi/openApiInfoDtl.do?apiId=3",
+      "opinet_record": {
+        "UNI_ID": "A0033143",
+        "POLL_DIV_CD": "NHO",
+        "OS_NM": "봉산농협주유소",
+        "PRICE": 1860,
+        "DISTANCE": 3687.0,
+        "GIS_X_COOR": 305138.41663,
+        "GIS_Y_COOR": 297826.37035,
+        "lat": 35.274953615570595,
+        "lng": 126.95511503768111,
+        "checked_at": "2026-10-27T15:58:51+09:00",
+        "product": "B027",
+        "nearest_completed_kb_query_m": 2026.1
+      },
+      "opinet_detail": {
+        "UNI_ID": "A0033143",
+        "POLL_DIV_CO": "NHO",
+        "GPOLL_DIV_CO": "   ",
+        "OS_NM": "봉산농협주유소",
+        "VAN_ADR": "전남광주통합특별시 담양군 봉산면 신학리 563-3",
+        "NEW_ADR": "전남광주통합특별시 담양군 봉산면 면앙정로 266",
+        "TEL": "061-382-6783",
+        "SIGUNCD": "2021",
+        "LPG_YN": "N",
+        "MAINT_YN": "N",
+        "CAR_WASH_YN": "Y",
+        "KPETRO_YN": "N",
+        "CVS_YN": "N",
+        "GOOD_YN": "N",
+        "GOOD_YN5": "N",
+        "GIS_X_COOR": 305138.41663,
+        "GIS_Y_COOR": 297826.37035,
+        "OIL_PRICE": [
+          {
+            "PRODCD": "D047",
+            "PRICE": 1850,
+            "TRADE_DT": "20261027",
+            "TRADE_TM": "135049"
+          },
+          {
+            "PRODCD": "C004",
+            "PRICE": 1550,
+            "TRADE_DT": "20261027",
+            "TRADE_TM": "145451"
+          },
+          {
+            "PRODCD": "B027",
+            "PRICE": 1860,
+            "TRADE_DT": "20261027",
+            "TRADE_TM": "143031"
+          }
+        ]
+      },
+      "scope": "fuel_location_only_not_Onnuri_evidence"
+    },
+    {
+      "상가업소번호": "opinet:A0021015",
+      "상호명": "대불항주유소 (주)미광티엔씨",
+      "도로명주소": "전남광주통합특별시 영암군 삼호읍 대불로 737",
+      "상권업종소분류코드": "",
+      "위도": 34.77528223850103,
+      "경도": 126.42630204027297,
+      "region": "전남",
+      "source_url": "https://www.opinet.co.kr/user/custapi/openApiInfoDtl.do?apiId=3",
+      "opinet_record": {
+        "UNI_ID": "A0021015",
+        "POLL_DIV_CD": "GSC",
+        "OS_NM": "대불항주유소 (주)미광티엔씨",
+        "PRICE": 1848,
+        "DISTANCE": 2940.9,
+        "GIS_X_COOR": 256152.0,
+        "GIS_Y_COOR": 243025.0,
+        "lat": 34.77528223850103,
+        "lng": 126.42630204027297,
+        "checked_at": "2026-10-27T15:59:39+09:00",
+        "product": "B027",
+        "nearest_completed_kb_query_m": 555.9
+      },
+      "opinet_detail": {
+        "UNI_ID": "A0021015",
+        "POLL_DIV_CO": "GSC",
+        "GPOLL_DIV_CO": "   ",
+        "OS_NM": "대불항주유소 (주)미광티엔씨",
+        "VAN_ADR": "전남광주통합특별시 영암군 삼호읍 난전리1685-14",
+        "NEW_ADR": "전남광주통합특별시 영암군 삼호읍 대불로 737",
+        "TEL": "061-462-0306",
+        "SIGUNCD": "2030",
+        "LPG_YN": "N",
+        "MAINT_YN": "N",
+        "CAR_WASH_YN": "N",
+        "KPETRO_YN": "N",
+        "CVS_YN": "N",
+        "GOOD_YN": "N",
+        "GOOD_YN5": "N",
+        "GIS_X_COOR": 256152.0,
+        "GIS_Y_COOR": 243025.0,
+        "OIL_PRICE": [
+          {
+            "PRODCD": "B027",
+            "PRICE": 1848,
+            "TRADE_DT": "20261027",
+            "TRADE_TM": "145014"
+          },
+          {
+            "PRODCD": "D047",
+            "PRICE": 1828,
+            "TRADE_DT": "20261027",
+            "TRADE_TM": "143155"
+          }
+        ]
+      },
+      "scope": "fuel_location_only_not_Onnuri_evidence"
+    },
+    {
+      "상가업소번호": "opinet:A0021388",
+      "상호명": "벌교농협주유소",
+      "도로명주소": "전남광주통합특별시 보성군 벌교읍 채동선로 734-2",
+      "상권업종소분류코드": "",
+      "위도": 34.87635191665921,
+      "경도": 127.31259153257407,
+      "region": "전남",
+      "source_url": "https://www.opinet.co.kr/user/custapi/openApiInfoDtl.do?apiId=3",
+      "opinet_record": {
+        "UNI_ID": "A0021388",
+        "POLL_DIV_CD": "NHO",
+        "OS_NM": "벌교농협주유소",
+        "PRICE": 1859,
+        "DISTANCE": 4229.5,
+        "GIS_X_COOR": 337355.8,
+        "GIS_Y_COOR": 253323.6,
+        "lat": 34.87635191665921,
+        "lng": 127.31259153257407,
+        "checked_at": "2026-10-27T15:59:09+09:00",
+        "product": "B027",
+        "nearest_completed_kb_query_m": 2177.5
+      },
+      "opinet_detail": {
+        "UNI_ID": "A0021388",
+        "POLL_DIV_CO": "NHO",
+        "GPOLL_DIV_CO": "   ",
+        "OS_NM": "벌교농협주유소",
+        "VAN_ADR": "전남광주통합특별시 보성군 벌교읍 낙성리 77-7",
+        "NEW_ADR": "전남광주통합특별시 보성군 벌교읍 채동선로 734-2",
+        "TEL": "061-857-5182",
+        "SIGUNCD": "2025",
+        "LPG_YN": "N",
+        "MAINT_YN": "N",
+        "CAR_WASH_YN": "N",
+        "KPETRO_YN": "N",
+        "CVS_YN": "N",
+        "GOOD_YN": "N",
+        "GOOD_YN5": "N",
+        "GIS_X_COOR": 337355.8,
+        "GIS_Y_COOR": 253323.6,
+        "OIL_PRICE": [
+          {
+            "PRODCD": "C004",
+            "PRICE": 1500,
+            "TRADE_DT": "20261027",
+            "TRADE_TM": "094224"
+          },
+          {
+            "PRODCD": "B027",
+            "PRICE": 1859,
+            "TRADE_DT": "20261027",
+            "TRADE_TM": "113223"
+          },
+          {
+            "PRODCD": "D047",
+            "PRICE": 1849,
+            "TRADE_DT": "20261027",
+            "TRADE_TM": "145059"
+          }
+        ]
+      },
+      "scope": "fuel_location_only_not_Onnuri_evidence"
+    },
+    {
+      "상가업소번호": "opinet:A0021845",
+      "상호명": "양지주유소",
+      "도로명주소": "전남광주통합특별시 여수시 만성로 80 (미평동)",
+      "상권업종소분류코드": "",
+      "위도": 34.77039285817889,
+      "경도": 127.70469836326797,
+      "region": "전남",
+      "source_url": "https://www.opinet.co.kr/user/custapi/openApiInfoDtl.do?apiId=3",
+      "opinet_record": {
+        "UNI_ID": "A0021845",
+        "POLL_DIV_CD": "HDO",
+        "OS_NM": "양지주유소",
+        "PRICE": 1819,
+        "DISTANCE": 972.9,
+        "GIS_X_COOR": 373167.0,
+        "GIS_Y_COOR": 241394.0,
+        "lat": 34.77039285817889,
+        "lng": 127.70469836326797,
+        "checked_at": "2026-10-27T15:59:27+09:00",
+        "product": "B027",
+        "nearest_completed_kb_query_m": 578.2
+      },
+      "opinet_detail": {
+        "UNI_ID": "A0021845",
+        "POLL_DIV_CO": "HDO",
+        "GPOLL_DIV_CO": "   ",
+        "OS_NM": "양지주유소",
+        "VAN_ADR": "전남광주통합특별시 여수시 미평동 668-10",
+        "NEW_ADR": "전남광주통합특별시 여수시 만성로 80 (미평동)",
+        "TEL": "061-651-4044",
+        "SIGUNCD": "2007",
+        "LPG_YN": "N",
+        "MAINT_YN": "N",
+        "CAR_WASH_YN": "N",
+        "KPETRO_YN": "N",
+        "CVS_YN": "N",
+        "GOOD_YN": "N",
+        "GOOD_YN5": "N",
+        "GIS_X_COOR": 373167.0,
+        "GIS_Y_COOR": 241394.0,
+        "OIL_PRICE": [
+          {
+            "PRODCD": "B027",
+            "PRICE": 1819,
+            "TRADE_DT": "20261027",
+            "TRADE_TM": "145151"
+          },
+          {
+            "PRODCD": "B034",
+            "PRICE": 2445,
+            "TRADE_DT": "20261027",
+            "TRADE_TM": "135317"
+          },
+          {
+            "PRODCD": "D047",
+            "PRICE": 1818,
+            "TRADE_DT": "20261027",
+            "TRADE_TM": "145825"
+          }
+        ]
+      },
+      "scope": "fuel_location_only_not_Onnuri_evidence"
+    },
+    {
+      "상가업소번호": "opinet:A0020813",
+      "상호명": "F1주유소",
+      "도로명주소": "전남광주통합특별시 영암군 삼호읍 관광레저로 2708",
+      "상권업종소분류코드": "",
+      "위도": 34.74347847294023,
+      "경도": 126.43571454672943,
+      "region": "전남",
+      "source_url": "https://www.opinet.co.kr/user/custapi/openApiInfoDtl.do?apiId=3",
+      "opinet_record": {
+        "UNI_ID": "A0020813",
+        "POLL_DIV_CD": "SOL",
+        "OS_NM": "F1주유소",
+        "PRICE": 1899,
+        "DISTANCE": 2543.3,
+        "GIS_X_COOR": 256958.7,
+        "GIS_Y_COOR": 239483.2,
+        "lat": 34.74347847294023,
+        "lng": 126.43571454672943,
+        "checked_at": "2026-10-27T15:59:39+09:00",
+        "product": "B027",
+        "nearest_completed_kb_query_m": 2539.3
+      },
+      "opinet_detail": {
+        "UNI_ID": "A0020813",
+        "POLL_DIV_CO": "SOL",
+        "GPOLL_DIV_CO": "   ",
+        "OS_NM": "F1주유소",
+        "VAN_ADR": "전남광주통합특별시 영암군 삼호읍 난전리 959-2",
+        "NEW_ADR": "전남광주통합특별시 영암군 삼호읍 관광레저로 2708",
+        "TEL": "061-462-0089",
+        "SIGUNCD": "2030",
+        "LPG_YN": "N",
+        "MAINT_YN": "N",
+        "CAR_WASH_YN": "N",
+        "KPETRO_YN": "N",
+        "CVS_YN": "N",
+        "GOOD_YN": "N",
+        "GOOD_YN5": "N",
+        "GIS_X_COOR": 256958.7,
+        "GIS_Y_COOR": 239483.2,
+        "OIL_PRICE": [
+          {
+            "PRODCD": "B027",
+            "PRICE": 1899,
+            "TRADE_DT": "20261027",
+            "TRADE_TM": "133528"
+          },
+          {
+            "PRODCD": "D047",
+            "PRICE": 1899,
+            "TRADE_DT": "20261027",
+            "TRADE_TM": "114258"
+          },
+          {
+            "PRODCD": "C004",
+            "PRICE": 1650,
+            "TRADE_DT": "20261023",
+            "TRADE_TM": "175548"
+          }
+        ]
+      },
+      "scope": "fuel_location_only_not_Onnuri_evidence"
+    }
+  ]
+}

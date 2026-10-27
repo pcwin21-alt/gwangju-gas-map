@@ -38,3 +38,4 @@ output/alternatives/kb_unfiltered_*.json
 output/alternatives/kb_region_queue*.json
 output/alternatives/kb_region_queue.lock
 output/alternatives/kb_registry_gap_*.json
+output/alternatives/opinet_cache_*/
