@@ -4,7 +4,7 @@
     {
       "identity_review": "same_premise_confirmed",
       "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
-      "checked_at": "2026-10-26T18:32:23+09:00",
+      "checked_at": "2026-10-27T16:45:32+09:00",
       "bank_record": {
         "location": {
           "lat": "34.961063692",
@@ -15,7 +15,7 @@
           "title": "현대주유소",
           "category": "주유소",
           "address": "전남 순천시 매곡동 ",
-          "distance": "10",
+          "distance": "59693",
           "kindGb": "0",
           "onNuliGb": "1",
           "tradiGb": "0",
@@ -25,8 +25,13 @@
           "highOilGb": "1",
           "seoulGb": "0"
         },
-        "checked_at": "2026-10-26T18:32:23+09:00",
-        "query_id": "79898a9834079f71"
+        "checked_at": "2026-10-27T16:45:32+09:00",
+        "query_address": [
+          "전남",
+          "순천시",
+          "매곡동"
+        ],
+        "coordinate_status": "present_unverified"
       },
       "commercial_record": {
         "상가업소번호": "MA010120220807846418",
@@ -443,7 +448,7 @@
     {
       "identity_review": "same_premise_confirmed",
       "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
-      "checked_at": "2026-10-26T20:17:28+09:00",
+      "checked_at": "2026-10-27T16:43:41+09:00",
       "bank_record": {
         "location": {
           "lat": "34.8244227459",
@@ -454,7 +459,7 @@
           "title": "(주)대창석유 (삼학)",
           "category": "주유소",
           "address": "전남 목포시 석현동 ",
-          "distance": "177",
+          "distance": "74234",
           "kindGb": "0",
           "onNuliGb": "1",
           "tradiGb": "0",
@@ -464,8 +469,13 @@
           "highOilGb": "1",
           "seoulGb": "0"
         },
-        "checked_at": "2026-10-26T20:17:28+09:00",
-        "query_id": "c6c377c0fc1f5a11"
+        "checked_at": "2026-10-27T16:43:41+09:00",
+        "query_address": [
+          "전남",
+          "목포시",
+          "석현동"
+        ],
+        "coordinate_status": "present_unverified"
       },
       "municipal_record": {
         "name": "삼학(셀프)주유소",
@@ -497,7 +507,7 @@
     {
       "identity_review": "same_premise_confirmed",
       "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
-      "checked_at": "2026-10-26T20:20:54+09:00",
+      "checked_at": "2026-10-27T16:38:41+09:00",
       "bank_record": {
         "location": {
           "lat": "35.2770071066",
@@ -508,7 +518,7 @@
           "title": "(주)대창석유 (대인)",
           "category": "주유소",
           "address": "전남 곡성군 곡성읍 ",
-          "distance": "439",
+          "distance": "28064",
           "kindGb": "0",
           "onNuliGb": "1",
           "tradiGb": "0",
@@ -518,8 +528,13 @@
           "highOilGb": "1",
           "seoulGb": "0"
         },
-        "checked_at": "2026-10-26T20:20:54+09:00",
-        "query_id": "11d5f750d2a2fc32"
+        "checked_at": "2026-10-27T16:38:41+09:00",
+        "query_address": [
+          "전남",
+          "곡성군",
+          "곡성읍"
+        ],
+        "coordinate_status": "present_unverified"
       },
       "municipal_record": {
         "name": "㈜대창석유직영 대인주유소",
@@ -542,7 +557,7 @@
     {
       "identity_review": "same_premise_confirmed",
       "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
-      "checked_at": "2026-10-26T20:22:11+09:00",
+      "checked_at": "2026-10-27T16:39:14+09:00",
       "bank_record": {
         "location": {
           "lat": "34.940399796",
@@ -553,7 +568,7 @@
           "title": "(주)대창석유 (태인)",
           "category": "주유소",
           "address": "전남 광양시 태인동 ",
-          "distance": "325",
+          "distance": "81098",
           "kindGb": "0",
           "onNuliGb": "1",
           "tradiGb": "0",
@@ -563,8 +578,13 @@
           "highOilGb": "1",
           "seoulGb": "0"
         },
-        "checked_at": "2026-10-26T20:22:11+09:00",
-        "query_id": "e7a25c88002e9214"
+        "checked_at": "2026-10-27T16:39:14+09:00",
+        "query_address": [
+          "전남",
+          "광양시",
+          "태인동"
+        ],
+        "coordinate_status": "present_unverified"
       },
       "commercial_record": {
         "상가업소번호": "MA0101202503A0025892",
@@ -593,7 +613,7 @@
     {
       "identity_review": "same_premise_confirmed",
       "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
-      "checked_at": "2026-10-26T20:31:44+09:00",
+      "checked_at": "2026-10-27T16:45:29+09:00",
       "bank_record": {
         "location": {
           "lat": "34.9281354878",
@@ -604,7 +624,7 @@
           "title": "(주)대창석유 (갑산)",
           "category": "주유소",
           "address": "전남 순천시 덕월동 ",
-          "distance": "6",
+          "distance": "62569",
           "kindGb": "0",
           "onNuliGb": "1",
           "tradiGb": "0",
@@ -614,8 +634,13 @@
           "highOilGb": "1",
           "seoulGb": "0"
         },
-        "checked_at": "2026-10-26T20:31:44+09:00",
-        "query_id": "6649a4721b6e2d2a"
+        "checked_at": "2026-10-27T16:45:29+09:00",
+        "query_address": [
+          "전남",
+          "순천시",
+          "덕월동"
+        ],
+        "coordinate_status": "present_unverified"
       },
       "commercial_record": {
         "상가업소번호": "MA0101202503A0053009",
@@ -655,7 +680,7 @@
     {
       "identity_review": "same_premise_confirmed",
       "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
-      "checked_at": "2026-10-26T20:33:35+09:00",
+      "checked_at": "2026-10-27T16:46:06+09:00",
       "bank_record": {
         "location": {
           "lat": "34.9469480851",
@@ -666,7 +691,7 @@
           "title": "호남주유소",
           "category": "주유소",
           "address": "전남 순천시 장천동 ",
-          "distance": "169",
+          "distance": "61039",
           "kindGb": "0",
           "onNuliGb": "1",
           "tradiGb": "0",
@@ -676,8 +701,13 @@
           "highOilGb": "1",
           "seoulGb": "0"
         },
-        "checked_at": "2026-10-26T20:33:35+09:00",
-        "query_id": "c0de14a52febefbf"
+        "checked_at": "2026-10-27T16:46:06+09:00",
+        "query_address": [
+          "전남",
+          "순천시",
+          "장천동"
+        ],
+        "coordinate_status": "present_unverified"
       },
       "commercial_record": {
         "상가업소번호": "MA0101202406A0144191",
@@ -729,6 +759,87 @@
           "DATA_CRTR_YMD": "2025-12-01"
         }
       }
+    },
+    {
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "checked_at": "2026-10-27T16:50:06+09:00",
+      "identity_review": "same_premise_confirmed",
+      "bank_record": {
+        "location": {
+          "lat": "34.4156236591",
+          "lng": "126.6304928486"
+        },
+        "content": {
+          "tel": "061)533-6760",
+          "title": "(주)대창석유 (남창)",
+          "category": "주유소",
+          "address": "전남 해남군 북평면 ",
+          "distance": "104473",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000055922616",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-27T16:50:06+09:00",
+        "query_address": [
+          "전남",
+          "해남군",
+          "북평면"
+        ],
+        "coordinate_status": "present_unverified"
+      },
+      "registry_record": {
+        "CONM_NM": "(주)대창석유 직영 남창주유소",
+        "CTPV_NM": "전남광주통합특별시",
+        "SGG_NM": "해남군",
+        "LCTN_ROAD_NM": "전남광주통합특별시 해남군 북평면 현산북평로 1139",
+        "LCTN_LOTNO_ADDR": "전남광주통합특별시 해남군 북평면 남창리 845-2",
+        "LAT": "34.40867856",
+        "LOT": "126.6249243",
+        "TELNO": "061-533-6760",
+        "DATA_CRTR_YMD": "2026-07-01"
+      },
+      "registry_source_url": "https://www.data.go.kr/data/15129441/standard.do",
+      "opinet_record": {
+        "UNI_ID": "A0020659",
+        "POLL_DIV_CO": "SKE",
+        "GPOLL_DIV_CO": "   ",
+        "OS_NM": "(주)대창석유직영 남창주유소",
+        "VAN_ADR": "전남광주통합특별시 해남군 북평면 남창리 845-2",
+        "NEW_ADR": "전남광주통합특별시 해남군 북평면 현산북평로 1139",
+        "TEL": "061-533-6760",
+        "SIGUNCD": "2029",
+        "LPG_YN": "N",
+        "MAINT_YN": "N",
+        "CAR_WASH_YN": "N",
+        "KPETRO_YN": "N",
+        "CVS_YN": "N",
+        "GOOD_YN": "N",
+        "GOOD_YN5": "N",
+        "GIS_X_COOR": 273778.0,
+        "GIS_Y_COOR": 202085.0,
+        "OIL_PRICE": [
+          {
+            "PRODCD": "B027",
+            "PRICE": 1899,
+            "TRADE_DT": "20261021",
+            "TRADE_TM": "133520"
+          },
+          {
+            "PRODCD": "D047",
+            "PRICE": 1889,
+            "TRADE_DT": "20261021",
+            "TRADE_TM": "133612"
+          }
+        ]
+      },
+      "opinet_source_url": "https://www.opinet.co.kr",
+      "opinet_checked_at": "2026-10-27T16:54:03+09:00",
+      "annual_candidate_ids": []
     }
   ]
 }

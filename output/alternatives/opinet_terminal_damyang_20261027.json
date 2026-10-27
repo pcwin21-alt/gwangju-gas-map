@@ -1,0 +1,45 @@
+{
+  "RESULT": {
+    "OIL": [
+      {
+        "UNI_ID": "A0020014",
+        "POLL_DIV_CO": "SOL",
+        "GPOLL_DIV_CO": "   ",
+        "OS_NM": "(주)터미널주유소",
+        "VAN_ADR": "전남광주통합특별시 담양군 담양읍 강쟁리 1480-6",
+        "NEW_ADR": "전남광주통합특별시 담양군 담양읍 죽향문화로 98",
+        "TEL": "061-383-4460",
+        "SIGUNCD": "2021",
+        "LPG_YN": "N",
+        "MAINT_YN": "N",
+        "CAR_WASH_YN": "Y",
+        "KPETRO_YN": "N",
+        "CVS_YN": "N",
+        "GOOD_YN": "N",
+        "GOOD_YN5": "N",
+        "GIS_X_COOR": 306849.3,
+        "GIS_Y_COOR": 302165.4,
+        "OIL_PRICE": [
+          {
+            "PRODCD": "C004",
+            "PRICE": 1650,
+            "TRADE_DT": "20261027",
+            "TRADE_TM": "114916"
+          },
+          {
+            "PRODCD": "D047",
+            "PRICE": 1839,
+            "TRADE_DT": "20261027",
+            "TRADE_TM": "114922"
+          },
+          {
+            "PRODCD": "B027",
+            "PRICE": 1849,
+            "TRADE_DT": "20261027",
+            "TRADE_TM": "121154"
+          }
+        ]
+      }
+    ]
+  }
+}

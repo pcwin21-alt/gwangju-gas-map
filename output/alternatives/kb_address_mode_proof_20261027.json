@@ -1,0 +1,233 @@
+{
+  "checked_at": "2026-10-27T16:34:53+09:00",
+  "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+  "source_form_sha256": "fea1444c18c220b5cdafff667699484ab288d7cdb04c557a4af9dc10f6b8212f",
+  "pilot_raw_sha256": "4b3722a707bb6dca50b4019c88f93ef3c51955053b9c9f1b7aae84965ffe55f9",
+  "scope": "Damyang-eup only; address-mode retrieval validation, not full Jeonnam or payment verification",
+  "cases": [
+    {
+      "query": {
+        "mainCC": "a",
+        "isNoFrame": "Y",
+        "situXCdnt": 35.309082,
+        "situYCdnt": 126.984899,
+        "페이지번호": 1,
+        "useCase": "1",
+        "locationType": "1",
+        "startRow": 0,
+        "endRow": 10,
+        "area1": "전남",
+        "area2": "담양군",
+        "area3": "담양읍",
+        "mmcNm": ""
+      },
+      "reported_total": 36,
+      "returned_unique": 36
+    },
+    {
+      "query": {
+        "mainCC": "a",
+        "isNoFrame": "Y",
+        "situXCdnt": 35.309082,
+        "situYCdnt": 126.984899,
+        "페이지번호": 1,
+        "useCase": "1",
+        "locationType": "2",
+        "startRow": 0,
+        "endRow": 10,
+        "area1": "전남",
+        "area2": "담양군",
+        "area3": "담양읍",
+        "mmcNm": ""
+      },
+      "reported_total": 460,
+      "returned_unique": 460
+    },
+    {
+      "query": {
+        "mainCC": "a",
+        "isNoFrame": "Y",
+        "situXCdnt": 34.8,
+        "situYCdnt": 126.4,
+        "페이지번호": 1,
+        "useCase": "1",
+        "locationType": "2",
+        "startRow": 0,
+        "endRow": 10,
+        "area1": "전남",
+        "area2": "담양군",
+        "area3": "담양읍",
+        "mmcNm": ""
+      },
+      "reported_total": 460,
+      "returned_unique": 460
+    }
+  ],
+  "same_ids_from_two_distant_centers": true,
+  "fuel_merchant_rows": [
+    {
+      "location": {
+        "lat": "35.3090822678",
+        "lng": "126.984898723"
+      },
+      "content": {
+        "tel": "061)381-8878",
+        "title": "(주)백동산업",
+        "category": "주유소",
+        "address": "전남 담양군 담양읍 ",
+        "distance": "0",
+        "kindGb": "0",
+        "onNuliGb": "1",
+        "tradiGb": "0",
+        "liveHoodGb": "1",
+        "sangsaengGb": "1",
+        "franchiseNo": "000000094538059",
+        "highOilGb": "1",
+        "seoulGb": "0"
+      }
+    },
+    {
+      "location": {
+        "lat": "35.3111466663",
+        "lng": "126.9811048273"
+      },
+      "content": {
+        "tel": "061)383-5179",
+        "title": "대나무주유소",
+        "category": "주유소",
+        "address": "전남 담양군 담양읍 ",
+        "distance": "414",
+        "kindGb": "0",
+        "onNuliGb": "1",
+        "tradiGb": "0",
+        "liveHoodGb": "1",
+        "sangsaengGb": "1",
+        "franchiseNo": "000000037510191",
+        "highOilGb": "1",
+        "seoulGb": "0"
+      }
+    },
+    {
+      "location": {
+        "lat": "35.3041229823",
+        "lng": "126.9589680624"
+      },
+      "content": {
+        "tel": "061)383-4460",
+        "title": "(주)터미널주유소",
+        "category": "주유소",
+        "address": "전남 담양군 담양읍 ",
+        "distance": "2417",
+        "kindGb": "0",
+        "onNuliGb": "1",
+        "tradiGb": "0",
+        "liveHoodGb": "1",
+        "sangsaengGb": "1",
+        "franchiseNo": "000000045660313",
+        "highOilGb": "1",
+        "seoulGb": "0"
+      }
+    },
+    {
+      "location": {
+        "lat": "35.3312578683",
+        "lng": "126.9885043042"
+      },
+      "content": {
+        "tel": "061)381-1567",
+        "title": "부원주유소",
+        "category": "주유소",
+        "address": "전남 담양군 담양읍 ",
+        "distance": "2487",
+        "kindGb": "0",
+        "onNuliGb": "1",
+        "tradiGb": "0",
+        "liveHoodGb": "1",
+        "sangsaengGb": "1",
+        "franchiseNo": "000000047115107",
+        "highOilGb": "1",
+        "seoulGb": "0"
+      }
+    }
+  ],
+  "terminal": {
+    "bank_record": {
+      "location": {
+        "lat": "35.3041229823",
+        "lng": "126.9589680624"
+      },
+      "content": {
+        "tel": "061)383-4460",
+        "title": "(주)터미널주유소",
+        "category": "주유소",
+        "address": "전남 담양군 담양읍 ",
+        "distance": "2417",
+        "kindGb": "0",
+        "onNuliGb": "1",
+        "tradiGb": "0",
+        "liveHoodGb": "1",
+        "sangsaengGb": "1",
+        "franchiseNo": "000000045660313",
+        "highOilGb": "1",
+        "seoulGb": "0"
+      }
+    },
+    "opinet_record": {
+      "UNI_ID": "A0020014",
+      "POLL_DIV_CO": "SOL",
+      "GPOLL_DIV_CO": "   ",
+      "OS_NM": "(주)터미널주유소",
+      "VAN_ADR": "전남광주통합특별시 담양군 담양읍 강쟁리 1480-6",
+      "NEW_ADR": "전남광주통합특별시 담양군 담양읍 죽향문화로 98",
+      "TEL": "061-383-4460",
+      "SIGUNCD": "2021",
+      "LPG_YN": "N",
+      "MAINT_YN": "N",
+      "CAR_WASH_YN": "Y",
+      "KPETRO_YN": "N",
+      "CVS_YN": "N",
+      "GOOD_YN": "N",
+      "GOOD_YN5": "N",
+      "GIS_X_COOR": 306849.3,
+      "GIS_Y_COOR": 302165.4,
+      "OIL_PRICE": [
+        {
+          "PRODCD": "C004",
+          "PRICE": 1650,
+          "TRADE_DT": "20261027",
+          "TRADE_TM": "114916"
+        },
+        {
+          "PRODCD": "D047",
+          "PRICE": 1839,
+          "TRADE_DT": "20261027",
+          "TRADE_TM": "114922"
+        },
+        {
+          "PRODCD": "B027",
+          "PRICE": 1849,
+          "TRADE_DT": "20261027",
+          "TRADE_TM": "121154"
+        }
+      ]
+    },
+    "coordinate_difference_m": 1727,
+    "already_mapped_id": "onnuri:14499200032",
+    "new_map_addition": false
+  },
+  "region_level_only_requests": {
+    "damyang_count": 0,
+    "jeonnam_count": 0,
+    "interpretation": "missing 읍면동 is unsupported for this method; not absence evidence"
+  },
+  "workflow": [
+    "Fetch authoritative area values from /BON/API/HBGV0701 area key, not default areaSgguList or areaEmdList.",
+    "Enumerate every city/county and every returned 읍면동 including legacy aliases.",
+    "Use locationType=2, useCase=1, all three area fields, empty merchant keyword.",
+    "Require returned unique count == reported total; mismatch remains incomplete.",
+    "Deduplicate franchiseNo across 읍면동 aliases; retain original evidence.",
+    "Select fuel industry and all-name/address crossmatches; no automatic promotion on proximity.",
+    "Resolve identity with exact name, phone, address and current fuel registry; investigate conflicting coordinates.",
+    "Verify card/paper/QR scope separately; KB cannot establish every issuer or payment method."
+  ]
+}

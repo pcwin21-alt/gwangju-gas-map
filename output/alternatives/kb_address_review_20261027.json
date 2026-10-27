@@ -1,0 +1,2273 @@
+{
+  "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+  "checked_at": "2026-10-27T16:50:43+09:00",
+  "scan_status": "all_listed_addresses_complete",
+  "planned_queries": 442,
+  "completed_queries": 442,
+  "unique_merchants": 11385,
+  "unusable_coordinate_merchants": 4,
+  "fuel_category_rows": 29,
+  "fuel_category_by_county": {
+    "곡성군": 1,
+    "광양시": 1,
+    "구례군": 1,
+    "나주시": 6,
+    "담양군": 4,
+    "목포시": 1,
+    "무안군": 1,
+    "보성군": 2,
+    "순천시": 4,
+    "영암군": 1,
+    "장성군": 3,
+    "장흥군": 1,
+    "함평군": 1,
+    "해남군": 2
+  },
+  "rows": [
+    {
+      "bank_record": {
+        "location": {
+          "lat": "35.2770071066",
+          "lng": "127.2916235046"
+        },
+        "content": {
+          "tel": "061)362-7778",
+          "title": "(주)대창석유 (대인)",
+          "category": "주유소",
+          "address": "전남 곡성군 곡성읍 ",
+          "distance": "28064",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000055922645",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-27T16:38:41+09:00",
+        "query_address": [
+          "전남",
+          "곡성군",
+          "곡성읍"
+        ],
+        "coordinate_status": "present_unverified"
+      },
+      "bank_fuel_category": true,
+      "in_previous_coordinate_scan": true,
+      "commercial_name_matches": [],
+      "opinet_name_matches": [],
+      "mapped_name_matches": [
+        {
+          "id": "onnuri:kb:000000055922645",
+          "name": "(주)대창석유 (대인)",
+          "address": "전라남도 곡성군 곡성읍 곡성로 796"
+        }
+      ],
+      "status": "needs_identity_review_not_automatically_publishable",
+      "commercial_name_distances_m": []
+    },
+    {
+      "bank_record": {
+        "location": {
+          "lat": "34.940399796",
+          "lng": "127.7543484052"
+        },
+        "content": {
+          "tel": "061)792-3105",
+          "title": "(주)대창석유 (태인)",
+          "category": "주유소",
+          "address": "전남 광양시 태인동 ",
+          "distance": "81098",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000055922220",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-27T16:39:14+09:00",
+        "query_address": [
+          "전남",
+          "광양시",
+          "태인동"
+        ],
+        "coordinate_status": "present_unverified"
+      },
+      "bank_fuel_category": true,
+      "in_previous_coordinate_scan": true,
+      "commercial_name_matches": [],
+      "opinet_name_matches": [],
+      "mapped_name_matches": [
+        {
+          "id": "onnuri:kb:000000055922220",
+          "name": "(주)대창석유 (태인)",
+          "address": "전남광주통합특별시 광양시 백운1로 107"
+        }
+      ],
+      "status": "needs_identity_review_not_automatically_publishable",
+      "commercial_name_distances_m": []
+    },
+    {
+      "bank_record": {
+        "location": {
+          "lat": "35.1989829156",
+          "lng": "127.5225629465"
+        },
+        "content": {
+          "tel": "061)782-5189",
+          "title": "미래주유소",
+          "category": "주유소",
+          "address": "전남 구례군 토지면 ",
+          "distance": "50330",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000064282436",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-27T16:39:29+09:00",
+        "query_address": [
+          "전남",
+          "구례군",
+          "토지면"
+        ],
+        "coordinate_status": "present_unverified"
+      },
+      "bank_fuel_category": true,
+      "in_previous_coordinate_scan": true,
+      "commercial_name_matches": [
+        {
+          "상가업소번호": "MA010120220811485375",
+          "상호명": "미래주유소",
+          "지점명": "",
+          "상권업종소분류코드": "G21401",
+          "상권업종소분류명": "주유소",
+          "표준산업분류코드": "G47711",
+          "표준산업분류명": "운송장비용 주유소 운영업",
+          "시군구명": "나주시",
+          "도로명주소": "전남광주통합특별시 나주시 나주서부로 205",
+          "지번주소": "전남광주통합특별시 나주시 동수동 31-6",
+          "위도": "34.9791287139394",
+          "경도": "126.684103327899",
+          "region": "전남"
+        },
+        {
+          "상가업소번호": "MA010120220807870982",
+          "상호명": "미래주유소",
+          "지점명": "",
+          "상권업종소분류코드": "G21401",
+          "상권업종소분류명": "주유소",
+          "표준산업분류코드": "G47711",
+          "표준산업분류명": "운송장비용 주유소 운영업",
+          "시군구명": "구례군",
+          "도로명주소": "전남광주통합특별시 구례군 토지면 섬진강대로 5081",
+          "지번주소": "전남광주통합특별시 구례군 토지면 구산리 175",
+          "위도": "35.1989686421532",
+          "경도": "127.522494023105",
+          "region": "전남"
+        }
+      ],
+      "opinet_name_matches": [
+        {
+          "UNI_ID": "A0021992",
+          "POLL_DIV_CD": "SOL",
+          "OS_NM": "미래주유소",
+          "PRICE": 1899,
+          "DISTANCE": 1491.7,
+          "GIS_X_COOR": 356722.0,
+          "GIS_Y_COOR": 288990.0,
+          "lat": 35.19887120511167,
+          "lng": 127.52255964681004,
+          "checked_at": "2026-10-27T15:58:39+09:00",
+          "product": "B027"
+        },
+        {
+          "UNI_ID": "A0021119",
+          "POLL_DIV_CD": "SOL",
+          "OS_NM": "미래주유소",
+          "PRICE": 1849,
+          "DISTANCE": 1922.1,
+          "GIS_X_COOR": 280053.93488,
+          "GIS_Y_COOR": 265289.90609,
+          "lat": 34.9790383352478,
+          "lng": 126.68417031692445,
+          "checked_at": "2026-10-27T15:58:45+09:00",
+          "product": "B027"
+        }
+      ],
+      "mapped_name_matches": [
+        {
+          "id": "onnuri:14273200009",
+          "name": "미래 주유소",
+          "address": "전라남도 구례군 토지면 섬진강대로 5081"
+        }
+      ],
+      "status": "needs_identity_review_not_automatically_publishable",
+      "commercial_name_distances_m": [
+        80109.4,
+        6.5
+      ]
+    },
+    {
+      "bank_record": {
+        "location": {
+          "lat": "35.0358689352",
+          "lng": "126.7525723357"
+        },
+        "content": {
+          "tel": "061)337-0875",
+          "title": "부건주유소",
+          "category": "주유소",
+          "address": "전남 나주시 금천면 ",
+          "distance": "36996",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000120167132",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-27T16:39:41+09:00",
+        "query_address": [
+          "전남",
+          "나주시",
+          "금천면"
+        ],
+        "coordinate_status": "present_unverified"
+      },
+      "bank_fuel_category": true,
+      "in_previous_coordinate_scan": true,
+      "commercial_name_matches": [
+        {
+          "상가업소번호": "MA0101202510A0015685",
+          "상호명": "부건주유소",
+          "지점명": "",
+          "상권업종소분류코드": "G21401",
+          "상권업종소분류명": "주유소",
+          "표준산업분류코드": "G47711",
+          "표준산업분류명": "운송장비용 주유소 운영업",
+          "시군구명": "나주시",
+          "도로명주소": "전남광주통합특별시 나주시 금천면 영산로 5703",
+          "지번주소": "전남광주통합특별시 나주시 금천면 원곡리 227-3",
+          "위도": "35.0355696110884",
+          "경도": "126.752544544107",
+          "region": "전남"
+        }
+      ],
+      "opinet_name_matches": [],
+      "mapped_name_matches": [
+        {
+          "id": "onnuri:18806200009",
+          "name": "부건주유소",
+          "address": "전남광주통합특별시 나주시 금천면 영산로 5703"
+        }
+      ],
+      "status": "needs_identity_review_not_automatically_publishable",
+      "commercial_name_distances_m": [
+        33.4
+      ]
+    },
+    {
+      "bank_record": {
+        "location": {
+          "lat": "35.0253400897",
+          "lng": "126.7652237445"
+        },
+        "content": {
+          "tel": "061)336-2250",
+          "title": "(주)혁신에너지",
+          "category": "주유소",
+          "address": "전남 나주시 금천면 ",
+          "distance": "37337",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000088473697",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-27T16:39:41+09:00",
+        "query_address": [
+          "전남",
+          "나주시",
+          "금천면"
+        ],
+        "coordinate_status": "present_unverified"
+      },
+      "bank_fuel_category": true,
+      "in_previous_coordinate_scan": false,
+      "commercial_name_matches": [
+        {
+          "상가업소번호": "MA010120220807764996",
+          "상호명": "혁신에너지",
+          "지점명": "",
+          "상권업종소분류코드": "G21401",
+          "상권업종소분류명": "주유소",
+          "표준산업분류코드": "G47711",
+          "표준산업분류명": "운송장비용 주유소 운영업",
+          "시군구명": "나주시",
+          "도로명주소": "전남광주통합특별시 나주시 그린로 116",
+          "지번주소": "전남광주통합특별시 나주시 빛가람동 540",
+          "위도": "35.011951712444",
+          "경도": "126.779665776366",
+          "region": "전남"
+        }
+      ],
+      "opinet_name_matches": [],
+      "mapped_name_matches": [
+        {
+          "id": "onnuri:14280200024",
+          "name": "주식회사 혁신에너지",
+          "address": "전라남도 나주시 그린로 116 (빛가람동)"
+        }
+      ],
+      "status": "needs_identity_review_not_automatically_publishable",
+      "commercial_name_distances_m": [
+        1986.4
+      ]
+    },
+    {
+      "bank_record": {
+        "location": {
+          "lat": "35.0287060169",
+          "lng": "126.718846688"
+        },
+        "content": {
+          "tel": "061)337-4451",
+          "title": "남고문self주유소",
+          "category": "주유소",
+          "address": "전남 나주시 남외동 ",
+          "distance": "39454",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000034595536",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-27T16:39:44+09:00",
+        "query_address": [
+          "전남",
+          "나주시",
+          "남외동"
+        ],
+        "coordinate_status": "present_unverified"
+      },
+      "bank_fuel_category": true,
+      "in_previous_coordinate_scan": false,
+      "commercial_name_matches": [],
+      "opinet_name_matches": [],
+      "mapped_name_matches": [
+        {
+          "id": "onnuri:18802200007",
+          "name": "남고문 self주유소",
+          "address": "전남광주통합특별시 나주시 남고문로 72 (남외동)"
+        }
+      ],
+      "status": "needs_identity_review_not_automatically_publishable",
+      "commercial_name_distances_m": []
+    },
+    {
+      "bank_record": {
+        "location": {
+          "lat": "35.0471940076",
+          "lng": "126.8436075806"
+        },
+        "content": {
+          "tel": "061)331-2331",
+          "title": "광남주유소",
+          "category": "주유소",
+          "address": "전남 나주시 남평읍 ",
+          "distance": "31825",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000034326741",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-27T16:39:46+09:00",
+        "query_address": [
+          "전남",
+          "나주시",
+          "남평읍"
+        ],
+        "coordinate_status": "present_unverified"
+      },
+      "bank_fuel_category": true,
+      "in_previous_coordinate_scan": true,
+      "commercial_name_matches": [
+        {
+          "상가업소번호": "MA010120220807281043",
+          "상호명": "광남주유소",
+          "지점명": "",
+          "상권업종소분류코드": "G21401",
+          "상권업종소분류명": "주유소",
+          "표준산업분류코드": "G47711",
+          "표준산업분류명": "운송장비용 주유소 운영업",
+          "시군구명": "구례군",
+          "도로명주소": "전남광주통합특별시 구례군 구례읍 봉성로 12",
+          "지번주소": "전남광주통합특별시 구례군 구례읍 봉남리 10-3",
+          "위도": "35.2033420008182",
+          "경도": "127.464540136614",
+          "region": "전남"
+        },
+        {
+          "상가업소번호": "MA010120220813644916",
+          "상호명": "광남주유소",
+          "지점명": "",
+          "상권업종소분류코드": "G21401",
+          "상권업종소분류명": "주유소",
+          "표준산업분류코드": "G47711",
+          "표준산업분류명": "운송장비용 주유소 운영업",
+          "시군구명": "광양시",
+          "도로명주소": "전남광주통합특별시 광양시 백운1로 176",
+          "지번주소": "전남광주통합특별시 광양시 태인동 28-130",
+          "위도": "34.9446188945605",
+          "경도": "127.759064857526",
+          "region": "전남"
+        },
+        {
+          "상가업소번호": "MA010120220807741317",
+          "상호명": "광남주유소",
+          "지점명": "",
+          "상권업종소분류코드": "G21401",
+          "상권업종소분류명": "주유소",
+          "표준산업분류코드": "G47711",
+          "표준산업분류명": "운송장비용 주유소 운영업",
+          "시군구명": "나주시",
+          "도로명주소": "전남광주통합특별시 나주시 남평읍 남평1로 54",
+          "지번주소": "전남광주통합특별시 나주시 남평읍 남평리 16-1",
+          "위도": "35.0472136457652",
+          "경도": "126.84357007785",
+          "region": "전남"
+        }
+      ],
+      "opinet_name_matches": [
+        {
+          "UNI_ID": "A0022023",
+          "POLL_DIV_CD": "SKE",
+          "OS_NM": "(주)광남주유소",
+          "PRICE": 1939,
+          "DISTANCE": 3873.9,
+          "GIS_X_COOR": 378191.6654,
+          "GIS_Y_COOR": 260697.9131,
+          "lat": 34.94453382865409,
+          "lng": 127.75908480706421,
+          "checked_at": "2026-10-27T15:58:33+09:00",
+          "product": "B027"
+        },
+        {
+          "UNI_ID": "A0018184",
+          "POLL_DIV_CD": "GSC",
+          "OS_NM": "광남주유소",
+          "PRICE": 1899,
+          "DISTANCE": 3873.0,
+          "GIS_X_COOR": 351443.87093,
+          "GIS_Y_COOR": 289498.82114,
+          "lat": 35.20321530402342,
+          "lng": 127.4645678938591,
+          "checked_at": "2026-10-27T15:58:39+09:00",
+          "product": "B027"
+        }
+      ],
+      "mapped_name_matches": [
+        {
+          "id": "onnuri:14512200050",
+          "name": "광남주유소",
+          "address": "전남광주통합특별시 나주시 남평읍 남평1로 54"
+        }
+      ],
+      "status": "needs_identity_review_not_automatically_publishable",
+      "commercial_name_distances_m": [
+        59080.2,
+        84165.3,
+        4.1
+      ]
+    },
+    {
+      "bank_record": {
+        "location": {
+          "lat": "35.0468513218",
+          "lng": "126.8414562348"
+        },
+        "content": {
+          "tel": "061)331-2008",
+          "title": "남평주유소",
+          "category": "주유소",
+          "address": "전남 나주시 남평읍 ",
+          "distance": "31939",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000078287556",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-27T16:39:46+09:00",
+        "query_address": [
+          "전남",
+          "나주시",
+          "남평읍"
+        ],
+        "coordinate_status": "present_unverified"
+      },
+      "bank_fuel_category": true,
+      "in_previous_coordinate_scan": true,
+      "commercial_name_matches": [
+        {
+          "상가업소번호": "MA010120220807496308",
+          "상호명": "남평주유소",
+          "지점명": "",
+          "상권업종소분류코드": "G21401",
+          "상권업종소분류명": "주유소",
+          "표준산업분류코드": "G47711",
+          "표준산업분류명": "운송장비용 주유소 운영업",
+          "시군구명": "나주시",
+          "도로명주소": "전남광주통합특별시 나주시 남평읍 남평1로 36",
+          "지번주소": "전남광주통합특별시 나주시 남평읍 남평리 78",
+          "위도": "35.0469499452068",
+          "경도": "126.841794967919",
+          "region": "전남"
+        }
+      ],
+      "opinet_name_matches": [],
+      "mapped_name_matches": [
+        {
+          "id": "onnuri:14512200035",
+          "name": "남평주유소",
+          "address": "전라남도 나주시 남평읍 남평1로 36"
+        }
+      ],
+      "status": "needs_identity_review_not_automatically_publishable",
+      "commercial_name_distances_m": [
+        32.7
+      ]
+    },
+    {
+      "bank_record": {
+        "location": {
+          "lat": "34.9221517596",
+          "lng": "126.7479655283"
+        },
+        "content": {
+          "tel": "061)331-5188",
+          "title": "백제주유소",
+          "category": "주유소",
+          "address": "전남 나주시 세지면 ",
+          "distance": "48118",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000110113418",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-27T16:42:00+09:00",
+        "query_address": [
+          "전남",
+          "나주시",
+          "세지면"
+        ],
+        "coordinate_status": "present_unverified"
+      },
+      "bank_fuel_category": true,
+      "in_previous_coordinate_scan": true,
+      "commercial_name_matches": [
+        {
+          "상가업소번호": "MA0101202305A0114565",
+          "상호명": "백제주유소",
+          "지점명": "",
+          "상권업종소분류코드": "G21401",
+          "상권업종소분류명": "주유소",
+          "표준산업분류코드": "G47711",
+          "표준산업분류명": "운송장비용 주유소 운영업",
+          "시군구명": "나주시",
+          "도로명주소": "전남광주통합특별시 나주시 세지면 동창로 154",
+          "지번주소": "전남광주통합특별시 나주시 세지면 오봉리 236-9",
+          "위도": "34.9222110757088",
+          "경도": "126.747905819259",
+          "region": "전남"
+        }
+      ],
+      "opinet_name_matches": [],
+      "mapped_name_matches": [
+        {
+          "id": "onnuri:18804200010",
+          "name": "백제주유소",
+          "address": "전남광주통합특별시 나주시 세지면 동창로 154"
+        }
+      ],
+      "status": "needs_identity_review_not_automatically_publishable",
+      "commercial_name_distances_m": [
+        8.6
+      ]
+    },
+    {
+      "bank_record": {
+        "location": {
+          "lat": "35.3090822678",
+          "lng": "126.984898723"
+        },
+        "content": {
+          "tel": "061)381-8878",
+          "title": "(주)백동산업",
+          "category": "주유소",
+          "address": "전남 담양군 담양읍 ",
+          "distance": "0",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000094538059",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-27T16:42:29+09:00",
+        "query_address": [
+          "전남",
+          "담양군",
+          "담양읍"
+        ],
+        "coordinate_status": "present_unverified"
+      },
+      "bank_fuel_category": true,
+      "in_previous_coordinate_scan": true,
+      "commercial_name_matches": [],
+      "opinet_name_matches": [],
+      "mapped_name_matches": [],
+      "status": "needs_identity_review_not_automatically_publishable",
+      "commercial_name_distances_m": []
+    },
+    {
+      "bank_record": {
+        "location": {
+          "lat": "35.3111466663",
+          "lng": "126.9811048273"
+        },
+        "content": {
+          "tel": "061)383-5179",
+          "title": "대나무주유소",
+          "category": "주유소",
+          "address": "전남 담양군 담양읍 ",
+          "distance": "414",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000037510191",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-27T16:42:29+09:00",
+        "query_address": [
+          "전남",
+          "담양군",
+          "담양읍"
+        ],
+        "coordinate_status": "present_unverified"
+      },
+      "bank_fuel_category": true,
+      "in_previous_coordinate_scan": true,
+      "commercial_name_matches": [
+        {
+          "상가업소번호": "MA010120220807533538",
+          "상호명": "대나무주유소",
+          "지점명": "",
+          "상권업종소분류코드": "G21401",
+          "상권업종소분류명": "주유소",
+          "표준산업분류코드": "G47711",
+          "표준산업분류명": "운송장비용 주유소 운영업",
+          "시군구명": "담양군",
+          "도로명주소": "전남광주통합특별시 담양군 담양읍 죽향대로 1179",
+          "지번주소": "전남광주통합특별시 담양군 담양읍 백동리 276-5",
+          "위도": "35.3111671969697",
+          "경도": "126.981196649484",
+          "region": "전남"
+        }
+      ],
+      "opinet_name_matches": [
+        {
+          "UNI_ID": "A0019816",
+          "POLL_DIV_CD": "SKE",
+          "OS_NM": "대나무주유소",
+          "PRICE": 1819,
+          "DISTANCE": 4595.6,
+          "GIS_X_COOR": 307543.0653,
+          "GIS_Y_COOR": 301810.6119,
+          "lat": 35.31108800675805,
+          "lng": 126.98109319514282,
+          "checked_at": "2026-10-27T15:58:51+09:00",
+          "product": "B027"
+        }
+      ],
+      "mapped_name_matches": [
+        {
+          "id": "onnuri:14499200028",
+          "name": "대나무주유소",
+          "address": "전라남도 담양군 담양읍 죽향대로 1179"
+        }
+      ],
+      "status": "needs_identity_review_not_automatically_publishable",
+      "commercial_name_distances_m": [
+        8.6
+      ]
+    },
+    {
+      "bank_record": {
+        "location": {
+          "lat": "35.3139669697",
+          "lng": "126.9864453782"
+        },
+        "content": {
+          "tel": "",
+          "title": "주유소",
+          "category": "한식",
+          "address": "전남 담양군 담양읍 ",
+          "distance": "561",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000122885398",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-27T16:42:29+09:00",
+        "query_address": [
+          "전남",
+          "담양군",
+          "담양읍"
+        ],
+        "coordinate_status": "present_unverified"
+      },
+      "bank_fuel_category": false,
+      "in_previous_coordinate_scan": false,
+      "commercial_name_matches": [],
+      "opinet_name_matches": [],
+      "mapped_name_matches": [],
+      "status": "needs_identity_review_not_automatically_publishable",
+      "commercial_name_distances_m": []
+    },
+    {
+      "bank_record": {
+        "location": {
+          "lat": "35.3041229823",
+          "lng": "126.9589680624"
+        },
+        "content": {
+          "tel": "061)383-4460",
+          "title": "(주)터미널주유소",
+          "category": "주유소",
+          "address": "전남 담양군 담양읍 ",
+          "distance": "2417",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000045660313",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-27T16:42:29+09:00",
+        "query_address": [
+          "전남",
+          "담양군",
+          "담양읍"
+        ],
+        "coordinate_status": "present_unverified"
+      },
+      "bank_fuel_category": true,
+      "in_previous_coordinate_scan": false,
+      "commercial_name_matches": [],
+      "opinet_name_matches": [
+        {
+          "UNI_ID": "A0020014",
+          "POLL_DIV_CD": "SOL",
+          "OS_NM": "(주)터미널주유소",
+          "PRICE": 1849,
+          "DISTANCE": 4019.7,
+          "GIS_X_COOR": 306849.3,
+          "GIS_Y_COOR": 302165.4,
+          "lat": 35.31422109484513,
+          "lng": 126.97342462932986,
+          "checked_at": "2026-10-27T15:58:51+09:00",
+          "product": "B027"
+        },
+        {
+          "UNI_ID": "A0020946",
+          "POLL_DIV_CD": "HDO",
+          "OS_NM": "터미널주유소",
+          "PRICE": 1845,
+          "DISTANCE": 1158.5,
+          "GIS_X_COOR": 255569.0,
+          "GIS_Y_COOR": 247314.0,
+          "lat": 34.8138500671916,
+          "lng": 126.41919728985263,
+          "checked_at": "2026-10-27T15:58:57+09:00",
+          "product": "B027"
+        }
+      ],
+      "mapped_name_matches": [
+        {
+          "id": "onnuri:14499200032",
+          "name": "(주)터미널주유소",
+          "address": "전라남도 담양군 담양읍 죽향문화로 98"
+        }
+      ],
+      "status": "needs_identity_review_not_automatically_publishable",
+      "commercial_name_distances_m": []
+    },
+    {
+      "bank_record": {
+        "location": {
+          "lat": "35.3312578683",
+          "lng": "126.9885043042"
+        },
+        "content": {
+          "tel": "061)381-1567",
+          "title": "부원주유소",
+          "category": "주유소",
+          "address": "전남 담양군 담양읍 ",
+          "distance": "2487",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000047115107",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-27T16:42:29+09:00",
+        "query_address": [
+          "전남",
+          "담양군",
+          "담양읍"
+        ],
+        "coordinate_status": "present_unverified"
+      },
+      "bank_fuel_category": true,
+      "in_previous_coordinate_scan": true,
+      "commercial_name_matches": [
+        {
+          "상가업소번호": "MA010120220807539090",
+          "상호명": "부원주유소",
+          "지점명": "",
+          "상권업종소분류코드": "G21401",
+          "상권업종소분류명": "주유소",
+          "표준산업분류코드": "G47711",
+          "표준산업분류명": "운송장비용 주유소 운영업",
+          "시군구명": "담양군",
+          "도로명주소": "전남광주통합특별시 담양군 담양읍 죽녹원로 199",
+          "지번주소": "전남광주통합특별시 담양군 담양읍 운교리 89",
+          "위도": "35.3312679053853",
+          "경도": "126.98860520888",
+          "region": "전남"
+        }
+      ],
+      "opinet_name_matches": [],
+      "mapped_name_matches": [
+        {
+          "id": "onnuri:14266200009",
+          "name": "부원주유소",
+          "address": "전라남도 담양군 담양읍 죽녹원로 199"
+        }
+      ],
+      "status": "needs_identity_review_not_automatically_publishable",
+      "commercial_name_distances_m": [
+        9.2
+      ]
+    },
+    {
+      "bank_record": {
+        "location": {
+          "lat": "34.8244227459",
+          "lng": "126.4238800097"
+        },
+        "content": {
+          "tel": "061)283-5671",
+          "title": "(주)대창석유 (삼학)",
+          "category": "주유소",
+          "address": "전남 목포시 석현동 ",
+          "distance": "74234",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000055922363",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-27T16:43:41+09:00",
+        "query_address": [
+          "전남",
+          "목포시",
+          "석현동"
+        ],
+        "coordinate_status": "present_unverified"
+      },
+      "bank_fuel_category": true,
+      "in_previous_coordinate_scan": true,
+      "commercial_name_matches": [],
+      "opinet_name_matches": [],
+      "mapped_name_matches": [
+        {
+          "id": "onnuri:kb:000000055922363",
+          "name": "(주)대창석유 (삼학)",
+          "address": "전라남도 목포시 영산로 668"
+        }
+      ],
+      "status": "needs_identity_review_not_automatically_publishable",
+      "commercial_name_distances_m": []
+    },
+    {
+      "bank_record": {
+        "location": {
+          "lat": "34.9703233967",
+          "lng": "126.3854175071"
+        },
+        "content": {
+          "tel": "061)802-0021",
+          "title": "공항에너지",
+          "category": "주유소",
+          "address": "전남 무안군 망운면 ",
+          "distance": "66256",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000108555012",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-27T16:44:42+09:00",
+        "query_address": [
+          "전남",
+          "무안군",
+          "망운면"
+        ],
+        "coordinate_status": "present_unverified"
+      },
+      "bank_fuel_category": true,
+      "in_previous_coordinate_scan": true,
+      "commercial_name_matches": [
+        {
+          "상가업소번호": "MA0101202212A0090887",
+          "상호명": "공항에너지",
+          "지점명": "",
+          "상권업종소분류코드": "G21401",
+          "상권업종소분류명": "주유소",
+          "표준산업분류코드": "G47711",
+          "표준산업분류명": "운송장비용 주유소 운영업",
+          "시군구명": "무안군",
+          "도로명주소": "전남광주통합특별시 무안군 망운면 청운로 767",
+          "지번주소": "전남광주통합특별시 무안군 망운면 피서리 809-36",
+          "위도": "34.9703771845017",
+          "경도": "126.385501769027",
+          "region": "전남"
+        }
+      ],
+      "opinet_name_matches": [],
+      "mapped_name_matches": [
+        {
+          "id": "onnuri:14502200004",
+          "name": "공항에너지",
+          "address": "전라남도 무안군 망운면 청운로 767"
+        }
+      ],
+      "status": "needs_identity_review_not_automatically_publishable",
+      "commercial_name_distances_m": [
+        9.7
+      ]
+    },
+    {
+      "bank_record": {
+        "location": {
+          "lat": "34.7768886668",
+          "lng": "127.0891189623"
+        },
+        "content": {
+          "tel": "061)852-2357",
+          "title": "광주주유소",
+          "category": "주유소",
+          "address": "전남 보성군 보성읍 ",
+          "distance": "59930",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000025825147",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-27T16:45:06+09:00",
+        "query_address": [
+          "전남",
+          "보성군",
+          "보성읍"
+        ],
+        "coordinate_status": "present_unverified"
+      },
+      "bank_fuel_category": true,
+      "in_previous_coordinate_scan": true,
+      "commercial_name_matches": [
+        {
+          "상가업소번호": "MA010120220807849360",
+          "상호명": "광주주유소",
+          "지점명": "",
+          "상권업종소분류코드": "G21401",
+          "상권업종소분류명": "주유소",
+          "표준산업분류코드": "G47711",
+          "표준산업분류명": "운송장비용 주유소 운영업",
+          "시군구명": "보성군",
+          "도로명주소": "전남광주통합특별시 보성군 보성읍 송재로 279",
+          "지번주소": "전남광주통합특별시 보성군 보성읍 보성리 346",
+          "위도": "34.7768899601977",
+          "경도": "127.089113185852",
+          "region": "전남"
+        }
+      ],
+      "opinet_name_matches": [],
+      "mapped_name_matches": [
+        {
+          "id": "onnuri:18800200009",
+          "name": "광주주유소",
+          "address": "전남광주통합특별시 보성군 보성읍 송재로 279"
+        }
+      ],
+      "status": "needs_identity_review_not_automatically_publishable",
+      "commercial_name_distances_m": [
+        0.5
+      ]
+    },
+    {
+      "bank_record": {
+        "location": {
+          "lat": "34.7719225187",
+          "lng": "127.093531174"
+        },
+        "content": {
+          "tel": "061)853-9731",
+          "title": "다향에너지주식회사",
+          "category": "충전소",
+          "address": "전남 보성군 보성읍 ",
+          "distance": "60540",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000121636039",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-27T16:45:06+09:00",
+        "query_address": [
+          "전남",
+          "보성군",
+          "보성읍"
+        ],
+        "coordinate_status": "present_unverified"
+      },
+      "bank_fuel_category": true,
+      "in_previous_coordinate_scan": true,
+      "commercial_name_matches": [
+        {
+          "상가업소번호": "MA0101202604A0016728",
+          "상호명": "다향에너지",
+          "지점명": "",
+          "상권업종소분류코드": "G21402",
+          "상권업종소분류명": "가스 충전소",
+          "표준산업분류코드": "G47712",
+          "표준산업분류명": "운송장비용 가스 충전업",
+          "시군구명": "보성군",
+          "도로명주소": "전남광주통합특별시 보성군 보성읍 용문길 11",
+          "지번주소": "전남광주통합특별시 보성군 보성읍 보성리 342-20",
+          "위도": "34.7719199072915",
+          "경도": "127.093444707314",
+          "region": "전남"
+        }
+      ],
+      "opinet_name_matches": [],
+      "mapped_name_matches": [
+        {
+          "id": "onnuri:18800200044",
+          "name": "다향에너지 주식회사",
+          "address": "전남광주통합특별시 보성군 보성읍 용문길 11"
+        }
+      ],
+      "status": "needs_identity_review_not_automatically_publishable",
+      "commercial_name_distances_m": [
+        7.9
+      ]
+    },
+    {
+      "bank_record": {
+        "location": {
+          "lat": "34.9281354878",
+          "lng": "127.4912519472"
+        },
+        "content": {
+          "tel": "061)744-5680",
+          "title": "(주)대창석유 (갑산)",
+          "category": "주유소",
+          "address": "전남 순천시 덕월동 ",
+          "distance": "62569",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000055922242",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-27T16:45:29+09:00",
+        "query_address": [
+          "전남",
+          "순천시",
+          "덕월동"
+        ],
+        "coordinate_status": "present_unverified"
+      },
+      "bank_fuel_category": true,
+      "in_previous_coordinate_scan": true,
+      "commercial_name_matches": [],
+      "opinet_name_matches": [],
+      "mapped_name_matches": [
+        {
+          "id": "onnuri:kb:000000055922242",
+          "name": "(주)대창석유 (갑산)",
+          "address": "전남광주통합특별시 순천시 녹색로 1656"
+        }
+      ],
+      "status": "needs_identity_review_not_automatically_publishable",
+      "commercial_name_distances_m": []
+    },
+    {
+      "bank_record": {
+        "location": {
+          "lat": "34.961063692",
+          "lng": "127.4847504375"
+        },
+        "content": {
+          "tel": "061)752-3327",
+          "title": "현대주유소",
+          "category": "주유소",
+          "address": "전남 순천시 매곡동 ",
+          "distance": "59693",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000004645863",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-27T16:45:32+09:00",
+        "query_address": [
+          "전남",
+          "순천시",
+          "매곡동"
+        ],
+        "coordinate_status": "present_unverified"
+      },
+      "bank_fuel_category": true,
+      "in_previous_coordinate_scan": true,
+      "commercial_name_matches": [
+        {
+          "상가업소번호": "MA010120220814192562",
+          "상호명": "현대주유소",
+          "지점명": "",
+          "상권업종소분류코드": "G21401",
+          "상권업종소분류명": "주유소",
+          "표준산업분류코드": "G47711",
+          "표준산업분류명": "운송장비용 주유소 운영업",
+          "시군구명": "영광군",
+          "도로명주소": "전남광주통합특별시 영광군 홍농읍 연우로 334",
+          "지번주소": "전남광주통합특별시 영광군 홍농읍 칠곡리 31-7",
+          "위도": "35.391068780308",
+          "경도": "126.441323366758",
+          "region": "전남"
+        },
+        {
+          "상가업소번호": "MA010120220807846418",
+          "상호명": "현대주유소",
+          "지점명": "",
+          "상권업종소분류코드": "G21401",
+          "상권업종소분류명": "주유소",
+          "표준산업분류코드": "G47711",
+          "표준산업분류명": "운송장비용 주유소 운영업",
+          "시군구명": "순천시",
+          "도로명주소": "전남광주통합특별시 순천시 중앙로 172",
+          "지번주소": "전남광주통합특별시 순천시 매곡동 55-1",
+          "위도": "34.9609772960504",
+          "경도": "127.484715824515",
+          "region": "전남"
+        },
+        {
+          "상가업소번호": "MA010120220807858769",
+          "상호명": "현대주유소",
+          "지점명": "",
+          "상권업종소분류코드": "G21401",
+          "상권업종소분류명": "주유소",
+          "표준산업분류코드": "G47711",
+          "표준산업분류명": "운송장비용 주유소 운영업",
+          "시군구명": "여수시",
+          "도로명주소": "전남광주통합특별시 여수시 좌수영로 1246",
+          "지번주소": "전남광주통합특별시 여수시 해산동 419",
+          "위도": "34.8013067205252",
+          "경도": "127.645488639203",
+          "region": "전남"
+        },
+        {
+          "상가업소번호": "MA010120220807526025",
+          "상호명": "현대주유소",
+          "지점명": "",
+          "상권업종소분류코드": "G21401",
+          "상권업종소분류명": "주유소",
+          "표준산업분류코드": "G47711",
+          "표준산업분류명": "운송장비용 주유소 운영업",
+          "시군구명": "장성군",
+          "도로명주소": "전남광주통합특별시 장성군 장성읍 역전로 160",
+          "지번주소": "전남광주통합특별시 장성군 장성읍 영천리 1475-27",
+          "위도": "35.3052940817048",
+          "경도": "126.782182950762",
+          "region": "전남"
+        }
+      ],
+      "opinet_name_matches": [
+        {
+          "UNI_ID": "A0021724",
+          "POLL_DIV_CD": "GSC",
+          "OS_NM": "현대주유소",
+          "PRICE": 1874,
+          "DISTANCE": 2901.9,
+          "GIS_X_COOR": 353143.7,
+          "GIS_Y_COOR": 262619.2,
+          "lat": 34.960999717178424,
+          "lng": 127.48476113868881,
+          "checked_at": "2026-10-27T15:59:15+09:00",
+          "product": "B027"
+        },
+        {
+          "UNI_ID": "A0019776",
+          "POLL_DIV_CD": "SOL",
+          "OS_NM": "현대주유소",
+          "PRICE": 1849,
+          "DISTANCE": 907.2,
+          "GIS_X_COOR": 289452.6572,
+          "GIS_Y_COOR": 301373.3151,
+          "lat": 35.30530752155032,
+          "lng": 126.78225108851755,
+          "checked_at": "2026-10-27T15:59:51+09:00",
+          "product": "B027"
+        }
+      ],
+      "mapped_name_matches": [
+        {
+          "id": "onnuri:kb:000000004645863",
+          "name": "현대주유소",
+          "address": "전남광주통합특별시 순천시 중앙로 172"
+        }
+      ],
+      "status": "needs_identity_review_not_automatically_publishable",
+      "commercial_name_distances_m": [
+        106207.2,
+        10.1,
+        23033.6,
+        74477.7
+      ]
+    },
+    {
+      "bank_record": {
+        "location": {
+          "lat": "34.9497466291",
+          "lng": "127.4911607758"
+        },
+        "content": {
+          "tel": "061)744-4887",
+          "title": "순천주유소",
+          "category": "주유소",
+          "address": "전남 순천시 장천동 ",
+          "distance": "60957",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000009989174",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-27T16:46:06+09:00",
+        "query_address": [
+          "전남",
+          "순천시",
+          "장천동"
+        ],
+        "coordinate_status": "present_unverified"
+      },
+      "bank_fuel_category": true,
+      "in_previous_coordinate_scan": true,
+      "commercial_name_matches": [
+        {
+          "상가업소번호": "MA010120220807840885",
+          "상호명": "순천주유소",
+          "지점명": "",
+          "상권업종소분류코드": "G21401",
+          "상권업종소분류명": "주유소",
+          "표준산업분류코드": "G47711",
+          "표준산업분류명": "운송장비용 주유소 운영업",
+          "시군구명": "순천시",
+          "도로명주소": "전남광주통합특별시 순천시 강남로 45",
+          "지번주소": "전남광주통합특별시 순천시 장천동 14-10",
+          "위도": "34.9497741641493",
+          "경도": "127.491196476659",
+          "region": "전남"
+        }
+      ],
+      "opinet_name_matches": [
+        {
+          "UNI_ID": "A0021890",
+          "POLL_DIV_CD": "HDO",
+          "OS_NM": "순천주유소",
+          "PRICE": 1843,
+          "DISTANCE": 2128.4,
+          "GIS_X_COOR": 353722.7,
+          "GIS_Y_COOR": 261363.4,
+          "lat": 34.94970623618855,
+          "lng": 127.49117095300886,
+          "checked_at": "2026-10-27T15:59:15+09:00",
+          "product": "B027"
+        }
+      ],
+      "mapped_name_matches": [
+        {
+          "id": "onnuri:14077200010",
+          "name": "순천주유소",
+          "address": "전라남도 순천시 강남로 45(장천동)"
+        }
+      ],
+      "status": "needs_identity_review_not_automatically_publishable",
+      "commercial_name_distances_m": [
+        4.5
+      ]
+    },
+    {
+      "bank_record": {
+        "location": {
+          "lat": "34.9469480851",
+          "lng": "127.4893540096"
+        },
+        "content": {
+          "tel": "",
+          "title": "호남주유소",
+          "category": "주유소",
+          "address": "전남 순천시 장천동 ",
+          "distance": "61039",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000113153165",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-27T16:46:06+09:00",
+        "query_address": [
+          "전남",
+          "순천시",
+          "장천동"
+        ],
+        "coordinate_status": "present_unverified"
+      },
+      "bank_fuel_category": true,
+      "in_previous_coordinate_scan": true,
+      "commercial_name_matches": [
+        {
+          "상가업소번호": "MA0101202406A0144191",
+          "상호명": "호남주유소",
+          "지점명": "",
+          "상권업종소분류코드": "G21401",
+          "상권업종소분류명": "주유소",
+          "표준산업분류코드": "G47711",
+          "표준산업분류명": "운송장비용 주유소 운영업",
+          "시군구명": "순천시",
+          "도로명주소": "전남광주통합특별시 순천시 팔마로 9",
+          "지번주소": "전남광주통합특별시 순천시 장천동 84-10",
+          "위도": "34.9470230784057",
+          "경도": "127.489428526916",
+          "region": "전남"
+        },
+        {
+          "상가업소번호": "MA010120220807814654",
+          "상호명": "호남주유소",
+          "지점명": "",
+          "상권업종소분류코드": "G21401",
+          "상권업종소분류명": "주유소",
+          "표준산업분류코드": "G47711",
+          "표준산업분류명": "운송장비용 주유소 운영업",
+          "시군구명": "해남군",
+          "도로명주소": "전남광주통합특별시 해남군 해남읍 남부순환로 102",
+          "지번주소": "전남광주통합특별시 해남군 해남읍 고도리 480-5",
+          "위도": "34.5651622094817",
+          "경도": "126.600419447417",
+          "region": "전남"
+        },
+        {
+          "상가업소번호": "MA010120220807819935",
+          "상호명": "호남주유소",
+          "지점명": "",
+          "상권업종소분류코드": "G21401",
+          "상권업종소분류명": "주유소",
+          "표준산업분류코드": "G47711",
+          "표준산업분류명": "운송장비용 주유소 운영업",
+          "시군구명": "강진군",
+          "도로명주소": "전남광주통합특별시 강진군 신전면 백도로 1260",
+          "지번주소": "전남광주통합특별시 강진군 신전면 용월리 1061-6",
+          "위도": "34.4958363562765",
+          "경도": "126.703151066196",
+          "region": "전남"
+        }
+      ],
+      "opinet_name_matches": [
+        {
+          "UNI_ID": "A0021906",
+          "POLL_DIV_CD": "SOL",
+          "OS_NM": "호남주유소",
+          "PRICE": 1868,
+          "DISTANCE": 2341.1,
+          "GIS_X_COOR": 353554.0,
+          "GIS_Y_COOR": 261056.0,
+          "lat": 34.946927475262655,
+          "lng": 127.48934117996967,
+          "checked_at": "2026-10-27T15:59:15+09:00",
+          "product": "B027"
+        },
+        {
+          "UNI_ID": "A0021531",
+          "POLL_DIV_CD": "SOL",
+          "OS_NM": "호남주유소",
+          "PRICE": 1869,
+          "DISTANCE": 635.4,
+          "GIS_X_COOR": 271700.4,
+          "GIS_Y_COOR": 219456.3,
+          "lat": 34.56494836823215,
+          "lng": 126.5997002480794,
+          "checked_at": "2026-10-27T16:00:15+09:00",
+          "product": "B027"
+        }
+      ],
+      "mapped_name_matches": [
+        {
+          "id": "onnuri:14077200045",
+          "name": "호남주유소",
+          "address": "전라남도 순천시 팔마로 9(장천동)"
+        }
+      ],
+      "status": "needs_identity_review_not_automatically_publishable",
+      "commercial_name_distances_m": [
+        10.8,
+        91636.1,
+        87631.0
+      ]
+    },
+    {
+      "bank_record": {
+        "location": {
+          "lat": "34.7462511276",
+          "lng": "126.4768178394"
+        },
+        "content": {
+          "tel": "061)462-5188",
+          "title": "용앙주유소",
+          "category": "주유소",
+          "address": "전남 영암군 삼호읍 ",
+          "distance": "77823",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000013496826",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-27T16:48:38+09:00",
+        "query_address": [
+          "전남",
+          "영암군",
+          "삼호읍"
+        ],
+        "coordinate_status": "present_unverified"
+      },
+      "bank_fuel_category": true,
+      "in_previous_coordinate_scan": true,
+      "commercial_name_matches": [
+        {
+          "상가업소번호": "MA010120220807722913",
+          "상호명": "용앙주유소",
+          "지점명": "",
+          "상권업종소분류코드": "G21401",
+          "상권업종소분류명": "주유소",
+          "표준산업분류코드": "G47711",
+          "표준산업분류명": "운송장비용 주유소 운영업",
+          "시군구명": "영암군",
+          "도로명주소": "전남광주통합특별시 영암군 삼호읍 삼호중앙로 241",
+          "지번주소": "전남광주통합특별시 영암군 삼호읍 용앙리 201",
+          "위도": "34.7461775255411",
+          "경도": "126.476660474872",
+          "region": "전남"
+        }
+      ],
+      "opinet_name_matches": [],
+      "mapped_name_matches": [
+        {
+          "id": "onnuri:14270200092",
+          "name": "용앙주유소",
+          "address": "전라남도 영암군 삼호읍 삼호중앙로 241"
+        }
+      ],
+      "status": "needs_identity_review_not_automatically_publishable",
+      "commercial_name_distances_m": [
+        16.5
+      ]
+    },
+    {
+      "bank_record": {
+        "location": {
+          "lat": "35.3384396748",
+          "lng": "126.8149397213"
+        },
+        "content": {
+          "tel": "061)394-0572",
+          "title": "재봉주유소",
+          "category": "주유소",
+          "address": "전남 장성군 장성읍 ",
+          "distance": "15760",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000033093565",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-27T16:49:17+09:00",
+        "query_address": [
+          "전남",
+          "장성군",
+          "장성읍"
+        ],
+        "coordinate_status": "present_unverified"
+      },
+      "bank_fuel_category": true,
+      "in_previous_coordinate_scan": true,
+      "commercial_name_matches": [
+        {
+          "상가업소번호": "MA010120220807541760",
+          "상호명": "재봉주유소",
+          "지점명": "",
+          "상권업종소분류코드": "G21401",
+          "상권업종소분류명": "주유소",
+          "표준산업분류코드": "G47711",
+          "표준산업분류명": "운송장비용 주유소 운영업",
+          "시군구명": "장성군",
+          "도로명주소": "전남광주통합특별시 장성군 장성읍 단풍로 450",
+          "지번주소": "전남광주통합특별시 장성군 장성읍 야은리 175-2",
+          "위도": "35.3385720615952",
+          "경도": "126.81510408541",
+          "region": "전남"
+        }
+      ],
+      "opinet_name_matches": [
+        {
+          "UNI_ID": "A0019867",
+          "POLL_DIV_CD": "SOL",
+          "OS_NM": "재봉주유소",
+          "PRICE": 1889,
+          "DISTANCE": 4236.5,
+          "GIS_X_COOR": 292459.8657,
+          "GIS_Y_COOR": 305035.1813,
+          "lat": 35.33863744443193,
+          "lng": 126.8148304857535,
+          "checked_at": "2026-10-27T15:59:51+09:00",
+          "product": "B027"
+        }
+      ],
+      "mapped_name_matches": [
+        {
+          "id": "onnuri:18809200006",
+          "name": "재봉주유소",
+          "address": "전남광주통합특별시 장성군 장성읍 단풍로 450"
+        }
+      ],
+      "status": "needs_identity_review_not_automatically_publishable",
+      "commercial_name_distances_m": [
+        21.0
+      ]
+    },
+    {
+      "bank_record": {
+        "location": {
+          "lat": "35.2924363629",
+          "lng": "126.779621544"
+        },
+        "content": {
+          "tel": "061)393-1000",
+          "title": "장성농협주유소",
+          "category": "주유소",
+          "address": "전남 장성군 장성읍 ",
+          "distance": "18720",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000100745478",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-27T16:49:17+09:00",
+        "query_address": [
+          "전남",
+          "장성군",
+          "장성읍"
+        ],
+        "coordinate_status": "present_unverified"
+      },
+      "bank_fuel_category": true,
+      "in_previous_coordinate_scan": true,
+      "commercial_name_matches": [
+        {
+          "상가업소번호": "MA010120220808842825",
+          "상호명": "장성농협주유소",
+          "지점명": "",
+          "상권업종소분류코드": "G21401",
+          "상권업종소분류명": "주유소",
+          "표준산업분류코드": "G47711",
+          "표준산업분류명": "운송장비용 주유소 운영업",
+          "시군구명": "장성군",
+          "도로명주소": "전남광주통합특별시 장성군 장성읍 뱃나드리로 245",
+          "지번주소": "전남광주통합특별시 장성군 장성읍 영천리 1330-1",
+          "위도": "35.2921931828988",
+          "경도": "126.779711530487",
+          "region": "전남"
+        }
+      ],
+      "opinet_name_matches": [
+        {
+          "UNI_ID": "A0033523",
+          "POLL_DIV_CD": "NHO",
+          "OS_NM": "장성농협주유소",
+          "PRICE": 1829,
+          "DISTANCE": 1847.1,
+          "GIS_X_COOR": 289211.68741,
+          "GIS_Y_COOR": 299907.27472,
+          "lat": 35.292068665987195,
+          "lng": 126.77980027204116,
+          "checked_at": "2026-10-27T15:59:51+09:00",
+          "product": "B027"
+        }
+      ],
+      "mapped_name_matches": [
+        {
+          "id": "onnuri:14500200210",
+          "name": "장성농협주유소",
+          "address": "전라남도 장성군 장성읍 뱃나드리로 245"
+        }
+      ],
+      "status": "needs_identity_review_not_automatically_publishable",
+      "commercial_name_distances_m": [
+        28.2
+      ]
+    },
+    {
+      "bank_record": {
+        "location": {
+          "lat": "35.2924363629",
+          "lng": "126.779621544"
+        },
+        "content": {
+          "tel": "061)393-1000",
+          "title": "장성농협주유소",
+          "category": "세차장",
+          "address": "전남 장성군 장성읍 ",
+          "distance": "18720",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "0",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000100747978",
+          "highOilGb": "0",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-27T16:49:17+09:00",
+        "query_address": [
+          "전남",
+          "장성군",
+          "장성읍"
+        ],
+        "coordinate_status": "present_unverified"
+      },
+      "bank_fuel_category": false,
+      "in_previous_coordinate_scan": true,
+      "commercial_name_matches": [
+        {
+          "상가업소번호": "MA010120220808842825",
+          "상호명": "장성농협주유소",
+          "지점명": "",
+          "상권업종소분류코드": "G21401",
+          "상권업종소분류명": "주유소",
+          "표준산업분류코드": "G47711",
+          "표준산업분류명": "운송장비용 주유소 운영업",
+          "시군구명": "장성군",
+          "도로명주소": "전남광주통합특별시 장성군 장성읍 뱃나드리로 245",
+          "지번주소": "전남광주통합특별시 장성군 장성읍 영천리 1330-1",
+          "위도": "35.2921931828988",
+          "경도": "126.779711530487",
+          "region": "전남"
+        }
+      ],
+      "opinet_name_matches": [
+        {
+          "UNI_ID": "A0033523",
+          "POLL_DIV_CD": "NHO",
+          "OS_NM": "장성농협주유소",
+          "PRICE": 1829,
+          "DISTANCE": 1847.1,
+          "GIS_X_COOR": 289211.68741,
+          "GIS_Y_COOR": 299907.27472,
+          "lat": 35.292068665987195,
+          "lng": 126.77980027204116,
+          "checked_at": "2026-10-27T15:59:51+09:00",
+          "product": "B027"
+        }
+      ],
+      "mapped_name_matches": [
+        {
+          "id": "onnuri:14500200210",
+          "name": "장성농협주유소",
+          "address": "전라남도 장성군 장성읍 뱃나드리로 245"
+        }
+      ],
+      "status": "needs_identity_review_not_automatically_publishable",
+      "commercial_name_distances_m": [
+        28.2
+      ]
+    },
+    {
+      "bank_record": {
+        "location": {
+          "lat": "35.2672847973",
+          "lng": "126.8046897626"
+        },
+        "content": {
+          "tel": "061)392-3337",
+          "title": "영신주유소",
+          "category": "주유소",
+          "address": "전남 장성군 진원면 ",
+          "distance": "17003",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000099959398",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-27T16:49:18+09:00",
+        "query_address": [
+          "전남",
+          "장성군",
+          "진원면"
+        ],
+        "coordinate_status": "present_unverified"
+      },
+      "bank_fuel_category": true,
+      "in_previous_coordinate_scan": true,
+      "commercial_name_matches": [
+        {
+          "상가업소번호": "MA010120220807816054",
+          "상호명": "영신주유소",
+          "지점명": "",
+          "상권업종소분류코드": "G21401",
+          "상권업종소분류명": "주유소",
+          "표준산업분류코드": "G47711",
+          "표준산업분류명": "운송장비용 주유소 운영업",
+          "시군구명": "해남군",
+          "도로명주소": "전남광주통합특별시 해남군 옥천면 공룡대로 3708",
+          "지번주소": "전남광주통합특별시 해남군 옥천면 영신리 517-11",
+          "위도": "34.5950294418708",
+          "경도": "126.641906652963",
+          "region": "전남"
+        },
+        {
+          "상가업소번호": "MA010120220807719020",
+          "상호명": "영신주유소",
+          "지점명": "",
+          "상권업종소분류코드": "G21401",
+          "상권업종소분류명": "주유소",
+          "표준산업분류코드": "G47711",
+          "표준산업분류명": "운송장비용 주유소 운영업",
+          "시군구명": "장성군",
+          "도로명주소": "전남광주통합특별시 장성군 진원면 영신2길 7",
+          "지번주소": "전남광주통합특별시 장성군 진원면 율곡리 282-60",
+          "위도": "35.2673862626297",
+          "경도": "126.804759351774",
+          "region": "전남"
+        },
+        {
+          "상가업소번호": "MA010120220807478828",
+          "상호명": "영신주유소",
+          "지점명": "",
+          "상권업종소분류코드": "G21401",
+          "상권업종소분류명": "주유소",
+          "표준산업분류코드": "G47711",
+          "표준산업분류명": "운송장비용 주유소 운영업",
+          "시군구명": "화순군",
+          "도로명주소": "전남광주통합특별시 화순군 이양면 학포로 605",
+          "지번주소": "전남광주통합특별시 화순군 이양면 오류리 638",
+          "위도": "34.891472916342",
+          "경도": "126.987911413474",
+          "region": "전남"
+        }
+      ],
+      "opinet_name_matches": [
+        {
+          "UNI_ID": "A0019928",
+          "POLL_DIV_CD": "HDO",
+          "OS_NM": "영신주유소",
+          "PRICE": 1849,
+          "DISTANCE": 4366.5,
+          "GIS_X_COOR": 291448.0,
+          "GIS_Y_COOR": 297125.0,
+          "lat": 35.2672396252986,
+          "lng": 126.80475047237812,
+          "checked_at": "2026-10-27T15:59:51+09:00",
+          "product": "B027"
+        },
+        {
+          "UNI_ID": "A0006096",
+          "POLL_DIV_CD": "SKE",
+          "OS_NM": "영신주유소",
+          "PRICE": 1868,
+          "DISTANCE": 4496.7,
+          "GIS_X_COOR": 275633.14644,
+          "GIS_Y_COOR": 222740.81395,
+          "lat": 34.59503476933876,
+          "lng": 126.64206530769323,
+          "checked_at": "2026-10-27T16:00:15+09:00",
+          "product": "B027"
+        }
+      ],
+      "mapped_name_matches": [
+        {
+          "id": "onnuri:18811200003",
+          "name": "영신 주유소",
+          "address": "전남광주통합특별시 장성군 진원면 영신2길 7"
+        }
+      ],
+      "status": "needs_identity_review_not_automatically_publishable",
+      "commercial_name_distances_m": [
+        76210.2,
+        12.9,
+        44991.6
+      ]
+    },
+    {
+      "bank_record": {
+        "location": {
+          "lat": "34.6758224097",
+          "lng": "126.9024430844"
+        },
+        "content": {
+          "tel": "061)863-1994",
+          "title": "남도종합상사",
+          "category": "철물점",
+          "address": "전남 장흥군 장흥읍 ",
+          "distance": "70811",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000042251439",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-27T16:49:34+09:00",
+        "query_address": [
+          "전남",
+          "장흥군",
+          "장흥읍"
+        ],
+        "coordinate_status": "present_unverified"
+      },
+      "bank_fuel_category": false,
+      "in_previous_coordinate_scan": true,
+      "commercial_name_matches": [
+        {
+          "상가업소번호": "MA010120220808426756",
+          "상호명": "남도종합상사",
+          "지점명": "",
+          "상권업종소분류코드": "G21401",
+          "상권업종소분류명": "주유소",
+          "표준산업분류코드": "G47711",
+          "표준산업분류명": "운송장비용 주유소 운영업",
+          "시군구명": "순천시",
+          "도로명주소": "전남광주통합특별시 순천시 조례신대길 31",
+          "지번주소": "전남광주통합특별시 순천시 조례동 869-1",
+          "위도": "34.9617295288697",
+          "경도": "127.518640507369",
+          "region": "전남"
+        }
+      ],
+      "opinet_name_matches": [],
+      "mapped_name_matches": [],
+      "status": "needs_identity_review_not_automatically_publishable",
+      "commercial_name_distances_m": [
+        64612.9
+      ]
+    },
+    {
+      "bank_record": {
+        "location": {
+          "lat": "34.6755529657",
+          "lng": "126.901164572"
+        },
+        "content": {
+          "tel": "061)863-9305",
+          "title": "진남주유소",
+          "category": "주유소",
+          "address": "전남 장흥군 장흥읍 ",
+          "distance": "70854",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000052037478",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-27T16:49:34+09:00",
+        "query_address": [
+          "전남",
+          "장흥군",
+          "장흥읍"
+        ],
+        "coordinate_status": "present_unverified"
+      },
+      "bank_fuel_category": true,
+      "in_previous_coordinate_scan": true,
+      "commercial_name_matches": [
+        {
+          "상가업소번호": "MA0101202406A0410265",
+          "상호명": "진남주유소",
+          "지점명": "",
+          "상권업종소분류코드": "G21401",
+          "상권업종소분류명": "주유소",
+          "표준산업분류코드": "G47711",
+          "표준산업분류명": "운송장비용 주유소 운영업",
+          "시군구명": "여수시",
+          "도로명주소": "전남광주통합특별시 여수시 좌수영로 684",
+          "지번주소": "전남광주통합특별시 여수시 봉계동 33-7",
+          "위도": "34.7836847958444",
+          "경도": "127.692975083289",
+          "region": "전남"
+        },
+        {
+          "상가업소번호": "MA010120220807815247",
+          "상호명": "진남주유소",
+          "지점명": "",
+          "상권업종소분류코드": "G21401",
+          "상권업종소분류명": "주유소",
+          "표준산업분류코드": "G47711",
+          "표준산업분류명": "운송장비용 주유소 운영업",
+          "시군구명": "장흥군",
+          "도로명주소": "전남광주통합특별시 장흥군 장흥읍 칠거리예양로 37",
+          "지번주소": "전남광주통합특별시 장흥군 장흥읍 예양리 114-3",
+          "위도": "34.6755985467784",
+          "경도": "126.901229717406",
+          "region": "전남"
+        }
+      ],
+      "opinet_name_matches": [
+        {
+          "UNI_ID": "A0010114",
+          "POLL_DIV_CD": "GSC",
+          "OS_NM": "진남주유소",
+          "PRICE": 1828,
+          "DISTANCE": 1440.4,
+          "GIS_X_COOR": 372131.0,
+          "GIS_Y_COOR": 242875.0,
+          "lat": 34.78371585241908,
+          "lng": 127.69333097284994,
+          "checked_at": "2026-10-27T15:59:27+09:00",
+          "product": "B027"
+        },
+        {
+          "UNI_ID": "A0021541",
+          "POLL_DIV_CD": "SKE",
+          "OS_NM": "진남주유소",
+          "PRICE": 1898,
+          "DISTANCE": 2711.2,
+          "GIS_X_COOR": 299500.0,
+          "GIS_Y_COOR": 231378.0,
+          "lat": 34.67550386266817,
+          "lng": 126.90117610705163,
+          "checked_at": "2026-10-27T15:59:57+09:00",
+          "product": "B027"
+        }
+      ],
+      "mapped_name_matches": [
+        {
+          "id": "onnuri:14283200040",
+          "name": "진남주유소",
+          "address": "전남광주통합특별시 장흥군 장흥읍 칠거리예양로 37"
+        }
+      ],
+      "status": "needs_identity_review_not_automatically_publishable",
+      "commercial_name_distances_m": [
+        73352.1,
+        7.8
+      ]
+    },
+    {
+      "bank_record": {
+        "location": {
+          "lat": "35.0623586819",
+          "lng": "126.5228518338"
+        },
+        "content": {
+          "tel": "061)322-2140",
+          "title": "대창주유소",
+          "category": "주유소",
+          "address": "전남 함평군 함평읍 ",
+          "distance": "50155",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000065992690",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-27T16:49:58+09:00",
+        "query_address": [
+          "전남",
+          "함평군",
+          "함평읍"
+        ],
+        "coordinate_status": "present_unverified"
+      },
+      "bank_fuel_category": true,
+      "in_previous_coordinate_scan": true,
+      "commercial_name_matches": [
+        {
+          "상가업소번호": "MA010120220807793928",
+          "상호명": "대창주유소",
+          "지점명": "",
+          "상권업종소분류코드": "G21401",
+          "상권업종소분류명": "주유소",
+          "표준산업분류코드": "G47711",
+          "표준산업분류명": "운송장비용 주유소 운영업",
+          "시군구명": "장흥군",
+          "도로명주소": "전남광주통합특별시 장흥군 장흥읍 장흥대로 3337",
+          "지번주소": "전남광주통합특별시 장흥군 장흥읍 충열리 74-1",
+          "위도": "34.6686417265028",
+          "경도": "126.893186014479",
+          "region": "전남"
+        },
+        {
+          "상가업소번호": "MA010120220807742043",
+          "상호명": "대창주유소",
+          "지점명": "",
+          "상권업종소분류코드": "G21401",
+          "상권업종소분류명": "주유소",
+          "표준산업분류코드": "G47711",
+          "표준산업분류명": "운송장비용 주유소 운영업",
+          "시군구명": "함평군",
+          "도로명주소": "전남광주통합특별시 함평군 함평읍 중앙길 57",
+          "지번주소": "전남광주통합특별시 함평군 함평읍 내교리 182-4",
+          "위도": "35.0623835942896",
+          "경도": "126.522633361389",
+          "region": "전남"
+        }
+      ],
+      "opinet_name_matches": [
+        {
+          "UNI_ID": "A0021408",
+          "POLL_DIV_CD": "HDO",
+          "OS_NM": "대창주유소",
+          "PRICE": 1899,
+          "DISTANCE": 3571.7,
+          "GIS_X_COOR": 298773.1316,
+          "GIS_Y_COOR": 230593.0567,
+          "lat": 34.668357083222304,
+          "lng": 126.89333981736792,
+          "checked_at": "2026-10-27T15:59:57+09:00",
+          "product": "B027"
+        },
+        {
+          "UNI_ID": "A0021136",
+          "POLL_DIV_CD": "SKE",
+          "OS_NM": "대창주유소",
+          "PRICE": 1859,
+          "DISTANCE": 22.0,
+          "GIS_X_COOR": 265459.70534,
+          "GIS_Y_COOR": 274730.86438,
+          "lat": 35.062279558712675,
+          "lng": 126.52284693733567,
+          "checked_at": "2026-10-27T16:00:09+09:00",
+          "product": "B027"
+        }
+      ],
+      "mapped_name_matches": [
+        {
+          "id": "onnuri:14215200029",
+          "name": "대창주유소",
+          "address": "전라남도 함평군 함평읍 중앙길 57"
+        }
+      ],
+      "status": "needs_identity_review_not_automatically_publishable",
+      "commercial_name_distances_m": [
+        55301.1,
+        20.1
+      ]
+    },
+    {
+      "bank_record": {
+        "location": {
+          "lat": "34.4156236591",
+          "lng": "126.6304928486"
+        },
+        "content": {
+          "tel": "061)533-6760",
+          "title": "(주)대창석유 (남창)",
+          "category": "주유소",
+          "address": "전남 해남군 북평면 ",
+          "distance": "104473",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000055922616",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-27T16:50:06+09:00",
+        "query_address": [
+          "전남",
+          "해남군",
+          "북평면"
+        ],
+        "coordinate_status": "present_unverified"
+      },
+      "bank_fuel_category": true,
+      "in_previous_coordinate_scan": false,
+      "commercial_name_matches": [],
+      "opinet_name_matches": [],
+      "mapped_name_matches": [],
+      "status": "needs_identity_review_not_automatically_publishable",
+      "commercial_name_distances_m": []
+    },
+    {
+      "bank_record": {
+        "location": {
+          "lat": "34.4928350465",
+          "lng": "126.5147580063"
+        },
+        "content": {
+          "tel": "061)535-0021",
+          "title": "화산주유소",
+          "category": "주유소",
+          "address": "전남 해남군 화산면 ",
+          "distance": "100374",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000063753887",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-27T16:50:17+09:00",
+        "query_address": [
+          "전남",
+          "해남군",
+          "화산면"
+        ],
+        "coordinate_status": "present_unverified"
+      },
+      "bank_fuel_category": true,
+      "in_previous_coordinate_scan": true,
+      "commercial_name_matches": [
+        {
+          "상가업소번호": "MA010120220807811979",
+          "상호명": "화산주유소",
+          "지점명": "",
+          "상권업종소분류코드": "G21401",
+          "상권업종소분류명": "주유소",
+          "표준산업분류코드": "G47711",
+          "표준산업분류명": "운송장비용 주유소 운영업",
+          "시군구명": "해남군",
+          "도로명주소": "전남광주통합특별시 해남군 화산면 해남화산로 1045",
+          "지번주소": "전남광주통합특별시 해남군 화산면 방축리 344-5",
+          "위도": "34.4927004921398",
+          "경도": "126.514787318713",
+          "region": "전남"
+        }
+      ],
+      "opinet_name_matches": [],
+      "mapped_name_matches": [
+        {
+          "id": "onnuri:14262200012",
+          "name": "화산주유소",
+          "address": "전라남도 해남군 화산면 해남화산로 1045"
+        }
+      ],
+      "status": "needs_identity_review_not_automatically_publishable",
+      "commercial_name_distances_m": [
+        15.2
+      ]
+    }
+  ],
+  "scope": "review_candidates_not_new_station_count"
+}

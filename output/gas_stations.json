@@ -8123,7 +8123,7 @@
     "verification": {
       "onnuri": {
         "status": "confirmed",
-        "checked_at": "2026-10-26T18:32:23+09:00",
+        "checked_at": "2026-10-27T16:45:32+09:00",
         "source_date": null,
         "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
         "source_id": "kb:000000004645863",
@@ -8531,7 +8531,7 @@
     "verification": {
       "onnuri": {
         "status": "confirmed",
-        "checked_at": "2026-10-26T20:17:28+09:00",
+        "checked_at": "2026-10-27T16:43:41+09:00",
         "source_date": null,
         "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
         "source_id": "kb:000000055922363",
@@ -8585,7 +8585,7 @@
     "verification": {
       "onnuri": {
         "status": "confirmed",
-        "checked_at": "2026-10-26T20:20:54+09:00",
+        "checked_at": "2026-10-27T16:38:41+09:00",
         "source_date": null,
         "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
         "source_id": "kb:000000055922645",
@@ -8640,7 +8640,7 @@
     "verification": {
       "onnuri": {
         "status": "confirmed",
-        "checked_at": "2026-10-26T20:22:11+09:00",
+        "checked_at": "2026-10-27T16:39:14+09:00",
         "source_date": null,
         "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
         "source_id": "kb:000000055922220",
@@ -8692,7 +8692,7 @@
     "verification": {
       "onnuri": {
         "status": "confirmed",
-        "checked_at": "2026-10-26T20:31:44+09:00",
+        "checked_at": "2026-10-27T16:45:29+09:00",
         "source_date": null,
         "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
         "source_id": "kb:000000055922242",
@@ -8714,6 +8714,63 @@
       "source_date": "2026-06-30",
       "source_id": "MA0101202503A0053009",
       "bank_distance_m": 6.0
+    }
+  },
+  {
+    "id": "onnuri:kb:000000055922616",
+    "name": "(주)대창석유 (남창)",
+    "address": "전라남도 해남군 북평면 현산북평로 1139",
+    "lat": 34.40867856,
+    "lng": 126.6249243,
+    "payment_types": [
+      "onnuri"
+    ],
+    "source": [
+      "kb_onnuri"
+    ],
+    "aliases": [
+      "(주)대창석유 직영 남창주유소",
+      "(주)대창석유직영 남창주유소",
+      "남창주유소"
+    ],
+    "fuel_kind": "liquid",
+    "route_eligible": true,
+    "region": "전남",
+    "onnuri_methods": {
+      "paper": null,
+      "card": true,
+      "qr": null,
+      "digital": true
+    },
+    "verification": {
+      "onnuri": {
+        "status": "confirmed",
+        "checked_at": "2026-10-27T16:50:06+09:00",
+        "source_date": null,
+        "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+        "source_id": "kb:000000055922616",
+        "source_ids": [
+          "kb:000000055922616"
+        ],
+        "provider": "kbcard",
+        "issuer_scope": [
+          "KB국민카드"
+        ],
+        "match_basis": "bank_onnuri_flag_reviewed_name_phone_registry_opinet_address_coordinates",
+        "candidate_ids": [],
+        "note": "KB국민카드 온누리 사용처 조회 기준. 카드사 반영 지연 가능. 지류·QR·다른 카드사는 별도 확인."
+      }
+    },
+    "location_evidence": {
+      "source_type": "municipal_registry",
+      "source_url": "https://www.data.go.kr/data/15129441/standard.do",
+      "source_date": "2026-07-01",
+      "source_id": "(주)대창석유 직영 남창주유소",
+      "coordinate_source": "municipal_registry",
+      "identity_source_url": "https://www.opinet.co.kr",
+      "opinet_id": "A0020659",
+      "opinet_distance_m": 4.3,
+      "note": "KB 상호·전화·주소권역과 지자체·오피넷 동일성 확인. 오류가 있는 KB 좌표는 사용하지 않음."
     }
   }
 ]

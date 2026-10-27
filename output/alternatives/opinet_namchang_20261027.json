@@ -1,0 +1,44 @@
+{
+  "source_url": "https://www.opinet.co.kr",
+  "retrieval_url": "https://k-skill-proxy.nomadamas.org/v1/opinet/detail",
+  "checked_at": "2026-10-27T16:54:03+09:00",
+  "response": {
+    "RESULT": {
+      "OIL": [
+        {
+          "UNI_ID": "A0020659",
+          "POLL_DIV_CO": "SKE",
+          "GPOLL_DIV_CO": "   ",
+          "OS_NM": "(주)대창석유직영 남창주유소",
+          "VAN_ADR": "전남광주통합특별시 해남군 북평면 남창리 845-2",
+          "NEW_ADR": "전남광주통합특별시 해남군 북평면 현산북평로 1139",
+          "TEL": "061-533-6760",
+          "SIGUNCD": "2029",
+          "LPG_YN": "N",
+          "MAINT_YN": "N",
+          "CAR_WASH_YN": "N",
+          "KPETRO_YN": "N",
+          "CVS_YN": "N",
+          "GOOD_YN": "N",
+          "GOOD_YN5": "N",
+          "GIS_X_COOR": 273778.0,
+          "GIS_Y_COOR": 202085.0,
+          "OIL_PRICE": [
+            {
+              "PRODCD": "B027",
+              "PRICE": 1899,
+              "TRADE_DT": "20261021",
+              "TRADE_TM": "133520"
+            },
+            {
+              "PRODCD": "D047",
+              "PRICE": 1889,
+              "TRADE_DT": "20261021",
+              "TRADE_TM": "133612"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

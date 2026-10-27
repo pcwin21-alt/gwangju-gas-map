@@ -1,0 +1,39 @@
+{
+  "RESULT": {
+    "OIL": [
+      {
+        "UNI_ID": "A0033279",
+        "POLL_DIV_CO": "SOL",
+        "GPOLL_DIV_CO": "   ",
+        "OS_NM": "혁신주유소",
+        "VAN_ADR": "전남광주통합특별시 나주시 빛가람동 540",
+        "NEW_ADR": "전남광주통합특별시 나주시 그린로 116",
+        "TEL": "061-336-2250",
+        "SIGUNCD": "2009",
+        "LPG_YN": "N",
+        "MAINT_YN": "Y",
+        "CAR_WASH_YN": "Y",
+        "KPETRO_YN": "N",
+        "CVS_YN": "N",
+        "GOOD_YN": "N",
+        "GOOD_YN5": "N",
+        "GIS_X_COOR": 288845.54915,
+        "GIS_Y_COOR": 268829.53777,
+        "OIL_PRICE": [
+          {
+            "PRODCD": "B027",
+            "PRICE": 1867,
+            "TRADE_DT": "20261027",
+            "TRADE_TM": "145820"
+          },
+          {
+            "PRODCD": "D047",
+            "PRICE": 1847,
+            "TRADE_DT": "20261027",
+            "TRADE_TM": "142834"
+          }
+        ]
+      }
+    ]
+  }
+}

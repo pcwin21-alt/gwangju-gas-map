@@ -1,0 +1,7271 @@
+{
+  "checked_at": "2026-10-27T16:50:43+09:00",
+  "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+  "scan_status": "all_listed_addresses_complete",
+  "district_count": 22,
+  "address_queries": 442,
+  "returned_rows_before_dedup": 11385,
+  "unique_merchant_ids": 11385,
+  "duplicate_rows": 0,
+  "identity_conflicts": [],
+  "fuel_category_rows": 29,
+  "existing_map_fuel_name_matches": 27,
+  "new_verified_stations": [
+    {
+      "id": "onnuri:kb:000000055922616",
+      "name": "(주)대창석유 (남창)",
+      "address": "전라남도 해남군 북평면 현산북평로 1139",
+      "bank_location_error_m": 925.9,
+      "opinet_registry_distance_m": 4.3
+    }
+  ],
+  "excluded_or_held": [
+    {
+      "bank_id": "000000094538059",
+      "name": "(주)백동산업",
+      "decision": "held_identity_conflict_fuel_vs_hardware"
+    },
+    {
+      "bank_id": "000000122885398",
+      "name": "주유소",
+      "decision": "excluded_restaurant"
+    },
+    {
+      "bank_id": "000000042251439",
+      "name": "남도종합상사",
+      "decision": "excluded_hardware_same_name_different_locality"
+    },
+    {
+      "bank_id": "000000100747978",
+      "name": "장성농협주유소",
+      "decision": "no_additional_marker_carwash_same_existing_station"
+    }
+  ],
+  "jeonnam_map_before": 27,
+  "jeonnam_map_after": 28,
+  "map_rows_before": 218,
+  "map_rows_after": 219,
+  "refreshed_map_ids": [
+    "onnuri:kb:000000004645863",
+    "onnuri:kb:000000055922363",
+    "onnuri:kb:000000055922645",
+    "onnuri:kb:000000055922220",
+    "onnuri:kb:000000055922242"
+  ],
+  "operator_membership_unchanged": true,
+  "prices_unchanged": true,
+  "unusable_coordinate_merchants": 4,
+  "districts": [
+    {
+      "name": "강진군",
+      "address_queries": 11,
+      "returned_merchants": 312,
+      "fuel_category_rows": 0
+    },
+    {
+      "name": "고흥군",
+      "address_queries": 16,
+      "returned_merchants": 144,
+      "fuel_category_rows": 0
+    },
+    {
+      "name": "곡성군",
+      "address_queries": 11,
+      "returned_merchants": 73,
+      "fuel_category_rows": 1
+    },
+    {
+      "name": "광양시",
+      "address_queries": 16,
+      "returned_merchants": 471,
+      "fuel_category_rows": 1
+    },
+    {
+      "name": "구례군",
+      "address_queries": 8,
+      "returned_merchants": 78,
+      "fuel_category_rows": 1
+    },
+    {
+      "name": "나주시",
+      "address_queries": 46,
+      "returned_merchants": 1820,
+      "fuel_category_rows": 6
+    },
+    {
+      "name": "담양군",
+      "address_queries": 13,
+      "returned_merchants": 558,
+      "fuel_category_rows": 4
+    },
+    {
+      "name": "목포시",
+      "address_queries": 80,
+      "returned_merchants": 2171,
+      "fuel_category_rows": 1
+    },
+    {
+      "name": "무안군",
+      "address_queries": 10,
+      "returned_merchants": 1097,
+      "fuel_category_rows": 1
+    },
+    {
+      "name": "보성군",
+      "address_queries": 12,
+      "returned_merchants": 171,
+      "fuel_category_rows": 2
+    },
+    {
+      "name": "순천시",
+      "address_queries": 45,
+      "returned_merchants": 1137,
+      "fuel_category_rows": 4
+    },
+    {
+      "name": "신안군",
+      "address_queries": 15,
+      "returned_merchants": 77,
+      "fuel_category_rows": 0
+    },
+    {
+      "name": "여수시",
+      "address_queries": 59,
+      "returned_merchants": 1027,
+      "fuel_category_rows": 0
+    },
+    {
+      "name": "영광군",
+      "address_queries": 11,
+      "returned_merchants": 105,
+      "fuel_category_rows": 0
+    },
+    {
+      "name": "영암군",
+      "address_queries": 11,
+      "returned_merchants": 326,
+      "fuel_category_rows": 1
+    },
+    {
+      "name": "완도군",
+      "address_queries": 12,
+      "returned_merchants": 51,
+      "fuel_category_rows": 0
+    },
+    {
+      "name": "장성군",
+      "address_queries": 11,
+      "returned_merchants": 440,
+      "fuel_category_rows": 3
+    },
+    {
+      "name": "장흥군",
+      "address_queries": 10,
+      "returned_merchants": 412,
+      "fuel_category_rows": 1
+    },
+    {
+      "name": "진도군",
+      "address_queries": 7,
+      "returned_merchants": 98,
+      "fuel_category_rows": 0
+    },
+    {
+      "name": "함평군",
+      "address_queries": 9,
+      "returned_merchants": 123,
+      "fuel_category_rows": 1
+    },
+    {
+      "name": "해남군",
+      "address_queries": 14,
+      "returned_merchants": 524,
+      "fuel_category_rows": 2
+    },
+    {
+      "name": "화순군",
+      "address_queries": 15,
+      "returned_merchants": 170,
+      "fuel_category_rows": 0
+    }
+  ],
+  "queries": [
+    {
+      "address": [
+        "전남",
+        "강진군",
+        "강진읍"
+      ],
+      "count": 290,
+      "checked_at": "2026-10-27T16:37:58+09:00",
+      "cache_file": "949e1e389a6bda8f.json",
+      "response_pages": [
+        {
+          "count": 290,
+          "sha256": "5c91025fcf3772dc94e2a49193f489e873961f7b729959a2240eab5c860301b5"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "강진군",
+        "군동면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:37:59+09:00",
+      "cache_file": "c2c81382ba974609.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "68be6c250dbaa25b97137c93941ce03214c5bd78b2eea36b8a688dc76ae028c8"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "강진군",
+        "대구면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:38:01+09:00",
+      "cache_file": "6dbb8bcc9af2f779.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "861561630a1375015f315502e1ac9ec80abf56f7740dc488603d9a23e0d0274b"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "강진군",
+        "도암면"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:38:02+09:00",
+      "cache_file": "34a483675a35d8d7.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "8bfe6bad376eb7ade4923506cbfe02daf02d8d9b9a8b10dd91c69775c164da42"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "강진군",
+        "마량면"
+      ],
+      "count": 20,
+      "checked_at": "2026-10-27T16:38:04+09:00",
+      "cache_file": "71b8abbe2ac058d9.json",
+      "response_pages": [
+        {
+          "count": 20,
+          "sha256": "62214a849831141100e8d2c8681dc8a475b258ae3f9055afdf1982dd316ee63f"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "강진군",
+        "병영면"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:38:05+09:00",
+      "cache_file": "598051902fc1ea9b.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "42dee34ab643f1c44e6bfd4a71a44ca2349b3d2b731d9d3010a05a61088cc540"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "강진군",
+        "성전면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:38:07+09:00",
+      "cache_file": "4b92b20b3833e1a2.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "36e7d83951067d43274bf902e6b31fdf3e59304f536a38433c376fadfc0907e9"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "강진군",
+        "신전면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:38:08+09:00",
+      "cache_file": "afd606311772a561.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "aee9e38831e4068b82810e45e6d8d396efd5589629ac89531891fd7e151bfd43"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "강진군",
+        "옴천면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:38:10+09:00",
+      "cache_file": "391bc1048ef8d98c.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "44ec264cdbf142c22602c3e8da15e81d3235890fae3b1af657511ab5beadd31f"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "강진군",
+        "작천면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:38:11+09:00",
+      "cache_file": "b4cb555f847d3b0d.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "0b23eb2ecd88b0e34069f7ff013af25a3b59077eee61e297cb30b06f7c0b5ffe"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "강진군",
+        "칠량면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:38:13+09:00",
+      "cache_file": "e55df62e173e1275.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "0f234f1295e0fef214d7f969a2267248cd0aec2051e0e09e31cd04eefb74a94e"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "고흥군",
+        "고흥읍"
+      ],
+      "count": 71,
+      "checked_at": "2026-10-27T16:38:14+09:00",
+      "cache_file": "fe417d50456ccb7d.json",
+      "response_pages": [
+        {
+          "count": 71,
+          "sha256": "42bee7718784910696229b7ea342721ecbf354395533cbcd46e79c896e119edd"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "고흥군",
+        "과역면"
+      ],
+      "count": 23,
+      "checked_at": "2026-10-27T16:38:16+09:00",
+      "cache_file": "aeb73cb41389de43.json",
+      "response_pages": [
+        {
+          "count": 23,
+          "sha256": "5b5721c9e73941f7aee74f8c90955bfa13f3f3d13f863e9875a0c58d99d52200"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "고흥군",
+        "금산면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:38:17+09:00",
+      "cache_file": "12122840c5828ec4.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "2413f56c753ece321c163e0be97b5362af23e8c586939b8bd436d3ef04947d62"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "고흥군",
+        "남양면"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:38:19+09:00",
+      "cache_file": "74040c62cb8f0eee.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "729e2d20518dcb2dfa3029fe3d310eb00489c71a53b592ab388358682afd55b0"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "고흥군",
+        "대서면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:38:20+09:00",
+      "cache_file": "de254241536f324b.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "19405cc96838350a17eb6b919a5d58d0575bcd9ea12463316ee700b3481f1fdc"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "고흥군",
+        "도덕면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:38:22+09:00",
+      "cache_file": "430fa49954f1c3b2.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "27a961d301c765943310419540f2a49f5c248e2219885d2493bcf9fab58d17e4"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "고흥군",
+        "도양읍"
+      ],
+      "count": 47,
+      "checked_at": "2026-10-27T16:38:23+09:00",
+      "cache_file": "e48d69c80158f2de.json",
+      "response_pages": [
+        {
+          "count": 47,
+          "sha256": "7e1572166290017ab69d5d3e3d869a2f69a9c94c28f71b8421415621b00b1603"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "고흥군",
+        "도화면"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:38:25+09:00",
+      "cache_file": "8bcc712511856a03.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "5d9f69a30ffb8a6539a730f0d3f7882684325b7fae6059bcc417c6feb0306e71"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "고흥군",
+        "동강면"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:38:26+09:00",
+      "cache_file": "44ec966004d3013d.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "b9ccb4e042d8961d71f6c8995efc76e959e44f657b0b833083adf770fcdb01a0"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "고흥군",
+        "동일면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:38:28+09:00",
+      "cache_file": "2270d1bb9e043cab.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "154b0e8cca345dd530c42fa743526a8244387b9c908a4fc06fe6c2247df5e6e8"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "고흥군",
+        "두원면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:38:29+09:00",
+      "cache_file": "3e34bb9dd0980ee8.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "30093ec80eb0a4dca11cbb31a870c28ea9032db8e5faaf86430a85adfa7f79dc"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "고흥군",
+        "봉래면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:38:31+09:00",
+      "cache_file": "e6a3631e7b1c1d0f.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "c686d3dee7212fc05f3892ef0f3f1dfd7e5b20e28d8708ef830cf8f34b94b2fb"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "고흥군",
+        "영남면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:38:32+09:00",
+      "cache_file": "f6f94b1a85b7f200.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "bb733b29628814d5b90bb3a43ae4a9d8b2bce23177899d4724674993b46af527"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "고흥군",
+        "점암면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:38:34+09:00",
+      "cache_file": "bd02ea860590774e.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "d10b7f42397f3cfa2e07f61e2fa9ec263e837ddcf9167f00857fba7045de843e"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "고흥군",
+        "포두면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:38:35+09:00",
+      "cache_file": "21ab78e5ae2f6e31.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "8be7ce99d2a741c2ff6c8d1e895606bd7f531e6b839651bcafa5e05224b38653"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "고흥군",
+        "풍양면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:38:37+09:00",
+      "cache_file": "1723fe760111afe6.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "49f9018f3f13a5f52892e8861721ff22e7676e90bf029beda06a0632445403fe"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "곡성군",
+        "겸면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:38:38+09:00",
+      "cache_file": "109d651b09e262b0.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "6fad5d57c938d346dd3efad734d1ff24dff3326184695d63b26cbf42edda4b24"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "곡성군",
+        "고달면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:38:40+09:00",
+      "cache_file": "202ad241c582c4f8.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "c1f33d173699d737f9a9dcdf672f04e73341666a1c40d5e9c2cc806d7801caa4"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "곡성군",
+        "곡성읍"
+      ],
+      "count": 28,
+      "checked_at": "2026-10-27T16:38:41+09:00",
+      "cache_file": "36c2751b32fad471.json",
+      "response_pages": [
+        {
+          "count": 28,
+          "sha256": "a6904aa5ff9d9a60d552897828868dffb3397fe91fc4b80f530f841b72f7f5fb"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "곡성군",
+        "목사동면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:38:43+09:00",
+      "cache_file": "5415f6089f43e5ea.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "89e27e617222414819fdadd08f02bde5bba86a6728a57169cd03e20d73d16c15"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "곡성군",
+        "삼기면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:38:44+09:00",
+      "cache_file": "a6c364b4b48d5833.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "142faa34ea6ceef1ff042b3bc8a6499061f3569677462e79e5dcfb31b940b1e0"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "곡성군",
+        "석곡면"
+      ],
+      "count": 7,
+      "checked_at": "2026-10-27T16:38:46+09:00",
+      "cache_file": "94d7ec0f7e0bd1ee.json",
+      "response_pages": [
+        {
+          "count": 7,
+          "sha256": "d85ee54bd55f05b549694dc35cb0f9df0f55de992682a2b36ba0d764eac5e0ac"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "곡성군",
+        "오곡면"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:38:47+09:00",
+      "cache_file": "affc741662488ecb.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "6f427c392937b8b92975ea1dbf3b151609ec4d5366d20bdf0afe3e473640628f"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "곡성군",
+        "오산면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:38:49+09:00",
+      "cache_file": "6aee5cb62c7b42fd.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "a3ae1648dc53006357f00025357419f669ef9741d1b58ee5569d5dde930a8ff1"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "곡성군",
+        "옥과면"
+      ],
+      "count": 37,
+      "checked_at": "2026-10-27T16:38:50+09:00",
+      "cache_file": "3da33a009912c553.json",
+      "response_pages": [
+        {
+          "count": 37,
+          "sha256": "1ada3956ca1d60e6fc9be732bfbb66805c88430e4ea06e8848c547cb125f9f8d"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "곡성군",
+        "입면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:38:52+09:00",
+      "cache_file": "ce431eb0a508e0dd.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "e75475dc98f5285690b7f81a45ef5b80000e7fc007130d3abf198fc8829c25c6"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "곡성군",
+        "죽곡면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:38:53+09:00",
+      "cache_file": "431071421649974c.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "091858f9e3bb1f243d1a24145127100cf619c30ec078e451df9756b478d39dc5"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "광양시",
+        "광양읍"
+      ],
+      "count": 114,
+      "checked_at": "2026-10-27T16:38:55+09:00",
+      "cache_file": "a6ee2d244b412413.json",
+      "response_pages": [
+        {
+          "count": 114,
+          "sha256": "455b105b69c2bc20db5f70bbf62301d2cb8aa96115ab8cd8ecedea3872b9ad77"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "광양시",
+        "광영동"
+      ],
+      "count": 25,
+      "checked_at": "2026-10-27T16:38:56+09:00",
+      "cache_file": "330263aa0b22c5c3.json",
+      "response_pages": [
+        {
+          "count": 25,
+          "sha256": "5d6feb3ec326940fc810ba4385272b576bf900fdef9fd08ece7a8e3c55392631"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "광양시",
+        "금호동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:38:58+09:00",
+      "cache_file": "34f615e140d80656.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "aa9fb9bf46625d5f58953ff1e86c585b2caaf7c55be810e37a66ffe35e37da8c"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "광양시",
+        "다압면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:38:59+09:00",
+      "cache_file": "ad903df893dc350b.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "3962186929fed922f274cc67d60540d0506abe50447a5287f423ebf09615eb05"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "광양시",
+        "도이동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:39:01+09:00",
+      "cache_file": "f1c02f9be23c0d5a.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "f68b8bcf50d073a2ac878629215f4d608c83d7cc3ca044d641535d7cdd3bacab"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "광양시",
+        "마동"
+      ],
+      "count": 137,
+      "checked_at": "2026-10-27T16:39:02+09:00",
+      "cache_file": "d4e30ded9e25f943.json",
+      "response_pages": [
+        {
+          "count": 137,
+          "sha256": "71e39aaefd4d6816ad3cac20a69aef4253f4bed8f9fb885e2d22919dfe51ff89"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "광양시",
+        "봉강면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:39:04+09:00",
+      "cache_file": "78e708796f98c277.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "259a391fecc67fb34edf8201a1e8e4d2734f62758c070fb164907072e11b6b0c"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "광양시",
+        "성황동"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:39:05+09:00",
+      "cache_file": "ecf68566cd56bc1b.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "d9c7b2f45d96176ef9746d749ca4ebae1ddb07419f6597a83c2fb2a75cf9ec6f"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "광양시",
+        "옥곡면"
+      ],
+      "count": 20,
+      "checked_at": "2026-10-27T16:39:07+09:00",
+      "cache_file": "1fe1f0c67184fa64.json",
+      "response_pages": [
+        {
+          "count": 20,
+          "sha256": "4f06ad08b866006f4eec64914b73558301326799893cebb225a6e6ce0395fedb"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "광양시",
+        "옥룡면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:39:08+09:00",
+      "cache_file": "8fad6197eefd822f.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "0bb009cb4117db0c5af25962063c5421bfc90dd544f26180cad15b55ad9311e7"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "광양시",
+        "중동"
+      ],
+      "count": 173,
+      "checked_at": "2026-10-27T16:39:10+09:00",
+      "cache_file": "6e8f0e1c87bf17ab.json",
+      "response_pages": [
+        {
+          "count": 173,
+          "sha256": "7e5a965a0799e62ad350ce329dc34818f83b14305bb59c4fe03a138f8c051110"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "광양시",
+        "진상면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:39:11+09:00",
+      "cache_file": "59fc56bc89e33d90.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "6af20d6544a71e50265be7d060a0027a95a54e70c4f0b1531429184f69db6b15"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "광양시",
+        "진월면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:39:13+09:00",
+      "cache_file": "411027ccc4f3241d.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "e48d54ce4819fad82970526b2e5368e77109a53fc70152983a6f3832139e1c5e"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "광양시",
+        "태인동"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:39:14+09:00",
+      "cache_file": "25d2cc994bc97d17.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "82dc4180d8ba7a229a8bcdc1f2b26b385e0d50c410a0721703f8f2da4c6126e9"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "광양시",
+        "황금동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:39:16+09:00",
+      "cache_file": "84b77e336a883ae9.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "816f5a21deaf66b49936b77f0ba04af98601dc0cd1e5ca0e3716b0330e0ce38d"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "광양시",
+        "황길동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:39:17+09:00",
+      "cache_file": "eeef71ca1d61ae90.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "be9bd80807d1bb7931f850fc6cddbdb50743bfb201e4e8069750682af3000cb3"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "구례군",
+        "간전면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:39:19+09:00",
+      "cache_file": "436ecd7675382106.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "6e354bcb06cab768a56e863fb8db3e6bd9582565cef83f4928810f8f2058fc2b"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "구례군",
+        "광의면"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:39:20+09:00",
+      "cache_file": "7b43d85327cde570.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "2e343d26a63a6ed3a90c44fe3ae4328104bcc87a97851f266a25e8f203572151"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "구례군",
+        "구례읍"
+      ],
+      "count": 45,
+      "checked_at": "2026-10-27T16:39:22+09:00",
+      "cache_file": "3db869508ec251d4.json",
+      "response_pages": [
+        {
+          "count": 45,
+          "sha256": "9170b59a679f5b04d4f556331d2d397a3b15e41fd1ef8a49622e4b3abdbe8f77"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "구례군",
+        "마산면"
+      ],
+      "count": 16,
+      "checked_at": "2026-10-27T16:39:23+09:00",
+      "cache_file": "44d0f60df0542cec.json",
+      "response_pages": [
+        {
+          "count": 16,
+          "sha256": "9ded48154a68aef84ae789b711d49d82209dc2b20a2218f27872cdf851ccf966"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "구례군",
+        "문척면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:39:25+09:00",
+      "cache_file": "2c1c8cc0dfd76dff.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "82f7e969a138d8375cd4dfb27c8c3b935e64d50269a52019ad77da03090808aa"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "구례군",
+        "산동면"
+      ],
+      "count": 8,
+      "checked_at": "2026-10-27T16:39:26+09:00",
+      "cache_file": "93644d3fe2bd707e.json",
+      "response_pages": [
+        {
+          "count": 8,
+          "sha256": "4a18a72e53c7a17670dd3b76a384f627b47210540779e21d13bd3976c7adf0ca"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "구례군",
+        "용방면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:39:28+09:00",
+      "cache_file": "9d88ecb73b89e8b4.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "9f55e98e873644492d019d1d1dcf9e519a003030f380b2693e4c3b548a5d38e7"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "구례군",
+        "토지면"
+      ],
+      "count": 8,
+      "checked_at": "2026-10-27T16:39:29+09:00",
+      "cache_file": "43f1f6e5686269a7.json",
+      "response_pages": [
+        {
+          "count": 8,
+          "sha256": "7970d5c9bcf8fefd0032bec3651338fd58015424cd78161580b72b5ec283644a"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "경현동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:39:31+09:00",
+      "cache_file": "f3c2faea0705504a.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "993e007d286b029138e6e0e56748008258ad0ae1cd73dd40b54c5eac471e0696"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "공산면"
+      ],
+      "count": 22,
+      "checked_at": "2026-10-27T16:39:32+09:00",
+      "cache_file": "e00aa4795dd19410.json",
+      "response_pages": [
+        {
+          "count": 22,
+          "sha256": "9f441716c4f3823e7785d7c6c8afc08cae26ec6032310816e1add25924a74f81"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "과원동"
+      ],
+      "count": 2,
+      "checked_at": "2026-10-27T16:39:34+09:00",
+      "cache_file": "2a1542923e87a946.json",
+      "response_pages": [
+        {
+          "count": 2,
+          "sha256": "e1ebc7b30730fcb0f00c8ab03d36d0c924fe0a01eef11b9b7ebf8ad7af2a2acf"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "관정동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:39:35+09:00",
+      "cache_file": "0384578abe0821b5.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "746885010f6db0978579b37faf1db7b33d7e770d06ebbcba4982f3ea9196e2ec"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "교동"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:39:37+09:00",
+      "cache_file": "a2c42923171c7d98.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "7292436abb84e77b45cba46e56248e1966a12993763a7f7b24c2dda13d8b12f9"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "금계동"
+      ],
+      "count": 12,
+      "checked_at": "2026-10-27T16:39:38+09:00",
+      "cache_file": "46908a0244f268d5.json",
+      "response_pages": [
+        {
+          "count": 12,
+          "sha256": "a49556d9fd6c0187b7f6537479f2124a949373c2e51cb9e23d620b627c73a2ca"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "금성동"
+      ],
+      "count": 13,
+      "checked_at": "2026-10-27T16:39:40+09:00",
+      "cache_file": "ca81f5d913c589a2.json",
+      "response_pages": [
+        {
+          "count": 13,
+          "sha256": "1df9b40b70e8a4ad0def27083368cd8088f430171926b9db07df882a720c54a7"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "금천면"
+      ],
+      "count": 24,
+      "checked_at": "2026-10-27T16:39:41+09:00",
+      "cache_file": "288600d627a978f5.json",
+      "response_pages": [
+        {
+          "count": 24,
+          "sha256": "19b5cc227830a940b4ab8a0ca337c2c7593a8a02ab7b57598a49c3abb3723082"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "남내동"
+      ],
+      "count": 20,
+      "checked_at": "2026-10-27T16:39:43+09:00",
+      "cache_file": "346f88729e8b7060.json",
+      "response_pages": [
+        {
+          "count": 20,
+          "sha256": "e51aa12a60bdd97795e69821821752cf5cf4a17b274c561bc8994d6a8a555503"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "남외동"
+      ],
+      "count": 24,
+      "checked_at": "2026-10-27T16:39:44+09:00",
+      "cache_file": "5d90f917efaf6ea4.json",
+      "response_pages": [
+        {
+          "count": 24,
+          "sha256": "2c2b540730eee0f264924a9561ebb984decfaf159d5844ed6be90e97a2752b66"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "남평읍"
+      ],
+      "count": 162,
+      "checked_at": "2026-10-27T16:39:46+09:00",
+      "cache_file": "3050458d575e9e7f.json",
+      "response_pages": [
+        {
+          "count": 162,
+          "sha256": "20bd6d8f0972487a13bfe8b329e3f342f7ce9a3a0ad61b4bdb9c9de298f289bf"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "노안면"
+      ],
+      "count": 12,
+      "checked_at": "2026-10-27T16:39:47+09:00",
+      "cache_file": "bf58e4d64bec8b7c.json",
+      "response_pages": [
+        {
+          "count": 12,
+          "sha256": "10ad23a80d94e72c6b95c2070e68400609ce41710455ae2ccfcfb7d9117b7afd"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "다도면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:39:49+09:00",
+      "cache_file": "ed1876c92dd43546.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "2dd1ca8b51effd255f17207c655c2e15ff4543052c78a6e4c88438bc46f832b8"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "다시면"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:39:50+09:00",
+      "cache_file": "52822123ee594b5d.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "b04f5d2c1afa4e741a3ace31fb26cad64bce7111fb80c4cfb663ae20bfb1b8fc"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "대기동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:39:52+09:00",
+      "cache_file": "95c70418d1d49ba0.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "18e2f1da2daa844d3979cde67b712aad8308c1d8be3b9510b21e83d6ec4902df"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "대호동"
+      ],
+      "count": 92,
+      "checked_at": "2026-10-27T16:39:53+09:00",
+      "cache_file": "fe9bc676d17f8830.json",
+      "response_pages": [
+        {
+          "count": 92,
+          "sha256": "b8228ac720990915e1c2e219d5f1520fdd3813116baad2e2b282b62129609845"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "동강면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:39:55+09:00",
+      "cache_file": "ed71ba7347dc3518.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "12fe9a695063f860efe1ec0b18107c538202fb70c4329698bad52f0ef00ca681"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "동수동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:39:56+09:00",
+      "cache_file": "99e6c18a60e9dbf4.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "70d1c78e1fb66e35c972686d730daede8f42bce6e254da3b5ba86db74b62ba54"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "문평면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:39:58+09:00",
+      "cache_file": "b88885dee24dd695.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "55abe3cd06d8d93849e7fb94aae042b767d1be9b9396b9b5f4f18725468c93aa"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "반남면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:39:59+09:00",
+      "cache_file": "fa76676432ca7a59.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "bff7ec74b49f0837d9229d5d2d282daab5701a2053908ef38b3409436d121c04"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "보산동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:40:01+09:00",
+      "cache_file": "d70dab4042c0f639.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "4efba71bf5e2427b4dd74e732d1595dfd1ecb05f046e2def48417f9c1bf670cd"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "봉황면"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:40:02+09:00",
+      "cache_file": "7897a987324c7200.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "d381c41ef55b09ddc109ae8a55c19494fe76f8df1d52d48f8a2413350a84b126"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "부덕동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:40:04+09:00",
+      "cache_file": "93f04c48474d57e7.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "91e95b6f17b8f72fb5d88a8ac56215400ba5b7b4c7392630bf495992b3a547c2"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "빛가람동"
+      ],
+      "count": 953,
+      "checked_at": "2026-10-27T16:41:49+09:00",
+      "cache_file": "31e9942b323d3e06.json",
+      "response_pages": [
+        {
+          "count": 953,
+          "sha256": "34998b84566244014ba0a2e2ae4bc3faa31bc24edc603349b74fc725be6fef68"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "산정동"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:41:50+09:00",
+      "cache_file": "7e3e8c6b8e21e79b.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "a4b870fd5987a07cccaa0be1fc49f38df502dc08d677d937834dd60f17c574e0"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "산포면"
+      ],
+      "count": 2,
+      "checked_at": "2026-10-27T16:41:51+09:00",
+      "cache_file": "994bd443d67580c6.json",
+      "response_pages": [
+        {
+          "count": 2,
+          "sha256": "99caff85f1d4008b09cf822823fcc0466252a35e22432c058257056f8128408c"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "삼도동"
+      ],
+      "count": 78,
+      "checked_at": "2026-10-27T16:41:53+09:00",
+      "cache_file": "1c8f630d10ac20af.json",
+      "response_pages": [
+        {
+          "count": 78,
+          "sha256": "6f531234dc94e924f83a0363ccbf584f6a227ba75710125dc5184f994a513995"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "삼영동"
+      ],
+      "count": 3,
+      "checked_at": "2026-10-27T16:41:54+09:00",
+      "cache_file": "d693c0a9c0719f0e.json",
+      "response_pages": [
+        {
+          "count": 3,
+          "sha256": "70fbb36c7b8ec2f6af316feb32d12311baa43b0ece3016e19a05bc9b30bf8cb4"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "서내동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:41:56+09:00",
+      "cache_file": "6cc9fc411477b264.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "1c90af65ce5e4e456381367ae0d7f3fe8cf1e644f3a06b822ca08ff4e281b855"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "석현동"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:41:57+09:00",
+      "cache_file": "e64981a3c0c63409.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "9de338d3428ff6ca6ba6dadbed76372772dc1a764f3dd81ecfb97fa72d8033c4"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "성북동"
+      ],
+      "count": 22,
+      "checked_at": "2026-10-27T16:41:59+09:00",
+      "cache_file": "c444b9768aa97a17.json",
+      "response_pages": [
+        {
+          "count": 22,
+          "sha256": "3a3b122c80c7fccb73a20cf5f481765773b40198971b798b7042cf19d7d4a8e0"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "세지면"
+      ],
+      "count": 19,
+      "checked_at": "2026-10-27T16:42:00+09:00",
+      "cache_file": "068cfad13d130c2d.json",
+      "response_pages": [
+        {
+          "count": 19,
+          "sha256": "5c95edd36f55d71cd58afe71069e8ac99961cd5cca6b6dfc044494974e24973b"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "송월동"
+      ],
+      "count": 63,
+      "checked_at": "2026-10-27T16:42:02+09:00",
+      "cache_file": "f2cf27050e1ff1be.json",
+      "response_pages": [
+        {
+          "count": 63,
+          "sha256": "6ad9615a48087353fcf0fce1f80b8d4c3fd9d229b29985603234830d009bedfb"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "송촌동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:42:03+09:00",
+      "cache_file": "52407b3fdae162df.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "7c5c78eba20ba3bce703ccacd0bb74a722e16493d81fed68b0a69b27aa122294"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "안창동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:42:05+09:00",
+      "cache_file": "21db2c49224d3964.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "40406d32e66f82ada2f2b974709410604a64301f577ee5e61bfba86dd610d5e0"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "영산동"
+      ],
+      "count": 44,
+      "checked_at": "2026-10-27T16:42:06+09:00",
+      "cache_file": "1f410a1a7340bccf.json",
+      "response_pages": [
+        {
+          "count": 44,
+          "sha256": "47bfc11a5d2a13c45286f7a640db4b754faadecefa4408d1356f45e5961ad1f6"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "오량동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:42:08+09:00",
+      "cache_file": "603616475435db3c.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "7e4f51dc522cfe03603fa3455c4b0c2fa5102397c10b4262346a28e95d80d74c"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "왕곡면"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:42:09+09:00",
+      "cache_file": "39707b6fd2048271.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "61140a6329912ff7b5f423c443252134937c80583249f0595865d24f4b5ceb0c"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "용산동"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:42:11+09:00",
+      "cache_file": "cbad8bb7f03ab363.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "e661eaaa3f14a6388003fe0a645565320e1cad03529573b82e0b1d7930952b28"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "운곡동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:42:12+09:00",
+      "cache_file": "4da79e1b2b8f921d.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "8b7fc4d5604a2b1d30d566bedfa83ed0089feb4ff99cba1bbe4781268307bf1c"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "이창동"
+      ],
+      "count": 137,
+      "checked_at": "2026-10-27T16:42:14+09:00",
+      "cache_file": "d339144d97af38ea.json",
+      "response_pages": [
+        {
+          "count": 137,
+          "sha256": "27e72906ba9a7cb4aca7458456879e2def3d6a5c782764a0ba2d1d597964c9b9"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "죽림동"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:42:15+09:00",
+      "cache_file": "61ae31abec2ddec8.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "d5664d843f8bbf9b3281fd93ed4015328d8094e3d3a084afd1d27435b2e4e3b3"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "중앙동"
+      ],
+      "count": 108,
+      "checked_at": "2026-10-27T16:42:17+09:00",
+      "cache_file": "d13fb0f60636e8ed.json",
+      "response_pages": [
+        {
+          "count": 108,
+          "sha256": "14a4fed264971168aff6d1298105a991482f7a4c288edcd4febd58be7544fd8f"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "청동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:42:18+09:00",
+      "cache_file": "c07a232cb2c6d889.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "7a723b8c6b23592f8ef881699e7d680fa003b3a10a2d5deb35e13d73dc9eb0f9"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "토계동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:42:20+09:00",
+      "cache_file": "3e66e1312254402f.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "787b023c5bd9a57a9200b2aac015b131b1185a6f4a04e9bde2b21a024d5ca22c"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "나주시",
+        "평산동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:42:21+09:00",
+      "cache_file": "176f7a39ab10f0b3.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "66c55c227b8d6b2e52a8cec6cfcb916a1ec8b04405b7105f83938bb996e61423"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "담양군",
+        "가사문학면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:42:23+09:00",
+      "cache_file": "c949c5336fcc8f0d.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "c61aa755fad6898ebeda58200f678323cca871402a90191fe88437ea978c0c29"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "담양군",
+        "고서면"
+      ],
+      "count": 35,
+      "checked_at": "2026-10-27T16:42:24+09:00",
+      "cache_file": "72f5f476ddd49bdb.json",
+      "response_pages": [
+        {
+          "count": 35,
+          "sha256": "40cdc1b62fd18e64be4e7a534491b792126f874dd02b0e174bde5ca7e146ef1a"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "담양군",
+        "금성면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:42:26+09:00",
+      "cache_file": "730772b79a9f1e6f.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "2e25fae626577eef20e1ebb221d59413a19b28e03f7e4b6c9cc698edadd94bf9"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "담양군",
+        "남면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:42:27+09:00",
+      "cache_file": "8427e307ce94ff48.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "e9d9a6b0e4bb78ed4f0c18daaedc2d3976d15a118cf6fce1fb93dfa4eb48b3ff"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "담양군",
+        "담양읍"
+      ],
+      "count": 460,
+      "checked_at": "2026-10-27T16:42:29+09:00",
+      "cache_file": "bab48043d10ac503.json",
+      "response_pages": [
+        {
+          "count": 460,
+          "sha256": "373a6faa135fe5456e87d6368b962afe978459210d0b6ce551a7fcc4a15c25b5"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "담양군",
+        "대덕면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:42:30+09:00",
+      "cache_file": "f83f6fa6397d07e9.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "f19fb1778b9965d4a7a8e677fc2f4516a46fc5aa8ec2852504ecf2f086e2d514"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "담양군",
+        "대전면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:42:32+09:00",
+      "cache_file": "74bdd5ff1a37038c.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "151f806020abbf3b40aae67b91b9072312a0b86e425a0356b9fce581ff7643e7"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "담양군",
+        "무정면"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:42:33+09:00",
+      "cache_file": "346bc3ba569028b6.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "43373d5d1250dc1fd651097643603ef5a49d8094a8767464df91bc9a6f7b514a"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "담양군",
+        "봉산면"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:42:35+09:00",
+      "cache_file": "d50770c36289d5ce.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "bda64010acba98ba6a36afc01966cf1142b75d4deb5f46c7c0f99a171c826160"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "담양군",
+        "수북면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:42:36+09:00",
+      "cache_file": "e4cdbfda923fdbc5.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "72b7828bdea579265a025b85a0b48c65b16f5de6c643b482ecefac9883407e78"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "담양군",
+        "용면"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:42:38+09:00",
+      "cache_file": "f67c237fd78b1a24.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "f5e9ec3761abba047137be060a9d873eb658e6c3d104468954b64234efbaa286"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "담양군",
+        "월산면"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:42:39+09:00",
+      "cache_file": "963d7f051bf088d9.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "00d7b57949fe37938293c1ff5a53f43d4dc7402eb00b6341eac52076c703fedd"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "담양군",
+        "창평면"
+      ],
+      "count": 59,
+      "checked_at": "2026-10-27T16:42:41+09:00",
+      "cache_file": "3919c53c8172bb11.json",
+      "response_pages": [
+        {
+          "count": 59,
+          "sha256": "85c5540926f631c27be7199e3fe9d7346adfe7afa503011a2c8b7968cfa107ba"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "경동1가"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:42:42+09:00",
+      "cache_file": "3118eb14af234f2f.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "782398e5b9eda89c153389b775cff5593f34f50e6ba853088451688855f97c5b"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "경동2가"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:42:44+09:00",
+      "cache_file": "da186c50661e4a02.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "10b948952ebf1264942be9b040e8b671fdbd8aeb269aea8a837ebcdea6172bc9"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "광동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:42:45+09:00",
+      "cache_file": "8e960a8512dc373e.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "68ae2e5fbf32f7d6b8a8e2ea3b4e357405476bbf2766eb82aecfc59da832ad09"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "광동1가"
+      ],
+      "count": 39,
+      "checked_at": "2026-10-27T16:42:47+09:00",
+      "cache_file": "5619122950d94f28.json",
+      "response_pages": [
+        {
+          "count": 39,
+          "sha256": "9f8cc0973a75638b529e8381026296d32a251c14d7a0f6827b575a77b68ea8c4"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "광동2가"
+      ],
+      "count": 4,
+      "checked_at": "2026-10-27T16:42:48+09:00",
+      "cache_file": "102a03803dae255d.json",
+      "response_pages": [
+        {
+          "count": 4,
+          "sha256": "a5dd7fde7d3fe4d02fdeec668e7047c1e41c91da0de5a8585f490c5a61ba88a4"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "광동3가"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:42:50+09:00",
+      "cache_file": "a99d9df51d621919.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "eef6fb2aac3dbace52b0e989cf46ec94765c4f75df3e26b61e9d7bfc2b6ff7b2"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "금동1가"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:42:51+09:00",
+      "cache_file": "7558ff603a2151a0.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "679131fc3709dd13c604cfb48c4adc050ba27a3e87b4d17d9343ea3ce49cfe43"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "금동2가"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:42:53+09:00",
+      "cache_file": "0e5623bb398056a3.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "e96226dca18d2ca0c13ddbb7cb77bb96c7c73875f85aedbdc423b14e2c837bea"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "금화동"
+      ],
+      "count": 3,
+      "checked_at": "2026-10-27T16:42:54+09:00",
+      "cache_file": "09261c5e46508c22.json",
+      "response_pages": [
+        {
+          "count": 3,
+          "sha256": "f595c29507b7a80aff4ebd7159ed374068f539856a7ccef673707b163d893609"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "남교동"
+      ],
+      "count": 45,
+      "checked_at": "2026-10-27T16:42:56+09:00",
+      "cache_file": "955e94daad68ce4e.json",
+      "response_pages": [
+        {
+          "count": 45,
+          "sha256": "167da238c063a10693564323346c0eda3aef79beae1fd225ad31e4d225ea2db3"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "달동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:42:57+09:00",
+      "cache_file": "9548220d76a1f939.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "fdfa90f55e82ab5031d67b454131a989e3d4764e7bc86692076947898d11d0ce"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "대성동"
+      ],
+      "count": 4,
+      "checked_at": "2026-10-27T16:42:59+09:00",
+      "cache_file": "3cc1c685242a3ad5.json",
+      "response_pages": [
+        {
+          "count": 4,
+          "sha256": "aa0400febb1fbca4a361a8b65822bfdf1eea7930380a15eac0a3fdc5dff0ae53"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "대안동"
+      ],
+      "count": 22,
+      "checked_at": "2026-10-27T16:43:00+09:00",
+      "cache_file": "fa851c6dcd7ef11a.json",
+      "response_pages": [
+        {
+          "count": 22,
+          "sha256": "fa78e55aad0bede6af3d9e80065b8c6ff8bfd1a3fb0d92d20dd196bae9f03c93"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "대양동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:43:02+09:00",
+      "cache_file": "cd5cc867991fa9fb.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "a53e4f599d334d88100ae6dc7e1aefa0ae1338a0f9da78f40c0c37daa2b6300f"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "대의동1가"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:43:03+09:00",
+      "cache_file": "36d5cb904ab7ffb1.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "7398c3f8ae985e6067982e7ac4744672ab08f01f733507b0f44f94dfd7ad62f6"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "대의동2가"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:43:05+09:00",
+      "cache_file": "759f69b65e864c24.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "710a6947e9418055218b39f09b94d6b58b4dd6170e4b34f3a0cdafcfd4d616c1"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "대의동3가"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:43:06+09:00",
+      "cache_file": "7a81662fb8bcc34b.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "0e758b1260dd5c7e9bc6a45746008a490d53245a1f80a791f9629dad7e09e749"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "동명동"
+      ],
+      "count": 5,
+      "checked_at": "2026-10-27T16:43:08+09:00",
+      "cache_file": "678b3475e6a69319.json",
+      "response_pages": [
+        {
+          "count": 5,
+          "sha256": "2beba08312f11788b3ce0fd75bbd3d342ddce2cd0ec7ef322521abeacbdac239"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "만호동"
+      ],
+      "count": 11,
+      "checked_at": "2026-10-27T16:43:09+09:00",
+      "cache_file": "f6b0415a0e693c37.json",
+      "response_pages": [
+        {
+          "count": 11,
+          "sha256": "e494bb4b62a9e1605828e98adb75e34ddfe003415379857c2fc90e202b1bacd6"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "명륜동"
+      ],
+      "count": 11,
+      "checked_at": "2026-10-27T16:43:11+09:00",
+      "cache_file": "a98420c9fa9f125d.json",
+      "response_pages": [
+        {
+          "count": 11,
+          "sha256": "13cd7d12888cc9d892f12bba5aa4a6b5cdf24c2e1992d2eaad75138f058c9ecc"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "무안동"
+      ],
+      "count": 3,
+      "checked_at": "2026-10-27T16:43:12+09:00",
+      "cache_file": "5b8c50351a2c686b.json",
+      "response_pages": [
+        {
+          "count": 3,
+          "sha256": "b198125ebc0113627dde7b0d9d80535d3a26e67848b49207a5d3afe7babcabc4"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "보광동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:43:14+09:00",
+      "cache_file": "a7ebc48f72c151a6.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "4361cf92e85d666f13c24cd64ab9b1d4e4c7ed8267d6787b68af1667419ebc95"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "보광동1가"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:43:15+09:00",
+      "cache_file": "43d879df05566245.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "6387e65172dc071190418cd26285d87cc90580186c0a9c476bc1f82d494e94c9"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "보광동2가"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:43:17+09:00",
+      "cache_file": "84f7ccb2b4734ef7.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "a3b10b94d128666280ab3b90dd6c45cd465572d71f61d541a5f4924797499999"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "보광동3가"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:43:18+09:00",
+      "cache_file": "4544f9e96ec596df.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "79812511f5dc68899902bf6f8fe7402e598b8f718774a15a4ec87110a4913c29"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "복만동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:43:20+09:00",
+      "cache_file": "5db487445ae55e0d.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "99220f547359eb8ff47a3518d4505987181064873f152add83b0951a9ca5e705"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "부흥동"
+      ],
+      "count": 2,
+      "checked_at": "2026-10-27T16:43:21+09:00",
+      "cache_file": "698e8a8973362dc5.json",
+      "response_pages": [
+        {
+          "count": 2,
+          "sha256": "7f6bd9713c1381f51eb54a569d8fcefbfb5dba921c3108ae2734a5e3938908f4"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "북교동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:43:23+09:00",
+      "cache_file": "bd4d4f1bd7f3fcc2.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "fa4c2762e367db53841a8b2439e15730a051d9d32220abf70804b8dd50ae4cd5"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "북항동"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:43:24+09:00",
+      "cache_file": "6754aaf5a67f572b.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "f8eb7ecfa03a0a8b44a15fbcc2a687c1499c827faf96b97501303d7bd2e499ee"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "산정1동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:43:26+09:00",
+      "cache_file": "bb523b382d503e1f.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "aecf2c01fd7f6f8cea9999c3aa92b3f696d6953d97bc2a95a10550834264e899"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "산정3동"
+      ],
+      "count": 2,
+      "checked_at": "2026-10-27T16:43:27+09:00",
+      "cache_file": "717242bdcf69a4de.json",
+      "response_pages": [
+        {
+          "count": 2,
+          "sha256": "8751645c9a7fd9aa9c02341efbe3914fbf1aa955bfebc6ebc0d6c0af652ec714"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "산정동"
+      ],
+      "count": 517,
+      "checked_at": "2026-10-27T16:43:29+09:00",
+      "cache_file": "89e1fa22852ce927.json",
+      "response_pages": [
+        {
+          "count": 517,
+          "sha256": "05610deda8536195dbdfe815df8d5dce0011535a5093941dceff215410216eea"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "삼학동"
+      ],
+      "count": 6,
+      "checked_at": "2026-10-27T16:43:30+09:00",
+      "cache_file": "93771956302aeb26.json",
+      "response_pages": [
+        {
+          "count": 6,
+          "sha256": "0074d1db9002e92218e87151a5607da1e8f67e251c15d2cc058b2da7415a2f7b"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "삼향동"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:43:32+09:00",
+      "cache_file": "7fc9d72b63c07954.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "8f84ef4e7d7c24d0d84f007128f9039250eddd40a26dd635db5b18446d79b0bf"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "상동"
+      ],
+      "count": 672,
+      "checked_at": "2026-10-27T16:43:33+09:00",
+      "cache_file": "fe293a5babf6d757.json",
+      "response_pages": [
+        {
+          "count": 672,
+          "sha256": "9fe6f1e645d213d7398ce9811f1c73b858de811000ca661d9436a6f35808f143"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "상락동"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:43:35+09:00",
+      "cache_file": "c459cb3a69add846.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "1b84686b4c00a24d0f7238fa5a77e219c72fe8bf57aeb17aa2b4741e65e78d88"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "상락동1가"
+      ],
+      "count": 5,
+      "checked_at": "2026-10-27T16:43:36+09:00",
+      "cache_file": "b84d4f4315ed5266.json",
+      "response_pages": [
+        {
+          "count": 5,
+          "sha256": "30a7eabc26925dfd7a6aa3ef99731ff605e368199d94a933e1947681187da1b8"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "상락동2가"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:43:38+09:00",
+      "cache_file": "847ebab69ed90ffa.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "425f2439a4bf0fb178936568f6772a59a3368f4fb9c0df771eb27ea9693c691f"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "서산동"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:43:39+09:00",
+      "cache_file": "b6756a1f62b179df.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "24a96515b379fe98c7f216d98627aa83c6ec2cf36caa46c498ad940bdfd5a528"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "석현동"
+      ],
+      "count": 135,
+      "checked_at": "2026-10-27T16:43:41+09:00",
+      "cache_file": "314b2b19f5a031e6.json",
+      "response_pages": [
+        {
+          "count": 135,
+          "sha256": "098fa4a04ed0fd396054e6fe77a48c9606ee27f7a667c6b9c832b68835bacce2"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "수강동"
+      ],
+      "count": 2,
+      "checked_at": "2026-10-27T16:43:42+09:00",
+      "cache_file": "3dc4d05980bbcaf3.json",
+      "response_pages": [
+        {
+          "count": 2,
+          "sha256": "22696c70a88b741042ab9066a4b26b3e1a25aaa03d006548bfaa5ecc9dc0195b"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "수강동1가"
+      ],
+      "count": 9,
+      "checked_at": "2026-10-27T16:43:44+09:00",
+      "cache_file": "221a7247783a26bc.json",
+      "response_pages": [
+        {
+          "count": 9,
+          "sha256": "0410479c0010e88f2406492273fef85617fa75d91615d647d3d593cd65923c1a"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "수강동2가"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:43:45+09:00",
+      "cache_file": "a374fe8f49799826.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "8968fdbee1151720fe3ce7fed73c7fe25bbc0400b8c0118272d0c0b0acde9b49"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "신흥동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:43:47+09:00",
+      "cache_file": "5756ba8c0d6a3854.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "cd91bb40bb2ae1b1527b0e4b28cea1475b5aeb76ff3a9eb24f45592bd1d05bcf"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "양동"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:43:48+09:00",
+      "cache_file": "7c42608ea4e178d1.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "66cb2e10064159b92a2fe0a48cfa0bd967bf7139324f3d2b0a4e00d2f60459f7"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "연산동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:43:50+09:00",
+      "cache_file": "84c105b211a0ce8c.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "3111c5a755a7efc1ebcdabc39b637d96c215ee866ca2be4435931014accabc9c"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "영해동1가"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:43:51+09:00",
+      "cache_file": "943d1c262b7e5e59.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "1ff5d7af72b0b9ee7dfa6d5a7131d330ea3ce93e770b97785ee223cb47d5154e"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "영해동2가"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:43:53+09:00",
+      "cache_file": "5343e564984a62f7.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "c83948698b7d1762ca97d0ddbc9bc243331f0a0b11495592abbcf11976fbdcc5"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "옥암동"
+      ],
+      "count": 218,
+      "checked_at": "2026-10-27T16:43:54+09:00",
+      "cache_file": "d9cb6f919c365cd4.json",
+      "response_pages": [
+        {
+          "count": 218,
+          "sha256": "c4d0bd3c5d58f097dc323f6da9054066e0130b8d14896185581a0803e5d5c1ce"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "온금동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:43:56+09:00",
+      "cache_file": "783b007f90e567d3.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "694fa312acffae4e61012c7f4377547fde58d710cacd11ab514b7c576d3dc234"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "용당1동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:43:57+09:00",
+      "cache_file": "1a7821e96f1d7c8f.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "c3aafeb63c7f8b0e9b6af42fb521ae581cd191d14cb47eed26382b93bda8d5e9"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "용당2동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:43:59+09:00",
+      "cache_file": "4870f323a5313b69.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "ae5547e1392c593d32d59ccd4235e07c714a429f46cb35a29632b10914792aa0"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "용당동"
+      ],
+      "count": 226,
+      "checked_at": "2026-10-27T16:44:00+09:00",
+      "cache_file": "6e4abe765c1659b0.json",
+      "response_pages": [
+        {
+          "count": 226,
+          "sha256": "008c1251ab5df1bb2749ec4c7870e18a82cdb19bf907da992406fcb761f84c03"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "용해동"
+      ],
+      "count": 66,
+      "checked_at": "2026-10-27T16:44:02+09:00",
+      "cache_file": "87a7789291cea147.json",
+      "response_pages": [
+        {
+          "count": 66,
+          "sha256": "732c71b32c9c2c2f5590fbf63f6980221b8409247499df06ff2f3fb0ce0b6dee"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "유달동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:44:03+09:00",
+      "cache_file": "95c1c2860aa34423.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "ba2de42c117ed55fd69a5ba97e6079382950c93df841e390884b29d96a7fae86"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "유동"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:44:05+09:00",
+      "cache_file": "f0828ca2287c3d89.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "1ad8d5756f00a52c5b7cab7b51f5b42e33503dccc756751a7ae8adefcf671a54"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "죽교동"
+      ],
+      "count": 23,
+      "checked_at": "2026-10-27T16:44:06+09:00",
+      "cache_file": "59f4f79528976a7d.json",
+      "response_pages": [
+        {
+          "count": 23,
+          "sha256": "3ba01e4384b9feb752f02bc9bb4abb5d821d34f5a6a6d4fa168739517a3ac09e"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "죽동"
+      ],
+      "count": 72,
+      "checked_at": "2026-10-27T16:44:08+09:00",
+      "cache_file": "91179d1616adba73.json",
+      "response_pages": [
+        {
+          "count": 72,
+          "sha256": "1ca8e03cb17d996eb30de764f79b472c6f4aa6c03f2678754f5585bb93d18074"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "중동1가"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:44:09+09:00",
+      "cache_file": "4e9068b76343d972.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "241ee1e449c944e32e2dc320792548587419103b335f77ce7ddb9bfef1bdc0be"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "중동2가"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:44:11+09:00",
+      "cache_file": "83a875b9b9e6ec2f.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "1cb7ee29d16a6cd55b0220449da6540ec0dec7e29b1513ce63446317131a716b"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "중앙동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:44:12+09:00",
+      "cache_file": "5b8f9e1a936bd903.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "9bdce960a3065d4e199315357fdef5734ead4ffd4f7fd8d757df97c3857deac1"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "중앙동1가"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:44:14+09:00",
+      "cache_file": "c032d1a5f9458a9c.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "bd62e627906fddcb1c97ae70629804c5461f6f0e6919e82971dd78be5bf60a86"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "중앙동2가"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:44:15+09:00",
+      "cache_file": "6f60d2b69f300c64.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "0ad9dd07ed62f8a2cada13df36f502ddbd5b5e29eaebdb716dd09ab9da940e12"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "중앙동3가"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:44:17+09:00",
+      "cache_file": "0d5d6dc5635e4f85.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "35a9d3ad5df9e3448c8a0c1bfd0c28adf236f2a007bb88151610f6d312f10954"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "창평동"
+      ],
+      "count": 4,
+      "checked_at": "2026-10-27T16:44:18+09:00",
+      "cache_file": "a54d5d19f96e677b.json",
+      "response_pages": [
+        {
+          "count": 4,
+          "sha256": "3dd64a28c5b201a1511e3b2aaf76c0dce7af6fbe9166dd9bd365e5ad22d79bce"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "축복동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:44:20+09:00",
+      "cache_file": "31713595cec96129.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "06a1c99560e086bd98aec0c321ac66875bbf7972d9e6b538956caa81d7ed90fd"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "축복동1가"
+      ],
+      "count": 20,
+      "checked_at": "2026-10-27T16:44:21+09:00",
+      "cache_file": "a8f5de88963191fa.json",
+      "response_pages": [
+        {
+          "count": 20,
+          "sha256": "eb7e52b016b6a805f0cd9347483bc114d86b8298bd83c65c660c0f14be595ece"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "축복동2가"
+      ],
+      "count": 2,
+      "checked_at": "2026-10-27T16:44:23+09:00",
+      "cache_file": "f721540697a97715.json",
+      "response_pages": [
+        {
+          "count": 2,
+          "sha256": "04e61f8f26f3a773df25c72208cb6b7af66e7859df876444650c6e91dac3d38c"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "축복동3가"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:44:24+09:00",
+      "cache_file": "cfa54699c7456005.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "3de078cd9c2a5edbd79ae96a0de92dcd9adbe63ffcf81527df3d97003827496b"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "측후동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:44:26+09:00",
+      "cache_file": "ba404afd0518fe54.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "73da8ff501d34f5c4be677d04fc2a89614b76759e20d445f553f08e1f15fcac7"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "하당동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:44:27+09:00",
+      "cache_file": "812efcd4f97037a7.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "96540cf40c2738338b303a45492380329e02af08ba0c195049c131d030b807ef"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "항동"
+      ],
+      "count": 9,
+      "checked_at": "2026-10-27T16:44:29+09:00",
+      "cache_file": "df8beef056626c2d.json",
+      "response_pages": [
+        {
+          "count": 9,
+          "sha256": "f0e5680743b20af07bd777688cca6ec5122cebd98d4cd1fdf5a503371203eca3"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "해안동1가"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:44:30+09:00",
+      "cache_file": "85c300fb7929108c.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "9c8e78cad88cdb5c6ed3b3627e2836e8187832a9d7ea4fb5d8efbe4932d1bb62"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "해안동2가"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:44:32+09:00",
+      "cache_file": "492baa4970fde78d.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "0053496fe9382f1d58423b82c192b3015f7a202d342aa7ef20b545f838621c41"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "해안동3가"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:44:33+09:00",
+      "cache_file": "0710f766f2285ea9.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "d6b24189063b13c9f6218e22d6369565206f709361a68321465dcfea74b61b1f"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "해안동4가"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:44:35+09:00",
+      "cache_file": "2246246034068bfb.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "705a3c72ebe77bcfc9a1ae76b2dceb0d98828f4e101ccea1338f883bd0ee7065"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "행복동"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:44:36+09:00",
+      "cache_file": "4967a19e0da409dd.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "3ae3bf1dba66656d2900985148317cc3392d0f260dc9d5567f575ebf2bf78058"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "행복동1가"
+      ],
+      "count": 16,
+      "checked_at": "2026-10-27T16:44:38+09:00",
+      "cache_file": "f3f54014cea51b82.json",
+      "response_pages": [
+        {
+          "count": 16,
+          "sha256": "b0ac3b06d2a0c6594113283e516aa1d3f1ff9ddaf0b41a8ccaa8f6e2758d1fb2"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "행복동2가"
+      ],
+      "count": 2,
+      "checked_at": "2026-10-27T16:44:39+09:00",
+      "cache_file": "5842d2c477185617.json",
+      "response_pages": [
+        {
+          "count": 2,
+          "sha256": "5322b2253a2a5ec25631b0d89afa92ff2810596f558cd34b55a232c55633f9d8"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "목포시",
+        "호남동"
+      ],
+      "count": 5,
+      "checked_at": "2026-10-27T16:44:41+09:00",
+      "cache_file": "67cbc2065dc89aac.json",
+      "response_pages": [
+        {
+          "count": 5,
+          "sha256": "245151a2570b4c922b2c7e13f63d3f80f2b1b9d355135cc4c7ee4acb27b3b37a"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "무안군",
+        "망운면"
+      ],
+      "count": 38,
+      "checked_at": "2026-10-27T16:44:42+09:00",
+      "cache_file": "2e276d47108cbed6.json",
+      "response_pages": [
+        {
+          "count": 38,
+          "sha256": "c6d3bb63fca042f98b7c85f8e5e5d153f31e5331e3dfb8165ece54660d59107f"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "무안군",
+        "몽탄면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:44:44+09:00",
+      "cache_file": "8e68a6e453a35def.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "7182b8b51f1649545d62a2bfcd67d80199e64ea1aa82fc833afcdddede2f2fd6"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "무안군",
+        "무안읍"
+      ],
+      "count": 372,
+      "checked_at": "2026-10-27T16:44:45+09:00",
+      "cache_file": "67570186447a36c3.json",
+      "response_pages": [
+        {
+          "count": 372,
+          "sha256": "8863b369d5ad28b86f75071e4266d29693eba3110147e6fc7f2fee08c4ab2bde"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "무안군",
+        "삼향면"
+      ],
+      "count": 8,
+      "checked_at": "2026-10-27T16:44:47+09:00",
+      "cache_file": "0615c9f9000fee51.json",
+      "response_pages": [
+        {
+          "count": 8,
+          "sha256": "151dbfb3191ed0aa8f7089be49d9e1e46c399c7f7060b5a454fe73ba7f0ee1b5"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "무안군",
+        "삼향읍"
+      ],
+      "count": 509,
+      "checked_at": "2026-10-27T16:44:48+09:00",
+      "cache_file": "ad087c8db41807cb.json",
+      "response_pages": [
+        {
+          "count": 509,
+          "sha256": "d81cc6d07f000a80b8467ffbbdeadee03f0546c280565463965f6c7386f7e392"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "무안군",
+        "운남면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:44:50+09:00",
+      "cache_file": "bbef7bb268c0f617.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "d035dc4424e8bb784e12bad68632022619efea492adc8829178c8e2da4410e33"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "무안군",
+        "일로읍"
+      ],
+      "count": 87,
+      "checked_at": "2026-10-27T16:44:51+09:00",
+      "cache_file": "0ac71affe46e7d47.json",
+      "response_pages": [
+        {
+          "count": 87,
+          "sha256": "9d04a0c23fe9e607b9a360fcc5cc73f605d2cfee1d6b5f246ddcdc33b9dff145"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "무안군",
+        "청계면"
+      ],
+      "count": 72,
+      "checked_at": "2026-10-27T16:44:53+09:00",
+      "cache_file": "e2998f93d11fd039.json",
+      "response_pages": [
+        {
+          "count": 72,
+          "sha256": "46e16abab0f4e1caa2614e7584da02b0dc7887dcdd288838ab8df362b41cf065"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "무안군",
+        "해제면"
+      ],
+      "count": 11,
+      "checked_at": "2026-10-27T16:44:54+09:00",
+      "cache_file": "e5a657174226f405.json",
+      "response_pages": [
+        {
+          "count": 11,
+          "sha256": "298fa2d69575cc4a15bc5570b535720186131e452e9c2b11beb9020eb0ef3753"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "무안군",
+        "현경면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:44:56+09:00",
+      "cache_file": "cd258c2b9d820dba.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "9d616b200876861860b25e0d20940c0edb029a61249e6600e8d191c1c2a24c70"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "보성군",
+        "겸백면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:44:57+09:00",
+      "cache_file": "d056ead981c7e3f8.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "e5a4dab6a221a907319b06cbaf89d9a37f81bbbb7f334a2362d30272fd6f611b"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "보성군",
+        "노동면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:44:59+09:00",
+      "cache_file": "cd941dff52baa48b.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "8141c3d04f06df721acdc711c2cdcd20523838e586bb97221a14275f4862adb1"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "보성군",
+        "득량면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:45:00+09:00",
+      "cache_file": "f2a3079cb0295516.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "aa5e4338eed69676be3b52bc86033c4facc61534d6043e1d0342eec959681453"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "보성군",
+        "문덕면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:45:02+09:00",
+      "cache_file": "3fe0de19f4fc3065.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "ef5d6e841f3acff3df4f8c5f919e984afe948a8472efa089f6628f1ea52b7de8"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "보성군",
+        "미력면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:45:03+09:00",
+      "cache_file": "5ebc3001ff139a70.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "1b499fbc3b338b0000812122c2f328fd21d91fdd589dbf69ef4ca6435c02ad00"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "보성군",
+        "벌교읍"
+      ],
+      "count": 36,
+      "checked_at": "2026-10-27T16:45:05+09:00",
+      "cache_file": "a344608453d82b00.json",
+      "response_pages": [
+        {
+          "count": 36,
+          "sha256": "b2ae12d35dae1c972867908a82730953e89d7029badcfbfddd12d13f89a2ff1e"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "보성군",
+        "보성읍"
+      ],
+      "count": 118,
+      "checked_at": "2026-10-27T16:45:06+09:00",
+      "cache_file": "157f67786a8a9f4d.json",
+      "response_pages": [
+        {
+          "count": 118,
+          "sha256": "e52d891d11205292180010f80b788e9192597ef6cf914eabbe7e14e5597f50a0"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "보성군",
+        "복내면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:45:08+09:00",
+      "cache_file": "46dffdc0e72bcca3.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "80e59ac1af67997ebcf9d1004ec24a882894e366faa179d1a56402e187f69058"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "보성군",
+        "웅치면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:45:09+09:00",
+      "cache_file": "e7370979b102ed88.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "5b5a5832c1ac54421289eeda1808aef1be62cacdcc8a1c83201c502a5b6bc3c8"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "보성군",
+        "율어면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:45:11+09:00",
+      "cache_file": "d4ba74257b31d5e7.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "fe50c3bf110e457dec483c7c32c081d2f6ae9548b59a0c228ae3a9fdcb461978"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "보성군",
+        "조성면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:45:12+09:00",
+      "cache_file": "4c3fa3ec9e1fbef9.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "57eebc73a33a6745d8d1f3440dbf1071d30f99a230c70816c9c9f8ef80db1f18"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "보성군",
+        "회천면"
+      ],
+      "count": 17,
+      "checked_at": "2026-10-27T16:45:14+09:00",
+      "cache_file": "435def6f0bfc1c90.json",
+      "response_pages": [
+        {
+          "count": 17,
+          "sha256": "51fc98ac35b9f98c16b488fdb94611b02b3c07c7c46afe6c715473e55f7b256a"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "가곡동"
+      ],
+      "count": 2,
+      "checked_at": "2026-10-27T16:45:15+09:00",
+      "cache_file": "7beb51f1e5298355.json",
+      "response_pages": [
+        {
+          "count": 2,
+          "sha256": "9384ab5ed54e660fe966fc9fac51f8f99c931adaf2635e5cf23e79697dbdd955"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "교량동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:45:17+09:00",
+      "cache_file": "17a21e73e6160676.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "8a62d4eaf741d9ff1884af785ab21c58c44ed10c1d7ac21dc2fbf13c7bfb3a2b"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "금곡동"
+      ],
+      "count": 5,
+      "checked_at": "2026-10-27T16:45:18+09:00",
+      "cache_file": "fa3bfd7318aeeeb8.json",
+      "response_pages": [
+        {
+          "count": 5,
+          "sha256": "1a109ac16ab97c62bc4969ddd3b83c61fb7d5f2cabb0a3c669f23c25ef514b95"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "낙안면"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:45:20+09:00",
+      "cache_file": "d85e3561163bdd3e.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "6ef6d1d35fae9a4658d042396b5b20f0019f04c4169218d56b2ebbaf7921ccad"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "남내동"
+      ],
+      "count": 145,
+      "checked_at": "2026-10-27T16:45:21+09:00",
+      "cache_file": "8d0ffe3e94423ea2.json",
+      "response_pages": [
+        {
+          "count": 145,
+          "sha256": "d86ea9b4b83aed3139aab3fe84d8a6447dca637fd99b2b751967c8504a14ad72"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "남정동"
+      ],
+      "count": 19,
+      "checked_at": "2026-10-27T16:45:23+09:00",
+      "cache_file": "360129577da04532.json",
+      "response_pages": [
+        {
+          "count": 19,
+          "sha256": "28a0de2318771675167a25d4b831db04e807a7c1e017cfad79e73f1d0ccbd923"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "대대동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:45:24+09:00",
+      "cache_file": "9f9de1af2c49239e.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "2a5c6def54987f2147c47f7a323e63016e4001881ad84a0bec589dbc070c62bf"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "대룡동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:45:26+09:00",
+      "cache_file": "08ac031c1fc1a265.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "280ef112b25c1d7b2ea011c6d86d718c13d5ea9d64d5f6986714da7e7f13a65b"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "덕암동"
+      ],
+      "count": 73,
+      "checked_at": "2026-10-27T16:45:27+09:00",
+      "cache_file": "14783ccff2148f88.json",
+      "response_pages": [
+        {
+          "count": 73,
+          "sha256": "efd4bd47e39c2faa17046924bfdfde9dbf606558015b087bb4a8766b8a264095"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "덕월동"
+      ],
+      "count": 2,
+      "checked_at": "2026-10-27T16:45:29+09:00",
+      "cache_file": "9b837859aa9ec1cd.json",
+      "response_pages": [
+        {
+          "count": 2,
+          "sha256": "d324dd7b1a512b5c39ff38ea4201a9d9287a5293098d624b3f714496eca40a92"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "동외동"
+      ],
+      "count": 61,
+      "checked_at": "2026-10-27T16:45:30+09:00",
+      "cache_file": "aa4a86ceacc3912d.json",
+      "response_pages": [
+        {
+          "count": 61,
+          "sha256": "b51573a31969cc50bfeb2c0f6231ed5327ba6abf783832b1c09073f3f871d369"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "매곡동"
+      ],
+      "count": 32,
+      "checked_at": "2026-10-27T16:45:32+09:00",
+      "cache_file": "8650897ad11a7a37.json",
+      "response_pages": [
+        {
+          "count": 32,
+          "sha256": "17315374cafe9ab674b56943f0547df4dc58ef3db4bc8c25d32db334890540b3"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "별량면"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:45:33+09:00",
+      "cache_file": "4e5769d901e06821.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "e2f66472cbadea844f2d7177dfd107bc5b9c21831aa08b105deb6926f82d9753"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "상사면"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:45:35+09:00",
+      "cache_file": "ed2855feabd055f7.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "515e32c034d10af87d94ca56f69791ddb7cbbb2c89f51a891bac81f238246e27"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "생목동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:45:36+09:00",
+      "cache_file": "b46da9e31422f4d3.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "7adc0b3d7600929604358c277c7b9e08d57361252171a665a658dd9a6e6a2e97"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "서면"
+      ],
+      "count": 18,
+      "checked_at": "2026-10-27T16:45:38+09:00",
+      "cache_file": "dbd3ef0422783399.json",
+      "response_pages": [
+        {
+          "count": 18,
+          "sha256": "6445256ba0be465a18c1cd696a8258300dadea95ef995f3f6f408858ac1d0cb4"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "석현동"
+      ],
+      "count": 31,
+      "checked_at": "2026-10-27T16:45:39+09:00",
+      "cache_file": "4150d259ca89dcd1.json",
+      "response_pages": [
+        {
+          "count": 31,
+          "sha256": "d83c86ec712bdd8fd6d4960e89c30c6c28eea845386b44f0fca8dab85feeca26"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "송광면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:45:41+09:00",
+      "cache_file": "c4000aee52e86930.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "95c5c47d10cb721fb53aad882cdcae6d14dc932d8f4f2fbe0177deeca6a2cc87"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "승주읍"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:45:42+09:00",
+      "cache_file": "2d6812df3c62286d.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "a6784b385d6bad5092e80228e85cfe59e8412cf757fbe8a9cad569c0f62c9f8d"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "안풍동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:45:44+09:00",
+      "cache_file": "aa5fcaeaa8d17182.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "7554636661948b4cf446c3b0a83fdc0b4ed7d9402d44d3b03a55be1624ebb940"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "야흥동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:45:45+09:00",
+      "cache_file": "59a6657e544d65cd.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "ebbdce70987f924401f19f18d283c80743060f8d655256f0186ade929181c5d3"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "연향동"
+      ],
+      "count": 190,
+      "checked_at": "2026-10-27T16:45:47+09:00",
+      "cache_file": "96b01a7ab3d68c26.json",
+      "response_pages": [
+        {
+          "count": 190,
+          "sha256": "cfcb3b3f946e585719edfbacd1d0deb3a45f2f2dddf0859c8fe5327d9f654d0b"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "영동"
+      ],
+      "count": 15,
+      "checked_at": "2026-10-27T16:45:48+09:00",
+      "cache_file": "d47433ccde69c41d.json",
+      "response_pages": [
+        {
+          "count": 15,
+          "sha256": "9ccea4ccc702ed9dcfe8b01fa6f3ec8eeabfe19564f02029907ddf8e1050e7ea"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "오천동"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:45:50+09:00",
+      "cache_file": "e2f98f1c460afc83.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "54c6df788e1dae3576519706c159412d29f75322ae3110623bc73fd7ccfd2e25"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "옥천동"
+      ],
+      "count": 5,
+      "checked_at": "2026-10-27T16:45:51+09:00",
+      "cache_file": "1234c6c19f49a4ec.json",
+      "response_pages": [
+        {
+          "count": 5,
+          "sha256": "c81d6f75c22b81d848b793ac1bd31517944db0ac8bd7af5b038d20c3961ebf43"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "와룡동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:45:53+09:00",
+      "cache_file": "b924b1a8aad49e7a.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "828cdf29f5b62b50056f77c39ec504578e400860ceafb960e1e9f87cc9d899b8"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "왕조1동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:45:54+09:00",
+      "cache_file": "a6eb1afef132ac6b.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "39994d9dcc3e8330c24a20bf4ed8ef92a760881f510118cd6a2f07f806d18598"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "왕조2동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:45:56+09:00",
+      "cache_file": "9fa8756a8eaefebc.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "6274f6c42853c5eb4af5ed3ecb959fac3aa7c1aeff17ec0335c2b52a7d651ff3"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "왕지동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:45:57+09:00",
+      "cache_file": "3a81fd5fa530b648.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "73d4637500df5a8d91edcd4d7d8ef42723bf73b230ba0f7b6c19ff823f7e77ca"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "외서면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:45:59+09:00",
+      "cache_file": "218fbb69e69ecb17.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "906772c347aa34284e0777bb204da7289ca44fb1d6934e5822f3247b0c8af25a"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "용당동"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:46:00+09:00",
+      "cache_file": "375e5948a12d502e.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "f6c6aee68c3aa04518054b4d1a8abbacef3ec89c35598690cad123b059beb0be"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "월등면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:46:02+09:00",
+      "cache_file": "19f997d49caedaae.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "4c6ca2a79c594f09932e8e2c23b18b00bdadb30dd037880fab3c8cd298b75b82"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "인월동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:46:03+09:00",
+      "cache_file": "9c4e23b7b0978746.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "5ddd793ba52383c37522e26a4df338e6cb8d5ba7c24eeab904da972beb9b2c02"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "인제동"
+      ],
+      "count": 25,
+      "checked_at": "2026-10-27T16:46:05+09:00",
+      "cache_file": "4bcea6dfb7d48f47.json",
+      "response_pages": [
+        {
+          "count": 25,
+          "sha256": "00672a68c086fa4218dbb64f68d647c81f4935a97ee44bef76684538964bbf7e"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "장천동"
+      ],
+      "count": 71,
+      "checked_at": "2026-10-27T16:46:06+09:00",
+      "cache_file": "d4da1f6368c702fb.json",
+      "response_pages": [
+        {
+          "count": 71,
+          "sha256": "518ed2391b83ded3ccc8aed43e7e09242888d67cca200966cbfc7d567f326e0c"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "저전동"
+      ],
+      "count": 2,
+      "checked_at": "2026-10-27T16:46:08+09:00",
+      "cache_file": "971632c17061e244.json",
+      "response_pages": [
+        {
+          "count": 2,
+          "sha256": "2442bad5d52f82ed8aa9e70e385615db9e66f4adae8212c0103261df8b72c83e"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "조곡동"
+      ],
+      "count": 10,
+      "checked_at": "2026-10-27T16:46:09+09:00",
+      "cache_file": "207ee40b2eefe248.json",
+      "response_pages": [
+        {
+          "count": 10,
+          "sha256": "d3616837edcf773af99029eae3a3705916fed93ad1522d683d2d3bf6008a7b4d"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "조례동"
+      ],
+      "count": 122,
+      "checked_at": "2026-10-27T16:46:11+09:00",
+      "cache_file": "31542e6924d27fca.json",
+      "response_pages": [
+        {
+          "count": 122,
+          "sha256": "182c528042521850dafc8a1c8f497cc1809bef97ba74ca7390ec9c523fc3e362"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "주암면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:46:12+09:00",
+      "cache_file": "ae1df1a80dcefb33.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "264a3b6fb5030260d43eda11c12f02c170354d76c6e14141275800155eeb30d8"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "중앙동"
+      ],
+      "count": 54,
+      "checked_at": "2026-10-27T16:46:14+09:00",
+      "cache_file": "208a1a62e753034c.json",
+      "response_pages": [
+        {
+          "count": 54,
+          "sha256": "e54695f9e7ee05961fe3d4d2c7fd4a87228a65f243ffa3a0aa773221a4ed9e0a"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "풍덕동"
+      ],
+      "count": 127,
+      "checked_at": "2026-10-27T16:46:15+09:00",
+      "cache_file": "7105b593447a282e.json",
+      "response_pages": [
+        {
+          "count": 127,
+          "sha256": "b47244fddb9dde58cb6292536b307de89aabd4caa476c45f09cf5f7dbfd2f1d1"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "해룡면"
+      ],
+      "count": 94,
+      "checked_at": "2026-10-27T16:46:17+09:00",
+      "cache_file": "6aec39468f8ef7aa.json",
+      "response_pages": [
+        {
+          "count": 94,
+          "sha256": "41f64f1f25cd47a5fcbe44d89495d609d9ef1c58d172b2d0662c98430f3fe588"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "행동"
+      ],
+      "count": 28,
+      "checked_at": "2026-10-27T16:46:18+09:00",
+      "cache_file": "f8eb6738968b7ee4.json",
+      "response_pages": [
+        {
+          "count": 28,
+          "sha256": "15ef4be2573e37fb766b871d8c1c03be2ddcbf8b492a9c7e563c3bfdc6ba52ac"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "홍내동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:46:20+09:00",
+      "cache_file": "aca0d1915c4e2da9.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "51384b4f95d7bd32cfe1b31a8015b0a1a59e40d56502e27a178b51779e3985e4"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "순천시",
+        "황전면"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:46:21+09:00",
+      "cache_file": "cf55ea95a0f08a5c.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "a7e645a55c9f6343df7fa834242c35f5a55261498212b44aac1b32369cca0149"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "신안군",
+        "도초면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:46:23+09:00",
+      "cache_file": "de7c41adfd400386.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "3c01c14f000900bd330d3187027314a48216539e5e394e64a5336f38e3f5dd6c"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "신안군",
+        "비금면"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:46:24+09:00",
+      "cache_file": "61f6c66381a7ebca.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "0567d939cf0eb4fd44c0ae3f2e75482c8795807de95a8b77fc50a358770c2926"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "신안군",
+        "신의면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:46:26+09:00",
+      "cache_file": "bace1c0be34d9cf3.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "eeb86c652d256406ea350db5e935a56b561306e41e9905a3b73e0f4163d9d23d"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "신안군",
+        "안좌면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:46:27+09:00",
+      "cache_file": "183a4b876daa416a.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "7b380ba5ae3b45404a3d938819bc16d1709a0b5cc1c32202accede26595fb010"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "신안군",
+        "암태면"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:46:29+09:00",
+      "cache_file": "9a7b23336df5fdd0.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "4b185a253a3e22e6cb4a563b7b3d08edc54e7ccbfc147d9489dc248515c30130"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "신안군",
+        "압해면"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:46:30+09:00",
+      "cache_file": "0736bc87e7378fc9.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "5f1e7e461b7b941df3b90727288b637629eaa3fcb31888191ee88469a0d9e64c"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "신안군",
+        "압해읍"
+      ],
+      "count": 12,
+      "checked_at": "2026-10-27T16:46:32+09:00",
+      "cache_file": "fff3c373e48d83cb.json",
+      "response_pages": [
+        {
+          "count": 12,
+          "sha256": "37fc973b7273261fa49f970dbee7d415a789cd0405d2ec69a5b18211659d4d8f"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "신안군",
+        "임자면"
+      ],
+      "count": 12,
+      "checked_at": "2026-10-27T16:46:33+09:00",
+      "cache_file": "917f1acc28264833.json",
+      "response_pages": [
+        {
+          "count": 12,
+          "sha256": "c98a73c0f6b26b27dece6da254eb113e2acaa43b88863754affc31c36e56ecd3"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "신안군",
+        "자은면"
+      ],
+      "count": 14,
+      "checked_at": "2026-10-27T16:46:35+09:00",
+      "cache_file": "f6af96afb7f9a07b.json",
+      "response_pages": [
+        {
+          "count": 14,
+          "sha256": "10794b85f58f9fd61a8ebbbc836b12e577b7df1a6cd4a579b86587d42e163abb"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "신안군",
+        "장산면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:46:36+09:00",
+      "cache_file": "f6400f33d3b40021.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "449b48bfc4cefe74f99853c6020039b91baf3f2bb2dd4f45597f34f87c62ca7b"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "신안군",
+        "증도면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:46:38+09:00",
+      "cache_file": "e836150e221ee10a.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "e8a1faba1faa1e433ca452e9e87b431b7f50ce2387221b3807e77b1c6642dd7d"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "신안군",
+        "지도읍"
+      ],
+      "count": 35,
+      "checked_at": "2026-10-27T16:46:39+09:00",
+      "cache_file": "ebfbb5b230d3f2a9.json",
+      "response_pages": [
+        {
+          "count": 35,
+          "sha256": "25358fb1a7d06b0d4acb833bfc7d154873dab59d23d2ae6b224ae673a1bac73b"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "신안군",
+        "팔금면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:46:41+09:00",
+      "cache_file": "d9d40a929902fde6.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "c5cb539439b7be6b07d5affbff8ad87343714d33fafe21c4a5292d92c083bf06"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "신안군",
+        "하의면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:46:42+09:00",
+      "cache_file": "29ceeb63d09d1621.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "c3611ef63cf80e9854aabb244fddf45fc22d91f2782f05967978baa05763e98e"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "신안군",
+        "흑산면"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:46:44+09:00",
+      "cache_file": "54171e2c3aaa725c.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "98e5abf8ff5d9194657b307656f05dd25e7cad3f161f7c1dc9919d33ea9491a6"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "경호동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:46:46+09:00",
+      "cache_file": "e1d31477e5fadbb9.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "fa8b78fe6f07e4bf5a97bfbcbd40c556fcb8e8edb11e53ab7e07f2af2cdb68ed"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "고소동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:46:47+09:00",
+      "cache_file": "004911de15a5c8cb.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "cb30b6a47d4e21b268ec524beecab295dd6680043b15d934432e1779d5beebe2"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "공화동"
+      ],
+      "count": 6,
+      "checked_at": "2026-10-27T16:46:48+09:00",
+      "cache_file": "7770ae75b03f4d23.json",
+      "response_pages": [
+        {
+          "count": 6,
+          "sha256": "50e36c79e3fe91511cee05f24861f90e9cdc422273c44ddfd547c11500ea8af2"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "관문동"
+      ],
+      "count": 3,
+      "checked_at": "2026-10-27T16:46:50+09:00",
+      "cache_file": "30bd228679b264e8.json",
+      "response_pages": [
+        {
+          "count": 3,
+          "sha256": "60744825508acf9dd0402a75a1a9456f85b76392a1475a4d3d482cb5e3d18856"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "광무동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:46:52+09:00",
+      "cache_file": "67a30f091904767d.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "db0b7c83c071940f7b18790151b774d134473c2d055d56cabe1b21da3d59f5f1"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "교동"
+      ],
+      "count": 345,
+      "checked_at": "2026-10-27T16:46:53+09:00",
+      "cache_file": "2cb5359e0e5fe7c4.json",
+      "response_pages": [
+        {
+          "count": 345,
+          "sha256": "f1901782d4cfd1bf0d793ba1906c54052dfdbf7bfc8872768de02ed3b33b8a9c"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "국동"
+      ],
+      "count": 3,
+      "checked_at": "2026-10-27T16:46:54+09:00",
+      "cache_file": "7620a3c2fe4ae507.json",
+      "response_pages": [
+        {
+          "count": 3,
+          "sha256": "63177b89131b120737dafe132a85e54319be40c70df2ba44d73bfcc6d60f6b36"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "군자동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:46:56+09:00",
+      "cache_file": "ac3343da9c22d3e2.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "d4f6c2943cb9512d2b756b8cdea2eb2cccbc433fb4adbc0d14a5ce88a4488604"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "낙포동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:46:57+09:00",
+      "cache_file": "4de208632b38df26.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "495d0afbbc79f0c9641a4e7e6c8ef3e19cd7d8923f7275d09f74911e65a5e745"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "남면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:46:59+09:00",
+      "cache_file": "b63f16ddf12ed85d.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "46bf1a3781e7589039a6637e71ceb05017fb0379f7fe915ec185110209faa855"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "남산동"
+      ],
+      "count": 38,
+      "checked_at": "2026-10-27T16:47:01+09:00",
+      "cache_file": "8f2360ea98805970.json",
+      "response_pages": [
+        {
+          "count": 38,
+          "sha256": "97f6c8615ae40ebae6385450aef5faef7874cd843b6c926aa638c5235ee36c31"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "덕충동"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:47:02+09:00",
+      "cache_file": "072849e5726befc7.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "8c8d3d043170f15338286717582d0661a2a4820790009c82e2172827c109fd16"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "돌산읍"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:47:03+09:00",
+      "cache_file": "d50a0077c22b0a8c.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "7b475683ff3be7a1d6429533183d432a8fa46638696ae217a492cfeab1a3aa3b"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "동산동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:47:05+09:00",
+      "cache_file": "c18dec7261de08aa.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "32fce08b8e20a0f6050bc04a057e8cc1a5a8b90b900621159affdda41aaaa7fc"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "둔덕동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:47:06+09:00",
+      "cache_file": "be73787f8958e238.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "f569854b30b530d0c1b8f788a0b6970b5ad8205138a451fe7a7603aca841a5ae"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "만흥동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:47:08+09:00",
+      "cache_file": "60d208607c31c679.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "2274e6eb76c3c9b6918f45d38f1a4e78a3d935d74b2f056ec2bfca636f94867d"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "묘도동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:47:09+09:00",
+      "cache_file": "f1d4e92aab489e49.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "9c4539c95898dc42f19ebf14558d3888140bb471f52f8b576cae3f1973e82632"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "문수동"
+      ],
+      "count": 4,
+      "checked_at": "2026-10-27T16:47:11+09:00",
+      "cache_file": "4249bc59c8159cbd.json",
+      "response_pages": [
+        {
+          "count": 4,
+          "sha256": "f6d355575ec9ecaa7ffa8c9fb2e03102732db6c643c370e1c227ef3bd109dc80"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "미평동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:47:12+09:00",
+      "cache_file": "de1250333741c8a5.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "d22b534458821afdfa59b4d1a9fd87ecc3c5b6312e24f4a091b50b7114693b4f"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "봉강동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:47:14+09:00",
+      "cache_file": "d4e8430742523e2e.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "f783176ad29087c3b5fed8c4cd0cfec39ee75af49ac9a1e0f261ba5a56f4e067"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "봉계동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:47:15+09:00",
+      "cache_file": "65db655d81373d5b.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "8b09f37df90b216db39699e5458d06259df9cc43b7a6d2dee3e6dbfdc02570ae"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "봉산동"
+      ],
+      "count": 8,
+      "checked_at": "2026-10-27T16:47:17+09:00",
+      "cache_file": "bd726440bdbfa2ef.json",
+      "response_pages": [
+        {
+          "count": 8,
+          "sha256": "3a0254991626767d0658d3805fbe509ecd1bdd50a4226287530773be95cd9ad8"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "삼산면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:47:18+09:00",
+      "cache_file": "a7d6a50748ca99eb.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "11dede15f4a47092901f96d3912255629c975ab1516b6eadec826cbaeeddf8ee"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "상암동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:47:20+09:00",
+      "cache_file": "a19320863b4d2f62.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "22ef1fb082dd165feb5006694e4a1299a08a7ddfd062e6166a69522a0779f050"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "서교동"
+      ],
+      "count": 198,
+      "checked_at": "2026-10-27T16:47:22+09:00",
+      "cache_file": "ea5c417db5dceb7d.json",
+      "response_pages": [
+        {
+          "count": 198,
+          "sha256": "a320f3f99b5bed0318c516cddbf4f92d8fd757bc7f0db66429f101650be86b78"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "선원동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:47:23+09:00",
+      "cache_file": "7dc99ceffa7e4aa1.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "3708dbc437aa80b3a4cbdc02e7278532e9ba185b9653e2145e38c9e749070366"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "소라면"
+      ],
+      "count": 7,
+      "checked_at": "2026-10-27T16:47:24+09:00",
+      "cache_file": "f7d431a4c415e093.json",
+      "response_pages": [
+        {
+          "count": 7,
+          "sha256": "10400b7e705e1c7ce64cc3f39c6e0a8be5d8b48d5f0f920ba847e6566b4b05ba"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "소호동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:47:26+09:00",
+      "cache_file": "aa83b6012ccc3431.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "fc5e914c5833a8b451ad3c652479b7bdab3a912940b15096eb4a101de5d3f043"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "수정동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:47:28+09:00",
+      "cache_file": "e469b3af26ae5cb0.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "ea37e16f24eada366ebdce7fbd5e0d015756e3aa98251f3070d44fa7608808ea"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "시전동"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:47:29+09:00",
+      "cache_file": "354421b3b09b43da.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "78f2030ce8dfba2ee8f4bc966398878c86b6d8f8f24504d327c5a214e64118e2"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "신기동"
+      ],
+      "count": 130,
+      "checked_at": "2026-10-27T16:47:31+09:00",
+      "cache_file": "1fdb107a643fb202.json",
+      "response_pages": [
+        {
+          "count": 130,
+          "sha256": "d48fca5954f05e0f3c3f672b98872b619cffb0a1ea77c127829157ef5e7f327a"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "신덕동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:47:32+09:00",
+      "cache_file": "220f71da1f661377.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "7570614f2da0e646ffccbebd45640105307f7846d936c20adc797e09cc304c5a"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "신월동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:47:33+09:00",
+      "cache_file": "c4dfa1f90541f19b.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "8836e87c451d6973bc1adb5cb360f29ebc13142e0e25fbf218da571c51ef9a83"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "안산동"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:47:35+09:00",
+      "cache_file": "48f756a33b7b0add.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "5e869044b5e1e9a158820292a1ae99cb9c3178e9455ee3a2ced41f0f385dd407"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "여서동"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:47:36+09:00",
+      "cache_file": "3d9569da19fa76ef.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "bb27fd25310712e433cc2d5b56561aa097fd8e348fa37e56a024bad6fcac26a9"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "여수우체국사서함"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:47:38+09:00",
+      "cache_file": "3f2245db1eb90458.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "a11a8089545b7754e99beb970e613b6a468ac2320c97f043dcbfa927b6f2d49c"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "여천동"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:47:40+09:00",
+      "cache_file": "97e556ab44c575d9.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "6e855ee5db76f168e1198f0891ed8a167fa5948ddbcf8f4d0a94fa1910a9048c"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "연등동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:47:41+09:00",
+      "cache_file": "cf1fe876db19ade8.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "27d7677a7042f1a9bf81e6b5618c2a7098e7a5582792d8a2e44e629c3cacb281"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "오림동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:47:42+09:00",
+      "cache_file": "5178e6cacae2175f.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "8ed119d1fafaa8005b5d44536309179e4fce2ba6a78d17feaaf9589134a84d86"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "오천동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:47:44+09:00",
+      "cache_file": "08dc4bf00b480dd9.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "b870ff28772adc79c8e58807a96fe06ce36b6f30c95e5cf318dc4f039389cc29"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "웅천동"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:47:45+09:00",
+      "cache_file": "a87c98916808b591.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "2824333efbbea32fde040081c3bafe8ffde31de937a438f01f3a11b48855fcb5"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "월내동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:47:47+09:00",
+      "cache_file": "7e037d40bd336298.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "4b0235f6ea97ed0a21b44a478e41b7596aa4a4b8a169963ebfb6f4fb95c055b7"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "월하동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:47:48+09:00",
+      "cache_file": "53a532eb976c6216.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "ba93fbaa110882cb5b19985ca801a592f81601b21bf6ad813a277e9ab9045399"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "율촌면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:47:50+09:00",
+      "cache_file": "6dcaeaffa6d50994.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "a57494940460d7ec32212c3ca6868e420baf35d7fadf5d43a430fae0863ed5ff"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "적량동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:47:51+09:00",
+      "cache_file": "0a8e4f86513ad5df.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "fb436825c89d53eccfdd47fa4c7cf1adb29eb360d94527c6a092104374cee622"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "종화동"
+      ],
+      "count": 38,
+      "checked_at": "2026-10-27T16:47:53+09:00",
+      "cache_file": "7d7b4bb0d93852a3.json",
+      "response_pages": [
+        {
+          "count": 38,
+          "sha256": "165382f83d00b8d61a2746f80dc2cc0d868ffd52049ebb311d4d3c4e131628fe"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "주삼동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:47:55+09:00",
+      "cache_file": "3194c157de90f584.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "f27aa246ada04c1273095bff162f5fa749416bbd00c5f656e2468ba3f10698bc"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "중앙동"
+      ],
+      "count": 78,
+      "checked_at": "2026-10-27T16:47:56+09:00",
+      "cache_file": "8a6ce04a35c3acd4.json",
+      "response_pages": [
+        {
+          "count": 78,
+          "sha256": "d5f6f2834d81b1be9ed0d60804ddfc9359292b6be2fefb49d16705656e7353ec"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "중흥동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:47:58+09:00",
+      "cache_file": "ef0c3318d0615d2c.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "d523b87c46ccdff13a288f0e6e12c69b718fce4715ad326ccb3d94342ea47417"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "충무동"
+      ],
+      "count": 34,
+      "checked_at": "2026-10-27T16:47:59+09:00",
+      "cache_file": "079cef632c58eb29.json",
+      "response_pages": [
+        {
+          "count": 34,
+          "sha256": "706aa95f513f6efa3c06b59ce6c66724de414deb744cd161235ec074cbcce494"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "평여동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:48:01+09:00",
+      "cache_file": "14c18459bd417712.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "0adc855f4962d7b0da4200a495e7cb5f07cf1b108edc312d824ef81ad9b14fec"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "학동"
+      ],
+      "count": 127,
+      "checked_at": "2026-10-27T16:48:02+09:00",
+      "cache_file": "4e7fb43bf75d9ea9.json",
+      "response_pages": [
+        {
+          "count": 127,
+          "sha256": "4ebfa0b896cdf110beed6130e1ef3439097dc2fa3779e86a7df4312c2d511356"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "학용동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:48:04+09:00",
+      "cache_file": "cae1ea7b494cde7c.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "ba28aa922f00b31dabeea465254fecf326e399d02be5537cfed9342f563517aa"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "해산동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:48:05+09:00",
+      "cache_file": "6f2c479b7ef38c32.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "45668997ca95bc748c52f35b72e737e2b9469db792f78dd05b4534e26f9b7ee4"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "호명동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:48:07+09:00",
+      "cache_file": "8e4d2e97543d5f54.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "63cf377e08e0a9f327caaed84daaa92d142989416bc94cd4d432001c287123a3"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "화양면"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:48:08+09:00",
+      "cache_file": "00b805e31a259786.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "dc583cf35584cd474b06600f4a70085bdf2190c2977d18cd2deccc5b4eebcb87"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "화장동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:48:09+09:00",
+      "cache_file": "f9af1ba751ba8d4b.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "2f6dfe6f5b4a5ba683750c0fbcd828d8cf862f607b1b24b3d6977dedb932dfc0"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "화정면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:48:11+09:00",
+      "cache_file": "3a6ff76071bd5078.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "e3571fff0568249c9448219c340e776252e80abcadf793c3f02c4e99fe46df51"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "여수시",
+        "화치동"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:48:12+09:00",
+      "cache_file": "ed730ce1354e1cfb.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "dc9581fceb4ec11b3c0903d3bccfbabffb4c27e2fa116c4da9cc2805ca4d1fde"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "영광군",
+        "군남면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:48:14+09:00",
+      "cache_file": "beb48acd0e5913f6.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "07ba0732e10dc62b6c0f417388045b08c9daaaa5ec56556985a2aaa3636b83b3"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "영광군",
+        "군서면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:48:16+09:00",
+      "cache_file": "de94481443da2639.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "844ee640431039ead878f8060a4764f9ff8cd7d50783a743acb5af14327b741e"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "영광군",
+        "낙월면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:48:17+09:00",
+      "cache_file": "a8c17840f5e33a91.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "963fcdd767d1f851ee7df8d65da6f6130cd103f3c3cceed9d501b5e72c3aa941"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "영광군",
+        "대마면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:48:18+09:00",
+      "cache_file": "7c09e2605702c7ff.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "1d9335f2f111628917851dabc6a747dd2cc0b6ecbad39e55d730932df1133017"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "영광군",
+        "묘량면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:48:20+09:00",
+      "cache_file": "37dc4ea5b4741fe3.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "e081b2271a982fc638d20414b80ab0a0233bfe3f6862f69dc9c02bbdf407ba16"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "영광군",
+        "백수읍"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:48:21+09:00",
+      "cache_file": "832e8c55ef53dc43.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "bd6108494da960abb500d828ad21b4593bdd0f5dd714ce9883cc1cc5d322ec60"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "영광군",
+        "법성면"
+      ],
+      "count": 2,
+      "checked_at": "2026-10-27T16:48:23+09:00",
+      "cache_file": "f8ea694dccf787be.json",
+      "response_pages": [
+        {
+          "count": 2,
+          "sha256": "9191beb06cdb5906c1df078ee298b86b693d792ac407040dde260ca1a3e5fc50"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "영광군",
+        "불갑면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:48:24+09:00",
+      "cache_file": "766f07f57b500f57.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "8d1d2fa2264ca0af1704e224eaa6894ec8caa02afe6cb3241f02cee0ccbc6d8a"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "영광군",
+        "염산면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:48:26+09:00",
+      "cache_file": "a9647aca27245da3.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "0a3b4b961cd0698371d52cc6eeb70cee28f6aac36de0f838337c444cb0b62eef"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "영광군",
+        "영광읍"
+      ],
+      "count": 103,
+      "checked_at": "2026-10-27T16:48:27+09:00",
+      "cache_file": "cca6816a72a398f8.json",
+      "response_pages": [
+        {
+          "count": 103,
+          "sha256": "0fd3db9b442fa75e8dad4d035210d2bad756267c447ba7ee409bf2ba9ed4d724"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "영광군",
+        "홍농읍"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:48:29+09:00",
+      "cache_file": "0ca22203a6f12d76.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "c71eaf86e7a543a91d97e33740a73a53e86ba8b02f82c3d0626e4e61da4e49f2"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "영암군",
+        "군서면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:48:30+09:00",
+      "cache_file": "dc238e9de215d11b.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "01006d58c0e6ecc9efb6806ec6d7f7f33e4ad7bf75b7c4a551070f13363e3cde"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "영암군",
+        "금정면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:48:32+09:00",
+      "cache_file": "52b5416ac009d120.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "9ff04f831f1539ca6f460578f13ae572683e5622a9b75fb7b3586c984754cadf"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "영암군",
+        "덕진면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:48:34+09:00",
+      "cache_file": "8ca39b7124133e75.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "a9c7949027504aecb0f26c4e4133065fc1e86d55794fd125bb3e5c7bb209079c"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "영암군",
+        "도포면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:48:35+09:00",
+      "cache_file": "b3b9b1c01f34e64e.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "f445a52603b227cbe0b291a6d2fce818ce9af21bf2b0be3b64b4c52f95514f38"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "영암군",
+        "미암면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:48:36+09:00",
+      "cache_file": "5dc965c4e1d5311b.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "49c7dececa8293cd5cd1a5ca2223f4efee530c9847bc8366cb7174f045654aa1"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "영암군",
+        "삼호읍"
+      ],
+      "count": 291,
+      "checked_at": "2026-10-27T16:48:38+09:00",
+      "cache_file": "61bcf9cbfe2bc902.json",
+      "response_pages": [
+        {
+          "count": 291,
+          "sha256": "bc1c66eca210a159e2c4f2f610e691ec17382c738452cdd541fa263d80174227"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "영암군",
+        "서호면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:48:39+09:00",
+      "cache_file": "f215c3f5a7d65055.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "7c6b786becd589f0329c498fd1c0c8321452daa0f040a70155d99151fa0f68c5"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "영암군",
+        "시종면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:48:41+09:00",
+      "cache_file": "03fec3dd8f2d6d65.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "f1e806839feaa52baf68a3dc2cf9f554ba91b6531ca1bee0ca5c8cac03e8323b"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "영암군",
+        "신북면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:48:43+09:00",
+      "cache_file": "56de3fa8c9604861.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "ffba96435fe8bc7ba94e122d98dbda069ab411c372747df9d793b088184a8b4e"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "영암군",
+        "영암읍"
+      ],
+      "count": 35,
+      "checked_at": "2026-10-27T16:48:44+09:00",
+      "cache_file": "c92e00f4e31f97be.json",
+      "response_pages": [
+        {
+          "count": 35,
+          "sha256": "91331fcfb570c842ae5941e3d8bf4ff425ba328f91044e2203359e432fd29dce"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "영암군",
+        "학산면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:48:45+09:00",
+      "cache_file": "5ee6e13e334fc39a.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "876abf7edc9c201c4f6405a84be5ebaf931eee755fef35db821676bd85fa92d0"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "완도군",
+        "고금면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:48:47+09:00",
+      "cache_file": "1abac98931549512.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "da7a9d988fa9b63344280636b7748d78456189da25a8dbf700145da1bd85335f"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "완도군",
+        "군외면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:48:49+09:00",
+      "cache_file": "7deb811bdb470230.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "42e5288815453518cb497071defb3305e7e3b56bca8290238cd64cd6c7384f03"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "완도군",
+        "금당면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:48:50+09:00",
+      "cache_file": "99f304bc90ca1a11.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "5b0c89a8b480d9079ca8284dd8f1e68cbbe946c0cc5a1b69d7a9aa8aa426c914"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "완도군",
+        "금일읍"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:48:51+09:00",
+      "cache_file": "d74eb8df487bbc5d.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "1e6a13238be1be513a1fe65a270bb597458f877ec38ffb58138fda97a17aef8c"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "완도군",
+        "노화읍"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:48:53+09:00",
+      "cache_file": "55687d92713aa9a1.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "afcc3fe44428f63cc43b5bd4efc00fe9989b6de5b1d9e360c9a340631ba1db3e"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "완도군",
+        "보길면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:48:54+09:00",
+      "cache_file": "78d868ec34d95b58.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "acdcf8a98953ea31622cb3ebabe77ce62ef169171bd2656ffb6e8414e3f2201a"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "완도군",
+        "생일면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:48:56+09:00",
+      "cache_file": "03683076008e3e82.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "43d8972017c843e3e5f8b8d663a1ffd713d91d0eb425220fb593db599a4ca9e5"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "완도군",
+        "소안면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:48:58+09:00",
+      "cache_file": "b56567453a374175.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "8fa6cb71c496731eec336dbe28c06a7371d16921b84a92f31062ebb663d40a95"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "완도군",
+        "신지면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:48:59+09:00",
+      "cache_file": "ca6fb4d46b2a2b27.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "e63a2015d047115b21ef4c117987fd4a9a4af4859211a540e918d9c304e2f33e"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "완도군",
+        "약산면"
+      ],
+      "count": 3,
+      "checked_at": "2026-10-27T16:49:00+09:00",
+      "cache_file": "344f984adc511ee0.json",
+      "response_pages": [
+        {
+          "count": 3,
+          "sha256": "1d82433e7e15a47169a197ed38fb0392fa8d57b4b4bff5073b6c88fe63492b12"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "완도군",
+        "완도읍"
+      ],
+      "count": 48,
+      "checked_at": "2026-10-27T16:49:02+09:00",
+      "cache_file": "8b3b3f8183d1f09d.json",
+      "response_pages": [
+        {
+          "count": 48,
+          "sha256": "a818e555a528db80e83434fe783982b44a47ca18456c074397f33412754cb859"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "완도군",
+        "청산면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:49:04+09:00",
+      "cache_file": "45761d5d0968f52d.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "0f0de36d16ffb5a70d09c456c5c4c5ecdc41e2593a1b04a1715ec8bbe2786ab9"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "장성군",
+        "남면"
+      ],
+      "count": 14,
+      "checked_at": "2026-10-27T16:49:05+09:00",
+      "cache_file": "6d68d3f135f5a8a6.json",
+      "response_pages": [
+        {
+          "count": 14,
+          "sha256": "dd2070762e7acc1e7a7485d0e4a9be6754e7c52aef4e18ea950e95294012f1f4"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "장성군",
+        "동화면"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:49:06+09:00",
+      "cache_file": "a31506df5e46e3fc.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "f1ce9bd368f73fea8977d4062c1202a7985951cafdc26db425d6dae57b916e7d"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "장성군",
+        "북이면"
+      ],
+      "count": 7,
+      "checked_at": "2026-10-27T16:49:08+09:00",
+      "cache_file": "629b406bf2e1eaa6.json",
+      "response_pages": [
+        {
+          "count": 7,
+          "sha256": "6970b7b470d821598577f16b05bf33ded2dcc08f59adf58504f616a4278e9445"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "장성군",
+        "북일면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:49:09+09:00",
+      "cache_file": "4442aa91630a1f58.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "a4da7906fe3659b58c69880cc36b595683b6d758e2f12be01eaff327e9d0949b"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "장성군",
+        "북하면"
+      ],
+      "count": 64,
+      "checked_at": "2026-10-27T16:49:11+09:00",
+      "cache_file": "094bb3ccbce930e7.json",
+      "response_pages": [
+        {
+          "count": 64,
+          "sha256": "9de75c30f9ac13eb28f3ba9be42a265e1bb48558859f41ea453d7253424db52d"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "장성군",
+        "삼계면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:49:12+09:00",
+      "cache_file": "a212862d2e8df7f9.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "82c4b69a9476ad3f113e2d2b8245aaaa22b2b95023b0e7ceec01b38042629bad"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "장성군",
+        "삼서면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:49:14+09:00",
+      "cache_file": "36dbc5a04e218c90.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "e800cc0c6d349a4e0b23c1a918fa9696d67f2b6c6cbd0b874810760efe110d0e"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "장성군",
+        "서삼면"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:49:15+09:00",
+      "cache_file": "89b52ee5a9ebadb7.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "f53552e937646613a62fa5bc0a074422446c43aec46bcd1442e7e5277760c448"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "장성군",
+        "장성읍"
+      ],
+      "count": 302,
+      "checked_at": "2026-10-27T16:49:17+09:00",
+      "cache_file": "615921a074c0e55c.json",
+      "response_pages": [
+        {
+          "count": 302,
+          "sha256": "fafc3633a55cc275a2ee144da80e1b2af4c3faabc38702a20f997779001fb63a"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "장성군",
+        "진원면"
+      ],
+      "count": 10,
+      "checked_at": "2026-10-27T16:49:18+09:00",
+      "cache_file": "45430b1084188dcc.json",
+      "response_pages": [
+        {
+          "count": 10,
+          "sha256": "c3b8bfd3935094afc8fb07c7612b633057a86479ba67549dc87ca34406bce0fc"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "장성군",
+        "황룡면"
+      ],
+      "count": 41,
+      "checked_at": "2026-10-27T16:49:20+09:00",
+      "cache_file": "849f361b5cc35b98.json",
+      "response_pages": [
+        {
+          "count": 41,
+          "sha256": "53ca85671e718b30146ed4ee9f87a8cdb79d3545e71d0dfd9f917ba6d058eb92"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "장흥군",
+        "관산읍"
+      ],
+      "count": 9,
+      "checked_at": "2026-10-27T16:49:21+09:00",
+      "cache_file": "83076ae89c0b68cb.json",
+      "response_pages": [
+        {
+          "count": 9,
+          "sha256": "57395dec99ceb7d392b88f4b5035fa510e02219963833b22aa0f9db16c49b2eb"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "장흥군",
+        "대덕읍"
+      ],
+      "count": 5,
+      "checked_at": "2026-10-27T16:49:23+09:00",
+      "cache_file": "edabe3af36db273d.json",
+      "response_pages": [
+        {
+          "count": 5,
+          "sha256": "3495f39e30381c4504868a44c18778a091a1ffb94de93f3b1cd393479a1a3cb2"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "장흥군",
+        "부산면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:49:24+09:00",
+      "cache_file": "3c55d7fa1a5ac729.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "0a09612c9bea9d03b16c32b1d2208a5f26fa931edd2dff3691a071925c00ba6a"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "장흥군",
+        "안양면"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:49:26+09:00",
+      "cache_file": "815d5407d4b19cf4.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "866ad942d9875172bb6b410a0e36340327af0b8eea59320148fee9d0f599f29a"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "장흥군",
+        "용산면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:49:27+09:00",
+      "cache_file": "6fe188a71478ce1f.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "bbd4a9b20ed4baee93320bf6a95190d19dd926148554e76c1a7d39c6c634b5b5"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "장흥군",
+        "유치면"
+      ],
+      "count": 2,
+      "checked_at": "2026-10-27T16:49:29+09:00",
+      "cache_file": "7fef3ca5df7721dc.json",
+      "response_pages": [
+        {
+          "count": 2,
+          "sha256": "08219fafd34a74c158c4c2424e33ee725a62df0d0f3b2c213538ba1378006780"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "장흥군",
+        "장동면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:49:31+09:00",
+      "cache_file": "63ff5f17147ff252.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "1e13a569b4e8a8692deee8515bf37fcb135c93167e2dea10934eb1b96042b4be"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "장흥군",
+        "장평면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:49:32+09:00",
+      "cache_file": "043b22e1674e1207.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "b4498e33b48c08a81fef34e2488cbbdedf4001b045ac647d9a16224351b354fb"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "장흥군",
+        "장흥읍"
+      ],
+      "count": 395,
+      "checked_at": "2026-10-27T16:49:34+09:00",
+      "cache_file": "c19af1eca4c29d31.json",
+      "response_pages": [
+        {
+          "count": 395,
+          "sha256": "39f1e8ef8e9ebc4c082bbbae7f531d36794c3fe97c8dee824802a2d5a417201d"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "장흥군",
+        "회진면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:49:35+09:00",
+      "cache_file": "bd42b34245316662.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "6587e9c91ccaf473d223bd9c4699121c84cc8480b30e69520812e819fc0e0847"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "진도군",
+        "고군면"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:49:37+09:00",
+      "cache_file": "3e7360c0162b23ff.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "dcda5c5bbee36220d0de582d157f956897a7413b3d26a83727edae7afae19e51"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "진도군",
+        "군내면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:49:38+09:00",
+      "cache_file": "4e9cef5fb8fabc80.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "cae88b5dac74394c84c6054738d38719e8e9fbd09a226ad333443692363400b0"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "진도군",
+        "의신면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:49:40+09:00",
+      "cache_file": "c87d5ec22aba4914.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "906d17dae3ca0caee527214887c3bc10ce1b512c8089ec3ce14103895aa1d13a"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "진도군",
+        "임회면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:49:41+09:00",
+      "cache_file": "36f9843635e0a77e.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "6a167da12e9b790f45110f8d89197446df4683e2de0700daacfb934f08c48388"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "진도군",
+        "조도면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:49:43+09:00",
+      "cache_file": "5cc352e83a48dbff.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "9a2294562d4fe241ef909258329c71223137f3c19360e470369f3a69909ae87b"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "진도군",
+        "지산면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:49:44+09:00",
+      "cache_file": "3c196b0c996a0c69.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "b92a6120d82af1b160255ac469c6df65a6b37b413b3239d89983ab55ddfb6398"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "진도군",
+        "진도읍"
+      ],
+      "count": 97,
+      "checked_at": "2026-10-27T16:49:46+09:00",
+      "cache_file": "91877ee284299143.json",
+      "response_pages": [
+        {
+          "count": 97,
+          "sha256": "ac9a75e72480d0ca871a5268dac872e64eb73b8985e3ce50cfb19b5dd4e87d64"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "함평군",
+        "나산면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:49:47+09:00",
+      "cache_file": "90ee017eef9cfb9e.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "b9c5ee1888765673bc5efb608ff2b9e300a16836888636278bfd0a6d55004fea"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "함평군",
+        "대동면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:49:49+09:00",
+      "cache_file": "8fa719406ed1d365.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "c384eac2eddb604180f4ee96319887ac1faf49598f7b565489781268d3aaf099"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "함평군",
+        "손불면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:49:50+09:00",
+      "cache_file": "bacec30b6c8c37f4.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "008d9be83227dc6f9973d6ec54854692ba9928a578f9cc68474a16ac10d83138"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "함평군",
+        "신광면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:49:52+09:00",
+      "cache_file": "affceaf3def6790d.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "b91edae5000368e8ec88810a66bfdd64fdcdc725ee6c383c99e5b6dc9f8f55b2"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "함평군",
+        "엄다면"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:49:53+09:00",
+      "cache_file": "072f269c2b9e0df2.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "669a2a388af0fdf0c17d748a7d714b40f395f1be0741ee2414186d4f5df52354"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "함평군",
+        "월야면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:49:55+09:00",
+      "cache_file": "331c56de45673def.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "64324f4296c9626cc900f92d95db33277b5b3b3bf50046200d9754ee0b7b8df2"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "함평군",
+        "학교면"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:49:56+09:00",
+      "cache_file": "d9af7c91448cc771.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "e3f9e98be208ff59f0975804b0dab0a7687f627c3742e825c36db3e8e29d6d78"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "함평군",
+        "함평읍"
+      ],
+      "count": 115,
+      "checked_at": "2026-10-27T16:49:58+09:00",
+      "cache_file": "8137b066a860a4aa.json",
+      "response_pages": [
+        {
+          "count": 115,
+          "sha256": "e58c07dd59cde45a8251a8b8c50f0e6c4ad5996264ecf390131add4a211c385b"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "함평군",
+        "해보면"
+      ],
+      "count": 6,
+      "checked_at": "2026-10-27T16:49:59+09:00",
+      "cache_file": "766a063759503f72.json",
+      "response_pages": [
+        {
+          "count": 6,
+          "sha256": "26d1af37fac447edd2e8ab3e70538bfe4c08676f615528b39758093a8b5739aa"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "해남군",
+        "계곡면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:50:00+09:00",
+      "cache_file": "8193ac0181e70dd1.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "73136896ec91602cf9ef6e649066189b76260ede514f8f4d1cb678312441b150"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "해남군",
+        "마산면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:50:02+09:00",
+      "cache_file": "566a8b679d3d8233.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "9a97f16c64cbac2cec829b458b3bb123b8cfb86381ee369c720ae2b082e56ecf"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "해남군",
+        "문내면"
+      ],
+      "count": 40,
+      "checked_at": "2026-10-27T16:50:03+09:00",
+      "cache_file": "8475a738b0ab1e93.json",
+      "response_pages": [
+        {
+          "count": 40,
+          "sha256": "b661a538ee84ca521a7c46dc5ba7bf4973ff847f9fc2e0b03d42b7aa5986129a"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "해남군",
+        "북일면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:50:05+09:00",
+      "cache_file": "e8b7c95374a7c90a.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "e8f15c8095be68a56d6498f9d7b55dc8719c130a920fede36781cb508704ffee"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "해남군",
+        "북평면"
+      ],
+      "count": 2,
+      "checked_at": "2026-10-27T16:50:06+09:00",
+      "cache_file": "a70713f6f6e9c1f4.json",
+      "response_pages": [
+        {
+          "count": 2,
+          "sha256": "b4e7bcc64575c02c779d5315dfbcb60fc3cb48576d79863921fbcdab3fde3319"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "해남군",
+        "산이면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:50:08+09:00",
+      "cache_file": "a4a1c74d9ce747ca.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "7331778bafbbb20bc7d6e1900741003b080decb091e3ec061095b89baeac1435"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "해남군",
+        "삼산면"
+      ],
+      "count": 28,
+      "checked_at": "2026-10-27T16:50:09+09:00",
+      "cache_file": "457c701573621011.json",
+      "response_pages": [
+        {
+          "count": 28,
+          "sha256": "d2f9c9589a75bac0cc6fce1469e8b5e202f4d7c37ec76db3276903b8f5b902eb"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "해남군",
+        "송지면"
+      ],
+      "count": 35,
+      "checked_at": "2026-10-27T16:50:11+09:00",
+      "cache_file": "c9e71814d0be6da7.json",
+      "response_pages": [
+        {
+          "count": 35,
+          "sha256": "e61de28112a26709d397422d7b52523155bcbecab11e14ac21238e421ed58e64"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "해남군",
+        "옥천면"
+      ],
+      "count": 17,
+      "checked_at": "2026-10-27T16:50:13+09:00",
+      "cache_file": "93f849772dc7581a.json",
+      "response_pages": [
+        {
+          "count": 17,
+          "sha256": "226fe37c7205479d5b4d4a95800dc55323cd6f865c2eea30c78694c92df2cddf"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "해남군",
+        "해남읍"
+      ],
+      "count": 356,
+      "checked_at": "2026-10-27T16:50:14+09:00",
+      "cache_file": "c58034babd03e08c.json",
+      "response_pages": [
+        {
+          "count": 356,
+          "sha256": "a1dce457bdecce7d58d262c70b2c73878b3ac9a6dfd0b19288f33929833a8ea9"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "해남군",
+        "현산면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:50:15+09:00",
+      "cache_file": "1b4a008803232ff8.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "91664436d492d00d6177898117807d5ee5c4187b6d9e3cff08fadec953c21199"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "해남군",
+        "화산면"
+      ],
+      "count": 27,
+      "checked_at": "2026-10-27T16:50:17+09:00",
+      "cache_file": "92ac2ebdf698a054.json",
+      "response_pages": [
+        {
+          "count": 27,
+          "sha256": "b7253d9725e7242c7016b6e92ba8a912defa0a0dab71baf94a1dbe355bc26f7c"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "해남군",
+        "화원면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:50:19+09:00",
+      "cache_file": "cba30b69d034ee65.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "c61fe30af381fa4491d84f98536a9fa2a130083c2cd238d21b7e7aa733bf2ae4"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "해남군",
+        "황산면"
+      ],
+      "count": 19,
+      "checked_at": "2026-10-27T16:50:20+09:00",
+      "cache_file": "1bbaa41a6ad0b4ea.json",
+      "response_pages": [
+        {
+          "count": 19,
+          "sha256": "3619514f187f43d6ecae15b44be1094fbe072e7ac51ddb566363ad27f69798ac"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "화순군",
+        "남면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:50:22+09:00",
+      "cache_file": "12251808465ba80c.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "5c104fe027d423170a000e32c9e0cb564de635154d2ca324eac8d1938ea9ac9f"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "화순군",
+        "능주면"
+      ],
+      "count": 9,
+      "checked_at": "2026-10-27T16:50:23+09:00",
+      "cache_file": "c4d65bb312a5d19e.json",
+      "response_pages": [
+        {
+          "count": 9,
+          "sha256": "be2e26e377328bc9b81855435dff55125c54d104faf383357876757907fc3248"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "화순군",
+        "도곡면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:50:25+09:00",
+      "cache_file": "4d9717f15d024eb9.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "1a8d304aadea60746f3a747e548e8e5d4a2646c94a3f2001af93246bfa64b70a"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "화순군",
+        "도암면"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:50:26+09:00",
+      "cache_file": "73036b5a7979df93.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "1364c515cc7539280e89aaa043a452e801421b212494eb834479e6e10a97069e"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "화순군",
+        "동면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:50:28+09:00",
+      "cache_file": "54e034d9a7de1253.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "49be4ce0bac82808400f901d349ff5fa7b0f2e8abddf20dce798c629b04d16dc"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "화순군",
+        "동복면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:50:29+09:00",
+      "cache_file": "ccbff95badf2d5bb.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "5c9963b416008442070f56136473c8325b313b1b4b9d29316cc55b8eb4c1aa99"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "화순군",
+        "백아면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:50:31+09:00",
+      "cache_file": "2c0a7ec171f9cf50.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "6075908c88702b0a30ebc21a337c11c1833cfbb734ecc22f43903951aa9cc3d0"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "화순군",
+        "북면"
+      ],
+      "count": 1,
+      "checked_at": "2026-10-27T16:50:32+09:00",
+      "cache_file": "75f55f72a579c681.json",
+      "response_pages": [
+        {
+          "count": 1,
+          "sha256": "85586b6194e2d8802fd046de4e483059e56a83fd4d9e5b28c35a459cb432c747"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "화순군",
+        "사평면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:50:34+09:00",
+      "cache_file": "6a244e55bfd3e81c.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "6aa87bc27fc49d7a5d45fa5a2e7d629642b7317fc254129a1b6deca1dfa1d1fd"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "화순군",
+        "이서면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:50:35+09:00",
+      "cache_file": "8b7f08a9a344c824.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "86300882947910f97f9c2b7ae02a3c81a6b8e8916dd5a0940c5c2ca3770afaaf"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "화순군",
+        "이양면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:50:36+09:00",
+      "cache_file": "30c174d83ebd309f.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "8eac672cbe518f9d7e259f7bb102a53085682102d269fb0c7bbdc063ea966d85"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "화순군",
+        "청풍면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:50:38+09:00",
+      "cache_file": "9f103b3bf5a71114.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "cfb3e7833c2447e5e72af9f0055138c3608de3ebd1d23c4ad39c68c657c9947f"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "화순군",
+        "춘양면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:50:40+09:00",
+      "cache_file": "b2f8d6fdbb485c9c.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "991004f85793ed06fc604b5a08156167943a9991b274697eb8d295157792bc93"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "화순군",
+        "한천면"
+      ],
+      "count": 0,
+      "checked_at": "2026-10-27T16:50:41+09:00",
+      "cache_file": "f07bee1267ef6255.json",
+      "response_pages": [
+        {
+          "count": 0,
+          "sha256": "64a20ce1d496d51ef52c1b16cfe4f888326049351ca6a1ed2e218f0da7e09ec9"
+        }
+      ]
+    },
+    {
+      "address": [
+        "전남",
+        "화순군",
+        "화순읍"
+      ],
+      "count": 159,
+      "checked_at": "2026-10-27T16:50:43+09:00",
+      "cache_file": "04d8c6c9b43a61c6.json",
+      "response_pages": [
+        {
+          "count": 159,
+          "sha256": "b7e8ca59b9ade2c75bffdb15da17fd59f07057c5705071a448c1c826d399a97e"
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "KB public address options completed; not all issuers or all Onnuri payment types.",
+    "Existing name matches are reconciled candidates, not refreshed operator verification.",
+    "No returned merchant does not prove non-membership."
+  ]
+}

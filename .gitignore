@@ -39,3 +39,5 @@ output/alternatives/kb_region_queue*.json
 output/alternatives/kb_region_queue.lock
 output/alternatives/kb_registry_gap_*.json
 output/alternatives/opinet_cache_*/
+output/alternatives/kb_address_cache_*/
+output/alternatives/kb_address_progress_*.json

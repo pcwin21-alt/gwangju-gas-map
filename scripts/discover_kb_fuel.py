@@ -32,7 +32,7 @@ class VisibleText(HTMLParser):
         if not self.hidden:self.parts.append(data.strip())
 
 
-def parse_response(html):
+def parse_response(html, *, require_coordinates=True):
     match = re.search(r'var resultJson\s*=\s*(\[.*?\]);', html, re.S)
     if not match:
         raise ValueError('Public merchant result missing')
@@ -47,9 +47,13 @@ def parse_response(html):
         c = row['content']
         if c.get('onNuliGb') != '1' or not c.get('franchiseNo') or not c.get('title'):
             raise ValueError('Result is not an explicit Onnuri merchant')
-        lat, lng = float(row['location']['lat']), float(row['location']['lng'])
-        if not (32 < lat < 40 and 124 < lng < 132):
-            raise ValueError('Invalid merchant coordinate')
+        # Address-list collection must retain merchants with blank coordinates.
+        # Radius callers remain strict by default; map promotion independently
+        # requires a verified location and never consumes these raw rows directly.
+        if require_coordinates:
+            lat, lng = float(row['location']['lat']), float(row['location']['lng'])
+            if not (32 < lat < 40 and 124 < lng < 132):
+                raise ValueError('Invalid merchant coordinate')
     if len(rows) > total or (total and not rows):
         raise ValueError('Inconsistent result count')
     return total, rows

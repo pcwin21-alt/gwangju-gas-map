@@ -86,6 +86,35 @@ def meters(a,b):
     return 6371008.8*2*math.asin(min(1,math.sqrt(v)))
 
 
+def reviewed_opinet_location(evidence, bank):
+    """One reviewed identity with a bad bank point; two independent points agree."""
+    from audit_opinet_gaps import INVERSE
+    c=bank['content'];m=evidence['registry_record'];o=evidence['opinet_record']
+    if (c['franchiseNo']!='000000055922616' or c['title']!='(주)대창석유 (남창)' or
+        c['address'].strip()!='전남 해남군 북평면' or o['UNI_ID']!='A0020659' or
+        name_key(m['CONM_NM'])!=name_key('(주)대창석유 직영 남창주유소') or
+        name_key(o['OS_NM'])!=name_key(m['CONM_NM']) or o['LPG_YN']!='N'):
+        raise ValueError('Unreviewed Opinet/registry identity')
+    if (evidence['registry_source_url']!='https://www.data.go.kr/data/15129441/standard.do' or
+        evidence['opinet_source_url']!='https://www.opinet.co.kr'):
+        raise ValueError('Unreviewed location sources')
+    addr='전라남도 해남군 북평면 현산북평로 1139'
+    if any(address_key(a)!=address_key(addr) for a in (m['LCTN_ROAD_NM'],o['NEW_ADR'])):
+        raise ValueError('Registry/Opinet address mismatch')
+    if any(re.sub(r'\D','',p)!='0615336760' for p in (c['tel'],m['TELNO'],o['TEL'])):
+        raise ValueError('Registry/Opinet/bank phone mismatch')
+    b=(float(m['LAT']),float(m['LOT']))
+    lon,lat=INVERSE.transform(float(o['GIS_X_COOR']),float(o['GIS_Y_COOR']))
+    if not valid_coords(*b) or not valid_coords(lat,lon) or meters(b,(lat,lon))>100:
+        raise ValueError('Independent location coordinates disagree')
+    return addr,b,[m['CONM_NM'],o['OS_NM'],'남창주유소'],'liquid',{
+        'source_type':'municipal_registry','source_url':evidence['registry_source_url'],
+        'source_date':m['DATA_CRTR_YMD'],'source_id':m['CONM_NM'],
+        'coordinate_source':'municipal_registry','identity_source_url':evidence['opinet_source_url'],
+        'opinet_id':o['UNI_ID'],'opinet_distance_m':round(meters(b,(lat,lon)),1),
+        'note':'KB 상호·전화·주소권역과 지자체·오피넷 동일성 확인. 오류가 있는 KB 좌표는 사용하지 않음.'}
+
+
 def station_from_evidence(evidence, as_of):
     bank=evidence['bank_record'];c=bank['content']
     if evidence.get('source_url')!=SOURCE or evidence.get('identity_review')!='same_premise_confirmed':
@@ -94,7 +123,10 @@ def station_from_evidence(evidence, as_of):
         raise ValueError('Bank Onnuri identity missing')
     if c['category'] not in ('주유소','충전소','LPG충전소','LPG 충전소','가스충전소'):
         raise ValueError('Not a bank-classified vehicle fuel business')
-    if 'municipal_record' in evidence:
+    if 'opinet_record' in evidence:
+        addr,b,aliases,fuel_kind,location=reviewed_opinet_location(evidence,bank)
+        basis='bank_onnuri_flag_reviewed_name_phone_registry_opinet_address_coordinates'
+    elif 'municipal_record' in evidence:
         addr,b,aliases,fuel_kind,location=municipal_location(evidence,bank)
         basis='bank_onnuri_flag_fuel_category_reviewed_name_phone_municipal_address'
     else:
