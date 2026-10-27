@@ -1,0 +1,122 @@
+{
+  "checked_at": "2026-10-27T17:16:25+09:00",
+  "new_confirmed_jeonnam_stations": 0,
+  "map_count": 28,
+  "official_search": {
+    "source_url": "https://www.onnuri.gift/place",
+    "status": "stopped_error",
+    "queries": [
+      {
+        "keyword": "주유",
+        "area_code": "",
+        "status": "complete",
+        "expected": 175,
+        "received": 175,
+        "pages": 1
+      },
+      {
+        "keyword": "충전",
+        "area_code": "",
+        "status": "complete",
+        "expected": 21,
+        "received": 21,
+        "pages": 1
+      },
+      {
+        "keyword": "석유",
+        "area_code": "",
+        "status": "complete",
+        "expected": 26,
+        "received": 26,
+        "pages": 1
+      },
+      {
+        "keyword": "에너지",
+        "area_code": "",
+        "status": "complete",
+        "expected": 26,
+        "received": 26,
+        "pages": 1
+      }
+    ],
+    "unique_merchants": 237,
+    "jeonnam_results": 23,
+    "existing_mapped": 22,
+    "excluded_restaurants": [
+      {
+        "frCd": "18817200002",
+        "frcsNm": "주유소",
+        "frcsAddr": "전남광주통합특별시 담양군 담양읍 미리산길 64",
+        "mrktNm": "미리산길 골목형상점가",
+        "placeTypeCd": "07",
+        "placeTypeNm": "음식점업",
+        "addrCd": "12710",
+        "latitude": 35.313934,
+        "longitude": 126.986395,
+        "paperYn": "Y",
+        "cardYn": "Y",
+        "qrYn": "Y"
+      }
+    ],
+    "unfinished_keywords": [
+      "LPG",
+      "엘피지",
+      "오일",
+      "유류",
+      "가스"
+    ],
+    "error": "Onnuri returned Request Blocked; collection stopped without retry"
+  },
+  "hidden_classification_audit": {
+    "scope": "candidate recall audit; no map writes, no current membership inference",
+    "bank_merchants": 11385,
+    "already_reviewed_bank_ids": 32,
+    "registry_rows": 565,
+    "commercial_rows": 992,
+    "candidate_bank_ids": 70
+  },
+  "candidate_disposition": {
+    "nearby_only_without_name_phone_match": 69,
+    "phone_collision_with_different_name_address_category": 1,
+    "promoted": 0
+  },
+  "phone_collision": {
+    "bank_id": "000000099970150",
+    "bank_name": "부부팥죽",
+    "bank_phone": "0617435188",
+    "fuel_name": "백진주유소",
+    "business_listing_phone": "0617435138",
+    "business_listing_address": "전남 순천시 장평로 60",
+    "business_listing_source": "https://www.daangn.com/kr/local-profile/부부팥죽-rrm2p2cmu7yx/",
+    "decision": "conflicting identity; not evidence of fuel merchant membership"
+  },
+  "secondary_list": {
+    "source_url": "https://localhub.kr/onnuri/onnuri-gas-stations.html",
+    "data_url": "https://localhub.kr/onnuri/gas_stations.js",
+    "jeonnam_rows": 11,
+    "already_mapped": 11,
+    "new": 0,
+    "scope": "secondary candidate crosscheck only"
+  },
+  "unresolved": [
+    {
+      "name": "(주)백동산업",
+      "reason": "fuel category conflicts with same-phone building material merchant; not newly resolved"
+    },
+    {
+      "name": "창평가스",
+      "reason": "KB gas-seller listing, no independently confirmed vehicle refueling facility"
+    }
+  ],
+  "other_paths": [
+    {
+      "source": "https://www.bccard.com/app/card/ContentsLinkActn.do?pgm_id=ind0797",
+      "result": "legacy prepaid product links to sijangtong; no independent current merchant list obtained"
+    },
+    {
+      "source": "https://ojm.co.kr/",
+      "result": "local DNS failure and web fetch timeout; not a completed comparison"
+    }
+  ],
+  "conclusion": "no additional confirmed station in this bounded audit; not a proof that 28 is the complete provincial total"
+}
