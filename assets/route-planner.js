@@ -5,6 +5,26 @@
   let start = null, destination = null, generation = 0, lastRequest = 0, controller = null;
   const cache = new Map();
   const panel = byId('tripPanel'), status = byId('tripStatus'), results = byId('tripResults');
+  function syncControls() {
+    const isOnnuri = byId('tripPayment').value === 'onnuri';
+    byId('tripMethod').disabled = !isOnnuri;
+    if (!isOnnuri) byId('tripMethod').value = 'any';
+    byId('tripRecommend').textContent = destination ? '경유 주유소 찾기' : '목적지 검색';
+    const payment = {all:'모든 결제수단', onnuri:'온누리', saengsaeng:'상생카드'}[byId('tripPayment').value];
+    const fuel = {all:'모든 유종', liquid:'휘발유·경유', lpg:'LPG'}[byId('tripFuel').value];
+    const method = {any:'', paper:'지류', digital:'디지털'}[byId('tripMethod').value];
+    byId('tripSettingsSummary').textContent = [start?.name || (byId('tripStart').value.trim() ? '출발지 선택 필요' : '내 위치'), payment, method, fuel].filter(Boolean).join(' · ');
+  }
+  let settingsInitialized = false;
+  panel.addEventListener('toggle', () => {
+    if (!panel.open || settingsInitialized) return;
+    settingsInitialized = true;
+    byId('tripPayment').value = document.querySelector('.filter-btn.active')?.dataset.filter || 'all';
+    byId('tripMethod').value = {all:'any', paper:'paper', digital:'digital'}[byId('onnuriMethod').value] || 'any';
+    if (byId('tripMethod').value !== 'any') byId('tripPayment').value = 'onnuri';
+    byId('tripFuel').value = byId('fuelSelect').value === 'all' ? 'liquid' : byId('fuelSelect').value;
+    syncControls();
+  });
   function say(message) { status.textContent = message; }
   function clearResults() { generation++; controller?.abort(); results.replaceChildren(); panel.classList.remove("has-results"); byId("tripEdit").hidden=true; byId("tripRouteSummary").textContent=""; }
   function selectPoint(kind, point) {
@@ -13,7 +33,9 @@
     byId(kind === 'start' ? 'tripStart' : 'tripDestination').value = point.name;
     byId(kind === 'start' ? 'tripStartSelected' : 'tripDestinationSelected').textContent = '선택됨: ' + point.name;
     byId('tripChoices').replaceChildren();
-    say(destination ? '주유소를 선택하거나 추가 이동시간을 비교하세요.' : '목적지를 검색해 선택하세요.');
+    syncControls();
+    say(destination ? '경유 주유소를 찾으면 추가 이동시간을 비교합니다.' : '목적지를 검색해 선택하세요.');
+    if (kind === 'destination') byId('tripRecommend').focus();
   }
   const searchVersions = {start:0, destination:0};
   function search(kind) {
@@ -87,14 +109,17 @@
   async function requireStart() {
     if(start) return;
     if(byId('tripStart').value.trim()) throw new Error('출발지 검색 결과를 먼저 선택하세요.');
-    const point=await locateUser({center:false});selectPoint('start',{...point,name:'내 위치'});
+    const version = generation;
+    const point=await locateUser({center:false});
+    if (version !== generation) throw new DOMException('취소됨','AbortError');
+    selectPoint('start',{...point,name:'내 위치'});
   }
   async function chooseStation(station) {
     panel.open=true;panel.scrollIntoView({block:'nearest'});
     if(!station.route_eligible || !core.validPoint(station)) {say('이 장소는 상세 좌표 또는 자동차 주유 업종 확인이 필요합니다.');return;}
     if(!destination){say('최종 목적지를 검색해 선택한 뒤 이 주유소를 다시 선택하세요.');byId('tripDestination').focus();return;}
     try { await requireStart();clearResults();results.append(showStation(station));finishResults();say('출발지 → '+station.name+' → '+destination.name); }
-    catch(e){say(e.message || '출발지를 입력하거나 위치 권한을 허용하세요.');}
+    catch(e){if (!start) byId('tripSettings').open=true;say(e.message || '출발지를 입력하거나 위치 권한을 허용하세요.');}
   }
   async function fetchRoad(url, signal) {
     if(cache.has(url)) return cache.get(url);
@@ -129,20 +154,20 @@
         ranked.slice(0,5).forEach(row=>results.append(showStation(row.station,row)));finishResults();
         say(`경로 주변 ${candidates.length}곳 중 추가 이동이 적은 ${Math.min(5,ranked.length)}곳입니다. 교통·주유시간 제외.`);
       } finally {clearTimeout(deadline);}
-    } catch(e) { if(e.name==='AbortError')say('조회가 취소되거나 시간이 초과됐습니다. 다시 비교하거나 주유소를 직접 선택하세요.');else say(e.message); }
+    } catch(e) { if (!start) byId('tripSettings').open=true;if(e.name==='AbortError')say('조회가 취소되거나 시간이 초과됐습니다. 다시 비교하거나 주유소를 직접 선택하세요.');else say(e.message); }
     finally {button.disabled=false;}
   }
   ['start','destination'].forEach(kind=>{
     const input=byId(kind==='start'?'tripStart':'tripDestination');
-    input.addEventListener('input',()=>{searchVersions[kind]++;if(kind==='start')start=null;else destination=null;clearResults();byId(kind==='start'?'tripStartSelected':'tripDestinationSelected').textContent='';byId('tripChoices').replaceChildren();});
-    input.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();search(kind);}});
+    input.addEventListener('input',()=>{searchVersions[kind]++;if(kind==='start')start=null;else destination=null;clearResults();byId(kind==='start'?'tripStartSelected':'tripDestinationSelected').textContent='';byId('tripChoices').replaceChildren();syncControls();say('');});
+    input.addEventListener('keydown',e=>{if(e.key==='Enter' && !e.isComposing){e.preventDefault();if(kind==='destination')byId('tripForm').requestSubmit();else search(kind);}});
   });
   byId('tripSearchStart').addEventListener('click',()=>search('start'));
-  byId('tripSearchDestination').addEventListener('click',()=>search('destination'));
   byId('tripLocation').addEventListener('click',async()=>{try{const p=await locateUser({center:false});selectPoint('start',{...p,name:'내 위치'});}catch(e){say('위치 권한을 허용하거나 출발지를 직접 검색하세요.');}});
   byId('tripForm').addEventListener('submit',recommend);
   byId('tripEdit').addEventListener('click',()=>{clearResults();say('경로 또는 결제수단을 수정한 뒤 다시 비교하세요.');byId('tripDestination').focus();});
-  ['tripPayment','tripMethod','tripFuel'].forEach(id=>byId(id).addEventListener('change',()=>{clearResults();say('조건이 변경됐습니다. 추가 이동시간을 다시 비교하세요.');}));
+  ['tripPayment','tripMethod','tripFuel'].forEach(id=>byId(id).addEventListener('change',()=>{clearResults();syncControls();say('조건이 변경됐습니다. 추가 이동시간을 다시 비교하세요.');}));
+  syncControls();
   const metadata=typeof MERCHANT_STATUS==='undefined'?{}:MERCHANT_STATUS;
   const onnuri=metadata.onnuri;
   const onnuriSummary=onnuri?.status==='confirmed' ? `공식 검색 ${onnuri.checked_at.slice(0,10)} 확인 ${onnuri.matched_count}곳 · 과거 기록 ${onnuri.unmatched_count}곳` : (onnuri?.source_date ? `공식 자료 ${onnuri.source_date} 대조 ${onnuri.matched_count}곳` : '최근 전체 갱신 미완료');
