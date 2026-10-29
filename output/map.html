@@ -989,15 +989,14 @@
       </div>
         </details>
       </form>
-      <div class="trip-recommendation" id="tripRecommendation">
+      <details class="trip-criteria" id="tripCriteria" open><summary id="tripCriterionSummary">추천 조건</summary><div class="trip-recommendation" id="tripRecommendation">
         <label for="tripCriterion">추천 기준</label><select id="tripCriterion"><option value="time">추가 이동시간</option><option value="distance">경로와의 거리</option></select>
         <label for="tripLimit" id="tripLimitLabel">추가 이동 한도</label><select id="tripLimit"><option value="5">5분 미만</option><option value="10">10분 미만</option><option value="15">15분 미만</option></select>
-        <button type="button" id="tripRefresh" hidden>조건 적용</button>
-      </div>
+      </div></details><button type="button" id="tripRefresh" hidden>다시 조회</button>
       <div id="tripChoices"></div>
       <p class="trip-status" id="tripStatus" role="status" aria-live="polite"></p>
       <details class="trip-disclosure"><summary>경로 계산 안내</summary><p class="trip-note">도로 경로 기반 시험 기능입니다. 실시간 교통·주유시간·주유소 진입 방향은 반영하지 않으며 내비 경로와 다를 수 있습니다. 비교를 누르면 출발지·목적지·후보 좌표가 OSRM 경로 서비스에 전달됩니다. <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap</a></p></details>
-      <p id="tripRouteSummary"></p><div class="trip-map-actions"><button id="tripEdit" type="button" hidden>경로 수정</button><button id="tripShowMap" type="button" hidden>경로 전체 보기</button><button id="tripClear" type="button" hidden>경로 지우기</button></div>
+      <p id="tripRouteSummary"></p><div class="trip-map-actions"><button id="tripEdit" type="button" hidden>경로 수정</button><button id="tripShowMap" type="button" hidden>지도 보기</button><button id="tripClear" type="button" hidden>지우기</button></div>
       <div class="trip-results" id="tripResults"></div>
     </div>
   </details>
