@@ -37,7 +37,7 @@
 .trip-settings .trip-input-row {display:grid;grid-template-columns:minmax(0,1fr) auto auto;}
 .trip-settings .trip-input-row input {width:100%;}
 .info-overlay .copy-btn {min-width:44px;min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
-.map-area:has(.info-overlay) .national-results {display:none;}
+.map-area:not(.vector-active):has(#map .info-overlay) .national-results {display:none;}
 .info-overlay .address {font-size:16px;line-height:1.5;}
 .info-overlay .copy-row>span {flex:1;min-width:0;white-space:normal;overflow-wrap:anywhere;}
 .trip-settings .trip-search-options {display:grid;grid-template-columns:auto minmax(0,1fr);}
