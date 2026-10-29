@@ -1508,6 +1508,10 @@ function buildInfoHtml(station) {
   const wrap = document.createElement('div');
   wrap.className = 'info-overlay';
   wrap.addEventListener('click', e => e.stopPropagation());
+  // Keep popup taps/scrolls out of the map's gesture recognizer without cancelling native focus.
+  for (const type of ['pointerdown','mousedown','touchstart','touchend']) {
+    wrap.addEventListener(type, e => e.stopPropagation(), {passive:true});
+  }
 
   const nameRow = document.createElement('div');
   nameRow.className = 'copy-row name';
