@@ -90,7 +90,7 @@
     } catch(error) {vector?.remove();vector=null;container.hidden=true;throw error;}
   }
   function activate() {
-    if(appliedStyle!==styleURL()){appliedStyle=styleURL();vector.setStyle(appliedStyle);}
+    if(appliedStyle!==styleURL()){appliedStyle=styleURL();vector.setStyle(appliedStyle,{diff:false});}
     const center=map.getCenter();vector.jumpTo({center:[center.getLng(),center.getLat()],zoom:18-map.getLevel(),bearing:0});
     enabled=true;container.hidden=false;area.classList.add('vector-active');
     byId('plainMapBtn').hidden=isDark();byId('compassNeedle').textContent='N ↑';
@@ -114,7 +114,7 @@
   }
   button.addEventListener('click',enableRotation);
   window.addEventListener('gas:themechange',async()=>{
-    if(vector&&!loading&&appliedStyle!==styleURL()){appliedStyle=styleURL();vector.setStyle(appliedStyle);}
+    if(vector&&!loading&&appliedStyle!==styleURL()){appliedStyle=styleURL();vector.setStyle(appliedStyle,{diff:false});}
     if(isDark()&&!enabled&&window.kakao?.maps)await enableRotation();
     byId('plainMapBtn').hidden=!enabled||isDark();
   });

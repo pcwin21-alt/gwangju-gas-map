@@ -17,7 +17,7 @@ function fixture(withVector=false) {
     getStyle(){return {layers:[{id:'place_city',type:'symbol',layout:{'text-field':['get','name:latin'],'text-size':10}}]};}
     setLayoutProperty(id,key,value){(this.labels ||= {})[key]=value;}
     setPaintProperty(id,key,value){(this.labelPaint ||= {})[key]=value;}
-    setStyle(url){this.styleURL=url;this.sources={};this.handlers['style.load']?.();}
+    setStyle(url,options){assert.equal(options.diff,false,'Replace base styles fully so style.load remounts custom station layers');this.styleURL=url;this.sources={};this.handlers['style.load']?.();}
     addSource(id,source){this.sources[id]={data:source.data,setData(data){this.data=data;}};}
     getSource(id){return this.sources[id];}
   }
