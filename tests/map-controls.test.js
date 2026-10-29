@@ -14,6 +14,9 @@ function fixture(withVector=false) {
     constructor(options){this.sources={};this.handlers={};this.styleURL=options.style;rendered=this;}
     once(type,fn){if(type==='load')queueMicrotask(fn);}
     off(){} on(type,fn){this.handlers[type]=fn;} addLayer(){} resize(){} jumpTo(){} getBearing(){return 0;}
+    getStyle(){return {layers:[{id:'place_city',type:'symbol',layout:{'text-field':['get','name:latin'],'text-size':10}}]};}
+    setLayoutProperty(id,key,value){(this.labels ||= {})[key]=value;}
+    setPaintProperty(id,key,value){(this.labelPaint ||= {})[key]=value;}
     setStyle(url){this.styleURL=url;this.sources={};this.handlers['style.load']?.();}
     addSource(id,source){this.sources[id]={data:source.data,setData(data){this.data=data;}};}
     getSource(id){return this.sources[id];}
@@ -54,6 +57,9 @@ test('light/dark style switches keep the filtered station layer',async()=>{
   const f=fixture(true);await f.elements.rotationBtn.emit('click');
   f.document.documentElement.dataset.theme='dark';await f.windowListeners['gas:themechange']();
   assert.match(f.rendered().styleURL,/\/dark$/);assert.equal(f.rendered().getSource('stations').data.features.length,1);
+  assert.equal(f.rendered().labelPaint['text-color'],'#e0e8f4');
+  assert.equal(f.rendered().labels['text-size'],12);
+  assert.equal(f.rendered().labels['text-field'][1][1],'name:ko');
   f.document.documentElement.dataset.theme='light';await f.windowListeners['gas:themechange']();
   assert.match(f.rendered().styleURL,/\/liberty$/);assert.equal(f.rendered().getSource('stations').data.features.length,1);
 });
