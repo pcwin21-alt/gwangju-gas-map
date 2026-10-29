@@ -1942,8 +1942,7 @@ function buildRankList(fuel) {
         map.setCenter(new kakao.maps.LatLng(found.station.lat, found.station.lng));
         map.setLevel(4);
         if (activeOverlay) activeOverlay.setMap(null);
-        found.overlay.setMap(map);
-        activeOverlay = found.overlay;
+        showStationOverlay(found.overlay);
       }
     });
   });
@@ -2020,8 +2019,7 @@ function renderNearbyList() {
       map.setCenter(new kakao.maps.LatLng(item.station.lat, item.station.lng));
       map.setLevel(4);
       if (activeOverlay) activeOverlay.setMap(null);
-      item.overlay.setMap(map);
-      activeOverlay = item.overlay;
+      showStationOverlay(item.overlay);
     });
     nearbyList.appendChild(row);
   });
