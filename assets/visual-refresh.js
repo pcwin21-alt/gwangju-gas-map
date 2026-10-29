@@ -8,7 +8,6 @@
   filters.forEach(button => button.addEventListener('click', syncFilters));
   document.getElementById('resetBtn').addEventListener('click', syncFilters);
   open.addEventListener('click', () => tools.showModal());
-  document.getElementById('toolsHelpBtn').addEventListener('click', () => document.getElementById('helpBtn').click());
   document.getElementById('toolsCloseBtn').addEventListener('click', () => tools.close());
   // Close before existing action handlers open their own panels/dialogs.
   tools.querySelector('.tools-actions').addEventListener('click', event => {

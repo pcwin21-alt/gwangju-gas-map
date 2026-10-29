@@ -2,6 +2,12 @@
 (function(root) {
   'use strict';
   const messages = {
+    '필터':'Filters','검색 필터':'Search filters','조건 초기화':'Clear filters','시·군·구':'District',
+    '어디로 가시나요?':'Where are you going?','목적지 검색':'Search destination',
+    '출발지·조건 변경':'Change start / options','모든 결제수단':'All payments','모든 유종':'All fuels',
+    '출발지 선택 필요':'Select a start','경로 계산 안내':'About route estimates',
+    '경유 주유소를 찾으면 추가 이동시간을 비교합니다.':'Find stations to compare detour times.',
+    '검색·지역·내 위치를 앞에 두고, 세부 조건은 필터로 모았습니다. 경유 찾기는 목적지부터 입력하고 출발지와 조건은 필요할 때 변경합니다.':'Search, region and location stay up front; detailed options are under Filters. Route search starts with the destination, with start and options available when needed.',
     '전국 온누리 주유소 지도':'Onnuri fuel stations across Korea',
     '상생카드와 온누리 공식 검색 결과를 표시합니다. 현행 검색과 대조되지 않은 곳은 과거 기록으로 구분합니다. 유가와 가맹점 확인일은 별개입니다.':'Sangsaeng and Onnuri use official search results. Unmatched older records are marked historical. Price and merchant check dates are separate.',
     '유가: 하루 1회 조회 · 가맹점: 매일 오전 6시 30분 확인':'Prices: daily lookup · Merchants: daily at 06:30 KST',

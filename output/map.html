@@ -752,6 +752,7 @@
   </style>
   <link rel="stylesheet" href="assets/visual-refresh.css">
   <link rel="stylesheet" href="assets/nationwide.css">
+  <link rel="stylesheet" href="assets/simple-controls.css">
   <script src="assets/nationwide.js"></script>
 </head>
 <body>
@@ -775,13 +776,7 @@
       <p>전국 온누리 · 광주상생카드 가맹점<span hidden> 오늘 <b id="cnt-today">-</b> · 전체 <b id="cnt-total">-</b></span></p>
     </div>
     <div class="header-actions">
-      <button id="languageBtn" class="language-btn" type="button" aria-label="Switch to English" data-no-i18n>EN</button>
       <button class="tools-trigger" id="toolsOpenBtn" type="button" aria-haspopup="dialog" aria-controls="mapTools">더보기 <span aria-hidden="true">⋯</span></button>
-      <button class="help-btn" id="helpBtn" title="사용법 안내" aria-label="사용법 안내">?</button>
-      <a class="feedback-btn"
-         href="mailto:pcwin21@gmail.com?subject=%5B%EC%A3%BC%EC%9C%A0%EC%86%8C%20%EC%A7%80%EB%8F%84%5D%20%EC%98%A4%EB%A5%98%2F%EB%88%84%EB%9D%BD%20%EC%8B%A0%EA%B3%A0&body=%EC%A3%BC%EC%9C%A0%EC%86%8C%EB%AA%85%3A%0A%EC%A3%BC%EC%86%8C%3A%0A%EB%AC%B8%EC%A0%9C%20%EB%82%B4%EC%9A%A9%3A">
-        ✉ 오류·누락 신고 <span class="feedback-email" style="opacity:0.65;font-size:11px">(pcwin21@gmail.com)</span>
-      </a>
     </div>
   </div>
 
@@ -869,38 +864,43 @@
         <button class="search-clear" id="searchClear" title="지우기">✕</button>
         <div class="no-result" id="noResult">검색 결과 없음</div>
       </div>
-      <div class="filter-group">
+      <span class="count-badge" id="countBadge">0개</span>
+    </div>
+    <div class="controls-bottom">
+      <select id="regionSelect" aria-label="시도 선택"><option value="all">전국</option></select>
+      <button class="myloc-btn" id="myLocBtn">📍 내 위치</button>
+      <button id="filtersToggle" type="button" aria-expanded="false" aria-controls="mapFilters"><span>필터</span><span id="filterCount" hidden></span></button>
+    </div>
+    <p id="activeFilters" class="active-filters" hidden></p>
+    <section id="mapFilters" class="map-filters" aria-label="검색 필터" hidden>
+      <div class="filters-heading"><h2>검색 필터</h2><button id="filtersReset" type="button">조건 초기화</button></div>
+      <div class="filter-group" role="group" aria-label="결제수단">
         <button class="filter-btn active" data-filter="all">전체</button>
         <button class="filter-btn" data-filter="saengsaeng">상생카드</button>
         <button class="filter-btn" data-filter="onnuri">온누리</button>
       </div>
-      <div class="legend">
-        <span><span class="legend-dot" style="background:#3b82f6"></span>상생카드</span>
-        <span><span class="legend-dot" style="background:#f59e0b"></span>온누리</span>
-        <span><span class="legend-dot" style="background:#dc2626"></span>둘 다</span>
-      </div>
-      <span class="count-badge" id="countBadge">0개</span>
-    </div>
-    <div class="controls-bottom">
-      <label class="national-select"><span>시·도</span><select id="regionSelect" aria-label="시도 선택"><option value="all">전국</option></select></label>
+      <div class="filter-selects">
       <label class="national-select"><span>온누리 유형</span><select id="onnuriMethod" aria-label="온누리 결제 유형"><option value="all">전체</option><option value="digital">디지털</option><option value="paper">지류</option></select></label>
       <label class="national-select"><span>유종</span><select id="fuelSelect" aria-label="유종 선택"><option value="all">전체</option><option value="liquid">휘발유·경유</option><option value="lpg">LPG</option></select></label>
-      <label class="mobile-district"><select id="districtSelect" aria-label="시군구 선택"><option value="all">전체 지역</option><option>광산구</option><option>남구</option><option>동구</option><option>북구</option><option>서구</option></select></label>
+      <label class="national-select"><span>시·군·구</span><select id="districtSelect" aria-label="시군구 선택"><option value="all">전체 지역</option></select></label>
+      </div>
+      <div hidden>
       <button class="district-btn active" data-district="all">전체 구</button>
       <button class="district-btn" data-district="광산구">광산구</button>
       <button class="district-btn" data-district="남구">남구</button>
       <button class="district-btn" data-district="동구">동구</button>
       <button class="district-btn" data-district="북구">북구</button>
       <button class="district-btn" data-district="서구">서구</button>
-      <button class="myloc-btn" id="myLocBtn">📍 내 위치</button>
-      <button class="rank-btn" id="rankBtn">가격 순위</button>
-    </div>
+      </div>
+    </section>
   </div>
 
   <dialog id="mapTools" class="tools-dialog" aria-labelledby="toolsTitle">
     <div class="tools-header"><h2 id="toolsTitle">더보기</h2><button id="toolsCloseBtn" type="button" aria-label="더보기 닫기" autofocus>닫기</button></div>
     <nav class="tools-actions" aria-label="지도 도구">
-      <button id="toolsHelpBtn" type="button">사용법 안내</button>
+      <button class="rank-btn" id="rankBtn">가격 순위</button>
+      <button id="helpBtn" type="button">사용법 안내</button>
+      <button id="languageBtn" class="language-btn" type="button" aria-label="Switch to English" data-no-i18n>EN</button>
       <button class="reset-btn" id="resetBtn">↺ 초기화</button>
       <button class="nearby-btn" id="nearbyBtn">↗ 주변 내보내기</button>
       <button class="updates-trigger" id="updatesBtn" type="button" aria-haspopup="dialog" aria-controls="updatesDialog">업데이트 내역</button>
@@ -922,6 +922,10 @@
         <p id="merchantFreshness" role="status"></p>
         <p>유가: 하루 1회 조회 · 가맹점: 매일 오전 6시 30분 확인</p>
         <p>공식 검색·품목 자료로 확인한 주유소입니다. 전국 모든 가맹점이 포함된 것은 아닙니다.</p>
+      </section>
+      <section class="updates-release">
+        <h3><time datetime="2026-10-30">2026.10.30</time></h3>
+        <ul><li>검색·지역·내 위치를 앞에 두고, 세부 조건은 필터로 모았습니다. 경유 찾기는 목적지부터 입력하고 출발지와 조건은 필요할 때 변경합니다.</li></ul>
       </section>
       <section class="updates-release">
         <h3><time datetime="2026-10-13">2026.10.13</time></h3>
@@ -958,27 +962,30 @@
   <details class="trip-panel" id="tripPanel">
     <summary class="trip-trigger">
       <svg class="trip-trigger-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="18" r="2"/><path d="M7 6h8a4 4 0 0 1 0 8H9a4 4 0 0 0-4 4h12"/></svg>
-      <span class="trip-trigger-copy"><h2 class="trip-heading">경유 주유소 찾기</h2><span class="trip-trigger-hint">목적지까지 추가 이동시간 비교</span></span>
+      <span class="trip-trigger-copy"><h2 class="trip-heading">경유 주유소 찾기</h2></span>
       <span class="trip-trigger-state" aria-hidden="true"><span class="trip-trigger-open">열기 ＋</span><span class="trip-trigger-close">접기 −</span></span>
     </summary>
     <div class="trip-body">
       <form class="trip-form" id="tripForm">
-        <div class="trip-field"><label for="tripStart">출발지</label>
-          <div class="trip-input-row"><input id="tripStart" placeholder="비워두면 내 위치" autocomplete="off"><button id="tripSearchStart" type="button">검색</button><button id="tripLocation" type="button">내 위치</button></div><p class="trip-selected" id="tripStartSelected"></p>
-        </div>
         <div class="trip-field"><label for="tripDestination">최종 목적지</label>
-          <div class="trip-input-row"><input id="tripDestination" placeholder="장소명 또는 도로명주소" autocomplete="off"><button id="tripSearchDestination" type="button">검색</button></div><p class="trip-selected" id="tripDestinationSelected"></p>
+          <input id="tripDestination" placeholder="어디로 가시나요?" autocomplete="off"><p class="trip-selected" id="tripDestinationSelected"></p>
         </div>
-        <button class="trip-primary" id="tripRecommend" type="submit">추가 이동시간 비교</button>
-      </form>
+        <button class="trip-primary" id="tripRecommend" type="submit">목적지 검색</button>
+        <details id="tripSettings" class="trip-settings">
+          <summary><span>출발지·조건 변경</span><span id="tripSettingsSummary">내 위치 · 모든 결제수단 · 휘발유·경유</span></summary>
+          <div class="trip-field"><label for="tripStart">출발지</label>
+            <div class="trip-input-row"><input id="tripStart" placeholder="비워두면 내 위치" autocomplete="off"><button id="tripSearchStart" type="button">검색</button><button id="tripLocation" type="button">내 위치</button></div><p class="trip-selected" id="tripStartSelected"></p>
+          </div>
       <div class="trip-search-options">
-        <label for="tripPayment">결제수단</label><select id="tripPayment"><option value="saengsaeng">상생카드</option><option value="onnuri">온누리</option><option value="all">전체</option></select>
+        <label for="tripPayment">결제수단</label><select id="tripPayment"><option value="all">전체</option><option value="onnuri">온누리</option><option value="saengsaeng">상생카드</option></select>
         <label for="tripFuel">연료</label><select id="tripFuel"><option value="liquid">휘발유·경유 주유소</option><option value="lpg">LPG 충전소</option><option value="all">전체</option></select>
-        <label for="tripMethod">온누리 종류</label><select id="tripMethod"><option value="digital">디지털</option><option value="paper">지류</option><option value="any">전체</option></select>
+        <label for="tripMethod">온누리 종류</label><select id="tripMethod"><option value="any">전체</option><option value="digital">디지털</option><option value="paper">지류</option></select>
       </div>
+        </details>
+      </form>
       <div id="tripChoices"></div>
-      <p class="trip-status" id="tripStatus" role="status" aria-live="polite">목적지를 검색해 선택하세요.</p>
-      <p class="trip-note">도로 경로 기반 시험 기능입니다. 실시간 교통·주유시간·주유소 진입 방향은 반영하지 않으며 내비 경로와 다를 수 있습니다. 비교를 누르면 출발지·목적지·후보 좌표가 OSRM 경로 서비스에 전달됩니다. <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap</a></p>
+      <p class="trip-status" id="tripStatus" role="status" aria-live="polite"></p>
+      <details class="trip-disclosure"><summary>경로 계산 안내</summary><p class="trip-note">도로 경로 기반 시험 기능입니다. 실시간 교통·주유시간·주유소 진입 방향은 반영하지 않으며 내비 경로와 다를 수 있습니다. 비교를 누르면 출발지·목적지·후보 좌표가 OSRM 경로 서비스에 전달됩니다. <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap</a></p></details>
       <p id="tripRouteSummary"></p><button id="tripEdit" type="button" hidden>경로 수정</button>
       <div class="trip-results" id="tripResults"></div>
     </div>
@@ -2566,6 +2573,7 @@ if (!localStorage.getItem('helpSeen')) {
 <script src="assets/updates.js"></script>
 <script src="assets/visual-refresh.js"></script>
 <script src="assets/nationwide-ui.js"></script>
+<script src="assets/simple-controls.js"></script>
 <script src="assets/i18n.js"></script>
 </body>
 </html>
