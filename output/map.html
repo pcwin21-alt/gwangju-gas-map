@@ -1587,6 +1587,24 @@ let rankMapOverlays = [];
 let reportMode = false;
 let reportPin = null;
 
+function showStationOverlay(overlay) {
+  document.getElementById('nationalResults').open = false;
+  overlay.setMap(map);
+  activeOverlay = overlay;
+  requestAnimationFrame(() => {
+    if (activeOverlay !== overlay) return;
+    const content = document.querySelector('#map .info-overlay');
+    const area = document.getElementById('map');
+    if (!content) return;
+    content.style.maxHeight = Math.max(96, area.clientHeight - 24) + 'px';
+    content.style.overflowY = 'auto';
+    const box = content.getBoundingClientRect(), bounds = area.getBoundingClientRect();
+    const dx = box.left < bounds.left + 12 ? box.left - bounds.left - 12 : Math.max(0, box.right - bounds.right + 12);
+    const dy = box.top < bounds.top + 12 ? box.top - bounds.top - 12 : Math.max(0, box.bottom - bounds.bottom + 12);
+    if (dx || dy) map.panBy(dx, dy);
+  });
+}
+
 STATIONS.forEach(station => {
   if (!station.lat || !station.lng) return;
 
@@ -1612,8 +1630,7 @@ STATIONS.forEach(station => {
       activeOverlay = null;
       return;
     }
-    overlay.setMap(map);
-    activeOverlay = overlay;
+    showStationOverlay(overlay);
   });
 
   kakao.maps.event.addListener(map, 'click', function() {

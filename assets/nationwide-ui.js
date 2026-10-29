@@ -98,7 +98,7 @@
       button.addEventListener('click',()=>{
         if(activeOverlay)activeOverlay.setMap(null);
         map.setCenter(new kakao.maps.LatLng(item.station.lat,item.station.lng));map.setLevel(4);
-        item.overlay.setMap(map);activeOverlay=item.overlay;
+        showStationOverlay(item.overlay);
       });list.append(button);
     });
     if(!visible.length){const p=document.createElement('p');p.textContent='조건에 맞는 확인된 등록이 없습니다. 지역이나 결제 유형을 바꿔보세요.';list.append(p);}
