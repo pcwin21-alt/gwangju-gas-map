@@ -6,6 +6,7 @@
     function fit() {
       cancelAnimationFrame(frame);
       frame = requestAnimationFrame(() => {
+        if(root.GasRouteMap?.isActive()){root.GasRouteMap.fit();return;}
         const points = getPoints().filter(p => Number.isFinite(p.lat) && Number.isFinite(p.lng));
         if (!points.length || !container.clientWidth || !container.clientHeight) return;
         map.relayout();

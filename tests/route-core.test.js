@@ -21,3 +21,29 @@ test('no route or distant road snap never reported as zero detour',()=>{
  d.durations[2][1]=400;d.sources[2].distance=200;assert.deepEqual(core.rankMatrix(d,[station]),[]);
 });
 test('bad final destination rejected',()=>assert.throws(()=>core.navigationParams(start,station,{lat:NaN,lng:1},'test')));
+
+test('corridor follows a bent road rather than the direct start-end line and does not truncate 24 matches',()=>{
+ const coordinates=[[126.85,35.16],[126.85,35.5],[127.2,35.5],[127.2,35.16]];
+ const onRoad={...station,lat:35.5,lng:127.0},between={...station,lat:35.16,lng:127.0};
+ assert.ok(core.distanceToRoute(onRoad,coordinates)<.001);
+ assert.ok(core.distanceToRoute(between,coordinates)>10);
+ const rows=Array.from({length:30},(_,id)=>({...onRoad,id}));
+ const shortlist=core.shortlist([...rows,between],start,end,'onnuri','paper','all',{coordinates,radiusKm:1});
+ assert.equal(shortlist.length,30);assert.ok(!shortlist.includes(between));
+ assert.equal(core.distanceToRoute(onRoad,[]),Infinity);
+});
+
+test('5 minutes is strictly less than 300 seconds; radius is inclusive; missing estimates never qualify',()=>{
+ assert.equal(core.matchesRecommendation({addedSeconds:299.9},'time',5),true);
+ assert.equal(core.matchesRecommendation({addedSeconds:300},'time',5),false);
+ assert.equal(core.matchesRecommendation({routeKm:2},'distance',2),true);
+ assert.equal(core.matchesRecommendation({routeKm:2.001},'distance',2),false);
+ assert.equal(core.matchesRecommendation({},'time',5),false);
+});
+
+test('route geometry, duration and road snap must be valid before showing a driving route',()=>{
+ const response={code:'Ok',routes:[{duration:600,distance:5000,geometry:{type:'LineString',coordinates:[[126.85,35.16],[126.9,35.19]]}}],waypoints:[{distance:2},{distance:4}]};
+ assert.equal(core.roadRoute(response).seconds,600);
+ response.waypoints[1].distance=501;assert.throws(()=>core.roadRoute(response),/자동차 도로/);
+ response.waypoints[1].distance=4;response.routes[0].geometry.coordinates[1][0]=null;assert.throws(()=>core.roadRoute(response));
+});

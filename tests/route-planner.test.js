@@ -4,7 +4,7 @@ const fs = require('node:fs');
 const vm = require('node:vm');
 const core = require('../assets/route-core.js');
 
-function setup() {
+function setup(options={}) {
   const html = fs.readFileSync('output/map.html','utf8');
   class Element {
     constructor() {this.value='';this.textContent='';this.children=[];this.listeners={};this.classList={add(){},remove(){}};}
@@ -19,9 +19,13 @@ function setup() {
   const elements = Object.fromEntries([...html.matchAll(/id="([^"]+)"/g)].map(m=>[m[1],new Element()]));
   const el = id => {assert.ok(elements[id],`Missing HTML element: ${id}`);return elements[id];};
   for (const match of html.matchAll(/<select id="([^"]+)"[^>]*>\s*<option value="([^"]+)"/g)) el(match[1]).value=match[2];
-  const lookups=[], gps=[];
+  const lookups=[], gps=[],roads=[],draws=[];
+  let now=10000;
   const sandbox={GasRouteCore:core, document:{getElementById:el,querySelector:()=>({dataset:{filter:'all'}}),createElement:()=>new Element()},
-    window:{}, MERCHANT_STATUS:{}, STATIONS:[], setTimeout,clearTimeout,AbortController,DOMException,
+    window:{GasRouteMap:{clear(){draws.push(null);},show(...args){draws.push(args);},fit(){}}}, MERCHANT_STATUS:{}, STATIONS:options.stations||[], PRICES:{},
+    GasMerchantDisplay:{digital:m=>m.digital,onnuriNote:()=>'',verificationText:()=>''},
+    navigator:{userAgent:''},location:{hostname:'example.test'},Date:{now:()=>now+=2000},setTimeout,clearTimeout,AbortController,DOMException,
+    fetch:async url=>{roads.push(url);return {ok:true,json:async()=>options.road?options.road(url):{code:'Error'}};},
     kakao:{maps:{services:{Status:{OK:'OK'},Places:class{keywordSearch(q,cb){lookups.push({q,cb});}}}}},
     locateUser:()=>new Promise((resolve,reject)=>gps.push({resolve,reject}))};
   vm.runInNewContext(fs.readFileSync('assets/route-planner.js','utf8'),sandbox);
@@ -30,7 +34,12 @@ function setup() {
     lookups.at(-1).cb([{place_name:'목포역',y:'34.791',x:'126.386',address_name:'전남 목포시'}],'OK');
     await el('tripChoices').children[0].emit('click');
   }
-  return {el,lookups,gps,selectDestination};
+  async function selectStart() {
+    el('tripStart').value='광주송정역';await el('tripSearchStart').emit('click');
+    lookups.at(-1).cb([{place_name:'광주송정역',y:'35.138',x:'126.791',address_name:'광주'}],'OK');
+    await el('tripChoices').children[0].emit('click');
+  }
+  return {el,lookups,gps,roads,draws,selectDestination,selectStart};
 }
 
 test('destination search and selection never request GPS; button advances and editing invalidates it',async()=>{
@@ -74,4 +83,22 @@ test('editing destination while GPS is pending cancels the old request',async()=
   assert.equal(el('tripStart').value,'');
   assert.equal(el('tripRecommend').textContent,'목적지 검색');
   assert.match(el('tripStatus').textContent,/취소/);
+});
+
+test('selected endpoints automatically draw the road and list only stations strictly below 5-minute detour',async()=>{
+ const s={id:'one',name:'경로 주유소',lat:35,lng:126.6,payment_types:['onnuri'],fuel_kind:'liquid',route_eligible:true};
+ const f=setup({stations:[s],road:url=>url.includes('/route/')?{code:'Ok',routes:[{duration:600,distance:5000,geometry:{type:'LineString',coordinates:[[126.791,35.138],[126.6,35],[126.386,34.791]]}}]}:{code:'Ok',durations:[[0,600,300],[600,0,300],[300,400,0]],distances:[[0,5000,3000],[5000,0,3000],[3000,3000,0]],sources:[{distance:0},{distance:0},{distance:2}]}});
+ await f.selectStart();assert.equal(f.roads.length,0);await f.selectDestination();
+ assert.equal(f.gps.length,0);assert.equal(f.roads.length,2);assert.ok(f.roads[0].includes('/route/'));
+ assert.equal(f.draws.filter(Boolean).at(-1)[3][0].id,'one');
+ assert.equal(f.el('tripResults').children.length,1);assert.match(f.el('tripStatus').textContent,/推薦|추천 1곳/);
+ assert.match(f.el('tripRouteSummary').textContent,/광주송정역.*목포역.*5.0km/);
+ await f.el('tripClear').emit('click');assert.equal(f.draws.at(-1),null);assert.equal(f.el('tripResults').children.length,0);
+});
+
+test('no matching stations still leaves the actual road visible and changeable',async()=>{
+ const f=setup({road:()=>({code:'Ok',routes:[{duration:600,distance:5000,geometry:{type:'LineString',coordinates:[[126.791,35.138],[126.386,34.791]]}}]})});
+ await f.selectStart();await f.selectDestination();
+ assert.ok(f.draws.some(Boolean));assert.equal(f.el('tripShowMap').hidden,false);assert.match(f.el('tripStatus').textContent,/조건에 맞는 주유소가 없습니다/);
+ assert.equal(f.el('tripRefresh').disabled,false);
 });

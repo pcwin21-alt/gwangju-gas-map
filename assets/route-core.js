@@ -23,7 +23,29 @@
     return 'https://map.kakao.com/link/by/car/' + [start, station, destination].map(p =>
       `${encodeURIComponent(p.name || '출발지')},${p.lat},${p.lng}`).join('/');
   }
-  function shortlist(stations, start, end, scheme, method, fuel = "all") {
+  function distanceToRoute(point, coordinates) {
+    if(!validPoint(point)||!Array.isArray(coordinates)||coordinates.length<2)return Infinity;
+    const scaleX=111.195*Math.cos(point.lat*Math.PI/180),scaleY=111.195;
+    let nearest=Infinity;
+    for(let i=1;i<coordinates.length;i++) {
+      const a=coordinates[i-1],b=coordinates[i];
+      if(!validPoint({lng:a?.[0],lat:a?.[1]})||!validPoint({lng:b?.[0],lat:b?.[1]}))return Infinity;
+      const ax=(a[0]-point.lng)*scaleX,ay=(a[1]-point.lat)*scaleY,bx=(b[0]-point.lng)*scaleX,by=(b[1]-point.lat)*scaleY;
+      const dx=bx-ax,dy=by-ay,den=dx*dx+dy*dy;
+      const t=den?Math.max(0,Math.min(1,-(ax*dx+ay*dy)/den)):0;
+      nearest=Math.min(nearest,Math.hypot(ax+t*dx,ay+t*dy));
+    }
+    return nearest;
+  }
+  function roadRoute(data) {
+    const route=data?.routes?.[0],coordinates=route?.geometry?.coordinates;
+    if(data?.code!=='Ok'||route?.geometry?.type!=='LineString'||!Array.isArray(coordinates)||coordinates.length<2||
+      !coordinates.every(c=>validPoint({lng:c?.[0],lat:c?.[1]}))||!Number.isFinite(route.duration)||route.duration<=0||!Number.isFinite(route.distance)||route.distance<=0)
+      throw new Error('자동차 경로를 찾지 못했습니다. 출발지·목적지를 확인하세요.');
+    if(data.waypoints?.some(p=>!Number.isFinite(p.distance)||p.distance>500))throw new Error('선택한 장소 가까이에 연결된 자동차 도로가 없습니다. 인근 도로명주소로 다시 선택하세요.');
+    return {coordinates,seconds:route.duration,meters:route.distance};
+  }
+  function shortlist(stations, start, end, scheme, method, fuel = "all", routeOptions = null) {
     const direct = distance(start, end);
     return stations.filter(s => validPoint(s) && s.route_eligible !== false &&
       (!s.verification || (scheme === 'saengsaeng' ? s.verification.saengsaeng?.status === 'confirmed' :
@@ -33,8 +55,9 @@
       (fuel === 'all' || s.fuel_kind === fuel) &&
       (scheme !== 'onnuri' || method === 'any' ||
         (method === 'digital' ? s.onnuri_methods?.digital || s.onnuri_methods?.card || s.onnuri_methods?.qr : s.onnuri_methods?.paper)))
-      .map(s => ({station: s, penalty: distance(start, s) + distance(s, end) - direct}))
-      .sort((a,b) => a.penalty-b.penalty).slice(0, 24).map(x=>x.station);
+      .map(s => ({station: s, corridor:routeOptions?distanceToRoute(s,routeOptions.coordinates):0,penalty: distance(start, s) + distance(s, end) - direct}))
+      .filter(row=>!routeOptions||row.corridor<=routeOptions.radiusKm)
+      .sort((a,b) => a.corridor-b.corridor||a.penalty-b.penalty).slice(0,routeOptions?Infinity:24).map(x=>x.station);
   }
   function rankMatrix(data, candidates) {
     if (data.code !== 'Ok' || !data.durations || !data.distances) throw new Error('도로 경로를 계산하지 못했습니다.');
@@ -49,7 +72,10 @@
         addedMeters: Math.max(0, metersA+metersB-baseMeters), totalSeconds: there+onward}];
     }).sort((a,b) => a.addedSeconds-b.addedSeconds || a.addedMeters-b.addedMeters);
   }
-  const api = {validPoint, distance, navigationParams, naverUrl, kakaoUrl, shortlist, rankMatrix};
+  function matchesRecommendation(row, mode, limit) {
+    return Number.isFinite(limit)&&limit>0&&(mode==='distance'?Number.isFinite(row.routeKm)&&row.routeKm<=limit:Number.isFinite(row.addedSeconds)&&row.addedSeconds<limit*60);
+  }
+  const api = {validPoint, distance, distanceToRoute, roadRoute, matchesRecommendation, navigationParams, naverUrl, kakaoUrl, shortlist, rankMatrix};
   if (typeof module !== 'undefined') module.exports = api;
   root.GasRouteCore = api;
 })(typeof window === 'undefined' ? globalThis : window);

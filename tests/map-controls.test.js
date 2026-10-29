@@ -1,5 +1,5 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
-function fixture(withVector=false) {
+function fixture(withVector=false,withRoute=false) {
   const html=fs.readFileSync('output/map.html','utf8'),elements={},requests=[],docListeners={},windowListeners={};
   function node(){const classes=new Set();return {listeners:{},style:{},classList:{add:x=>classes.add(x),remove:x=>classes.delete(x),contains:x=>classes.has(x),toggle(x,on){on?classes.add(x):classes.delete(x);}},attributes:{},setAttribute(k,v){this.attributes[k]=v;},addEventListener(type,fn){this.listeners[type]=fn;},remove(){},async emit(type,event={}){await this.listeners[type]?.(event);}};}
   for(const match of html.matchAll(/id="([^"]+)"/g))elements[match[1]]=node();
@@ -24,6 +24,7 @@ function fixture(withVector=false) {
   const gl={Map:Vector};
   const rows=[{visible:true,markerType:'onnuri',station:{id:'one',name:'확인 주유소',lat:35.16,lng:126.85}},{visible:false,station:{id:'hidden'}}];
   const context={window:{addEventListener:(k,v)=>windowListeners[k]=v,kakao:{maps:{}},matchMedia:()=>({matches:true}),maplibregl:withVector?gl:null},maplibregl:gl,map,document,setTimeout,clearTimeout,queueMicrotask,ResizeObserver:class{observe(){}},COLOR:{onnuri:'#f59e0b'},allMarkers:rows,console:{warn(){}},applyFilters(){},showStationOverlay(){},setCurrentLocation(){}};
+  if(withRoute)context.window.GasRouteMap={collection:()=>({type:'FeatureCollection',features:[{type:'Feature',geometry:{type:'LineString',coordinates:[[126.85,35.16],[126.9,35.19]]},properties:{kind:'route'}}]})};
   vm.runInNewContext(fs.readFileSync('assets/map-controls.js','utf8'),context);
   return {elements,requests,docListeners,windowListeners,level:()=>level,rendered:()=>rendered,rows,context,document};
 }
@@ -62,4 +63,11 @@ test('light/dark style switches keep the filtered station layer',async()=>{
   assert.equal(f.rendered().labels['text-field'][1][1],'name:ko');
   f.document.documentElement.dataset.theme='light';await f.windowListeners['gas:themechange']();
   assert.match(f.rendered().styleURL,/\/liberty$/);assert.equal(f.rendered().getSource('stations').data.features.length,1);
+});
+
+test('route geometry is mounted on lazy map load and restored after dark style replacement',async()=>{
+ const f=fixture(true,true);await f.elements.rotationBtn.emit('click');
+ assert.equal(f.rendered().getSource('trip-route').data.features[0].geometry.type,'LineString');
+ f.document.documentElement.dataset.theme='dark';await f.windowListeners['gas:themechange']();
+ assert.equal(f.rendered().getSource('trip-route').data.features.length,1);
 });
