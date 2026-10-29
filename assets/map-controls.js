@@ -25,7 +25,9 @@
   function show(station) {
     if(activeOverlay){activeOverlay.setMap(null);activeOverlay=null;}
     byId('nationalResults').open=false;
-    details.replaceChildren(buildInfoHtml(station));details.hidden=false;
+    const close=document.createElement('button');close.type='button';close.className='rotation-detail-close';close.textContent='닫기';close.setAttribute('aria-label','주유소 상세 닫기');
+    close.addEventListener('click',()=>{details.hidden=true;});
+    details.replaceChildren(close,buildInfoHtml(station));details.hidden=false;
   }
   function script() {
     if(window.maplibregl)return Promise.resolve();

@@ -2,6 +2,7 @@
 (function(root) {
   'use strict';
   const messages = {
+    '주유소 상세 닫기':'Close station details',
     '회전':'Rotate','지도 보기':'Map view','회전 지도 켜기':'Enable rotating map','북쪽으로 정렬':'Reset north',
     '지도 크게 보기':'Expand map','지도 작게 보기':'Restore map','지도 확대':'Zoom in','지도 축소':'Zoom out','지도 확대 축소':'Map zoom',
     '카카오 지도로 돌아가기':'Return to KakaoMap','두 손가락으로 확대·회전 · N을 누르면 북쪽':'Pinch to zoom and rotate · N resets north',
