@@ -51,3 +51,4 @@
 button.trip-map-pin {cursor:pointer;min-width:44px;min-height:44px;}
 .trip-panel.has-results .trip-body {max-height:44vh;}
 .trip-panel.has-results .trip-disclosure {display:none;}
+.map-area.trip-route-active .national-results {display:none;}

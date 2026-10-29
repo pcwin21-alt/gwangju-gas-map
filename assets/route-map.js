@@ -2,7 +2,8 @@
 (() => {
   'use strict';
   let state=null, overlays=[];
-  const notify=()=>window.dispatchEvent(new CustomEvent('gas:routechange'));
+  function refresh() {if(typeof allMarkers!=='undefined')for(const row of allMarkers)row.marker.setMap(!state&&row.visible?map:null);}
+  const notify=()=>{refresh();window.dispatchEvent(new CustomEvent('gas:routechange'));};
   function clear() {for(const overlay of overlays)overlay.setMap(null);overlays=[];state=null;notify();}
   function fit() {
     if(!state||!window.kakao?.maps)return;
@@ -38,5 +39,5 @@
     map.setCenter(new kakao.maps.LatLng(station.lat,station.lng));map.setLevel(4);
     const row=allMarkers.find(r=>r.station.id===id);if(row)showStationOverlay(row.overlay);
   }
-  window.GasRouteMap={show,clear,fit,collection,focus,isActive:()=>Boolean(state)};
+  window.GasRouteMap={show,clear,fit,collection,focus,refresh,isActive:()=>Boolean(state)};
 })();
