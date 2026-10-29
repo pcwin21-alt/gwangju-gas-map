@@ -39,6 +39,7 @@
 .info-overlay .copy-btn {min-width:44px;min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
 .map-area:has(.info-overlay) .national-results {display:none;}
 .info-overlay .address {font-size:16px;line-height:1.5;}
+.info-overlay .copy-row>span {flex:1;min-width:0;white-space:normal;overflow-wrap:anywhere;}
 .trip-settings .trip-search-options {display:grid;grid-template-columns:auto minmax(0,1fr);}
 .trip-search-options select {width:100%;}
 .trip-disclosure>summary {font-size:14px;color:var(--muted);min-height:44px;padding:10px 0;cursor:pointer;}
