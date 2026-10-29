@@ -13,7 +13,7 @@
     if(temporary)noteTimer=setTimeout(()=>note(''),5000);
   }
   function data() {
-    return {type:'FeatureCollection',features:allMarkers.filter(row=>row.visible).map(row=>({type:'Feature',geometry:{type:'Point',coordinates:[row.station.lng,row.station.lat]},properties:{id:row.station.id,name:row.station.name,color:COLORS[row.markerType]||'#f59e0b'}}))};
+    return {type:'FeatureCollection',features:allMarkers.filter(row=>row.visible).map(row=>({type:'Feature',geometry:{type:'Point',coordinates:[row.station.lng,row.station.lat]},properties:{id:row.station.id,name:row.station.name,color:COLOR[row.markerType]||'#f59e0b'}}))};
   }
   function sync() {if(vector?.getSource('stations'))vector.getSource('stations').setData(data());details.hidden=true;}
   function compass() {
@@ -84,7 +84,7 @@
     if(enabled){vector.easeTo({bearing:0,pitch:0,duration:duration()});return;}
     button.disabled=true;note('회전 지도 불러오는 중…');
     try {if(!vector){loading ||= prepare().finally(()=>{loading=null;});await loading;}activate();}
-    catch(error){note(error.message);}
+    catch(error){console.warn('Rotation view unavailable',error);note('회전 지도를 불러오지 못했습니다. 다시 눌러 주세요.');}
     finally{button.disabled=false;}
   });
   byId('plainMapBtn').addEventListener('click',disable);
