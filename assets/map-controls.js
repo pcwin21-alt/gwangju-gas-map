@@ -42,13 +42,13 @@
     vector.addLayer({id:'trip-route-numbers',type:'symbol',source:'trip-route',filter:['==',['get','kind'],'candidate'],layout:{'text-field':['get','label'],'text-font':['Noto Sans Regular'],'text-size':13,'text-allow-overlap':true},paint:{'text-color':'#ffffff'}});
     vector.addLayer({id:'trip-route-endpoints',type:'symbol',source:'trip-route',filter:['==',['get','kind'],'endpoint'],layout:{'text-field':['get','label'],'text-font':['Noto Sans Regular'],'text-size':14,'text-offset':[0,1.4],'text-allow-overlap':true},paint:{'text-color':isDark()?'#f1f5fb':'#18243c','text-halo-color':isDark()?'#111d2e':'#ffffff','text-halo-width':2}});
   }
-  window.addEventListener('gas:routechange',mountRoute);
+  window.addEventListener('gas:routechange',()=>{area.classList.toggle('trip-route-active',Boolean(window.GasRouteMap?.isActive?.()));mountRoute();sync();});
   function note(message,temporary=false) {
     clearTimeout(noteTimer);byId('mapModeStatus').textContent=message;byId('mapModeStatus').hidden=!message;
     if(temporary)noteTimer=setTimeout(()=>note(''),5000);
   }
   function data() {
-    return {type:'FeatureCollection',features:allMarkers.filter(row=>row.visible).map(row=>({type:'Feature',geometry:{type:'Point',coordinates:[row.station.lng,row.station.lat]},properties:{id:row.station.id,name:row.station.name,color:COLOR[row.markerType]||'#f59e0b'}}))};
+    return {type:'FeatureCollection',features:window.GasRouteMap?.isActive?.()?[]:allMarkers.filter(row=>row.visible).map(row=>({type:'Feature',geometry:{type:'Point',coordinates:[row.station.lng,row.station.lat]},properties:{id:row.station.id,name:row.station.name,color:COLOR[row.markerType]||'#f59e0b'}}))};
   }
   function sync() {if(vector?.getSource('stations'))vector.getSource('stations').setData(data());details.hidden=true;}
   function compass() {
@@ -155,7 +155,7 @@
         return result;
       };
     }
-    const originalFilters=applyFilters;applyFilters=()=>{originalFilters();if(enabled)sync();};
+    const originalFilters=applyFilters;applyFilters=()=>{originalFilters();window.GasRouteMap?.refresh();if(enabled)sync();};
     const originalOverlay=showStationOverlay;showStationOverlay=overlay=>{
       if(!enabled)return originalOverlay(overlay);
       const row=allMarkers.find(item=>item.overlay===overlay);if(row)show(row.station);
