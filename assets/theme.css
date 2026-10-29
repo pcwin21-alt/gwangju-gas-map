@@ -36,4 +36,9 @@ body {background:var(--surface);color:var(--ink);}
 :root[data-theme="dark"] .maplibregl-ctrl-attrib {background:var(--panel);color:var(--muted);}
 :root[data-theme="dark"] .maplibregl-ctrl-attrib a {color:var(--ink);}
 :root[data-theme="dark"] .maplibregl-ctrl-attrib-button {filter:invert(1);}
+:root[data-theme="dark"] :is(.help-panel-title,.help-item b,.help-dot-item,.react-panel-header h3,.react-item-label,.react-item-count,.react-comment-label) {color:var(--ink);}
+:root[data-theme="dark"] :is(.react-item,.react-item:hover,.react-notice,.react-comment-skip,.react-only-comment-btn,.react-del-btn) {background:var(--field);color:var(--ink);border-color:var(--line);}
+:root[data-theme="dark"] .react-item.voted {background:#173c34;border-color:#72d4ab;}
+:root[data-theme="dark"] .react-item.voted .react-item-count {color:#a6efce;}
+:root[data-theme="dark"] #filterCount {background:var(--primary);color:var(--on-primary);}
 @media(forced-colors:active){button,input,select,textarea,summary {border:1px solid ButtonText;} .filter-btn[aria-pressed="true"] {outline:2px solid Highlight;}}
