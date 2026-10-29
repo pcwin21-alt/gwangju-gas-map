@@ -36,6 +36,7 @@
 .trip-settings[open]>summary {margin-bottom:8px;}
 .trip-settings .trip-input-row {display:grid;grid-template-columns:minmax(0,1fr) auto auto;}
 .trip-settings .trip-input-row input {width:100%;}
+.info-overlay .copy-btn {min-width:44px;min-height:44px;display:inline-flex;align-items:center;justify-content:center;}
 .trip-settings .trip-search-options {display:grid;grid-template-columns:auto minmax(0,1fr);}
 .trip-search-options select {width:100%;}
 .trip-disclosure>summary {font-size:14px;color:var(--muted);min-height:44px;padding:10px 0;cursor:pointer;}
