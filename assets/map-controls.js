@@ -47,7 +47,7 @@
       });
       vector.addSource('stations',{type:'geojson',data:data()});
       vector.addLayer({id:'stations',type:'circle',source:'stations',paint:{'circle-radius':8,'circle-color':['get','color'],'circle-stroke-color':'#ffffff','circle-stroke-width':2}});
-      vector.addLayer({id:'station-names',type:'symbol',source:'stations',minzoom:12,layout:{'text-field':['get','name'],'text-size':13,'text-anchor':'top','text-offset':[0,1]},paint:{'text-color':'#18243c','text-halo-color':'#ffffff','text-halo-width':2}});
+      vector.addLayer({id:'station-names',type:'symbol',source:'stations',minzoom:12,layout:{'text-field':['get','name'],'text-font':['Noto Sans Regular'],'text-size':13,'text-anchor':'top','text-offset':[0,1]},paint:{'text-color':'#18243c','text-halo-color':'#ffffff','text-halo-width':2}});
       vector.on('click','stations',event=>{
         const id=event.features?.[0]?.properties.id;
         const found=allMarkers.find(row=>row.station.id===id);if(found)show(found.station);
