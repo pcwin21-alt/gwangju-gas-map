@@ -860,7 +860,7 @@
   <div class="controls">
     <div class="controls-top">
       <div class="search-box">
-        <input type="text" id="searchInput" placeholder="주유소명 · 주소 검색..." aria-label="주유소명 또는 주소 검색">
+        <input type="search" id="searchInput" enterkeyhint="search" placeholder="주유소명 · 주소 검색..." aria-label="주유소명 또는 주소 검색" autocomplete="off">
         <button class="search-clear" id="searchClear" title="지우기">✕</button>
         <div class="no-result" id="noResult">검색 결과 없음</div>
       </div>
@@ -1486,7 +1486,6 @@ function buildInfoHtml(station) {
       window.location.href = el.href;
     };
     el.addEventListener('click', run);
-    el.addEventListener('touchend', run, { passive: false });
   }
 
   function makeCopyBtn(text) {
@@ -1494,9 +1493,9 @@ function buildInfoHtml(station) {
     btn.className = 'copy-btn';
     btn.title = '복사';
     btn.innerHTML = COPY_SVG;
-    btn.addEventListener('mousedown', e => {
+    btn.addEventListener('click', e => {
       e.stopPropagation();
-      e.preventDefault(); // 포커스 이동 방지 (클립보드 접근 유지)
+      e.preventDefault();
       doCopy(text, () => {
         btn.innerHTML = CHECK_SVG;
         btn.classList.add('copied');
@@ -2090,6 +2089,9 @@ function showCopyToast(text) {
 function doCopy(text, onSuccess) {
   // execCommand는 동기 방식이라 클릭 핸들러 내에서 더 안정적
   const ta = document.createElement('textarea');
+  ta.readOnly = true; // The legacy clipboard selection must not open a mobile keyboard.
+  ta.tabIndex = -1;
+  ta.setAttribute('inputmode', 'none');
   ta.value = text;
   ta.style.cssText = 'position:fixed;top:0;left:0;width:2px;height:2px;padding:0;border:none;outline:none;font-size:16px;opacity:0.01;';
   document.body.appendChild(ta);
@@ -2228,7 +2230,7 @@ document.getElementById('reportAddrSearchBtn').addEventListener('click', functio
   });
 });
 document.getElementById('reportAddrInput').addEventListener('keydown', function(e) {
-  if (e.key === 'Enter') document.getElementById('reportAddrSearchBtn').click();
+  if (e.key === 'Enter' && !e.isComposing && e.keyCode !== 229) {e.preventDefault();document.getElementById('reportAddrSearchBtn').click();}
 });
 
 // 지도 클릭 모드 전환
@@ -2584,6 +2586,7 @@ if (!localStorage.getItem('helpSeen')) {
 <script src="assets/visual-refresh.js"></script>
 <script src="assets/nationwide-ui.js"></script>
 <script src="assets/simple-controls.js"></script>
+<script src="assets/input-ux.js"></script>
 <script src="assets/i18n.js"></script>
 </body>
 </html>

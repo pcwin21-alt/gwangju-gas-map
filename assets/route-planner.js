@@ -160,7 +160,8 @@
   ['start','destination'].forEach(kind=>{
     const input=byId(kind==='start'?'tripStart':'tripDestination');
     input.addEventListener('input',()=>{searchVersions[kind]++;if(kind==='start')start=null;else destination=null;clearResults();byId(kind==='start'?'tripStartSelected':'tripDestinationSelected').textContent='';byId('tripChoices').replaceChildren();syncControls();say('');});
-    input.addEventListener('keydown',e=>{if(e.key==='Enter' && !e.isComposing){e.preventDefault();if(kind==='destination')byId('tripForm').requestSubmit();else search(kind);}});
+    input.setAttribute('enterkeyhint','search');
+    input.addEventListener('keydown',e=>{if(e.key==='Enter' && !e.isComposing && e.keyCode!==229){e.preventDefault();input.blur();if(kind==='destination')byId('tripForm').requestSubmit();else search(kind);}});
   });
   byId('tripSearchStart').addEventListener('click',()=>search('start'));
   byId('tripLocation').addEventListener('click',async()=>{try{const p=await locateUser({center:false});selectPoint('start',{...p,name:'내 위치'});}catch(e){say('위치 권한을 허용하거나 출발지를 직접 검색하세요.');}});

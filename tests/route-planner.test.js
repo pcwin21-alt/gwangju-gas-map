@@ -13,6 +13,8 @@ function setup() {
     replaceChildren(...nodes) {this.children=nodes;}
     append(node) {this.children.push(node);}
     focus() {}
+    blur() {}
+    setAttribute() {}
   }
   const elements = Object.fromEntries([...html.matchAll(/id="([^"]+)"/g)].map(m=>[m[1],new Element()]));
   const el = id => {assert.ok(elements[id],`Missing HTML element: ${id}`);return elements[id];};
@@ -38,6 +40,12 @@ test('destination search and selection never request GPS; button advances and ed
   assert.equal(el('tripRecommend').textContent,'경유 주유소 찾기');
   el('tripDestination').value='다른 장소';await el('tripDestination').emit('input');
   assert.equal(el('tripRecommend').textContent,'목적지 검색');
+});
+test('Korean composition Enter never submits a place search',async()=>{
+  const {el,lookups}=setup();el('tripDestination').value='목포';
+  await el('tripDestination').emit('keydown',{key:'Enter',isComposing:true});
+  await el('tripDestination').emit('keydown',{key:'Enter',keyCode:229});
+  assert.equal(lookups.length,0);
 });
 test('route defaults include all payment methods; first-open filters are retained on reopen',async()=>{
   const {el}=setup();
