@@ -67,7 +67,7 @@
     if(station.payment_types.includes('saengsaeng')) labels.push('상생카드');
     if(station.payment_types.includes('onnuri')) {
       const m=station.onnuri_methods;
-      labels.push('온누리 '+(m ? [m.paper&&'지류', GasMerchantDisplay.digital(m)&&'디지털'].filter(Boolean).join('·') : '종류 미확인')+' · '+GasMerchantDisplay.onnuriNote(station));
+      labels.push('온누리 '+(m ? [m.paper&&'지류', GasMerchantDisplay.digital(m)&&'디지털'].filter(Boolean).join('·') : '종류 미확인'));
     }
     return labels.join(' / ');
   }
@@ -94,7 +94,7 @@
   function showStation(station, estimate, index) {
     const card=document.createElement('article');card.className='trip-result';
     const title=document.createElement('h3');title.textContent=(index?`${index}. `:'')+station.name;card.append(title);
-    const seconds=estimate?Math.ceil(estimate.addedSeconds):0;
+    const seconds=estimate?Math.floor(estimate.addedSeconds):0;
     const added=seconds<60?`${seconds}초`:`${Math.floor(seconds/60)}분 ${seconds%60}초`;
     for(const value of [estimate ? `추가 이동 약 ${added} · ${(estimate.addedMeters/1000).toFixed(1)}km${Number.isFinite(estimate.routeKm)?` · 경로에서 ${estimate.routeKm.toFixed(1)}km`:''}` : '추가 이동시간 미계산',methods(station),station.address]){
       const p=document.createElement('p');p.textContent=value;card.append(p);
