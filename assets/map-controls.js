@@ -30,7 +30,19 @@
     vector.addSource('stations',{type:'geojson',data:data()});
     vector.addLayer({id:'stations',type:'circle',source:'stations',paint:{'circle-radius':8,'circle-color':['get','color'],'circle-stroke-color':isDark()?'#111d2e':'#ffffff','circle-stroke-width':2}});
     vector.addLayer({id:'station-names',type:'symbol',source:'stations',minzoom:12,layout:{'text-field':['get','name'],'text-font':['Noto Sans Regular'],'text-size':13,'text-anchor':'top','text-offset':[0,1]},paint:{'text-color':isDark()?'#f1f5fb':'#18243c','text-halo-color':isDark()?'#111d2e':'#ffffff','text-halo-width':2}});
+    mountRoute();
   }
+  function mountRoute() {
+    if(!vector?.getSource('stations')||!window.GasRouteMap)return;
+    const data=window.GasRouteMap.collection();
+    if(vector.getSource('trip-route')){vector.getSource('trip-route').setData(data);return;}
+    vector.addSource('trip-route',{type:'geojson',data});
+    for(const [id,color,width] of [['trip-route-case','#ffffff',10],['trip-route-line','#2864dc',6]])vector.addLayer({id,type:'line',source:'trip-route',filter:['==',['get','kind'],'route'],layout:{'line-cap':'round','line-join':'round'},paint:{'line-color':color,'line-width':width}},'stations');
+    vector.addLayer({id:'trip-route-points',type:'circle',source:'trip-route',filter:['!=',['get','kind'],'route'],paint:{'circle-radius':['case',['==',['get','kind'],'candidate'],13,5],'circle-color':'#233e78','circle-stroke-color':'#ffffff','circle-stroke-width':2}});
+    vector.addLayer({id:'trip-route-numbers',type:'symbol',source:'trip-route',filter:['==',['get','kind'],'candidate'],layout:{'text-field':['get','label'],'text-font':['Noto Sans Regular'],'text-size':13,'text-allow-overlap':true},paint:{'text-color':'#ffffff'}});
+    vector.addLayer({id:'trip-route-endpoints',type:'symbol',source:'trip-route',filter:['==',['get','kind'],'endpoint'],layout:{'text-field':['get','label'],'text-font':['Noto Sans Regular'],'text-size':14,'text-offset':[0,1.4],'text-allow-overlap':true},paint:{'text-color':isDark()?'#f1f5fb':'#18243c','text-halo-color':isDark()?'#111d2e':'#ffffff','text-halo-width':2}});
+  }
+  window.addEventListener('gas:routechange',mountRoute);
   function note(message,temporary=false) {
     clearTimeout(noteTimer);byId('mapModeStatus').textContent=message;byId('mapModeStatus').hidden=!message;
     if(temporary)noteTimer=setTimeout(()=>note(''),5000);
@@ -76,7 +88,8 @@
         const id=event.features?.[0]?.properties.id;
         const found=allMarkers.find(row=>row.station.id===id);if(found)show(found.station);
       });
-      vector.on('click',event=>{if(!vector.queryRenderedFeatures(event.point,{layers:['stations']}).length)details.hidden=true;});
+      vector.on('click','trip-route-points',event=>{const id=event.features?.[0]?.properties.id;if(id)window.GasRouteMap?.focus(id);});
+      vector.on('click',event=>{if(!vector.queryRenderedFeatures(event.point,{layers:window.GasRouteMap?['stations','trip-route-points']:['stations']}).length)details.hidden=true;});
       vector.on('rotate',compass);
       vector.on('moveend',()=>{
         if(!enabled||syncing)return;
