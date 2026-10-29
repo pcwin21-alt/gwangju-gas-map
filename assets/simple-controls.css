@@ -3,7 +3,7 @@
 .header-text h1 {line-height:1.5;}
 .controls .controls-top {display:flex;flex-wrap:nowrap;gap:8px;}
 .controls .search-box {flex:1;max-width:none;}
-.controls .controls-bottom {display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:8px;}
+.controls .controls-bottom {display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;}
 .controls-bottom button,.controls-bottom select {font-size:16px;line-height:1.5;}
 .controls-bottom button {white-space:nowrap;}
 #filtersToggle {display:flex;align-items:center;justify-content:center;gap:6px;}
@@ -36,6 +36,14 @@
 .trip-note,.trip-status {font-size:16px;line-height:1.5;font-weight:400;}
 .trip-panel .trip-primary {font-weight:700;}
 .tools-trigger {font-size:14px;}
+.map-area .map-location-btn {position:absolute;right:14px;bottom:max(24px,env(safe-area-inset-bottom));z-index:100;display:grid;place-items:center;width:48px;height:48px;margin:0;padding:0;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);box-shadow:0 3px 14px #18243c26;cursor:pointer;touch-action:manipulation;}
+.map-location-btn:hover {background:var(--surface);}
+.map-location-btn.located {color:#1769d2;border-color:#a7c9f7;}
+.map-location-btn:disabled {opacity:.55;cursor:wait;}
+.map-location-btn.loading svg {animation:locating 1.2s linear infinite;}
+.map-area .fit-results-btn {bottom:calc(max(24px,env(safe-area-inset-bottom)) + 56px);}
+@keyframes locating {to {transform:rotate(360deg);}}
+@media(prefers-reduced-motion:reduce){.map-location-btn.loading svg {animation:none;}}
 @media(min-width:900px) {
   .controls {display:grid;grid-template-columns:minmax(0,1fr) minmax(340px,.7fr);align-items:center;}
   .active-filters,.map-filters {grid-column:1/-1;}

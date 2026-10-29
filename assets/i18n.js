@@ -2,6 +2,7 @@
 (function(root) {
   'use strict';
   const messages = {
+    '내 위치로 이동':'Go to my location','위치 찾는 중':'Finding location',
     '에서 결제수단·유종·시군구를 고릅니다. 선택한 조건은 접어도 표시됩니다.':'Choose payment, fuel and district. Active filters stay visible when collapsed.',
     '에서 목적지를 검색하고 선택하세요. 출발지·조건은 필요할 때 변경할 수 있습니다.':'Search for and select a destination. Change the start and options when needed.',
     '에서 가격 순위·언어·사용법·제보 등 보조 기능을 엽니다.':'Open prices, language, help, reporting and other tools.',
