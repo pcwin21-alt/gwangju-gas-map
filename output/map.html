@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ffffff">
+  <script src="assets/theme.js"></script>
   <title>전국 온누리 주유소 지도</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="shortcut icon" type="image/svg+xml" href="favicon.svg">
@@ -754,6 +757,7 @@
   <link rel="stylesheet" href="assets/nationwide.css">
   <link rel="stylesheet" href="assets/simple-controls.css">
   <link rel="stylesheet" href="assets/map-controls.css">
+  <link rel="stylesheet" href="assets/theme.css">
   <script src="assets/nationwide.js"></script>
 </head>
 <body>
@@ -902,6 +906,7 @@
       <button id="plainMapBtn" type="button" hidden>카카오 지도로 돌아가기</button>
       <button id="helpBtn" type="button">사용법 안내</button>
       <button id="languageBtn" class="language-btn" type="button" aria-label="Switch to English" data-no-i18n>EN</button>
+      <label class="theme-picker" for="themeMode"><span>화면 테마</span><select id="themeMode" aria-label="화면 테마"><option value="system">기기 설정</option><option value="light">밝게</option><option value="dark">어둡게</option></select></label>
       <button class="reset-btn" id="resetBtn">↺ 초기화</button>
       <button class="nearby-btn" id="nearbyBtn">↗ 주변 내보내기</button>
       <button class="updates-trigger" id="updatesBtn" type="button" aria-haspopup="dialog" aria-controls="updatesDialog">업데이트 내역</button>

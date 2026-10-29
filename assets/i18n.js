@@ -2,6 +2,7 @@
 (function(root) {
   'use strict';
   const messages = {
+    '화면 테마':'Appearance','기기 설정':'System','밝게':'Light','어둡게':'Dark',
     '주유소 상세 닫기':'Close station details',
     '회전':'Rotate','지도 보기':'Map view','회전 지도 켜기':'Enable rotating map','북쪽으로 정렬':'Reset north',
     '지도 크게 보기':'Expand map','지도 작게 보기':'Restore map','지도 확대':'Zoom in','지도 축소':'Zoom out','지도 확대 축소':'Map zoom',

@@ -1,0 +1,36 @@
+:root {--panel:#ffffff;--field:#f5f7fc;--ink:#18243c;--muted:#4a5870;--line:#a7b4c8;--accent:#233e78;--primary:#233e78;--on-primary:#ffffff;--focus:#2259b0;}
+:root[data-theme="dark"] {--panel:#111d2e;--surface:#0b1220;--field:#1b2b42;--ink:#f1f5fb;--muted:#b4c2d8;--line:#60758f;--accent:#b7d0ff;--primary:#315fa7;--on-primary:#ffffff;--focus:#a6d5ff;color-scheme:dark;}
+.theme-picker select {min-height:44px;max-width:55%;font:400 16px/1.5 sans-serif;border:1px solid var(--line);border-radius:10px;padding:8px;color:var(--ink);background:var(--field);}
+body {background:var(--surface);color:var(--ink);}
+:is(.header,.controls,.trip-panel,.tools-dialog,.national-results,.station-list-row,.info-overlay,.rotation-details,.rotation-detail-close,.map-mode-status,.updates-dialog,.updates-header,.help-panel,.modal-box,.nearby-panel-box,.report-panel-box,.rank-panel,.react-panel-box) {background:var(--panel);color:var(--ink);border-color:var(--line);}
+:is(.controls-bottom button,.controls-bottom select,.national-select select,.map-location-btn,.map-view-tools button,.map-zoom-tools button,.fit-results-btn,.trip-panel button,.trip-panel input,.trip-panel select,.trip-link,.report-panel input,.report-panel textarea,.react-panel input,.react-panel textarea) {background:var(--panel);color:var(--ink);border-color:var(--line);}
+.search-box input {background:var(--field);color:var(--ink);border-color:var(--line);}
+.search-box input:focus {background:var(--panel);}
+input::placeholder,textarea::placeholder {color:var(--muted);opacity:1;}
+.header-text p,.count-badge,.search-clear,.trip-note,.trip-selected,.merchant-note,.station-list-row span:last-child,.trip-disclosure>summary,.trip-search-options label,.national-select span,.tools-contact,.updates-data p,.trip-result p,.effective-price del,.effective-price small {color:var(--muted);}
+.trip-panel .trip-primary,.trip-panel .trip-trigger {background:var(--primary);border-color:var(--primary);color:var(--on-primary);}
+.trip-panel .trip-trigger:hover {background:var(--primary);}
+.trip-panel[open] .trip-trigger {background:var(--field);border-color:var(--line);color:var(--ink);}
+.trip-panel :focus-visible,:focus-visible {outline-color:var(--focus);}
+:root[data-theme="dark"] :is(button,select,input,textarea,a,summary):focus-visible {outline:3px solid var(--focus);outline-offset:2px;}
+:root[data-theme="dark"] :is(.tools-trigger,.tools-header button,.tools-dialog .tools-actions>*,.updates-header button,.help-panel-close,.modal-close,.nearby-panel-close,.report-panel-close,.react-panel-close,.rank-panel-close,.rank-tab,.report-addr-btn,.report-map-btn,.react-comment-only,.react-comment-back,.react-comment-submit,.react-comment-count,.copy-btn) {background:var(--field);color:var(--ink);border-color:var(--line);}
+:root[data-theme="dark"] :is(.tools-dialog .tools-actions>*:hover,.station-list-row:hover,.map-location-btn:hover,.filter-group,.info-overlay .prices,.no-result,.distance-row,.nearby-note,.nearby-controls,.report-loc-display,.react-banner,.rank-item:hover) {background:var(--field);color:var(--ink);border-color:var(--line);}
+:root[data-theme="dark"] :is(.help-panel,.modal-box,.nearby-panel-box,.report-panel-box,.rank-panel,.react-panel-box) :is(h2,h3,label,.help-section-title,.help-item,.modal-hint,.nearby-panel-title,.nearby-name,.nearby-addr,.report-panel-title,.report-label,.rank-panel-title,.rank-name,.rank-addr,.react-comment-hint,.react-clist-title,.react-clist-text,.react-clist-nick) {color:var(--ink);}
+:root[data-theme="dark"] :is(.trip-result h3,.info-overlay .name,.info-overlay .address,.trip-field label,.filters-heading h2,.header-text h1,.distance-label,.distance-value,.rank-price,.react-clist-meta) {color:var(--ink);}
+:root[data-theme="dark"] :is(.effective-price b,.updates-source,.active-filters,.filters-heading button,.trip-settings>summary,.info-overlay a,.report-panel a,.help-panel a,.nearby-panel a,.modal-box a) {color:var(--accent);}
+:root[data-theme="dark"] .filter-btn {background:transparent;color:var(--muted);}
+:root[data-theme="dark"] .filter-btn[data-filter="all"].active {background:#d6e4ff;color:#152238;}
+:root[data-theme="dark"] .filter-btn[data-filter="saengsaeng"].active {background:#83b9ff;color:#10213b;}
+:root[data-theme="dark"] .filter-btn[data-filter="onnuri"].active {background:#ffcf70;color:#301f00;}
+:root[data-theme="dark"] :is(.info-overlay .tag.onnuri,.merchant-stale) {background:#392d16;color:#ffe2a3;}
+:root[data-theme="dark"] .info-overlay .tag.saengsaeng {background:#19344e;color:#a8d2ff;}
+:root[data-theme="dark"] :is(#filtersToggle[aria-expanded="true"],.trip-panel .trip-secondary,.info-overlay .route-btn,.react-comment-form,.react-clist-item) {background:var(--field);color:var(--ink);border-color:var(--line);}
+:root[data-theme="dark"] #helpModalClose2 {background:var(--field)!important;color:var(--ink)!important;}
+:root[data-theme="dark"] :is(.help-divider,.tools-contact,.pending-section,.station-list-row,.trip-result,.updates-data) {border-color:var(--line)!important;}
+:root[data-theme="dark"] :is(.tools-dialog,.updates-dialog)::backdrop {background:#000a;}
+:root[data-theme="dark"] :is(.map-location-btn.located,#rotationBtn.vector-active) {color:#a6d5ff;}
+:root[data-theme="dark"] .vector-active #rotationBtn {color:#ffc0c7;}
+:root[data-theme="dark"] #copyToast {background:var(--ink);color:var(--panel);}
+:root[data-theme="dark"] :is(.map-area .fit-results-btn,.map-area .map-location-btn,.map-view-tools button,.map-zoom-tools button,.rotation-details,.rotation-detail-close,.map-mode-status,#rotationMap) {background:var(--panel);color:var(--ink);border-color:var(--line);}
+@media(prefers-contrast:more){:root {--line:#64748b;} :root[data-theme="dark"] {--line:#a6bad6;}}
+@media(forced-colors:active){button,input,select,textarea,summary {border:1px solid ButtonText;} .filter-btn[aria-pressed="true"] {outline:2px solid Highlight;}}

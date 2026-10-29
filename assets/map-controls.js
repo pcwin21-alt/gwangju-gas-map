@@ -3,11 +3,19 @@
   'use strict';
   const byId=id=>document.getElementById(id), area=document.querySelector('.map-area');
   const button=byId('rotationBtn'), container=byId('rotationMap'), details=byId('rotationDetails');
-  let vector=null, enabled=false, loading=null, locationMarker=null, noteTimer=0, syncing=false;
+  let vector=null, enabled=false, loading=null, locationMarker=null, noteTimer=0, syncing=false, appliedStyle=null;
   const nativeCenter=window.kakao?.maps?map.setCenter.bind(map):null;
   const nativeLevel=window.kakao?.maps?map.setLevel.bind(map):null;
   const reduced=()=>window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const duration=()=>reduced()?0:250;
+  const isDark=()=>document.documentElement.dataset.theme==='dark';
+  const styleURL=()=>`https://tiles.openfreemap.org/styles/${isDark()?'dark':'liberty'}`;
+  function mountStations() {
+    if(!vector||vector.getSource('stations'))return;
+    vector.addSource('stations',{type:'geojson',data:data()});
+    vector.addLayer({id:'stations',type:'circle',source:'stations',paint:{'circle-radius':8,'circle-color':['get','color'],'circle-stroke-color':isDark()?'#111d2e':'#ffffff','circle-stroke-width':2}});
+    vector.addLayer({id:'station-names',type:'symbol',source:'stations',minzoom:12,layout:{'text-field':['get','name'],'text-font':['Noto Sans Regular'],'text-size':13,'text-anchor':'top','text-offset':[0,1]},paint:{'text-color':isDark()?'#f1f5fb':'#18243c','text-halo-color':isDark()?'#111d2e':'#ffffff','text-halo-width':2}});
+  }
   function note(message,temporary=false) {
     clearTimeout(noteTimer);byId('mapModeStatus').textContent=message;byId('mapModeStatus').hidden=!message;
     if(temporary)noteTimer=setTimeout(()=>note(''),5000);
@@ -41,15 +49,14 @@
     container.hidden=false;
     const center=map.getCenter();
     try {
-      vector=new maplibregl.Map({container,style:'https://tiles.openfreemap.org/styles/liberty',center:[center.getLng(),center.getLat()],zoom:18-map.getLevel(),maxPitch:0,touchPitch:false,renderWorldCopies:false,maxBounds:[[120,30],[138,46]],attributionControl:true});
+      appliedStyle=styleURL();
+      vector=new maplibregl.Map({container,style:appliedStyle,center:[center.getLng(),center.getLat()],zoom:18-map.getLevel(),maxPitch:0,touchPitch:false,renderWorldCopies:false,maxBounds:[[120,30],[138,46]],attributionControl:true});
       await new Promise((resolve,reject)=>{
         const timer=setTimeout(()=>reject(new Error('회전 지도 연결이 지연됩니다. 기존 지도를 사용하거나 다시 시도하세요.')),15000);
         const fail=()=>{clearTimeout(timer);reject(new Error('이 브라우저에서 회전 지도를 불러올 수 없습니다. 기존 지도를 계속 사용할 수 있습니다.'));};
         vector.once('error',fail);vector.once('load',()=>{clearTimeout(timer);vector.off('error',fail);resolve();});
       });
-      vector.addSource('stations',{type:'geojson',data:data()});
-      vector.addLayer({id:'stations',type:'circle',source:'stations',paint:{'circle-radius':8,'circle-color':['get','color'],'circle-stroke-color':'#ffffff','circle-stroke-width':2}});
-      vector.addLayer({id:'station-names',type:'symbol',source:'stations',minzoom:12,layout:{'text-field':['get','name'],'text-font':['Noto Sans Regular'],'text-size':13,'text-anchor':'top','text-offset':[0,1]},paint:{'text-color':'#18243c','text-halo-color':'#ffffff','text-halo-width':2}});
+      mountStations();vector.on('style.load',mountStations);
       vector.on('click','stations',event=>{
         const id=event.features?.[0]?.properties.id;
         const found=allMarkers.find(row=>row.station.id===id);if(found)show(found.station);
@@ -68,9 +75,10 @@
     } catch(error) {vector?.remove();vector=null;container.hidden=true;throw error;}
   }
   function activate() {
+    if(appliedStyle!==styleURL()){appliedStyle=styleURL();vector.setStyle(appliedStyle);}
     const center=map.getCenter();vector.jumpTo({center:[center.getLng(),center.getLat()],zoom:18-map.getLevel(),bearing:0});
     enabled=true;container.hidden=false;area.classList.add('vector-active');
-    byId('plainMapBtn').hidden=false;byId('compassNeedle').textContent='N ↑';
+    byId('plainMapBtn').hidden=isDark();byId('compassNeedle').textContent='N ↑';
     vector.resize();sync();compass();
     if(typeof currentLocation!=='undefined'&&currentLocation)markLocation(currentLocation);
     note('두 손가락으로 확대·회전 · N을 누르면 북쪽',true);
@@ -82,15 +90,23 @@
     byId('compassNeedle').textContent='회전';byId('compassNeedle').style.transform='';button.setAttribute('aria-label','회전 지도 켜기');button.title='회전 지도 켜기';note('');
     map.relayout();map.setCenter(new kakao.maps.LatLng(center.lat,center.lng));map.setLevel(Math.min(14,Math.max(1,level)));
   }
-  button.addEventListener('click',async()=>{
+  async function enableRotation() {
     if(enabled){vector.easeTo({bearing:0,pitch:0,duration:duration()});return;}
     button.disabled=true;note('회전 지도 불러오는 중…');
     try {if(!vector){loading ||= prepare().finally(()=>{loading=null;});await loading;}activate();}
     catch(error){console.warn('Rotation view unavailable',error);note('회전 지도를 불러오지 못했습니다. 다시 눌러 주세요.');}
     finally{button.disabled=false;}
+  }
+  button.addEventListener('click',enableRotation);
+  window.addEventListener('gas:themechange',async()=>{
+    if(vector&&!loading&&appliedStyle!==styleURL()){appliedStyle=styleURL();vector.setStyle(appliedStyle);}
+    if(isDark()&&!enabled&&window.kakao?.maps)await enableRotation();
+    byId('plainMapBtn').hidden=!enabled||isDark();
   });
+  if(isDark()&&window.kakao?.maps)enableRotation();
   byId('plainMapBtn').addEventListener('click',disable);
-  for(const id of ['rankBtn','reportMapPinBtn'])byId(id).addEventListener('click',disable,{capture:true});
+  byId('rankBtn').addEventListener('click',()=>{if(!isDark())disable();},{capture:true});
+  byId('reportMapPinBtn').addEventListener('click',disable,{capture:true});
   function markLocation(point) {
     if(!vector)return;
     if(!locationMarker)locationMarker=new maplibregl.Marker({color:'#1672d7'}).setLngLat([point.lng,point.lat]).addTo(vector);
