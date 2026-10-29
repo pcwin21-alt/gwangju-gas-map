@@ -15,6 +15,7 @@
 .rotation-details {background:#fff;box-shadow:0 6px 28px #18243c2b;}
 .rotation-detail-close {display:block;margin-left:auto;position:sticky;top:0;z-index:2;min-width:64px;min-height:44px;border:0;border-radius:12px;background:#fff;color:var(--ink);font:700 16px/1.5 sans-serif;cursor:pointer;}
 .map-area:has(.rotation-details:not([hidden])) .map-zoom-tools,.map-area:has(.rotation-details:not([hidden])) #fitResultsBtn {visibility:hidden;}
+.map-area:has(.rotation-details:not([hidden])) .national-results {display:none;}
 .map-mode-status {position:absolute;z-index:102;left:72px;right:72px;top:64px;padding:10px;border-radius:12px;background:#fff;box-shadow:0 3px 14px #18243c26;font-size:16px;line-height:1.5;}
 .app.map-expanded>.header,.app.map-expanded>.controls,.app.map-expanded>#tripPanel {display:none!important;}
 .rotation-map .maplibregl-ctrl-attrib {font-size:11px;line-height:1.5;}
