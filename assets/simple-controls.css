@@ -36,6 +36,10 @@
 .trip-note,.trip-status {font-size:16px;line-height:1.5;font-weight:400;}
 .trip-panel .trip-primary {font-weight:700;}
 .tools-trigger {font-size:14px;}
+@media(min-width:900px) {
+  .controls {display:grid;grid-template-columns:minmax(0,1fr) minmax(340px,.7fr);align-items:center;}
+  .active-filters,.map-filters {grid-column:1/-1;}
+}
 @media(max-width:700px) {
   .header {padding:8px 12px;}
   .header-title {gap:6px;}
