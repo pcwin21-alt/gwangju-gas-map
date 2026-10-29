@@ -18,6 +18,7 @@
 .map-mode-status {position:absolute;z-index:102;left:72px;right:72px;top:64px;padding:10px;border-radius:12px;background:#fff;box-shadow:0 3px 14px #18243c26;font-size:16px;line-height:1.5;}
 .app.map-expanded>.header,.app.map-expanded>.controls,.app.map-expanded>#tripPanel {display:none!important;}
 .rotation-map .maplibregl-ctrl-attrib {font-size:11px;line-height:1.5;}
-.rotation-map .maplibregl-ctrl-bottom-right {right:72px;}
+.rotation-map .maplibregl-ctrl-bottom-right {left:72px;right:72px;}
+.rotation-map .maplibregl-ctrl-attrib {max-width:100%;}
 .rotation-map .maplibregl-canvas:focus-visible {outline:3px solid var(--accent);outline-offset:-3px;}
 @media(max-height:440px){.map-zoom-tools button {height:44px;}.map-view-tools {flex-direction:row;}.map-mode-status {top:68px;}}
