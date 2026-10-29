@@ -1,16 +1,20 @@
 /* One route state rendered on both the original and rotating maps. Kept in memory only. */
 (() => {
   'use strict';
-  let state=null, overlays=[];
+  let state=null, overlays=[],fitFrame=0;
   function refresh() {if(typeof allMarkers!=='undefined')for(const row of allMarkers)row.marker.setMap(!state&&row.visible?map:null);}
   const notify=()=>{refresh();window.dispatchEvent(new CustomEvent('gas:routechange'));};
-  function clear() {for(const overlay of overlays)overlay.setMap(null);overlays=[];state=null;notify();}
+  function clear() {cancelAnimationFrame(fitFrame);for(const overlay of overlays)overlay.setMap(null);overlays=[];state=null;notify();}
   function fit() {
     if(!state||!window.kakao?.maps)return;
-    const bounds=new kakao.maps.LatLngBounds();
-    for(const c of state.route.coordinates)bounds.extend(new kakao.maps.LatLng(c[1],c[0]));
-    for(const p of [state.start,state.end,...state.stations])bounds.extend(new kakao.maps.LatLng(p.lat,p.lng));
-    map.setBounds(bounds,64,48,64,48);
+    cancelAnimationFrame(fitFrame);
+    fitFrame=requestAnimationFrame(()=>{fitFrame=requestAnimationFrame(()=>{
+      if(!state)return;
+      const bounds=new kakao.maps.LatLngBounds();
+      for(const c of state.route.coordinates)bounds.extend(new kakao.maps.LatLng(c[1],c[0]));
+      for(const p of [state.start,state.end,...state.stations])bounds.extend(new kakao.maps.LatLng(p.lat,p.lng));
+      map.relayout();map.setBounds(bounds,64,48,64,48);
+    });});
   }
   function collection() {
     if(!state)return {type:'FeatureCollection',features:[]};

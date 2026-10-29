@@ -150,7 +150,7 @@
         if(method==='setLevel')vector.jumpTo({zoom:18-args[0]});
         if(method==='setBounds') {
           const sw=args[0].getSouthWest(),ne=args[0].getNorthEast();
-          vector.fitBounds([[sw.getLng(),sw.getLat()],[ne.getLng(),ne.getLat()]],{padding:64,maxZoom:16,bearing:vector.getBearing(),duration:duration()});
+          vector.fitBounds([[sw.getLng(),sw.getLat()],[ne.getLng(),ne.getLat()]],{padding:64,maxZoom:16,bearing:vector.getBearing(),duration:window.GasRouteMap?.isActive?.()?0:duration()});
         }
         return result;
       };
