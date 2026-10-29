@@ -71,9 +71,12 @@
     }
     return labels.join(' / ');
   }
-  function finishResults() {
+  function finishResults(complete=false) {
     panel.classList.add('has-results');for(const id of ['tripEdit','tripShowMap','tripClear'])byId(id).hidden=false;
-    byId('tripRefresh').hidden=!lastRoute;
+    byId('tripRefresh').hidden=true;
+    const distance=byId('tripCriterion').value==='distance';
+    byId('tripCriterionSummary').textContent=(distance?`경로 ${byId('tripLimit').value}km 이내`:`추가 ${byId('tripLimit').value}분 미만`)+' · 조건 변경';
+    if(complete)byId('tripCriteria').open=false;
     byId('tripRouteSummary').textContent=start.name+' → '+destination.name+(lastRoute?` · 약 ${Math.ceil(lastRoute.seconds/60)}분 · ${(lastRoute.meters/1000).toFixed(1)}km`:'');
   }
   function routeActions(station) {
@@ -157,7 +160,7 @@
         lastRoute=core.roadRoute(routeData);window.GasRouteMap?.show(lastRoute,start,destination);finishResults();
         const mode=byId('tripCriterion').value,limit=Number(byId('tripLimit').value);
         const candidates=core.shortlist(STATIONS,start,destination,byId('tripPayment').value,byId('tripMethod').value,byId('tripFuel').value,{coordinates:lastRoute.coordinates,radiusKm:mode==='distance'?limit:10});
-        if(!candidates.length){say('이 경로 주변에 조건에 맞는 주유소가 없습니다. 거리·결제수단을 변경하세요.');return;}
+        if(!candidates.length){finishResults(true);say('이 경로 주변에 조건에 맞는 주유소가 없습니다. 거리·결제수단을 변경하세요.');return;}
         const ranked=[];
         for(let offset=0;offset<candidates.length;offset+=24) {
           say(`경로 주변 ${candidates.length}곳의 추가 이동시간 비교 중… (${offset}/${candidates.length})`);
@@ -169,10 +172,10 @@
         }
         const matched=ranked.filter(row=>core.matchesRecommendation(row,mode,limit)).sort((a,b)=>mode==='distance'?a.routeKm-b.routeKm||a.addedSeconds-b.addedSeconds:a.addedSeconds-b.addedSeconds||a.addedMeters-b.addedMeters);
         matched.forEach((row,i)=>results.append(showStation(row.station,row,i+1)));
-        window.GasRouteMap?.show(lastRoute,start,destination,matched.map(row=>row.station));finishResults();
+        window.GasRouteMap?.show(lastRoute,start,destination,matched.map(row=>row.station));finishResults(true);
         say(matched.length?`추천 ${matched.length}곳 · ${candidates.length}곳 비교 · ${mode==='distance'?`경로에서 ${limit}km 이내`:`추가 ${limit}분 미만 (경로 10km 이내 조사)`} · 교통·주유시간 제외.`:'조건에 맞는 주유소가 없습니다. 거리나 추가 이동시간을 늘려 다시 적용하세요.');
       } finally {clearTimeout(deadline);}
-    } catch(e) { if(requestToken!==null&&requestToken!==generation)return;if (!start) byId('tripSettings').open=true;if(e.name==='AbortError')say('조회가 취소되거나 시간이 초과됐습니다. 다시 비교하거나 주유소를 직접 선택하세요.');else say(e.message); }
+    } catch(e) { if(requestToken!==null&&requestToken!==generation)return;if(lastRoute)byId('tripRefresh').hidden=false;if (!start) byId('tripSettings').open=true;if(e.name==='AbortError')say('조회가 취소되거나 시간이 초과됐습니다. 다시 비교하거나 주유소를 직접 선택하세요.');else say(e.message); }
     finally {if(requestToken===null||requestToken===generation){button.disabled=false;byId('tripRefresh').disabled=false;}}
   }
   ['start','destination'].forEach(kind=>{

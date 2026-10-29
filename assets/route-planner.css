@@ -45,6 +45,7 @@
 @media(max-width:700px){.app:has(#tripPanel[open]) .controls{display:none}}
 .trip-recommendation {display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px;align-items:center;margin:10px 0;}
 .trip-recommendation label {font-size:16px;line-height:1.5;}
+.trip-criteria>summary {min-height:44px;padding:10px 0;font-size:16px;line-height:1.5;color:var(--accent);cursor:pointer;}
 .trip-map-actions {display:flex;gap:8px;flex-wrap:wrap;margin:8px 0;}
 .trip-map-pin {display:block;min-width:32px;min-height:32px;padding:4px 8px;border:2px solid #fff;border-radius:16px;background:#233e78;color:#fff;font:700 14px/1.5 sans-serif;box-shadow:0 2px 6px #0005;white-space:nowrap;}
 button.trip-map-pin {cursor:pointer;min-width:44px;min-height:44px;}
