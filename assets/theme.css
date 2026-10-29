@@ -6,7 +6,7 @@ body {background:var(--surface);color:var(--ink);}
 :is(.controls-bottom button,.controls-bottom select,.national-select select,.map-location-btn,.map-view-tools button,.map-zoom-tools button,.fit-results-btn,.trip-panel button,.trip-panel input,.trip-panel select,.trip-link,.report-panel input,.report-panel textarea,.react-panel input,.react-panel textarea) {background:var(--panel);color:var(--ink);border-color:var(--line);}
 .search-box input {background:var(--field);color:var(--ink);border-color:var(--line);}
 .search-box input:focus {background:var(--panel);}
-input::placeholder,textarea::placeholder {color:var(--muted);opacity:1;}
+.search-box input::placeholder,.trip-panel input::placeholder,input::placeholder,textarea::placeholder {color:var(--muted);opacity:1;}
 .header-text p,.count-badge,.search-clear,.trip-note,.trip-selected,.merchant-note,.station-list-row span:last-child,.trip-disclosure>summary,.trip-search-options label,.national-select span,.tools-contact,.updates-data p,.trip-result p,.effective-price del,.effective-price small {color:var(--muted);}
 .trip-panel .trip-primary,.trip-panel .trip-trigger {background:var(--primary);border-color:var(--primary);color:var(--on-primary);}
 .trip-panel .trip-trigger:hover {background:var(--primary);}
@@ -33,4 +33,7 @@ input::placeholder,textarea::placeholder {color:var(--muted);opacity:1;}
 :root[data-theme="dark"] #copyToast {background:var(--ink);color:var(--panel);}
 :root[data-theme="dark"] :is(.map-area .fit-results-btn,.map-area .map-location-btn,.map-view-tools button,.map-zoom-tools button,.rotation-details,.rotation-detail-close,.map-mode-status,#rotationMap) {background:var(--panel);color:var(--ink);border-color:var(--line);}
 @media(prefers-contrast:more){:root {--line:#64748b;} :root[data-theme="dark"] {--line:#a6bad6;}}
+:root[data-theme="dark"] .maplibregl-ctrl-attrib {background:var(--panel);color:var(--muted);}
+:root[data-theme="dark"] .maplibregl-ctrl-attrib a {color:var(--ink);}
+:root[data-theme="dark"] .maplibregl-ctrl-attrib-button {filter:invert(1);}
 @media(forced-colors:active){button,input,select,textarea,summary {border:1px solid ButtonText;} .filter-btn[aria-pressed="true"] {outline:2px solid Highlight;}}

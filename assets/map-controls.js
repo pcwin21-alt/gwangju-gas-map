@@ -10,8 +10,23 @@
   const duration=()=>reduced()?0:250;
   const isDark=()=>document.documentElement.dataset.theme==='dark';
   const styleURL=()=>`https://tiles.openfreemap.org/styles/${isDark()?'dark':'liberty'}`;
+  function styleLabels() {
+    for(const layer of vector.getStyle().layers) {
+      if(layer.type!=='symbol'||!layer.layout?.['text-field']||layer.source==='stations')continue;
+      const field=JSON.stringify(layer.layout['text-field']);
+      if(field.includes('name'))vector.setLayoutProperty(layer.id,'text-field',['coalesce',['get','name:ko'],['get','name:nonlatin'],['get','name'],['get','name:latin']]);
+      if(!isDark())continue;
+      vector.setPaintProperty(layer.id,'text-color',layer.id.startsWith('place_')?'#e0e8f4':'#b9cbe0');
+      vector.setPaintProperty(layer.id,'text-halo-color','#131b29');
+      vector.setPaintProperty(layer.id,'text-halo-width',1.5);
+      vector.setPaintProperty(layer.id,'text-halo-blur',0);
+      const size=layer.layout['text-size'];
+      if(typeof size==='number'&&size<12)vector.setLayoutProperty(layer.id,'text-size',12);
+    }
+  }
   function mountStations() {
     if(!vector||vector.getSource('stations'))return;
+    styleLabels();
     vector.addSource('stations',{type:'geojson',data:data()});
     vector.addLayer({id:'stations',type:'circle',source:'stations',paint:{'circle-radius':8,'circle-color':['get','color'],'circle-stroke-color':isDark()?'#111d2e':'#ffffff','circle-stroke-width':2}});
     vector.addLayer({id:'station-names',type:'symbol',source:'stations',minzoom:12,layout:{'text-field':['get','name'],'text-font':['Noto Sans Regular'],'text-size':13,'text-anchor':'top','text-offset':[0,1]},paint:{'text-color':isDark()?'#f1f5fb':'#18243c','text-halo-color':isDark()?'#111d2e':'#ffffff','text-halo-width':2}});
