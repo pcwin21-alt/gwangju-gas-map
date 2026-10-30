@@ -4,10 +4,8 @@
   const messages = {
     '화면 테마':'Appearance','기기 설정':'System','밝게':'Light','어둡게':'Dark',
     '주유소 상세 닫기':'Close station details',
-    '회전':'Rotate','지도 보기':'Map view','회전 지도 켜기':'Enable rotating map','북쪽으로 정렬':'Reset north',
+    '지도 보기':'Map view',
     '지도 크게 보기':'Expand map','지도 작게 보기':'Restore map','지도 확대':'Zoom in','지도 축소':'Zoom out','지도 확대 축소':'Map zoom',
-    '카카오 지도로 돌아가기':'Return to KakaoMap','두 손가락으로 확대·회전 · N을 누르면 북쪽':'Pinch to zoom and rotate · N resets north',
-    '회전 지도 불러오는 중…':'Loading rotating map…',
     '내 위치로 이동':'Go to my location','위치 찾는 중':'Finding location',
     '에서 결제수단·유종·시군구를 고릅니다. 선택한 조건은 접어도 표시됩니다.':'Choose payment, fuel and district. Active filters stay visible when collapsed.',
     '에서 목적지를 검색하고 선택하세요. 출발지·조건은 필요할 때 변경할 수 있습니다.':'Search for and select a destination. Change the start and options when needed.',

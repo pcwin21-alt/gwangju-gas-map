@@ -1,73 +1,30 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
-function fixture(withVector=false,withRoute=false) {
-  const html=fs.readFileSync('output/map.html','utf8'),elements={},requests=[],docListeners={},windowListeners={};
-  function node(){const classes=new Set();return {listeners:{},style:{},classList:{add:x=>classes.add(x),remove:x=>classes.delete(x),contains:x=>classes.has(x),toggle(x,on){on?classes.add(x):classes.delete(x);}},attributes:{},setAttribute(k,v){this.attributes[k]=v;},addEventListener(type,fn){this.listeners[type]=fn;},remove(){},async emit(type,event={}){await this.listeners[type]?.(event);}};}
-  for(const match of html.matchAll(/id="([^"]+)"/g))elements[match[1]]=node();
-  elements.area=node();elements.app=node();
-  const byId=id=>{assert.ok(elements[id],`Missing HTML control ${id}`);return elements[id];};
-  const document={documentElement:{dataset:{theme:'light'}},getElementById:byId,querySelector:s=>elements[s==='.app'?'app':'area'],createElement:node,head:{append:el=>requests.push(el)},addEventListener:(k,v)=>docListeners[k]=v};
-  let level=8;
-  const point={getLat:()=>35.16,getLng:()=>126.85};
-  const map={setCenter(){},getCenter:()=>point,setLevel:value=>level=value,setBounds(){},getLevel:()=>level};
-  let rendered;
-  class Vector {
-    constructor(options){this.sources={};this.handlers={};this.styleURL=options.style;rendered=this;}
-    once(type,fn){if(type==='load')queueMicrotask(fn);}
-    off(){} on(type,fn){this.handlers[type]=fn;} addLayer(){} resize(){} jumpTo(){} getBearing(){return 0;}
-    getStyle(){return {layers:[{id:'place_city',type:'symbol',layout:{'text-field':['get','name:latin'],'text-size':10}}]};}
-    setLayoutProperty(id,key,value){(this.labels ||= {})[key]=value;}
-    setPaintProperty(id,key,value){(this.labelPaint ||= {})[key]=value;}
-    setStyle(url,options){assert.equal(options.diff,false,'Replace base styles fully so style.load remounts custom station layers');this.styleURL=url;this.sources={};this.handlers['style.load']?.();}
-    addSource(id,source){this.sources[id]={data:source.data,setData(data){this.data=data;}};}
-    getSource(id){return this.sources[id];}
-  }
-  const gl={Map:Vector};
-  const rows=[{visible:true,markerType:'onnuri',station:{id:'one',name:'확인 주유소',lat:35.16,lng:126.85}},{visible:false,station:{id:'hidden'}}];
-  const context={window:{addEventListener:(k,v)=>windowListeners[k]=v,kakao:{maps:{}},matchMedia:()=>({matches:true}),maplibregl:withVector?gl:null},maplibregl:gl,map,document,setTimeout,clearTimeout,queueMicrotask,ResizeObserver:class{observe(){}},COLOR:{onnuri:'#f59e0b'},allMarkers:rows,console:{warn(){}},applyFilters(){},showStationOverlay(){},setCurrentLocation(){}};
-  if(withRoute)context.window.GasRouteMap={collection:()=>({type:'FeatureCollection',features:[{type:'Feature',geometry:{type:'LineString',coordinates:[[126.85,35.16],[126.9,35.19]]},properties:{kind:'route'}}]})};
-  vm.runInNewContext(fs.readFileSync('assets/map-controls.js','utf8'),context);
-  return {elements,requests,docListeners,windowListeners,level:()=>level,rendered:()=>rendered,rows,context,document};
+function fixture(ready=true) {
+ const html=fs.readFileSync('output/map.html','utf8'),elements={},docListeners={},windowListeners={};
+ function node(){const classes=new Set();return {listeners:{},classList:{contains:x=>classes.has(x),toggle(x,on){on?classes.add(x):classes.delete(x);}},attributes:{},setAttribute(k,v){this.attributes[k]=v;},addEventListener(type,fn){this.listeners[type]=fn;},emit(type,event={}){this.listeners[type]?.(event);}};}
+ for(const match of html.matchAll(/id="([^"]+)"/g))elements[match[1]]=node();elements.area=node();elements.app=node();
+ let level=8,filters=0,refreshes=0,active=false;
+ const byId=id=>{assert.ok(elements[id],`Missing HTML control ${id}`);return elements[id];};
+ const document={documentElement:{dataset:{theme:'dark'}},getElementById:byId,querySelector:s=>elements[s==='.app'?'app':'area'],addEventListener:(k,v)=>docListeners[k]=v};
+ const context={window:{addEventListener:(k,v)=>windowListeners[k]=v,kakao:ready?{maps:{}}:null,GasRouteMap:{refresh(){refreshes++;},isActive:()=>active}},document,map:{getLevel:()=>level,setLevel:v=>level=v},applyFilters(){filters++;}};
+ vm.runInNewContext(fs.readFileSync('assets/map-controls.js','utf8'),context);
+ return {elements,docListeners,windowListeners,context,level:()=>level,filters:()=>filters,refreshes:()=>refreshes,setActive:v=>active=v};
 }
-test('default map remains usable and does not fetch the rotation bundle until requested',async()=>{
-  const f=fixture();assert.equal(f.requests.length,0);
-  await f.elements.mapZoomIn.emit('click');assert.equal(f.level(),7);
-  await f.elements.mapZoomOut.emit('click');assert.equal(f.level(),8);
+test('single Kakao map retains bounded zoom; dark theme has no second map or rotation switch',()=>{
+ const f=fixture();f.elements.mapZoomIn.emit('click');assert.equal(f.level(),7);f.elements.mapZoomOut.emit('click');assert.equal(f.level(),8);
+ for(let i=0;i<20;i++)f.elements.mapZoomOut.emit('click');assert.equal(f.level(),14);
+ assert.equal(f.elements.rotationMap,undefined);assert.equal(f.elements.rotationBtn,undefined);assert.equal(f.elements.plainMapBtn,undefined);
+ assert.equal(f.windowListeners['gas:themechange'],undefined);
 });
-test('expanded map retains a reachable exit and Escape restores the app controls',async()=>{
-  const f=fixture();await f.elements.expandMapBtn.emit('click');
-  assert.equal(f.elements.app.classList.contains('map-expanded'),true);
-  assert.equal(f.elements.expandMapBtn.attributes['aria-pressed'],'true');
-  f.docListeners.keydown({key:'Escape'});
-  assert.equal(f.elements.app.classList.contains('map-expanded'),false);
+test('expanded map retains a reachable exit and Escape restores the app controls',()=>{
+ const f=fixture();f.elements.expandMapBtn.emit('click');assert.equal(f.elements.app.classList.contains('map-expanded'),true);
+ assert.equal(f.elements.expandMapBtn.attributes['aria-pressed'],'true');f.docListeners.keydown({key:'Escape'});assert.equal(f.elements.app.classList.contains('map-expanded'),false);
 });
-test('rotation bundle failure leaves the original map active and the control retryable',async()=>{
-  const f=fixture(),pending=f.elements.rotationBtn.emit('click');
-  assert.equal(f.requests.length,2);f.requests[1].onerror();await pending;
-  assert.equal(f.elements.area.classList.contains('vector-active'),false);
-  assert.equal(f.elements.rotationBtn.disabled,false);
-  assert.match(f.elements.mapModeStatus.textContent,/다시/);
+test('filter changes keep the single-map route markers separate and clear restores the regular view',()=>{
+ const f=fixture();f.context.applyFilters();assert.equal(f.filters(),1);assert.equal(f.refreshes(),1);
+ f.setActive(true);f.windowListeners['gas:routechange']();assert.equal(f.elements.area.classList.contains('trip-route-active'),true);
+ f.setActive(false);f.windowListeners['gas:routechange']();assert.equal(f.elements.area.classList.contains('trip-route-active'),false);
 });
-test('loaded rotation mode shows only filtered stations and follows later filter changes',async()=>{
-  const f=fixture(true);await f.elements.rotationBtn.emit('click');
-  assert.equal(f.elements.area.classList.contains('vector-active'),true);
-  const source=f.rendered().getSource('stations');assert.equal(source.data.features.length,1);
-  assert.equal(source.data.features[0].properties.color,'#f59e0b');
-  f.rows[0].visible=false;f.context.applyFilters();assert.equal(source.data.features.length,0);
-});
-test('light/dark style switches keep the filtered station layer',async()=>{
-  const f=fixture(true);await f.elements.rotationBtn.emit('click');
-  f.document.documentElement.dataset.theme='dark';await f.windowListeners['gas:themechange']();
-  assert.match(f.rendered().styleURL,/\/dark$/);assert.equal(f.rendered().getSource('stations').data.features.length,1);
-  assert.equal(f.rendered().labelPaint['text-color'],'#e0e8f4');
-  assert.equal(f.rendered().labels['text-size'],12);
-  assert.equal(f.rendered().labels['text-field'][1][1],'name:ko');
-  f.document.documentElement.dataset.theme='light';await f.windowListeners['gas:themechange']();
-  assert.match(f.rendered().styleURL,/\/liberty$/);assert.equal(f.rendered().getSource('stations').data.features.length,1);
-});
-
-test('route geometry is mounted on lazy map load and restored after dark style replacement',async()=>{
- const f=fixture(true,true);await f.elements.rotationBtn.emit('click');
- assert.equal(f.rendered().getSource('trip-route').data.features[0].geometry.type,'LineString');
- f.document.documentElement.dataset.theme='dark';await f.windowListeners['gas:themechange']();
- assert.equal(f.rendered().getSource('trip-route').data.features.length,1);
+test('missing Kakao SDK keeps zoom controls disabled without loading an alternative engine',()=>{
+ const f=fixture(false);assert.equal(f.elements.mapZoomIn.disabled,true);assert.equal(f.elements.mapZoomOut.disabled,true);
 });

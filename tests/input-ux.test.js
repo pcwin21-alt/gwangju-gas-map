@@ -36,7 +36,7 @@ test('collapsing a panel releases its hidden input; IME Enter stays in the field
   f.listeners['searchInput:keydown']({key:'Enter',preventDefault(){}});assert.equal(f.document.activeElement,null);
 });
 
-test('WebView touch fallback covers both maps even when PointerEvent is declared',()=>{
+test('WebView touch fallback covers the map area even when PointerEvent is declared',()=>{
  const f=fixture();f.document.activeElement=f.input;
  f.listeners['map:touchstart']({target:{closest:()=>null},preventDefault(){assert.fail('native touch cancelled');}});
  assert.equal(f.document.activeElement,null);

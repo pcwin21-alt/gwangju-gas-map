@@ -1,4 +1,4 @@
-/* One route state rendered on both the original and rotating maps. Kept in memory only. */
+/* Route overlays on the Kakao map. Kept in memory only. */
 (() => {
   'use strict';
   let state=null, overlays=[],fitFrame=0;

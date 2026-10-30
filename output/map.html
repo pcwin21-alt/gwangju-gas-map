@@ -904,7 +904,6 @@
     <div class="tools-header"><h2 id="toolsTitle">더보기</h2><button id="toolsCloseBtn" type="button" aria-label="더보기 닫기" autofocus>닫기</button></div>
     <nav class="tools-actions" aria-label="지도 도구">
       <button class="rank-btn" id="rankBtn">가격 순위</button>
-      <button id="plainMapBtn" type="button" hidden>카카오 지도로 돌아가기</button>
       <button id="helpBtn" type="button">사용법 안내</button>
       <button id="languageBtn" class="language-btn" type="button" aria-label="Switch to English" data-no-i18n>EN</button>
       <label class="theme-picker" for="themeMode"><span>화면 테마</span><select id="themeMode" aria-label="화면 테마"><option value="system">기기 설정</option><option value="light">밝게</option><option value="dark">어둡게</option></select></label>
@@ -1115,14 +1114,10 @@
     </div>
   </details>
     <div id="map"></div>
-    <div id="rotationMap" class="rotation-map" hidden></div>
-    <div id="rotationDetails" class="rotation-details" hidden></div>
     <div class="map-view-tools" role="group" aria-label="지도 보기">
-      <button id="rotationBtn" type="button" aria-label="회전 지도 켜기" title="회전 지도 켜기"><span id="compassNeedle" aria-hidden="true">회전</span></button>
       <button id="expandMapBtn" type="button" aria-label="지도 크게 보기" title="지도 크게 보기" aria-pressed="false">⛶</button>
     </div>
     <div class="map-zoom-tools" role="group" aria-label="지도 확대 축소"><button id="mapZoomIn" type="button" aria-label="지도 확대" title="지도 확대">＋</button><button id="mapZoomOut" type="button" aria-label="지도 축소" title="지도 축소">−</button></div>
-    <p id="mapModeStatus" class="map-mode-status" role="status" hidden></p>
     <details class="national-results" id="nationalResults">
       <summary>주유소 목록 <span id="listCount"></span></summary>
       <p id="nationalSummary" role="status"></p>
@@ -1613,6 +1608,7 @@ let reportMode = false;
 let reportPin = null;
 
 function showStationOverlay(overlay) {
+  if (activeOverlay && activeOverlay !== overlay) activeOverlay.setMap(null);
   document.getElementById('nationalResults').open = false;
   overlay.setMap(map);
   activeOverlay = overlay;
