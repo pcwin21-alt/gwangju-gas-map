@@ -8,6 +8,7 @@
 .national-results>summary{padding:12px;min-height:44px;font-size:16px;font-weight:700;cursor:pointer;}
 .national-results p,.national-results li{font-size:16px;line-height:1.5;}
 .national-results #nationalSummary{margin:0;padding:0 12px 10px;}
+.national-results #listScope{margin:0;padding:0 12px 8px;color:var(--muted);overflow-wrap:anywhere;}
 .station-list-row{display:flex;flex-direction:column;gap:4px;width:100%;text-align:left;cursor:pointer;border:0;border-top:1px solid var(--line);background:white;padding:12px;font-size:16px;line-height:1.5;color:var(--ink);}
 .station-list-row:hover{background:var(--surface);}.station-list-row span:last-child{font-size:14px;color:var(--muted);}
 .pending-section{border-top:1px solid var(--line);padding:12px;}.pending-section summary{min-height:44px;cursor:pointer;font-size:16px;}
