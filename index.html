@@ -1619,6 +1619,7 @@ let reportMode = false;
 let reportPin = null;
 
 function closeStationOverlay(restoreFocus=false) {
+  if(activeOverlay&&location.search.includes('debug=ux'))console.debug('[station-close]',new Error().stack);
   if(activeOverlay)activeOverlay.setMap(null);
   activeOverlay=null;
   if(restoreFocus)document.getElementById('fitResultsBtn').focus({preventScroll:true});
