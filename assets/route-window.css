@@ -1,0 +1,18 @@
+/* A non-modal route window; minimizing keeps form, requests and results intact. */
+#tripPanel {position:absolute;z-index:130;top:12px;right:12px;width:min(440px,calc(100% - 24px));max-height:min(72%,620px);padding:12px;border:1px solid var(--line);border-radius:16px;background:var(--trip-surface,var(--panel));box-shadow:0 6px 28px #0004;box-sizing:border-box;}
+#tripPanel:not([open]) {display:none;}
+#tripPanel[open] {display:flex;flex-direction:column;}
+#tripPanel .trip-trigger {flex-shrink:0;min-height:44px;padding:0;gap:8px;border:0;border-radius:0;background:transparent;color:var(--ink);}
+#tripPanel .trip-trigger:hover {background:transparent;}
+#tripPanel .trip-body {flex:1;min-height:0;max-height:none;overflow:auto;overscroll-behavior:contain;}
+#tripPanel .trip-form,#tripPanel .trip-results {grid-template-columns:minmax(0,1fr);}
+#tripPanel #tripRecommend {margin:0;width:100%;}
+.trip-window-tools {flex-shrink:0;display:flex;align-items:center;justify-content:flex-end;gap:8px;padding-block:4px;border-bottom:1px solid var(--line);}
+.trip-window-tools label {font-size:14px;line-height:1.5;color:var(--muted);}
+#tripOpacity {width:96px;min-height:44px;font-size:16px;}
+.trip-launcher {position:absolute;z-index:120;top:72px;right:12px;width:64px;height:64px;padding:4px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;border:2px solid var(--primary);border-radius:50%;background:var(--panel);color:var(--ink);box-shadow:0 4px 18px #0004;font:700 14px/1.5 sans-serif;cursor:pointer;touch-action:manipulation;}
+.trip-launcher[hidden],.trip-launcher-count[hidden] {display:none;}
+.trip-launcher-count {position:absolute;right:-3px;top:-3px;min-width:24px;height:24px;padding-inline:4px;border-radius:12px;background:var(--primary);color:var(--on-primary);font:700 14px/24px sans-serif;}
+.map-area:has(#tripPanel[open]) .national-results {display:none;}
+@media(max-width:700px){.app:has(#tripPanel[open])>.controls{display:block;}.keyboard-open .app:has(#tripPanel[open])>.controls{display:none;}.keyboard-open #tripPanel[open]{top:8px;max-height:calc(100% - 16px);}}
+@media(max-height:500px){#tripPanel {max-height:calc(100% - 16px);top:8px;}}

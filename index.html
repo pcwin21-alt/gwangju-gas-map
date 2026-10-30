@@ -758,6 +758,7 @@
   <link rel="stylesheet" href="assets/simple-controls.css?v=84b987b3c397">
   <link rel="stylesheet" href="assets/map-controls.css?v=a4fc6159f237">
   <link rel="stylesheet" href="assets/theme.css?v=8d548ee0d404">
+  <link rel="stylesheet" href="assets/route-window.css?v=65d41be0fed4">
   <script src="assets/nationwide.js?v=e9e6daa76e35"></script>
 </head>
 <body>
@@ -965,42 +966,6 @@
       <a class="updates-source" href="https://www.onnuri.gift/place" target="_blank" rel="noopener">온누리 공식 검색 ↗</a>
     </div>
   </dialog>
-  <details class="trip-panel" id="tripPanel">
-    <summary class="trip-trigger">
-      <svg class="trip-trigger-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="18" r="2"/><path d="M7 6h8a4 4 0 0 1 0 8H9a4 4 0 0 0-4 4h12"/></svg>
-      <span class="trip-trigger-copy"><h2 class="trip-heading">경유 주유소 찾기</h2></span>
-      <span class="trip-trigger-state" aria-hidden="true"><span class="trip-trigger-open">열기 ＋</span><span class="trip-trigger-close">접기 −</span></span>
-    </summary>
-    <div class="trip-body">
-      <form class="trip-form" id="tripForm">
-        <div class="trip-field"><label for="tripDestination">최종 목적지</label>
-          <input id="tripDestination" placeholder="어디로 가시나요?" autocomplete="off"><p class="trip-selected" id="tripDestinationSelected"></p>
-        </div>
-        <button class="trip-primary" id="tripRecommend" type="submit">목적지 검색</button>
-        <details id="tripSettings" class="trip-settings">
-          <summary><span>출발지·조건 변경</span><span id="tripSettingsSummary">내 위치 · 모든 결제수단 · 휘발유·경유</span></summary>
-          <div class="trip-field"><label for="tripStart">출발지</label>
-            <div class="trip-input-row"><input id="tripStart" placeholder="비워두면 내 위치" autocomplete="off"><button id="tripSearchStart" type="button">검색</button><button id="tripLocation" type="button">내 위치</button></div><p class="trip-selected" id="tripStartSelected"></p>
-          </div>
-      <div class="trip-search-options">
-        <label for="tripPayment">결제수단</label><select id="tripPayment"><option value="all">전체</option><option value="onnuri">온누리</option><option value="saengsaeng">상생카드</option></select>
-        <label for="tripFuel">연료</label><select id="tripFuel"><option value="liquid">휘발유·경유 주유소</option><option value="lpg">LPG 충전소</option><option value="all">전체</option></select>
-        <label for="tripMethod">온누리 종류</label><select id="tripMethod"><option value="any">전체</option><option value="digital">디지털</option><option value="paper">지류</option></select>
-      </div>
-        </details>
-      </form>
-      <details class="trip-criteria" id="tripCriteria" open><summary id="tripCriterionSummary">추천 조건</summary><div class="trip-recommendation" id="tripRecommendation">
-        <label for="tripCriterion">추천 기준</label><select id="tripCriterion"><option value="time">추가 이동시간</option><option value="distance">경로와의 거리</option></select>
-        <label for="tripLimit" id="tripLimitLabel">추가 이동 한도</label><select id="tripLimit"><option value="5">5분 미만</option><option value="10">10분 미만</option><option value="15">15분 미만</option></select>
-      </div></details><button type="button" id="tripRefresh" hidden>다시 조회</button>
-      <div id="tripChoices"></div>
-      <p class="trip-status" id="tripStatus" role="status" aria-live="polite"></p>
-      <details class="trip-disclosure"><summary>경로 계산 안내</summary><p class="trip-note">도로 경로 기반 시험 기능입니다. 실시간 교통·주유시간·주유소 진입 방향은 반영하지 않으며 내비 경로와 다를 수 있습니다. 비교를 누르면 출발지·목적지·후보 좌표가 OSRM 경로 서비스에 전달됩니다. <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap</a></p></details>
-      <p id="tripRouteSummary"></p><div class="trip-map-actions"><button id="tripEdit" type="button" hidden>경로 수정</button><button id="tripShowMap" type="button" hidden>지도 보기</button><button id="tripClear" type="button" hidden>지우기</button></div>
-      <div class="trip-results" id="tripResults"></div>
-    </div>
-  </details>
-
   <!-- 주변 주유소 내보내기 -->
   <div class="nearby-panel" id="nearbyPanel">
     <div class="nearby-panel-box">
@@ -1112,6 +1077,43 @@
   </div>
 
   <div class="map-area">
+    <button id="tripLauncher" class="trip-launcher" type="button" aria-label="경유 주유소 찾기 열기" aria-controls="tripPanel" aria-expanded="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="18" r="2"/><path d="M7 6h8a4 4 0 0 1 0 8H9a4 4 0 0 0-4 4h12"/></svg><span>경유</span><span id="tripLauncherCount" class="trip-launcher-count" aria-hidden="true" hidden></span></button>
+    <details class="trip-panel" id="tripPanel" role="dialog" aria-label="경유 주유소 찾기" aria-modal="false">
+    <summary class="trip-trigger">
+      <svg class="trip-trigger-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="18" r="2"/><path d="M7 6h8a4 4 0 0 1 0 8H9a4 4 0 0 0-4 4h12"/></svg>
+      <span class="trip-trigger-copy"><h2 class="trip-heading">경유 주유소 찾기</h2></span>
+      <span class="trip-trigger-state" aria-hidden="true"><span class="trip-trigger-open">열기 ＋</span><span class="trip-trigger-close">최소화 −</span></span>
+    </summary>
+    <div class="trip-window-tools"><label for="tripOpacity">배경 불투명도</label><select id="tripOpacity"><option value="1">100%</option><option value="0.9">90%</option><option value="0.75">75%</option></select></div>
+    <div class="trip-body">
+      <form class="trip-form" id="tripForm">
+        <div class="trip-field"><label for="tripDestination">최종 목적지</label>
+          <input id="tripDestination" placeholder="어디로 가시나요?" autocomplete="off"><p class="trip-selected" id="tripDestinationSelected"></p>
+        </div>
+        <button class="trip-primary" id="tripRecommend" type="submit">목적지 검색</button>
+        <details id="tripSettings" class="trip-settings">
+          <summary><span>출발지·조건 변경</span><span id="tripSettingsSummary">내 위치 · 모든 결제수단 · 휘발유·경유</span></summary>
+          <div class="trip-field"><label for="tripStart">출발지</label>
+            <div class="trip-input-row"><input id="tripStart" placeholder="비워두면 내 위치" autocomplete="off"><button id="tripSearchStart" type="button">검색</button><button id="tripLocation" type="button">내 위치</button></div><p class="trip-selected" id="tripStartSelected"></p>
+          </div>
+      <div class="trip-search-options">
+        <label for="tripPayment">결제수단</label><select id="tripPayment"><option value="all">전체</option><option value="onnuri">온누리</option><option value="saengsaeng">상생카드</option></select>
+        <label for="tripFuel">연료</label><select id="tripFuel"><option value="liquid">휘발유·경유 주유소</option><option value="lpg">LPG 충전소</option><option value="all">전체</option></select>
+        <label for="tripMethod">온누리 종류</label><select id="tripMethod"><option value="any">전체</option><option value="digital">디지털</option><option value="paper">지류</option></select>
+      </div>
+        </details>
+      </form>
+      <details class="trip-criteria" id="tripCriteria" open><summary id="tripCriterionSummary">추천 조건</summary><div class="trip-recommendation" id="tripRecommendation">
+        <label for="tripCriterion">추천 기준</label><select id="tripCriterion"><option value="time">추가 이동시간</option><option value="distance">경로와의 거리</option></select>
+        <label for="tripLimit" id="tripLimitLabel">추가 이동 한도</label><select id="tripLimit"><option value="5">5분 미만</option><option value="10">10분 미만</option><option value="15">15분 미만</option></select>
+      </div></details><button type="button" id="tripRefresh" hidden>다시 조회</button>
+      <div id="tripChoices"></div>
+      <p class="trip-status" id="tripStatus" role="status" aria-live="polite"></p>
+      <details class="trip-disclosure"><summary>경로 계산 안내</summary><p class="trip-note">도로 경로 기반 시험 기능입니다. 실시간 교통·주유시간·주유소 진입 방향은 반영하지 않으며 내비 경로와 다를 수 있습니다. 비교를 누르면 출발지·목적지·후보 좌표가 OSRM 경로 서비스에 전달됩니다. <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap</a></p></details>
+      <p id="tripRouteSummary"></p><div class="trip-map-actions"><button id="tripEdit" type="button" hidden>경로 수정</button><button id="tripShowMap" type="button" hidden>지도 보기</button><button id="tripClear" type="button" hidden>지우기</button></div>
+      <div class="trip-results" id="tripResults"></div>
+    </div>
+  </details>
     <div id="map"></div>
     <div id="rotationMap" class="rotation-map" hidden></div>
     <div id="rotationDetails" class="rotation-details" hidden></div>
@@ -2620,13 +2622,14 @@ if (!localStorage.getItem('helpSeen')) {
 </script>
 <script src="assets/route-core.js?v=874a3207b088"></script>
 <script src="assets/route-map.js?v=29f0a7b0b616"></script>
-<script src="assets/route-planner.js?v=c43a62142cfc"></script>
+<script src="assets/route-planner.js?v=2cf03957534b"></script>
 <script src="assets/updates.js?v=db39e7a48351"></script>
 <script src="assets/visual-refresh.js?v=4bf59a2089d8"></script>
 <script src="assets/nationwide-ui.js?v=db266344f236"></script>
 <script src="assets/simple-controls.js?v=e79c532e2bc3"></script>
 <script src="assets/input-ux.js?v=1809ebe00951"></script>
 <script src="assets/map-controls.js?v=4f949b498378"></script>
+<script src="assets/route-window.js?v=a4bae5608b77"></script>
 <script src="assets/i18n.js?v=969b52c5bcce"></script>
 </body>
 </html>
