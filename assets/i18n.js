@@ -25,7 +25,7 @@
     '전국 온누리 · 광주상생카드 가맹점':'National Onnuri · Gwangju Sangsaeng merchants',
     '시·도':'Province', '온누리 유형':'Onnuri type','유종':'Fuel','전국':'All regions',
     '디지털':'Digital','지류':'Paper','지류·디지털':'Paper · Digital','휘발유·경유':'Petrol · Diesel','전체 시·군·구':'All districts',
-    '주유소 목록':'Station list','더 보기':'Show more','공식 가맹점 자료':'Official merchant data',
+    '조건에 맞는 주유소':'Filtered stations','선택한 지역·검색어·필터에 따른 목록':'Matches your selected region, search and filters','더 보기':'Show more','공식 가맹점 자료':'Official merchant data',
     '조건에 맞는 확인된 등록이 없습니다. 지역이나 결제 유형을 바꿔보세요.':'No verified listings match. Try another region or payment type.',
     '공식 온누리 자료의 후보 중 상세주소 또는 자동차 주유 업종 확인이 필요한 기록입니다. 지도와 길찾기에서는 제외합니다.':'These official-file candidates still need a street address or vehicle-fueling category check. They are excluded from the map and directions.',
 
@@ -157,6 +157,8 @@
       else if (/^공식 자료 [\d-]+ 대조 \d+곳$/.test(text)) result = text.replace(/^공식 자료 ([\d-]+) 대조 (\d+)곳$/, 'Official source: $1, $2 matched');
       else if (/^매칭 미완료 \d+곳$/.test(text)) result = text.replace(/^매칭 미완료 (\d+)곳$/, '$1 unmatched');
       else if (/^총 \d+개$/.test(text)) result = text.replace(/^총 (\d+)개$/, '$1 stations');
+      else if (/^총 \d+곳$/.test(text)) result = text.replace(/^총 (\d+)곳$/, '$1 total');
+      else if (/^\d+곳 표시 중$/.test(text)) result = text.replace(/^(\d+)곳 표시 중$/, '$1 shown');
       else if (/^상생 \d+$/.test(text)) result = text.replace('상생 ', 'Sangsaeng ');
       else if (/^공식 검색 확인 /.test(text)) result = text.replace('공식 검색 확인 ','Official search checked: ');
       else if (/^공식 검색 [\d-]+ 확인 \d+곳$/.test(text)) result = text.replace(/^공식 검색 ([\d-]+) 확인 (\d+)곳$/, 'Official search: $1, $2 checked');

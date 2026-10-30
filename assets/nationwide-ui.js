@@ -16,7 +16,7 @@
       b.classList.toggle('active',b.dataset.filter===payment);b.setAttribute('aria-pressed',String(b.dataset.filter===payment));
     });
     const panel=document.getElementById('nationalResults');panel.open=true;
-    document.getElementById('map').textContent='지도를 불러오지 못했습니다. 주유소 목록에서 주소와 길찾기를 확인하세요.';
+    document.getElementById('map').textContent='지도를 불러오지 못했습니다. 조건에 맞는 주유소에서 주소와 길찾기를 확인하세요.';
     for(const id of ['myLocBtn','rankBtn','fitResultsBtn','districtSelect'])document.getElementById(id).disabled=true;
     document.getElementById('tripPanel').hidden=true;
     function renderFallback() {
@@ -31,8 +31,8 @@
         if(s.verification?.onnuri?.provider==='kbcard')a.textContent+=' · '+GasMerchantDisplay.onnuriNote(s);
       });
       document.getElementById('countBadge').textContent=rows.length+'곳';
-      document.getElementById('listCount').textContent=rows.length+'곳';
-      document.getElementById('nationalSummary').textContent='온누리 공식 검색 '+MERCHANT_STATUS.onnuri.source_date+' · 지도 대신 목록 제공'+(MERCHANT_STATUS.onnuri.refresh_error?' · 최근 조회 실패, 이전 자료 유지':'')+bankSummary();
+      document.getElementById('listCount').textContent='총 '+rows.length+'곳';
+      document.getElementById('nationalSummary').textContent=rows.length+'곳 표시 중 · 온누리 공식 검색 '+MERCHANT_STATUS.onnuri.source_date+' · 지도 대신 목록 제공'+(MERCHANT_STATUS.onnuri.refresh_error?' · 최근 조회 실패, 이전 자료 유지':'')+bankSummary();
       document.getElementById('moreStations').hidden=true;
       document.getElementById('pendingSummary').parentElement.hidden=true;
     }
@@ -76,7 +76,7 @@
     const visible=allMarkers.filter(m=>m.visible);
     const waiting=(typeof NATIONAL_PENDING==='undefined'?[]:NATIONAL_PENDING).filter(r=>
       state.region==='all'||r.region===state.region||(['광주','전남'].includes(state.region)&&r.region==='전남광주'));
-    summary.textContent=`지도 표시 ${visible.length}곳 · 온누리 공식 검색 ${MERCHANT_STATUS.onnuri?.source_date||'미확인'}${MERCHANT_STATUS.onnuri?.refresh_error?' · 최근 조회 실패, 이전 자료 유지':''}`+bankSummary();
+    summary.textContent=`${Math.min(limit,visible.length)}곳 표시 중 · 온누리 공식 검색 ${MERCHANT_STATUS.onnuri?.source_date||'미확인'}${MERCHANT_STATUS.onnuri?.refresh_error?' · 최근 조회 실패, 이전 자료 유지':''}`+bankSummary();
     const title=document.getElementById('pendingSummary');
     title.textContent=`추가 확인 대기 ${waiting.length}건`;
     pending.replaceChildren();
@@ -103,7 +103,7 @@
     });
     if(!visible.length){const p=document.createElement('p');p.textContent='조건에 맞는 확인된 등록이 없습니다. 지역이나 결제 유형을 바꿔보세요.';list.append(p);}
     const more=document.getElementById('moreStations');more.hidden=visible.length<=limit;
-    document.getElementById('listCount').textContent=`${Math.min(limit,visible.length)} / ${visible.length}곳`;
+    document.getElementById('listCount').textContent=`총 ${visible.length}곳`;
   }
   const original=applyFilters;
   applyFilters=function(){original();render();};
