@@ -2,14 +2,14 @@
 (() => {
   'use strict';
   const core = GasRouteCore, byId = id => document.getElementById(id);
-  let start = null, destination = null, generation = 0, lastRequest = 0, controller = null, lastRoute=null;
+  let start = null, destination = null, generation = 0, lastRequest = 0, controller = null, lastRoute=null, requestedStop=null;
   const cache = new Map();
   const panel = byId('tripPanel'), status = byId('tripStatus'), results = byId('tripResults');
   function syncControls() {
     const isOnnuri = byId('tripPayment').value === 'onnuri';
     byId('tripMethod').disabled = !isOnnuri;
     if (!isOnnuri) byId('tripMethod').value = 'any';
-    byId('tripRecommend').textContent = destination ? '경유 주유소 찾기' : '목적지 검색';
+    byId('tripRecommend').textContent = destination ? (requestedStop?'이 주유소로 경유 연결':'경유 주유소 찾기') : '목적지 검색';
     const payment = {all:'모든 결제수단', onnuri:'온누리', saengsaeng:'상생카드'}[byId('tripPayment').value];
     const fuel = {all:'모든 유종', liquid:'휘발유·경유', lpg:'LPG'}[byId('tripFuel').value];
     const method = {any:'', paper:'지류', digital:'디지털'}[byId('tripMethod').value];
@@ -34,20 +34,22 @@
     byId(kind === 'start' ? 'tripStartSelected' : 'tripDestinationSelected').textContent = '선택됨: ' + point.name;
     byId('tripChoices').replaceChildren();
     syncControls();
-    say(destination ? '경유 주유소를 찾으면 추가 이동시간을 비교합니다.' : '목적지를 검색해 선택하세요.');
+    say(requestedStop?'경유할 주유소: '+requestedStop.name+' · 출발지와 목적지를 선택하세요.':destination ? '경유 주유소를 찾으면 추가 이동시간을 비교합니다.' : '목적지를 검색해 선택하세요.');
     if (kind === 'destination') byId('tripRecommend').focus();
     if(auto&&start&&destination)return recommend();
   }
   const searchVersions = {start:0, destination:0};
+  let latestSearch=0;
   function search(kind) {
     const input = byId(kind === 'start' ? 'tripStart' : 'tripDestination');
     const query = input.value.trim();
     if (!query) { say('검색할 장소 또는 주소를 입력하세요.'); return; }
     const version = ++searchVersions[kind];
+    const request=++latestSearch;
     say('장소 검색 중…');
     const service = new kakao.maps.services.Places();
     service.keywordSearch(query, (data, code) => {
-      if (version !== searchVersions[kind] || input.value.trim() !== query) return;
+      if (request!==latestSearch || version !== searchVersions[kind] || input.value.trim() !== query) return;
       const choices = byId('tripChoices'); choices.replaceChildren();
       if (code !== kakao.maps.services.Status.OK) { say('장소를 찾지 못했습니다. 도로명주소나 다른 이름으로 검색하세요.'); return; }
       say('검색 결과에서 ' + (kind === 'start' ? '출발지' : '목적지') + '를 선택하세요.');
@@ -126,7 +128,9 @@
   async function chooseStation(station) {
     if(window.GasTripWindow)window.GasTripWindow.open();else panel.open=true;
     if(!station.route_eligible || !core.validPoint(station)) {say('이 장소는 상세 좌표 또는 자동차 주유 업종 확인이 필요합니다.');return;}
-    if(!destination){say('최종 목적지를 검색해 선택한 뒤 이 주유소를 다시 선택하세요.');byId('tripDestination').focus();return;}
+    requestedStop=station;clearResults();syncControls();
+    if(!destination){say(station.name+' 경유를 선택했습니다. 최종 목적지를 검색하세요.');byId('tripDestination').focus();return;}
+    if(!start){byId('tripSettings').open=true;say(station.name+' 경유를 선택했습니다. 출발지를 선택하거나 경유 연결을 누르세요.');return;}
     try { await requireStart();clearResults();results.append(showStation(station));finishResults();say('출발지 → '+station.name+' → '+destination.name); }
     catch(e){if (!start) byId('tripSettings').open=true;say(e.message || '출발지를 입력하거나 위치 권한을 허용하세요.');}
   }
@@ -143,8 +147,15 @@
   }
   async function recommend(event) {
     event?.preventDefault();
+    if(byId('tripRecommend').disabled)return;
     if(!destination){search('destination');return;}
     const button=byId('tripRecommend');button.disabled=true;byId('tripRefresh').disabled=true;
+    if(requestedStop){
+      try{await requireStart();await chooseStation(requestedStop);}
+      catch(e){if(!start)byId('tripSettings').open=true;say(e.message||'출발지를 직접 검색하세요.');}
+      finally{button.disabled=false;byId('tripRefresh').disabled=false;}
+      return;
+    }
     let requestToken=null;
     try {
       await requireStart();clearResults();
@@ -180,17 +191,23 @@
   }
   ['start','destination'].forEach(kind=>{
     const input=byId(kind==='start'?'tripStart':'tripDestination');
-    input.addEventListener('input',()=>{searchVersions[kind]++;if(kind==='start')start=null;else destination=null;clearResults();byId(kind==='start'?'tripStartSelected':'tripDestinationSelected').textContent='';byId('tripChoices').replaceChildren();syncControls();say('');});
+    input.addEventListener('input',()=>{latestSearch++;searchVersions[kind]++;if(kind==='start')start=null;else destination=null;clearResults();byId(kind==='start'?'tripStartSelected':'tripDestinationSelected').textContent='';byId('tripChoices').replaceChildren();syncControls();say('');});
     input.setAttribute('enterkeyhint','search');
     input.addEventListener('keydown',e=>{if(e.key==='Enter' && !e.isComposing && e.keyCode!==229){e.preventDefault();input.blur();if(kind==='destination')byId('tripForm').requestSubmit();else search(kind);}});
   });
   byId('tripSearchStart').addEventListener('click',()=>search('start'));
-  byId('tripLocation').addEventListener('click',async()=>{try{const p=await locateUser({center:false});selectPoint('start',{...p,name:'내 위치'});}catch(e){say('위치 권한을 허용하거나 출발지를 직접 검색하세요.');}});
+  byId('tripLocation').addEventListener('click',async()=>{
+    const button=byId('tripLocation');if(button.disabled)return;
+    const version=generation;button.disabled=true;
+    try{const p=await locateUser({center:false,alertOnFail:false});if(version===generation)selectPoint('start',{...p,name:'내 위치'});}
+    catch(e){if(version===generation)say('위치 권한을 허용하거나 출발지를 직접 검색하세요.');}
+    finally{button.disabled=false;}
+  });
   byId('tripForm').addEventListener('submit',recommend);
   byId('tripShowMap').addEventListener('click',()=>{window.GasRouteMap?.fit();panel.open=false;});
-  byId('tripClear').addEventListener('click',()=>{clearResults();say('경로를 지웠습니다. 목적지를 선택해 다시 찾을 수 있습니다.');});
+  byId('tripClear').addEventListener('click',()=>{requestedStop=null;clearResults();syncControls();say('경로를 지웠습니다. 목적지를 선택해 다시 찾을 수 있습니다.');});
   byId('tripRefresh').addEventListener('click',recommend);
-  byId('resetBtn').addEventListener('click',()=>{clearResults();start=null;destination=null;for(const id of ['tripStart','tripDestination'])byId(id).value='';for(const id of ['tripStartSelected','tripDestinationSelected'])byId(id).textContent='';byId('tripChoices').replaceChildren();syncControls();say('');});
+  byId('resetBtn').addEventListener('click',()=>{latestSearch++;clearResults();start=null;destination=null;requestedStop=null;for(const id of ['tripStart','tripDestination'])byId(id).value='';for(const id of ['tripStartSelected','tripDestinationSelected'])byId(id).textContent='';byId('tripChoices').replaceChildren();syncControls();say('');});
   byId('tripCriterion').addEventListener('change',()=>{
     const distance=byId('tripCriterion').value==='distance',select=byId('tripLimit');
     select.replaceChildren();for(const value of distance?[1,2,5,10]:[5,10,15]){const option=document.createElement('option');option.value=String(value);option.textContent=distance?`${value}km 이내`:`${value}분 미만`;select.append(option);}

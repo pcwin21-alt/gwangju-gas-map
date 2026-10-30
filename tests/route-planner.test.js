@@ -39,7 +39,7 @@ function setup(options={}) {
     lookups.at(-1).cb([{place_name:'광주송정역',y:'35.138',x:'126.791',address_name:'광주'}],'OK');
     await el('tripChoices').children[0].emit('click');
   }
-  return {el,lookups,gps,roads,draws,selectDestination,selectStart};
+  return {el,lookups,gps,roads,draws,selectDestination,selectStart,chooseStation:sandbox.window.GasRoutePlanner.chooseStation};
 }
 
 test('destination search and selection never request GPS; button advances and editing invalidates it',async()=>{
@@ -101,4 +101,28 @@ test('no matching stations still leaves the actual road visible and changeable',
  await f.selectStart();await f.selectDestination();
  assert.ok(f.draws.some(Boolean));assert.equal(f.el('tripShowMap').hidden,false);assert.match(f.el('tripStatus').textContent,/조건에 맞는 주유소가 없습니다/);
  assert.equal(f.el('tripRefresh').disabled,false);
+});
+test('a late start-place response cannot replace newer destination choices',async()=>{
+ const f=setup();f.el('tripStart').value='광주송정역';await f.el('tripSearchStart').emit('click');const old=f.lookups.at(-1);
+ f.el('tripDestination').value='목포역';await f.el('tripForm').emit('submit');const latest=f.lookups.at(-1);
+ latest.cb([{place_name:'목포역',y:'34.791',x:'126.386',address_name:'전남'}],'OK');
+ old.cb([{place_name:'광주송정역',y:'35.138',x:'126.791',address_name:'광주'}],'OK');
+ assert.match(f.el('tripChoices').children[0].textContent,/목포역/);
+});
+test('manual start edits while location is pending cannot be overwritten by the old GPS',async()=>{
+ const f=setup();const pending=f.el('tripLocation').emit('click');assert.equal(f.el('tripLocation').disabled,true);
+ f.el('tripStart').value='직접 고른 출발지';await f.el('tripStart').emit('input');
+ f.gps[0].resolve({lat:35.16,lng:126.85});await pending;
+ assert.equal(f.el('tripStart').value,'직접 고른 출발지');assert.equal(f.el('tripLocation').disabled,false);
+});
+test('repeated compare submissions while waiting for a start make only one location request',async()=>{
+ const f=setup();await f.selectDestination();const pending=f.el('tripForm').emit('submit');await f.el('tripForm').emit('submit');assert.equal(f.gps.length,1);
+ f.gps[0].reject(new Error('denied'));await pending;assert.equal(f.el('tripRecommend').disabled,false);
+});
+test('a station chosen before the destination is remembered through manual endpoint selection',async()=>{
+ const f=setup(),station={id:'chosen',name:'선택한 주유소',address:'주소',lat:35,lng:126.6,payment_types:['onnuri'],route_eligible:true};
+ await f.chooseStation(station);assert.equal(f.gps.length,0);assert.match(f.el('tripStatus').textContent,/선택한 주유소/);
+ await f.selectDestination();assert.equal(f.el('tripRecommend').textContent,'이 주유소로 경유 연결');
+ await f.selectStart();assert.equal(f.roads.length,0);assert.equal(f.el('tripResults').children.length,1);assert.match(f.el('tripStatus').textContent,/선택한 주유소/);
+ await f.el('tripClear').emit('click');assert.equal(f.el('tripRecommend').textContent,'경유 주유소 찾기');
 });

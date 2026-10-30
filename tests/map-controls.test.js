@@ -5,7 +5,7 @@ function fixture(ready=true) {
  for(const match of html.matchAll(/id="([^"]+)"/g))elements[match[1]]=node();elements.area=node();elements.app=node();
  let level=8,filters=0,refreshes=0,active=false;
  const byId=id=>{assert.ok(elements[id],`Missing HTML control ${id}`);return elements[id];};
- const document={documentElement:{dataset:{theme:'dark'}},getElementById:byId,querySelector:s=>elements[s==='.app'?'app':'area'],addEventListener:(k,v)=>docListeners[k]=v};
+ const document={documentElement:{dataset:{theme:'dark'}},getElementById:byId,querySelector:s=>s==='dialog[open]'?null:elements[s==='.app'?'app':'area'],addEventListener:(k,v)=>docListeners[k]=v};
  const context={window:{addEventListener:(k,v)=>windowListeners[k]=v,kakao:ready?{maps:{}}:null,GasRouteMap:{refresh(){refreshes++;},isActive:()=>active}},document,map:{getLevel:()=>level,setLevel:v=>level=v},applyFilters(){filters++;}};
  vm.runInNewContext(fs.readFileSync('assets/map-controls.js','utf8'),context);
  return {elements,docListeners,windowListeners,context,level:()=>level,filters:()=>filters,refreshes:()=>refreshes,setActive:v=>active=v};

@@ -2,6 +2,13 @@
   'use strict';
   const bankSummary=()=>MERCHANT_STATUS.supplemental_onnuri?.confirmed_count?
     ` · KB국민카드 조회 추가 ${MERCHANT_STATUS.supplemental_onnuri.confirmed_count}곳 (${MERCHANT_STATUS.supplemental_onnuri.checked_at.slice(0,10)})`:'';
+  function emptyActions(parent,query,filtered) {
+    const actions=document.createElement('div');actions.className='empty-actions';
+    const add=(label,action)=>{const button=document.createElement('button');button.type='button';button.textContent=label;button.addEventListener('click',action);actions.append(button);};
+    if(query)add('검색어 지우기',()=>{const input=document.getElementById('searchInput');input.value='';input.dispatchEvent(new Event('input',{bubbles:true}));});
+    if(filtered)add('필터 초기화',()=>document.getElementById('filtersReset').click());
+    add('지역 바꾸기',()=>document.getElementById('regionOpen').click());parent.append(actions);
+  }
   if (!window.kakao?.maps) {
     // Public merchant lookup remains usable when a map domain is unavailable.
     const state=GasNationalState, regionInput=document.getElementById('regionSelect');
@@ -30,6 +37,7 @@
         a.textContent=s.name+' · '+s.address+' · 길찾기';list.append(a);
         if(s.verification?.onnuri?.provider==='kbcard')a.textContent+=' · '+GasMerchantDisplay.onnuriNote(s);
       });
+      if(!rows.length){const p=document.createElement('p');p.textContent='조건에 맞는 주유소가 없습니다. 검색어나 필터를 바꿔보세요.';list.append(p);emptyActions(list,q,payment!=='all'||state.method!=='all'||state.fuel!=='all');}
       document.getElementById('countBadge').textContent=rows.length+'곳';
       document.getElementById('listCount').textContent='총 '+rows.length+'곳';
       document.getElementById('nationalSummary').textContent=rows.length+'곳 표시 중 · 온누리 공식 검색 '+MERCHANT_STATUS.onnuri.source_date+' · 지도 대신 목록 제공'+(MERCHANT_STATUS.onnuri.refresh_error?' · 최근 조회 실패, 이전 자료 유지':'')+bankSummary();
@@ -61,6 +69,7 @@
         .sort().forEach(name=>select.add(new Option(name,name)));
     }
     currentDistrict='all';
+    setDistrictHighlight('all');
   }
   function syncURL() {
     const u=new URL(location.href);
@@ -101,7 +110,7 @@
         showStationOverlay(item.overlay);
       });list.append(button);
     });
-    if(!visible.length){const p=document.createElement('p');p.textContent='조건에 맞는 확인된 등록이 없습니다. 지역이나 결제 유형을 바꿔보세요.';list.append(p);}
+    if(!visible.length){const p=document.createElement('p');p.textContent='조건에 맞는 확인된 등록이 없습니다. 지역이나 결제 유형을 바꿔보세요.';list.append(p);emptyActions(list,currentSearch,currentFilter!=='all'||currentDistrict!=='all'||state.method!=='all'||state.fuel!=='all');}
     const more=document.getElementById('moreStations');more.hidden=visible.length<=limit;
     document.getElementById('listCount').textContent=`총 ${visible.length}곳`;
   }

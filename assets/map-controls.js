@@ -18,5 +18,5 @@
     byId('expandMapBtn').setAttribute('aria-label',expanded?'지도 작게 보기':'지도 크게 보기');byId('expandMapBtn').title=expanded?'지도 작게 보기':'지도 크게 보기';
   }
   byId('expandMapBtn').addEventListener('click',()=>expand());
-  document.addEventListener('keydown',event=>{if(event.key==='Escape')expand(false);});
+  document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!event.defaultPrevented&&!document.querySelector('dialog[open]'))expand(false);});
 })();

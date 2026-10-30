@@ -27,6 +27,11 @@ test('empty results keep map unchanged and a single result gets useful zoom',()=
  assert.equal(one.calls.find(c=>c[0]==='level')[1],4);
  assert.equal(one.calls.some(c=>c[0]==='bounds'),false);
 });
+test('direct manipulation cancels a queued automatic fit without removing explicit fit',()=>{
+ const f=fixture([{lat:35.1,lng:126.8},{lat:35.2,lng:126.9}]);
+ f.api.fit();f.api.cancelFit();f.flush();assert.equal(f.calls.length,0);
+ f.api.fit();f.flush();assert.equal(f.calls.some(c=>c[0]==='bounds'),true);
+});
 test('keyboard height changes and phone rotation preserve zoom and the panned center',()=>{
  const f=fixture([{lat:35.1,lng:126.8},{lat:35.2,lng:126.9}]);
  f.container.clientHeight=250;f.resize();f.flush();

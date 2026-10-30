@@ -761,6 +761,7 @@
   <link rel="stylesheet" href="assets/route-window.css">
   <link rel="stylesheet" href="assets/district-context.css">
   <link rel="stylesheet" href="assets/region-picker.css">
+  <link rel="stylesheet" href="assets/ux-fixes.css">
   <script src="assets/nationwide.js"></script>
 </head>
 <body>
@@ -869,7 +870,7 @@
     <div class="controls-top">
       <div class="search-box">
         <input type="search" id="searchInput" enterkeyhint="search" placeholder="주유소명 · 주소 검색..." aria-label="주유소명 또는 주소 검색" autocomplete="off">
-        <button class="search-clear" id="searchClear" title="지우기">✕</button>
+        <button class="search-clear" id="searchClear" title="검색어 지우기" aria-label="검색어 지우기">✕</button>
         <div class="no-result" id="noResult">검색 결과 없음</div>
       </div>
       <button id="regionOpen" type="button" aria-haspopup="dialog" aria-controls="regionDialog" aria-label="지역 선택"><span id="regionLabel" data-no-i18n>광주</span><span aria-hidden="true">▾</span></button>
@@ -1515,6 +1516,7 @@ function buildInfoHtml(station) {
     const btn = document.createElement('button');
     btn.className = 'copy-btn';
     btn.title = '복사';
+    btn.setAttribute('aria-label', '복사: ' + text);
     btn.innerHTML = COPY_SVG;
     btn.addEventListener('click', e => {
       e.stopPropagation();
@@ -1567,7 +1569,10 @@ function buildInfoHtml(station) {
   tagsEl.className = 'tags';
   tagsEl.innerHTML = tags.join('');
 
-  wrap.appendChild(nameRow);
+  const heading = document.createElement('div');heading.className = 'info-heading';
+  const close = document.createElement('button');close.type='button';close.className='station-close';close.textContent='×';close.setAttribute('aria-label','주유소 상세 닫기');
+  close.addEventListener('click',()=>closeStationOverlay(true));
+  heading.append(nameRow,close);wrap.appendChild(heading);
   wrap.appendChild(addrRow);
   wrap.appendChild(distanceRow);
   wrap.appendChild(tagsEl);
@@ -1599,7 +1604,7 @@ function buildInfoHtml(station) {
   wrap.appendChild(routeActions);
   const via = document.createElement('button');
   via.className = 'route-btn'; via.type = 'button'; via.textContent = '이 주유소 들러서 목적지로';
-  via.addEventListener('click', () => window.GasRoutePlanner?.chooseStation(station));
+  via.addEventListener('click', () => {closeStationOverlay();window.GasRoutePlanner?.chooseStation(station);});
   wrap.appendChild(via);
   const verification = document.createElement('p'); verification.className = 'trip-note';
   verification.textContent = GasMerchantDisplay.verificationText(station);
@@ -1613,6 +1618,12 @@ let activeOverlay = null;
 let rankMapOverlays = [];
 let reportMode = false;
 let reportPin = null;
+
+function closeStationOverlay(restoreFocus=false) {
+  if(activeOverlay)activeOverlay.setMap(null);
+  activeOverlay=null;
+  if(restoreFocus)document.getElementById('fitResultsBtn').focus({preventScroll:true});
+}
 
 function showStationOverlay(overlay) {
   if (activeOverlay && activeOverlay !== overlay) activeOverlay.setMap(null);
@@ -1659,10 +1670,6 @@ STATIONS.forEach(station => {
       return;
     }
     showStationOverlay(overlay);
-  });
-
-  kakao.maps.event.addListener(map, 'click', function() {
-    if (activeOverlay) { activeOverlay.setMap(null); activeOverlay = null; }
   });
 
   const DISTRICT_LIST = ['광산구', '남구', '동구', '북구', '서구'];
@@ -1750,13 +1757,23 @@ const searchInput = document.getElementById('searchInput');
 const searchClear = document.getElementById('searchClear');
 let searchFitTimer;
 
-searchInput.addEventListener('input', function() {
-  currentSearch = this.value.trim();
-  searchClear.classList.toggle('visible', this.value.length > 0);
+// A later direct gesture takes precedence over pending search/route auto-fit.
+for(const type of ['pointerdown','touchstart','wheel'])document.querySelector('.map-area').addEventListener(type,()=>{
+  clearTimeout(searchFitTimer);mapViewport.cancelFit?.();window.GasRouteMap?.cancelFit?.();
+},{capture:true,passive:true});
+kakao.maps.event.addListener(map,'click',()=>closeStationOverlay());
+
+function updateStationSearch(event) {
+  if(event?.isComposing)return;
+  currentSearch = searchInput.value.trim();
+  searchClear.classList.toggle('visible', searchInput.value.length > 0);
   applyFilters();
   clearTimeout(searchFitTimer);
   searchFitTimer = setTimeout(() => mapViewport.fit(), 350);
-});
+}
+searchInput.addEventListener('input',updateStationSearch);
+searchInput.addEventListener('compositionstart',()=>{clearTimeout(searchFitTimer);mapViewport.cancelFit?.();});
+searchInput.addEventListener('compositionend',updateStationSearch);
 
 searchClear.addEventListener('click', function() {
   searchInput.value = '';
@@ -1873,6 +1890,8 @@ kakao.maps.event.addListener(map, 'dragstart', () => document.getElementById('my
 
 // 초기화
 document.getElementById('resetBtn').addEventListener('click', function() {
+  clearTimeout(searchFitTimer);
+  closeStationOverlay();
   searchInput.value = '';
   currentSearch = '';
   searchClear.classList.remove('visible');
@@ -2631,6 +2650,7 @@ if (!localStorage.getItem('helpSeen')) {
 <script src="assets/nationwide-ui.js"></script>
 <script src="assets/simple-controls.js"></script>
 <script src="assets/region-picker.js"></script>
+<script src="assets/ux-fixes.js"></script>
 <script src="assets/input-ux.js"></script>
 <script src="assets/map-controls.js"></script>
 <script src="assets/district-context-core.js"></script>

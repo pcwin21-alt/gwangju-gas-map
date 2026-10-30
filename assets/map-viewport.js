@@ -34,7 +34,7 @@
       });
     });
     observer.observe(container);
-    return {fit};
+    return {fit,cancelFit:()=>cancelAnimationFrame(frame)};
   }
   root.GasMapViewport = {create};
 })(typeof globalThis !== 'undefined' ? globalThis : this);
