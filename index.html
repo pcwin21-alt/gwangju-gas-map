@@ -1658,7 +1658,7 @@ STATIONS.forEach(station => {
     position: new kakao.maps.LatLng(station.lat, station.lng),
     xAnchor: 0.5,
     yAnchor: 1,
-    zIndex: 3,
+    zIndex: 30,
   });
 
   kakao.maps.event.addListener(marker, 'click', function() {
@@ -2645,8 +2645,8 @@ if (!localStorage.getItem('helpSeen')) {
 })();
 </script>
 <script src="assets/route-core.js?v=874a3207b088"></script>
-<script src="assets/route-map.js?v=3210a54bbd53"></script>
-<script src="assets/route-planner.js?v=5302d081d1d9"></script>
+<script src="assets/route-map.js?v=54c476f92b85"></script>
+<script src="assets/route-planner.js?v=6f04bc3803a1"></script>
 <script src="assets/updates.js?v=db39e7a48351"></script>
 <script src="assets/visual-refresh.js?v=4bf59a2089d8"></script>
 <script src="assets/nationwide-ui.js?v=39ecc0faa2c2"></script>
