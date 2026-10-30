@@ -1477,7 +1477,8 @@ function buildInfoHtml(station) {
     const items = order.filter(k => typeof p[k]==='number'&&Number.isFinite(p[k])&&p[k]>0).map(k => {
       return `<span class="price-item"><span class="fuel-label">${k}</span>${GasPriceDisplay.html(p[k], station)}</span>`;
     }).join('');
-    if(items)priceHtml = `<div class="prices">${items}<div class="price-source">Opinet ${PRICE_INFO[station.id]?.source_dates?.join(' / ') || '기준일 미확인'} 기준</div></div>`;
+    const dates=(PRICE_INFO[station.id]?.source_dates||[]).map(d=>String(d).replace(/^(\d{4})(\d{2})(\d{2})$/,'$1-$2-$3'));
+    if(items)priceHtml = `<div class="prices">${items}<div class="price-source">Opinet ${dates.join(' / ') || '기준일 미확인'} 기준</div></div>`;
   }
 
   function bindRouteLink(el, action) {
