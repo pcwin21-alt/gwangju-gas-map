@@ -1,5 +1,5 @@
 .district-map-label {display:block;padding:4px 8px;border:2px solid var(--district-color);border-radius:10px;background:var(--panel);color:var(--ink);box-shadow:0 2px 7px #0003;font:700 16px/1.5 sans-serif;white-space:nowrap;pointer-events:none;}
-.district-context {position:absolute;z-index:4;left:72px;right:72px;bottom:max(24px,env(safe-area-inset-bottom));padding:6px 8px;border:1px solid var(--line);border-radius:10px;background:var(--panel);color:var(--ink);box-shadow:0 2px 8px #0003;text-align:center;pointer-events:none;}
+.district-context {position:absolute;z-index:4;left:72px;right:auto;max-width:calc(100% - 152px);bottom:max(24px,env(safe-area-inset-bottom));padding:6px 8px;border:1px solid var(--line);border-radius:10px;background:var(--panel);color:var(--ink);box-shadow:0 2px 8px #0003;text-align:left;pointer-events:none;}
 .district-context[hidden] {display:none;}
 .district-context strong {display:block;font:700 16px/1.5 sans-serif;}
 .district-context span {display:block;font:400 14px/1.5 sans-serif;color:var(--muted);}

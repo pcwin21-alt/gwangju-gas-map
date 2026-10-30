@@ -73,11 +73,14 @@
     }
     return labels.join(' / ');
   }
+  function syncCriterion() {
+    const distance=byId('tripCriterion').value==='distance';
+    byId('tripCriterionSummary').textContent=(distance?`경로 ${byId('tripLimit').value}km 이내`:`추가 ${byId('tripLimit').value}분 미만`)+' · 조건 변경';
+  }
   function finishResults(complete=false) {
     panel.classList.add('has-results');for(const id of ['tripEdit','tripShowMap','tripClear'])byId(id).hidden=false;
     byId('tripRefresh').hidden=true;
-    const distance=byId('tripCriterion').value==='distance';
-    byId('tripCriterionSummary').textContent=(distance?`경로 ${byId('tripLimit').value}km 이내`:`추가 ${byId('tripLimit').value}분 미만`)+' · 조건 변경';
+    syncCriterion();
     if(complete)byId('tripCriteria').open=false;
     byId('tripRouteSummary').textContent=start.name+' → '+destination.name+(lastRoute?` · 약 ${Math.ceil(lastRoute.seconds/60)}분 · ${(lastRoute.meters/1000).toFixed(1)}km`:'');
   }
@@ -214,12 +217,13 @@
     const distance=byId('tripCriterion').value==='distance',select=byId('tripLimit');
     select.replaceChildren();for(const value of distance?[1,2,5,10]:[5,10,15]){const option=document.createElement('option');option.value=String(value);option.textContent=distance?`${value}km 이내`:`${value}분 미만`;select.append(option);}
     select.value=distance?'2':'5';byId('tripLimitLabel').textContent=distance?'경로 반경':'추가 이동 한도';
-    clearResults();if(start&&destination)recommend();
+    syncCriterion();clearResults();if(start&&destination)recommend();
   });
-  byId('tripLimit').addEventListener('change',()=>{clearResults();if(start&&destination)recommend();});
+  byId('tripLimit').addEventListener('change',()=>{syncCriterion();clearResults();if(start&&destination)recommend();});
   byId('tripEdit').addEventListener('click',()=>{clearResults();say('경로 또는 결제수단을 수정한 뒤 다시 비교하세요.');byId('tripDestination').focus();});
   ['tripPayment','tripMethod','tripFuel'].forEach(id=>byId(id).addEventListener('change',()=>{clearResults();syncControls();say('조건이 변경됐습니다. 추가 이동시간을 다시 비교하세요.');}));
   syncControls();
+  syncCriterion();
   const metadata=typeof MERCHANT_STATUS==='undefined'?{}:MERCHANT_STATUS;
   const onnuri=metadata.onnuri;
   const onnuriSummary=onnuri?.status==='confirmed' ? `공식 검색 ${onnuri.checked_at.slice(0,10)} 확인 ${onnuri.matched_count}곳 · 과거 기록 ${onnuri.unmatched_count}곳` : (onnuri?.source_date ? `공식 자료 ${onnuri.source_date} 대조 ${onnuri.matched_count}곳` : '최근 전체 갱신 미완료');

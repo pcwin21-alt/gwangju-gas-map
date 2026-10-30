@@ -30,7 +30,8 @@
   <link rel="stylesheet" href="assets/updates.css?v=dfaa761f2f4e">
   <script src="assets/map-viewport.js?v=2113d069e011"></script>
   <script src="assets/price-display.js?v=c638a9941b8f"></script>
-  <script src="assets/merchant-display.js?v=a85ef716268f"></script>
+  <script src="assets/merchant-display.js?v=ce1aee8a4e14"></script>
+  <script src="assets/station-results-core.js?v=5e55d0b83a65"></script>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -758,10 +759,10 @@
   <link rel="stylesheet" href="assets/simple-controls.css?v=07cf501289f4">
   <link rel="stylesheet" href="assets/map-controls.css?v=3b761b4461d8">
   <link rel="stylesheet" href="assets/theme.css?v=0cb15c84660a">
-  <link rel="stylesheet" href="assets/route-window.css?v=5c5d29cd95e7">
-  <link rel="stylesheet" href="assets/district-context.css?v=54fc82f1192e">
+  <link rel="stylesheet" href="assets/route-window.css?v=e29163624949">
+  <link rel="stylesheet" href="assets/district-context.css?v=208a8d8d1bdb">
   <link rel="stylesheet" href="assets/region-picker.css?v=3198cfebca29">
-  <link rel="stylesheet" href="assets/ux-fixes.css?v=0a2123b15f6d">
+  <link rel="stylesheet" href="assets/ux-fixes.css?v=9f12d6a70218">
   <script src="assets/nationwide.js?v=e1738fc77729"></script>
 </head>
 <body>
@@ -1088,7 +1089,6 @@
       <span class="trip-trigger-copy"><h2 class="trip-heading">경유 주유소 찾기</h2></span>
       <span class="trip-trigger-state" aria-hidden="true"><span class="trip-trigger-open">열기 ＋</span><span class="trip-trigger-close">최소화 −</span></span>
     </summary>
-    <div class="trip-window-tools"><label for="tripOpacity">배경 불투명도</label><select id="tripOpacity"><option value="1">100%</option><option value="0.9">90%</option><option value="0.75">75%</option></select></div>
     <div class="trip-body">
       <form class="trip-form" id="tripForm">
         <div class="trip-field"><label for="tripDestination">최종 목적지</label>
@@ -1107,13 +1107,14 @@
       </div>
         </details>
       </form>
-      <details class="trip-criteria" id="tripCriteria" open><summary id="tripCriterionSummary">추천 조건</summary><div class="trip-recommendation" id="tripRecommendation">
+      <details class="trip-criteria" id="tripCriteria"><summary id="tripCriterionSummary">추가 5분 미만 · 조건 변경</summary><div class="trip-recommendation" id="tripRecommendation">
         <label for="tripCriterion">추천 기준</label><select id="tripCriterion"><option value="time">추가 이동시간</option><option value="distance">경로와의 거리</option></select>
         <label for="tripLimit" id="tripLimitLabel">추가 이동 한도</label><select id="tripLimit"><option value="5">5분 미만</option><option value="10">10분 미만</option><option value="15">15분 미만</option></select>
       </div></details><button type="button" id="tripRefresh" hidden>다시 조회</button>
       <div id="tripChoices"></div>
       <p class="trip-status" id="tripStatus" role="status" aria-live="polite"></p>
       <details class="trip-disclosure"><summary>경로 계산 안내</summary><p class="trip-note">도로 경로 기반 시험 기능입니다. 실시간 교통·주유시간·주유소 진입 방향은 반영하지 않으며 내비 경로와 다를 수 있습니다. 비교를 누르면 출발지·목적지·후보 좌표가 OSRM 경로 서비스에 전달됩니다. <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap</a></p></details>
+      <details class="trip-window-settings"><summary>창 설정</summary><div class="trip-window-tools"><label for="tripOpacity">배경 불투명도</label><select id="tripOpacity"><option value="1">100%</option><option value="0.9">90%</option><option value="0.75">75%</option></select></div></details>
       <p id="tripRouteSummary"></p><div class="trip-map-actions"><button id="tripEdit" type="button" hidden>경로 수정</button><button id="tripShowMap" type="button" hidden>지도 보기</button><button id="tripClear" type="button" hidden>지우기</button></div>
       <div class="trip-results" id="tripResults"></div>
     </div>
@@ -1125,16 +1126,21 @@
       <button id="expandMapBtn" type="button" aria-label="지도 크게 보기" title="지도 크게 보기" aria-pressed="false">⛶</button>
     </div>
     <div class="map-zoom-tools" role="group" aria-label="지도 확대 축소"><button id="mapZoomIn" type="button" aria-label="지도 확대" title="지도 확대">＋</button><button id="mapZoomOut" type="button" aria-label="지도 축소" title="지도 축소">−</button></div>
-    <details class="national-results" id="nationalResults">
-      <summary>조건에 맞는 주유소 <span id="listCount"></span></summary>
+    <details class="national-results" id="nationalResults" data-size="half">
+      <summary>조건에 맞는 주유소 <span id="listCount"></span><span class="results-toggle-hint" aria-hidden="true">열기/접기</span></summary>
+      <div class="results-body" id="resultsBody">
+      <div class="results-toolbar"><label>범위<select id="resultsScope"><option value="region">선택 지역 전체</option><option value="map">지도에서 찾은 범위</option></select></label><label>정렬<select id="resultsOrder"><option value="name">이름순</option><option value="distance" disabled>내 위치 가까운 순</option></select></label><button id="resultsSize" type="button" aria-label="목록 전체로 펼치기" aria-expanded="false">크게</button></div>
       <p id="listScope">선택한 지역·검색어·필터에 따른 목록</p>
-      <p id="nationalSummary" role="status"></p>
+      <p id="nationalSummary" role="status" aria-live="polite"></p>
       <div id="stationList"></div><button id="moreStations" type="button">더 보기</button>
+      <details class="results-data"><summary>자료 확인 정보</summary><p id="resultDataStatus"></p></details>
       <details class="pending-section"><summary id="pendingSummary">주소·업종 확인 대기</summary>
         <p>공식 온누리 자료의 후보 중 상세주소 또는 자동차 주유 업종 확인이 필요한 기록입니다. 지도와 길찾기에서는 제외합니다.</p>
         <ul id="pendingList"></ul><a href="https://www.data.go.kr/data/3060079/fileData.do" target="_blank" rel="noopener">공식 가맹점 자료</a>
       </details>
+      </div>
     </details>
+      <button class="search-area-btn" id="searchAreaBtn" type="button" hidden>이 지역에서 찾기</button>
       <button class="fit-results-btn" id="fitResultsBtn" type="button">결과 보기</button>
       <button class="map-location-btn" id="myLocBtn" type="button" title="내 위치로 이동" aria-label="내 위치로 이동" aria-busy="false">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2.5" fill="currentColor" stroke="none"/><path d="M12 2v4m0 12v4M2 12h4m12 0h4" stroke-linecap="round"/></svg>
@@ -1601,14 +1607,17 @@ function buildInfoHtml(station) {
 
   routeActions.appendChild(kakaoRouteBtn);
   routeActions.appendChild(naverRouteBtn);
-  wrap.appendChild(routeActions);
+  const directions=document.createElement('details');directions.className='station-directions';
+  const directionsSummary=document.createElement('summary');directionsSummary.className='station-directions-trigger';directionsSummary.textContent='여기로 길찾기';
+  directions.append(directionsSummary,routeActions);wrap.appendChild(directions);
   const via = document.createElement('button');
   via.className = 'route-btn'; via.type = 'button'; via.textContent = '이 주유소 들러서 목적지로';
   via.addEventListener('click', () => {closeStationOverlay();window.GasRoutePlanner?.chooseStation(station);});
   wrap.appendChild(via);
-  const verification = document.createElement('p'); verification.className = 'trip-note';
-  verification.textContent = GasMerchantDisplay.verificationText(station);
-  wrap.appendChild(verification);
+  const verification = document.createElement('details');verification.className='station-verification';
+  const verificationSummary=document.createElement('summary');verificationSummary.textContent='확인 정보';
+  const verificationText=document.createElement('p');verificationText.className='trip-note';verificationText.textContent=GasMerchantDisplay.verificationText(station);
+  verification.append(verificationSummary,verificationText);wrap.appendChild(verification);
   return wrap;
 }
 
@@ -1618,14 +1627,21 @@ let activeOverlay = null;
 let rankMapOverlays = [];
 let reportMode = false;
 let reportPin = null;
+let stationReturnFocus = null;
 
 function closeStationOverlay(restoreFocus=false) {
   if(activeOverlay)activeOverlay.setMap(null);
   activeOverlay=null;
-  if(restoreFocus)document.getElementById('fitResultsBtn').focus({preventScroll:true});
+  if(restoreFocus){
+    if(window.GasResultsPanel?.restoreSelection?.())return;
+    const target=typeof stationReturnFocus!=='undefined'&&stationReturnFocus?.isConnected?stationReturnFocus:document.getElementById('fitResultsBtn');
+    target.focus({preventScroll:true});
+  }
 }
 
-function showStationOverlay(overlay) {
+function showStationOverlay(overlay,options={}) {
+  stationReturnFocus=document.activeElement;
+  window.GasResultsPanel?.onDetailsOpen(options.fromResults===true);
   if (activeOverlay && activeOverlay !== overlay) activeOverlay.setMap(null);
   document.getElementById('nationalResults').open = false;
   overlay.setMap(map);
@@ -1646,7 +1662,7 @@ STATIONS.forEach(station => {
   const content=buildInfoHtml(station);
   const overlay={setMap(target){
     const host=document.getElementById('stationDetails');
-    if(target){host.replaceChildren(content);host.hidden=false;}
+    if(target){host.replaceChildren(content);host.hidden=false;host.querySelector?.('.station-close')?.focus({preventScroll:true});}
     else if(host.firstElementChild===content){host.replaceChildren();host.hidden=true;}
   }};
 
@@ -1821,6 +1837,7 @@ function setCurrentLocation(lat, lng, centerMap = true) {
     )
   });
   updateDistanceDisplays();
+  window.dispatchEvent(new CustomEvent('gas:locationchange'));
   if (nearbyPanel && nearbyPanel.classList.contains('open')) renderNearbyList();
   return currentLocation;
 }
@@ -2635,10 +2652,10 @@ if (!localStorage.getItem('helpSeen')) {
 </script>
 <script src="assets/route-core.js?v=874a3207b088"></script>
 <script src="assets/route-map.js?v=54c476f92b85"></script>
-<script src="assets/route-planner.js?v=ea0351130d8a"></script>
+<script src="assets/route-planner.js?v=c93f0d7953e9"></script>
 <script src="assets/updates.js?v=db39e7a48351"></script>
 <script src="assets/visual-refresh.js?v=4bf59a2089d8"></script>
-<script src="assets/nationwide-ui.js?v=39ecc0faa2c2"></script>
+<script src="assets/nationwide-ui.js?v=e15944efee92"></script>
 <script src="assets/simple-controls.js?v=e79c532e2bc3"></script>
 <script src="assets/region-picker.js?v=285abb1dcb98"></script>
 <script src="assets/ux-fixes.js?v=7f1466bfd7ca"></script>
@@ -2647,6 +2664,6 @@ if (!localStorage.getItem('helpSeen')) {
 <script src="assets/district-context-core.js?v=0934e655aaf9"></script>
 <script src="assets/district-context.js?v=3150dc533d74"></script>
 <script src="assets/route-window.js?v=a121d6b585b3"></script>
-<script src="assets/i18n.js?v=c7300a271eb9"></script>
+<script src="assets/i18n.js?v=ea2d7cee5604"></script>
 </body>
 </html>

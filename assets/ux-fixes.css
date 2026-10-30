@@ -17,3 +17,49 @@
 .empty-actions {display:flex;flex-wrap:wrap;gap:8px;padding:0 12px 12px;}
 .empty-actions button {min-height:44px;padding:8px 12px;border:1px solid var(--line);border-radius:10px;background:var(--panel);color:var(--ink);font:400 16px/1.5 sans-serif;cursor:pointer;}
 .nearby-item {width:100%;text-align:left;font:400 16px/1.5 sans-serif;border:0;border-bottom:1px solid var(--line);background:var(--panel);color:var(--ink);}
+
+/* Task-first result sheet and station directions. */
+.national-results {width:min(390px,calc(100% - 24px));overflow:hidden;}
+.national-results>summary {display:flex;align-items:center;flex-wrap:wrap;gap:4px 8px;list-style:none;}
+.national-results>summary::-webkit-details-marker {display:none;}
+.national-results>summary::marker {content:'';}
+.results-toggle-hint {margin-left:auto;font-size:14px;font-weight:400;color:var(--muted);}
+.results-body {overflow:auto;overscroll-behavior:contain;max-height:calc(var(--results-available,560px) - 60px);scroll-padding-top:96px;}
+.results-toolbar {position:sticky;top:0;z-index:2;display:flex;align-items:end;gap:8px;padding:8px 12px;background:var(--panel);border-bottom:1px solid var(--line);}
+.results-toolbar label {flex:1;min-width:0;font:400 14px/1.5 sans-serif;color:var(--muted);}
+.results-toolbar select {display:block;min-width:0;width:100%;min-height:44px;padding:6px;border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--ink);font:400 16px/1.5 sans-serif;}
+.results-toolbar button {flex-shrink:0;min-width:44px;min-height:44px;padding:6px;border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--ink);font:400 16px/1.5 sans-serif;cursor:pointer;}
+.national-results #listScope {padding-top:8px;}
+.station-list-row {text-decoration:none;}
+.station-list-row>strong {overflow-wrap:anywhere;}
+.station-list-row .station-distance {font-weight:700;color:var(--accent);}
+.station-list-row .station-address,.station-list-row .station-payment {font-size:16px;line-height:1.5;overflow-wrap:anywhere;}
+.station-list-row .station-proof,.station-list-row .station-price {font-size:14px;line-height:1.5;color:var(--muted);overflow-wrap:anywhere;}
+.station-list-row[aria-pressed="true"] {box-shadow:inset 4px 0 var(--accent);background:var(--field);}
+.station-list-row:focus-visible {outline:3px solid var(--focus);outline-offset:-4px;}
+#stationList>p {padding:12px;}
+.results-data {border-top:1px solid var(--line);padding:0 12px;}
+.results-data>summary {min-height:44px;display:flex;align-items:center;cursor:pointer;}
+.results-data>p {padding-bottom:12px;overflow-wrap:anywhere;}
+.search-area-btn {position:absolute;z-index:110;top:12px;left:50%;transform:translateX(-50%);min-height:44px;max-width:calc(100% - 152px);padding:8px 14px;border:1px solid var(--line);border-radius:24px;background:var(--panel);color:var(--ink);box-shadow:0 2px 8px #0003;font:700 16px/1.5 sans-serif;cursor:pointer;}
+.search-area-btn[hidden] {display:none;}
+.map-area.trip-route-active .search-area-btn,.map-area:has(.info-overlay) .search-area-btn,.map-area:has(#tripPanel[open]) .search-area-btn {display:none;}
+.info-overlay .station-directions>summary {display:flex;align-items:center;justify-content:center;min-height:48px;padding:10px 12px;border-radius:10px;background:var(--primary);color:var(--on-primary);font:700 16px/1.5 sans-serif;cursor:pointer;list-style:none;}
+.station-directions>summary::-webkit-details-marker {display:none;}
+.station-directions>summary::after {content:' ＋';}
+.station-directions[open]>summary::after {content:' −';}
+.info-overlay .station-directions .route-actions {margin-top:8px;}
+.info-overlay .station-verification {border-top:1px solid var(--line);margin-top:8px;}
+.station-verification>summary {min-height:44px;padding:10px 0;cursor:pointer;font-size:16px;}
+@media(min-width:701px){#resultsSize {display:none;}}
+@media(max-width:700px){
+  .national-results {top:auto;bottom:72px;left:8px;right:8px;width:calc(100% - 16px);max-height:calc(100% - 88px);}
+  .national-results:not([open]) {left:8px;right:auto;width:auto;max-width:calc(100% - 16px);}
+  .national-results[open] {height:auto;}
+  .national-results[data-size="full"][open] {height:auto;}
+  .national-results[open]>summary {flex-shrink:0;position:relative;}
+  .results-body {height:var(--results-body-height,240px);max-height:var(--results-body-height,240px);min-height:0;}
+  .results-toolbar {padding:8px;gap:6px;}
+  .map-area:has(.national-results[open]) :is(.map-zoom-tools,#fitResultsBtn,.district-context) {visibility:hidden;}
+  .keyboard-open .national-results {display:none;}
+}
