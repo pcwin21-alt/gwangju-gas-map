@@ -224,5 +224,5 @@
   const onnuri=metadata.onnuri;
   const onnuriSummary=onnuri?.status==='confirmed' ? `공식 검색 ${onnuri.checked_at.slice(0,10)} 확인 ${onnuri.matched_count}곳 · 과거 기록 ${onnuri.unmatched_count}곳` : (onnuri?.source_date ? `공식 자료 ${onnuri.source_date} 대조 ${onnuri.matched_count}곳` : '최근 전체 갱신 미완료');
   byId('merchantFreshness').textContent=`상생카드 조회 ${metadata.saengsaeng?.checked_at?.slice(0,10)||'미확인'} · 온누리 ${onnuriSummary}${onnuri?.refresh_error ? ' · 새 조회 실패, 이전 자료 유지' : ''}`;
-  window.GasRoutePlanner={chooseStation};
+  window.GasRoutePlanner={chooseStation,clearForMapSearch(){clearResults();say('지도 검색 조건이 변경되어 경로 표시를 지웠습니다. 경유 찾기를 다시 누르면 비교할 수 있습니다.');}};
 })();

@@ -6,7 +6,7 @@ function fixture(ready=true) {
  let level=8,filters=0,refreshes=0,active=false;
  const byId=id=>{assert.ok(elements[id],`Missing HTML control ${id}`);return elements[id];};
  const document={documentElement:{dataset:{theme:'dark'}},getElementById:byId,querySelector:s=>s==='dialog[open]'?null:elements[s==='.app'?'app':'area'],addEventListener:(k,v)=>docListeners[k]=v};
- const context={window:{addEventListener:(k,v)=>windowListeners[k]=v,kakao:ready?{maps:{}}:null,GasRouteMap:{refresh(){refreshes++;},isActive:()=>active}},document,map:{getLevel:()=>level,setLevel:v=>level=v},applyFilters(){filters++;}};
+ const context={window:{addEventListener:(k,v)=>windowListeners[k]=v,kakao:ready?{maps:{}}:null,GasRouteMap:{refresh(){refreshes++;},isActive:()=>active},GasRoutePlanner:{clearForMapSearch(){active=false;}}},document,map:{getLevel:()=>level,setLevel:v=>level=v},applyFilters(){filters++;}};
  vm.runInNewContext(fs.readFileSync('assets/map-controls.js','utf8'),context);
  return {elements,docListeners,windowListeners,context,level:()=>level,filters:()=>filters,refreshes:()=>refreshes,setActive:v=>active=v};
 }
@@ -27,4 +27,8 @@ test('filter changes keep the single-map route markers separate and clear restor
 });
 test('missing Kakao SDK keeps zoom controls disabled without loading an alternative engine',()=>{
  const f=fixture(false);assert.equal(f.elements.mapZoomIn.disabled,true);assert.equal(f.elements.mapZoomOut.disabled,true);
+});
+test('an explicit main-map filter change exits route display so the selected region can be shown',()=>{
+ const f=fixture();f.setActive(true);f.context.applyFilters();
+ assert.equal(f.context.window.GasRouteMap.isActive(),false);assert.equal(f.filters(),1);assert.equal(f.refreshes(),1);
 });
