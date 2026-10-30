@@ -19,3 +19,12 @@
 - 배포 bcd2564 검수: 390×844 주유소 입력 탭 focus 확인, 지도 드래그 후 BODY로 focus 해제, 목적지 입력/Enter 실제 검색 결과 확인, 출발지 직접 탭 focus 확인.
 - 390×420 축소 검수 중 출발지 input이 22px 폭으로 렌더되는 기존 CSS 충돌 확인. visual-refresh의 flex용 width:0을 새 grid 배치에서 width:100%로 덮어씀. viewport/focus 변경 후 활성 입력이 내부 스크롤 영역에 보이도록 보정.
 - 주유소 목록 선택 뒤 상세창이 지도 위쪽으로 잘리고 목록이 상세를 가리는 문제 확인. 선택 시 목록을 접고 상세창을 지도 안쪽으로 이동, 상세 내용은 지도 높이 안에서 스크롤하도록 보완.
+
+## 사용자 환경 답변 후 보완
+- 이전 질문의 2번=안드로이드 Chrome, 3번=카카오톡·네이버 등의 앱 내 브라우저. 사용자가 두 환경 모두라고 응답. iPhone Safari 사용으로 해석하지 않음.
+- 같은 canonical Project Execution/Brain/Source/Eval 및 delivery-loop/KRDS 계약을 유지하는 후속 입력 호환성 수정. 새로운 데이터·가격·가맹점 변경 제외. 갱신된 origin/main 가맹점 기록을 먼저 fast-forward하여 보존.
+- 회전 지도에 별도로 있던 pointer 전용 blur를 제거하고 지도 영역 전체의 공통 pointerdown+touchstart 처리로 통합. PointerEvent가 선언된 환경에서도 touch fallback 사용, 입력 요소 자체 터치는 그대로 통과. 기본 제스처 preventDefault 없음.
+- visualViewport만 축소되는 경우와 window.innerHeight까지 함께 축소되는 경우를 모두 평상시 높이와 비교. readonly clipboard textarea는 편집 중으로 간주하지 않음. viewport scroll/pan 때 입력 영역의 실제 가시 범위를 기준으로 내부 스크롤만 보정하며 focus를 강제하지 않음.
+- 제보/댓글 패널은 키보드가 열린 가시 높이 내로 제한하고 내부 스크롤 허용.
+- 근거: https://developer.chrome.com/blog/viewport-resize-behavior (Android Chrome/WebView의 viewport 동작 차이), https://developer.mozilla.org/en-US/docs/Web/API/VisualViewport (height/offsetTop/scroll).
+- 추가 검사: touch fallback, 두 viewport 동시 축소, readonly 제외, viewport pan 시 입력 가시 범위. 관련 Node 13개 통과. 전체 CI/화면 후속 검수 대기. 안드로이드 실제 OS 키보드와 카카오톡/네이버 앱의 WebView 재현은 이 Windows 브라우저로 검증 불가.

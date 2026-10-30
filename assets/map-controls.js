@@ -166,7 +166,6 @@
     if(enabled)vector.easeTo({zoom:Math.max(3,Math.min(18,vector.getZoom()+delta)),duration:duration()});
     else if(window.kakao?.maps)map.setLevel(Math.max(1,Math.min(14,map.getLevel()-delta)));
   });
-  container.addEventListener('pointerdown',()=>{if(document.activeElement?.matches('input,textarea'))document.activeElement.blur();},{capture:true,passive:true});
   function expand(force) {
     const app=document.querySelector('.app'),expanded=typeof force==='boolean'?force:!app.classList.contains('map-expanded');
     app.classList.toggle('map-expanded',expanded);byId('expandMapBtn').setAttribute('aria-pressed',String(expanded));
