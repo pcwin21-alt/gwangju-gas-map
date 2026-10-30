@@ -6,6 +6,8 @@
 .app input[type="search"]::-webkit-search-cancel-button {display:none;}
 .trip-panel input,.report-panel input,.react-panel input,.react-panel textarea {min-height:44px;font-size:16px!important;scroll-margin-block:12px;}
 .keyboard-open .trip-body {max-height:max(96px,calc(var(--app-height) - 220px));}
+.keyboard-open :is(.report-panel,.react-panel) {height:var(--app-height);bottom:auto;}
+.keyboard-open :is(.report-panel-box,.react-panel-box) {max-height:calc(var(--app-height) - 24px);overflow-y:auto;overscroll-behavior:contain;}
 .controls .controls-top {display:flex;flex-wrap:nowrap;gap:8px;}
 .controls .search-box {flex:1;max-width:none;}
 .controls .controls-bottom {display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;}
