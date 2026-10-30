@@ -760,7 +760,8 @@
   <link rel="stylesheet" href="assets/theme.css?v=0cb15c84660a">
   <link rel="stylesheet" href="assets/route-window.css?v=5c5d29cd95e7">
   <link rel="stylesheet" href="assets/district-context.css?v=54fc82f1192e">
-  <script src="assets/nationwide.js?v=e9e6daa76e35"></script>
+  <link rel="stylesheet" href="assets/region-picker.css?v=3198cfebca29">
+  <script src="assets/nationwide.js?v=e1738fc77729"></script>
 </head>
 <body>
 <div class="app">
@@ -871,13 +872,15 @@
         <button class="search-clear" id="searchClear" title="지우기">✕</button>
         <div class="no-result" id="noResult">검색 결과 없음</div>
       </div>
-      <span class="count-badge" id="countBadge">0개</span>
-    </div>
-    <div class="controls-bottom">
-      <select id="regionSelect" aria-label="시도 선택"><option value="all">전국</option></select>
+      <button id="regionOpen" type="button" aria-haspopup="dialog" aria-controls="regionDialog" aria-label="지역 선택"><span id="regionLabel" data-no-i18n>광주</span><span aria-hidden="true">▾</span></button>
       <button id="filtersToggle" type="button" aria-expanded="false" aria-controls="mapFilters"><span>필터</span><span id="filterCount" hidden></span></button>
     </div>
-    <p id="activeFilters" class="active-filters" hidden></p>
+    <div class="controls-status"><span class="count-badge" id="countBadge">0개</span><p id="activeFilters" class="active-filters" hidden></p></div>
+    <dialog id="regionDialog" aria-labelledby="regionTitle">
+      <div class="region-heading"><h2 id="regionTitle">지역 선택</h2><button id="regionClose" type="button" aria-label="지역 선택 닫기">닫기</button></div>
+      <select id="regionSelect" aria-label="시도 선택" hidden><option value="all">전국</option></select>
+      <div id="regionOptions" class="region-options" role="group" aria-label="시도 선택"></div>
+    </dialog>
     <section id="mapFilters" class="map-filters" aria-label="검색 필터" hidden>
       <div class="filters-heading"><h2>검색 필터</h2><button id="filtersReset" type="button">조건 초기화</button></div>
       <div class="filter-group" role="group" aria-label="결제수단">
@@ -2625,13 +2628,14 @@ if (!localStorage.getItem('helpSeen')) {
 <script src="assets/route-planner.js?v=2cf03957534b"></script>
 <script src="assets/updates.js?v=db39e7a48351"></script>
 <script src="assets/visual-refresh.js?v=4bf59a2089d8"></script>
-<script src="assets/nationwide-ui.js?v=a92d6bcda631"></script>
+<script src="assets/nationwide-ui.js?v=08269461a55e"></script>
 <script src="assets/simple-controls.js?v=e79c532e2bc3"></script>
+<script src="assets/region-picker.js?v=a1be8bd19a2b"></script>
 <script src="assets/input-ux.js?v=1809ebe00951"></script>
 <script src="assets/map-controls.js?v=4a8ef78b0524"></script>
 <script src="assets/district-context-core.js?v=0934e655aaf9"></script>
 <script src="assets/district-context.js?v=3150dc533d74"></script>
 <script src="assets/route-window.js?v=a121d6b585b3"></script>
-<script src="assets/i18n.js?v=67037eccc03c"></script>
+<script src="assets/i18n.js?v=402ab411d45a"></script>
 </body>
 </html>

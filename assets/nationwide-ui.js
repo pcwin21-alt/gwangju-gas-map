@@ -8,7 +8,7 @@
     GasNational.regions.forEach(name=>regionInput.add(new Option(name,name)));
     let payment='all';
     const url=new URL(location.href);
-    if(GasNational.regions.includes(url.searchParams.get('region')))regionInput.value=url.searchParams.get('region');
+    regionInput.value=GasNational.regionFromURL(url.searchParams.get('region'));
     if(['onnuri','saengsaeng'].includes(url.searchParams.get('payment')))payment=url.searchParams.get('payment');
     if(['paper','digital'].includes(url.searchParams.get('method')))document.getElementById('onnuriMethod').value=url.searchParams.get('method');
     if(['liquid','lpg'].includes(url.searchParams.get('fuel')))document.getElementById('fuelSelect').value=url.searchParams.get('fuel');
@@ -65,7 +65,7 @@
   function syncURL() {
     const u=new URL(location.href);
     for(const k of ['region','method','fuel']) {
-      if(state[k]==='all')u.searchParams.delete(k);else u.searchParams.set(k,state[k]);
+      if(state[k]==='all'&&k!=='region')u.searchParams.delete(k);else u.searchParams.set(k,state[k]);
     }
     if(currentFilter==='all')u.searchParams.delete('payment');else u.searchParams.set('payment',currentFilter);
     if(currentDistrict==='all')u.searchParams.delete('district');else u.searchParams.set('district',currentDistrict);
@@ -118,13 +118,13 @@
   document.querySelectorAll('.filter-btn').forEach(el=>el.addEventListener('click',syncURL));
   document.getElementById('districtSelect').addEventListener('change',syncURL);
   document.getElementById('resetBtn').addEventListener('click',()=>{
-    regionInput.value=method.value=fuel.value='all';change();
+    regionInput.value='광주';method.value=fuel.value='all';change();
   });
   function restore() {
     restoring=true;
     const url=new URL(location.href);
     const district=url.searchParams.get('district');
-    regionInput.value=GasNational.regions.includes(url.searchParams.get('region'))?url.searchParams.get('region'):'all';
+    regionInput.value=GasNational.regionFromURL(url.searchParams.get('region'));
     method.value=['paper','digital'].includes(url.searchParams.get('method'))?url.searchParams.get('method'):'all';
     fuel.value=['liquid','lpg'].includes(url.searchParams.get('fuel'))?url.searchParams.get('fuel'):'all';
     const payment=url.searchParams.get('payment');
