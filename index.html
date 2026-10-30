@@ -1285,7 +1285,7 @@ function setDistrictHighlight(districtName) {
       });
       if (!districtPolygonMap[gu]) districtPolygonMap[gu] = [];
       districtPolygonMap[gu].push(polygon);
-      kakao.maps.event.addListener(polygon, 'click', function() { triggerDistrictSelect(gu); });
+      // Boundaries are informational; only explicit filter controls may refit the map.
     });
   });
 })();
