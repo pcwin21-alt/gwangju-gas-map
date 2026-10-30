@@ -32,6 +32,7 @@ test('details show only valid fuel prices and only supported stations can be cho
  context.buildInfoHtml({id:'a',name:'충전소',fuel_kind:'lpg',payment_types:['onnuri'],route_eligible:true});
  const price=nodes.find(n=>n.innerHTML?.includes('price-item')).innerHTML;
  assert.match(price,/LPG/);assert.match(price,/900원\/L/);assert.doesNotMatch(price,/휘발유|경유|1,800/);
+ assert.match(price,/2026-10-30/);
  nodes.find(n=>n.className==='route-btn station-via').listeners.click();assert.deepEqual(chosen,['a']);
  nodes.length=0;context.PRICES.a={'휘발유':-10,'경유':NaN};
  context.buildInfoHtml({id:'a',name:'주유소',fuel_kind:'liquid',payment_types:[]});
