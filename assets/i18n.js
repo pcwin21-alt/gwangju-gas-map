@@ -28,6 +28,10 @@
     '시·도':'Province', '온누리 유형':'Onnuri type','유종':'Fuel','전국':'All regions',
     '디지털':'Digital','지류':'Paper','지류·디지털':'Paper · Digital','휘발유·경유':'Petrol · Diesel','전체 시·군·구':'All districts',
     '조건에 맞는 주유소':'Filtered stations','선택한 지역·검색어·필터에 따른 목록':'Matches your selected region, search and filters','더 보기':'Show more','공식 가맹점 자료':'Official merchant data',
+    '범위':'Scope','정렬':'Sort','선택 지역 전체':'Selected region','지도에서 찾은 범위':'Searched map area','이름순':'Name','내 위치 가까운 순':'Nearest to me','내 위치 직선거리순':'Straight-line distance from me',
+    '이 지역에서 찾기':'Search this area','선택 지역 전체 보기':'Show selected region','크게':'Expand','작게':'Reduce','목록 전체로 펼치기':'Expand station list','목록 절반으로 줄이기':'Reduce station list','열기/접기':'Open / close',
+    '여기로 길찾기':'Get directions here','확인 정보':'Verification details','자료 확인 정보':'Data status','창 설정':'Window settings','조건에 맞는 주유소가 없습니다.':'No stations match your filters.',
+    '지도 대신 주소 목록':'Address list without map','목록은 찾기를 누른 범위':'List uses your last searched area','기준일 미확인':'Source date unknown','상세주소 미확인':'Street address unverified','결제 유형 미확인':'Payment type unverified',
     '조건에 맞는 확인된 등록이 없습니다. 지역이나 결제 유형을 바꿔보세요.':'No verified listings match. Try another region or payment type.',
     '공식 온누리 자료의 후보 중 상세주소 또는 자동차 주유 업종 확인이 필요한 기록입니다. 지도와 길찾기에서는 제외합니다.':'These official-file candidates still need a street address or vehicle-fueling category check. They are excluded from the map and directions.',
 
@@ -149,6 +153,18 @@
     if (/^지도 표시 \d+곳$/.test(text)) result = text.replace(/^지도 표시 (\d+)곳$/, '$1 mapped stations');
     if (/^(?:추가|주소(?:·업종)?) 확인 대기 \d+건$/.test(text)) result = text.replace(/^(?:추가|주소(?:·업종)?) 확인 대기 (\d+)건$/, '$1 locations awaiting review');
     if (/^공식 온누리 자료 /.test(text)) result = text.replace('공식 온누리 자료 ', 'Official Onnuri source: ');
+    if (/^(전체|찾은 범위) \d+곳$/.test(text)) result=text.replace(/^(전체|찾은 범위) (\d+)곳$/,(_,scope,count)=>`${scope==='전체'?'All matches':'Searched area'}: ${count}`);
+    if (/^\d+곳 표시$/.test(text)) result=text.replace(/^(\d+)곳 표시$/,'$1 shown');
+    if (/^현재 지도 안 \d+곳$/.test(text)) result=text.replace(/^현재 지도 안 (\d+)곳$/,'$1 in current map view');
+    if (/^(.+) 조건 결과 \d+곳$/.test(text)) result=text.replace(/^(.+) 조건 결과 (\d+)곳$/,(_,region,count)=>`${messages[region]||region}: ${count} matches`);
+    if (/^(.+) 조건 결과$/.test(text)) result=text.replace(/^(.+) 조건 결과$/,(_,region)=>`${messages[region]||region} matches`);
+    if (/^내 위치에서 직선 [\d.]+(m|km)$/.test(text)) result=text.replace('내 위치에서 직선 ','Straight-line from me: ');
+    if (/^유가 /.test(text)) result=text.replace('유가 ','Fuel price as of ');
+    if (/^KB국민카드 조회 /.test(text)) result=text.replace('KB국민카드 조회 ','KB Card checked: ');
+    if (/^추가 \d+분 미만$/.test(text)) result=text.replace(/^추가 (\d+)분 미만$/,'Detour under $1 min');
+    if (/^경로 \d+km 이내$/.test(text)) result=text.replace(/^경로 (\d+)km 이내$/,'Within $1km of route');
+    if (text==='조건 변경')result='Change limits';
+    if (text==='지류·QR 별도 확인')result='Check paper and QR separately';
     if (result === undefined) {
       if ((text.includes(' / ') || text.includes(' · ')) && !text.startsWith('추가 이동 약 ')) result = text.split(/( \/ | · )/).map(part => /[가-힣]/.test(part) ? translate(part) : part).join('');
       else if (/^\d+(곳|개)$/.test(text)) result = text.replace(/(곳|개)$/, Number.parseInt(text,10) === 1 ? ' station' : ' stations');
