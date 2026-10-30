@@ -30,3 +30,10 @@ test('nationwide selection and browser back update the compact label and current
  const f=fixture();f.elements.regionOpen.emit('click');f.button('all').emit('click');assert.equal(f.input.value,'all');assert.equal(f.elements.regionLabel.textContent,'전국');
  f.input.value='서울';f.windowEvents.popstate();assert.equal(f.elements.regionLabel.textContent,'서울');assert.equal(f.button('서울').attributes['aria-pressed'],'true');assert.equal(f.button('all').attributes['aria-pressed'],'false');
 });
+test('keyboard Tab and Shift-Tab wrap between the dialog last and first controls',()=>{
+ const f=fixture();let prevented=0;
+ f.dialog.emit('keydown',{key:'Tab',target:f.button('제주'),preventDefault(){prevented++;}});
+ assert.equal(f.elements.regionClose.focused,true);
+ f.dialog.emit('keydown',{key:'Tab',shiftKey:true,target:f.elements.regionClose,preventDefault(){prevented++;}});
+ assert.equal(f.button('제주').focused,true);assert.equal(prevented,2);assert.equal(f.changes(),0);
+});
