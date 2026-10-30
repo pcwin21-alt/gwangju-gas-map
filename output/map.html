@@ -1981,6 +1981,8 @@ function buildRankList(fuel) {
 
   // 항목 클릭 → 지도 이동
   el.querySelectorAll('.rank-item').forEach(item => {
+    item.setAttribute('role','button');item.tabIndex=0;
+    item.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();item.click();}});
     item.addEventListener('click', function() {
       const id = this.dataset.id;
       const found = allMarkers.find(m => m.station.id === id);
@@ -2049,7 +2051,7 @@ function renderNearbyList() {
   }
   nearbyList.innerHTML = '';
   items.forEach(item => {
-    const row = document.createElement('div');
+    const row = document.createElement('button');row.type='button';
     row.className = 'nearby-item';
     row.innerHTML = `
       <div class="nearby-dist">${formatDistance(item.dist)}</div>
