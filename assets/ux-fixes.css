@@ -12,7 +12,8 @@
 .map-area:has(.info-overlay) :is(.map-view-tools,.trip-launcher) {visibility:hidden;}
 #stationDetails {position:absolute;z-index:140;top:12px;right:12px;bottom:12px;width:min(340px,calc(100% - 24px));pointer-events:none;}
 #stationDetails[hidden] {display:none;}
-#stationDetails .info-overlay {width:100%;max-width:none;max-height:100%;overflow:auto;pointer-events:auto;box-sizing:border-box;}
+#stationDetails .info-overlay {position:relative;inset:auto;transform:none;width:100%;max-width:none;max-height:100%;overflow:auto;pointer-events:auto;box-sizing:border-box;}
+#stationDetails .info-overlay::after {display:none;}
 .empty-actions {display:flex;flex-wrap:wrap;gap:8px;padding:0 12px 12px;}
 .empty-actions button {min-height:44px;padding:8px 12px;border:1px solid var(--line);border-radius:10px;background:var(--panel);color:var(--ink);font:400 16px/1.5 sans-serif;cursor:pointer;}
 .nearby-item {width:100%;text-align:left;font:400 16px/1.5 sans-serif;border:0;border-bottom:1px solid var(--line);background:var(--panel);color:var(--ink);}
