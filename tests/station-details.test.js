@@ -10,3 +10,12 @@ test('explicit station close removes the overlay and restores an accessible map 
  assert.equal(context.activeOverlay,null);assert.equal(removed,1);assert.equal(focused,1);
  assert.ok(nodes.some(n=>n.attributes['aria-label']==='복사: 테스트 주소'));
 });
+test('details stay in the viewport and an old station cannot clear a newer station card',()=>{
+ const html=fs.readFileSync('output/map.html','utf8');
+ const source=html.match(/const content=buildInfoHtml\(station\);\s*const overlay=\{setMap\(target\)\{[\s\S]*?\}\};/)[0];
+ const host={hidden:true,firstElementChild:null,replaceChildren(node){this.firstElementChild=node||null;}};
+ const make=id=>vm.runInNewContext(source+';overlay;',{station:{id},buildInfoHtml:s=>s,document:{getElementById:()=>host}});
+ const a=make('a'),b=make('b');a.setMap({});assert.equal(host.firstElementChild.id,'a');assert.equal(host.hidden,false);
+ b.setMap({});a.setMap(null);assert.equal(host.firstElementChild.id,'b');assert.equal(host.hidden,false);
+ b.setMap(null);assert.equal(host.firstElementChild,null);assert.equal(host.hidden,true);
+});

@@ -1119,6 +1119,7 @@
     </div>
   </details>
     <div id="map"></div>
+    <div id="stationDetails" hidden></div>
     <div id="districtContext" class="district-context" role="status" aria-live="polite" hidden><strong id="districtContextName"></strong><span id="districtContextNear"></span></div>
     <div class="map-view-tools" role="group" aria-label="지도 보기">
       <button id="expandMapBtn" type="button" aria-label="지도 크게 보기" title="지도 크게 보기" aria-pressed="false">⛶</button>
@@ -1619,7 +1620,6 @@ let reportMode = false;
 let reportPin = null;
 
 function closeStationOverlay(restoreFocus=false) {
-  if(activeOverlay&&location.search.includes('debug=ux'))console.debug('[station-close]',new Error().stack);
   if(activeOverlay)activeOverlay.setMap(null);
   activeOverlay=null;
   if(restoreFocus)document.getElementById('fitResultsBtn').focus({preventScroll:true});
@@ -1630,18 +1630,6 @@ function showStationOverlay(overlay) {
   document.getElementById('nationalResults').open = false;
   overlay.setMap(map);
   activeOverlay = overlay;
-  requestAnimationFrame(() => {
-    if (activeOverlay !== overlay) return;
-    const content = document.querySelector('#map .info-overlay');
-    const area = document.getElementById('map');
-    if (!content) return;
-    content.style.maxHeight = Math.max(96, area.clientHeight - 24) + 'px';
-    content.style.overflowY = 'auto';
-    const box = content.getBoundingClientRect(), bounds = area.getBoundingClientRect();
-    const dx = box.left < bounds.left + 12 ? box.left - bounds.left - 12 : Math.max(0, box.right - bounds.right + 12);
-    const dy = box.top < bounds.top + 12 ? box.top - bounds.top - 12 : Math.max(0, box.bottom - bounds.bottom + 12);
-    if (dx || dy) map.panBy(dx, dy);
-  });
 }
 
 STATIONS.forEach(station => {
@@ -1654,13 +1642,13 @@ STATIONS.forEach(station => {
     map: map,
   });
 
-  const overlay = new kakao.maps.CustomOverlay({
-    content: buildInfoHtml(station),
-    position: new kakao.maps.LatLng(station.lat, station.lng),
-    xAnchor: 0.5,
-    yAnchor: 1,
-    zIndex: 30,
-  });
+  // Details belong to the viewport, so the SDK cannot cull a tall popup's anchor.
+  const content=buildInfoHtml(station);
+  const overlay={setMap(target){
+    const host=document.getElementById('stationDetails');
+    if(target){host.replaceChildren(content);host.hidden=false;}
+    else if(host.firstElementChild===content){host.replaceChildren();host.hidden=true;}
+  }};
 
   kakao.maps.event.addListener(marker, 'click', function() {
     if (reportMode) return;
