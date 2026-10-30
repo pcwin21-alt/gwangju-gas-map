@@ -1,0 +1,38 @@
+{
+  "checked_at": "2026-10-30T18:49:35+09:00",
+  "implementation_commit": "1a90119d6ef10b0a026d9adb8f43b32d4098aca1",
+  "public_url": "https://pcwin21-alt.github.io/gwangju-gas-map/?region=%EA%B4%91%EC%A3%BC&payment=onnuri&v=1a90119",
+  "public_http_status": 200,
+  "public_station_data_equal_to_local": true,
+  "stored_station_rows": 220,
+  "new_station_id": "onnuri:kb:000000084182837",
+  "ci": "https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41035789245",
+  "deploy": "https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41035789233",
+  "pages": "https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41035808463",
+  "checks": {
+    "python_tests": 104,
+    "node_tests": 74,
+    "prepare_site": true,
+    "diff_check": true
+  },
+  "browser": {
+    "engine": "Chrome extension (in-app control unavailable)",
+    "observed": "Gwangju filter 131, search Donghaeng one result, exact address and KB date/method scope in details, Naver/Kakao navigation target coordinates",
+    "screenshot": "C:/Users/unw/OneDrive/Documents/Playground/output/onnuri-donghaeng-20261030.png"
+  },
+  "protected_hashes": {
+    "CLAUDE.md": "50e18c2d84c1fa75af7776822ce5b3bd17450b62f6e6f964df925e05c95034fb",
+    "output_check.txt": "9b50b5cc28c3cc916bb5026bf787eb8fecebd23e720cd4bd78f7cdc90cb6911c",
+    "output\\grid_search\\progress_before_retry_20261026.json": "0a60cdd18bd4d7f1be17fb82a865ce615218b253776539da9b7d5b5129e1316b",
+    "docs\\nationwide-onnuri\\evidence.json": "00524a64f24fba2452fc5297f8dbb7fcadff057d99b40c2a7775eb3daddc87d7",
+    "docs\\nationwide-onnuri\\EXPANSION_DESIGN.md": "4e6cf0380d575ee1fc4331a665330d8b80ab61fd760e0c873cb38ff1deddce69",
+    "docs\\nationwide-onnuri\\opportunity-discovery.md": "d6c492db8576bdd64b8a0398fc698bd424aaa0b071e22eeff057bdb7588534eb",
+    "docs\\nationwide-onnuri\\routing-and-evaluation.md": "26479c6585bce68b28a33d214582c6f70e8496933a444838ab58df57cabfe81b",
+    "docs\\nationwide-onnuri\\website-experiment-log.md": "635b389074611290890ff56cab21c867f65914be73dd8acc5fc0633c7d536be6",
+    "docs\\nationwide-onnuri\\website-product-brief.md": "eb6793342ce70db4c27e095c8559e4c4b9aa15779437e5c273f448fef08f4614",
+    "docs\\nationwide-onnuri\\website-reference-analysis.md": "c7101a7a61b13a52cff7ff1ca247e0b78c826ec99a863e675521106d2b92adc7",
+    "docs\\nationwide-onnuri\\website-screen-spec.md": "323cc623e9191346e99d47cd16e1902119f29f74ff8dc820b129502c29624c2e"
+  },
+  "original_repository_sync": "implementation fast-forwarded to 1a90119; protected user files unchanged",
+  "global_eval": "pass: scoped discovery, reviewed publication, tests, CI, rendered search/detail, public station data readback, protected-file hashes"
+}
