@@ -6,6 +6,8 @@
 .national-select select,.controls-bottom select{min-height:44px;max-width:100%;font-size:16px;border:1px solid var(--line);border-radius:10px;background:#fff;padding:6px 9px;color:var(--ink);}
 .national-results{position:absolute;z-index:5;top:12px;right:12px;width:min(340px,calc(100% - 24px));max-height:calc(100% - 76px);overflow:auto;background:white;border:1px solid var(--line);border-radius:12px;box-shadow:0 3px 14px #18243c14;}
 .national-results>summary{padding:12px;min-height:44px;font-size:16px;font-weight:700;cursor:pointer;}
+.national-results[open]{z-index:125;}
+.national-results[open]>summary{position:sticky;top:0;z-index:1;background:var(--panel);border-bottom:1px solid var(--line);}
 .national-results p,.national-results li{font-size:16px;line-height:1.5;}
 .national-results #nationalSummary{margin:0;padding:0 12px 10px;}
 .national-results #listScope{margin:0;padding:0 12px 8px;color:var(--muted);overflow-wrap:anywhere;}
