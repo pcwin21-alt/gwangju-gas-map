@@ -27,11 +27,16 @@ test('empty results keep map unchanged and a single result gets useful zoom',()=
  assert.equal(one.calls.find(c=>c[0]==='level')[1],4);
  assert.equal(one.calls.some(c=>c[0]==='bounds'),false);
 });
-test('height resize preserves current view while width resize refits the selected results',()=>{
+test('keyboard height changes and phone rotation preserve zoom and the panned center',()=>{
  const f=fixture([{lat:35.1,lng:126.8},{lat:35.2,lng:126.9}]);
  f.container.clientHeight=250;f.resize();f.flush();
  assert.equal(f.calls.find(c=>c[0]==='center')[1],f.center);
  assert.equal(f.calls.some(c=>c[0]==='bounds'),false);
  f.container.clientWidth=800;f.resize();f.flush();
+ assert.equal(f.calls.filter(c=>c[0]==='center').length,2);
+ assert.equal(f.calls.every(c=>c[0]!=='center'||c[1]===f.center),true);
+ assert.equal(f.calls.some(c=>c[0]==='bounds'||c[0]==='level'),false);
+ // Selecting Result View still deliberately fits all filtered stations.
+ f.api.fit();f.flush();
  assert.equal(f.calls.some(c=>c[0]==='bounds'),true);
 });
