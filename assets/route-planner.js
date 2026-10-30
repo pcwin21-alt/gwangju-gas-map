@@ -121,7 +121,9 @@
     if(start) return;
     if(byId('tripStart').value.trim()) throw new Error('출발지 검색 결과를 먼저 선택하세요.');
     const version = generation;
-    const point=await locateUser({center:false});
+    let point;
+    try{point=await locateUser({center:false,alertOnFail:false});}
+    catch(e){throw new Error('현재 위치를 확인하지 못했습니다. 출발지를 직접 검색하거나 위치 권한을 확인하세요.');}
     if (version !== generation) throw new DOMException('취소됨','AbortError');
     selectPoint('start',{...point,name:'내 위치'},false);
   }

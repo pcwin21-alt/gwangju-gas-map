@@ -1499,15 +1499,12 @@ function buildInfoHtml(station) {
     let lastRun = 0;
     const run = e => {
       e.stopPropagation();
+      if (!isMobileDevice()) return; // Keep the map/session open via the link's new tab.
       e.preventDefault();
       const now = Date.now();
       if (now - lastRun < 650) return;
       lastRun = now;
-      if (isMobileDevice()) {
-        action();
-        return;
-      }
-      window.location.href = el.href;
+      action();
     };
     el.addEventListener('click', run);
   }
@@ -1590,6 +1587,7 @@ function buildInfoHtml(station) {
   kakaoRouteBtn.href = getKakaoRouteUrl(station);
   kakaoRouteBtn.textContent = '카카오맵';
   kakaoRouteBtn.title = '카카오맵 길찾기';
+  kakaoRouteBtn.target = '_blank';kakaoRouteBtn.rel = 'noopener';
   bindRouteLink(kakaoRouteBtn, () => openKakaoMap(station));
 
   const naverRouteBtn = document.createElement('a');
@@ -1597,6 +1595,7 @@ function buildInfoHtml(station) {
   naverRouteBtn.href = getNaverMapWebUrl(station);
   naverRouteBtn.textContent = '네이버지도';
   naverRouteBtn.title = '네이버지도 길찾기';
+  naverRouteBtn.target = '_blank';naverRouteBtn.rel = 'noopener';
   bindRouteLink(naverRouteBtn, () => openNaverMap(station));
 
   routeActions.appendChild(kakaoRouteBtn);
@@ -1758,10 +1757,11 @@ const searchClear = document.getElementById('searchClear');
 let searchFitTimer;
 
 // A later direct gesture takes precedence over pending search/route auto-fit.
-for(const type of ['pointerdown','touchstart','wheel'])document.querySelector('.map-area').addEventListener(type,()=>{
+for(const type of ['pointerdown','touchstart','wheel'])document.querySelector('.map-area').addEventListener(type,event=>{
   clearTimeout(searchFitTimer);mapViewport.cancelFit?.();window.GasRouteMap?.cancelFit?.();
+  // Dismiss on the next real outside gesture, not a delayed SDK click from opening.
+  if(!event.target.closest('.info-overlay'))closeStationOverlay();
 },{capture:true,passive:true});
-kakao.maps.event.addListener(map,'click',()=>closeStationOverlay());
 
 function updateStationSearch(event) {
   if(event?.isComposing)return;
@@ -1839,8 +1839,8 @@ function setCurrentLocation(lat, lng, centerMap = true) {
 function locateUser(options = {}) {
   return new Promise((resolve, reject) => {
     if (!navigator.geolocation) {
-      alert('이 브라우저는 위치 기능을 지원하지 않습니다.');
-      reject(new Error('geolocation unavailable'));
+      if(options.alertOnFail!==false)alert('이 브라우저는 위치 기능을 지원하지 않습니다.');
+      reject(new Error('위치 기능을 사용할 수 없습니다. 출발지를 직접 검색하세요.'));
       return;
     }
     const btn = options.button || null;
