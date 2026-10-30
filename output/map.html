@@ -1127,21 +1127,17 @@
     </div>
     <div class="map-zoom-tools" role="group" aria-label="지도 확대 축소"><button id="mapZoomIn" type="button" aria-label="지도 확대" title="지도 확대">＋</button><button id="mapZoomOut" type="button" aria-label="지도 축소" title="지도 축소">−</button></div>
     <details class="national-results" id="nationalResults" data-size="half">
-      <summary>조건에 맞는 주유소 <span id="listCount"></span><span class="results-toggle-hint" aria-hidden="true">열기/접기</span></summary>
+      <summary>주유소 <span id="listCount"></span></summary>
       <div class="results-body" id="resultsBody">
       <div class="results-toolbar"><label>범위<select id="resultsScope"><option value="region">선택 지역 전체</option><option value="map">지도에서 찾은 범위</option></select></label><label>정렬<select id="resultsOrder"><option value="name">이름순</option><option value="distance" disabled>내 위치 가까운 순</option></select></label><button id="resultsSize" type="button" aria-label="목록 전체로 펼치기" aria-expanded="false">크게</button></div>
       <p id="listScope">선택한 지역·검색어·필터에 따른 목록</p>
       <p id="nationalSummary" role="status" aria-live="polite"></p>
       <div id="stationList"></div><button id="moreStations" type="button">더 보기</button>
       <details class="results-data"><summary>자료 확인 정보</summary><p id="resultDataStatus"></p></details>
-      <details class="pending-section"><summary id="pendingSummary">주소·업종 확인 대기</summary>
-        <p>공식 온누리 자료의 후보 중 상세주소 또는 자동차 주유 업종 확인이 필요한 기록입니다. 지도와 길찾기에서는 제외합니다.</p>
-        <ul id="pendingList"></ul><a href="https://www.data.go.kr/data/3060079/fileData.do" target="_blank" rel="noopener">공식 가맹점 자료</a>
-      </details>
       </div>
     </details>
       <button class="search-area-btn" id="searchAreaBtn" type="button" hidden>이 지역에서 찾기</button>
-      <button class="fit-results-btn" id="fitResultsBtn" type="button">결과 보기</button>
+      <button class="fit-results-btn" id="fitResultsBtn" type="button" aria-label="조건에 맞는 주유소 위치로 지도 맞추기">결과 위치</button>
       <button class="map-location-btn" id="myLocBtn" type="button" title="내 위치로 이동" aria-label="내 위치로 이동" aria-busy="false">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2.5" fill="currentColor" stroke="none"/><path d="M12 2v4m0 12v4M2 12h4m12 0h4" stroke-linecap="round"/></svg>
       </button>
@@ -1453,18 +1449,16 @@ function distanceKm(a, b) {
 }
 
 function updateDistanceElement(el) {
-  if (!currentLocation) {
-    el.textContent = '내 위치 확인 전';
-    el.classList.add('muted');
-    return;
-  }
+  const row = el.closest('.distance-row');
   const lat = Number(el.dataset.lat);
   const lng = Number(el.dataset.lng);
-  if (!Number.isFinite(lat) || !Number.isFinite(lng)) {
-    el.textContent = '-';
+  if (!currentLocation || !Number.isFinite(lat) || !Number.isFinite(lng)) {
+    if(row)row.hidden = true;
+    el.textContent = '';
     el.classList.add('muted');
     return;
   }
+  if(row)row.hidden = false;
   const km = distanceKm(currentLocation, { lat, lng });
   el.textContent = formatDistance(km);
   el.classList.remove('muted');
@@ -1476,31 +1470,15 @@ function updateDistanceDisplays() {
 }
 
 function buildInfoHtml(station) {
-  const pt = station.payment_types || [];
-  const tags = [];
-  if (pt.includes('saengsaeng')) tags.push(`<span class="tag saengsaeng">상생카드 가맹점</span>`);
-  if (pt.includes('onnuri')) {
-    const m = station.onnuri_methods;
-    const label = m ? [m.paper && '지류', GasMerchantDisplay.digital(m) && '디지털'].filter(Boolean).join('·') : '종류 미확인';
-    tags.push(`<span class="tag onnuri">온누리 ${label} · ${GasMerchantDisplay.onnuriNote(station)}</span>`);
-  }
-
   const p = PRICES[station.id];
-  let priceHtml = '<div class="price-source">가격 미확인</div>';
+  let priceHtml = '';
   if (p && Object.keys(p).length > 0) {
-    const order = ['휘발유', '경유', 'LPG'];
-    const items = order.filter(k => p[k]).map(k => {
-      const range = PRICE_RANGE[k];
-      const dot = range
-        ? `<span class="price-dot" style="background:${priceColor(p[k], range.min, range.max)}"></span>`
-        : '';
-      return `<span class="price-item">${dot}${k} ${GasPriceDisplay.html(p[k], station)}</span>`;
+    const order = station.fuel_kind==='lpg'?['LPG']:['휘발유', '경유'];
+    const items = order.filter(k => typeof p[k]==='number'&&Number.isFinite(p[k])&&p[k]>0).map(k => {
+      return `<span class="price-item"><span class="fuel-label">${k}</span>${GasPriceDisplay.html(p[k], station)}</span>`;
     }).join('');
-    priceHtml = `<div class="prices">${items}<div class="price-source">Opinet ${PRICE_INFO[station.id]?.source_dates?.join(' / ') || '기준일 미확인'} 기준${pt.includes('saengsaeng') ? ' · 상생카드 10% 적용 체감가' : ''}</div></div>`;
+    if(items)priceHtml = `<div class="prices">${items}<div class="price-source">Opinet ${PRICE_INFO[station.id]?.source_dates?.join(' / ') || '기준일 미확인'} 기준</div></div>`;
   }
-
-  const COPY_SVG = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>`;
-  const CHECK_SVG = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>`;
 
   function bindRouteLink(el, action) {
     let lastRun = 0;
@@ -1516,24 +1494,6 @@ function buildInfoHtml(station) {
     el.addEventListener('click', run);
   }
 
-  function makeCopyBtn(text) {
-    const btn = document.createElement('button');
-    btn.className = 'copy-btn';
-    btn.title = '복사';
-    btn.setAttribute('aria-label', '복사: ' + text);
-    btn.innerHTML = COPY_SVG;
-    btn.addEventListener('click', e => {
-      e.stopPropagation();
-      e.preventDefault();
-      doCopy(text, () => {
-        btn.innerHTML = CHECK_SVG;
-        btn.classList.add('copied');
-        setTimeout(() => { btn.innerHTML = COPY_SVG; btn.classList.remove('copied'); }, 1500);
-      });
-    });
-    return btn;
-  }
-
   const wrap = document.createElement('div');
   wrap.className = 'info-overlay';
   wrap.addEventListener('click', e => e.stopPropagation());
@@ -1547,20 +1507,18 @@ function buildInfoHtml(station) {
   const nameText = document.createElement('span');
   nameText.textContent = station.name;
   nameRow.appendChild(nameText);
-  nameRow.appendChild(makeCopyBtn(station.name));
 
   const addrRow = document.createElement('div');
   addrRow.className = 'copy-row address';
   const addrText = document.createElement('span');
   addrText.textContent = station.address || '';
   addrRow.appendChild(addrText);
-  addrRow.appendChild(makeCopyBtn(station.address || ''));
 
   const distanceRow = document.createElement('div');
   distanceRow.className = 'distance-row';
   const distanceLabel = document.createElement('span');
   distanceLabel.className = 'distance-label';
-  distanceLabel.textContent = '내 위치 직선거리';
+  distanceLabel.textContent = '직선거리';
   const distanceValue = document.createElement('span');
   distanceValue.className = 'distance-value muted';
   distanceValue.dataset.lat = station.lat;
@@ -1571,7 +1529,9 @@ function buildInfoHtml(station) {
 
   const tagsEl = document.createElement('div');
   tagsEl.className = 'tags';
-  tagsEl.innerHTML = tags.join('');
+  const paymentLabel=document.createElement('span');paymentLabel.className='station-payment-label';paymentLabel.textContent=GasMerchantDisplay.paymentSummary(station);
+  const checkLabel=document.createElement('span');checkLabel.className='station-check';checkLabel.textContent=GasMerchantDisplay.checkCaption(station);
+  tagsEl.append(paymentLabel,checkLabel);
 
   const heading = document.createElement('div');heading.className = 'info-heading';
   const close = document.createElement('button');close.type='button';close.className='station-close';close.textContent='×';close.setAttribute('aria-label','주유소 상세 닫기');
@@ -1607,17 +1567,13 @@ function buildInfoHtml(station) {
 
   routeActions.appendChild(kakaoRouteBtn);
   routeActions.appendChild(naverRouteBtn);
-  const directions=document.createElement('details');directions.className='station-directions';
-  const directionsSummary=document.createElement('summary');directionsSummary.className='station-directions-trigger';directionsSummary.textContent='여기로 길찾기';
-  directions.append(directionsSummary,routeActions);wrap.appendChild(directions);
+  wrap.appendChild(routeActions);
+  if(station.route_eligible===true){
   const via = document.createElement('button');
-  via.className = 'route-btn'; via.type = 'button'; via.textContent = '이 주유소 들러서 목적지로';
+  via.className = 'route-btn station-via'; via.type = 'button'; via.textContent = '이 주유소 경유';
   via.addEventListener('click', () => {closeStationOverlay();window.GasRoutePlanner?.chooseStation(station);});
   wrap.appendChild(via);
-  const verification = document.createElement('details');verification.className='station-verification';
-  const verificationSummary=document.createElement('summary');verificationSummary.textContent='확인 정보';
-  const verificationText=document.createElement('p');verificationText.className='trip-note';verificationText.textContent=GasMerchantDisplay.verificationText(station);
-  verification.append(verificationSummary,verificationText);wrap.appendChild(verification);
+  }
   return wrap;
 }
 

@@ -11,10 +11,14 @@ test('bank corroboration is labelled by issuer and unknown methods stay unknown'
  assert.match(display.onnuriNote(s),/지류·QR 별도 확인/);
  assert.doesNotMatch(display.onnuriNote(s),/공식 검색 확인/);
  assert.match(display.verificationText(s),/상권자료 2026-06-30/);
+ assert.equal(display.paymentSummary(s),'온누리 KB국민카드');
+ assert.equal(display.checkCaption(s),'2026-10-26 확인');
 });
 test('annual data date is separate from retrieval and stale status',()=>{
  const s={payment_types:['onnuri'],verification:{onnuri:{status:'published_snapshot',source_date:'2026-07-31',checked_at:'2026-10-10'}}};
  assert.equal(display.onnuriNote(s),'공식 자료 2026-07-31');
+ assert.equal(display.checkCaption(s),'2026-07-31 자료');
+ assert.equal(display.checkCaption({payment_types:['onnuri'],verification:{onnuri:{status:'stale',checked_at:'2026-03-03'}}}),'최근 미확인');
  assert.match(display.onnuriNote({verification:{onnuri:{status:'stale',checked_at:'2026-03-03'}}}),/최근 미확인/);
 });
 test('combined digital support passes route filter without inventing card or QR',()=>{

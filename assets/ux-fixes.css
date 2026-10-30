@@ -23,7 +23,8 @@
 .national-results>summary {display:flex;align-items:center;flex-wrap:wrap;gap:4px 8px;list-style:none;}
 .national-results>summary::-webkit-details-marker {display:none;}
 .national-results>summary::marker {content:'';}
-.results-toggle-hint {margin-left:auto;font-size:14px;font-weight:400;color:var(--muted);}
+.national-results>summary::after {content:'⌄';margin-left:auto;color:var(--muted);}
+.national-results[open]>summary::after {transform:rotate(180deg);}
 .results-body {overflow:auto;overscroll-behavior:contain;max-height:calc(var(--results-available,560px) - 60px);scroll-padding-top:96px;}
 .results-toolbar {position:sticky;top:0;z-index:2;display:flex;align-items:end;gap:8px;padding:8px 12px;background:var(--panel);border-bottom:1px solid var(--line);}
 .results-toolbar label {flex:1;min-width:0;font:400 14px/1.5 sans-serif;color:var(--muted);}
@@ -44,13 +45,6 @@
 .search-area-btn {position:absolute;z-index:110;top:12px;left:50%;transform:translateX(-50%);min-height:44px;max-width:calc(100% - 152px);padding:8px 14px;border:1px solid var(--line);border-radius:24px;background:var(--panel);color:var(--ink);box-shadow:0 2px 8px #0003;font:700 16px/1.5 sans-serif;cursor:pointer;}
 .search-area-btn[hidden] {display:none;}
 .map-area.trip-route-active .search-area-btn,.map-area:has(.info-overlay) .search-area-btn,.map-area:has(#tripPanel[open]) .search-area-btn {display:none;}
-.info-overlay .station-directions>summary {display:flex;align-items:center;justify-content:center;min-height:48px;padding:10px 12px;border-radius:10px;background:var(--primary);color:var(--on-primary);font:700 16px/1.5 sans-serif;cursor:pointer;list-style:none;}
-.station-directions>summary::-webkit-details-marker {display:none;}
-.station-directions>summary::after {content:' ＋';}
-.station-directions[open]>summary::after {content:' −';}
-.info-overlay .station-directions .route-actions {margin-top:8px;}
-.info-overlay .station-verification {border-top:1px solid var(--line);margin-top:8px;}
-.station-verification>summary {min-height:44px;padding:10px 0;cursor:pointer;font-size:16px;}
 @media(min-width:701px){#resultsSize {display:none;}}
 @media(max-width:700px){
   .national-results {top:auto;bottom:72px;left:8px;right:8px;width:calc(100% - 16px);max-height:calc(100% - 88px);}
@@ -63,3 +57,41 @@
   .map-area:has(.national-results[open]) :is(.map-zoom-tools,#fitResultsBtn,.district-context) {visibility:hidden;}
   .keyboard-open .national-results {display:none;}
 }
+
+/* Map-first hierarchy, adapted from the published Apps in Toss fuel-map example.
+   Keep existing navigation and brand; avoid repeated evidence and competing CTAs. */
+:root {--soft-line:#e3e8ef;}
+:root[data-theme="dark"] {--soft-line:#34445b;}
+.info-overlay {border:1px solid var(--soft-line);border-radius:18px;box-shadow:0 6px 24px #0002;padding:16px;}
+.info-overlay .info-heading {border:0;top:-16px;margin-bottom:0;padding-bottom:4px;border-radius:18px 18px 0 0;align-items:center;}
+.info-heading .name {font:700 20px/1.4 sans-serif;}
+.info-overlay .station-close {border:0;background:transparent;color:var(--muted);}
+.info-overlay .address {font:400 16px/1.5 sans-serif;color:var(--muted);margin:0 0 12px;white-space:normal;overflow-wrap:anywhere;user-select:text;}
+.info-overlay .copy-row {gap:0;}
+.info-overlay .distance-row {margin:0 0 12px;padding:0;border:0;background:transparent;color:var(--muted);justify-content:flex-start;}
+.info-overlay .distance-row[hidden] {display:none;}
+.info-overlay .distance-label,.info-overlay .distance-value {color:var(--muted);font-weight:400;}
+.info-overlay .tags {display:flex;align-items:flex-start;flex-direction:column;gap:6px;margin:0 0 16px;}
+.station-payment-label {padding:4px 8px;border-radius:6px;background:var(--field);color:var(--accent);font:600 14px/1.5 sans-serif;white-space:normal;overflow-wrap:anywhere;}
+.station-check {font:400 14px/1.5 sans-serif;color:var(--muted);}
+.info-overlay .prices {display:flex;flex-direction:column;gap:10px;background:transparent;border:0;border-radius:0;margin:0 0 16px;padding:0;}
+.info-overlay .price-item {display:flex;align-items:baseline;justify-content:space-between;gap:12px;white-space:normal;}
+.info-overlay .fuel-label {flex-shrink:0;color:var(--muted);font:400 16px/1.5 sans-serif;}
+.info-overlay .price-item b {font:700 22px/1.4 sans-serif;font-variant-numeric:tabular-nums;color:var(--ink);}
+.info-overlay .effective-price {display:flex;flex-wrap:wrap;align-items:baseline;justify-content:flex-end;gap:2px 8px;text-align:right;}
+.info-overlay .effective-price del {font-size:14px;}
+.info-overlay .effective-price small {flex-basis:100%;font-size:14px;line-height:1.5;color:var(--muted);}
+.info-overlay .price-source {font:400 14px/1.5 sans-serif;color:var(--muted);margin:0;}
+.info-overlay .route-actions {display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0;}
+.info-overlay .route-btn:is(.kakao,.naver) {display:flex;align-items:center;justify-content:center;background:var(--field);color:var(--ink);border:1px solid var(--soft-line);border-radius:10px;padding:10px 8px;text-decoration:none;}
+.info-overlay .station-via {display:block;width:100%;margin:8px 0 0;border:0;background:transparent;color:var(--accent);font-weight:600;text-align:center;border-radius:10px;cursor:pointer;}
+.national-results {border-color:var(--soft-line);border-radius:16px;box-shadow:0 4px 20px #0002;}
+.national-results>summary {font-size:16px;}
+.national-results #listScope,.national-results #nationalSummary {font-size:14px;line-height:1.5;color:var(--muted);}
+#nationalSummary:empty {display:none;}
+.station-list-row {padding:16px;border-color:var(--soft-line);}
+.station-list-row>strong {font-size:18px;line-height:1.4;}
+.station-list-row .station-address {margin-top:4px;color:var(--muted);}
+.station-list-row .station-payment {font-size:14px;color:var(--accent);}
+.station-list-row .station-price {font-size:16px;font-weight:600;color:var(--ink);margin-top:6px;}
+.results-toolbar,.results-toolbar select,.results-toolbar button,.results-data {border-color:var(--soft-line);}

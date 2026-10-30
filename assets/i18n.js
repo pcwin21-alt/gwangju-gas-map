@@ -6,6 +6,8 @@
     '지역 선택':'Choose region','지역 선택 닫기':'Close region selection',
     '화면 테마':'Appearance','기기 설정':'System','밝게':'Light','어둡게':'Dark',
     '주유소 상세 닫기':'Close station details',
+    '주유소':'Stations','결과 위치':'Show on map','조건에 맞는 주유소 위치로 지도 맞추기':'Fit matching stations on map',
+    '직선거리':'Straight-line distance','이 주유소 경유':'Stop at this station','온누리 KB국민카드':'Onnuri KB Kookmin Card','최근 미확인':'Not recently verified','확인일 미확인':'Check date unknown','표시 중':'shown',
     '지도 보기':'Map view',
     '지도 크게 보기':'Expand map','지도 작게 보기':'Restore map','지도 확대':'Zoom in','지도 축소':'Zoom out','지도 확대 축소':'Map zoom',
     '내 위치로 이동':'Go to my location','위치 찾는 중':'Finding location',
@@ -156,6 +158,8 @@
     if (/^(전체|찾은 범위) \d+곳$/.test(text)) result=text.replace(/^(전체|찾은 범위) (\d+)곳$/,(_,scope,count)=>`${scope==='전체'?'All matches':'Searched area'}: ${count}`);
     if (/^\d+곳 표시$/.test(text)) result=text.replace(/^(\d+)곳 표시$/,'$1 shown');
     if (/^현재 지도 안 \d+곳$/.test(text)) result=text.replace(/^현재 지도 안 (\d+)곳$/,'$1 in current map view');
+    if (/^\d{4}-\d{2}-\d{2} 확인$/.test(text)) result='Checked '+text.slice(0,10);
+    if (/^\d{4}-\d{2}-\d{2} 자료$/.test(text)) result='Source '+text.slice(0,10);
     if (/^(.+) 조건 결과 \d+곳$/.test(text)) result=text.replace(/^(.+) 조건 결과 (\d+)곳$/,(_,region,count)=>`${messages[region]||region}: ${count} matches`);
     if (/^(.+) 조건 결과$/.test(text)) result=text.replace(/^(.+) 조건 결과$/,(_,region)=>`${messages[region]||region} matches`);
     if (/^내 위치에서 직선 [\d.]+(m|km)$/.test(text)) result=text.replace('내 위치에서 직선 ','Straight-line from me: ');
