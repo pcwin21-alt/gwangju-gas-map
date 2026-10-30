@@ -1,10 +1,10 @@
 const test=require('node:test'),assert=require('node:assert/strict'),vm=require('node:vm'),fs=require('node:fs');
 function fixture() {
  const elements={},listeners={},saved={};let observer;
- const document={activeElement:null,documentElement:{},getElementById:id=>el(id),querySelector:()=>el('area'),addEventListener:(type,fn)=>listeners[type]=fn};
+ const document={activeElement:null,documentElement:{classList:{contains:()=>false}},getElementById:id=>el(id),querySelector:()=>el('area'),addEventListener:(type,fn)=>listeners[type]=fn};
  function el(id){return elements[id] ||= {open:false,value:id==='tripOpacity'?'1':'',hidden:false,attributes:{},styles:{},style:{setProperty(k,v){el(id).styles[k]=v;}},handlers:{},addEventListener(type,fn){this.handlers[type]=fn;},setAttribute(k,v){this.attributes[k]=v;},contains(node){return node?.parent===this;},querySelector:()=>el('summary'),querySelectorAll(){return this.rows||[];},focus(){document.activeElement=this;},blur(){document.activeElement=null;}};}
- const window={addEventListener:(type,fn)=>listeners['window:'+type]=fn};
- vm.runInNewContext(fs.readFileSync('assets/route-window.js','utf8'),{window,document,localStorage:{getItem:k=>saved[k],setItem:(k,v)=>saved[k]=v},getComputedStyle:()=>({getPropertyValue:()=> '#111d2e'}),MutationObserver:class{constructor(fn){observer=fn;}observe(){}}});
+ const window={innerHeight:844,addEventListener:(type,fn)=>listeners['window:'+type]=fn};el('area').clientHeight=650;
+ vm.runInNewContext(fs.readFileSync('assets/route-window.js','utf8'),{window,document,ResizeObserver:class{observe(){}},localStorage:{getItem:k=>saved[k],setItem:(k,v)=>saved[k]=v},getComputedStyle:()=>({getPropertyValue:()=> '#111d2e'}),MutationObserver:class{constructor(fn){observer=fn;}observe(){}}});
  return {el,document,window,listeners,saved,observe:()=>observer()};
 }
 test('map gesture minimizes without cancelling pan; reopening preserves inputs and results and never focuses a text field',()=>{

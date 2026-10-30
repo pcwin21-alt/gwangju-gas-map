@@ -2,6 +2,8 @@
   'use strict';
   const byId=id=>document.getElementById(id),panel=byId('tripPanel'),launcher=byId('tripLauncher'),opacity=byId('tripOpacity');
   const area=document.querySelector('.map-area');
+  function resize() {const compact=window.innerHeight<=500||document.documentElement.classList.contains('keyboard-open');panel.style.setProperty('--trip-window-height',`${Math.max(140,Math.min(620,compact?area.clientHeight-16:area.clientHeight*.72))}px`);}
+  new ResizeObserver(resize).observe(area);resize();
   function sync() {
     launcher.hidden=panel.open;launcher.setAttribute('aria-expanded',String(panel.open));
     if(!panel.open&&panel.contains(document.activeElement)){document.activeElement.blur();launcher.focus({preventScroll:true});}
