@@ -5,14 +5,14 @@
   function resize() {const compact=window.innerHeight<=500||document.documentElement.classList.contains('keyboard-open');panel.style.setProperty('--trip-window-height',`${Math.max(140,Math.min(620,compact?area.clientHeight-16:area.clientHeight*.72))}px`);}
   new ResizeObserver(resize).observe(area);resize();
   function sync() {
-    launcher.hidden=panel.open;launcher.setAttribute('aria-expanded',String(panel.open));
+    launcher.hidden=panel.open||panel.hidden;launcher.setAttribute('aria-expanded',String(panel.open));
     if(!panel.open&&panel.contains(document.activeElement)){document.activeElement.blur();launcher.focus({preventScroll:true});}
   }
   function minimize(focus=false) {
     if(panel.contains(document.activeElement))document.activeElement.blur();
     panel.open=false;sync();if(focus)launcher.focus({preventScroll:true});
   }
-  function open() {panel.open=true;sync();panel.querySelector('summary').focus({preventScroll:true});}
+  function open() {if(panel.hidden)return;panel.open=true;sync();panel.querySelector('summary').focus({preventScroll:true});}
   launcher.addEventListener('click',open);panel.addEventListener('toggle',sync);
   byId('expandMapBtn').addEventListener('click',()=>minimize());
   function mapGesture(event) {if(!panel.open||event.target.closest('#tripPanel,#tripLauncher'))return;minimize();}
