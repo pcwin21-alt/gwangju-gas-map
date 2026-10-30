@@ -19,6 +19,12 @@
   }
   open.addEventListener('click',()=>{sync();dialog.showModal();buttons.get(input.value)?.focus({preventScroll:true});});
   byId('regionClose').addEventListener('click',()=>dialog.close());
+  dialog.addEventListener('keydown',event=>{
+    if(event.key!=='Tab')return;
+    const first=byId('regionClose'),last=[...buttons.values()].at(-1);
+    if(!event.shiftKey&&event.target===last){event.preventDefault();first.focus();}
+    if(event.shiftKey&&event.target===first){event.preventDefault();last.focus();}
+  });
   dialog.addEventListener('click',event=>{
     if(event.target!==dialog)return;
     const r=dialog.getBoundingClientRect();
