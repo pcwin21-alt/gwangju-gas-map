@@ -27,4 +27,4 @@
 - visualViewport만 축소되는 경우와 window.innerHeight까지 함께 축소되는 경우를 모두 평상시 높이와 비교. readonly clipboard textarea는 편집 중으로 간주하지 않음. viewport scroll/pan 때 입력 영역의 실제 가시 범위를 기준으로 내부 스크롤만 보정하며 focus를 강제하지 않음.
 - 제보/댓글 패널은 키보드가 열린 가시 높이 내로 제한하고 내부 스크롤 허용.
 - 근거: https://developer.chrome.com/blog/viewport-resize-behavior (Android Chrome/WebView의 viewport 동작 차이), https://developer.mozilla.org/en-US/docs/Web/API/VisualViewport (height/offsetTop/scroll).
-- 추가 검사: touch fallback, 두 viewport 동시 축소, readonly 제외, viewport pan 시 입력 가시 범위. 관련 Node 13개 통과. 전체 CI/화면 후속 검수 대기. 안드로이드 실제 OS 키보드와 카카오톡/네이버 앱의 WebView 재현은 이 Windows 브라우저로 검증 불가.
+- 추가 검사: touch fallback, 두 viewport 동시 축소, readonly 제외, viewport pan 시 입력 가시 범위. 관련 Node 13개/전체 CI 150개 통과. 공개 배포에서 검색 입력 직접 focus → 회전 canvas 터치 시 text focus 해제. 390×420 축소 시 댓글 입력 유지, 패널 top24/bottom420, 입력 bottom408 확인. 증거 Playground/output/onnuri-input-shrunken-20261030.jpg. 안드로이드 실제 OS 키보드와 카카오톡/네이버 앱의 WebView 재현은 이 Windows 브라우저로 검증 불가.

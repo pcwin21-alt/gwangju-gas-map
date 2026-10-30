@@ -112,7 +112,7 @@
     const info=document.createElement('p');info.className='trip-note';
     info.textContent=GasMerchantDisplay.verificationText(station);card.append(info);
     const actions=routeActions(station);
-    if(index){const focus=document.createElement('button');focus.type='button';focus.textContent='지도에서 보기';focus.addEventListener('click',()=>window.GasRouteMap?.focus(station.id));actions.append(focus);}
+    if(index){const focus=document.createElement('button');focus.type='button';focus.textContent='지도에서 보기';focus.addEventListener('click',()=>{window.GasTripWindow?.minimize();window.GasRouteMap?.focus(station.id);});actions.append(focus);}
     card.append(actions);return card;
   }
   async function requireStart() {
@@ -124,7 +124,7 @@
     selectPoint('start',{...point,name:'내 위치'},false);
   }
   async function chooseStation(station) {
-    panel.open=true;panel.scrollIntoView({block:'nearest'});
+    if(window.GasTripWindow)window.GasTripWindow.open();else panel.open=true;
     if(!station.route_eligible || !core.validPoint(station)) {say('이 장소는 상세 좌표 또는 자동차 주유 업종 확인이 필요합니다.');return;}
     if(!destination){say('최종 목적지를 검색해 선택한 뒤 이 주유소를 다시 선택하세요.');byId('tripDestination').focus();return;}
     try { await requireStart();clearResults();results.append(showStation(station));finishResults();say('출발지 → '+station.name+' → '+destination.name); }
