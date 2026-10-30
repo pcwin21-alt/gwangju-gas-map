@@ -39,8 +39,8 @@
     const address=text('span',station.address||'상세주소 미확인','station-address');address.dataset.noI18n='';
     node.append(name);
     if(row.km!==null)node.append(text('span',core.distanceText(row.km),'station-distance'));
-    node.append(address,text('span',GasMerchantDisplay.paymentText(station)+(station.fuel_kind==='lpg'?' · LPG 충전소':''),'station-payment'));
-    node.append(text('span',GasMerchantDisplay.confirmationText(station),'station-proof'));
+    node.append(address,text('span',GasMerchantDisplay.paymentSummary(station)+(station.fuel_kind==='lpg'?' · LPG 충전소':''),'station-payment'));
+    if(station.verification?.onnuri?.status!=='confirmed')node.append(text('span',GasMerchantDisplay.checkCaption(station),'station-proof'));
     const prices=typeof PRICES==='undefined'?null:PRICES[station.id];
     const priceLabel=core.priceText(station,prices,typeof PRICE_INFO==='undefined'?null:PRICE_INFO[station.id]?.source_dates);
     if(priceLabel)node.append(text('span',priceLabel,'station-price'));
@@ -56,18 +56,15 @@
   function refreshMapCount() {
     if(!hasMap)return;
     const all=items(),count=core.select(all,{bounds:boundsNow()}).length;
-    byId('listScope').textContent=(state.region==='all'?'전국':state.region)+' 조건 결과 '+all.length+'곳 · 현재 지도 안 '+count+'곳'+(scope.value==='map'?' · 목록은 찾기를 누른 범위':'');
+    byId('listScope').textContent='현재 지도 안 '+count+'곳';
   }
   function render(reset=false) {
     const scroll=reset?0:body.scrollTop,focused=document.activeElement?.dataset?.stationId,all=items(),point=locationPoint();
     order.querySelector('option[value="distance"]').disabled=!point;
     if(!point&&order.value==='distance')order.value='name';
     const rows=core.select(all,{bounds:scope.value==='map'?areaBounds:null,location:point,order:order.value});
-    const waiting=(typeof NATIONAL_PENDING==='undefined'?[]:NATIONAL_PENDING).filter(r=>state.region==='all'||r.region===state.region||(['광주','전남'].includes(state.region)&&r.region==='전남광주'));
-    byId('pendingSummary').textContent=`추가 확인 대기 ${waiting.length}건`;
-    byId('pendingList').replaceChildren(...waiting.map(r=>text('li',`${r.name} · ${r.market} · ${r.region} — ${r.reason}`)));
     byId('resultDataStatus').textContent=`온누리 공식 검색 ${MERCHANT_STATUS.onnuri?.source_date||'미확인'}${MERCHANT_STATUS.onnuri?.refresh_error?' · 최근 조회 실패, 이전 자료 유지':''}`+bankSummary();
-    byId('nationalSummary').textContent=`${Math.min(limit,rows.length)}곳 표시 / ${rows.length}곳 · ${order.value==='distance'?'내 위치 직선거리순':'이름순'}`;
+    byId('nationalSummary').textContent=rows.length>limit?`${limit}곳 표시 중`:'';
     byId('listCount').textContent=`${scope.value==='map'?'찾은 범위':'전체'} ${rows.length}곳`;
     list.replaceChildren(...rows.slice(0,limit).map(stationRow));
     if(!rows.length){list.append(text('p','조건에 맞는 주유소가 없습니다.'));emptyActions(list);}

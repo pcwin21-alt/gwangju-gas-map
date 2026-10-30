@@ -30,7 +30,18 @@
     if(station.location_evidence) labels.push('위치: '+(station.location_evidence.source_type==='commercial_registry'?'상권자료 ':'지자체 주유소 자료 ')+(station.location_evidence.source_date||'기준일 미확인'));
     return labels.join(' / ');
   }
-  const api = {digital, onnuriNote, verificationText, paymentText, confirmationText};
+  function paymentSummary(station) {
+    if(station.payment_types?.includes('onnuri')&&station.verification?.onnuri?.provider==='kbcard')
+      return '온누리 KB국민카드'+(station.payment_types.includes('saengsaeng')?' / 광주상생카드':'');
+    return paymentText(station);
+  }
+  function checkCaption(station) {
+    const v=station.payment_types?.includes('onnuri')?station.verification?.onnuri:station.verification?.saengsaeng;
+    if(v?.status==='published_snapshot')return date(v.source_date)+' 자료';
+    if(!v||v.status!=='confirmed')return '최근 미확인';
+    return date(v.checked_at)==='미확인'?'확인일 미확인':date(v.checked_at)+' 확인';
+  }
+  const api = {digital, onnuriNote, verificationText, paymentText, confirmationText, paymentSummary, checkCaption};
   if(typeof module === 'object' && module.exports) module.exports=api;
   else root.GasMerchantDisplay=api;
 })(typeof globalThis !== 'undefined' ? globalThis : this);
