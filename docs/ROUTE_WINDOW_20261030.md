@@ -8,4 +8,5 @@
 - 일반 지도 pointer/touch는 창을 최소화하면서 원래 제스처를 통과. 팝업 자체와 경유 원은 제외. 입력 요소를 비동기로 focus하지 않음. 다시 열면 헤더 버튼에 focus, 사용자가 입력칸을 누르면 native 편집 시작. 추천의 지도 보기와 지도 크게 보기도 최소화 연결.
 - 글자/입력/동작은 기존 16px/1.5, 최소 44px. badge/배경 라벨은 메타 14px. popup 결과는 좁은 너비에 맞춰 한 열로 배치.
 - 단위: Node 53개 통과. 입력·결과 보존, 제스처 취소 없음, popup 내 터치, touch fallback, Escape 복원, 배경만 투명도, 원형 버튼 결과 수 확인. 기존 경로/키보드/검증 경계 검사 포함.
-- 브라우저: 배포 후 검수 예정. 실물 Android/카카오톡·네이버 WebView 키보드 검증은 이 PC에서 불가하며, DOM focus/축소 화면 및 계산을 별도로 검증.
+- 브라우저: 공개 서비스에서 390×844 팝업/75% 배경, 320×740의 296px 창/가로 넘침 없음, 1280×900의 440px 창 확인. 광주송정역→목포역 추천 7곳 뒤 지도 canvas 클릭→원형 버튼 최소화, badge7/목적지/경로/결과7 보존 및 재개 확인. 흰/어두운 배경과 전체 opacity1 유지 확인. 390×420의 키보드 축소 레이아웃에서 popup top70/bottom412, 목적지 input top193/bottom239/focus 유지. 기존 native details의 flex content overflow는 지도 높이 ResizeObserver + 내부 body 최대 높이로 수정하고 화면에서 body bottom665 < popup bottom677 확인.
+- CI: Node53/Python100 및 Pages 배포 통과. 증거 Playground/output/onnuri-route-popup-open-20261030.jpg, onnuri-route-popup-minimized-20261030.jpg. 실물 Android/카카오톡·네이버 WebView 키보드 검증은 이 PC에서 불가하며, DOM focus/축소 화면 및 계산을 별도로 검증.
