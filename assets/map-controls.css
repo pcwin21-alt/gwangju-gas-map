@@ -5,6 +5,6 @@
 .map-zoom-tools button {border-radius:0;box-shadow:none;font-size:24px;}
 .map-zoom-tools button+button {border-top:0;}
 .map-view-tools button:disabled,.map-zoom-tools button:disabled {opacity:.55;cursor:wait;}
-.map-area:has(#map .info-overlay) .map-zoom-tools,.map-area:has(#map .info-overlay) #fitResultsBtn {visibility:hidden;}
+.map-area:has(.info-overlay) .map-zoom-tools,.map-area:has(.info-overlay) #fitResultsBtn {visibility:hidden;}
 .app.map-expanded>.header,.app.map-expanded>.controls {display:none!important;}
 @media(max-height:440px){.map-zoom-tools button {height:44px;}.map-view-tools {flex-direction:row;}}
