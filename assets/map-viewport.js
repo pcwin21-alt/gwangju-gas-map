@@ -2,7 +2,7 @@
 (function(root) {
   'use strict';
   function create(map, container, getPoints, sdk = root.kakao.maps) {
-    let frame = 0, width = container.clientWidth;
+    let frame = 0;
     function fit() {
       cancelAnimationFrame(frame);
       frame = requestAnimationFrame(() => {
@@ -29,9 +29,8 @@
         const center = map.getCenter();
         map.relayout();
         map.setCenter(center);
-        // Orientation/width changes need a new fit; height changes retain the view.
-        if (width !== container.clientWidth) fit();
-        width = container.clientWidth;
+        // Resize only the drawing surface. Rotation and browser chrome must not
+        // undo the user's zoom or pan; fit only for explicit result navigation.
       });
     });
     observer.observe(container);
