@@ -5,7 +5,10 @@
   window.addEventListener('gas:routechange',()=>area.classList.toggle('trip-route-active',Boolean(window.GasRouteMap?.isActive())));
   if(window.kakao?.maps) {
     const originalFilters=applyFilters;
-    applyFilters=()=>{originalFilters();window.GasRouteMap?.refresh();};
+    applyFilters=()=>{
+      if(window.GasRouteMap?.isActive())window.GasRoutePlanner?.clearForMapSearch();
+      originalFilters();window.GasRouteMap?.refresh();
+    };
   } else {
     byId('mapZoomIn').disabled=true;byId('mapZoomOut').disabled=true;
   }
