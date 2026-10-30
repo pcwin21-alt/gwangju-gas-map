@@ -43,5 +43,5 @@
     map.setCenter(new kakao.maps.LatLng(station.lat,station.lng));map.setLevel(4);
     const row=allMarkers.find(r=>r.station.id===id);if(row)showStationOverlay(row.overlay);
   }
-  window.GasRouteMap={show,clear,fit,collection,focus,refresh,isActive:()=>Boolean(state)};
+  window.GasRouteMap={show,clear,fit,collection,focus,refresh,cancelFit:()=>cancelAnimationFrame(fitFrame),isActive:()=>Boolean(state)};
 })();

@@ -1,0 +1,14 @@
+/* Readable station details with an explicit, always reachable close action. */
+.info-overlay {max-width:calc(100vw - 32px);overscroll-behavior:contain;}
+.info-overlay .info-heading {position:sticky;top:-16px;z-index:1;display:grid;grid-template-columns:minmax(0,1fr) 44px;align-items:start;gap:4px;margin:-16px -16px 8px;padding:8px 8px 8px 16px;background:var(--panel);border-bottom:1px solid var(--line);}
+.info-heading .copy-row {min-width:0;}
+.info-heading .name {font:700 16px/1.5 sans-serif;overflow-wrap:anywhere;}
+.info-overlay .station-close {width:44px;height:44px;padding:0;display:grid;place-items:center;border:1px solid var(--line);border-radius:10px;background:var(--panel);color:var(--ink);font:400 24px/1.5 sans-serif;cursor:pointer;}
+.info-overlay .trip-note,.info-overlay .distance-row {font-size:16px;line-height:1.5;white-space:normal;overflow-wrap:anywhere;}
+.info-overlay .distance-row {display:flex;flex-wrap:wrap;gap:4px 8px;}
+.info-overlay .route-btn {min-height:44px;font-size:16px;line-height:1.5;white-space:normal;}
+.info-overlay .price-item {font-size:16px;line-height:1.5;}
+.trip-fuel-price {font-size:16px;line-height:1.5;}
+.map-area:has(#map .info-overlay) :is(.map-view-tools,.trip-launcher) {visibility:hidden;}
+.empty-actions {display:flex;flex-wrap:wrap;gap:8px;padding:0 12px 12px;}
+.empty-actions button {min-height:44px;padding:8px 12px;border:1px solid var(--line);border-radius:10px;background:var(--panel);color:var(--ink);font:400 16px/1.5 sans-serif;cursor:pointer;}

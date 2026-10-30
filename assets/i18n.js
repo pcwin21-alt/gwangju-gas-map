@@ -2,6 +2,7 @@
 (function(root) {
   'use strict';
   const messages = {
+    '검색어 지우기':'Clear search','필터 초기화':'Clear filters','지역 바꾸기':'Change region',
     '지역 선택':'Choose region','지역 선택 닫기':'Close region selection',
     '화면 테마':'Appearance','기기 설정':'System','밝게':'Light','어둡게':'Dark',
     '주유소 상세 닫기':'Close station details',
