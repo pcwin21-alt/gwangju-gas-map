@@ -761,7 +761,7 @@
   <link rel="stylesheet" href="assets/route-window.css?v=5c5d29cd95e7">
   <link rel="stylesheet" href="assets/district-context.css?v=54fc82f1192e">
   <link rel="stylesheet" href="assets/region-picker.css?v=3198cfebca29">
-  <link rel="stylesheet" href="assets/ux-fixes.css?v=dc1746cf2113">
+  <link rel="stylesheet" href="assets/ux-fixes.css?v=cf18c0c77683">
   <script src="assets/nationwide.js?v=e1738fc77729"></script>
 </head>
 <body>
@@ -1981,6 +1981,8 @@ function buildRankList(fuel) {
 
   // 항목 클릭 → 지도 이동
   el.querySelectorAll('.rank-item').forEach(item => {
+    item.setAttribute('role','button');item.tabIndex=0;
+    item.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();item.click();}});
     item.addEventListener('click', function() {
       const id = this.dataset.id;
       const found = allMarkers.find(m => m.station.id === id);
@@ -2049,7 +2051,7 @@ function renderNearbyList() {
   }
   nearbyList.innerHTML = '';
   items.forEach(item => {
-    const row = document.createElement('div');
+    const row = document.createElement('button');row.type='button';
     row.className = 'nearby-item';
     row.innerHTML = `
       <div class="nearby-dist">${formatDistance(item.dist)}</div>
@@ -2650,7 +2652,7 @@ if (!localStorage.getItem('helpSeen')) {
 <script src="assets/nationwide-ui.js?v=39ecc0faa2c2"></script>
 <script src="assets/simple-controls.js?v=e79c532e2bc3"></script>
 <script src="assets/region-picker.js?v=285abb1dcb98"></script>
-<script src="assets/ux-fixes.js?v=06ddf2366bed"></script>
+<script src="assets/ux-fixes.js?v=7f1466bfd7ca"></script>
 <script src="assets/input-ux.js?v=1809ebe00951"></script>
 <script src="assets/map-controls.js?v=88ad6e124613"></script>
 <script src="assets/district-context-core.js?v=0934e655aaf9"></script>

@@ -12,3 +12,4 @@
 .map-area:has(#map .info-overlay) :is(.map-view-tools,.trip-launcher) {visibility:hidden;}
 .empty-actions {display:flex;flex-wrap:wrap;gap:8px;padding:0 12px 12px;}
 .empty-actions button {min-height:44px;padding:8px 12px;border:1px solid var(--line);border-radius:10px;background:var(--panel);color:var(--ink);font:400 16px/1.5 sans-serif;cursor:pointer;}
+.nearby-item {width:100%;text-align:left;font:400 16px/1.5 sans-serif;border:0;border-bottom:1px solid var(--line);background:var(--panel);color:var(--ink);}

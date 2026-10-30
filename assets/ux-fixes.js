@@ -3,6 +3,7 @@
   'use strict';
   const definitions=[['helpModal','helpModalClose','사용법 안내'],['coffeeModal','coffeeModalClose','커피 사주기'],['rankModal','rankModalClose','가격 순위'],['nearbyPanel','nearbyPanelClose','주변 내보내기'],['reportPanel','reportPanelClose','제보'],['reactPanel','reactPanelClose','반응 남기기']];
   const layers=definitions.map(([id,closeId,label])=>({node:document.getElementById(id),close:document.getElementById(closeId),label})).filter(l=>l.node&&l.close);
+  for(const layer of layers)layer.close.setAttribute('aria-label',layer.label+' 닫기');
   let current=null,restore=null;
   function sync(){
     const opened=layers.find(l=>l.node.classList.contains('open'));
