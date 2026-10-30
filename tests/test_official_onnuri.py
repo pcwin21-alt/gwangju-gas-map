@@ -1,6 +1,6 @@
 import unittest
-from unittest.mock import Mock
-from scripts.official_onnuri import reconcile, parse_csv, fetch_snapshot
+from unittest.mock import Mock, patch
+from scripts.official_onnuri import reconcile, parse_csv, fetch_snapshot, download_link, fuel_row, FUEL_SELECTION_VERSION
 from scripts.refresh_merchants import merge, load
 
 
@@ -38,11 +38,44 @@ class OfficialOnnuri(unittest.TestCase):
 
     def test_cached_file_still_checks_portal(self):
         cached=load('onnuri_official_snapshot.json')
+        cached['fuel_selection_version']=FUEL_SELECTION_VERSION
         session=Mock()
         session.get.return_value.text='"contentUrl": "'+cached['download_url']+'" 전국 온누리상품권 가맹점 현황_'+cached['source_date'].replace('-','')
         result=fetch_snapshot(session,cached,cached['retrieved_at'])
         self.assertIs(result,cached)
         self.assertEqual(session.get.call_count,1)
+
+    def test_product_search_finds_legal_names_and_vehicle_fuels(self):
+        for product in ('유류 소매', '휘발유 경유', '무연', '차량용 연료', '자동차용 연료', 'LPG', '엘피지', '석유', '충전소'):
+            with self.subTest(product=product):
+                self.assertTrue(fuel_row({**self.row, '가맹점명':'법인상호', '취급품목':product}))
+        for product in ('우유류', '섬유류', '식용유'):
+            self.assertFalse(fuel_row({**self.row, '가맹점명':'일반상호', '취급품목':product}))
+
+    def test_current_public_download_contract(self):
+        html="fn_fileDataDown('3060079', 'uddi:2fec9daf-aa5a-4139-9109-e5541b4a6bae', '', '1', '2')"
+        session=Mock()
+        session.post.return_value.json.return_value={'status':True,'atchFileId':'FILE_000000007663918','fileDetailSn':'1'}
+        url=download_link(session,html)
+        self.assertIn('atchFileId=FILE_000000007663918&fileDetailSn=1',url)
+        self.assertEqual(session.post.call_args.kwargs['data']['publicDataPk'],'3060079')
+        for metadata in ({'status':False,'atchFileId':'FILE_123','fileDetailSn':'1'},
+                         {'status':True,'atchFileId':'https://evil.invalid','fileDetailSn':'1'},
+                         {'status':True,'atchFileId':'FILE_123','fileDetailSn':'1&other=2'}):
+            session.post.return_value.json.return_value=metadata
+            with self.assertRaises(ValueError):download_link(session,html)
+        with self.assertRaises(ValueError):download_link(session,html.replace('3060079','9999999'))
+
+    def test_old_selection_cache_is_not_reused_after_expanding_products(self):
+        cached=load('onnuri_official_snapshot.json')
+        cached.pop('fuel_selection_version',None)
+        session=Mock()
+        session.get.return_value.text='"contentUrl": "'+cached['download_url']+'" 전국 온누리상품권 가맹점 현황_'+cached['source_date'].replace('-','')
+        with patch('scripts.official_onnuri.parse_csv',return_value={'new_selection':True}) as parse:
+            result=fetch_snapshot(session,cached,cached['retrieved_at'])
+        self.assertTrue(result['new_selection'])
+        self.assertEqual(session.get.call_count,2)
+        parse.assert_called_once()
 
     def test_published_snapshot_metadata_preserved(self):
         rows,_=reconcile(self.snapshot,[self.old])

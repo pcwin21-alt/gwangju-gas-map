@@ -1,0 +1,58 @@
+{
+  "annual_rows_scanned": 225803,
+  "broad_candidate_rows": 278,
+  "candidate_identity_groups": 276,
+  "commercial_rows_scanned": 2772484,
+  "public_fuel_registry_rows": 7329,
+  "commercial_vehicle_fuel_rows": 14360,
+  "new_map_stations": [
+    {
+      "id": "onnuri:kb:000000084182837",
+      "name": "(주)동행",
+      "address": "전남광주통합특별시 광산구 북문대로 364-5",
+      "checked_at": "2026-10-30T18:34:39+09:00",
+      "issuer_scope": [
+        "KB국민카드"
+      ]
+    }
+  ],
+  "removed_map_stations": [],
+  "changed_existing_station_ids": [],
+  "onnuri_map_count": 184,
+  "onnuri_by_fuel": {
+    "liquid": 167,
+    "lpg": 17
+  },
+  "legacy_pending_candidates": 10,
+  "new_dated_non_vehicle_exclusions": [
+    {
+      "candidate_id": "e8471cc21dd6b94f30239b9d",
+      "name": "거제제일가스",
+      "decision": "non_vehicle_retail_confirmed",
+      "source_id": "16231200039",
+      "bank_source_id": "000000095747494"
+    },
+    {
+      "candidate_id": "55a4f39122d05488067f479f",
+      "name": "영남가스 주식회사",
+      "decision": "non_vehicle_retail_confirmed",
+      "source_id": "68111800106",
+      "bank_source_id": "000000093931049"
+    },
+    {
+      "candidate_id": "4eb982df05bfb19162812c4b",
+      "name": "광주석유판매협동조합",
+      "decision": "non_vehicle_retail_confirmed",
+      "source_id": "05491200023",
+      "bank_source_id": "000000088133110"
+    }
+  ],
+  "localized_bank_queries": 29,
+  "limitations": [
+    "Annual source dated 2026-07-31; no claim of current nationwide completeness.",
+    "17 exploratory queries from an unrelated center were discarded as geographic evidence. Only localized query results support decisions.",
+    "Current operator API remains blocked as recorded in live_probe.json; no bypass used.",
+    "Zero bank search results do not establish cancellation.",
+    "Other same-name households or fuel companies remain unverified when identity is incomplete."
+  ]
+}

@@ -1,0 +1,776 @@
+{
+  "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+  "scope": "targeted_crosscheck_not_nationwide_census",
+  "queries": [
+    {
+      "target": {
+        "keyword": "대양종합가스",
+        "lat": 35.2413518916976,
+        "lng": 128.6332711221,
+        "coordinate_source_id": "MA010120220810966563",
+        "candidate_id": "7aec121a5094c5961ee57bc4",
+        "address": "경상남도 창원시 의창구 차룡로48번길 57",
+        "commercial_category": "가정용 연료 소매업"
+      },
+      "status": "complete",
+      "pages": [
+        {
+          "query": {
+            "mainCC": "a",
+            "isNoFrame": "Y",
+            "situXCdnt": 35.2413518916976,
+            "situYCdnt": 128.6332711221,
+            "페이지번호": 1,
+            "useCase": "1",
+            "locationType": "1",
+            "startRow": 0,
+            "endRow": 10,
+            "mmcNm": "대양종합가스"
+          },
+          "sha256": "f3c407e47f380a50422136cbb7264a34f803e4552f89b1d1b1e42ac70d327920",
+          "count": 0
+        }
+      ],
+      "rows": [],
+      "checked_at": "2026-10-30T18:38:38+09:00",
+      "total": 0
+    },
+    {
+      "target": {
+        "keyword": "거제제일가스",
+        "lat": 34.8509309332974,
+        "lng": 128.588989101095,
+        "coordinate_source_id": "MA010120220812840067",
+        "candidate_id": "e8471cc21dd6b94f30239b9d",
+        "address": "경상남도 거제시 거제면 기성로 35",
+        "commercial_category": "가정용 연료 소매업"
+      },
+      "status": "complete",
+      "pages": [
+        {
+          "query": {
+            "mainCC": "a",
+            "isNoFrame": "Y",
+            "situXCdnt": 34.8509309332974,
+            "situYCdnt": 128.588989101095,
+            "페이지번호": 1,
+            "useCase": "1",
+            "locationType": "1",
+            "startRow": 0,
+            "endRow": 10,
+            "mmcNm": "거제제일가스"
+          },
+          "sha256": "8a1fc82e45f9ee95aeaa8bf3a644eea30c8a8e4e2faab7297b501b76bd01ba6d",
+          "count": 1
+        }
+      ],
+      "rows": [
+        {
+          "location": {
+            "lat": "34.8509266011",
+            "lng": "128.5889484786"
+          },
+          "content": {
+            "tel": "",
+            "title": "거제제일가스",
+            "category": "가스판매점",
+            "address": "경남 거제시 거제면 ",
+            "distance": "4",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "1",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000095747494",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        }
+      ],
+      "checked_at": "2026-10-30T18:38:40+09:00",
+      "total": 1
+    },
+    {
+      "target": {
+        "keyword": "제일가스설비",
+        "lat": 36.5327968930038,
+        "lng": 128.073442780274,
+        "coordinate_source_id": "MA010120220809348326",
+        "candidate_id": "4ffd85ade67d4e3ece9bea21",
+        "address": "경상북도 상주시 은척면 봉중1길 11-1",
+        "commercial_category": "가정용 연료 소매업"
+      },
+      "status": "complete",
+      "pages": [
+        {
+          "query": {
+            "mainCC": "a",
+            "isNoFrame": "Y",
+            "situXCdnt": 36.5327968930038,
+            "situYCdnt": 128.073442780274,
+            "페이지번호": 1,
+            "useCase": "1",
+            "locationType": "1",
+            "startRow": 0,
+            "endRow": 10,
+            "mmcNm": "제일가스설비"
+          },
+          "sha256": "4be8af54cdf6e34c598d6d5c0b1abd5a7528697ff51f5b2f6adfdae7ad59ec04",
+          "count": 0
+        }
+      ],
+      "rows": [],
+      "checked_at": "2026-10-30T18:38:41+09:00",
+      "total": 0
+    },
+    {
+      "target": {
+        "keyword": "대성석유",
+        "lat": 35.8849845718552,
+        "lng": 128.621227761324,
+        "coordinate_source_id": "MA010120220808847250",
+        "candidate_id": "0bf8e875e8a47f8917b48c5c",
+        "address": "대구광역시 동구 평화로 69",
+        "commercial_category": "가정용 연료 소매업"
+      },
+      "status": "complete",
+      "pages": [
+        {
+          "query": {
+            "mainCC": "a",
+            "isNoFrame": "Y",
+            "situXCdnt": 35.8849845718552,
+            "situYCdnt": 128.621227761324,
+            "페이지번호": 1,
+            "useCase": "1",
+            "locationType": "1",
+            "startRow": 0,
+            "endRow": 10,
+            "mmcNm": "대성석유"
+          },
+          "sha256": "255d6f63e3d3016ae3cd136a24953c9860a37cc882473b43f6608acb1328c3b1",
+          "count": 0
+        }
+      ],
+      "rows": [],
+      "checked_at": "2026-10-30T18:38:43+09:00",
+      "total": 0
+    },
+    {
+      "target": {
+        "keyword": "금성가스",
+        "lat": 35.8563808992144,
+        "lng": 128.560094595347,
+        "coordinate_source_id": "MA010120220808945904",
+        "candidate_id": "5b1c47a5cebce76e8f8f0890",
+        "address": "대구광역시 달서구 두류공원로50길 22",
+        "commercial_category": "가정용 연료 소매업"
+      },
+      "status": "complete",
+      "pages": [
+        {
+          "query": {
+            "mainCC": "a",
+            "isNoFrame": "Y",
+            "situXCdnt": 35.8563808992144,
+            "situYCdnt": 128.560094595347,
+            "페이지번호": 1,
+            "useCase": "1",
+            "locationType": "1",
+            "startRow": 0,
+            "endRow": 10,
+            "mmcNm": "금성가스"
+          },
+          "sha256": "2f9ffcc8c9c932d896de95fed596d60e6fc65abe268fb13a4224b9e646b7743b",
+          "count": 1
+        }
+      ],
+      "rows": [
+        {
+          "location": {
+            "lat": "35.8563688446",
+            "lng": "128.56010286"
+          },
+          "content": {
+            "tel": "053)626-4155",
+            "title": "금성가스",
+            "category": "가스판매점",
+            "address": "대구 달서구 두류동 ",
+            "distance": "2",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000024369287",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        }
+      ],
+      "checked_at": "2026-10-30T18:38:45+09:00",
+      "total": 1
+    },
+    {
+      "target": {
+        "keyword": "경동가스",
+        "lat": 35.8575326788823,
+        "lng": 128.577474531439,
+        "coordinate_source_id": "MA010120220809478583",
+        "candidate_id": "634df12c95dd2fad8609c1ed",
+        "address": "대구광역시 남구 성당로60길 59",
+        "commercial_category": "가정용 연료 소매업"
+      },
+      "status": "complete",
+      "pages": [
+        {
+          "query": {
+            "mainCC": "a",
+            "isNoFrame": "Y",
+            "situXCdnt": 35.8575326788823,
+            "situYCdnt": 128.577474531439,
+            "페이지번호": 1,
+            "useCase": "1",
+            "locationType": "1",
+            "startRow": 0,
+            "endRow": 10,
+            "mmcNm": "경동가스"
+          },
+          "sha256": "07b615cb4f7f2d86d41d084710b56ffdfd05649e43a90183e233aab984c6bb52",
+          "count": 1
+        }
+      ],
+      "rows": [
+        {
+          "location": {
+            "lat": "35.8574615442",
+            "lng": "128.5774457343"
+          },
+          "content": {
+            "tel": "053)627-0683",
+            "title": "경동가스",
+            "category": "가스판매점",
+            "address": "대구 남구 대명동 ",
+            "distance": "8",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000014622907",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        }
+      ],
+      "checked_at": "2026-10-30T18:38:46+09:00",
+      "total": 1
+    },
+    {
+      "target": {
+        "keyword": "영주석유",
+        "lat": 36.3282013212304,
+        "lng": 127.434062697037,
+        "coordinate_source_id": "MA010120220805829464",
+        "candidate_id": "e971399ca41505931d7d9ca4",
+        "address": "대전광역시 동구 대전로 767",
+        "commercial_category": "가정용 연료 소매업"
+      },
+      "status": "complete",
+      "pages": [
+        {
+          "query": {
+            "mainCC": "a",
+            "isNoFrame": "Y",
+            "situXCdnt": 36.3282013212304,
+            "situYCdnt": 127.434062697037,
+            "페이지번호": 1,
+            "useCase": "1",
+            "locationType": "1",
+            "startRow": 0,
+            "endRow": 10,
+            "mmcNm": "영주석유"
+          },
+          "sha256": "5def4cbabb2655fafa88365e05edcccb7f0346289578d3632ce102234f618454",
+          "count": 1
+        }
+      ],
+      "rows": [
+        {
+          "location": {
+            "lat": "36.3281408099",
+            "lng": "127.4340207654"
+          },
+          "content": {
+            "tel": "042)256-9566",
+            "title": "영주석유",
+            "category": "연탄 및 유류판매점",
+            "address": "대전 동구 원동 ",
+            "distance": "8",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000020424136",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        }
+      ],
+      "checked_at": "2026-10-30T18:38:48+09:00",
+      "total": 1
+    },
+    {
+      "target": {
+        "keyword": "영남가스",
+        "lat": 35.5577850587777,
+        "lng": 129.345051644305,
+        "coordinate_source_id": "MA010120220803524487",
+        "candidate_id": "55a4f39122d05488067f479f",
+        "address": "울산광역시 중구 반구정14길 36",
+        "commercial_category": "가정용 연료 소매업"
+      },
+      "status": "complete",
+      "pages": [
+        {
+          "query": {
+            "mainCC": "a",
+            "isNoFrame": "Y",
+            "situXCdnt": 35.5577850587777,
+            "situYCdnt": 129.345051644305,
+            "페이지번호": 1,
+            "useCase": "1",
+            "locationType": "1",
+            "startRow": 0,
+            "endRow": 10,
+            "mmcNm": "영남가스"
+          },
+          "sha256": "fd69d7ab36ecebde8639244532167137ab4f3b51ddb3c8f6d446fa57561752ad",
+          "count": 1
+        }
+      ],
+      "rows": [
+        {
+          "location": {
+            "lat": "35.5577835613",
+            "lng": "129.3450616436"
+          },
+          "content": {
+            "tel": "052)244-7600",
+            "title": "영남가스 주식회사",
+            "category": "가스판매점",
+            "address": "울산 중구 반구동 ",
+            "distance": "1",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "1",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000093931049",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        }
+      ],
+      "checked_at": "2026-10-30T18:38:50+09:00",
+      "total": 1
+    },
+    {
+      "target": {
+        "keyword": "동행",
+        "lat": 35.1714782131612,
+        "lng": 126.868184959282,
+        "coordinate_source_id": "MA010120220803141898",
+        "candidate_id": "466e6b1196a429bb71813335",
+        "address": "전남광주통합특별시 서구 하남대로 690",
+        "commercial_category": "경영 컨설팅업"
+      },
+      "status": "complete",
+      "pages": [
+        {
+          "query": {
+            "mainCC": "a",
+            "isNoFrame": "Y",
+            "situXCdnt": 35.1714782131612,
+            "situYCdnt": 126.868184959282,
+            "페이지번호": 1,
+            "useCase": "1",
+            "locationType": "1",
+            "startRow": 0,
+            "endRow": 10,
+            "mmcNm": "동행"
+          },
+          "sha256": "ce708031165603ad20963ae8c8bfa07f8ed6dc776a7171056f8fe71794c919f5",
+          "count": 0
+        }
+      ],
+      "rows": [],
+      "checked_at": "2026-10-30T18:38:51+09:00",
+      "total": 0
+    },
+    {
+      "target": {
+        "keyword": "동행",
+        "lat": 35.1432065901424,
+        "lng": 126.848489295161,
+        "coordinate_source_id": "MA010120220800843978",
+        "candidate_id": "466e6b1196a429bb71813335",
+        "address": "전남광주통합특별시 서구 서광주로 181",
+        "commercial_category": "돼지고기 구이/찜"
+      },
+      "status": "complete",
+      "pages": [
+        {
+          "query": {
+            "mainCC": "a",
+            "isNoFrame": "Y",
+            "situXCdnt": 35.1432065901424,
+            "situYCdnt": 126.848489295161,
+            "페이지번호": 1,
+            "useCase": "1",
+            "locationType": "1",
+            "startRow": 0,
+            "endRow": 10,
+            "mmcNm": "동행"
+          },
+          "sha256": "83aca1ac92d3fa8718e1843edd1af1bab1eb868828645773c7852733c0433880",
+          "count": 0
+        }
+      ],
+      "rows": [],
+      "checked_at": "2026-10-30T18:38:53+09:00",
+      "total": 0
+    },
+    {
+      "target": {
+        "keyword": "동행",
+        "lat": 34.9503117255352,
+        "lng": 127.526407031102,
+        "coordinate_source_id": "MA010120220807874455",
+        "candidate_id": "466e6b1196a429bb71813335",
+        "address": "전남광주통합특별시 순천시 해룡면 신흥중1길 19",
+        "commercial_category": "카페"
+      },
+      "status": "complete",
+      "pages": [
+        {
+          "query": {
+            "mainCC": "a",
+            "isNoFrame": "Y",
+            "situXCdnt": 34.9503117255352,
+            "situYCdnt": 127.526407031102,
+            "페이지번호": 1,
+            "useCase": "1",
+            "locationType": "1",
+            "startRow": 0,
+            "endRow": 10,
+            "mmcNm": "동행"
+          },
+          "sha256": "13bcadb53dfe775ad822972ab364942c89f732b0333207573877db7781b976e4",
+          "count": 0
+        }
+      ],
+      "rows": [],
+      "checked_at": "2026-10-30T18:38:55+09:00",
+      "total": 0
+    },
+    {
+      "target": {
+        "keyword": "동행",
+        "lat": 34.752304591112,
+        "lng": 127.626934113117,
+        "coordinate_source_id": "MA010120220807948205",
+        "candidate_id": "466e6b1196a429bb71813335",
+        "address": "전남광주통합특별시 여수시 소라면 화양로 1953",
+        "commercial_category": "유사 의료업"
+      },
+      "status": "complete",
+      "pages": [
+        {
+          "query": {
+            "mainCC": "a",
+            "isNoFrame": "Y",
+            "situXCdnt": 34.752304591112,
+            "situYCdnt": 127.626934113117,
+            "페이지번호": 1,
+            "useCase": "1",
+            "locationType": "1",
+            "startRow": 0,
+            "endRow": 10,
+            "mmcNm": "동행"
+          },
+          "sha256": "0a7fad85e6bf08e46664b31c29ce7e6bf583eed9ac5412f45f408337dda852d1",
+          "count": 0
+        }
+      ],
+      "rows": [],
+      "checked_at": "2026-10-30T18:38:56+09:00",
+      "total": 0
+    },
+    {
+      "target": {
+        "keyword": "동행",
+        "lat": 35.2025374145998,
+        "lng": 126.801093140304,
+        "coordinate_source_id": "MA0101202507A0020527",
+        "candidate_id": "466e6b1196a429bb71813335",
+        "address": "전남광주통합특별시 광산구 하남산단6번로 57",
+        "commercial_category": "경영 컨설팅업"
+      },
+      "status": "complete",
+      "pages": [
+        {
+          "query": {
+            "mainCC": "a",
+            "isNoFrame": "Y",
+            "situXCdnt": 35.2025374145998,
+            "situYCdnt": 126.801093140304,
+            "페이지번호": 1,
+            "useCase": "1",
+            "locationType": "1",
+            "startRow": 0,
+            "endRow": 10,
+            "mmcNm": "동행"
+          },
+          "sha256": "17639b2c0d1e4659b9428cceade128352c2397356f96cd336c702defeac2f39a",
+          "count": 0
+        }
+      ],
+      "rows": [],
+      "checked_at": "2026-10-30T18:38:58+09:00",
+      "total": 0
+    },
+    {
+      "target": {
+        "keyword": "동행",
+        "lat": 34.7153072575113,
+        "lng": 126.816360278498,
+        "coordinate_source_id": "MA0101202510A0003812",
+        "candidate_id": "466e6b1196a429bb71813335",
+        "address": "전남광주통합특별시 강진군 병영면 한골목길 8",
+        "commercial_category": "백반/한정식"
+      },
+      "status": "complete",
+      "pages": [
+        {
+          "query": {
+            "mainCC": "a",
+            "isNoFrame": "Y",
+            "situXCdnt": 34.7153072575113,
+            "situYCdnt": 126.816360278498,
+            "페이지번호": 1,
+            "useCase": "1",
+            "locationType": "1",
+            "startRow": 0,
+            "endRow": 10,
+            "mmcNm": "동행"
+          },
+          "sha256": "8fdabc2cbe2e6f0ad7a3aaef7323420a9dea286cb49c707e07a1d3a22a247b6f",
+          "count": 0
+        }
+      ],
+      "rows": [],
+      "checked_at": "2026-10-30T18:38:59+09:00",
+      "total": 0
+    },
+    {
+      "target": {
+        "keyword": "용전주유마트",
+        "lat": 35.2344092171303,
+        "lng": 126.894295199654,
+        "coordinate_source_id": "MA0101202406A0488414",
+        "candidate_id": "5b55f3a461dcd35401e6139f",
+        "address": "전남광주통합특별시 북구 우치로 809",
+        "commercial_category": "슈퍼마켓"
+      },
+      "status": "complete",
+      "pages": [
+        {
+          "query": {
+            "mainCC": "a",
+            "isNoFrame": "Y",
+            "situXCdnt": 35.2344092171303,
+            "situYCdnt": 126.894295199654,
+            "페이지번호": 1,
+            "useCase": "1",
+            "locationType": "1",
+            "startRow": 0,
+            "endRow": 10,
+            "mmcNm": "용전주유마트"
+          },
+          "sha256": "32f9f1d38dba9ff7c8352c33a537105ef74630c55a304e2d22161c11bca26252",
+          "count": 1
+        }
+      ],
+      "rows": [
+        {
+          "location": {
+            "lat": "35.2346019078",
+            "lng": "126.8941105302"
+          },
+          "content": {
+            "tel": "062)576-5189",
+            "title": "용전주유마트",
+            "category": "차량 정비/부품/인테리어",
+            "address": "광주 북구 용전동 ",
+            "distance": "27",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000119783830",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        }
+      ],
+      "checked_at": "2026-10-30T18:39:01+09:00",
+      "total": 1
+    },
+    {
+      "target": {
+        "keyword": "광주석유판매협동조합",
+        "lat": 35.1669145980553,
+        "lng": 126.903537140248,
+        "coordinate_source_id": "MA010120220813108786",
+        "candidate_id": "4eb982df05bfb19162812c4b",
+        "address": "전남광주통합특별시 북구 자미로10번길 11",
+        "commercial_category": "가정용 연료 소매업"
+      },
+      "status": "complete",
+      "pages": [
+        {
+          "query": {
+            "mainCC": "a",
+            "isNoFrame": "Y",
+            "situXCdnt": 35.1669145980553,
+            "situYCdnt": 126.903537140248,
+            "페이지번호": 1,
+            "useCase": "1",
+            "locationType": "1",
+            "startRow": 0,
+            "endRow": 10,
+            "mmcNm": "광주석유판매협동조합"
+          },
+          "sha256": "7dbb96909d693beac9de5569c10b0d8628f3dc3457f6237829d92684c97632b0",
+          "count": 1
+        }
+      ],
+      "rows": [
+        {
+          "location": {
+            "lat": "35.1669848046",
+            "lng": "126.9036431998"
+          },
+          "content": {
+            "tel": "062)514-3068",
+            "title": "광주석유판매협동조합",
+            "category": "연탄 및 유류판매점",
+            "address": "광주 북구 신안동 ",
+            "distance": "12",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000088133110",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        }
+      ],
+      "checked_at": "2026-10-30T18:39:03+09:00",
+      "total": 1
+    },
+    {
+      "target": {
+        "keyword": "오수가스",
+        "lat": 35.5826424280039,
+        "lng": 127.35596012816,
+        "coordinate_source_id": "MA010120220807421904",
+        "candidate_id": "9e8ff2baaea7b95ae7a04d00",
+        "address": "전북특별자치도 임실군 지사면 덕재로 212",
+        "commercial_category": "가정용 연료 소매업"
+      },
+      "status": "complete",
+      "pages": [
+        {
+          "query": {
+            "mainCC": "a",
+            "isNoFrame": "Y",
+            "situXCdnt": 35.5826424280039,
+            "situYCdnt": 127.35596012816,
+            "페이지번호": 1,
+            "useCase": "1",
+            "locationType": "1",
+            "startRow": 0,
+            "endRow": 10,
+            "mmcNm": "오수가스"
+          },
+          "sha256": "6822321101cc08a22664aa405ca0889c30c2b345e2015c7185510e8b35caef43",
+          "count": 0
+        }
+      ],
+      "rows": [],
+      "checked_at": "2026-10-30T18:39:04+09:00",
+      "total": 0
+    },
+    {
+      "target": {
+        "keyword": "삼각지가스",
+        "lat": 35.5284869041581,
+        "lng": 127.339182371195,
+        "coordinate_source_id": "MA010120220807422607",
+        "candidate_id": "a7b69b2e80924865b67e40a7",
+        "address": "전북특별자치도 임실군 오수면 춘향로 1424-13",
+        "commercial_category": "가정용 연료 소매업"
+      },
+      "status": "complete",
+      "pages": [
+        {
+          "query": {
+            "mainCC": "a",
+            "isNoFrame": "Y",
+            "situXCdnt": 35.5284869041581,
+            "situYCdnt": 127.339182371195,
+            "페이지번호": 1,
+            "useCase": "1",
+            "locationType": "1",
+            "startRow": 0,
+            "endRow": 10,
+            "mmcNm": "삼각지가스"
+          },
+          "sha256": "658d11c0a976cfae1b4a958329d3ed74319c1dd1f39602c3e730b30fdba84345",
+          "count": 1
+        }
+      ],
+      "rows": [
+        {
+          "location": {
+            "lat": "35.5284760841",
+            "lng": "127.3391782567"
+          },
+          "content": {
+            "tel": "063)642-6900",
+            "title": "삼각지가스",
+            "category": "가스판매점",
+            "address": "전북 임실군 오수면 ",
+            "distance": "1",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000053530081",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        }
+      ],
+      "checked_at": "2026-10-30T18:39:06+09:00",
+      "total": 1
+    }
+  ]
+}

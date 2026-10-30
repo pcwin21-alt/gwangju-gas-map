@@ -1,0 +1,464 @@
+{
+  "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+  "scope": "targeted_crosscheck_not_nationwide_census",
+  "queries": [
+    {
+      "target": {
+        "keyword": "동행",
+        "lat": 35.1912457839957,
+        "lng": 126.853242310473,
+        "coordinate_source_id": "MA010120220809878430",
+        "purpose": "public name search; result coordinates must be independently checked",
+        "address": "전남광주통합특별시 광산구 북문대로 364-5"
+      },
+      "status": "complete",
+      "pages": [
+        {
+          "query": {
+            "mainCC": "a",
+            "isNoFrame": "Y",
+            "situXCdnt": 35.1912457839957,
+            "situYCdnt": 126.853242310473,
+            "페이지번호": 1,
+            "useCase": "1",
+            "locationType": "1",
+            "startRow": 0,
+            "endRow": 10,
+            "mmcNm": "동행"
+          },
+          "sha256": "64512e591f4884d2e24eae1e2fceb4cea0b82165cfbdf0344018ab4f60a71475",
+          "count": 1
+        }
+      ],
+      "rows": [
+        {
+          "location": {
+            "lat": "35.1912506734",
+            "lng": "126.8532957407"
+          },
+          "content": {
+            "tel": "070)7614-3579",
+            "title": "(주)동행",
+            "category": "주유소",
+            "address": "광주 광산구 신창동 ",
+            "distance": "5",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000084182837",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        }
+      ],
+      "checked_at": "2026-10-30T18:34:39+09:00",
+      "total": 1
+    },
+    {
+      "target": {
+        "keyword": "동행",
+        "lat": 35.9838437935499,
+        "lng": 126.758255952632,
+        "coordinate_source_id": "MA010120220807181938",
+        "purpose": "public name search; result coordinates must be independently checked",
+        "address": "전북특별자치도 군산시 구암로 176"
+      },
+      "status": "complete",
+      "pages": [
+        {
+          "query": {
+            "mainCC": "a",
+            "isNoFrame": "Y",
+            "situXCdnt": 35.9838437935499,
+            "situYCdnt": 126.758255952632,
+            "페이지번호": 1,
+            "useCase": "1",
+            "locationType": "1",
+            "startRow": 0,
+            "endRow": 10,
+            "mmcNm": "동행"
+          },
+          "sha256": "49f9d8cc193ba0a1c1443fbbbb1e40145511e883f5e353e5cd1e0fd006d43797",
+          "count": 0
+        }
+      ],
+      "rows": [],
+      "checked_at": "2026-10-30T18:34:41+09:00",
+      "total": 0
+    },
+    {
+      "target": {
+        "keyword": "동행",
+        "lat": 35.8803415506221,
+        "lng": 128.378999101391,
+        "coordinate_source_id": "MA010120220809321036",
+        "purpose": "public name search; result coordinates must be independently checked",
+        "address": "경상북도 성주군 선남면 나선로 1003"
+      },
+      "status": "complete",
+      "pages": [
+        {
+          "query": {
+            "mainCC": "a",
+            "isNoFrame": "Y",
+            "situXCdnt": 35.8803415506221,
+            "situYCdnt": 128.378999101391,
+            "페이지번호": 1,
+            "useCase": "1",
+            "locationType": "1",
+            "startRow": 0,
+            "endRow": 10,
+            "mmcNm": "동행"
+          },
+          "sha256": "d5d68cb9bb566c7fbba2fc7641b3c66d0426b88b07c31e5404077ed039a9cb0a",
+          "count": 0
+        }
+      ],
+      "rows": [],
+      "checked_at": "2026-10-30T18:34:43+09:00",
+      "total": 0
+    },
+    {
+      "target": {
+        "keyword": "제일가스",
+        "lat": 35.7142387331166,
+        "lng": 126.715243901508,
+        "coordinate_source_id": "MA010120220807381447",
+        "purpose": "public name search; result coordinates must be independently checked",
+        "address": "전북특별자치도 부안군 행안면 부안로 2463"
+      },
+      "status": "complete",
+      "pages": [
+        {
+          "query": {
+            "mainCC": "a",
+            "isNoFrame": "Y",
+            "situXCdnt": 35.7142387331166,
+            "situYCdnt": 126.715243901508,
+            "페이지번호": 1,
+            "useCase": "1",
+            "locationType": "1",
+            "startRow": 0,
+            "endRow": 10,
+            "mmcNm": "제일가스"
+          },
+          "sha256": "5561052fc0edc7a2614ac416f6ca279998d9e37b40eafe7e6948232b84e1c074",
+          "count": 0
+        }
+      ],
+      "rows": [],
+      "checked_at": "2026-10-30T18:34:45+09:00",
+      "total": 0
+    },
+    {
+      "target": {
+        "keyword": "제일가스",
+        "lat": 35.8155364406133,
+        "lng": 128.723968322292,
+        "coordinate_source_id": "MA010120220811640952",
+        "purpose": "public name search; result coordinates must be independently checked",
+        "address": "경상북도 경산시 삼성현로 196"
+      },
+      "status": "complete",
+      "pages": [
+        {
+          "query": {
+            "mainCC": "a",
+            "isNoFrame": "Y",
+            "situXCdnt": 35.8155364406133,
+            "situYCdnt": 128.723968322292,
+            "페이지번호": 1,
+            "useCase": "1",
+            "locationType": "1",
+            "startRow": 0,
+            "endRow": 10,
+            "mmcNm": "제일가스"
+          },
+          "sha256": "9dc3080cf8cce0ddeea20c5e076f4793123e68578cfe9d9b3b6621a8aadff42e",
+          "count": 0
+        }
+      ],
+      "rows": [],
+      "checked_at": "2026-10-30T18:34:47+09:00",
+      "total": 0
+    },
+    {
+      "target": {
+        "keyword": "제일가스",
+        "lat": 36.02254067111,
+        "lng": 126.731889253381,
+        "coordinate_source_id": "MA010120220800757874",
+        "purpose": "public name search; result coordinates must be independently checked",
+        "address": "충청남도 서천군 마서면 금강로 1089"
+      },
+      "status": "complete",
+      "pages": [
+        {
+          "query": {
+            "mainCC": "a",
+            "isNoFrame": "Y",
+            "situXCdnt": 36.02254067111,
+            "situYCdnt": 126.731889253381,
+            "페이지번호": 1,
+            "useCase": "1",
+            "locationType": "1",
+            "startRow": 0,
+            "endRow": 10,
+            "mmcNm": "제일가스"
+          },
+          "sha256": "721ddf628b2d09afc17fe4168f6f7c0096b783af30dad8361eb89a9f36a68819",
+          "count": 0
+        }
+      ],
+      "rows": [],
+      "checked_at": "2026-10-30T18:34:48+09:00",
+      "total": 0
+    },
+    {
+      "target": {
+        "keyword": "경동가스",
+        "lat": 35.581139553332,
+        "lng": 129.357556678514,
+        "coordinate_source_id": "MA010120220811544990",
+        "purpose": "public name search; result coordinates must be independently checked",
+        "address": "울산광역시 북구 북부순환도로 1165"
+      },
+      "status": "complete",
+      "pages": [
+        {
+          "query": {
+            "mainCC": "a",
+            "isNoFrame": "Y",
+            "situXCdnt": 35.581139553332,
+            "situYCdnt": 129.357556678514,
+            "페이지번호": 1,
+            "useCase": "1",
+            "locationType": "1",
+            "startRow": 0,
+            "endRow": 10,
+            "mmcNm": "경동가스"
+          },
+          "sha256": "329de9d9c81b2daad2f19a8bc48987e8da1bf543e6722c8f1252de27b7fad995",
+          "count": 0
+        }
+      ],
+      "rows": [],
+      "checked_at": "2026-10-30T18:34:50+09:00",
+      "total": 0
+    },
+    {
+      "target": {
+        "keyword": "대창가스",
+        "lat": 36.2446827820629,
+        "lng": 126.611390389562,
+        "coordinate_source_id": "MA010120220806154841",
+        "purpose": "public name search; result coordinates must be independently checked",
+        "address": "충청남도 보령시 웅천읍 성동큰길 162-105"
+      },
+      "status": "complete",
+      "pages": [
+        {
+          "query": {
+            "mainCC": "a",
+            "isNoFrame": "Y",
+            "situXCdnt": 36.2446827820629,
+            "situYCdnt": 126.611390389562,
+            "페이지번호": 1,
+            "useCase": "1",
+            "locationType": "1",
+            "startRow": 0,
+            "endRow": 10,
+            "mmcNm": "대창가스"
+          },
+          "sha256": "4ff2b73b167cc2260189708c00426db54bf68b368866681e448350a2541159b5",
+          "count": 1
+        }
+      ],
+      "rows": [
+        {
+          "location": {
+            "lat": "36.2446140494",
+            "lng": "126.6113934037"
+          },
+          "content": {
+            "tel": "041)933-1444",
+            "title": "대창가스",
+            "category": "가스판매점",
+            "address": "충남 보령시 웅천읍 ",
+            "distance": "8",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000027324447",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        }
+      ],
+      "checked_at": "2026-10-30T18:34:51+09:00",
+      "total": 1
+    },
+    {
+      "target": {
+        "keyword": "부흥주유소",
+        "lat": 36.5027318438102,
+        "lng": 126.625061986194,
+        "coordinate_source_id": "MA010120220805035213",
+        "purpose": "public name search; result coordinates must be independently checked",
+        "address": "충청남도 홍성군 광천읍 광천로329번길 11"
+      },
+      "status": "complete",
+      "pages": [
+        {
+          "query": {
+            "mainCC": "a",
+            "isNoFrame": "Y",
+            "situXCdnt": 36.5027318438102,
+            "situYCdnt": 126.625061986194,
+            "페이지번호": 1,
+            "useCase": "1",
+            "locationType": "1",
+            "startRow": 0,
+            "endRow": 10,
+            "mmcNm": "부흥주유소"
+          },
+          "sha256": "74988e1ab863c0f5138ea32368a504458dcddc392c656fbeeee6d1120b2713a3",
+          "count": 0
+        }
+      ],
+      "rows": [],
+      "checked_at": "2026-10-30T18:34:53+09:00",
+      "total": 0
+    },
+    {
+      "target": {
+        "keyword": "청우",
+        "lat": 35.119808,
+        "lng": 126.858163,
+        "coordinate_source_id": "onnuri:05273200024",
+        "purpose": "same-neighborhood name discovery; no address inference"
+      },
+      "status": "complete",
+      "pages": [
+        {
+          "query": {
+            "mainCC": "a",
+            "isNoFrame": "Y",
+            "situXCdnt": 35.119808,
+            "situYCdnt": 126.858163,
+            "페이지번호": 1,
+            "useCase": "1",
+            "locationType": "1",
+            "startRow": 0,
+            "endRow": 10,
+            "mmcNm": "청우"
+          },
+          "sha256": "11dd7f2fc68aa3f7c1a11c0ff15a1a9e38233ce4cee14522b46f4a1699209977",
+          "count": 0
+        }
+      ],
+      "rows": [],
+      "checked_at": "2026-10-30T18:34:55+09:00",
+      "total": 0
+    },
+    {
+      "target": {
+        "keyword": "주유",
+        "lat": 35.234411,
+        "lng": 126.894298,
+        "coordinate_source_id": "onnuri:05634200003",
+        "control": true
+      },
+      "status": "complete",
+      "pages": [
+        {
+          "query": {
+            "mainCC": "a",
+            "isNoFrame": "Y",
+            "situXCdnt": 35.234411,
+            "situYCdnt": 126.894298,
+            "페이지번호": 1,
+            "useCase": "1",
+            "locationType": "1",
+            "startRow": 0,
+            "endRow": 10,
+            "mmcNm": "주유"
+          },
+          "sha256": "1f53c1ba8170baf0183788ef2fe8a505c191cf0d2e3530c7304190ec54c55154",
+          "count": 3
+        }
+      ],
+      "rows": [
+        {
+          "location": {
+            "lat": "35.2346019078",
+            "lng": "126.8941105302"
+          },
+          "content": {
+            "tel": "062)576-5189",
+            "title": "용전주유마트",
+            "category": "차량 정비/부품/인테리어",
+            "address": "광주 북구 용전동 ",
+            "distance": "27",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000119783830",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "35.2346019078",
+            "lng": "126.8941105302"
+          },
+          "content": {
+            "tel": "062)576-5189",
+            "title": "용전주유소",
+            "category": "주유소",
+            "address": "광주 북구 용전동 ",
+            "distance": "27",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000112060690",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        },
+        {
+          "location": {
+            "lat": "35.2349921951",
+            "lng": "126.8944653273"
+          },
+          "content": {
+            "tel": "062)571-9777",
+            "title": "천보주유소",
+            "category": "주유소",
+            "address": "광주 북구 용전동 ",
+            "distance": "66",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000078729290",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          }
+        }
+      ],
+      "checked_at": "2026-10-30T18:34:56+09:00",
+      "total": 3
+    }
+  ]
+}

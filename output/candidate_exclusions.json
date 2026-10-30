@@ -34,6 +34,63 @@
       "commercial_source_date": "2026-06-30",
       "commercial_id": "MA010120220807595712",
       "exact_lot_address": "광산구 송정동 820-5"
+    },
+    {
+      "match": {
+        "가맹점명": "거제제일가스",
+        "소속 시장명(또는 상점가)": "거제 읍내시장",
+        "소재지": "경남",
+        "취급품목": "엘피지가스 소매 등"
+      },
+      "status": "excluded_non_vehicle_fuel",
+      "reason": "공식 가맹점 상세주소와 상권자료의 가정용 연료 소매업 주소 일치. KB 온누리 조회도 가스판매점로 분류되어 차량 주유·충전소 대상에서 제외. 온누리 가맹 자체를 부정하지 않음.",
+      "checked_at": "2026-10-30T18:38:40+09:00",
+      "sources": [
+        "https://www.onnuri.gift/place",
+        "https://www.data.go.kr/data/15083033/fileData.do",
+        "https://card.kbcard.com/BON/DVIEW/HBGV0701"
+      ],
+      "commercial_source_date": "2026-06-30",
+      "commercial_id": "MA010120220812840067",
+      "bank_source_id": "000000095747494"
+    },
+    {
+      "match": {
+        "가맹점명": "영남가스 주식회사",
+        "소속 시장명(또는 상점가)": "반구시장",
+        "소재지": "울산",
+        "취급품목": "LPG 가스판매"
+      },
+      "status": "excluded_non_vehicle_fuel",
+      "reason": "공식 가맹점 상세주소와 상권자료의 가정용 연료 소매업 주소 일치. KB 온누리 조회도 가스판매점로 분류되어 차량 주유·충전소 대상에서 제외. 온누리 가맹 자체를 부정하지 않음.",
+      "checked_at": "2026-10-30T18:38:50+09:00",
+      "sources": [
+        "https://www.onnuri.gift/place",
+        "https://www.data.go.kr/data/15083033/fileData.do",
+        "https://card.kbcard.com/BON/DVIEW/HBGV0701"
+      ],
+      "commercial_source_date": "2026-06-30",
+      "commercial_id": "MA010120220803524487",
+      "bank_source_id": "000000093931049"
+    },
+    {
+      "match": {
+        "가맹점명": "광주석유판매협동조합",
+        "소속 시장명(또는 상점가)": "신안동광주역앞상가 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": "유류"
+      },
+      "status": "excluded_non_vehicle_fuel",
+      "reason": "공식 가맹점 상세주소와 상권자료의 가정용 연료 소매업 주소 일치. KB 온누리 조회도 연탄 및 유류판매점로 분류되어 차량 주유·충전소 대상에서 제외. 온누리 가맹 자체를 부정하지 않음.",
+      "checked_at": "2026-10-30T18:39:03+09:00",
+      "sources": [
+        "https://www.onnuri.gift/place",
+        "https://www.data.go.kr/data/15083033/fileData.do",
+        "https://card.kbcard.com/BON/DVIEW/HBGV0701"
+      ],
+      "commercial_source_date": "2026-06-30",
+      "commercial_id": "MA010120220813108786",
+      "bank_source_id": "000000088133110"
     }
   ]
 }

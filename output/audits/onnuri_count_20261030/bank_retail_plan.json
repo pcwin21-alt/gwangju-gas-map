@@ -1,0 +1,164 @@
+[
+  {
+    "keyword": "대양종합가스",
+    "lat": 35.2413518916976,
+    "lng": 128.6332711221,
+    "coordinate_source_id": "MA010120220810966563",
+    "candidate_id": "7aec121a5094c5961ee57bc4",
+    "address": "경상남도 창원시 의창구 차룡로48번길 57",
+    "commercial_category": "가정용 연료 소매업"
+  },
+  {
+    "keyword": "거제제일가스",
+    "lat": 34.8509309332974,
+    "lng": 128.588989101095,
+    "coordinate_source_id": "MA010120220812840067",
+    "candidate_id": "e8471cc21dd6b94f30239b9d",
+    "address": "경상남도 거제시 거제면 기성로 35",
+    "commercial_category": "가정용 연료 소매업"
+  },
+  {
+    "keyword": "제일가스설비",
+    "lat": 36.5327968930038,
+    "lng": 128.073442780274,
+    "coordinate_source_id": "MA010120220809348326",
+    "candidate_id": "4ffd85ade67d4e3ece9bea21",
+    "address": "경상북도 상주시 은척면 봉중1길 11-1",
+    "commercial_category": "가정용 연료 소매업"
+  },
+  {
+    "keyword": "대성석유",
+    "lat": 35.8849845718552,
+    "lng": 128.621227761324,
+    "coordinate_source_id": "MA010120220808847250",
+    "candidate_id": "0bf8e875e8a47f8917b48c5c",
+    "address": "대구광역시 동구 평화로 69",
+    "commercial_category": "가정용 연료 소매업"
+  },
+  {
+    "keyword": "금성가스",
+    "lat": 35.8563808992144,
+    "lng": 128.560094595347,
+    "coordinate_source_id": "MA010120220808945904",
+    "candidate_id": "5b1c47a5cebce76e8f8f0890",
+    "address": "대구광역시 달서구 두류공원로50길 22",
+    "commercial_category": "가정용 연료 소매업"
+  },
+  {
+    "keyword": "경동가스",
+    "lat": 35.8575326788823,
+    "lng": 128.577474531439,
+    "coordinate_source_id": "MA010120220809478583",
+    "candidate_id": "634df12c95dd2fad8609c1ed",
+    "address": "대구광역시 남구 성당로60길 59",
+    "commercial_category": "가정용 연료 소매업"
+  },
+  {
+    "keyword": "영주석유",
+    "lat": 36.3282013212304,
+    "lng": 127.434062697037,
+    "coordinate_source_id": "MA010120220805829464",
+    "candidate_id": "e971399ca41505931d7d9ca4",
+    "address": "대전광역시 동구 대전로 767",
+    "commercial_category": "가정용 연료 소매업"
+  },
+  {
+    "keyword": "영남가스",
+    "lat": 35.5577850587777,
+    "lng": 129.345051644305,
+    "coordinate_source_id": "MA010120220803524487",
+    "candidate_id": "55a4f39122d05488067f479f",
+    "address": "울산광역시 중구 반구정14길 36",
+    "commercial_category": "가정용 연료 소매업"
+  },
+  {
+    "keyword": "동행",
+    "lat": 35.1714782131612,
+    "lng": 126.868184959282,
+    "coordinate_source_id": "MA010120220803141898",
+    "candidate_id": "466e6b1196a429bb71813335",
+    "address": "전남광주통합특별시 서구 하남대로 690",
+    "commercial_category": "경영 컨설팅업"
+  },
+  {
+    "keyword": "동행",
+    "lat": 35.1432065901424,
+    "lng": 126.848489295161,
+    "coordinate_source_id": "MA010120220800843978",
+    "candidate_id": "466e6b1196a429bb71813335",
+    "address": "전남광주통합특별시 서구 서광주로 181",
+    "commercial_category": "돼지고기 구이/찜"
+  },
+  {
+    "keyword": "동행",
+    "lat": 34.9503117255352,
+    "lng": 127.526407031102,
+    "coordinate_source_id": "MA010120220807874455",
+    "candidate_id": "466e6b1196a429bb71813335",
+    "address": "전남광주통합특별시 순천시 해룡면 신흥중1길 19",
+    "commercial_category": "카페"
+  },
+  {
+    "keyword": "동행",
+    "lat": 34.752304591112,
+    "lng": 127.626934113117,
+    "coordinate_source_id": "MA010120220807948205",
+    "candidate_id": "466e6b1196a429bb71813335",
+    "address": "전남광주통합특별시 여수시 소라면 화양로 1953",
+    "commercial_category": "유사 의료업"
+  },
+  {
+    "keyword": "동행",
+    "lat": 35.2025374145998,
+    "lng": 126.801093140304,
+    "coordinate_source_id": "MA0101202507A0020527",
+    "candidate_id": "466e6b1196a429bb71813335",
+    "address": "전남광주통합특별시 광산구 하남산단6번로 57",
+    "commercial_category": "경영 컨설팅업"
+  },
+  {
+    "keyword": "동행",
+    "lat": 34.7153072575113,
+    "lng": 126.816360278498,
+    "coordinate_source_id": "MA0101202510A0003812",
+    "candidate_id": "466e6b1196a429bb71813335",
+    "address": "전남광주통합특별시 강진군 병영면 한골목길 8",
+    "commercial_category": "백반/한정식"
+  },
+  {
+    "keyword": "용전주유마트",
+    "lat": 35.2344092171303,
+    "lng": 126.894295199654,
+    "coordinate_source_id": "MA0101202406A0488414",
+    "candidate_id": "5b55f3a461dcd35401e6139f",
+    "address": "전남광주통합특별시 북구 우치로 809",
+    "commercial_category": "슈퍼마켓"
+  },
+  {
+    "keyword": "광주석유판매협동조합",
+    "lat": 35.1669145980553,
+    "lng": 126.903537140248,
+    "coordinate_source_id": "MA010120220813108786",
+    "candidate_id": "4eb982df05bfb19162812c4b",
+    "address": "전남광주통합특별시 북구 자미로10번길 11",
+    "commercial_category": "가정용 연료 소매업"
+  },
+  {
+    "keyword": "오수가스",
+    "lat": 35.5826424280039,
+    "lng": 127.35596012816,
+    "coordinate_source_id": "MA010120220807421904",
+    "candidate_id": "9e8ff2baaea7b95ae7a04d00",
+    "address": "전북특별자치도 임실군 지사면 덕재로 212",
+    "commercial_category": "가정용 연료 소매업"
+  },
+  {
+    "keyword": "삼각지가스",
+    "lat": 35.5284869041581,
+    "lng": 127.339182371195,
+    "coordinate_source_id": "MA010120220807422607",
+    "candidate_id": "a7b69b2e80924865b67e40a7",
+    "address": "전북특별자치도 임실군 오수면 춘향로 1424-13",
+    "commercial_category": "가정용 연료 소매업"
+  }
+]

@@ -8772,5 +8772,56 @@
       "opinet_distance_m": 4.3,
       "note": "KB 상호·전화·주소권역과 지자체·오피넷 동일성 확인. 오류가 있는 KB 좌표는 사용하지 않음."
     }
+  },
+  {
+    "id": "onnuri:kb:000000084182837",
+    "name": "(주)동행",
+    "address": "전남광주통합특별시 광산구 북문대로 364-5",
+    "lat": 35.1912457839957,
+    "lng": 126.853242310473,
+    "payment_types": [
+      "onnuri"
+    ],
+    "source": [
+      "kb_onnuri"
+    ],
+    "aliases": [],
+    "fuel_kind": "liquid",
+    "route_eligible": true,
+    "region": "광주",
+    "onnuri_methods": {
+      "paper": null,
+      "card": true,
+      "qr": null,
+      "digital": true
+    },
+    "verification": {
+      "onnuri": {
+        "status": "confirmed",
+        "checked_at": "2026-10-30T18:34:39+09:00",
+        "source_date": null,
+        "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+        "source_id": "kb:000000084182837",
+        "source_ids": [
+          "kb:000000084182837"
+        ],
+        "provider": "kbcard",
+        "issuer_scope": [
+          "KB국민카드"
+        ],
+        "match_basis": "bank_onnuri_flag_fuel_category_name_locality_coordinates_commercial_address",
+        "candidate_ids": [
+          "466e6b1196a429bb71813335"
+        ],
+        "note": "KB국민카드 온누리 사용처 조회 기준. 카드사 반영 지연 가능. 지류·QR·다른 카드사는 별도 확인."
+      }
+    },
+    "location_evidence": {
+      "source_type": "commercial_registry",
+      "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+      "source_date": "2026-06-30",
+      "source_id": "MA010120220809878430",
+      "bank_distance_m": 4.9
+    }
   }
 ]

@@ -10,6 +10,7 @@ import re
 from datetime import datetime, timedelta
 
 PORTAL = 'https://www.data.go.kr/data/3060079/fileData.do'
+FUEL_SELECTION_VERSION = 2
 FIELDS = ('가맹점명', '소속 시장명(또는 상점가)', '소재지', '취급품목',
           '지류형 가맹 여부', '디지털형 가맹 여부', '가맹 등록년도')
 
@@ -19,8 +20,12 @@ def normalize(value):
 
 
 def fuel_row(row):
+    # Product descriptions include legal-name merchants and LPG retailers.
+    # Broad selection is discovery only; vehicle type and identity are checked
+    # downstream. Avoid unrelated substring matches in milk/textile products.
+    items = re.sub(r'우유류|섬유류', '', row['취급품목'])
     return bool(re.search(r'주유소|충전소|석유|에너지|엘피지|lpg|오일뱅크', row['가맹점명'], re.I) or
-                re.search(r'휘발유|경유|등유|석유류|차량용.*(?:가스|엘피지|lpg)|^유류$|^주유', row['취급품목'], re.I))
+                re.search(r'휘발유|휴발유|경유|등유|석유|유류|무연|차량용.*(?:기름|연료|가스|엘피지|lpg)|자동차용.*연료|엘피지|lpg|충전소|^주유', items, re.I))
 
 
 def parse_csv(content, source_date, checked, download_url, registry_keys=()):
@@ -53,22 +58,47 @@ def parse_csv(content, source_date, checked, download_url, registry_keys=()):
     return {'source_url': PORTAL, 'download_url': download_url, 'source_date': source_date,
             'retrieved_at': checked, 'sha256': hashlib.sha256(content).hexdigest(),
             'total_rows': total, 'regional_fuel_rows': len(rows), 'scope': 'nationwide-v3',
+            'fuel_selection_version': FUEL_SELECTION_VERSION,
             'registry_signature': hashlib.sha256(repr(sorted(registry_keys)).encode()).hexdigest(), 'rows': rows}
+
+
+def download_link(session, html):
+    """Resolve only the download advertised on the public dataset page."""
+    legacy = re.search(r'"contentUrl"\s*:\s*"(https://www\.data\.go\.kr/cmm/cmm/fileDownload\.do\?[^"\s]+)"', html)
+    if legacy:
+        return legacy.group(1).replace('&amp;', '&')
+    button = re.search(r"fn_fileDataDown\(\s*'3060079'\s*,\s*'(uddi:[a-fA-F0-9-]+)'\s*,\s*'([^']*)'\s*,\s*'(\d+)'\s*,\s*'2'\s*\)", html)
+    if not button:
+        raise ValueError('온누리 공식 다운로드 메타데이터 변경')
+    detail, attachment, sequence = button.groups()
+    response = session.post('https://www.data.go.kr/tcs/dss/selectFileDataDownload.do', data={
+        'publicDataPk': '3060079', 'publicDataDetailPk': detail, 'atchFileId': attachment,
+        'fileDetailSn': sequence, 'publicDataTyCode': 'PR0051'}, timeout=30)
+    response.raise_for_status()
+    metadata = response.json()
+    if not isinstance(metadata, dict):
+        raise ValueError('온누리 공식 다운로드 응답 변경')
+    # The public response supplies the attachment at the top level.
+    file_id = metadata.get('atchFileId', '')
+    file_sequence = str(metadata.get('fileDetailSn', ''))
+    if metadata.get('status') is not True or not re.fullmatch(r'FILE_\d+', file_id) or not re.fullmatch(r'\d+', file_sequence):
+        raise ValueError('온누리 공식 다운로드 응답 변경')
+    return ('https://www.data.go.kr/cmm/cmm/fileDownload.do?atchFileId=' + file_id +
+            '&fileDetailSn=' + file_sequence + '&insertDataPrcus=N')
 
 
 def fetch_snapshot(session, cached, checked, registry_keys=None):
     response = session.get(PORTAL, timeout=30)
     response.raise_for_status()
     # Structured metadata is published with the file page; do not guess file IDs.
-    match = re.search(r'"contentUrl"\s*:\s*"(https://www\.data\.go\.kr/cmm/cmm/fileDownload\.do\?[^"\s]+)"', response.text)
     dates = re.findall(r'전국 온누리상품권 가맹점 현황_(\d{8})', response.text)
-    if not match or not dates:
+    if not dates:
         raise ValueError('온누리 공식 다운로드 메타데이터 변경')
     source_date = datetime.strptime(max(dates), '%Y%m%d').date().isoformat()
-    url = match.group(1).replace('&amp;', '&')
+    url = download_link(session, response.text)
     # Recheck the page daily; re-download unchanged 17 MB files once a week.
     signature = hashlib.sha256(repr(sorted(registry_keys)).encode()).hexdigest() if registry_keys is not None else None
-    if cached and cached.get('scope') == 'nationwide-v3' and (signature is None or cached.get('registry_signature') == signature) and cached['source_date'] == source_date and cached['download_url'] == url:
+    if cached and cached.get('scope') == 'nationwide-v3' and cached.get('fuel_selection_version') == FUEL_SELECTION_VERSION and (signature is None or cached.get('registry_signature') == signature) and cached['source_date'] == source_date and cached['download_url'] == url:
         age = datetime.fromisoformat(checked) - datetime.fromisoformat(cached['retrieved_at'])
         if age < timedelta(days=7):
             return cached

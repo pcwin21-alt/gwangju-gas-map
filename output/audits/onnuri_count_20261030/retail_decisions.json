@@ -1,0 +1,23 @@
+[
+  {
+    "candidate_id": "e8471cc21dd6b94f30239b9d",
+    "name": "거제제일가스",
+    "decision": "non_vehicle_retail_confirmed",
+    "source_id": "16231200039",
+    "bank_source_id": "000000095747494"
+  },
+  {
+    "candidate_id": "55a4f39122d05488067f479f",
+    "name": "영남가스 주식회사",
+    "decision": "non_vehicle_retail_confirmed",
+    "source_id": "68111800106",
+    "bank_source_id": "000000093931049"
+  },
+  {
+    "candidate_id": "4eb982df05bfb19162812c4b",
+    "name": "광주석유판매협동조합",
+    "decision": "non_vehicle_retail_confirmed",
+    "source_id": "05491200023",
+    "bank_source_id": "000000088133110"
+  }
+]

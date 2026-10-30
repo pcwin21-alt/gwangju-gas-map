@@ -681,8 +681,9 @@
       "name": "㈜동행",
       "market": "신창동가구의거리일번국도상점가",
       "region": "전남광주",
-      "status": "needs_review",
-      "reason": "연간 자료에 있으나 현행 검색에서 상호·상점가 미대조"
+      "status": "located",
+      "reason": "KB국민카드 온누리 조회와 상세주소 교차확인",
+      "supplemental_source_id": "kb:000000084182837"
     },
     {
       "row_number": 76,
@@ -1653,8 +1654,8 @@
       "name": "광주석유판매협동조합",
       "market": "신안동광주역앞상가 골목형상점가",
       "region": "전남광주",
-      "status": "needs_review",
-      "reason": "자동차 주유·충전 업종 확인 필요"
+      "status": "excluded_non_vehicle_fuel",
+      "reason": "공식 가맹점 상세주소와 상권자료의 가정용 연료 소매업 주소 일치. KB 온누리 조회도 연탄 및 유류판매점로 분류되어 차량 주유·충전소 대상에서 제외. 온누리 가맹 자체를 부정하지 않음."
     },
     {
       "row_number": 184,

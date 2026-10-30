@@ -1,0 +1,5 @@
+{
+  "status": 400,
+  "content_type": "text/html",
+  "body_excerpt": "<!DOCTYPE HTML PUBLIC \"-//IETF/DTD HTML 2.0//EN\">\r\n<HTML><HEAD>\r\n<TITLE>400 Bad Request</TITLE>\r\n</HEAD><BODY>\r\n<H1>Request Blocked</H1>\r\n</BODY></HTML>\r\n<br><br><br>"
+}

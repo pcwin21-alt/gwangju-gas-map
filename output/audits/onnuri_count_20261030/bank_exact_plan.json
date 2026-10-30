@@ -1,0 +1,88 @@
+[
+  {
+    "keyword": "동행",
+    "lat": 35.1912457839957,
+    "lng": 126.853242310473,
+    "coordinate_source_id": "MA010120220809878430",
+    "purpose": "public name search; result coordinates must be independently checked",
+    "address": "전남광주통합특별시 광산구 북문대로 364-5"
+  },
+  {
+    "keyword": "동행",
+    "lat": 35.9838437935499,
+    "lng": 126.758255952632,
+    "coordinate_source_id": "MA010120220807181938",
+    "purpose": "public name search; result coordinates must be independently checked",
+    "address": "전북특별자치도 군산시 구암로 176"
+  },
+  {
+    "keyword": "동행",
+    "lat": 35.8803415506221,
+    "lng": 128.378999101391,
+    "coordinate_source_id": "MA010120220809321036",
+    "purpose": "public name search; result coordinates must be independently checked",
+    "address": "경상북도 성주군 선남면 나선로 1003"
+  },
+  {
+    "keyword": "제일가스",
+    "lat": 35.7142387331166,
+    "lng": 126.715243901508,
+    "coordinate_source_id": "MA010120220807381447",
+    "purpose": "public name search; result coordinates must be independently checked",
+    "address": "전북특별자치도 부안군 행안면 부안로 2463"
+  },
+  {
+    "keyword": "제일가스",
+    "lat": 35.8155364406133,
+    "lng": 128.723968322292,
+    "coordinate_source_id": "MA010120220811640952",
+    "purpose": "public name search; result coordinates must be independently checked",
+    "address": "경상북도 경산시 삼성현로 196"
+  },
+  {
+    "keyword": "제일가스",
+    "lat": 36.02254067111,
+    "lng": 126.731889253381,
+    "coordinate_source_id": "MA010120220800757874",
+    "purpose": "public name search; result coordinates must be independently checked",
+    "address": "충청남도 서천군 마서면 금강로 1089"
+  },
+  {
+    "keyword": "경동가스",
+    "lat": 35.581139553332,
+    "lng": 129.357556678514,
+    "coordinate_source_id": "MA010120220811544990",
+    "purpose": "public name search; result coordinates must be independently checked",
+    "address": "울산광역시 북구 북부순환도로 1165"
+  },
+  {
+    "keyword": "대창가스",
+    "lat": 36.2446827820629,
+    "lng": 126.611390389562,
+    "coordinate_source_id": "MA010120220806154841",
+    "purpose": "public name search; result coordinates must be independently checked",
+    "address": "충청남도 보령시 웅천읍 성동큰길 162-105"
+  },
+  {
+    "keyword": "부흥주유소",
+    "lat": 36.5027318438102,
+    "lng": 126.625061986194,
+    "coordinate_source_id": "MA010120220805035213",
+    "purpose": "public name search; result coordinates must be independently checked",
+    "address": "충청남도 홍성군 광천읍 광천로329번길 11"
+  },
+  {
+    "keyword": "청우",
+    "lat": 35.119808,
+    "lng": 126.858163,
+    "coordinate_source_id": "onnuri:05273200024",
+    "purpose": "same-neighborhood name discovery; no address inference"
+  },
+  {
+    "keyword": "주유",
+    "lat": 35.234411,
+    "lng": 126.894298,
+    "coordinate_source_id": "onnuri:05634200003",
+    "control": true
+  }
+]

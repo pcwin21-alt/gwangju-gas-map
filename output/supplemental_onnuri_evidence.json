@@ -840,6 +840,69 @@
       "opinet_source_url": "https://www.opinet.co.kr",
       "opinet_checked_at": "2026-10-27T16:54:03+09:00",
       "annual_candidate_ids": []
+    },
+    {
+      "identity_review": "same_premise_confirmed",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "checked_at": "2026-10-30T18:34:39+09:00",
+      "bank_record": {
+        "location": {
+          "lat": "35.1912506734",
+          "lng": "126.8532957407"
+        },
+        "content": {
+          "tel": "070)7614-3579",
+          "title": "(주)동행",
+          "category": "주유소",
+          "address": "광주 광산구 신창동 ",
+          "distance": "5",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000084182837",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        }
+      },
+      "commercial_record": {
+        "상가업소번호": "MA010120220809878430",
+        "상호명": "동행",
+        "지점명": "",
+        "상권업종소분류코드": "G21401",
+        "상권업종소분류명": "주유소",
+        "표준산업분류코드": "G47711",
+        "표준산업분류명": "운송장비용 주유소 운영업",
+        "시군구명": "광산구",
+        "도로명주소": "전남광주통합특별시 광산구 북문대로 364-5",
+        "지번주소": "전남광주통합특별시 광산구 신창동 1083-8",
+        "위도": "35.1912457839957",
+        "경도": "126.853242310473",
+        "region": "광주"
+      },
+      "commercial_source": {
+        "archive_sha256": "57aa361544108ff4fc73334f87d2ced61e41fe8638dd70bcd842930f865d2386",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+        "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
+      },
+      "annual_candidate_ids": [
+        "466e6b1196a429bb71813335"
+      ],
+      "identity_support": "Official annual legal name and vehicle-fuel product; public bank Onnuri flag and fuel category; same legal name, Shinchang-dong lot locality, independent points within 5m. The annual source date remains 2026-07-31.",
+      "query_evidence": {
+        "file": "audits/onnuri_count_20261030/bank_exact_results.json",
+        "target": {
+          "keyword": "동행",
+          "lat": 35.1912457839957,
+          "lng": 126.853242310473,
+          "coordinate_source_id": "MA010120220809878430",
+          "purpose": "public name search; result coordinates must be independently checked",
+          "address": "전남광주통합특별시 광산구 북문대로 364-5"
+        },
+        "response_sha256": "64512e591f4884d2e24eae1e2fceb4cea0b82165cfbdf0344018ab4f60a71475"
+      }
     }
   ]
 }

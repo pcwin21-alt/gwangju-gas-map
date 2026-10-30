@@ -420,6 +420,162 @@
         "지번주소": "대전광역시 대덕구 오정동 90-2"
       },
       "basis": "Exact current Onnuri and Kakao merchant name/address; the official commercial registry uses shortened name 신화 at the same road address with household-fuel category. Current place classification independently agrees with petroleum retail. No membership revocation inferred."
+    },
+    {
+      "source_id": "16231200039",
+      "merchant_name": "거제제일가스",
+      "market": "거제 읍내시장",
+      "address": "경상남도 거제시 거제면 기성로 35",
+      "fuel_kind": "non_vehicle",
+      "registry_category": "가정용 연료 소매업",
+      "checked_at": "2026-10-30T18:38:40+09:00",
+      "reason": "공식 가맹점 상세주소와 상권자료의 가정용 연료 소매업 주소 일치. KB 온누리 조회도 가스판매점로 분류되어 차량 주유·충전소 대상에서 제외. 온누리 가맹 자체를 부정하지 않음.",
+      "sources": [
+        "https://www.onnuri.gift/place",
+        "https://www.data.go.kr/data/15083033/fileData.do",
+        "https://card.kbcard.com/BON/DVIEW/HBGV0701"
+      ],
+      "commercial_evidence": {
+        "상가업소번호": "MA010120220812840067",
+        "상호명": "거제제일가스",
+        "지점명": "",
+        "상권업종소분류코드": "G21403",
+        "상권업종소분류명": "가정용 연료 소매업",
+        "표준산업분류코드": "G47723",
+        "표준산업분류명": "가정용 가스 연료 소매업",
+        "시군구명": "거제시",
+        "도로명주소": "경상남도 거제시 거제면 기성로 35",
+        "지번주소": "경상남도 거제시 거제면 서정리 647",
+        "위도": "34.8509309332974",
+        "경도": "128.588989101095"
+      },
+      "bank_record": {
+        "location": {
+          "lat": "34.8509266011",
+          "lng": "128.5889484786"
+        },
+        "content": {
+          "tel": "",
+          "title": "거제제일가스",
+          "category": "가스판매점",
+          "address": "경남 거제시 거제면 ",
+          "distance": "4",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "1",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000095747494",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        }
+      },
+      "bank_distance_m": 3.7,
+      "basis": "Exact operator name/market/address, commercial household-fuel category and independently located bank retail category. Membership remains separate."
+    },
+    {
+      "source_id": "68111800106",
+      "merchant_name": "영남가스 주식회사",
+      "market": "반구시장",
+      "address": "울산광역시 중구 반구정14길 36 (반구동)",
+      "fuel_kind": "non_vehicle",
+      "registry_category": "가정용 연료 소매업",
+      "checked_at": "2026-10-30T18:38:50+09:00",
+      "reason": "공식 가맹점 상세주소와 상권자료의 가정용 연료 소매업 주소 일치. KB 온누리 조회도 가스판매점로 분류되어 차량 주유·충전소 대상에서 제외. 온누리 가맹 자체를 부정하지 않음.",
+      "sources": [
+        "https://www.onnuri.gift/place",
+        "https://www.data.go.kr/data/15083033/fileData.do",
+        "https://card.kbcard.com/BON/DVIEW/HBGV0701"
+      ],
+      "commercial_evidence": {
+        "상가업소번호": "MA010120220803524487",
+        "상호명": "영남가스",
+        "지점명": "",
+        "상권업종소분류코드": "G21403",
+        "상권업종소분류명": "가정용 연료 소매업",
+        "표준산업분류코드": "G47723",
+        "표준산업분류명": "가정용 가스 연료 소매업",
+        "시군구명": "중구",
+        "도로명주소": "울산광역시 중구 반구정14길 36",
+        "지번주소": "울산광역시 중구 반구동 454-29",
+        "위도": "35.5577850587777",
+        "경도": "129.345051644305"
+      },
+      "bank_record": {
+        "location": {
+          "lat": "35.5577835613",
+          "lng": "129.3450616436"
+        },
+        "content": {
+          "tel": "052)244-7600",
+          "title": "영남가스 주식회사",
+          "category": "가스판매점",
+          "address": "울산 중구 반구동 ",
+          "distance": "1",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "1",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000093931049",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        }
+      },
+      "bank_distance_m": 0.9,
+      "basis": "Exact operator name/market/address, commercial household-fuel category and independently located bank retail category. Membership remains separate."
+    },
+    {
+      "source_id": "05491200023",
+      "merchant_name": "광주석유판매협동조합",
+      "market": "신안동광주역앞상가 골목형상점가",
+      "address": "광주광역시 북구 자미로10번길 11 (신안동)",
+      "fuel_kind": "non_vehicle",
+      "registry_category": "가정용 연료 소매업",
+      "checked_at": "2026-10-30T18:39:03+09:00",
+      "reason": "공식 가맹점 상세주소와 상권자료의 가정용 연료 소매업 주소 일치. KB 온누리 조회도 연탄 및 유류판매점로 분류되어 차량 주유·충전소 대상에서 제외. 온누리 가맹 자체를 부정하지 않음.",
+      "sources": [
+        "https://www.onnuri.gift/place",
+        "https://www.data.go.kr/data/15083033/fileData.do",
+        "https://card.kbcard.com/BON/DVIEW/HBGV0701"
+      ],
+      "commercial_evidence": {
+        "상가업소번호": "MA010120220813108786",
+        "상호명": "광주석유판매협동조합",
+        "지점명": "",
+        "상권업종소분류코드": "G21403",
+        "상권업종소분류명": "가정용 연료 소매업",
+        "표준산업분류코드": "G47722",
+        "표준산업분류명": "가정용 액체 연료 소매업",
+        "시군구명": "북구",
+        "도로명주소": "전남광주통합특별시 북구 자미로10번길 11",
+        "지번주소": "전남광주통합특별시 북구 신안동 128-14",
+        "위도": "35.1669145980553",
+        "경도": "126.903537140248"
+      },
+      "bank_record": {
+        "location": {
+          "lat": "35.1669848046",
+          "lng": "126.9036431998"
+        },
+        "content": {
+          "tel": "062)514-3068",
+          "title": "광주석유판매협동조합",
+          "category": "연탄 및 유류판매점",
+          "address": "광주 북구 신안동 ",
+          "distance": "12",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000088133110",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        }
+      },
+      "bank_distance_m": 12.4,
+      "basis": "Exact operator name/market/address, commercial household-fuel category and independently located bank retail category. Membership remains separate."
     }
   ]
 }

@@ -16,6 +16,20 @@ STALE=(date.fromisoformat(AS_OF)+timedelta(days=31)).isoformat()
 
 
 class SupplementalTests(unittest.TestCase):
+    def test_legal_name_donghaeng_is_fuel_but_neighbor_or_shop_is_not(self):
+        e=next(e for e in EVIDENCE if e['bank_record']['content']['franchiseNo']=='000000084182837')
+        s=station_from_evidence(e,AS_OF)
+        self.assertEqual(s['region'],'광주')
+        self.assertEqual(s['verification']['onnuri']['candidate_ids'],['466e6b1196a429bb71813335'])
+        self.assertLess(s['location_evidence']['bank_distance_m'],10)
+        self.assertIsNone(s['onnuri_methods']['paper'])
+        self.assertIsNone(s['onnuri_methods']['qr'])
+        for section,key,value in [('bank_record','content', {**e['bank_record']['content'],'category':'가스판매점'}),
+                                  ('bank_record','content', {**e['bank_record']['content'],'address':'광주 남구 진월동'}),
+                                  ('commercial_record','상호명','이웃주유소')]:
+            wrong=deepcopy(e);wrong[section][key]=value
+            with self.assertRaises(ValueError):station_from_evidence(wrong,AS_OF)
+
     def test_bad_bank_point_requires_pinned_identity_and_independent_location(self):
         e=next(e for e in EVIDENCE if 'opinet_record' in e)
         s=station_from_evidence(e,AS_OF)
