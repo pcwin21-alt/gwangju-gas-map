@@ -133,6 +133,8 @@ html {font-size:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%;}
   .app .region-options {grid-template-columns:repeat(auto-fit,minmax(min(5rem,100%),1fr));}
   .app .national-results:not([open]) {left:68px;right:auto;bottom:max(24px,env(safe-area-inset-bottom));max-width:calc(100% - 136px);}
   .app .map-area .fit-results-btn {bottom:calc(max(24px,env(safe-area-inset-bottom)) + 7rem);max-width:calc(100% - 84px);}
+  /* On a short mobile sheet, a sticky multi-row toolbar can cover every result. */
+  .app .results-toolbar {position:static;}
   .app :is(.rank-panel,.nearby-panel-box,.report-panel-box,.react-panel-box,.help-panel,.modal-box) {max-width:100%;padding-bottom:max(1rem,env(safe-area-inset-bottom));}
 }
 @media(max-width:480px) {
@@ -147,7 +149,8 @@ html {font-size:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%;}
   .app .controls .controls-top {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem;}
   .app .controls .search-box {grid-column:1/-1;width:100%;}
   .app .controls #regionOpen,.app .controls #filtersToggle {width:100%;}
-  .app .results-toolbar label {flex-basis:100%;}
+  .app .results-toolbar {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));}
+  .app #resultsSize {grid-column:1/-1;width:100%;}
   .app .trip-search-options,.app .trip-recommendation {grid-template-columns:minmax(0,1fr);gap:.25rem;}
   .app .trip-search-options select,.app .trip-recommendation select {margin-bottom:.5rem;}
 }
