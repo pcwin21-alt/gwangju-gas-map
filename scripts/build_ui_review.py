@@ -26,6 +26,12 @@ if(args.get('large')==='1')document.documentElement.style.fontSize='200%';
 document.documentElement.dataset.theme=args.get('theme')==='dark'?'dark':'light';
 document.documentElement.style.setProperty('--app-height','100dvh');
 const byId=id=>document.getElementById(id);
+// Controlled UI-only integration: no browser GPS, place search, or road service.
+window.kakao={maps:{LatLng:class{constructor(lat,lng){this.lat=lat;this.lng=lng;}}}};
+const map={setCenter(){},setLevel(){}};
+function locateUser(){return args.get('gps')==='denied'?Promise.reject(Error('fixture denied')):Promise.resolve({lat:35.16,lng:126.85});}
+function closeStationOverlay(){byId('stationDetails').hidden=true;byId('stationDetails').replaceChildren();}
+window.GasResultsPanel={showNearby(){byId('nationalResults').open=true;byId('listScope').textContent='광주 조건 결과 · 내 위치 가까운 순 · 검수용 예시';}};
 const longName='가나다라마바사 에너지 직영 산업단지 제2 셀프주유소';
 const longAddress='전라남도 무안군 삼향읍 남악리 아주긴도로명123번길 123-45 (산업단지 제2동)';
 const longToken='LongMerchantNameWithoutSpaces0123456789'.repeat(3);
@@ -74,7 +80,7 @@ document.querySelectorAll('form').forEach(form=>form.addEventListener('submit',e
 </script>'''
     # Run only the actual route-window sizing/gestures module. It has no network
     # or merchant-data behavior, and lets layout tests catch native details sizing.
-    modules = '''\n<script src="assets/route-window.js"></script><script src="assets/i18n.js"></script>
+    modules = '''\n<script src="assets/route-window.js"></script><script src="assets/search-flow.js"></script><script src="assets/i18n.js"></script>
 <script>if((document.documentElement.lang==='en')!==(args.get('lang')==='en'))document.getElementById('languageBtn').click();document.title='UI 검수 전용 — 실제 지도·전송 없음';</script>'''
     (destination / 'index.html').write_text(html.replace('</body>', fixture + modules + '\n</body>'), encoding='utf-8')
     shutil.copytree(ROOT / 'assets', destination / 'assets', dirs_exist_ok=True)

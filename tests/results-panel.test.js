@@ -73,3 +73,11 @@ test('fallback can filter and paginate even when map globals never initialized',
  f.el('searchInput').value='주유소 24';f.el('searchInput').emit('input');assert.equal(f.el('stationList').children.length,1);
  assert.match(f.el('listCount').textContent,/1곳/);
 });
+
+test('nearby results use the actual location while retaining the selected filters and map view',()=>{
+ const f=fixture(),fits=f.fits(),moves=f.moves();f.sandbox.currentLocation={lat:35.24,lng:126};
+ assert.equal(f.window.GasResultsPanel.showNearby(),true);assert.equal(f.el('nationalResults').open,true);
+ assert.equal(f.el('resultsOrder').value,'distance');assert.equal(f.el('stationList').children[0].dataset.stationId,'24');
+ assert.equal(f.el('regionSelect').value,'광주');assert.equal(f.sandbox.currentFilter,'onnuri');assert.equal(f.fits(),fits);assert.equal(f.moves(),moves);
+ assert.match(f.el('listScope').textContent,/광주 조건 결과/);assert.match(f.el('listScope').textContent,/내 위치 가까운 순/);
+});

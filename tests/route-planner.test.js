@@ -23,7 +23,7 @@ function setup(options={}) {
   let now=10000;
   const sandbox={GasRouteCore:core, document:{getElementById:el,querySelector:()=>({dataset:{filter:'all'}}),createElement:()=>new Element()},
     window:{GasRouteMap:{clear(){draws.push(null);},show(...args){draws.push(args);},fit(){}}}, MERCHANT_STATUS:{}, STATIONS:options.stations||[], PRICES:{},
-    GasMerchantDisplay:{digital:m=>m.digital,onnuriNote:()=>'',verificationText:()=>''},
+    GasMerchantDisplay:require('../assets/merchant-display.js'),
     navigator:{userAgent:''},location:{hostname:'example.test'},Date:{now:()=>now+=2000},setTimeout,clearTimeout,AbortController,DOMException,
     fetch:async url=>{roads.push(url);return {ok:true,json:async()=>options.road?options.road(url):{code:'Error'}};},
     kakao:{maps:{services:{Status:{OK:'OK'},Places:class{keywordSearch(q,cb){lookups.push({q,cb});}}}}},

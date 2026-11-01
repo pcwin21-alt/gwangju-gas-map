@@ -878,7 +878,8 @@
       <button id="regionOpen" type="button" aria-haspopup="dialog" aria-controls="regionDialog" aria-label="지역 선택"><span id="regionLabel" data-no-i18n>광주</span><span aria-hidden="true">▾</span></button>
       <button id="filtersToggle" type="button" aria-expanded="false" aria-controls="mapFilters"><span>필터</span><span id="filterCount" hidden></span></button>
     </div>
-    <div class="controls-status"><span class="count-badge" id="countBadge">0개</span><p id="activeFilters" class="active-filters" hidden></p></div>
+    <div class="controls-status"><span class="count-badge" id="countBadge">0개</span><p id="activeFilters" class="active-filters" hidden></p><nav class="search-modes" aria-label="찾는 방식"><button id="nearbyModeBtn" type="button" aria-pressed="false" aria-busy="false">내 주변</button><button id="routeModeBtn" type="button" aria-pressed="false" aria-controls="tripPanel">가는 길</button></nav></div>
+    <p id="searchFlowStatus" class="search-flow-status" role="status" aria-live="polite" hidden></p>
     <dialog id="regionDialog" aria-labelledby="regionTitle">
       <div class="region-heading"><h2 id="regionTitle">지역 선택</h2><button id="regionClose" type="button" aria-label="지역 선택 닫기">닫기</button></div>
       <select id="regionSelect" aria-label="시도 선택" hidden><option value="all">전국</option></select>
@@ -1499,6 +1500,9 @@ function buildInfoHtml(station) {
 
   const wrap = document.createElement('div');
   wrap.className = 'info-overlay';
+  wrap.setAttribute('role','dialog');
+  wrap.setAttribute('aria-modal','false');
+  wrap.setAttribute('aria-label',station.name+' 주유소 상세');
   wrap.addEventListener('click', e => e.stopPropagation());
   // Keep popup taps/scrolls out of the map's gesture recognizer without cancelling native focus.
   for (const type of ['pointerdown','mousedown','touchstart','touchend']) {
@@ -1541,13 +1545,13 @@ function buildInfoHtml(station) {
   close.addEventListener('click',()=>closeStationOverlay(true));
   heading.append(nameRow,close);wrap.appendChild(heading);
   wrap.appendChild(addrRow);
-  wrap.appendChild(distanceRow);
   wrap.appendChild(tagsEl);
   if (priceHtml) {
     const priceEl = document.createElement('div');
     priceEl.innerHTML = priceHtml;
     wrap.appendChild(priceEl.firstElementChild);
   }
+  wrap.appendChild(distanceRow);
 
   const routeActions = document.createElement('div');
   routeActions.className = 'route-actions';
@@ -2623,6 +2627,7 @@ if (!localStorage.getItem('helpSeen')) {
 <script src="assets/district-context-core.js"></script>
 <script src="assets/district-context.js"></script>
 <script src="assets/route-window.js"></script>
+<script src="assets/search-flow.js"></script>
 <script src="assets/i18n.js"></script>
 </body>
 </html>
