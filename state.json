@@ -11253,7 +11253,15 @@
           "market": "장천동상가",
           "candidate_ids": [
             "457c9616a5d71e984ce09d19"
-          ]
+          ],
+          "issuer_checks": {
+            "kbcard": {
+              "status": "needs_review_not_found",
+              "checked_at": "2026-11-02T02:10:24+09:00",
+              "job_id": "618e662436d579be1a37413a",
+              "nonmembership": "not_established"
+            }
+          }
         }
       },
       {
@@ -11281,7 +11289,17 @@
           "market": "장천동상가",
           "candidate_ids": [
             "39774a4ec7933b356a046ef0"
-          ]
+          ],
+          "issuer_checks": {
+            "kbcard": {
+              "status": "confirmed_in_issuer_scope",
+              "issuer": "kbcard",
+              "checked_at": "2026-11-02T02:12:30+09:00",
+              "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+              "bank_id": "000000113153165",
+              "other_payment_methods": "not_reverified"
+            }
+          }
         }
       },
       {
@@ -11309,7 +11327,17 @@
           "market": "함평천지 골목형상점가",
           "candidate_ids": [
             "d748ff3635ae5317dcacd033"
-          ]
+          ],
+          "issuer_checks": {
+            "kbcard": {
+              "status": "confirmed_in_issuer_scope",
+              "issuer": "kbcard",
+              "checked_at": "2026-11-02T02:14:36+09:00",
+              "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+              "bank_id": "000000065992690",
+              "other_payment_methods": "not_reverified"
+            }
+          }
         }
       },
       {
@@ -12044,7 +12072,17 @@
           "candidate_ids": [
             "1054803b1165f961c8cb5967"
           ],
-          "note": "KB국민카드 온누리 사용처 조회 기준. 카드사 반영 지연 가능. 지류·QR·다른 카드사는 별도 확인."
+          "note": "KB국민카드 온누리 사용처 조회 기준. 카드사 반영 지연 가능. 지류·QR·다른 카드사는 별도 확인.",
+          "issuer_checks": {
+            "kbcard": {
+              "status": "confirmed_in_issuer_scope",
+              "issuer": "kbcard",
+              "checked_at": "2026-11-02T00:30:31+09:00",
+              "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+              "bank_id": "000000004645863",
+              "other_payment_methods": "not_reverified"
+            }
+          }
         }
       },
       {
