@@ -8,6 +8,10 @@ from datetime import datetime, timezone, timedelta
 from pathlib import Path
 import requests
 try:
+    from collector_policy import require_managed_collection
+except ModuleNotFoundError:
+    from scripts.collector_policy import require_managed_collection
+try:
     from onnuri_live import collect, SOURCE
     from live_merchants import prepare, address_key
     from market_regions import resolve_pending_regions
@@ -237,6 +241,7 @@ def sync_map(stations, status):
     path.write_text(html, encoding='utf-8')
 
 def main():
+    require_managed_collection('onnuri')
     import argparse
     parser = argparse.ArgumentParser()
     parser.add_argument('--live-snapshot', help='Use a complete saved search run for reproducible publication')

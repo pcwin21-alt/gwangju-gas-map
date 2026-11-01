@@ -25,6 +25,11 @@ KST = timezone(timedelta(hours=9))
 
 
 def post(session, path, payload):
+    try:
+        from collector_policy import require_managed_collection
+    except ModuleNotFoundError:
+        from scripts.collector_policy import require_managed_collection
+    require_managed_collection('onnuri')
     for attempt in range(3):
         try:
             response = session.post(BASE + path, json=payload, timeout=(10, 45))

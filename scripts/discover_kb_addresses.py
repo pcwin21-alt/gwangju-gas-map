@@ -40,6 +40,8 @@ def validate_locality(rows, address):
 
 
 def main():
+    from collector_policy import require_managed_collection
+    require_managed_collection('kbcard')
     ap=argparse.ArgumentParser()
     ap.add_argument('--region',default='전남')
     ap.add_argument('--stamp',default='20261027')

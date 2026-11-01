@@ -12,6 +12,8 @@ from onnuri_live import KST
 
 
 def main():
+    from collector_policy import require_managed_collection
+    require_managed_collection('kbcard')
     ap = argparse.ArgumentParser()
     ap.add_argument('--plan', type=Path, required=True)
     ap.add_argument('--output', type=Path, required=True)

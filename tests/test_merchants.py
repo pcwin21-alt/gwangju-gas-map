@@ -91,6 +91,7 @@ class Merchants(unittest.TestCase):
                 original = (out/'gas_stations.json').read_bytes()
                 snapshot = (out/'onnuri_live_snapshot.json').read_bytes()
                 with (patch.object(m, 'OUT', out), patch('sys.argv', ['refresh_merchants.py']),
+                      patch.object(m, 'require_managed_collection'),
                       patch.object(m, 'fetch_sangsaeng', return_value=[{}]*30),
                       patch.object(m, 'fetch_snapshot', return_value={'rows': []},
                                    side_effect=m.requests.ConnectTimeout() if stage == 'annual_snapshot' else None),

@@ -1,38 +1,56 @@
-name: 가맹점 목록 확인 및 갱신
+name: 가맹점 분할 수집 루프
 on:
   schedule:
-    - cron: '30 21 * * *'
+    - cron: '17 */6 * * *'
   workflow_dispatch:
+    inputs:
+      max_requests:
+        description: 이번 회차 최대 실제 요청 수 (시간/일일 한도는 항상 적용)
+        type: choice
+        default: '5'
+        options: ['1', '5', '0']
 concurrency:
   group: gas-map-data-write
   cancel-in-progress: false
 jobs:
-  refresh:
+  collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
     permissions:
       contents: write
+    env:
+      PYTHONUTF8: '1'
+      MAX_REQUESTS: ${{ github.event.inputs.max_requests || '5' }}
     steps:
       - uses: actions/checkout@v4
         with:
           ref: main
+      - uses: actions/checkout@v4
+        with:
+          ref: merchant-collector-state
+          path: .collector-state
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
       - run: pip install requests 'shapely>=2.0,<3' 'pyproj>=3.6,<4'
-      - name: 가맹점 전체 수집 및 검증
+      - name: 진행 기록 쓰기 준비
+        run: |
+          git -C .collector-state config user.name 'github-actions[bot]'
+          git -C .collector-state config user.email 'github-actions[bot]@users.noreply.github.com'
+      - name: 저장된 진도부터 소량 수집
         id: collect
-        continue-on-error: true
-        run: python scripts/refresh_merchants.py
-      - name: 데이터 검사
+        run: python scripts/incremental_collector.py --state-dir .collector-state --persist-git --max-requests "$MAX_REQUESTS"
+      - name: 검증 가능한 지점만 반영
+        run: python scripts/publish_collector_results.py --state-dir .collector-state
+      - name: 데이터 회귀 검사
         run: python -m unittest discover -s tests -p 'test_*.py'
       - name: 변경 기록 저장
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add output/map.html output/gas_stations.json output/filtered_sangsaeng.json output/merchant_status.json output/merchant_review.json output/onnuri_official_snapshot.json output/onnuri_live_snapshot.json output/station_locations.json output/lpg_locations.json output/nationwide_candidates.json
-          git diff --staged --quiet || git commit -m "chore: 가맹점 확인 기록 갱신"
-          git push origin main
+          git add output/map.html output/gas_stations.json output/merchant_status.json output/merchant_review.json output/nationwide_candidates.json output/supplemental_onnuri_evidence.json
+          git diff --staged --quiet || git commit -m 'chore: 검증된 가맹점 분할 수집 결과 반영'
+          git push origin HEAD:main
       - name: 공개 파일 준비
         run: python scripts/prepare_site.py
       - uses: peaceiris/actions-gh-pages@v4
@@ -40,8 +58,20 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
           publish_branch: gh-pages
-      - name: 수집 실패 알림
-        if: steps.collect.outcome == 'failure'
+      - name: 회차 결과 요약
+        if: always()
         run: |
-          echo "가맹점 조회 실패. 기존 지도와 마지막 확인일을 보존하고 실패 상태를 게시했습니다."
-          exit 1
+          if [ -f .collector-state/summary.json ]; then
+            echo '## 가맹점 분할 수집 결과' >> "$GITHUB_STEP_SUMMARY"
+            cat .collector-state/summary.json >> "$GITHUB_STEP_SUMMARY"
+            echo '미확정·원천 부족은 완료로 처리하지 않습니다. 원천 거절 상태는 다음 회차에도 유지합니다.' >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: merchant-loop-${{ github.run_id }}
+          path: |
+            .collector-state/state.json
+            .collector-state/summary.json
+          if-no-files-found: warn
+          retention-days: 30

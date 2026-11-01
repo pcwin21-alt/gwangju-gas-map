@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "interval_seconds": 120,
+  "requests_per_run": 5,
+  "requests_per_24h": 20,
+  "sources": {
+    "onnuri": {"status": "blocked", "reason": "2026-10-30 HTTP 400 Request Blocked; no automatic reactivation", "url": "https://www.onnuri.gift/place"},
+    "kbcard": {"status": "active", "url": "https://card.kbcard.com/BON/DVIEW/HBGV0701", "scope": "Public unauthenticated Onnuri merchant form; issuer-specific evidence only; limits are our load caps, not a provider guarantee"},
+    "datagov": {"status": "active", "url": "https://www.data.go.kr/data/3060079/fileData.do", "scope": "Published official bulk download, no private API or credentials"}
+  }
+}

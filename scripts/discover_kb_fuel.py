@@ -13,9 +13,14 @@ from html.parser import HTMLParser
 from pathlib import Path
 
 import requests
-from nationwide import name_key, region
-from onnuri_live import KST
-from refresh_regions import ORDER
+try:
+    from nationwide import name_key, region
+    from onnuri_live import KST
+    from refresh_regions import ORDER
+except ModuleNotFoundError:
+    from scripts.nationwide import name_key, region
+    from scripts.onnuri_live import KST
+    from scripts.refresh_regions import ORDER
 
 OUT = Path(__file__).resolve().parents[1] / 'output'
 URL = 'https://card.kbcard.com/BON/DVIEW/HBGV0701'
@@ -83,6 +88,8 @@ def queue(area, targets=None, unfiltered=False):
 
 
 def main():
+    from collector_policy import require_managed_collection
+    require_managed_collection('kbcard')
     ap=argparse.ArgumentParser()
     ap.add_argument('--region',default='전남')
     ap.add_argument('--limit',type=int,default=10000)

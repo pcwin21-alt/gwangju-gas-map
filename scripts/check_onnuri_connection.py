@@ -48,6 +48,8 @@ def search(session):
 
 
 def main():
+    from collector_policy import require_managed_collection
+    require_managed_collection('onnuri')
     print(json.dumps({'platform': platform.system(), 'python': platform.python_version()}), flush=True)
     try:
         addresses = socket.getaddrinfo('www.onnuri.gift', 443, type=socket.SOCK_STREAM)

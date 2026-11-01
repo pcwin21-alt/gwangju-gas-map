@@ -41,6 +41,8 @@ def wait_existing(path, stale_seconds=900):
 
 
 def main():
+    from collector_policy import require_managed_collection
+    require_managed_collection('kbcard')
     parser=argparse.ArgumentParser()
     parser.add_argument('--directory',type=Path,default=ROOT/'output/alternatives')
     parser.add_argument('--stamp',default=datetime.now(KST).strftime('%Y%m%d'))

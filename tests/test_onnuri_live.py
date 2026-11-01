@@ -16,13 +16,13 @@ def merchant(**changes):
 
 
 class LiveSearch(unittest.TestCase):
-    def test_explicit_request_block_is_not_retried_as_transient_400(self):
+    def test_previously_blocked_origin_is_never_retried_by_legacy_path(self):
         session = Mock()
         session.post.return_value = Mock(status_code=400, text='<H1>Request Blocked</H1>')
         with patch.object(live.time, 'sleep') as sleep:
             with self.assertRaises(PermissionError):
                 live.post(session, '/place/search', {})
-        self.assertEqual(session.post.call_count, 1)
+        self.assertEqual(session.post.call_count, 0)
         sleep.assert_not_called()
 
     def test_area_code_without_real_anchor_is_rejected(self):
