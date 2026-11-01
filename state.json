@@ -6775,8 +6775,13 @@
       "candidate_id": "bd49b30e09b7d895974badcb",
       "region": "전남광주",
       "name": "엘피지다이어트 댄스",
-      "status": "needs_identity",
-      "reason": "Annual identity needs independent same-premise linkage or documented exclusion"
+      "status": "excluded",
+      "reason": "Annual identity needs independent same-premise linkage or documented exclusion",
+      "evidence": [
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/4bba156/output/audits/regional_gap_20261102/nonfuel_reviews.json"
+      ],
+      "checked_at": "2026-11-02T05:54:15+09:00",
+      "resolution_reason": "공식 연간 취급품목은 에어로빅이며 동일 가맹점명·시장명의 공식 장소 기록도 근린상권서비스로 확인됨. 차량용 LPG 충전소가 아닌 댄스 업소의 개별 등록을 제외."
     },
     {
       "gap_id": "annual-identity:f0bceeeee30bceb8d97290ef",
@@ -6895,8 +6900,13 @@
       "candidate_id": "37fbbe6ccc9e669b85fd04f5",
       "region": "전남광주",
       "name": "(주)지에스종합에너지 (사운드 동명 카페)",
-      "status": "needs_identity",
-      "reason": "Annual identity needs independent same-premise linkage or documented exclusion"
+      "status": "excluded",
+      "reason": "Annual identity needs independent same-premise linkage or documented exclusion",
+      "evidence": [
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/4bba156/output/audits/regional_gap_20261102/nonfuel_reviews.json"
+      ],
+      "checked_at": "2026-11-02T05:54:15+09:00",
+      "resolution_reason": "공식 장소 원본에서 동일한 사운드 동명 카페 지점명·시장명이 음식점업으로 확인됨. 같은 회사의 다른 주유소로 판단을 이전하지 않고 이 카페 등록만 제외."
     },
     {
       "gap_id": "annual-identity:cf3ff4625254ab01c09918eb",
@@ -7105,7 +7115,7 @@
         "jobs_total": 40,
         "jobs_remaining": 26,
         "jobs_needing_review": 0,
-        "source_gaps": 28,
+        "source_gaps": 26,
         "review_records": 2,
         "inventory_reviewed": false,
         "mapped_records_to_recheck": 28,
@@ -7114,7 +7124,7 @@
           "confirmed_in_issuer_scope": 6,
           "pending": 21
         },
-        "unresolved_annual_identities": 25,
+        "unresolved_annual_identities": 23,
         "missing_standard_checks": [
           "market_coverage",
           "membership_rechecks",
@@ -7380,14 +7390,14 @@
         "jobs_total": 131,
         "jobs_remaining": 131,
         "jobs_needing_review": 0,
-        "source_gaps": 28,
+        "source_gaps": 26,
         "review_records": 0,
         "inventory_reviewed": false,
         "mapped_records_to_recheck": 131,
         "membership_check_status": {
           "pending": 131
         },
-        "unresolved_annual_identities": 25,
+        "unresolved_annual_identities": 23,
         "missing_standard_checks": [
           "market_coverage",
           "membership_rechecks",
@@ -20391,6 +20401,28 @@
       "requests_per_run": 3,
       "interval_seconds": 180,
       "stage": "fixed"
+    }
+  },
+  "candidate_resolutions": {
+    "bd49b30e09b7d895974badcb": {
+      "status": "excluded_non_vehicle",
+      "evidence": [
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/4bba156/output/audits/regional_gap_20261102/nonfuel_reviews.json"
+      ],
+      "checked_at": "2026-11-02T05:54:15+09:00",
+      "reason": "공식 연간 취급품목은 에어로빅이며 동일 가맹점명·시장명의 공식 장소 기록도 근린상권서비스로 확인됨. 차량용 LPG 충전소가 아닌 댄스 업소의 개별 등록을 제외.",
+      "source_record_id": "05419200011",
+      "source_checked_at": "2026-10-25T10:51:11+09:00"
+    },
+    "37fbbe6ccc9e669b85fd04f5": {
+      "status": "excluded_non_vehicle",
+      "evidence": [
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/4bba156/output/audits/regional_gap_20261102/nonfuel_reviews.json"
+      ],
+      "checked_at": "2026-11-02T05:54:15+09:00",
+      "reason": "공식 장소 원본에서 동일한 사운드 동명 카페 지점명·시장명이 음식점업으로 확인됨. 같은 회사의 다른 주유소로 판단을 이전하지 않고 이 카페 등록만 제외.",
+      "source_record_id": "05340200190",
+      "source_checked_at": "2026-10-25T10:51:11+09:00"
     }
   }
 }
