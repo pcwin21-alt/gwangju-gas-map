@@ -509,11 +509,11 @@
   "status": "running",
   "summary": {
     "status": "running",
-    "jobs_total": 9,
-    "jobs_done": 0,
-    "jobs_remaining": 9,
+    "jobs_total": 11,
+    "jobs_done": 5,
+    "jobs_remaining": 6,
     "review_records": 0,
-    "evidence_records": 0,
+    "evidence_records": 1,
     "source_gaps": 16,
     "source_status": {
       "onnuri": "blocked",
@@ -522,8 +522,8 @@
     }
   },
   "last_run": {
-    "id": "b68559c5356b4020bc9c8ca4ac586ae2",
-    "checked_at": "2026-11-02T00:29:23+09:00",
-    "requests": 0
+    "id": "7b7e513e9775448d9441a248d89062cf",
+    "checked_at": "2026-11-02T00:34:31+09:00",
+    "requests": 5
   }
 }
