@@ -4,7 +4,7 @@
     {
       "identity_review": "same_premise_confirmed",
       "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
-      "checked_at": "2026-10-27T16:45:32+09:00",
+      "checked_at": "2026-11-02T00:30:31+09:00",
       "bank_record": {
         "location": {
           "lat": "34.961063692",
@@ -15,7 +15,7 @@
           "title": "현대주유소",
           "category": "주유소",
           "address": "전남 순천시 매곡동 ",
-          "distance": "59693",
+          "distance": "10",
           "kindGb": "0",
           "onNuliGb": "1",
           "tradiGb": "0",
@@ -24,14 +24,7 @@
           "franchiseNo": "000000004645863",
           "highOilGb": "1",
           "seoulGb": "0"
-        },
-        "checked_at": "2026-10-27T16:45:32+09:00",
-        "query_address": [
-          "전남",
-          "순천시",
-          "매곡동"
-        ],
-        "coordinate_status": "present_unverified"
+        }
       },
       "commercial_record": {
         "상가업소번호": "MA010120220807846418",
@@ -56,8 +49,7 @@
       },
       "annual_candidate_ids": [
         "1054803b1165f961c8cb5967"
-      ],
-      "identity_support": "2021 official paper list and 2026 commercial file agree on 순천시 중앙로 172. KB name, fuel category, locality, phone and coordinate agree."
+      ]
     },
     {
       "identity_review": "same_premise_confirmed",
