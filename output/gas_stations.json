@@ -6957,8 +6957,8 @@
     "id": "onnuri:14077200010",
     "name": "순천주유소",
     "address": "전라남도 순천시 강남로 45(장천동)",
-    "lat": 34.95002,
-    "lng": 127.488458,
+    "lat": 34.949742,
+    "lng": 127.491117,
     "payment_types": [
       "onnuri"
     ],
@@ -6999,7 +6999,24 @@
       "qr": true,
       "digital": true
     },
-    "region": "전남"
+    "region": "전남",
+    "location_evidence": {
+      "source_type": "municipal_registry",
+      "source_url": "https://www.data.go.kr/data/15129441/standard.do",
+      "source_date": "2025-12-01",
+      "source_id": "순천주유소",
+      "coordinate_source": "municipal_registry",
+      "reviewed_at": "2026-11-02T05:57:02+09:00",
+      "opinet_id": "A0021890",
+      "commercial_id": "MA010120220807840885",
+      "previous_point": [
+        34.95002,
+        127.488458
+      ],
+      "correction_distance_m": 244.3,
+      "evidence_file": "output/audits/regional_gap_20261102/suncheon_coordinate_review.json",
+      "note": "동일 상호·주소와 KB/지자체 전화가 일치하며 지자체·상가·오피넷·기존 KB 좌표가 근접. 위치만 정정; 현재 결제수단 재확인 아님."
+    }
   },
   {
     "id": "onnuri:14077200045",

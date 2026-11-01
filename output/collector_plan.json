@@ -20,7 +20,7 @@
     "대전",
     "세종"
   ],
-  "created_at": "2026-11-02T05:53:12+09:00",
+  "created_at": "2026-11-02T05:57:03+09:00",
   "regional_inventory": {
     "전남": {
       "fuel_records": 992,
@@ -49871,8 +49871,8 @@
         "aliases": [],
         "address": "전라남도 순천시 강남로 45(장천동)",
         "region": "전남",
-        "lat": 34.95002,
-        "lng": 127.488458,
+        "lat": 34.949742,
+        "lng": 127.491117,
         "fuel_kind": "liquid",
         "payment_types": [
           "onnuri"
@@ -57974,12 +57974,12 @@
       "target": {
         "name": "순천주유소",
         "keyword": "",
-        "lat": 34.95002,
-        "lng": 127.488458,
+        "lat": 34.949742,
+        "lng": 127.491117,
         "address": "전라남도 순천시 강남로 45(장천동)",
         "coordinate_source_id": "onnuri:14077200010"
       },
-      "logical_key": "618e662436d579be1a37413a"
+      "logical_key": "5a2fb1f1de0206aa1d458df9"
     },
     {
       "kind": "kb_search",
