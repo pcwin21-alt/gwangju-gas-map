@@ -25,7 +25,7 @@
     if(routing())window.GasRoutePlanner?.clearForMapSearch();
     pending=true;near.disabled=true;near.setAttribute('aria-busy','true');mode('nearby');say('현재 위치를 확인하고 있습니다.');
     try{
-      const point=await locateUser({center:false,alertOnFail:false});
+      const point=await locateUser({center:false,alertOnFail:false,shouldApply:()=>request===version});
       if(request!==version)return;
       map.setCenter(new window.kakao.maps.LatLng(point.lat,point.lng));map.setLevel(4);
       mode('nearby');

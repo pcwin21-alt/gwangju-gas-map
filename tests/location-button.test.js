@@ -10,7 +10,7 @@ function fixture() {
   let success, failure, centered;
   const context={navigator:{geolocation:{getCurrentPosition:(ok,fail)=>{success=ok;failure=fail;}}},alert(){},setCurrentLocation:(lat,lng,center)=>{centered=center;return {lat,lng};}};
   vm.createContext(context);vm.runInContext(source,context);
-  return {button,attributes,classes,locate:()=>context.locateUser({button}),ok:()=>success({coords:{latitude:35.16,longitude:126.85}}),fail:()=>failure(new Error('denied')),centered:()=>centered};
+  return {button,attributes,classes,locate:(options={})=>context.locateUser({button,...options}),ok:()=>success({coords:{latitude:35.16,longitude:126.85}}),fail:()=>failure(new Error('denied')),centered:()=>centered};
 }
 test('location lookup retains icon, prevents duplicate button actions and restores success state',async()=>{
   const f=fixture(), pending=f.locate();
@@ -24,4 +24,10 @@ test('location failure leaves the icon and button available for retry',async()=>
   const f=fixture(), pending=f.locate();f.fail();await assert.rejects(pending,/denied/);
   assert.equal(f.button.disabled,false);assert.equal(f.attributes['aria-busy'],'false');
   assert.equal(f.classes.has('loading'),false);assert.equal(f.button.innerHTML,'<svg>location icon</svg>');
+});
+test('a superseded lookup cannot update global location, markers or location-change listeners',async()=>{
+ const f=fixture(),pending=f.locate({center:false,shouldApply:()=>false});f.ok();
+ await assert.rejects(pending,error=>error.name==='AbortError');
+ assert.equal(f.centered(),undefined);assert.equal(f.button.disabled,false);assert.equal(f.attributes['aria-busy'],'false');
+ assert.equal(f.classes.has('located'),false);assert.equal(f.classes.has('loading'),false);
 });
