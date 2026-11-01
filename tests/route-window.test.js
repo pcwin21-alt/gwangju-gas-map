@@ -1,11 +1,11 @@
 const test=require('node:test'),assert=require('node:assert/strict'),vm=require('node:vm'),fs=require('node:fs');
 function fixture() {
- const elements={},listeners={},saved={};let observer;
+ const elements={},listeners={},saved={},resizes=[];let observer;
  const document={activeElement:null,documentElement:{classList:{contains:()=>false}},getElementById:id=>el(id),querySelector:()=>el('area'),addEventListener:(type,fn)=>listeners[type]=fn};
- function el(id){return elements[id] ||= {open:false,value:id==='tripOpacity'?'1':'',hidden:false,attributes:{},styles:{},style:{setProperty(k,v){el(id).styles[k]=v;}},handlers:{},addEventListener(type,fn){this.handlers[type]=fn;},setAttribute(k,v){this.attributes[k]=v;},contains(node){return node?.parent===this;},querySelector:()=>el('summary'),querySelectorAll(){return this.rows||[];},focus(){document.activeElement=this;},blur(){document.activeElement=null;}};}
+ function el(id){return elements[id] ||= {open:false,value:id==='tripOpacity'?'1':'',hidden:false,attributes:{},styles:{},rectHeight:44,getBoundingClientRect(){return {height:this.rectHeight};},style:{setProperty(k,v){el(id).styles[k]=v;}},handlers:{},addEventListener(type,fn){this.handlers[type]=fn;},setAttribute(k,v){this.attributes[k]=v;},contains(node){return node?.parent===this;},querySelector:()=>el('summary'),querySelectorAll(){return this.rows||[];},focus(){document.activeElement=this;},blur(){document.activeElement=null;}};}
  const window={innerHeight:844,addEventListener:(type,fn)=>listeners['window:'+type]=fn};el('area').clientHeight=650;
- vm.runInNewContext(fs.readFileSync('assets/route-window.js','utf8'),{window,document,ResizeObserver:class{observe(){}},localStorage:{getItem:k=>saved[k],setItem:(k,v)=>saved[k]=v},getComputedStyle:()=>({getPropertyValue:()=> '#111d2e'}),MutationObserver:class{constructor(fn){observer=fn;}observe(){}}});
- return {el,document,window,listeners,saved,observe:()=>observer()};
+ vm.runInNewContext(fs.readFileSync('assets/route-window.js','utf8'),{window,document,ResizeObserver:class{constructor(fn){resizes.push(fn);}observe(){}},localStorage:{getItem:k=>saved[k],setItem:(k,v)=>saved[k]=v},getComputedStyle:()=>({paddingTop:'12px',paddingBottom:'12px',borderTopWidth:'1px',borderBottomWidth:'1px',getPropertyValue:()=> '#111d2e'}),MutationObserver:class{constructor(fn){observer=fn;}observe(){}}});
+ return {el,document,window,listeners,saved,observe:()=>observer(),resize:()=>resizes.forEach(fn=>fn())};
 }
 test('map gesture minimizes without cancelling pan; reopening preserves inputs and results and never focuses a text field',()=>{
  const f=fixture(),panel=f.el('tripPanel');f.el('tripDestination').value='목포역';f.el('tripResults').rows=[{name:'확인 주유소'}];
@@ -24,4 +24,14 @@ test('transparency changes only the background, survives storage and retains a r
  const f=fixture();f.el('tripOpacity').value='0.75';f.el('tripOpacity').handlers.change();
  assert.equal(f.el('tripPanel').styles['--trip-surface'],'rgba(17,29,46,0.75)');assert.equal(f.el('tripPanel').styles.opacity,undefined);assert.equal(f.saved['gas-trip-opacity'],'0.75');
  f.el('tripResults').rows=[{},{}];f.observe();assert.equal(f.el('tripLauncherCount').textContent,'2');assert.match(f.el('tripLauncher').attributes['aria-label'],/추천 2곳/);
+});
+
+test('a wrapped or enlarged heading leaves a scrollable body inside the map, including compact viewports',()=>{
+ const f=fixture(),panel=f.el('tripPanel');f.el('area').clientHeight=340;f.el('summary').rectHeight=134;
+ f.window.GasTripWindow.open();
+ let height=parseFloat(panel.styles['--trip-window-height']),body=parseFloat(panel.styles['--trip-body-height']);
+ assert.ok(height<=316);assert.ok(body>=88);assert.equal(body+134+26,height);
+ f.el('summary').rectHeight=180;f.window.innerHeight=400;f.resize();
+ height=parseFloat(panel.styles['--trip-window-height']);body=parseFloat(panel.styles['--trip-body-height']);
+ assert.ok(height<=316);assert.ok(body>=44);assert.equal(body+180+26,height);
 });

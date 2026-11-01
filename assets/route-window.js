@@ -2,10 +2,21 @@
   'use strict';
   const byId=id=>document.getElementById(id),panel=byId('tripPanel'),launcher=byId('tripLauncher'),opacity=byId('tripOpacity');
   const area=document.querySelector('.map-area');
-  function resize() {const compact=window.innerHeight<=500||document.documentElement.classList.contains('keyboard-open');panel.style.setProperty('--trip-window-height',`${Math.max(140,Math.min(620,compact?area.clientHeight-16:area.clientHeight*.72))}px`);}
-  new ResizeObserver(resize).observe(area);resize();
+  const heading=panel.querySelector('summary');
+  function resize() {
+    const compact=window.innerHeight<=500||document.documentElement.classList.contains('keyboard-open');
+    const available=Math.max(0,area.clientHeight-24),style=getComputedStyle(panel);
+    const frame=['paddingTop','paddingBottom','borderTopWidth','borderBottomWidth'].reduce((sum,k)=>sum+(parseFloat(style[k])||0),0);
+    const header=heading.getBoundingClientRect().height;
+    const preferred=compact?available:area.clientHeight*.72;
+    const height=Math.min(available,Math.max(140,Math.min(620,Math.max(preferred,header+frame+88))));
+    panel.style.setProperty('--trip-window-height',`${height}px`);
+    panel.style.setProperty('--trip-body-height',`${Math.max(44,height-header-frame)}px`);
+  }
+  const sizeObserver=new ResizeObserver(resize);sizeObserver.observe(area);sizeObserver.observe(heading);resize();
   function sync() {
     launcher.hidden=panel.open||panel.hidden;launcher.setAttribute('aria-expanded',String(panel.open));
+    if(panel.open)resize();
     if(!panel.open&&panel.contains(document.activeElement)){document.activeElement.blur();launcher.focus({preventScroll:true});}
   }
   function minimize(focus=false) {

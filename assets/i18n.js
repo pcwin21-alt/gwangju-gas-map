@@ -23,6 +23,7 @@
     '전국 온누리 주유소 지도':'Onnuri fuel stations across Korea',
     '상생카드와 온누리 공식 검색 결과를 표시합니다. 현행 검색과 대조되지 않은 곳은 과거 기록으로 구분합니다. 유가와 가맹점 확인일은 별개입니다.':'Sangsaeng and Onnuri use official search results. Unmatched older records are marked historical. Price and merchant check dates are separate.',
     '유가: 하루 1회 조회 · 가맹점: 매일 오전 6시 30분 확인':'Prices: daily lookup · Merchants: daily at 06:30 KST',
+    '유가: 하루 1회 조회 · 가맹점: 확인된 자료부터 순차 반영':'Prices: daily lookup · Merchants: verified records added progressively',
     '공식 검색·품목 자료로 확인한 주유소입니다. 전국 모든 가맹점이 포함된 것은 아닙니다.':'Stations are checked against official search and product records. Coverage is not exhaustive.',
     '온누리 공식 검색 ↗':'Search official Onnuri merchants ↗',
     '최근 조회 실패, 이전 자료 유지':'Latest lookup failed; previous data retained',
@@ -149,9 +150,10 @@
     '새 파일 조회 실패, 이전 자료 유지':'File refresh failed; previous data retained',
     '한국어·영어 전환 버튼을 추가했습니다. 선택한 언어는 다음 방문에도 유지됩니다. 주유소명과 주소는 원문을 유지합니다.':'Added a Korean / English switch with a saved language preference. Station names and addresses remain in the original language.'
   };
-  function translate(value) {
+  function translate(value,context) {
     const raw = String(value), text = raw.trim();
-    let result = messages[text];
+    // 경유 means diesel for fuel, but a stop on the route launcher.
+    let result = context==='route-stop'&&text==='경유'?'Stops':messages[text];
     if (/^지도 표시 \d+곳$/.test(text)) result = text.replace(/^지도 표시 (\d+)곳$/, '$1 mapped stations');
     if (/^(?:추가|주소(?:·업종)?) 확인 대기 \d+건$/.test(text)) result = text.replace(/^(?:추가|주소(?:·업종)?) 확인 대기 (\d+)건$/, '$1 locations awaiting review');
     if (/^공식 온누리 자료 /.test(text)) result = text.replace('공식 온누리 자료 ', 'Official Onnuri source: ');
@@ -212,7 +214,7 @@
       if (skipped(node) || !node.data.trim()) continue;
       let entry = texts.get(node);
       if (!entry || node.data !== entry.rendered) entry = {source:node.data};
-      entry.rendered = language === 'en' ? translate(entry.source) : entry.source;
+      entry.rendered = language === 'en' ? translate(entry.source,node.parentElement?.closest('[data-i18n-context]')?.dataset.i18nContext) : entry.source;
       if (node.data !== entry.rendered) node.data = entry.rendered;
       texts.set(node,entry);
     }

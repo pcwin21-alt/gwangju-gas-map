@@ -1,6 +1,10 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const {translate} = require('../assets/i18n.js');
+test('the route launcher says Stops while the fuel selector still says Diesel',()=>{
+  assert.equal(translate('경유'),'Diesel');
+  assert.equal(translate('경유','route-stop'),'Stops');
+});
 test('UI text and fuel amounts translate without altering numbers', () => {
   assert.equal(translate('상생카드'), 'Sangsaeng');
   assert.equal(translate('  1,636.2원/L  '), '  KRW 1,636.2/L  ');
