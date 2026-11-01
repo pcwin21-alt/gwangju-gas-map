@@ -1597,6 +1597,9 @@ function closeStationOverlay(restoreFocus=false) {
 }
 
 function showStationOverlay(overlay,options={}) {
+  // SDK/touch compatibility events can select the same pin more than once.
+  // Selection is idempotent: keep its content, scroll position and focus intact.
+  if (activeOverlay === overlay) return;
   stationReturnFocus=document.activeElement;
   window.GasResultsPanel?.onDetailsOpen(options.fromResults===true);
   if (activeOverlay && activeOverlay !== overlay) activeOverlay.setMap(null);
@@ -1625,11 +1628,6 @@ STATIONS.forEach(station => {
 
   kakao.maps.event.addListener(marker, 'click', function() {
     if (reportMode) return;
-    if (activeOverlay) activeOverlay.setMap(null);
-    if (activeOverlay === overlay) {
-      activeOverlay = null;
-      return;
-    }
     showStationOverlay(overlay);
   });
 
@@ -1721,9 +1719,11 @@ let searchFitTimer;
 // A later direct gesture takes precedence over pending search/route auto-fit.
 for(const type of ['pointerdown','touchstart','wheel'])document.querySelector('.map-area').addEventListener(type,event=>{
   clearTimeout(searchFitTimer);mapViewport.cancelFit?.();window.GasRouteMap?.cancelFit?.();
-  // Dismiss on the next real outside gesture, not a delayed SDK click from opening.
-  if(!event.target.closest('.info-overlay'))closeStationOverlay();
+  // A pointer/touch down may belong to a pin selection, so it must not dismiss
+  // details. Wait for an actual map drag; wheel scrolling outside still closes.
+  if(type==='wheel'&&!event.target.closest('.info-overlay'))closeStationOverlay();
 },{capture:true,passive:true});
+kakao.maps.event.addListener(map,'dragstart',()=>closeStationOverlay());
 
 function updateStationSearch(event) {
   if(event?.isComposing)return;
