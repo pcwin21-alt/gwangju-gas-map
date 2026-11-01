@@ -18,7 +18,7 @@ def build(destination):
     destination.mkdir(parents=True, exist_ok=True)
     html = (ROOT / 'output/map.html').read_text(encoding='utf-8')
     html = re.sub(r'<script\b[^>]*>[\s\S]*?</script>', '', html)
-    html = html.replace('<title>전국 온누리 주유소 지도</title>', '<title>UI 검수 전용 — 실제 지도·전송 없음</title>')
+    html = re.sub(r'<title>[^<]*</title>', '<title>UI 검수 전용 — 실제 지도·전송 없음</title>', html, count=1)
     fixture = r'''
 <script>
 const args=new URLSearchParams(location.search),screen=args.get('screen')||'home';

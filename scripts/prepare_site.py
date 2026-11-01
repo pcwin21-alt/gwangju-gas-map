@@ -14,6 +14,6 @@ def version_asset(match):
     return path + '?v=' + digest
 html = re.sub(r'(assets/[\w.-]+\.(?:js|css))(?=")', version_asset, html)
 (SITE / 'index.html').write_text(html, encoding='utf-8')
-for name in ('favicon.svg', 'thumbnail.png'):
+for name in ('favicon.svg', 'thumbnail.png', 'thumbnail-discount-map.png'):
     shutil.copyfile(ROOT / name, SITE / name)
 shutil.copytree(ROOT / 'assets', SITE / 'assets', dirs_exist_ok=True)
