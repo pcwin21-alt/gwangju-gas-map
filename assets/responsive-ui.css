@@ -1,0 +1,158 @@
+/* Shared reading and sizing contract. Map SDK graphics retain their own sizes. */
+:root {--ui-body:1rem;--ui-meta:.875rem;--ui-heading:1.125rem;--ui-touch:2.75rem;}
+html {font-size:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%;}
+.app {font-size:var(--ui-body);line-height:1.5;}
+.app :is(button,input,select,textarea) {font-family:inherit;}
+.app :is(button,summary) {min-height:var(--ui-touch);}
+.app button {font-size:var(--ui-body);line-height:1.5;}
+.app :is(input,select,textarea):not([type="checkbox"]):not([type="radio"]):not([type="file"]) {font-size:var(--ui-body)!important;line-height:1.5;min-height:var(--ui-touch);}
+.app :is(p,label,button,a,summary,h1,h2,h3,[role="status"]) {overflow-wrap:anywhere;}
+.app :is(.header-title,.header-text,.controls-top,.controls-status,.trip-field,.trip-input-row,.trip-trigger-copy,.rank-info,.nearby-info,.react-item-left,.react-clist-body) {min-width:0;}
+.app :is(.tools-header,.region-heading,.filters-heading,.rank-panel-header,.nearby-panel-header,.help-panel-header,.report-panel-header,.react-panel-header) {gap:.75rem;align-items:center;}
+.app :is(.tools-header,.region-heading,.filters-heading,.rank-panel-header,.nearby-panel-header,.help-panel-header,.report-panel-header,.react-panel-header)>:first-child {min-width:0;overflow-wrap:anywhere;}
+.app :is(.tools-header,.region-heading,.rank-panel-header,.nearby-panel-header,.help-panel-header,.report-panel-header,.react-panel-header)>button {flex:0 0 auto;min-width:var(--ui-touch);min-height:var(--ui-touch);}
+.app :is(.header .tools-trigger,.search-box input) {height:auto;min-height:var(--ui-touch);}
+.app .tools-trigger {white-space:normal;}
+.app .header-text h1 {font-size:1.25rem!important;line-height:1.5;}
+.app .search-clear {min-width:var(--ui-touch);min-height:var(--ui-touch);}
+.controls .search-box input {padding-right:3rem;}
+.controls-status {flex-wrap:wrap;gap:.25rem .5rem;}
+.controls-status :is(.count-badge,.active-filters),.app #filterCount {font-size:var(--ui-meta);line-height:1.5;}
+.app .map-filters {min-height:0;overscroll-behavior:contain;}
+.app .map-filters .filter-btn {height:auto;white-space:normal;font-size:var(--ui-body);line-height:1.5;}
+.filter-selects .national-select {min-width:0;}
+.app .filter-selects .national-select span {font-size:var(--ui-meta);line-height:1.5;}
+
+/* Text may grow; dialogs scroll vertically within the available viewport. */
+.app :is(.tools-dialog,.updates-dialog,#regionDialog) {max-width:calc(100% - 1.5rem);max-height:calc(var(--app-height,100dvh) - 1.5rem);overscroll-behavior:contain;}
+.app :is(.tools-dialog,.help-panel,.nearby-panel-box,.rank-panel,.report-panel-box,.react-panel-box,.modal-box) {padding:1rem;max-height:calc(var(--app-height,100dvh) - 1.5rem);overflow:auto;overscroll-behavior:contain;}
+.app :is(.tools-header,.rank-panel-header,.nearby-panel-header,.help-panel-header,.report-panel-header,.react-panel-header) {position:sticky;top:-1rem;z-index:3;background:var(--panel);padding-block:.5rem;}
+.tools-dialog .tools-actions>* {font-size:var(--ui-body);line-height:1.5;height:auto;min-height:3rem;gap:.75rem;}
+.theme-picker {flex-wrap:wrap;}
+.theme-picker select {min-width:0;flex:1 1 8rem;max-width:100%;}
+.app :is(.help-panel-title,.nearby-panel-title,.rank-panel-title,.report-panel-title,.react-panel-header h3,.region-heading h2,.filters-heading h2,.trip-heading) {font-size:var(--ui-heading);font-weight:700;line-height:1.5;}
+.app :is(.help-item,.help-dot-item,.help-section-title,.modal-hint,.modal-box p,.nearby-note,.nearby-empty,.nearby-name,.nearby-addr,.rank-name,.rank-addr,.rank-empty,.report-loc-display,.report-file-hint,.report-note,.report-attach-reminder,.react-notice,.react-comment-hint,.react-item-label,.react-clist-text,.react-clist-title,.react-clist-empty,.react-clist-loading,.updates-data p,.updates-source) {font-size:var(--ui-body);line-height:1.5;white-space:normal;overflow-wrap:anywhere;}
+.app :is(.report-section-label,.report-map-hint,.report-file-name,.nearby-controls label,.react-comment-label,.react-clist-meta,.react-clist-nick,.react-item-count) {font-size:var(--ui-meta);line-height:1.5;overflow-wrap:anywhere;}
+.app :is(.rank-addr,.nearby-addr,.report-note,.report-map-hint,.report-file-hint,.react-clist-meta,.react-clist-empty,.react-clist-loading) {color:var(--muted);}
+.app :is(.nearby-name,.nearby-addr,.rank-name,.rank-addr) {overflow:visible;text-overflow:clip;}
+.app .help-section-title {font-weight:700;}
+.app .help-panel-close {height:auto;}
+.app .updates-body {padding:1rem;}
+.app .updates-header {padding:.75rem 1rem;}
+.app .updates-header h2 {font-size:1.25rem;}
+.app #regionDialog button {font-size:var(--ui-body);line-height:1.5;}
+
+/* Long merchant names and prices must not compete for a narrow single row. */
+.app .rank-item {display:grid;grid-template-columns:2.25rem minmax(0,1fr) auto;gap:.5rem .75rem;align-items:start;padding:.75rem;}
+.app .rank-price {font-size:var(--ui-heading);line-height:1.5;white-space:normal;min-width:0;overflow-wrap:anywhere;}
+.app .rank-price .effective-price :is(del,small),.app .rank-price>span {font-size:var(--ui-meta);line-height:1.5;}
+.app .rank-badge {width:2.25rem;height:2.25rem;font-weight:700;}
+.app .nearby-item {align-items:flex-start;}
+.app .nearby-dist {width:auto;min-width:3rem;max-width:35%;padding:.25rem;font-size:var(--ui-meta);line-height:1.5;overflow-wrap:anywhere;}
+.app :is(.nearby-controls,.nearby-actions) {grid-template-columns:repeat(auto-fit,minmax(min(8rem,100%),1fr));}
+.app .nearby-controls label {min-width:0;}
+.app .nearby-action-btn {white-space:normal;}
+
+/* Read-only text and actionable labels use the same scale in every sheet. */
+.app .report-addr-row {display:flex;gap:.5rem;}
+.app .report-addr-row input {min-width:0;flex:1;}
+.app .report-addr-row button {flex-shrink:0;}
+.app .report-payment-group {flex-wrap:wrap;gap:.5rem 1rem;}
+.app .report-payment-group label {display:inline-flex;align-items:center;gap:.5rem;min-height:var(--ui-touch);font-size:var(--ui-body);}
+.app .report-payment-group input[type="checkbox"] {width:1.25rem;height:1.25rem;min-height:1.25rem;flex:0 0 1.25rem;}
+.app .report-file-area {min-height:5rem;}
+.app :is(.react-item,.react-clist-nick-row,.react-comment-actions,.react-del-confirm) {flex-wrap:wrap;gap:.5rem;}
+.app .react-item-left {flex:1 1 10rem;}
+.app .react-item-label {min-width:0;}
+.app .react-item-count {flex:0 0 auto;}
+.app .react-comment-fields {display:grid;grid-template-columns:repeat(auto-fit,minmax(min(10rem,100%),1fr));}
+.app .react-clist-nick {min-width:0;}
+.app :is(.react-del-btn,.react-comment-skip,.react-del-ok,.react-del-cancel) {min-width:var(--ui-touch);}
+.app .react-del-pw {flex:1 1 8rem;}
+.app .react-clist-text {word-break:normal;overflow-wrap:anywhere;}
+
+/* Card contents reflow without shrinking text or hiding essential information. */
+#stationDetails {width:min(24rem,calc(100% - 1.5rem));}
+#stationDetails .info-overlay {padding:1rem;scroll-padding-top:4rem;display:grid;grid-template-columns:minmax(0,1fr) var(--ui-touch);grid-template-rows:repeat(7,auto);align-content:start;}
+/* The close control spans the whole card's grid, so even a very long heading
+   can scroll away while Close remains reachable. No clipped/sticky title. */
+#stationDetails .info-heading {display:contents;}
+#stationDetails .info-heading .name {grid-column:1;grid-row:1;margin-bottom:.5rem;}
+#stationDetails .station-close {grid-column:2;grid-row:1/-1;align-self:start;justify-self:end;position:sticky;top:0;z-index:3;width:var(--ui-touch);height:var(--ui-touch);background:var(--panel);}
+#stationDetails .info-overlay>:not(.info-heading) {grid-column:1/-1;}
+#stationDetails .address {grid-row:2;}
+#stationDetails .distance-row {grid-row:3;}
+#stationDetails .tags {grid-row:4;}
+#stationDetails .prices {grid-row:5;}
+#stationDetails .route-actions {grid-row:6;}
+#stationDetails .station-via {grid-row:7;}
+.info-overlay .name {font-size:1.125rem;line-height:1.5;}
+.info-overlay :is(.address,.fuel-label,.price-item,.route-btn) {font-size:var(--ui-body);line-height:1.5;}
+.info-overlay :is(.station-payment-label,.station-check,.price-source,.effective-price del) {font-size:var(--ui-meta);line-height:1.5;}
+.info-overlay .price-item {flex-wrap:wrap;gap:.25rem .75rem;}
+.info-overlay .effective-price {min-width:0;max-width:100%;}
+.info-overlay .price-item b {font-size:1.25rem;line-height:1.5;}
+.info-overlay .effective-price :is(b,del) {min-width:0;max-width:100%;white-space:normal;overflow-wrap:anywhere;}
+.info-overlay .route-actions {grid-template-columns:repeat(auto-fit,minmax(min(8rem,100%),1fr));}
+.app .station-list-row :is(.station-address,.station-payment,.station-price) {font-size:var(--ui-body);line-height:1.5;}
+.app .station-list-row :is(.station-proof) {font-size:var(--ui-meta);line-height:1.5;}
+.app :is(.station-list-row>strong,.trip-result h3) {font-size:var(--ui-heading);line-height:1.5;}
+.app :is(.fit-results-btn,.search-area-btn) {font-size:var(--ui-body);line-height:1.5;white-space:normal;}
+.app .results-toolbar {flex-wrap:wrap;}
+.results-toolbar label {flex:1 1 8rem;}
+.app #resultsSize {flex:0 0 auto;}
+.app .results-body {scroll-padding-top:8rem;}
+.app .national-results>summary {font-size:var(--ui-body);line-height:1.5;}
+.app #tripPanel {overflow:auto;max-height:min(var(--trip-window-height,620px),calc(100% - 1.5rem));}
+/* Native details has an anonymous content wrapper in several browsers; a flex
+   child cannot reliably size its body. Use the measured heading instead. */
+.app #tripPanel .trip-body {min-height:0;max-height:var(--trip-body-height,calc(var(--trip-window-height) - 5rem));scroll-padding-block:.75rem;}
+.app #tripPanel .trip-trigger {align-items:flex-start;flex-wrap:wrap;}
+.app .trip-trigger-icon {flex:0 0 1.5rem;}
+.app .trip-trigger-state {font-size:var(--ui-meta);line-height:1.5;white-space:normal;}
+.app .trip-trigger-copy {flex:1 1 8rem;}
+.app .trip-panel {font-size:var(--ui-body);}
+.app :is(.trip-selected,.trip-note,.trip-status,.trip-result p,.trip-disclosure>summary,.trip-window-settings>summary,.trip-search-options label,.trip-window-tools label) {font-size:var(--ui-body);line-height:1.5;}
+.app #tripSettingsSummary {font-size:var(--ui-meta);line-height:1.5;}
+.app :is(.trip-search-options,.trip-recommendation) {grid-template-columns:minmax(0,auto) minmax(0,1fr);}
+.app .trip-actions>* {min-width:0;white-space:normal;flex:1 1 9rem;}
+.app .trip-choice {white-space:normal;overflow-wrap:anywhere;}
+.app .trip-window-tools {flex-wrap:wrap;}
+.app #tripOpacity {width:auto;max-width:100%;}
+.app #copyToast {max-width:calc(100% - 1.5rem);white-space:normal;overflow-wrap:anywhere;font-size:var(--ui-body);line-height:1.5;text-align:center;}
+.app .report-banner {max-width:calc(100% - 1.5rem);white-space:normal;flex-wrap:wrap;font-size:var(--ui-body);line-height:1.5;}
+
+@media(max-width:700px) {
+  .app .header-text h1 {font-size:1rem!important;line-height:1.5;}
+  .app .header {gap:.5rem;min-height:3.5rem;}
+  .app :is(.tools-dialog,.updates-dialog,#regionDialog) {margin:auto;max-width:calc(100% - 1rem);border-radius:1rem;}
+  .app .controls .controls-top {width:100%;}
+  .app .controls #regionOpen,.app .controls #filtersToggle {font-size:var(--ui-body);line-height:1.5;white-space:normal;height:auto;min-width:0;}
+  .app .filter-selects {grid-template-columns:repeat(auto-fit,minmax(min(9rem,100%),1fr));}
+  .app .filter-selects>label:last-child {grid-column:auto;}
+  .app .region-options {grid-template-columns:repeat(auto-fit,minmax(min(5rem,100%),1fr));}
+  .app .national-results:not([open]) {left:68px;right:auto;bottom:max(24px,env(safe-area-inset-bottom));max-width:calc(100% - 136px);}
+  .app .map-area .fit-results-btn {bottom:calc(max(24px,env(safe-area-inset-bottom)) + 7rem);max-width:calc(100% - 84px);}
+  .app :is(.rank-panel,.nearby-panel-box,.report-panel-box,.react-panel-box,.help-panel,.modal-box) {max-width:100%;padding-bottom:max(1rem,env(safe-area-inset-bottom));}
+}
+@media(max-width:480px) {
+  .app .rank-item {grid-template-columns:2.25rem minmax(0,1fr);}
+  .app .rank-price {grid-column:2/-1;justify-self:start;text-align:left;}
+  .app .rank-price .effective-price {align-items:flex-start;}
+  .app .trip-settings .trip-input-row {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));}
+  .app .trip-settings .trip-input-row input {grid-column:1/-1;width:100%;}
+  .app .trip-settings .trip-input-row button {white-space:normal;}
+}
+@media(max-width:380px) {
+  .app .controls .controls-top {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem;}
+  .app .controls .search-box {grid-column:1/-1;width:100%;}
+  .app .controls #regionOpen,.app .controls #filtersToggle {width:100%;}
+  .app .results-toolbar label {flex-basis:100%;}
+  .app .trip-search-options,.app .trip-recommendation {grid-template-columns:minmax(0,1fr);gap:.25rem;}
+  .app .trip-search-options select,.app .trip-recommendation select {margin-bottom:.5rem;}
+}
+@media(max-height:500px) {
+  .app .header {padding-block:.25rem;}
+  .app .controls {padding-block:.25rem!important;}
+  .app .map-filters {max-height:30dvh;}
+}
