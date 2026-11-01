@@ -171,8 +171,9 @@ html {font-size:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%;}
 #stationDetails .station-payment-label {max-width:100%;background:var(--detail-payment-bg);color:var(--detail-payment-ink);border:1px solid var(--detail-payment-edge);}
 #stationDetails .price-item {background:var(--detail-price-bg);border:1px solid var(--detail-price-edge);}
 #stationDetails .fuel-label {color:var(--detail-fuel-ink);}
-#stationDetails .station-via {background:var(--detail-action-bg);color:var(--detail-action-ink);}
-#stationDetails .station-via:hover {background:var(--detail-action-hover);}
+/* Match the legacy dark rule's :is() ID specificity without using !important. */
+:root #stationDetails .info-overlay .station-via {background:var(--detail-action-bg);color:var(--detail-action-ink);}
+:root #stationDetails .info-overlay .station-via:hover {background:var(--detail-action-hover);}
 #stationDetails .distance-row {justify-content:center;}
 @media(max-width:380px) {
   /* Reflow the title below Close rather than squeezing it between large controls. */
