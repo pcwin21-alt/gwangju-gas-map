@@ -4,11 +4,11 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 
-from incremental_collector import ROOT, fingerprint, read
+from incremental_collector import ROOT, POLICY, fingerprint, read
 from nationwide import valid_coords, region, name_key, non_vehicle
 from official_onnuri import fuel_row
 from discover_address_candidates import address_key
-from refresh_regions import ORDER
+ORDER = read(POLICY)['region_order']
 
 
 def main():
@@ -98,7 +98,8 @@ def main():
     # Nationwide jobs are ordered already; this explicit scope prevents an
     # implementation handoff from misreporting the campaign as a census.
     plan = {'id': 'fuel-candidate-inventory-20261102-v1',
-            'scope': 'finite cross-source fuel registration candidates, Jeonnam first and Seoul last; not a geographic census',
+            'scope': 'finite cross-source fuel registration candidates, strictly sequential regional review; not a geographic census',
+            'region_order': ORDER,
             'created_at': datetime.now(timezone.utc).isoformat(timespec='seconds'),
             'regional_inventory': counts, 'reused_cache_queries': len(cached),
             'cached_observations': cached,

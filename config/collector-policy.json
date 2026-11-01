@@ -3,6 +3,7 @@
   "interval_seconds": 120,
   "requests_per_run": 5,
   "requests_per_24h": 20,
+  "region_order": ["전남", "전북", "충남", "충북", "경기", "인천", "서울", "강원", "경북", "대구", "울산", "부산", "경남", "광주", "제주", "대전", "세종"],
   "sources": {
     "onnuri": {"status": "blocked", "reason": "2026-10-30 HTTP 400 Request Blocked; no automatic reactivation", "url": "https://www.onnuri.gift/place"},
     "kbcard": {"status": "active", "url": "https://card.kbcard.com/BON/DVIEW/HBGV0701", "scope": "Public unauthenticated Onnuri merchant form; issuer-specific evidence only; limits are our load caps, not a provider guarantee"},

@@ -230,21 +230,78 @@ def add_job(state, raw):
         state['jobs'].append({**raw, 'id': identity, 'status': 'pending', 'attempts': 0, 'page': 1, 'observed_ids': []})
 
 
+def configure_regions(state, policy):
+    order = policy.get('region_order')
+    if order is None:
+        return
+    if not order or len(set(order)) != len(order):
+        raise ValueError('Invalid regional collection order')
+    if any(j.get('region') not in order for j in state['jobs']):
+        raise ValueError('Job region missing from configured order')
+    state.setdefault('initial_scope', state['scope'])
+    state['scope'] = 'strictly sequential regional fuel-merchant verification; not a geographic census'
+    state['region_order'] = list(order)
+    receipts = state.setdefault('regional_reviews', {})
+    for area in order:
+        receipts.setdefault(area, {'status': 'pending', 'evidence': [], 'checked_at': None})
+
+
+def regional_progress(state):
+    order = state.get('region_order', [])
+    if not order:
+        return None
+    active = None
+    rows = []
+    jobs_by_id = {j['id']: j for j in state['jobs']}
+    unresolved = lambda item: item.get('status') not in ('resolved', 'excluded')
+    for area in order:
+        jobs = [j for j in state['jobs'] if j.get('region') == area]
+        gaps = [g for g in state.get('source_gaps', []) if unresolved(g) and
+                (g.get('region') == area or g.get('region') == '전남광주' and area in ('전남', '광주') or not g.get('region'))]
+        reviews = [r for r in state['review'] if unresolved(r) and
+                   (r.get('region') or jobs_by_id.get(r.get('job_id'), {}).get('region')) in (area, None)]
+        receipt = state.get('regional_reviews', {}).get(area, {})
+        verified = receipt.get('status') == 'complete' and bool(receipt.get('evidence')) and bool(receipt.get('checked_at'))
+        pending = sum(j['status'] not in TERMINAL for j in jobs)
+        failed = sum(j['status'] in ('needs_review', 'blocked') for j in jobs)
+        ready = verified and not (pending or failed or gaps or reviews)
+        if active is None and ready:
+            status = 'complete'
+        elif active is None:
+            active = area
+            status = 'collecting' if pending else 'needs_review'
+        else:
+            status = 'queued'
+        rows.append({'region': area, 'status': status, 'jobs_total': len(jobs),
+                     'jobs_remaining': pending, 'jobs_needing_review': failed,
+                     'source_gaps': len(gaps), 'review_records': len(reviews),
+                     'inventory_reviewed': bool(verified)})
+    return {'active_region': active, 'regions': rows}
+
+
 def summarize(state):
     remaining = [j for j in state['jobs'] if j['status'] not in TERMINAL]
-    waiting = state['review'] or state.get('source_gaps') or any(j['status'] in ('needs_review', 'blocked') for j in state['jobs'])
+    waiting = any(r.get('status') not in ('resolved', 'excluded') for r in state['review'] + state.get('source_gaps', [])) or any(j['status'] in ('needs_review', 'blocked') for j in state['jobs'])
     state['status'] = 'running' if remaining else 'needs_attention' if waiting else 'complete'
-    return {'status': state['status'], 'jobs_total': len(state['jobs']),
+    progress = regional_progress(state)
+    if progress:
+        current = next((r for r in progress['regions'] if r['region'] == progress['active_region']), None)
+        state['status'] = 'running' if current and current['status'] == 'collecting' else 'needs_attention' if current or waiting else 'complete'
+    result = {'status': state['status'], 'jobs_total': len(state['jobs']),
             'jobs_done': sum(j['status'] == 'done' for j in state['jobs']),
             'jobs_remaining': len(remaining), 'review_records': len(state['review']),
             'evidence_records': len(state['evidence']), 'source_gaps': len(state.get('source_gaps', [])),
             'source_status': {k: v['status'] for k, v in state['sources'].items()}}
+    if progress:
+        result.update(progress, region_order=state['region_order'])
+    return result
 
 
 def run(state, store, policy, session, commercial, commercial_source, *, clock=time.time, sleeper=time.sleep, max_requests=5):
     maximum = min(max_requests, policy['requests_per_run'])
     if maximum < 0:
         raise ValueError('Invalid request limit')
+    configure_regions(state, policy)
     # An interrupted reservation consumed budget but never proves success.
     for attempt in state['attempts']:
         if attempt['status'] == 'reserved':
@@ -258,8 +315,11 @@ def run(state, store, policy, session, commercial, commercial_source, *, clock=t
     while count < maximum:
         now = clock()
         chosen, earliest = None, None
+        progress = regional_progress(state)
         for job in state['jobs']:
             if job['status'] != 'pending':
+                continue
+            if progress and job.get('region') != progress['active_region']:
                 continue
             source = state['sources'][job['source']]
             if source['status'] in ('blocked', 'needs_review'):

@@ -6,7 +6,7 @@ import unittest
 from pathlib import Path
 from unittest.mock import Mock
 
-from scripts.incremental_collector import initial_state, run, retry_after, request_for, corroborate, Store, summarize
+from scripts.incremental_collector import initial_state, run, retry_after, request_for, corroborate, Store, summarize, configure_regions
 from scripts.collector_policy import require_managed_collection
 
 
@@ -130,6 +130,80 @@ class CollectorTests(unittest.TestCase):
     def test_unfinished_municipal_inventory_prevents_false_completion(self):
         s=self.state(0);s['source_gaps']=[{'region':'전남','status':'needs_source_inventory'}]
         self.assertEqual(summarize(s)['status'],'needs_attention')
+
+    def regional_state(self):
+        self.policy['region_order']=['전남','전북','충남','충북','경기','인천','서울','강원']
+        jobs=[dict(job(i),region=area) for i,area in enumerate(self.policy['region_order'])]
+        s=initial_state({'id':'regional','scope':'test','jobs':jobs},self.policy)
+        configure_regions(s,self.policy)
+        return s
+
+    def approve_area(self,s,area):
+        s['regional_reviews'][area]={'status':'complete','evidence':['source-review/'+area], 'checked_at':'2026-11-02T01:00:00+09:00'}
+
+    def test_region_cooldown_cannot_be_filled_by_a_later_region(self):
+        s=self.regional_state()
+        # A different source with no cooldown must still wait for Jeonnam.
+        s['jobs'][1]['source']='another'
+        s['sources']['another']={'status':'active','next_allowed_at':0}
+        s['sources']['kbcard']['next_allowed_at']=self.clock()+3600
+        self.execute(s)
+        self.session.request.assert_not_called()
+        self.assertEqual(s['summary']['active_region'],'전남')
+
+    def test_all_done_requests_do_not_advance_without_regional_inventory_review(self):
+        s=self.regional_state();self.execute(s)
+        self.assertEqual(self.session.request.call_count,1)
+        self.assertEqual(s['summary']['active_region'],'전남')
+        self.assertEqual(s['status'],'needs_attention')
+        self.assertEqual(s['jobs'][1]['status'],'pending')
+
+    def test_reviewed_region_advances_to_jeonbuk_before_chungnam(self):
+        s=self.regional_state();s['jobs'][0]['status']='done';self.approve_area(s,'전남')
+        # Queue storage order is deliberately different from execution policy.
+        s['jobs']=[s['jobs'][2],s['jobs'][1]]+s['jobs'][3:]+[s['jobs'][0]]
+        self.execute(s)
+        self.assertEqual(self.session.request.call_count,1)
+        self.assertEqual(s['summary']['active_region'],'전북')
+        self.assertEqual(next(j for j in s['jobs'] if j['region']=='전북')['status'],'done')
+        self.assertEqual(next(j for j in s['jobs'] if j['region']=='충남')['status'],'pending')
+
+    def test_seoul_is_before_gangwon_in_new_policy(self):
+        s=self.regional_state()
+        for area in self.policy['region_order'][:6]:
+            self.approve_area(s,area)
+            next(j for j in s['jobs'] if j['region']==area)['status']='done'
+        self.execute(s)
+        self.assertEqual(s['summary']['active_region'],'서울')
+        self.assertEqual(next(j for j in s['jobs'] if j['region']=='강원')['status'],'pending')
+
+    def test_unknown_inventory_combined_area_gap_and_reviews_hold_region(self):
+        for record in ({'region':'전남광주','status':'needs_location'}, {'region':'전남','status':'needs_source_inventory'}):
+            s=self.regional_state();s['jobs'][0]['status']='done';self.approve_area(s,'전남')
+            s['source_gaps']=[record]
+            self.execute(s);self.session.request.assert_not_called()
+            self.assertEqual(s['summary']['active_region'],'전남')
+        s=self.regional_state();s['jobs'][0]['status']='done';self.approve_area(s,'전남')
+        s['review']=[{'job_id':'0','reason':'Identity unresolved'}]
+        self.execute(s);self.session.request.assert_not_called()
+        s['review'][0]['status']='resolved'
+        self.execute(s);self.assertEqual(s['summary']['active_region'],'전북')
+
+    def test_region_without_jobs_is_not_treated_as_surveyed(self):
+        s=self.regional_state();s['jobs']=s['jobs'][2:]
+        self.approve_area(s,'전남')
+        self.execute(s);self.session.request.assert_not_called()
+        self.assertEqual(s['summary']['active_region'],'전북')
+        self.assertEqual(s['status'],'needs_attention')
+
+    def test_order_change_preserves_previous_attempts_and_blocked_source(self):
+        s=self.regional_state()
+        s['attempts']=[{'source':'kbcard','at':self.clock()-5,'status':'done','job_id':'0'}]
+        previous=copy.deepcopy(s['attempts']);jobs=copy.deepcopy(s['jobs'])
+        self.policy['region_order']=list(reversed(self.policy['region_order']))
+        configure_regions(s,self.policy)
+        self.assertEqual(s['attempts'],previous);self.assertEqual(s['jobs'],jobs)
+        self.assertEqual(s['sources']['onnuri']['status'],'blocked')
 
     def test_snapshot_store_reload_preserves_all_dates_and_block(self):
         with tempfile.TemporaryDirectory() as d:

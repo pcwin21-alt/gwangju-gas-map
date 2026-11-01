@@ -1,6 +1,6 @@
 {
   "id": "fuel-candidate-inventory-20261102-v1",
-  "scope": "finite cross-source fuel registration candidates, Jeonnam first and Seoul last; not a geographic census",
+  "scope": "finite cross-source fuel registration candidates, strictly sequential regional review; not a geographic census",
   "created_at": "2026-11-01T15:24:11+00:00",
   "regional_inventory": {
     "전남": {
@@ -46084,5 +46084,24 @@
       },
       "scope": "targeted annual fuel candidate; annual link remains unverified"
     }
+  ],
+  "region_order": [
+    "전남",
+    "전북",
+    "충남",
+    "충북",
+    "경기",
+    "인천",
+    "서울",
+    "강원",
+    "경북",
+    "대구",
+    "울산",
+    "부산",
+    "경남",
+    "광주",
+    "제주",
+    "대전",
+    "세종"
   ]
 }
