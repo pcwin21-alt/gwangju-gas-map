@@ -19,7 +19,7 @@
       "status": "active",
       "url": "https://www.data.go.kr/data/3060079/fileData.do",
       "scope": "Published official bulk download, no private API or credentials",
-      "next_allowed_at": 1793547272.943498
+      "next_allowed_at": 1793553023.1929665
     }
   },
   "attempts": [
@@ -162,6 +162,23 @@
       "http_status": 200,
       "response_sha256": "7f7a83ca004c235c47ebd63dc3473788deee80677ac6a959a80440fd07fd8e4b",
       "finished_at": 1793552902.043344
+    },
+    {
+      "id": "0224a260c55f4ca38e1d9f89",
+      "job_id": "eea3713d8e044c8c2036098a",
+      "source": "datagov",
+      "at": 1793552903.1929665,
+      "status": "reserved",
+      "run_id": "fc0bcd860b954b38b709e6b195a3a4c8",
+      "request": {
+        "method": "GET",
+        "url": "https://www.data.go.kr/cmm/cmm/fileDownload.do",
+        "params": {
+          "atchFileId": "FILE_000000007663918",
+          "fileDetailSn": "1",
+          "insertDataPrcus": "N"
+        }
+      }
     }
   ],
   "jobs": [
@@ -372,7 +389,7 @@
       "sequence": "1",
       "id": "eea3713d8e044c8c2036098a",
       "status": "pending",
-      "attempts": 0,
+      "attempts": 1,
       "page": 1,
       "observed_ids": []
     },
