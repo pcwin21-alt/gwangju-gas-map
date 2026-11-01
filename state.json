@@ -6057,7 +6057,8 @@
       "attempts": 0,
       "page": 1,
       "observed_ids": [],
-      "result": "recent_exact_issuer_evidence_reused"
+      "result": "recent_exact_issuer_evidence_reused",
+      "candidate_ids": []
     }
   ],
   "evidence": [
