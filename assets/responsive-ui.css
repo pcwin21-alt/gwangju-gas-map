@@ -161,14 +161,18 @@ html {font-size:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%;}
 }
 
 /* Neutral depth separates the non-modal card without a colored band. */
-:root {--detail-edge:#c7cbd1;--detail-tint:#f4f4f3;--detail-shadow:0 12px 36px #00000026,0 2px 8px #00000014;--detail-veil:#0000000a;}
-:root[data-theme="dark"] {--detail-edge:#626a75;--detail-tint:#272c33;--detail-shadow:0 14px 40px #0009,0 2px 10px #0005;--detail-veil:#0000001a;}
+:root {--detail-edge:#c7cbd1;--detail-tint:#f4f4f3;--detail-shadow:0 12px 36px #00000026,0 2px 8px #00000014;--detail-veil:#0000000a;--detail-payment-bg:#eaf3ec;--detail-payment-ink:#315c43;--detail-payment-edge:#d3e4d7;--detail-price-bg:#fbf5e9;--detail-price-edge:#e8dfcb;--detail-fuel-ink:#5b513c;--detail-action-bg:#276457;--detail-action-ink:#fff;--detail-action-hover:#1d5146;}
+:root[data-theme="dark"] {--detail-edge:#626a75;--detail-tint:#272c33;--detail-shadow:0 14px 40px #0009,0 2px 10px #0005;--detail-veil:#0000001a;--detail-payment-bg:#203d31;--detail-payment-ink:#c3e6cf;--detail-payment-edge:#426450;--detail-price-bg:#363024;--detail-price-edge:#655a40;--detail-fuel-ink:#e5d5b4;--detail-action-bg:#9bd8c4;--detail-action-ink:#133b31;--detail-action-hover:#b3e5d4;}
 #stationDetails .info-overlay {background:var(--panel);border:1px solid var(--detail-edge);box-shadow:var(--detail-shadow);border-radius:1rem;}
 #stationDetails .info-heading .name {grid-column:1/-1;padding:.375rem calc(var(--ui-touch) + .375rem);background:transparent;color:var(--ink);margin:0 0 .75rem;text-align:center;}
 #stationDetails .station-close {background:var(--detail-tint);color:var(--ink);border:1px solid var(--detail-edge);border-radius:.625rem;}
 #stationDetails .address,#stationDetails .price-source {text-align:center;}
 #stationDetails .tags {align-items:center;text-align:center;}
-#stationDetails .station-payment-label {max-width:100%;background:var(--detail-tint);color:var(--ink);}
+#stationDetails .station-payment-label {max-width:100%;background:var(--detail-payment-bg);color:var(--detail-payment-ink);border:1px solid var(--detail-payment-edge);}
+#stationDetails .price-item {background:var(--detail-price-bg);border:1px solid var(--detail-price-edge);}
+#stationDetails .fuel-label {color:var(--detail-fuel-ink);}
+#stationDetails .station-via {background:var(--detail-action-bg);color:var(--detail-action-ink);}
+#stationDetails .station-via:hover {background:var(--detail-action-hover);}
 #stationDetails .distance-row {justify-content:center;}
 @media(max-width:380px) {
   /* Reflow the title below Close rather than squeezing it between large controls. */
