@@ -13,7 +13,7 @@
       "status": "active",
       "url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
       "scope": "Public unauthenticated Onnuri merchant form; issuer-specific evidence only; limits are our load caps, not a provider guarantee",
-      "next_allowed_at": 1793553142.0434647
+      "next_allowed_at": 1793553148.2272677
     },
     "datagov": {
       "status": "active",
@@ -188,7 +188,7 @@
       "job_id": "618e662436d579be1a37413a",
       "source": "kbcard",
       "at": 1793553022.0434647,
-      "status": "reserved",
+      "status": "done",
       "run_id": "fc0bcd860b954b38b709e6b195a3a4c8",
       "request": {
         "method": "POST",
@@ -205,7 +205,10 @@
           "endRow": 10,
           "mmcNm": ""
         }
-      }
+      },
+      "http_status": 200,
+      "response_sha256": "46f5b4b2972c20b42773a9b4b713f11ac38d5e7363c8fa6e137df2e395b2f338",
+      "finished_at": 1793553028.2272666
     }
   ],
   "jobs": [
@@ -441,11 +444,71 @@
       },
       "logical_key": "618e662436d579be1a37413a",
       "id": "618e662436d579be1a37413a",
-      "status": "pending",
+      "status": "done",
       "attempts": 1,
       "page": 1,
-      "observed_ids": [],
-      "candidate_ids": []
+      "observed_ids": [
+        "000000123095182",
+        "000000111587880",
+        "000000106123520",
+        "000000054315294",
+        "000000118585771",
+        "000000103644462",
+        "000000076717019",
+        "000000092589985",
+        "000000079587458",
+        "000000082295928",
+        "000000008789658",
+        "000000026025493",
+        "000000096550025",
+        "000000033743331",
+        "000000100532165",
+        "000000101805766",
+        "000000092288984",
+        "000000118559916",
+        "000000042887165",
+        "000000084076187",
+        "000000009989174",
+        "000000014678451",
+        "000000013907534",
+        "000000027623109",
+        "000000090444900",
+        "000000115365078",
+        "000000088403293",
+        "000000050197492",
+        "000000077715901",
+        "000000077330331",
+        "000000065065755",
+        "000000115940453",
+        "000000097778607",
+        "000000029848323",
+        "000000118193791",
+        "000000107398897",
+        "000000008321761",
+        "000000086492781",
+        "000000072756971",
+        "000000113883500",
+        "000000048498392",
+        "000000104478799",
+        "000000073965212",
+        "000000043109691",
+        "000000098484800",
+        "000000037826094",
+        "000000029217094",
+        "000000102520517",
+        "000000102557406",
+        "000000038257161",
+        "000000088248030",
+        "000000095351929",
+        "000000012894232",
+        "000000110199822",
+        "000000003597415",
+        "000000003917068"
+      ],
+      "candidate_ids": [],
+      "expected": 56,
+      "last_observed_at": "2026-11-02T02:10:24+09:00",
+      "result": "observations_saved"
     },
     {
       "kind": "kb_search",
@@ -5597,6 +5660,54 @@
         "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
       },
       "annual_candidate_ids": []
+    },
+    {
+      "identity_review": "same_premise_confirmed",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "checked_at": "2026-11-02T02:10:24+09:00",
+      "bank_record": {
+        "location": {
+          "lat": "34.9497466291",
+          "lng": "127.4911607758"
+        },
+        "content": {
+          "tel": "061)744-4887",
+          "title": "순천주유소",
+          "category": "주유소",
+          "address": "전남 순천시 장천동 ",
+          "distance": "248",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000009989174",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        }
+      },
+      "commercial_record": {
+        "상가업소번호": "MA010120220807840885",
+        "상호명": "순천주유소",
+        "지점명": "",
+        "상권업종소분류코드": "G21401",
+        "상권업종소분류명": "주유소",
+        "표준산업분류코드": "G47711",
+        "표준산업분류명": "운송장비용 주유소 운영업",
+        "시군구명": "순천시",
+        "도로명주소": "전남광주통합특별시 순천시 강남로 45",
+        "지번주소": "전남광주통합특별시 순천시 장천동 14-10",
+        "위도": "34.9497741641493",
+        "경도": "127.491196476659",
+        "region": "전남"
+      },
+      "commercial_source": {
+        "archive_sha256": "57aa361544108ff4fc73334f87d2ced61e41fe8638dd70bcd842930f865d2386",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+        "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
+      },
+      "annual_candidate_ids": []
     }
   ],
   "review": [
@@ -5626,6 +5737,13 @@
       "checked_at": "2026-11-02T02:08:21+09:00",
       "independent_fuel_candidate_ids": [],
       "reason": "Independent exact business/address/category evidence incomplete; do not exclude by bank category alone"
+    },
+    {
+      "region": "전남",
+      "station_id": "onnuri:14077200010",
+      "job_id": "618e662436d579be1a37413a",
+      "checked_at": "2026-11-02T02:10:24+09:00",
+      "reason": "No independently matched current issuer record; preserve previous station"
     }
   ],
   "source_gaps": [
@@ -19254,6 +19372,12 @@
       "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
       "bank_id": "000000004645863",
       "other_payment_methods": "not_reverified"
+    },
+    "onnuri:14077200010": {
+      "status": "needs_review_not_found",
+      "checked_at": "2026-11-02T02:10:24+09:00",
+      "job_id": "618e662436d579be1a37413a",
+      "nonmembership": "not_established"
     }
   },
   "initial_plan_id": "fuel-candidate-inventory-20261102-v1",
