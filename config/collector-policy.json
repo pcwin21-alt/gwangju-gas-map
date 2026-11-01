@@ -1,12 +1,27 @@
 {
   "schema_version": 1,
-  "interval_seconds": 120,
-  "requests_per_run": 5,
-  "requests_per_24h": 20,
+  "interval_seconds": 180,
+  "requests_per_run": 3,
+  "requests_per_24h": 24,
+  "volume_ramp": {
+    "enabled": true,
+    "sources": ["kbcard"],
+    "clean_seconds": 172800,
+    "minimum_valid_responses": 24,
+    "backoff_minimum_valid_responses": 12,
+    "latency_minimum_samples": 5,
+    "latency_floor_seconds": 30,
+    "latency_multiplier": 3,
+    "stages": {
+      "pilot": {"requests_per_24h": 24, "requests_per_run": 3, "interval_seconds": 180},
+      "promoted": {"requests_per_24h": 32, "requests_per_run": 4, "interval_seconds": 180},
+      "backoff": {"requests_per_24h": 12, "requests_per_run": 2, "interval_seconds": 300}
+    }
+  },
   "region_order": ["전남", "전북", "충남", "충북", "경기", "인천", "서울", "강원", "경북", "대구", "울산", "부산", "경남", "광주", "제주", "대전", "세종"],
   "sources": {
     "onnuri": {"status": "blocked", "reason": "2026-10-30 HTTP 400 Request Blocked; no automatic reactivation", "url": "https://www.onnuri.gift/place"},
     "kbcard": {"status": "active", "url": "https://card.kbcard.com/BON/DVIEW/HBGV0701", "scope": "Public unauthenticated Onnuri merchant form; issuer-specific evidence only; limits are our load caps, not a provider guarantee"},
-    "datagov": {"status": "active", "url": "https://www.data.go.kr/data/3060079/fileData.do", "scope": "Published official bulk download, no private API or credentials"}
+    "datagov": {"status": "active", "requests_per_24h": 20, "url": "https://www.data.go.kr/data/3060079/fileData.do", "scope": "Published official bulk download, no private API or credentials"}
   }
 }

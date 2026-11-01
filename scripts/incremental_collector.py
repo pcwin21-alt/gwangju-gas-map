@@ -24,12 +24,14 @@ try:
     from supplemental_onnuri import station_from_evidence, meters
     from survey_inventory import (install_survey, survey_jobs, make_inventory,
                                   survey_progress, completed_recheck, sync_mapped_inventory)
+    from collector_limits import limits, run_limit, observe, snapshot as limits_snapshot
 except ModuleNotFoundError:
     from scripts.discover_kb_fuel import parse_response, URL as KB_URL
     from scripts.nationwide import name_key, region, valid_coords
     from scripts.supplemental_onnuri import station_from_evidence, meters
     from scripts.survey_inventory import (install_survey, survey_jobs, make_inventory,
                                           survey_progress, completed_recheck, sync_mapped_inventory)
+    from scripts.collector_limits import limits, run_limit, observe, snapshot as limits_snapshot
 
 ROOT = Path(__file__).resolve().parents[1]
 POLICY = ROOT / 'config/collector-policy.json'
@@ -361,11 +363,13 @@ def summarize(state):
     if state.get('survey_inventory'):
         result.update(counts_are_not_regional_totals=True,
                       recheck_after=state['survey_inventory']['recheck_after'], survey_revision=2)
+    if state.get('effective_collection_limits'):
+        result['collection_limits'] = state['effective_collection_limits']
     return result
 
 
 def run(state, store, policy, session, commercial, commercial_source, *, clock=time.time, sleeper=time.sleep, max_requests=5):
-    maximum = min(max_requests, policy['requests_per_run'])
+    maximum = min(max_requests, run_limit(state, policy, clock()))
     if maximum < 0:
         raise ValueError('Invalid request limit')
     configure_regions(state, policy)
@@ -377,6 +381,12 @@ def run(state, store, policy, session, commercial, commercial_source, *, clock=t
             job = next(j for j in state['jobs'] if j['id'] == attempt['job_id'])
             job.update(status='needs_review', reason='Interrupted attempt; not retried automatically')
     session.trust_env = False
+    progress = regional_progress(state)
+    for job in state['jobs']:
+        source = state['sources'][job['source']]
+        if job['status'] == 'pending' and source['status'] in ('blocked', 'needs_review') and \
+                (not progress or job.get('region') == progress['active_region']):
+            job.update(status='blocked', reason=source.get('reason', 'Source unavailable'))
     count = 0
     run_id = uuid.uuid4().hex
     while count < maximum:
@@ -389,15 +399,17 @@ def run(state, store, policy, session, commercial, commercial_source, *, clock=t
             if progress and job.get('region') != progress['active_region']:
                 continue
             source = state['sources'][job['source']]
+            quota = limits(state, policy, job['source'], now)
             if source['status'] in ('blocked', 'needs_review'):
                 job.update(status='blocked', reason=source.get('reason', 'Source unavailable'))
                 continue
             if source['status'] == 'cooldown' and source['next_allowed_at'] > now:
                 continue
             recent = [a for a in state['attempts'] if a['source'] == job['source'] and now-a.get('finished_at', a['at']) < 86400]
-            if len(recent) >= policy['requests_per_24h']:
+            source_run_count = sum(a.get('run_id') == run_id and a['source'] == job['source'] for a in state['attempts'])
+            if len(recent) >= quota['requests_per_24h'] or source_run_count >= quota['requests_per_run']:
                 continue
-            allowed = max(source.get('next_allowed_at', 0), max((a['at'] + policy['interval_seconds'] for a in recent), default=0))
+            allowed = max(source.get('next_allowed_at', 0), max((a['at'] + quota['interval_seconds'] for a in recent), default=0))
             if allowed > now:
                 earliest = min(earliest or allowed, allowed)
                 continue
@@ -406,7 +418,8 @@ def run(state, store, policy, session, commercial, commercial_source, *, clock=t
         if chosen is None:
             # Wait only inside this bounded invocation, never through a long
             # provider cooldown. Scheduled runs resume persisted timers.
-            if earliest is not None and earliest-clock() <= policy['interval_seconds'] and count:
+            wait_bound = max(limits(state, policy, name, clock())['interval_seconds'] for name in state['sources'])
+            if earliest is not None and earliest-clock() <= wait_bound and count:
                 sleeper(max(0, earliest-clock()))
                 continue
             break
@@ -416,7 +429,7 @@ def run(state, store, policy, session, commercial, commercial_source, *, clock=t
         expected_host = 'card.kbcard.com' if job['source'] == 'kbcard' else 'www.data.go.kr'
         if urlparse(url).hostname != expected_host:
             raise ValueError('Unexpected source host')
-        source.update(status='active', next_allowed_at=now + policy['interval_seconds'])
+        source.update(status='active', next_allowed_at=now + quota['interval_seconds'])
         attempt = {'id': uuid.uuid4().hex[:24], 'job_id': job['id'], 'source': job['source'],
                    'at': now, 'status': 'reserved', 'run_id': run_id,
                    'request': {'method': method, 'url': url, **kwargs}}
@@ -426,7 +439,9 @@ def run(state, store, policy, session, commercial, commercial_source, *, clock=t
         count += 1
         blob = None
         try:
+            attempt['request_started_at'] = clock()
             response = session.request(method, url, **kwargs, timeout=(10, 45), allow_redirects=False)
+            attempt['network_duration_seconds'] = max(0, clock()-attempt['request_started_at'])
             attempt.update(http_status=response.status_code, response_sha256=hashlib.sha256(response.content).hexdigest())
             blocked = response.status_code in (401, 403) or 'request blocked' in response.text[:4096].lower()
             if blocked:
@@ -458,12 +473,16 @@ def run(state, store, policy, session, commercial, commercial_source, *, clock=t
             attempt['status'] = 'needs_review'
             job.update(status='needs_review', reason=type(exc).__name__ + ': ' + str(exc)[:250])
         attempt['finished_at'] = clock()
+        attempt.setdefault('network_duration_seconds', max(0, clock()-attempt.get('request_started_at', clock())))
+        observe(state, policy, job['source'], attempt, clock())
+        quota = limits(state, policy, job['source'], clock())
         # A reservation precedes the Git push. Wait from response completion
         # so uneven push/network times cannot shorten the transmission gap.
-        source['next_allowed_at'] = max(source['next_allowed_at'], clock() + policy['interval_seconds'])
+        source['next_allowed_at'] = max(source['next_allowed_at'], clock() + quota['interval_seconds'])
         store.save(state, blob)
         if attempt['status'] != 'done':
             break
+    limits_snapshot(state, policy, clock())
     state['summary'] = summarize(state)
     state['last_run'] = {'id': run_id, 'checked_at': stamp(clock()), 'requests': count}
     store.save(state)
@@ -474,7 +493,7 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument('--state-dir', type=Path, required=True)
     ap.add_argument('--plan', type=Path, default=ROOT/'output/collector_plan.json')
-    ap.add_argument('--max-requests', type=int, default=5)
+    ap.add_argument('--max-requests', type=int, default=4)
     ap.add_argument('--persist-git', action='store_true')
     args = ap.parse_args()
     policy = read(POLICY)

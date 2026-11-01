@@ -1,0 +1,238 @@
+{
+  "scope": "Historical stored map changes, not actual same-day merchant registrations or a current census",
+  "contract": {
+    "input": "43 historical revisions of gas_stations.json, March original response, collection documentation, October live snapshot and collector source",
+    "action": "Recount records per commit and compare discovery scope, categories, cleaning and fuel types",
+    "acceptance": "No mixing raw rows, unique merchant IDs, map records and current membership; distinguish changed observation from changed merchant population"
+  },
+  "timeline": [
+    {
+      "commit": "25cfa77b87576bea7d27e7fdb1ba7e8d71fe5d17",
+      "at_kst": "2026-03-01T17:20:04+09:00",
+      "title": "초기 커밋: 광주 주유소 결제 가능 지도",
+      "map_records": 110,
+      "onnuri_tagged_records": 22,
+      "gwangju_onnuri_tagged_records": 22,
+      "gwangju_fuel_kinds": {
+        "not_recorded": 22
+      }
+    },
+    {
+      "commit": "8f390747c841beaa92ead884092176bd90edd3b7",
+      "at_kst": "2026-03-03T18:33:53+09:00",
+      "title": "feat: 온누리 가맹 주유소 114건 추가 (onnuri.gift API)",
+      "map_records": 168,
+      "onnuri_tagged_records": 106,
+      "gwangju_onnuri_tagged_records": 106,
+      "gwangju_fuel_kinds": {
+        "not_recorded": 106
+      }
+    },
+    {
+      "commit": "779f5cb8afe555e4d7afeba24b32613ea243600b",
+      "at_kst": "2026-03-03T22:01:43+09:00",
+      "title": "fix: 컴포즈커피 광주유동점 오류 데이터 제거",
+      "map_records": 167,
+      "onnuri_tagged_records": 105,
+      "gwangju_onnuri_tagged_records": 105,
+      "gwangju_fuel_kinds": {
+        "not_recorded": 105
+      }
+    },
+    {
+      "commit": "b090401bc488deb9896aae26905fe1cff0462fa4",
+      "at_kst": "2026-03-03T22:02:50+09:00",
+      "title": "fix: 비주유소 오류 데이터 5건 일괄 제거",
+      "map_records": 162,
+      "onnuri_tagged_records": 100,
+      "gwangju_onnuri_tagged_records": 100,
+      "gwangju_fuel_kinds": {
+        "not_recorded": 100
+      }
+    },
+    {
+      "commit": "7419d557a7bda648b1fd252b1c992d144987794e",
+      "at_kst": "2026-10-09T15:16:48+09:00",
+      "title": "feat: refresh merchant verification and add via-station navigation (#1)",
+      "map_records": 156,
+      "onnuri_tagged_records": 103,
+      "gwangju_onnuri_tagged_records": 103,
+      "gwangju_fuel_kinds": {
+        "liquid": 102,
+        "lpg": 1
+      }
+    },
+    {
+      "commit": "0c816902cab404a5198eeacb37e61ccd02531891",
+      "at_kst": "2026-10-23T21:09:36+09:00",
+      "title": "Expand Onnuri fuel map nationwide with verified locations and ID-based prices",
+      "map_records": 169,
+      "onnuri_tagged_records": 116,
+      "gwangju_onnuri_tagged_records": 103,
+      "gwangju_fuel_kinds": {
+        "liquid": 102,
+        "lpg": 1
+      }
+    },
+    {
+      "commit": "b56b0bcb5e20422d95c2751a5e10a11749fa10a8",
+      "at_kst": "2026-10-23T21:22:36+09:00",
+      "title": "Exclude non-fuel businesses and refresh station IDs before verified pricing",
+      "map_records": 168,
+      "onnuri_tagged_records": 115,
+      "gwangju_onnuri_tagged_records": 102,
+      "gwangju_fuel_kinds": {
+        "liquid": 101,
+        "lpg": 1
+      }
+    },
+    {
+      "commit": "1bb41053b3743a36180a289a5bd744fd4cd5bac2",
+      "at_kst": "2026-10-24T00:06:06+09:00",
+      "title": "Restore public Onnuri search and verify nationwide fuel merchants",
+      "map_records": 205,
+      "onnuri_tagged_records": 169,
+      "gwangju_onnuri_tagged_records": 129,
+      "gwangju_fuel_kinds": {
+        "liquid": 113,
+        "lpg": 16
+      }
+    },
+    {
+      "commit": "47e43910358b85ab43465723bc5164aeb3ba53d5",
+      "at_kst": "2026-10-25T10:36:53+09:00",
+      "title": "Cross-check pending merchants and verify two fuel businesses",
+      "map_records": 206,
+      "onnuri_tagged_records": 170,
+      "gwangju_onnuri_tagged_records": 130,
+      "gwangju_fuel_kinds": {
+        "liquid": 114,
+        "lpg": 16
+      }
+    },
+    {
+      "commit": "c6c221995715125a17176e68637245d3974ed895",
+      "at_kst": "2026-10-26T18:55:13+09:00",
+      "title": "Discover and publish independently verified KB Onnuri fuel merchants",
+      "map_records": 207,
+      "onnuri_tagged_records": 171,
+      "gwangju_onnuri_tagged_records": 130,
+      "gwangju_fuel_kinds": {
+        "liquid": 114,
+        "lpg": 16
+      }
+    },
+    {
+      "commit": "b49f1664136e91d348d84e75d8f7e2a4c2fd19ae",
+      "at_kst": "2026-10-26T19:00:33+09:00",
+      "title": "Add seven cross-checked fuel stations from candidate-coordinate discovery",
+      "map_records": 214,
+      "onnuri_tagged_records": 178,
+      "gwangju_onnuri_tagged_records": 130,
+      "gwangju_fuel_kinds": {
+        "liquid": 114,
+        "lpg": 16
+      }
+    },
+    {
+      "commit": "b9718467d824e8ee3485263445eac0c73e5e71bd",
+      "at_kst": "2026-10-26T20:28:02+09:00",
+      "title": "Find three Jeonnam Onnuri fuel stations with unfiltered merchant lookup",
+      "map_records": 217,
+      "onnuri_tagged_records": 181,
+      "gwangju_onnuri_tagged_records": 130,
+      "gwangju_fuel_kinds": {
+        "liquid": 114,
+        "lpg": 16
+      }
+    },
+    {
+      "commit": "14e7a824cbae4f01d29bf1fa476a83434f171f22",
+      "at_kst": "2026-10-26T20:34:11+09:00",
+      "title": "Verify Gapsan station and continue discovery in regional order",
+      "map_records": 218,
+      "onnuri_tagged_records": 182,
+      "gwangju_onnuri_tagged_records": 130,
+      "gwangju_fuel_kinds": {
+        "liquid": 114,
+        "lpg": 16
+      }
+    },
+    {
+      "commit": "124f77de59292aef9d4c4d74013d51e72386396e",
+      "at_kst": "2026-10-27T16:57:28+09:00",
+      "title": "Find Jeonnam Onnuri fuel merchants by address and add Namchang",
+      "map_records": 219,
+      "onnuri_tagged_records": 183,
+      "gwangju_onnuri_tagged_records": 130,
+      "gwangju_fuel_kinds": {
+        "liquid": 114,
+        "lpg": 16
+      }
+    },
+    {
+      "commit": "1a90119d6ef10b0a026d9adb8f43b32d4098aca1",
+      "at_kst": "2026-10-30T18:45:29+09:00",
+      "title": "Expand fuel-product discovery and add verified Donghaeng station",
+      "map_records": 220,
+      "onnuri_tagged_records": 184,
+      "gwangju_onnuri_tagged_records": 131,
+      "gwangju_fuel_kinds": {
+        "liquid": 115,
+        "lpg": 16
+      }
+    }
+  ],
+  "march_3": {
+    "source_commit": "8f390747c841beaa92ead884092176bd90edd3b7",
+    "raw_rows": 114,
+    "raw_unique_ids": 114,
+    "raw_categories": {
+      "기타소매업": 99,
+      "근린상권서비스": 11,
+      "음식점업": 3,
+      "가공식품": 1
+    },
+    "map_before": 110,
+    "map_after": 168,
+    "previous_record_order_preserved": true,
+    "previous_records_new_onnuri_tags": 26,
+    "appended_records": 58,
+    "cleaned_nonfuel_names": [
+      "메가엠지씨커피 광주유촌점",
+      "GS25광주유탑점",
+      "컴포즈커피 광주유동점",
+      "이마트24 광주유정점 ",
+      "공주유과",
+      "쎄븐일레븐 광주유덕점 "
+    ]
+  },
+  "march_collection_documentation": {
+    "commit": "9a9dd88d",
+    "path": "CLAUDE.md",
+    "lines": [
+      77,
+      88
+    ],
+    "method": "Onnuri place API v1, documented 1km radius, 1.5km lattice, merchant-ID deduplication",
+    "limit": "Grid completeness and every individual old merge are not proved by the commit narrative. 150m proximity merging was historical and is not sufficient for identity today."
+  },
+  "october_24": {
+    "commit": "1bb41053b3743a36180a289a5bd744fd4cd5bac2",
+    "before_gwangju": 102,
+    "after_gwangju": 129,
+    "liquid_before": 101,
+    "liquid_after": 113,
+    "lpg_before": 1,
+    "lpg_after": 16,
+    "method": "Public client v3 search restored; baseRange=0 keyword mode, expanded fuel synonyms, exact IDs, independent national liquid/LPG locations",
+    "limit": "Snapshot dates and source coverage also changed; no evidence all added records became newly registered that night."
+  },
+  "implications": [
+    "Candidate category must include generic retail and neighborhood services when independent fuel evidence exists",
+    "Substrings like 주유 inside 광주유동점 produce non-fuel false positives",
+    "Coverage boundaries, pages and actual provider query modes require proof",
+    "LPG expansion explains 15 of the 27-record October map increase",
+    "Do not repeat the currently rejected operator endpoint; transfer the discovery principle through permitted sources"
+  ]
+}
