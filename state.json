@@ -7087,10 +7087,10 @@
   "summary": {
     "status": "running",
     "jobs_total": 224,
-    "jobs_done": 11,
-    "jobs_remaining": 213,
+    "jobs_done": 14,
+    "jobs_remaining": 210,
     "review_records": 2,
-    "evidence_records": 4,
+    "evidence_records": 7,
     "source_gaps": 90,
     "source_status": {
       "onnuri": "blocked",
@@ -7103,7 +7103,7 @@
         "region": "전남",
         "status": "collecting",
         "jobs_total": 40,
-        "jobs_remaining": 29,
+        "jobs_remaining": 26,
         "jobs_needing_review": 0,
         "source_gaps": 28,
         "review_records": 2,
@@ -7111,8 +7111,8 @@
         "mapped_records_to_recheck": 28,
         "membership_check_status": {
           "needs_review_not_found": 1,
-          "confirmed_in_issuer_scope": 3,
-          "pending": 24
+          "confirmed_in_issuer_scope": 6,
+          "pending": 21
         },
         "unresolved_annual_identities": 25,
         "missing_standard_checks": [
@@ -7479,12 +7479,35 @@
     ],
     "counts_are_not_regional_totals": true,
     "recheck_after": "2026-11-01T00:00:00+09:00",
-    "survey_revision": 2
+    "survey_revision": 2,
+    "collection_limits": {
+      "onnuri": {
+        "requests_per_24h": 24,
+        "requests_per_run": 0,
+        "interval_seconds": 180,
+        "stage": "stopped"
+      },
+      "kbcard": {
+        "requests_per_24h": 24,
+        "requests_per_run": 3,
+        "interval_seconds": 180,
+        "stage": "pilot",
+        "clean_since": 1793556784.2048566,
+        "valid_responses_in_clean_window": 3,
+        "earliest_review_at": 1793729584.2048566
+      },
+      "datagov": {
+        "requests_per_24h": 20,
+        "requests_per_run": 3,
+        "interval_seconds": 180,
+        "stage": "fixed"
+      }
+    }
   },
   "last_run": {
-    "id": "5de07600533e41beb9f51961a087e293",
-    "checked_at": "2026-11-02T02:16:16+09:00",
-    "requests": 0
+    "id": "f90e38c89b3a4cc98dcd9fb435c90417",
+    "checked_at": "2026-11-02T03:19:17+09:00",
+    "requests": 3
   },
   "initial_scope": "finite cross-source fuel registration candidates, Jeonnam first and Seoul last; not a geographic census",
   "region_order": [
@@ -20316,5 +20339,28 @@
   "initial_plan_id": "fuel-candidate-inventory-20261102-v1",
   "applied_plans": [
     "regional-standard-survey-20261102-v2"
-  ]
+  ],
+  "effective_collection_limits": {
+    "onnuri": {
+      "requests_per_24h": 24,
+      "requests_per_run": 0,
+      "interval_seconds": 180,
+      "stage": "stopped"
+    },
+    "kbcard": {
+      "requests_per_24h": 24,
+      "requests_per_run": 3,
+      "interval_seconds": 180,
+      "stage": "pilot",
+      "clean_since": 1793556784.2048566,
+      "valid_responses_in_clean_window": 3,
+      "earliest_review_at": 1793729584.2048566
+    },
+    "datagov": {
+      "requests_per_24h": 20,
+      "requests_per_run": 3,
+      "interval_seconds": 180,
+      "stage": "fixed"
+    }
+  }
 }
