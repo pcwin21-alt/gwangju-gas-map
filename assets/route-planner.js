@@ -65,13 +65,7 @@
     });
   }
   function methods(station) {
-    const labels=[];
-    if(station.payment_types.includes('saengsaeng')) labels.push('상생카드');
-    if(station.payment_types.includes('onnuri')) {
-      const m=station.onnuri_methods;
-      labels.push('온누리 '+(m ? [m.paper&&'지류', GasMerchantDisplay.digital(m)&&'디지털'].filter(Boolean).join('·') : '종류 미확인'));
-    }
-    return labels.join(' / ');
+    return GasMerchantDisplay.paymentSummary(station);
   }
   function syncCriterion() {
     const distance=byId('tripCriterion').value==='distance';
@@ -101,19 +95,21 @@
     const title=document.createElement('h3');title.textContent=(index?`${index}. `:'')+station.name;card.append(title);
     const seconds=estimate?Math.floor(estimate.addedSeconds):0;
     const added=seconds<60?`${seconds}초`:`${Math.floor(seconds/60)}분 ${seconds%60}초`;
-    for(const value of [estimate ? `추가 이동 약 ${added} · ${(estimate.addedMeters/1000).toFixed(1)}km${Number.isFinite(estimate.routeKm)?` · 경로에서 ${estimate.routeKm.toFixed(1)}km`:''}` : '추가 이동시간 미계산',methods(station),station.address]){
+    for(const value of [station.address,methods(station)]){
       const p=document.createElement('p');p.textContent=value;card.append(p);
     }
     const prices=PRICES[station.id];
     if(prices){
       const block=document.createElement('div');block.className='trip-prices';
-      for(const fuel of ['휘발유','경유','LPG']){
+      for(const fuel of station.fuel_kind==='lpg'?['LPG']:['휘발유','경유']){
         if(!GasPriceDisplay.effectivePrice(prices[fuel],station))continue;
         const row=document.createElement('div');row.className='trip-fuel-price';
         row.innerHTML=fuel+' '+GasPriceDisplay.html(prices[fuel],station);block.append(row);
       }
       card.append(block);
     }
+    const travel=document.createElement('p');travel.className='trip-travel';
+    travel.textContent=estimate ? `추가 이동 약 ${added} · ${(estimate.addedMeters/1000).toFixed(1)}km${Number.isFinite(estimate.routeKm)?` · 경로에서 ${estimate.routeKm.toFixed(1)}km`:''}` : '추가 이동시간 미계산';card.append(travel);
     const info=document.createElement('p');info.className='trip-note';
     info.textContent=GasMerchantDisplay.verificationText(station);card.append(info);
     const actions=routeActions(station);

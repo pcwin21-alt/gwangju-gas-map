@@ -38,12 +38,12 @@
     const name=text('strong',station.name);name.dataset.noI18n='';
     const address=text('span',station.address||'상세주소 미확인','station-address');address.dataset.noI18n='';
     node.append(name);
-    if(row.km!==null)node.append(text('span',core.distanceText(row.km),'station-distance'));
     node.append(address,text('span',GasMerchantDisplay.paymentSummary(station)+(station.fuel_kind==='lpg'?' · LPG 충전소':''),'station-payment'));
-    if(station.verification?.onnuri?.status!=='confirmed')node.append(text('span',GasMerchantDisplay.checkCaption(station),'station-proof'));
     const prices=typeof PRICES==='undefined'?null:PRICES[station.id];
     const priceLabel=core.priceText(station,prices,typeof PRICE_INFO==='undefined'?null:PRICE_INFO[station.id]?.source_dates);
     if(priceLabel)node.append(text('span',priceLabel,'station-price'));
+    if(row.km!==null)node.append(text('span',core.distanceText(row.km),'station-distance'));
+    if(station.verification?.onnuri?.status!=='confirmed')node.append(text('span',GasMerchantDisplay.checkCaption(station),'station-proof'));
     if(hasMap)node.setAttribute('aria-pressed',String(selectedId===station.id));
     if(hasMap)node.addEventListener('click',()=>{
       selectedId=station.id;returnScroll=body.scrollTop;
@@ -56,7 +56,8 @@
   function refreshMapCount() {
     if(!hasMap)return;
     const all=items(),count=core.select(all,{bounds:boundsNow()}).length;
-    byId('listScope').textContent='현재 지도 안 '+count+'곳';
+    const label=scope.value==='map'?'찾은 범위':(state.region==='all'?'전국':state.region)+' 조건 결과';
+    byId('listScope').textContent=label+' · '+(order.value==='distance'?'내 위치 가까운 순':'이름순')+' · 현재 지도 안 '+count+'곳';
   }
   function render(reset=false) {
     const scroll=reset?0:body.scrollTop,focused=document.activeElement?.dataset?.stationId,all=items(),point=locationPoint();
@@ -93,6 +94,11 @@
   order.addEventListener('change',()=>{orderChosen=true;limit=20;render(true);});
   byId('moreStations').addEventListener('click',()=>{limit+=20;render();});
   window.GasResultsPanel={
+    showNearby(){
+      if(!hasMap||!locationPoint())return false;
+      scope.value='region';areaBounds=null;limit=20;orderChosen=true;order.value='distance';
+      render(true);panel.open=true;body.scrollTop=0;panel.querySelector('summary').focus({preventScroll:true});return true;
+    },
     onDetailsOpen(fromResults){returnFromList=fromResults;},
     restoreSelection(){
       if(!returnFromList||routeActive())return false;

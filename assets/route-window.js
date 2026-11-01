@@ -2,6 +2,7 @@
   'use strict';
   const byId=id=>document.getElementById(id),panel=byId('tripPanel'),launcher=byId('tripLauncher'),opacity=byId('tripOpacity');
   const area=document.querySelector('.map-area');
+  let wasOpened=panel.open;
   const heading=panel.querySelector('summary');
   function resize() {
     const compact=window.innerHeight<=500||document.documentElement.classList.contains('keyboard-open');
@@ -15,7 +16,7 @@
   }
   const sizeObserver=new ResizeObserver(resize);sizeObserver.observe(area);sizeObserver.observe(heading);resize();
   function sync() {
-    launcher.hidden=panel.open||panel.hidden;launcher.setAttribute('aria-expanded',String(panel.open));
+    launcher.hidden=panel.open||panel.hidden||!wasOpened;launcher.setAttribute('aria-expanded',String(panel.open));
     if(panel.open)resize();
     if(!panel.open&&panel.contains(document.activeElement)){document.activeElement.blur();launcher.focus({preventScroll:true});}
   }
@@ -23,7 +24,7 @@
     if(panel.contains(document.activeElement))document.activeElement.blur();
     panel.open=false;sync();if(focus)launcher.focus({preventScroll:true});
   }
-  function open() {if(panel.hidden)return;panel.open=true;sync();panel.querySelector('summary').focus({preventScroll:true});}
+  function open() {if(panel.hidden)return;wasOpened=true;panel.open=true;sync();panel.querySelector('summary').focus({preventScroll:true});}
   launcher.addEventListener('click',open);panel.addEventListener('toggle',sync);
   byId('expandMapBtn').addEventListener('click',()=>minimize());
   function mapGesture(event) {if(!panel.open||event.target.closest('#tripPanel,#tripLauncher'))return;minimize();}
