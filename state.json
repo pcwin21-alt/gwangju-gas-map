@@ -13,7 +13,7 @@
       "status": "active",
       "url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
       "scope": "Public unauthenticated Onnuri merchant form; issuer-specific evidence only; limits are our load caps, not a provider guarantee",
-      "next_allowed_at": 1793571140.5444963,
+      "next_allowed_at": 1793571143.7494962,
       "volume_ramp": {
         "stage": "pilot",
         "started_at": 1793556784.2048566,
@@ -391,7 +391,7 @@
       "job_id": "ce7d85b7fbf2733b81b53e99",
       "source": "kbcard",
       "at": 1793570960.5444963,
-      "status": "reserved",
+      "status": "done",
       "run_id": "c748d50f988e41728382e3054ced2627",
       "request": {
         "method": "POST",
@@ -408,7 +408,12 @@
           "endRow": 10,
           "mmcNm": ""
         }
-      }
+      },
+      "request_started_at": 1793570962.0942025,
+      "network_duration_seconds": 0.9653100967407227,
+      "http_status": 200,
+      "response_sha256": "f6d7b90d5a50de22880a71b7497992343671529d8e90dbb99ac76c6cc23bc9cd",
+      "finished_at": 1793570963.7494621
     }
   ],
   "jobs": [
@@ -1160,11 +1165,27 @@
       },
       "logical_key": "ce7d85b7fbf2733b81b53e99",
       "id": "ce7d85b7fbf2733b81b53e99",
-      "status": "pending",
+      "status": "done",
       "attempts": 1,
       "page": 1,
-      "observed_ids": [],
-      "candidate_ids": []
+      "observed_ids": [
+        "000000088513238",
+        "000000102675747",
+        "000000102675661",
+        "000000109377895",
+        "000000089090176",
+        "000000112659379",
+        "000000100593134",
+        "000000110575625",
+        "000000092683650",
+        "000000111918983",
+        "000000095725933",
+        "000000095725220"
+      ],
+      "candidate_ids": [],
+      "expected": 12,
+      "last_observed_at": "2026-11-02T07:09:23+09:00",
+      "result": "observations_saved"
     },
     {
       "kind": "kb_search",
@@ -6550,6 +6571,13 @@
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/6436654/output/audits/regional_gap_20261102/suncheon_coordinate_review.json"
       ],
       "resolution": "Map anchor was displaced; corrected independent location links the already saved issuer proof. Other payment methods not reverified."
+    },
+    {
+      "region": "전남",
+      "station_id": "onnuri:14280200024",
+      "job_id": "ce7d85b7fbf2733b81b53e99",
+      "checked_at": "2026-11-02T07:09:23+09:00",
+      "reason": "No independently matched current issuer record; preserve previous station"
     }
   ],
   "source_gaps": [
@@ -20527,6 +20555,12 @@
       "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
       "bank_id": "000000064282436",
       "other_payment_methods": "not_reverified"
+    },
+    "onnuri:14280200024": {
+      "status": "needs_review_not_found",
+      "checked_at": "2026-11-02T07:09:23+09:00",
+      "job_id": "ce7d85b7fbf2733b81b53e99",
+      "nonmembership": "not_established"
     }
   },
   "initial_plan_id": "fuel-candidate-inventory-20261102-v1",
