@@ -37,6 +37,13 @@
   }
   near.addEventListener('click',nearby);route.addEventListener('click',openRoute);
   function cancelNearby(){say();if(!pending)return;version++;mode(trip.open||routing()?'route':'map');}
+  function mapControls(){
+    cancelNearby();window.GasTripWindow?.minimize();
+    if(hasMap&&typeof closeStationOverlay==='function')closeStationOverlay();
+  }
+  byId('filtersToggle').addEventListener('click',mapControls);
+  byId('regionOpen').addEventListener('click',mapControls);
+  byId('searchInput').addEventListener('focus',mapControls);
   trip.addEventListener('toggle',()=>{
     if(trip.open){version++;prepare();say();list.open=false;mode('route');}
     else if(!routing()&&!pending)mode('map');

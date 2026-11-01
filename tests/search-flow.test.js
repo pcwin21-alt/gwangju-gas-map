@@ -48,3 +48,11 @@ test('SDK fallback offers the address list and disables unavailable routing with
  const f=fixture({fallback:true});assert.equal(f.node('routeModeBtn').disabled,true);assert.equal(f.node('nearbyModeBtn').textContent,'목록 보기');
  await f.node('nearbyModeBtn').emit('click');assert.equal(f.gps.length,0);assert.equal(f.node('nationalResults').open,true);assert.equal(f.closed(),0);
 });
+test('filter, region and explicit search entry minimize the route window without losing its inputs',async()=>{
+ for(const [id,event] of [['filtersToggle','click'],['regionOpen','click'],['searchInput','focus']]){
+  const f=fixture();await f.node('routeModeBtn').emit('click');f.node('tripDestination').value='목포역';
+  f.node('mapFilters').hidden=false;await f.node(id).emit(event);
+  assert.equal(f.node('tripPanel').open,false);assert.equal(f.node('tripDestination').value,'목포역');
+  assert.equal(f.node('mapFilters').hidden,false);assert.equal(f.gps.length,0);
+ }
+});
