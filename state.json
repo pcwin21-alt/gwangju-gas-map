@@ -13,7 +13,7 @@
       "status": "active",
       "url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
       "scope": "Public unauthenticated Onnuri merchant form; issuer-specific evidence only; limits are our load caps, not a provider guarantee",
-      "next_allowed_at": 1793547389.3310502
+      "next_allowed_at": 1793553019.6660583
     },
     "datagov": {
       "status": "active",
@@ -135,6 +135,30 @@
       },
       "http_status": 200,
       "response_sha256": "3d73fd17f5f270f073d785e1d1df3f50ffe8ad8656d6038499f122e8979aff20"
+    },
+    {
+      "id": "320cb036ebc3419fb014fbb3",
+      "job_id": "b8e1a3a0fb8b6cee132ca479",
+      "source": "kbcard",
+      "at": 1793552899.6660583,
+      "status": "reserved",
+      "run_id": "fc0bcd860b954b38b709e6b195a3a4c8",
+      "request": {
+        "method": "POST",
+        "url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+        "data": {
+          "mainCC": "a",
+          "isNoFrame": "Y",
+          "situXCdnt": 35.3090822678,
+          "situYCdnt": 126.984898723,
+          "페이지번호": 1,
+          "useCase": "1",
+          "locationType": "1",
+          "startRow": 0,
+          "endRow": 10,
+          "mmcNm": "백동산업"
+        }
+      }
     }
   ],
   "jobs": [
@@ -232,7 +256,7 @@
       "scope": "public discovery point only; independent location still required",
       "id": "b8e1a3a0fb8b6cee132ca479",
       "status": "pending",
-      "attempts": 0,
+      "attempts": 1,
       "page": 1,
       "observed_ids": []
     },
