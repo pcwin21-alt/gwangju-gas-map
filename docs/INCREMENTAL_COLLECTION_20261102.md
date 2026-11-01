@@ -32,3 +32,13 @@ Python 122개 및 JavaScript 91개 테스트 통과. 수집 전용 18개에는 �
 - [저장된 상태](https://github.com/pcwin21-alt/gwangju-gas-map/blob/merchant-collector-state/state.json)
 - [공식 가맹점 파일 원천](https://www.data.go.kr/data/3060079/fileData.do)
 - [공개 KB 가맹점 조회](https://card.kbcard.com/BON/DVIEW/HBGV0701)
+
+## 최초 실행 확인: 2026-11-02 00:36 KST
+
+[첫 수집 실행](https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41321547864)에서 KB 3회와 공공데이터포털 2회, 총 5회 모두 HTTP 200으로 저장됐다. 기존 전남 현대주유소 1곳이 독립 업종 자료와 일치했다. 대동주유소의 두 후보 위치에서는 검색 결과가 없었으나 비가맹으로 판정하지 않았다. 신규 지도 추가는 0곳이다. 원래 온누리 API에는 요청하지 않았다.
+
+수집 후 원격 main에 다른 지도 수정이 들어와 첫 공개 반영이 거절됐다. 상태 브랜치의 5개 응답은 그대로 보존됐다. 최신 main을 먼저 반영하고 동시 변경을 안전하게 재적용하도록 보강한 뒤, [복구 실행](https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41322017004)은 외부 요청 0회로 저장·회귀 검사·공개 배포에 모두 성공했다. 공개 사이트 HTTP 200 및 내장 `incremental_collection` 값과 원격 main의 일치를 확인했다. 지도 기존 220개 레코드는 유지됐다.
+
+현재 대기열 11개 중 5개 완료, 6개 남음이다. 독립 위치·업종 확인 및 전남 지정 상권 자료 부족 16건은 별도 미해결로 남아 있다. 다음 자동 실행은 03:17 KST 예정이며, 요청 완료 시점부터 최소 120초 간격을 적용한다. 이는 최초 수집의 확인 결과이며 전체 조사 완료 보고가 아니다.
+
+이 채팅에는 6시간 간격의 Codex 후속 검토도 연결했다. 이 검토는 정해진 GitHub 수집 코드와 별개의 앱 자동화다. 노트북 종료와 무관하게 계속되는 것으로 검증한 범위는 GitHub Actions의 수집·교차 검증·배포 과정이다.
