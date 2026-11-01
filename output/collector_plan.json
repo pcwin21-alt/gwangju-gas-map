@@ -20,7 +20,7 @@
     "대전",
     "세종"
   ],
-  "created_at": "2026-11-02T02:04:16+09:00",
+  "created_at": "2026-11-02T05:53:12+09:00",
   "regional_inventory": {
     "전남": {
       "fuel_records": 992,
@@ -49890,7 +49890,15 @@
           "market": "장천동상가",
           "candidate_ids": [
             "457c9616a5d71e984ce09d19"
-          ]
+          ],
+          "issuer_checks": {
+            "kbcard": {
+              "status": "needs_review_not_found",
+              "checked_at": "2026-11-02T02:10:24+09:00",
+              "job_id": "618e662436d579be1a37413a",
+              "nonmembership": "not_established"
+            }
+          }
         }
       },
       {
@@ -49918,7 +49926,17 @@
           "market": "장천동상가",
           "candidate_ids": [
             "39774a4ec7933b356a046ef0"
-          ]
+          ],
+          "issuer_checks": {
+            "kbcard": {
+              "status": "confirmed_in_issuer_scope",
+              "issuer": "kbcard",
+              "checked_at": "2026-11-02T02:12:30+09:00",
+              "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+              "bank_id": "000000113153165",
+              "other_payment_methods": "not_reverified"
+            }
+          }
         }
       },
       {
@@ -49946,7 +49964,17 @@
           "market": "함평천지 골목형상점가",
           "candidate_ids": [
             "d748ff3635ae5317dcacd033"
-          ]
+          ],
+          "issuer_checks": {
+            "kbcard": {
+              "status": "confirmed_in_issuer_scope",
+              "issuer": "kbcard",
+              "checked_at": "2026-11-02T02:14:36+09:00",
+              "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+              "bank_id": "000000065992690",
+              "other_payment_methods": "not_reverified"
+            }
+          }
         }
       },
       {
@@ -49974,7 +50002,17 @@
           "market": "화산면 골목형상점가",
           "candidate_ids": [
             "7d40cee636f94826b382004e"
-          ]
+          ],
+          "issuer_checks": {
+            "kbcard": {
+              "status": "confirmed_in_issuer_scope",
+              "issuer": "kbcard",
+              "checked_at": "2026-11-02T03:13:06+09:00",
+              "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+              "bank_id": "000000063753887",
+              "other_payment_methods": "not_reverified"
+            }
+          }
         }
       },
       {
@@ -50002,7 +50040,17 @@
           "market": "죽녹원 북문 골목형상점가",
           "candidate_ids": [
             "088d654f82aa6f0b4ef5433b"
-          ]
+          ],
+          "issuer_checks": {
+            "kbcard": {
+              "status": "confirmed_in_issuer_scope",
+              "issuer": "kbcard",
+              "checked_at": "2026-11-02T03:16:09+09:00",
+              "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+              "bank_id": "000000047115107",
+              "other_payment_methods": "not_reverified"
+            }
+          }
         }
       },
       {
@@ -50030,7 +50078,17 @@
           "market": "삼호읍 중앙 골목형상점가",
           "candidate_ids": [
             "9d01063bbbce784de3a7e55c"
-          ]
+          ],
+          "issuer_checks": {
+            "kbcard": {
+              "status": "confirmed_in_issuer_scope",
+              "issuer": "kbcard",
+              "checked_at": "2026-11-02T03:19:12+09:00",
+              "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+              "bank_id": "000000013496826",
+              "other_payment_methods": "not_reverified"
+            }
+          }
         }
       },
       {
@@ -50681,7 +50739,17 @@
           "candidate_ids": [
             "1054803b1165f961c8cb5967"
           ],
-          "note": "KB국민카드 온누리 사용처 조회 기준. 카드사 반영 지연 가능. 지류·QR·다른 카드사는 별도 확인."
+          "note": "KB국민카드 온누리 사용처 조회 기준. 카드사 반영 지연 가능. 지류·QR·다른 카드사는 별도 확인.",
+          "issuer_checks": {
+            "kbcard": {
+              "status": "confirmed_in_issuer_scope",
+              "issuer": "kbcard",
+              "checked_at": "2026-11-02T00:30:31+09:00",
+              "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+              "bank_id": "000000004645863",
+              "other_payment_methods": "not_reverified"
+            }
+          }
         }
       },
       {
@@ -54242,7 +54310,7 @@
           "전남",
           "광주"
         ],
-        "status": "discovery_only",
+        "status": "excluded_non_vehicle",
         "mapped_ids": [],
         "location_ids": [],
         "paper": "Y",
@@ -56690,7 +56758,7 @@
           "전남",
           "광주"
         ],
-        "status": "discovery_only",
+        "status": "excluded_non_vehicle",
         "mapped_ids": [],
         "location_ids": [],
         "paper": "Y",
@@ -57542,7 +57610,7 @@
         },
         "annual_discovery_rows": 177,
         "annual_ambiguous_region_rows": 177,
-        "annual_non_vehicle_exclusions": 8,
+        "annual_non_vehicle_exclusions": 10,
         "historic_point_lookup": {
           "fuel_records": 992,
           "mapped_address": 24,
@@ -57808,7 +57876,7 @@
         },
         "annual_discovery_rows": 177,
         "annual_ambiguous_region_rows": 177,
-        "annual_non_vehicle_exclusions": 8,
+        "annual_non_vehicle_exclusions": 10,
         "historic_point_lookup": {
           "fuel_records": 342,
           "mapped_address": 150,

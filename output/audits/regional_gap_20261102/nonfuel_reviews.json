@@ -1,0 +1,54 @@
+{
+  "checked_at": "2026-11-02",
+  "scope": "exact annual-row vehicle-fuel classification; no current merchant membership inference",
+  "rows": [
+    {
+      "candidate_id": "bd49b30e09b7d895974badcb",
+      "match": {
+        "가맹점명": "엘피지다이어트 댄스",
+        "소속 시장명(또는 상점가)": "월산까치고개 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": "에어로빅"
+      },
+      "bank_or_operator_record": {
+        "frCd": "05419200011",
+        "frcsNm": "엘피지다이어트 댄스",
+        "frcsAddr": "광주광역시 남구 독립로 97-1 (월산동)",
+        "mrktNm": "월산까치고개 골목형상점가",
+        "placeTypeCd": "09",
+        "placeTypeNm": "근린상권서비스",
+        "addrCd": "12270",
+        "latitude": 35.142374,
+        "longitude": 126.902599,
+        "paperYn": "Y",
+        "cardYn": "Y",
+        "qrYn": "Y"
+      },
+      "reason": "공식 연간 취급품목은 에어로빅이며 동일 가맹점명·시장명의 공식 장소 기록도 근린상권서비스로 확인됨. 차량용 LPG 충전소가 아닌 댄스 업소의 개별 등록을 제외."
+    },
+    {
+      "candidate_id": "37fbbe6ccc9e669b85fd04f5",
+      "match": {
+        "가맹점명": "(주)지에스종합에너지 (사운드 동명 카페)",
+        "소속 시장명(또는 상점가)": "동명동 카페거리 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": ""
+      },
+      "bank_or_operator_record": {
+        "frCd": "05340200190",
+        "frcsNm": "(주)지에스종합에너지 (사운드 동명 카페)",
+        "frcsAddr": "광주광역시 동구 동계천로 151 (동명동)",
+        "mrktNm": "동명동 카페거리 골목형상점가",
+        "placeTypeCd": "07",
+        "placeTypeNm": "음식점업",
+        "addrCd": "12210",
+        "latitude": 35.149047,
+        "longitude": 126.925984,
+        "paperYn": "Y",
+        "cardYn": "Y",
+        "qrYn": "Y"
+      },
+      "reason": "공식 장소 원본에서 동일한 사운드 동명 카페 지점명·시장명이 음식점업으로 확인됨. 같은 회사의 다른 주유소로 판단을 이전하지 않고 이 카페 등록만 제외."
+    }
+  ]
+}
