@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "plan_id": "fuel-candidate-inventory-20261102-v1",
-  "scope": "finite cross-source fuel registration candidates, Jeonnam first and Seoul last; not a geographic census",
+  "scope": "strictly sequential regional fuel-merchant verification; not a geographic census",
   "sources": {
     "onnuri": {
       "status": "blocked",
@@ -519,11 +519,310 @@
       "onnuri": "blocked",
       "kbcard": "active",
       "datagov": "active"
-    }
+    },
+    "active_region": "전남",
+    "regions": [
+      {
+        "region": "전남",
+        "status": "collecting",
+        "jobs_total": 7,
+        "jobs_remaining": 2,
+        "jobs_needing_review": 0,
+        "source_gaps": 7,
+        "review_records": 0,
+        "inventory_reviewed": false
+      },
+      {
+        "region": "전북",
+        "status": "queued",
+        "jobs_total": 0,
+        "jobs_remaining": 0,
+        "jobs_needing_review": 0,
+        "source_gaps": 2,
+        "review_records": 0,
+        "inventory_reviewed": false
+      },
+      {
+        "region": "충남",
+        "status": "queued",
+        "jobs_total": 2,
+        "jobs_remaining": 2,
+        "jobs_needing_review": 0,
+        "source_gaps": 0,
+        "review_records": 0,
+        "inventory_reviewed": false
+      },
+      {
+        "region": "충북",
+        "status": "queued",
+        "jobs_total": 1,
+        "jobs_remaining": 1,
+        "jobs_needing_review": 0,
+        "source_gaps": 0,
+        "review_records": 0,
+        "inventory_reviewed": false
+      },
+      {
+        "region": "경기",
+        "status": "queued",
+        "jobs_total": 1,
+        "jobs_remaining": 1,
+        "jobs_needing_review": 0,
+        "source_gaps": 0,
+        "review_records": 0,
+        "inventory_reviewed": false
+      },
+      {
+        "region": "인천",
+        "status": "queued",
+        "jobs_total": 0,
+        "jobs_remaining": 0,
+        "jobs_needing_review": 0,
+        "source_gaps": 0,
+        "review_records": 0,
+        "inventory_reviewed": false
+      },
+      {
+        "region": "서울",
+        "status": "queued",
+        "jobs_total": 0,
+        "jobs_remaining": 0,
+        "jobs_needing_review": 0,
+        "source_gaps": 0,
+        "review_records": 0,
+        "inventory_reviewed": false
+      },
+      {
+        "region": "강원",
+        "status": "queued",
+        "jobs_total": 0,
+        "jobs_remaining": 0,
+        "jobs_needing_review": 0,
+        "source_gaps": 0,
+        "review_records": 0,
+        "inventory_reviewed": false
+      },
+      {
+        "region": "경북",
+        "status": "queued",
+        "jobs_total": 0,
+        "jobs_remaining": 0,
+        "jobs_needing_review": 0,
+        "source_gaps": 2,
+        "review_records": 0,
+        "inventory_reviewed": false
+      },
+      {
+        "region": "대구",
+        "status": "queued",
+        "jobs_total": 0,
+        "jobs_remaining": 0,
+        "jobs_needing_review": 0,
+        "source_gaps": 3,
+        "review_records": 0,
+        "inventory_reviewed": false
+      },
+      {
+        "region": "울산",
+        "status": "queued",
+        "jobs_total": 0,
+        "jobs_remaining": 0,
+        "jobs_needing_review": 0,
+        "source_gaps": 0,
+        "review_records": 0,
+        "inventory_reviewed": false
+      },
+      {
+        "region": "부산",
+        "status": "queued",
+        "jobs_total": 0,
+        "jobs_remaining": 0,
+        "jobs_needing_review": 0,
+        "source_gaps": 0,
+        "review_records": 0,
+        "inventory_reviewed": false
+      },
+      {
+        "region": "경남",
+        "status": "queued",
+        "jobs_total": 0,
+        "jobs_remaining": 0,
+        "jobs_needing_review": 0,
+        "source_gaps": 1,
+        "review_records": 0,
+        "inventory_reviewed": false
+      },
+      {
+        "region": "광주",
+        "status": "queued",
+        "jobs_total": 0,
+        "jobs_remaining": 0,
+        "jobs_needing_review": 0,
+        "source_gaps": 6,
+        "review_records": 0,
+        "inventory_reviewed": false
+      },
+      {
+        "region": "제주",
+        "status": "queued",
+        "jobs_total": 0,
+        "jobs_remaining": 0,
+        "jobs_needing_review": 0,
+        "source_gaps": 0,
+        "review_records": 0,
+        "inventory_reviewed": false
+      },
+      {
+        "region": "대전",
+        "status": "queued",
+        "jobs_total": 0,
+        "jobs_remaining": 0,
+        "jobs_needing_review": 0,
+        "source_gaps": 1,
+        "review_records": 0,
+        "inventory_reviewed": false
+      },
+      {
+        "region": "세종",
+        "status": "queued",
+        "jobs_total": 0,
+        "jobs_remaining": 0,
+        "jobs_needing_review": 0,
+        "source_gaps": 0,
+        "review_records": 0,
+        "inventory_reviewed": false
+      }
+    ],
+    "region_order": [
+      "전남",
+      "전북",
+      "충남",
+      "충북",
+      "경기",
+      "인천",
+      "서울",
+      "강원",
+      "경북",
+      "대구",
+      "울산",
+      "부산",
+      "경남",
+      "광주",
+      "제주",
+      "대전",
+      "세종"
+    ]
   },
   "last_run": {
-    "id": "2bd3fd7b3f844a7486be821ef9fdbc85",
-    "checked_at": "2026-11-02T00:35:59+09:00",
+    "id": "a60543535ac547358a30883534dd3770",
+    "checked_at": "2026-11-02T00:44:11+09:00",
     "requests": 0
+  },
+  "initial_scope": "finite cross-source fuel registration candidates, Jeonnam first and Seoul last; not a geographic census",
+  "region_order": [
+    "전남",
+    "전북",
+    "충남",
+    "충북",
+    "경기",
+    "인천",
+    "서울",
+    "강원",
+    "경북",
+    "대구",
+    "울산",
+    "부산",
+    "경남",
+    "광주",
+    "제주",
+    "대전",
+    "세종"
+  ],
+  "regional_reviews": {
+    "전남": {
+      "status": "pending",
+      "evidence": [],
+      "checked_at": null
+    },
+    "전북": {
+      "status": "pending",
+      "evidence": [],
+      "checked_at": null
+    },
+    "충남": {
+      "status": "pending",
+      "evidence": [],
+      "checked_at": null
+    },
+    "충북": {
+      "status": "pending",
+      "evidence": [],
+      "checked_at": null
+    },
+    "경기": {
+      "status": "pending",
+      "evidence": [],
+      "checked_at": null
+    },
+    "인천": {
+      "status": "pending",
+      "evidence": [],
+      "checked_at": null
+    },
+    "서울": {
+      "status": "pending",
+      "evidence": [],
+      "checked_at": null
+    },
+    "강원": {
+      "status": "pending",
+      "evidence": [],
+      "checked_at": null
+    },
+    "경북": {
+      "status": "pending",
+      "evidence": [],
+      "checked_at": null
+    },
+    "대구": {
+      "status": "pending",
+      "evidence": [],
+      "checked_at": null
+    },
+    "울산": {
+      "status": "pending",
+      "evidence": [],
+      "checked_at": null
+    },
+    "부산": {
+      "status": "pending",
+      "evidence": [],
+      "checked_at": null
+    },
+    "경남": {
+      "status": "pending",
+      "evidence": [],
+      "checked_at": null
+    },
+    "광주": {
+      "status": "pending",
+      "evidence": [],
+      "checked_at": null
+    },
+    "제주": {
+      "status": "pending",
+      "evidence": [],
+      "checked_at": null
+    },
+    "대전": {
+      "status": "pending",
+      "evidence": [],
+      "checked_at": null
+    },
+    "세종": {
+      "status": "pending",
+      "evidence": [],
+      "checked_at": null
+    }
   }
 }
