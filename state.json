@@ -13,7 +13,7 @@
       "status": "active",
       "url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
       "scope": "Public unauthenticated Onnuri merchant form; issuer-specific evidence only; limits are our load caps, not a provider guarantee",
-      "next_allowed_at": 1793553019.6660583
+      "next_allowed_at": 1793553022.0433455
     },
     "datagov": {
       "status": "active",
@@ -141,7 +141,7 @@
       "job_id": "b8e1a3a0fb8b6cee132ca479",
       "source": "kbcard",
       "at": 1793552899.6660583,
-      "status": "reserved",
+      "status": "done",
       "run_id": "fc0bcd860b954b38b709e6b195a3a4c8",
       "request": {
         "method": "POST",
@@ -158,7 +158,10 @@
           "endRow": 10,
           "mmcNm": "백동산업"
         }
-      }
+      },
+      "http_status": 200,
+      "response_sha256": "7f7a83ca004c235c47ebd63dc3473788deee80677ac6a959a80440fd07fd8e4b",
+      "finished_at": 1793552902.043344
     }
   ],
   "jobs": [
@@ -255,10 +258,15 @@
       },
       "scope": "public discovery point only; independent location still required",
       "id": "b8e1a3a0fb8b6cee132ca479",
-      "status": "pending",
+      "status": "done",
       "attempts": 1,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [
+        "000000094538059"
+      ],
+      "expected": 1,
+      "last_observed_at": "2026-11-02T02:08:21+09:00",
+      "result": "observations_saved"
     },
     {
       "kind": "kb_search",
@@ -5340,7 +5348,35 @@
       "annual_candidate_ids": []
     }
   ],
-  "review": [],
+  "review": [
+    {
+      "job_id": "b8e1a3a0fb8b6cee132ca479",
+      "bank_record": {
+        "location": {
+          "lat": "35.3090822678",
+          "lng": "126.984898723"
+        },
+        "content": {
+          "tel": "061)381-8878",
+          "title": "(주)백동산업",
+          "category": "주유소",
+          "address": "전남 담양군 담양읍 ",
+          "distance": "0",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000094538059",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        }
+      },
+      "checked_at": "2026-11-02T02:08:21+09:00",
+      "independent_fuel_candidate_ids": [],
+      "reason": "Independent exact business/address/category evidence incomplete; do not exclude by bank category alone"
+    }
+  ],
   "source_gaps": [
     {
       "region": "전남",
