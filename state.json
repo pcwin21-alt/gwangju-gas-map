@@ -6034,6 +6034,30 @@
       "page": 1,
       "observed_ids": [],
       "candidate_ids": []
+    },
+    {
+      "kind": "kb_search",
+      "source": "kbcard",
+      "region": "전남",
+      "station_ids": [
+        "onnuri:14077200010"
+      ],
+      "purpose": "post_renewal_recheck",
+      "target": {
+        "name": "순천주유소",
+        "keyword": "",
+        "lat": 34.949742,
+        "lng": 127.491117,
+        "address": "전라남도 순천시 강남로 45(장천동)",
+        "coordinate_source_id": "onnuri:14077200010"
+      },
+      "logical_key": "5a2fb1f1de0206aa1d458df9",
+      "id": "5a2fb1f1de0206aa1d458df9",
+      "status": "done",
+      "attempts": 0,
+      "page": 1,
+      "observed_ids": [],
+      "result": "recent_exact_issuer_evidence_reused"
     }
   ],
   "evidence": [
@@ -6406,8 +6430,13 @@
       "region": "전남",
       "station_id": "onnuri:14077200010",
       "job_id": "618e662436d579be1a37413a",
-      "checked_at": "2026-11-02T02:10:24+09:00",
-      "reason": "No independently matched current issuer record; preserve previous station"
+      "checked_at": "2026-11-02T06:00:08+09:00",
+      "reason": "No independently matched current issuer record; preserve previous station",
+      "status": "resolved",
+      "evidence": [
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/6436654/output/audits/regional_gap_20261102/suncheon_coordinate_review.json"
+      ],
+      "resolution": "Map anchor was displaced; corrected independent location links the already saved issuer proof. Other payment methods not reverified."
     }
   ],
   "source_gaps": [
@@ -7096,8 +7125,8 @@
   "status": "running",
   "summary": {
     "status": "running",
-    "jobs_total": 224,
-    "jobs_done": 14,
+    "jobs_total": 225,
+    "jobs_done": 15,
     "jobs_remaining": 210,
     "review_records": 2,
     "evidence_records": 7,
@@ -7112,16 +7141,15 @@
       {
         "region": "전남",
         "status": "collecting",
-        "jobs_total": 40,
+        "jobs_total": 41,
         "jobs_remaining": 26,
         "jobs_needing_review": 0,
         "source_gaps": 26,
-        "review_records": 2,
+        "review_records": 1,
         "inventory_reviewed": false,
         "mapped_records_to_recheck": 28,
         "membership_check_status": {
-          "needs_review_not_found": 1,
-          "confirmed_in_issuer_scope": 6,
+          "confirmed_in_issuer_scope": 7,
           "pending": 21
         },
         "unresolved_annual_identities": 23,
@@ -11622,8 +11650,8 @@
         "aliases": [],
         "address": "전라남도 순천시 강남로 45(장천동)",
         "region": "전남",
-        "lat": 34.95002,
-        "lng": 127.488458,
+        "lat": 34.949742,
+        "lng": 127.491117,
         "fuel_kind": "liquid",
         "payment_types": [
           "onnuri"
@@ -20330,10 +20358,12 @@
       "other_payment_methods": "not_reverified"
     },
     "onnuri:14077200010": {
-      "status": "needs_review_not_found",
+      "status": "confirmed_in_issuer_scope",
+      "issuer": "kbcard",
       "checked_at": "2026-11-02T02:10:24+09:00",
-      "job_id": "618e662436d579be1a37413a",
-      "nonmembership": "not_established"
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "bank_id": "000000009989174",
+      "other_payment_methods": "not_reverified"
     },
     "onnuri:14077200045": {
       "status": "confirmed_in_issuer_scope",
