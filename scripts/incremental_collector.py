@@ -255,11 +255,13 @@ def regional_progress(state):
     jobs_by_id = {j['id']: j for j in state['jobs']}
     unresolved = lambda item: item.get('status') not in ('resolved', 'excluded')
     for area in order:
+        def covers(label):
+            return not label or label == area or label == '전남광주' and area in ('전남', '광주')
         jobs = [j for j in state['jobs'] if j.get('region') == area]
         gaps = [g for g in state.get('source_gaps', []) if unresolved(g) and
-                (g.get('region') == area or g.get('region') == '전남광주' and area in ('전남', '광주') or not g.get('region'))]
+                covers(g.get('region'))]
         reviews = [r for r in state['review'] if unresolved(r) and
-                   (r.get('region') or jobs_by_id.get(r.get('job_id'), {}).get('region')) in (area, None)]
+                   covers(r.get('region') or jobs_by_id.get(r.get('job_id'), {}).get('region'))]
         receipt = state.get('regional_reviews', {}).get(area, {})
         verified = receipt.get('status') == 'complete' and bool(receipt.get('evidence')) and bool(receipt.get('checked_at'))
         pending = sum(j['status'] not in TERMINAL for j in jobs)

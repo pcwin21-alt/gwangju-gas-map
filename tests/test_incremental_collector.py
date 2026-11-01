@@ -196,6 +196,13 @@ class CollectorTests(unittest.TestCase):
         self.assertEqual(s['summary']['active_region'],'전북')
         self.assertEqual(s['status'],'needs_attention')
 
+    def test_combined_region_or_unknown_review_cannot_be_lost(self):
+        for record in ({'region':'전남광주'}, {'job_id':'unknown-job'}):
+            s=self.regional_state();s['jobs'][0]['status']='done';self.approve_area(s,'전남')
+            s['review']=[record]
+            self.execute(s);self.session.request.assert_not_called()
+            self.assertEqual(s['summary']['active_region'],'전남')
+
     def test_order_change_preserves_previous_attempts_and_blocked_source(self):
         s=self.regional_state()
         s['attempts']=[{'source':'kbcard','at':self.clock()-5,'status':'done','job_id':'0'}]
