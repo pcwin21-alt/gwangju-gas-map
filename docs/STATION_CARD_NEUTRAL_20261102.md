@@ -18,3 +18,11 @@
 - 닫기 버튼은 기본 44px, 200% 글자에서 88px. 390px 대표 화면에서 중립색 카드·가운데 정렬을 스크린샷으로 확인했다. 로컬 예시 가격은 검수용 합성 값이다.
 - 관련 Node 테스트 15개 통과: 상세창, 핀 반복 선택/터치, 가격, 테마. `python scripts/prepare_site.py`와 `git diff --check` 통과.
 - 검수 생성기에 `sample=normal`만 추가했으며, 기본 긴 문자열 스트레스 사례는 유지했다. 이번 수정은 실제 모바일 기기 테스트를 수행했다는 뜻이 아니다.
+
+## 배포 및 실서비스 확인
+
+- 구현 커밋: `37e1ae2` (`main`에 반영).
+- [전체 CI 검사](https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41334633818), [배포 생성](https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41334633781), [GitHub Pages 게시](https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41334646773) 모두 성공.
+- 실서비스 390×844에서 상록 주유소를 검색해 상세창을 열었다. 배포된 `responsive-ui.css?v=f3cf863142ce`, 회색 경계 `rgb(199, 203, 209)`, 제목 투명 배경·가운데 정렬·가로 넘침 없음 확인.
+- 창을 닫으면 기존 검색어 `상록`이 유지되고 선택한 목록 행으로 초점이 돌아왔다.
+- 실제 배포 화면 캡처: 로컬 `tmp/gas-map-ui-review-20261102/station-neutral-live.jpg`. 화면의 주유 가격은 사이트 기존 자료이며 이번 작업에서 갱신하지 않았다.
