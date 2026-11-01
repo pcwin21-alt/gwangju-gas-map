@@ -19,7 +19,7 @@
       "status": "active",
       "url": "https://www.data.go.kr/data/3060079/fileData.do",
       "scope": "Published official bulk download, no private API or credentials",
-      "next_allowed_at": 0
+      "next_allowed_at": 1793547152.9433737
     }
   },
   "attempts": [
@@ -48,6 +48,18 @@
       },
       "http_status": 200,
       "response_sha256": "e047e7a8517fde3b0134de14f3e80df8b70c58a7a23c708ff3a28c1765e0d8eb"
+    },
+    {
+      "id": "458215e50f8049bca844bbad",
+      "job_id": "f93b972d7c39b57b73f1aff2",
+      "source": "datagov",
+      "at": 1793547032.9433737,
+      "status": "reserved",
+      "run_id": "7b7e513e9775448d9441a248d89062cf",
+      "request": {
+        "method": "GET",
+        "url": "https://www.data.go.kr/data/3060079/fileData.do"
+      }
     }
   ],
   "jobs": [
@@ -80,7 +92,7 @@
       "region": "전남",
       "id": "f93b972d7c39b57b73f1aff2",
       "status": "pending",
-      "attempts": 0,
+      "attempts": 1,
       "page": 1,
       "observed_ids": []
     },
