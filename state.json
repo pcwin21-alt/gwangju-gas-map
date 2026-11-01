@@ -54,12 +54,14 @@
       "job_id": "f93b972d7c39b57b73f1aff2",
       "source": "datagov",
       "at": 1793547032.9433737,
-      "status": "reserved",
+      "status": "done",
       "run_id": "7b7e513e9775448d9441a248d89062cf",
       "request": {
         "method": "GET",
         "url": "https://www.data.go.kr/data/3060079/fileData.do"
-      }
+      },
+      "http_status": 200,
+      "response_sha256": "2cdb163d5174f7ddcce2d861d8fa6630b1d2f1ee7ef70030e001eb5bba67783d"
     }
   ],
   "jobs": [
@@ -91,10 +93,11 @@
       "source": "datagov",
       "region": "전남",
       "id": "f93b972d7c39b57b73f1aff2",
-      "status": "pending",
+      "status": "done",
       "attempts": 1,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "result": "public_download_metadata_discovered"
     },
     {
       "kind": "kb_search",
@@ -223,6 +226,24 @@
       },
       "scope": "targeted annual fuel candidate; annual link remains unverified",
       "id": "505962c9cd9fd2f7da8afd57",
+      "status": "pending",
+      "attempts": 0,
+      "page": 1,
+      "observed_ids": []
+    },
+    {
+      "kind": "annual_metadata",
+      "source": "datagov",
+      "region": "전남",
+      "source_date": "20260731",
+      "data": {
+        "publicDataPk": "3060079",
+        "publicDataDetailPk": "uddi:2fec9daf-aa5a-4139-9109-e5541b4a6bae",
+        "atchFileId": "",
+        "fileDetailSn": "1",
+        "publicDataTyCode": "PR0051"
+      },
+      "id": "92c5da70bf012536ad356d23",
       "status": "pending",
       "attempts": 0,
       "page": 1,
