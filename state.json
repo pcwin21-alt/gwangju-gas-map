@@ -16123,7 +16123,7 @@
           "전남",
           "광주"
         ],
-        "status": "discovery_only",
+        "status": "excluded_non_vehicle",
         "mapped_ids": [],
         "location_ids": [],
         "paper": "Y",
@@ -18594,7 +18594,7 @@
           "전남",
           "광주"
         ],
-        "status": "discovery_only",
+        "status": "excluded_non_vehicle",
         "mapped_ids": [],
         "location_ids": [],
         "paper": "Y",
@@ -19377,7 +19377,7 @@
         },
         "annual_discovery_rows": 178,
         "annual_ambiguous_region_rows": 178,
-        "annual_non_vehicle_exclusions": 8,
+        "annual_non_vehicle_exclusions": 10,
         "historic_point_lookup": {
           "fuel_records": 992,
           "mapped_address": 24,
@@ -19643,7 +19643,7 @@
         },
         "annual_discovery_rows": 178,
         "annual_ambiguous_region_rows": 178,
-        "annual_non_vehicle_exclusions": 8,
+        "annual_non_vehicle_exclusions": 10,
         "historic_point_lookup": {
           "fuel_records": 342,
           "mapped_address": 150,
