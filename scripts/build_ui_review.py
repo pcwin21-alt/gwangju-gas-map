@@ -33,8 +33,8 @@ function locateUser(){return args.get('gps')==='denied'?Promise.reject(Error('fi
 function closeStationOverlay(){byId('stationDetails').hidden=true;byId('stationDetails').replaceChildren();}
 window.GasResultsPanel={showNearby(){byId('nationalResults').open=true;byId('listScope').textContent='광주 조건 결과 · 내 위치 가까운 순 · 검수용 예시';}};
 const longName='가나다라마바사 에너지 직영 산업단지 제2 셀프주유소';
-const longAddress='전라남도 무안군 삼향읍 남악리 아주긴도로명123번길 123-45 (산업단지 제2동)';
-const longToken='LongMerchantNameWithoutSpaces0123456789'.repeat(3);
+const longAddress=args.get('sample')==='normal'?'광주광역시 서구 상무대로 1180 (농성동)':'전라남도 무안군 삼향읍 남악리 아주긴도로명123번길 123-45 (산업단지 제2동)';
+const longToken=args.get('sample')==='normal'?'상록 주유소':'LongMerchantNameWithoutSpaces0123456789'.repeat(3);
 byId('map').textContent='지도 영역 — UI 배치 검수용';
 byId('countBadge').textContent='131곳';byId('listCount').textContent='전체 131곳';
 if(screen==='filters')byId('mapFilters').hidden=false;

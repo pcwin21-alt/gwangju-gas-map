@@ -160,12 +160,27 @@ html {font-size:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%;}
   .app .map-filters {max-height:30dvh;}
 }
 
-/* A quiet but visible non-modal detail layer; panning remains available. */
-:root {--detail-edge:#7993ba;--detail-accent:#315c98;--detail-tint:#eef4ff;--detail-shadow:0 12px 36px #152d4e40,0 2px 8px #152d4e20;--detail-veil:#12284a0d;}
-:root[data-theme="dark"] {--detail-edge:#8aa7cc;--detail-accent:#accbfa;--detail-tint:#203650;--detail-shadow:0 14px 40px #0009,0 2px 10px #0005;--detail-veil:#0000001a;}
-#stationDetails .info-overlay {background:var(--panel);border:2px solid var(--detail-edge);border-top:4px solid var(--detail-accent);box-shadow:var(--detail-shadow);border-radius:1rem;}
-#stationDetails .info-heading .name {padding:.375rem .5rem;border-radius:.5rem;background:var(--detail-tint);color:var(--ink);margin-right:.375rem;}
+/* Neutral depth separates the non-modal card without a colored band. */
+:root {--detail-edge:#c7cbd1;--detail-tint:#f4f4f3;--detail-shadow:0 12px 36px #00000026,0 2px 8px #00000014;--detail-veil:#0000000a;}
+:root[data-theme="dark"] {--detail-edge:#626a75;--detail-tint:#272c33;--detail-shadow:0 14px 40px #0009,0 2px 10px #0005;--detail-veil:#0000001a;}
+#stationDetails .info-overlay {background:var(--panel);border:1px solid var(--detail-edge);box-shadow:var(--detail-shadow);border-radius:1rem;}
+#stationDetails .info-heading .name {grid-column:1/-1;padding:.375rem calc(var(--ui-touch) + .375rem);background:transparent;color:var(--ink);margin:0 0 .75rem;text-align:center;}
 #stationDetails .station-close {background:var(--detail-tint);color:var(--ink);border:1px solid var(--detail-edge);border-radius:.625rem;}
+#stationDetails .address,#stationDetails .price-source {text-align:center;}
+#stationDetails .tags {align-items:center;text-align:center;}
+#stationDetails .station-payment-label {max-width:100%;background:var(--detail-tint);color:var(--ink);}
+#stationDetails .distance-row {justify-content:center;}
+@media(max-width:380px) {
+  /* Reflow the title below Close rather than squeezing it between large controls. */
+  #stationDetails .info-overlay {grid-template-rows:var(--ui-touch) repeat(7,auto);}
+  #stationDetails .info-heading .name {grid-row:2;padding:.375rem 0;}
+  #stationDetails .address {grid-row:3;}
+  #stationDetails .tags {grid-row:4;}
+  #stationDetails .prices {grid-row:5;}
+  #stationDetails .distance-row {grid-row:6;}
+  #stationDetails .route-actions {grid-row:7;}
+  #stationDetails .station-via {grid-row:8;}
+}
 .map-area:has(#stationDetails:not([hidden]))::after {content:'';position:absolute;inset:0;z-index:135;background:var(--detail-veil);pointer-events:none;}
 .controls-status .search-modes {display:flex;flex:0 1 auto;min-width:0;max-width:100%;gap:2px;margin-left:auto;padding:2px;border:1px solid var(--line);border-radius:.75rem;background:var(--field);}
 .app .search-modes button {flex:1 1 0;min-width:0;min-height:var(--ui-touch);padding:.375rem .625rem;border:0;border-radius:.5rem;background:transparent;color:var(--ink);font-size:var(--ui-meta);font-weight:400;line-height:1.5;cursor:pointer;white-space:normal;}
