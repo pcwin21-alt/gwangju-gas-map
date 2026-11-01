@@ -50,7 +50,19 @@
 - `python scripts/prepare_site.py`, `git diff --check`: 성공.
 - 신규 회귀 시험: 중복 SDK click, touch/pointer 혼합 순서, 다른 핀 전환, 실제 드래그 닫기, 제보 모드에서 선택 무시.
 - 로컬 `127.0.0.1:4197` 및 `localhost:4197`에서는 Kakao SDK가 로드되지 않아 주소 목록 fallback을 확인했다. 이를 지도 핀의 브라우저 검증으로 보고하지 않는다.
-- 실제 배포 지도 브라우저 검증과 배포 실행 결과: 배포 후 본 문서에 추가 예정.
+- 수정 커밋: [`10a17ba1d123af2651bda2fbdc53d5647824f798`](https://github.com/pcwin21-alt/gwangju-gas-map/commit/10a17ba1d123af2651bda2fbdc53d5647824f798), main에 반영.
+- GitHub [검사 실행 41321526021](https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41321526021) 성공, [사이트 배포 실행 41321526024](https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41321526024) 성공.
+- 공개 URL의 실제 inline script에서 `if (activeOverlay === overlay) return;` 포함을 확인했다. 단순 배포 시작을 배포 반영으로 간주하지 않았다.
+- 공개 사이트 Chrome 390×844 크기: 하진에너지 핀 선택 후 상호·주소·결제 정보 표시, 진영주유소로 전환, 같은 핀 반복 클릭 시 상세창 유지 확인. 가로 넘침 없음.
+- 같은 화면에서 실제 마우스 드래그로 지도 이동 시 상세창이 닫힘을 확인했다. 지도 확대 완료 후 진영주유소 반복 클릭 시 축척 1km 및 핀의 DOM 위치가 그대로 유지됨을 확인했다. Escape로 닫기 확인.
+- Chrome 1280×800 크기에서도 진영주유소 핀 반복 클릭 시 상세창 유지, 축척 1km 유지 및 가로 넘침 없음 확인.
+- 브라우저 검증 주소: `https://pcwin21-alt.github.io/gwangju-gas-map/?region=광주&payment=onnuri&v=10a17ba`.
 - 실제 휴대전화 하드웨어의 터치 순서는 미검증. 브라우저 크기 검증·모의 이벤트 시험과 구분한다.
 
 메인 채팅 인수인계: 이 수정은 가맹점 수집 작업과 별도다. 원래 작업 폴더에 덮어쓰거나 메인 작업의 미커밋 파일을 함께 커밋하지 않는다. 이후 메인 작업을 배포할 때 GitHub main의 본 수정 커밋을 먼저 반영해야 예전 토글 동작으로 되돌아가지 않는다.
+
+## 완료 판정
+
+Global Completion Gate 및 변경 범위의 Software and Website UX Gate 통과. 원인 재현·회귀 시험·브라우저 확인·저장소 기록·공개 배포 완료. 서체·배치 변경은 없어 KRDS 토큰 재설계는 비해당이며 기존 읽기성·닫기 버튼은 유지했다. 실제 모바일 기기 터치 재현은 미검증으로 남긴다.
+
+원본 작업 폴더의 미커밋 가맹점 수집 파일에는 손대지 않았다. 작업 중 원격 main에서 진행된 별도 수집 커밋은 이 격리 복제본으로 fast-forward만 수행했으며 실행하지 않았다. 메인 작업의 `12bf111` 커밋이 이번 수정 `10a17ba`를 조상으로 포함하는 것도 확인했다.
