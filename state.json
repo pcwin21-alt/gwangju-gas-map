@@ -94,7 +94,7 @@
       "job_id": "92c5da70bf012536ad356d23",
       "source": "datagov",
       "at": 1793547152.943498,
-      "status": "reserved",
+      "status": "done",
       "run_id": "7b7e513e9775448d9441a248d89062cf",
       "request": {
         "method": "POST",
@@ -106,7 +106,9 @@
           "fileDetailSn": "1",
           "publicDataTyCode": "PR0051"
         }
-      }
+      },
+      "http_status": 200,
+      "response_sha256": "7c11640acef8e94e9e857dcaf978bdd4d661af9135e93daebdada11af7d49845"
     }
   ],
   "jobs": [
@@ -292,8 +294,22 @@
         "publicDataTyCode": "PR0051"
       },
       "id": "92c5da70bf012536ad356d23",
-      "status": "pending",
+      "status": "done",
       "attempts": 1,
+      "page": 1,
+      "observed_ids": [],
+      "result": "public_attachment_discovered"
+    },
+    {
+      "kind": "annual_download",
+      "source": "datagov",
+      "region": "전남",
+      "source_date": "20260731",
+      "file_id": "FILE_000000007663918",
+      "sequence": "1",
+      "id": "eea3713d8e044c8c2036098a",
+      "status": "pending",
+      "attempts": 0,
       "page": 1,
       "observed_ids": []
     }
