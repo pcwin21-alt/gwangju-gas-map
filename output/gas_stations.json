@@ -7140,7 +7140,17 @@
         "market": "화산면 골목형상점가",
         "candidate_ids": [
           "7d40cee636f94826b382004e"
-        ]
+        ],
+        "issuer_checks": {
+          "kbcard": {
+            "status": "confirmed_in_issuer_scope",
+            "issuer": "kbcard",
+            "checked_at": "2026-11-02T03:13:06+09:00",
+            "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+            "bank_id": "000000063753887",
+            "other_payment_methods": "not_reverified"
+          }
+        }
       }
     },
     "onnuri_methods": {
@@ -7180,7 +7190,17 @@
         "market": "죽녹원 북문 골목형상점가",
         "candidate_ids": [
           "088d654f82aa6f0b4ef5433b"
-        ]
+        ],
+        "issuer_checks": {
+          "kbcard": {
+            "status": "confirmed_in_issuer_scope",
+            "issuer": "kbcard",
+            "checked_at": "2026-11-02T03:16:09+09:00",
+            "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+            "bank_id": "000000047115107",
+            "other_payment_methods": "not_reverified"
+          }
+        }
       }
     },
     "onnuri_methods": {
@@ -7220,7 +7240,17 @@
         "market": "삼호읍 중앙 골목형상점가",
         "candidate_ids": [
           "9d01063bbbce784de3a7e55c"
-        ]
+        ],
+        "issuer_checks": {
+          "kbcard": {
+            "status": "confirmed_in_issuer_scope",
+            "issuer": "kbcard",
+            "checked_at": "2026-11-02T03:19:12+09:00",
+            "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+            "bank_id": "000000013496826",
+            "other_payment_methods": "not_reverified"
+          }
+        }
       }
     },
     "onnuri_methods": {
