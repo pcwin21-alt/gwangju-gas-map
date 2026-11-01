@@ -1,0 +1,19 @@
+{
+  "name": "onnuri-fuel-map-toss",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "python -X utf8 prepare_bundle.py && vite build && ait build",
+    "test": "node --test tests/*.test.js"
+  },
+  "dependencies": {
+    "@apps-in-toss/web-framework": "3.9.0"
+  },
+  "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "typescript": "5.9.3",
+    "vite": "8.3.5"
+  }
+}

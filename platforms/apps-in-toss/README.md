@@ -1,0 +1,29 @@
+# 앱인토스 테스트용 배포본
+
+등록 앱: 온누리 주유소 지도 / `onnuri-fuel-map`.
+
+기존 공개 사이트와 별도로 만드는 **정보 조회용 테스트 후보**다. 실제 토스 앱 동작과 지도 제공자 도메인 허용은 아직 검증하지 않았다. 빌드 성공을 심사 통과나 출시로 취급하지 않는다.
+
+```powershell
+npm ci
+npm test
+python -X utf8 -m unittest discover -s tests -p 'test_*.py'
+npm run build
+```
+
+출력 `onnuri-fuel-map.ait`를 콘솔에서 테스트용으로 올린다. API 키·콘솔 토큰을 소스/명령행에 추가하지 않는다. 로고는 기존 `favicon.svg`를 불투명한 배경으로 600px PNG 렌더링한 `submission-assets/logo-600.png`다.
+
+포함: 기존 주유소·유가 데이터와 지도/검색/필터/목록/상세, SDK의 명시적 위치 동의·단발 조회, 플랫폼 내비게이션, 라이트 모드. 익명 식별키는 로컬에 보관하며 기존 분석/제보 서비스로 보내지 않는다. 위치 거절 후 지역·주소 검색을 유지한다.
+
+제외: 공개 웹의 후원·제보·반응·방문 통계 수집, 시범 경유 계산, 외부 내비 연결 동작. UI 핵심 조회 흐름을 유지하고, 검증되지 않은 부가 동작을 콘솔 설명에 약속하지 않는다. 기존 공개 웹 소스와 데이터는 이 빌드가 수정하지 않는다.
+
+실제 지도 테스트에 앞서 제공자가 허용할 도메인:
+
+- `https://onnuri-fuel-map.apps.tossmini.com`
+- `https://onnuri-fuel-map.private-apps.tossmini.com`
+
+이는 SDK 3.1 이상 공식 도메인 규칙이며, 실제 테스트 QR에서 원본을 다시 확인한다. 도메인 허용 여부·지도 서비스 약관·위치정보 전송 고지·운영 안정성은 별도 확인이 필요하다. API 콘솔 접근이나 도메인 변경을 수행한 것으로 보지 않는다.
+
+추가 통과 조건: 실제 토스 앱에서 지도 렌더, 검색·필터·확대/이동 맥락 보존, 내 위치 허용/거절, 상세 닫기 복귀, Android 뒤로가기·종료, 반복 실행 상태 보존. 현재 단위 검사는 권한 거절/좌표 이상/중복 호출과 빌드 제외 항목·데이터 보존만 확인한다.
+
+공식 근거: [기존 웹 연동](https://developers-apps-in-toss.toss.im/ai-vibe-coding/tutorials/webview.md), [비게임 가이드](https://developers-apps-in-toss.toss.im/checklist/app-nongame.md), [Device.getLocation](https://developers-apps-in-toss.toss.im/documentation/sdk/domains-api/device/device.getlocation.md), [토스 앱 테스트·도메인](https://developers-apps-in-toss.toss.im/guide/operation/toss.md). 실제 설치한 SDK `3.9.0`의 타입과 CLI를 함께 확인했다.
