@@ -6731,12 +6731,12 @@
   "status": "running",
   "summary": {
     "status": "running",
-    "jobs_total": 11,
-    "jobs_done": 5,
-    "jobs_remaining": 6,
-    "review_records": 0,
-    "evidence_records": 1,
-    "source_gaps": 16,
+    "jobs_total": 224,
+    "jobs_done": 11,
+    "jobs_remaining": 213,
+    "review_records": 2,
+    "evidence_records": 4,
+    "source_gaps": 90,
     "source_status": {
       "onnuri": "blocked",
       "kbcard": "active",
@@ -6747,52 +6747,114 @@
       {
         "region": "전남",
         "status": "collecting",
-        "jobs_total": 7,
-        "jobs_remaining": 2,
+        "jobs_total": 40,
+        "jobs_remaining": 29,
         "jobs_needing_review": 0,
-        "source_gaps": 7,
-        "review_records": 0,
-        "inventory_reviewed": false
+        "source_gaps": 28,
+        "review_records": 2,
+        "inventory_reviewed": false,
+        "mapped_records_to_recheck": 28,
+        "membership_check_status": {
+          "needs_review_not_found": 1,
+          "confirmed_in_issuer_scope": 3,
+          "pending": 24
+        },
+        "unresolved_annual_identities": 25,
+        "missing_standard_checks": [
+          "market_coverage",
+          "membership_rechecks",
+          "annual_identities"
+        ],
+        "standard_checks_complete": false,
+        "scope": "issuer-scoped rechecks; paper/QR/operator freshness not inferred"
       },
       {
         "region": "전북",
         "status": "queued",
-        "jobs_total": 0,
-        "jobs_remaining": 0,
+        "jobs_total": 6,
+        "jobs_remaining": 6,
         "jobs_needing_review": 0,
-        "source_gaps": 2,
+        "source_gaps": 5,
         "review_records": 0,
-        "inventory_reviewed": false
+        "inventory_reviewed": false,
+        "mapped_records_to_recheck": 5,
+        "membership_check_status": {
+          "pending": 5
+        },
+        "unresolved_annual_identities": 4,
+        "missing_standard_checks": [
+          "market_coverage",
+          "membership_rechecks",
+          "annual_identities"
+        ],
+        "standard_checks_complete": false,
+        "scope": "issuer-scoped rechecks; paper/QR/operator freshness not inferred"
       },
       {
         "region": "충남",
         "status": "queued",
-        "jobs_total": 2,
-        "jobs_remaining": 2,
+        "jobs_total": 7,
+        "jobs_remaining": 7,
         "jobs_needing_review": 0,
-        "source_gaps": 0,
+        "source_gaps": 5,
         "review_records": 0,
-        "inventory_reviewed": false
+        "inventory_reviewed": false,
+        "mapped_records_to_recheck": 2,
+        "membership_check_status": {
+          "pending": 2
+        },
+        "unresolved_annual_identities": 4,
+        "missing_standard_checks": [
+          "market_coverage",
+          "membership_rechecks",
+          "annual_identities"
+        ],
+        "standard_checks_complete": false,
+        "scope": "issuer-scoped rechecks; paper/QR/operator freshness not inferred"
       },
       {
         "region": "충북",
         "status": "queued",
-        "jobs_total": 1,
-        "jobs_remaining": 1,
+        "jobs_total": 3,
+        "jobs_remaining": 3,
         "jobs_needing_review": 0,
-        "source_gaps": 0,
+        "source_gaps": 2,
         "review_records": 0,
-        "inventory_reviewed": false
+        "inventory_reviewed": false,
+        "mapped_records_to_recheck": 1,
+        "membership_check_status": {
+          "pending": 1
+        },
+        "unresolved_annual_identities": 1,
+        "missing_standard_checks": [
+          "market_coverage",
+          "membership_rechecks",
+          "annual_identities"
+        ],
+        "standard_checks_complete": false,
+        "scope": "issuer-scoped rechecks; paper/QR/operator freshness not inferred"
       },
       {
         "region": "경기",
         "status": "queued",
-        "jobs_total": 1,
-        "jobs_remaining": 1,
+        "jobs_total": 15,
+        "jobs_remaining": 15,
         "jobs_needing_review": 0,
-        "source_gaps": 0,
+        "source_gaps": 13,
         "review_records": 0,
-        "inventory_reviewed": false
+        "inventory_reviewed": false,
+        "mapped_records_to_recheck": 5,
+        "membership_check_status": {
+          "pending": 5
+        },
+        "unresolved_annual_identities": 12,
+        "missing_standard_checks": [
+          "market_coverage",
+          "membership_rechecks",
+          "annual_identities"
+        ],
+        "standard_checks_complete": false,
+        "scope": "issuer-scoped rechecks; paper/QR/operator freshness not inferred"
       },
       {
         "region": "인천",
@@ -6800,109 +6862,227 @@
         "jobs_total": 0,
         "jobs_remaining": 0,
         "jobs_needing_review": 0,
-        "source_gaps": 0,
+        "source_gaps": 1,
         "review_records": 0,
-        "inventory_reviewed": false
+        "inventory_reviewed": false,
+        "mapped_records_to_recheck": 0,
+        "membership_check_status": {},
+        "unresolved_annual_identities": 0,
+        "missing_standard_checks": [
+          "market_coverage"
+        ],
+        "standard_checks_complete": false,
+        "scope": "issuer-scoped rechecks; paper/QR/operator freshness not inferred"
       },
       {
         "region": "서울",
         "status": "queued",
-        "jobs_total": 0,
-        "jobs_remaining": 0,
+        "jobs_total": 4,
+        "jobs_remaining": 4,
         "jobs_needing_review": 0,
-        "source_gaps": 0,
+        "source_gaps": 8,
         "review_records": 0,
-        "inventory_reviewed": false
+        "inventory_reviewed": false,
+        "mapped_records_to_recheck": 1,
+        "membership_check_status": {
+          "pending": 1
+        },
+        "unresolved_annual_identities": 7,
+        "missing_standard_checks": [
+          "market_coverage",
+          "membership_rechecks",
+          "annual_identities"
+        ],
+        "standard_checks_complete": false,
+        "scope": "issuer-scoped rechecks; paper/QR/operator freshness not inferred"
       },
       {
         "region": "강원",
         "status": "queued",
-        "jobs_total": 0,
-        "jobs_remaining": 0,
+        "jobs_total": 2,
+        "jobs_remaining": 2,
         "jobs_needing_review": 0,
-        "source_gaps": 0,
+        "source_gaps": 3,
         "review_records": 0,
-        "inventory_reviewed": false
+        "inventory_reviewed": false,
+        "mapped_records_to_recheck": 0,
+        "membership_check_status": {},
+        "unresolved_annual_identities": 2,
+        "missing_standard_checks": [
+          "market_coverage",
+          "annual_identities"
+        ],
+        "standard_checks_complete": false,
+        "scope": "issuer-scoped rechecks; paper/QR/operator freshness not inferred"
       },
       {
         "region": "경북",
         "status": "queued",
-        "jobs_total": 0,
-        "jobs_remaining": 0,
+        "jobs_total": 7,
+        "jobs_remaining": 7,
         "jobs_needing_review": 0,
-        "source_gaps": 2,
+        "source_gaps": 5,
         "review_records": 0,
-        "inventory_reviewed": false
+        "inventory_reviewed": false,
+        "mapped_records_to_recheck": 6,
+        "membership_check_status": {
+          "pending": 6
+        },
+        "unresolved_annual_identities": 4,
+        "missing_standard_checks": [
+          "market_coverage",
+          "membership_rechecks",
+          "annual_identities"
+        ],
+        "standard_checks_complete": false,
+        "scope": "issuer-scoped rechecks; paper/QR/operator freshness not inferred"
       },
       {
         "region": "대구",
         "status": "queued",
-        "jobs_total": 0,
-        "jobs_remaining": 0,
+        "jobs_total": 2,
+        "jobs_remaining": 2,
         "jobs_needing_review": 0,
-        "source_gaps": 3,
+        "source_gaps": 5,
         "review_records": 0,
-        "inventory_reviewed": false
+        "inventory_reviewed": false,
+        "mapped_records_to_recheck": 1,
+        "membership_check_status": {
+          "pending": 1
+        },
+        "unresolved_annual_identities": 4,
+        "missing_standard_checks": [
+          "market_coverage",
+          "membership_rechecks",
+          "annual_identities"
+        ],
+        "standard_checks_complete": false,
+        "scope": "issuer-scoped rechecks; paper/QR/operator freshness not inferred"
       },
       {
         "region": "울산",
         "status": "queued",
-        "jobs_total": 0,
-        "jobs_remaining": 0,
+        "jobs_total": 1,
+        "jobs_remaining": 1,
         "jobs_needing_review": 0,
-        "source_gaps": 0,
+        "source_gaps": 2,
         "review_records": 0,
-        "inventory_reviewed": false
+        "inventory_reviewed": false,
+        "mapped_records_to_recheck": 0,
+        "membership_check_status": {},
+        "unresolved_annual_identities": 1,
+        "missing_standard_checks": [
+          "market_coverage",
+          "annual_identities"
+        ],
+        "standard_checks_complete": false,
+        "scope": "issuer-scoped rechecks; paper/QR/operator freshness not inferred"
       },
       {
         "region": "부산",
         "status": "queued",
-        "jobs_total": 0,
-        "jobs_remaining": 0,
+        "jobs_total": 1,
+        "jobs_remaining": 1,
         "jobs_needing_review": 0,
-        "source_gaps": 0,
+        "source_gaps": 3,
         "review_records": 0,
-        "inventory_reviewed": false
+        "inventory_reviewed": false,
+        "mapped_records_to_recheck": 0,
+        "membership_check_status": {},
+        "unresolved_annual_identities": 2,
+        "missing_standard_checks": [
+          "market_coverage",
+          "annual_identities"
+        ],
+        "standard_checks_complete": false,
+        "scope": "issuer-scoped rechecks; paper/QR/operator freshness not inferred"
       },
       {
         "region": "경남",
         "status": "queued",
-        "jobs_total": 0,
-        "jobs_remaining": 0,
+        "jobs_total": 2,
+        "jobs_remaining": 2,
         "jobs_needing_review": 0,
-        "source_gaps": 1,
+        "source_gaps": 4,
         "review_records": 0,
-        "inventory_reviewed": false
+        "inventory_reviewed": false,
+        "mapped_records_to_recheck": 1,
+        "membership_check_status": {
+          "pending": 1
+        },
+        "unresolved_annual_identities": 3,
+        "missing_standard_checks": [
+          "market_coverage",
+          "membership_rechecks",
+          "annual_identities"
+        ],
+        "standard_checks_complete": false,
+        "scope": "issuer-scoped rechecks; paper/QR/operator freshness not inferred"
       },
       {
         "region": "광주",
         "status": "queued",
-        "jobs_total": 0,
-        "jobs_remaining": 0,
+        "jobs_total": 131,
+        "jobs_remaining": 131,
         "jobs_needing_review": 0,
-        "source_gaps": 6,
+        "source_gaps": 28,
         "review_records": 0,
-        "inventory_reviewed": false
+        "inventory_reviewed": false,
+        "mapped_records_to_recheck": 131,
+        "membership_check_status": {
+          "pending": 131
+        },
+        "unresolved_annual_identities": 25,
+        "missing_standard_checks": [
+          "market_coverage",
+          "membership_rechecks",
+          "annual_identities"
+        ],
+        "standard_checks_complete": false,
+        "scope": "issuer-scoped rechecks; paper/QR/operator freshness not inferred"
       },
       {
         "region": "제주",
         "status": "queued",
-        "jobs_total": 0,
-        "jobs_remaining": 0,
+        "jobs_total": 2,
+        "jobs_remaining": 2,
         "jobs_needing_review": 0,
-        "source_gaps": 0,
+        "source_gaps": 1,
         "review_records": 0,
-        "inventory_reviewed": false
+        "inventory_reviewed": false,
+        "mapped_records_to_recheck": 2,
+        "membership_check_status": {
+          "pending": 2
+        },
+        "unresolved_annual_identities": 0,
+        "missing_standard_checks": [
+          "market_coverage",
+          "membership_rechecks"
+        ],
+        "standard_checks_complete": false,
+        "scope": "issuer-scoped rechecks; paper/QR/operator freshness not inferred"
       },
       {
         "region": "대전",
         "status": "queued",
-        "jobs_total": 0,
-        "jobs_remaining": 0,
+        "jobs_total": 1,
+        "jobs_remaining": 1,
         "jobs_needing_review": 0,
-        "source_gaps": 1,
+        "source_gaps": 3,
         "review_records": 0,
-        "inventory_reviewed": false
+        "inventory_reviewed": false,
+        "mapped_records_to_recheck": 1,
+        "membership_check_status": {
+          "pending": 1
+        },
+        "unresolved_annual_identities": 2,
+        "missing_standard_checks": [
+          "market_coverage",
+          "membership_rechecks",
+          "annual_identities"
+        ],
+        "standard_checks_complete": false,
+        "scope": "issuer-scoped rechecks; paper/QR/operator freshness not inferred"
       },
       {
         "region": "세종",
@@ -6910,9 +7090,17 @@
         "jobs_total": 0,
         "jobs_remaining": 0,
         "jobs_needing_review": 0,
-        "source_gaps": 0,
+        "source_gaps": 1,
         "review_records": 0,
-        "inventory_reviewed": false
+        "inventory_reviewed": false,
+        "mapped_records_to_recheck": 0,
+        "membership_check_status": {},
+        "unresolved_annual_identities": 0,
+        "missing_standard_checks": [
+          "market_coverage"
+        ],
+        "standard_checks_complete": false,
+        "scope": "issuer-scoped rechecks; paper/QR/operator freshness not inferred"
       }
     ],
     "region_order": [
@@ -6933,12 +7121,15 @@
       "제주",
       "대전",
       "세종"
-    ]
+    ],
+    "counts_are_not_regional_totals": true,
+    "recheck_after": "2026-11-01T00:00:00+09:00",
+    "survey_revision": 2
   },
   "last_run": {
-    "id": "a60543535ac547358a30883534dd3770",
-    "checked_at": "2026-11-02T00:44:11+09:00",
-    "requests": 0
+    "id": "fc0bcd860b954b38b709e6b195a3a4c8",
+    "checked_at": "2026-11-02T02:14:44+09:00",
+    "requests": 5
   },
   "initial_scope": "finite cross-source fuel registration candidates, Jeonnam first and Seoul last; not a geographic census",
   "region_order": [
