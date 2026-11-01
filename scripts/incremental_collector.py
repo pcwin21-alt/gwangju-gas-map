@@ -380,6 +380,8 @@ def run(state, store, policy, session, commercial, commercial_source, *, clock=t
             attempt['finished_at'] = clock()
             job = next(j for j in state['jobs'] if j['id'] == attempt['job_id'])
             job.update(status='needs_review', reason='Interrupted attempt; not retried automatically')
+            observe(state, policy, attempt['source'], attempt, clock())
+    maximum = min(max_requests, run_limit(state, policy, clock()))
     session.trust_env = False
     progress = regional_progress(state)
     for job in state['jobs']:

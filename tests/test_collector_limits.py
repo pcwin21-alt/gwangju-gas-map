@@ -127,6 +127,15 @@ class LimitsTests(unittest.TestCase):
         self.assertEqual(self.quota()['clean_since'], before['sources']['kbcard']['volume_ramp']['clean_since'])
         self.assertEqual(self.state['attempts'], before['attempts'])
 
+    def test_interrupted_reservation_cancels_promotion_and_is_not_retried(self):
+        self.clean_sample();self.clock.value += 172800
+        self.assertEqual(self.quota()['stage'], 'promoted')
+        self.state['attempts'].append({'source': 'kbcard', 'at': self.clock(), 'status': 'reserved', 'job_id': '0'})
+        self.execute(0)
+        self.session.request.assert_not_called()
+        self.assertEqual(self.quota()['stage'], 'backoff')
+        self.assertEqual(self.state['jobs'][0]['status'], 'needs_review')
+
 
 if __name__ == '__main__':
     unittest.main()
