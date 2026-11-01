@@ -6985,10 +6985,12 @@
         ],
         "issuer_checks": {
           "kbcard": {
-            "status": "needs_review_not_found",
+            "status": "confirmed_in_issuer_scope",
+            "issuer": "kbcard",
             "checked_at": "2026-11-02T02:10:24+09:00",
-            "job_id": "618e662436d579be1a37413a",
-            "nonmembership": "not_established"
+            "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+            "bank_id": "000000009989174",
+            "other_payment_methods": "not_reverified"
           }
         }
       }

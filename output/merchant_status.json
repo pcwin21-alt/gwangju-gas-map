@@ -176,8 +176,8 @@
   },
   "incremental_collection": {
     "status": "running",
-    "jobs_total": 224,
-    "jobs_done": 14,
+    "jobs_total": 225,
+    "jobs_done": 15,
     "jobs_remaining": 210,
     "review_records": 2,
     "evidence_records": 7,
@@ -192,16 +192,15 @@
       {
         "region": "전남",
         "status": "collecting",
-        "jobs_total": 40,
+        "jobs_total": 41,
         "jobs_remaining": 26,
         "jobs_needing_review": 0,
         "source_gaps": 26,
-        "review_records": 2,
+        "review_records": 1,
         "inventory_reviewed": false,
         "mapped_records_to_recheck": 28,
         "membership_check_status": {
-          "needs_review_not_found": 1,
-          "confirmed_in_issuer_scope": 6,
+          "confirmed_in_issuer_scope": 7,
           "pending": 21
         },
         "unresolved_annual_identities": 23,
@@ -593,7 +592,7 @@
         "stage": "fixed"
       }
     },
-    "checked_at": "2026-11-02T05:54:39+09:00",
+    "checked_at": "2026-11-02T06:00:29+09:00",
     "scope": "strictly sequential regional fuel-merchant verification; not a geographic census",
     "new_station_count": 0
   }
