@@ -249,6 +249,7 @@ def run(state, store, policy, session, commercial, commercial_source, *, clock=t
     for attempt in state['attempts']:
         if attempt['status'] == 'reserved':
             attempt['status'] = 'uncertain'
+            attempt['finished_at'] = clock()
             job = next(j for j in state['jobs'] if j['id'] == attempt['job_id'])
             job.update(status='needs_review', reason='Interrupted attempt; not retried automatically')
     session.trust_env = False
@@ -266,7 +267,7 @@ def run(state, store, policy, session, commercial, commercial_source, *, clock=t
                 continue
             if source['status'] == 'cooldown' and source['next_allowed_at'] > now:
                 continue
-            recent = [a for a in state['attempts'] if a['source'] == job['source'] and now-a['at'] < 86400]
+            recent = [a for a in state['attempts'] if a['source'] == job['source'] and now-a.get('finished_at', a['at']) < 86400]
             if len(recent) >= policy['requests_per_24h']:
                 continue
             allowed = max(source.get('next_allowed_at', 0), max((a['at'] + policy['interval_seconds'] for a in recent), default=0))
@@ -329,6 +330,10 @@ def run(state, store, policy, session, commercial, commercial_source, *, clock=t
         except (requests.RequestException, ValueError, KeyError, TypeError, UnicodeError) as exc:
             attempt['status'] = 'needs_review'
             job.update(status='needs_review', reason=type(exc).__name__ + ': ' + str(exc)[:250])
+        attempt['finished_at'] = clock()
+        # A reservation precedes the Git push. Wait from response completion
+        # so uneven push/network times cannot shorten the transmission gap.
+        source['next_allowed_at'] = max(source['next_allowed_at'], clock() + policy['interval_seconds'])
         store.save(state, blob)
         if attempt['status'] != 'done':
             break

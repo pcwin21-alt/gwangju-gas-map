@@ -41,7 +41,10 @@ jobs:
         id: collect
         run: python scripts/incremental_collector.py --state-dir .collector-state --persist-git --max-requests "$MAX_REQUESTS"
       - name: 검증 가능한 지점만 반영
-        run: python scripts/publish_collector_results.py --state-dir .collector-state
+        run: |
+          git fetch origin main
+          git merge --ff-only origin/main
+          python scripts/publish_collector_results.py --state-dir .collector-state
       - name: 데이터 회귀 검사
         run: python -m unittest discover -s tests -p 'test_*.py'
       - name: 변경 기록 저장
@@ -50,6 +53,12 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add output/map.html output/gas_stations.json output/merchant_status.json output/merchant_review.json output/nationwide_candidates.json output/supplemental_onnuri_evidence.json
           git diff --staged --quiet || git commit -m 'chore: 검증된 가맹점 분할 수집 결과 반영'
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then exit 0; fi
+            git fetch origin main
+            git rebase origin/main
+            python -m unittest discover -s tests -p 'test_*.py'
+          done
           git push origin HEAD:main
       - name: 공개 파일 준비
         run: python scripts/prepare_site.py

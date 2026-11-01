@@ -56,6 +56,17 @@ class CollectorTests(unittest.TestCase):
         self.clock.value+=21600; self.execute(s)
         self.assertEqual(self.session.request.call_count,1)
 
+    def test_waits_after_response_not_only_before_git_push(self):
+        transmissions=[]
+        def slow_response(*args, **kwargs):
+            transmissions.append(self.clock.value)
+            self.clock.value += 11
+            return response()
+        self.session.request.side_effect=slow_response
+        s=self.state(2); self.execute(s)
+        self.assertEqual(transmissions[1]-transmissions[0], 131)
+        self.assertEqual(s['attempts'][0]['finished_at'], transmissions[0]+11)
+
     def test_budget_reservation_failure_sends_nothing(self):
         self.store.save.side_effect=RuntimeError('push failed')
         with self.assertRaises(RuntimeError): self.execute(self.state())
