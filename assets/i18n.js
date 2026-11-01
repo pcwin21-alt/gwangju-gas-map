@@ -32,6 +32,7 @@
     '디지털':'Digital','지류':'Paper','지류·디지털':'Paper · Digital','휘발유·경유':'Petrol · Diesel','전체 시·군·구':'All districts',
     '조건에 맞는 주유소':'Filtered stations','선택한 지역·검색어·필터에 따른 목록':'Matches your selected region, search and filters','더 보기':'Show more','공식 가맹점 자료':'Official merchant data',
     '범위':'Scope','정렬':'Sort','선택 지역 전체':'Selected region','지도에서 찾은 범위':'Searched map area','이름순':'Name','내 위치 가까운 순':'Nearest to me','내 위치 직선거리순':'Straight-line distance from me',
+    '선택 지역':'Region','찾은 범위':'Searched area',
     '이 지역에서 찾기':'Search this area','선택 지역 전체 보기':'Show selected region','크게':'Expand','작게':'Reduce','목록 전체로 펼치기':'Expand station list','목록 절반으로 줄이기':'Reduce station list','열기/접기':'Open / close',
     '여기로 길찾기':'Get directions here','확인 정보':'Verification details','자료 확인 정보':'Data status','창 설정':'Window settings','조건에 맞는 주유소가 없습니다.':'No stations match your filters.',
     '지도 대신 주소 목록':'Address list without map','목록은 찾기를 누른 범위':'List uses your last searched area','기준일 미확인':'Source date unknown','상세주소 미확인':'Street address unverified','결제 유형 미확인':'Payment type unverified',
