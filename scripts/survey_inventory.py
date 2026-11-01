@@ -268,3 +268,14 @@ def survey_progress(state, area):
             'unresolved_annual_identities': len(unresolved),
             'missing_standard_checks': missing, 'standard_checks_complete': not missing,
             'scope': 'issuer-scoped rechecks; paper/QR/operator freshness not inferred'}
+
+
+def sync_mapped_inventory(state, stations, fuel, order):
+    """Newly published map identities join the next run's common denominator."""
+    current = state.get('survey_inventory')
+    if not current:
+        return
+    annual = {**current['annual_source'], 'rows': [c['row'] for c in current['annual_candidates']]}
+    historic = {r['region']: r['historic_point_lookup'] for r in current['regions']}
+    inventory = make_inventory(stations, fuel, annual, order, historic)
+    install_survey(state, inventory, survey_jobs(inventory, fuel, order))

@@ -5,7 +5,7 @@ from pathlib import Path
 from unittest.mock import Mock
 
 from scripts.survey_inventory import (make_inventory, survey_jobs, install_survey, merge_jobs,
-                                      map_links, refresh_rechecks, completed_recheck, survey_progress)
+                                      map_links, refresh_rechecks, completed_recheck, survey_progress, sync_mapped_inventory)
 from scripts.incremental_collector import initial_state, configure_regions, merge_plan, summarize, handle_response
 from scripts.publish_collector_results import attach_rechecks, reached_regions
 from scripts.supplemental_onnuri import station_from_evidence
@@ -180,6 +180,22 @@ class SurveyTests(unittest.TestCase):
             handle_response(state, job, response, 1793552400, self.fuel['rows'], self.e['commercial_source'])
             self.assertEqual(state['evidence'], [])
             self.assertTrue(any(r.get('independent_fuel_candidate_ids') for r in state['review']))
+
+    def test_new_map_identity_joins_next_run_without_losing_current_snapshot(self):
+        state, _ = self.state()
+        state['survey_inventory']['annual_source']['sha256'] = 'live-download'
+        state['survey_inventory']['annual_source']['retrieved_at'] = '2026-11-02T02:00:00+09:00'
+        state['attempts'] = [{'source': 'kbcard', 'at': 100, 'status': 'done'}]
+        newer = copy.deepcopy(self.s);newer['id'] = 'new-published-id';newer['name'] += '신규'
+        newer['lat'] += 0.05
+        sync_mapped_inventory(state, [self.s, newer], self.fuel, self.order)
+        self.assertEqual(state['survey_inventory']['annual_source']['sha256'], 'live-download')
+        self.assertEqual(len(state['survey_inventory']['known_stations']), 2)
+        self.assertTrue(any('new-published-id' in j.get('station_ids', []) for j in state['jobs']))
+        count = len(state['jobs'])
+        sync_mapped_inventory(state, [self.s, newer], self.fuel, self.order)
+        self.assertEqual(len(state['jobs']), count)
+        self.assertEqual(state['attempts'], [{'source': 'kbcard', 'at': 100, 'status': 'done'}])
 
 
 if __name__ == '__main__':

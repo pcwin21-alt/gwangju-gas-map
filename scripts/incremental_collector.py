@@ -23,13 +23,13 @@ try:
     from nationwide import name_key, region, valid_coords
     from supplemental_onnuri import station_from_evidence, meters
     from survey_inventory import (install_survey, survey_jobs, make_inventory,
-                                  survey_progress, completed_recheck)
+                                  survey_progress, completed_recheck, sync_mapped_inventory)
 except ModuleNotFoundError:
     from scripts.discover_kb_fuel import parse_response, URL as KB_URL
     from scripts.nationwide import name_key, region, valid_coords
     from scripts.supplemental_onnuri import station_from_evidence, meters
     from scripts.survey_inventory import (install_survey, survey_jobs, make_inventory,
-                                          survey_progress, completed_recheck)
+                                          survey_progress, completed_recheck, sync_mapped_inventory)
 
 ROOT = Path(__file__).resolve().parents[1]
 POLICY = ROOT / 'config/collector-policy.json'
@@ -490,6 +490,7 @@ def main():
             state['sources'][source].update(status='blocked', reason=setting['reason'])
     with gzip.open(ROOT/'config/collector-fuel-index.json.gz', 'rt', encoding='utf-8') as stream:
         fuel = json.load(stream)
+    sync_mapped_inventory(state, read(ROOT/'output/gas_stations.json'), fuel, policy.get('region_order', []))
     store.save(state)
     with requests.Session() as session:
         summary = run(state, store, policy, session, fuel['rows'], {k: v for k, v in fuel.items() if k != 'rows'}, max_requests=args.max_requests)
