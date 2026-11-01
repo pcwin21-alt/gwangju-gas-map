@@ -187,10 +187,25 @@ html {font-size:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%;}
   #stationDetails .station-via {grid-row:8;}
 }
 .map-area:has(#stationDetails:not([hidden]))::after {content:'';position:absolute;inset:0;z-index:135;background:var(--detail-veil);pointer-events:none;}
-.controls-status .search-modes {display:flex;flex:0 1 auto;min-width:0;max-width:100%;gap:2px;margin-left:auto;padding:2px;border:1px solid var(--line);border-radius:.75rem;background:var(--field);}
-.app .search-modes button {flex:1 1 0;min-width:0;min-height:var(--ui-touch);padding:.375rem .625rem;border:0;border-radius:.5rem;background:transparent;color:var(--ink);font-size:var(--ui-meta);font-weight:400;line-height:1.5;cursor:pointer;white-space:normal;}
-.app .search-modes button[aria-pressed="true"] {background:var(--primary);color:var(--on-primary);font-weight:700;}
+/* Keep search actions attached to search, separate from result metadata. */
+.app .controls {display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:.375rem .75rem;}
+.app .controls .controls-top {grid-column:1;grid-row:1;}
+.app .controls .controls-status {grid-column:1/-1;grid-row:2;flex-wrap:nowrap;}
+.app .controls-status .count-badge {flex:0 0 auto;}
+.app .controls-status .active-filters {white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.app .controls :is(.map-filters,.search-flow-status) {grid-column:1/-1;}
+.app .search-modes {grid-column:2;grid-row:1;display:flex;flex-wrap:wrap;align-items:center;justify-self:start;min-width:0;max-width:100%;gap:.5rem;margin:0;padding:0;border:0;background:transparent;}
+.app .search-modes button {flex:0 0 auto;max-width:100%;min-height:var(--ui-touch);padding:.375rem .625rem;border:1px solid var(--line);border-radius:.625rem;background:var(--panel);color:var(--ink);font-size:var(--ui-body);font-weight:400;line-height:1.5;cursor:pointer;white-space:nowrap;overflow-wrap:normal;word-break:keep-all;}
+.app .search-modes button[aria-pressed="true"] {background:var(--field);color:var(--accent);border-color:var(--accent);font-weight:700;}
+.app .search-modes button:not(:disabled):hover {background:var(--field);border-color:var(--accent);}
 .app .search-modes button:disabled {opacity:.65;cursor:wait;}
+@media(max-width:899px) {
+  .app .controls {display:flex;flex-flow:row wrap;}
+  .app .controls .controls-top {flex:1 0 100%;width:100%;}
+  .app .search-modes {flex:0 1 auto;}
+  .app .controls .controls-status {flex:1 1 6rem;min-width:0;max-width:100%;justify-content:flex-end;margin-left:auto;text-align:right;}
+  .app .controls :is(.map-filters,.search-flow-status) {flex:1 0 100%;}
+}
 .app .search-flow-status {font-size:var(--ui-body);line-height:1.5;color:var(--ink);margin:.25rem 0;overflow-wrap:anywhere;}
 .app .trip-travel {font-weight:700;color:var(--accent);}
 .app .trip-launcher {width:4rem;height:4rem;min-height:4rem;font-size:var(--ui-meta);line-height:1.5;}
