@@ -1135,6 +1135,102 @@
         "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
       },
       "annual_candidate_ids": []
+    },
+    {
+      "identity_review": "same_premise_confirmed",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "checked_at": "2026-11-02T07:06:20+09:00",
+      "bank_record": {
+        "location": {
+          "lat": "35.1989829156",
+          "lng": "127.5225629465"
+        },
+        "content": {
+          "tel": "061)782-5189",
+          "title": "미래주유소",
+          "category": "주유소",
+          "address": "전남 구례군 토지면 ",
+          "distance": "6",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000064282436",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        }
+      },
+      "commercial_record": {
+        "상가업소번호": "MA010120220807870982",
+        "상호명": "미래주유소",
+        "지점명": "",
+        "상권업종소분류코드": "G21401",
+        "상권업종소분류명": "주유소",
+        "표준산업분류코드": "G47711",
+        "표준산업분류명": "운송장비용 주유소 운영업",
+        "시군구명": "구례군",
+        "도로명주소": "전남광주통합특별시 구례군 토지면 섬진강대로 5081",
+        "지번주소": "전남광주통합특별시 구례군 토지면 구산리 175",
+        "위도": "35.1989686421532",
+        "경도": "127.522494023105",
+        "region": "전남"
+      },
+      "commercial_source": {
+        "archive_sha256": "57aa361544108ff4fc73334f87d2ced61e41fe8638dd70bcd842930f865d2386",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+        "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
+      },
+      "annual_candidate_ids": []
+    },
+    {
+      "identity_review": "same_premise_confirmed",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "checked_at": "2026-11-02T07:12:26+09:00",
+      "bank_record": {
+        "location": {
+          "lat": "34.6755529657",
+          "lng": "126.901164572"
+        },
+        "content": {
+          "tel": "061)863-9305",
+          "title": "진남주유소",
+          "category": "주유소",
+          "address": "전남 장흥군 장흥읍 ",
+          "distance": "8",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000052037478",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        }
+      },
+      "commercial_record": {
+        "상가업소번호": "MA010120220807815247",
+        "상호명": "진남주유소",
+        "지점명": "",
+        "상권업종소분류코드": "G21401",
+        "상권업종소분류명": "주유소",
+        "표준산업분류코드": "G47711",
+        "표준산업분류명": "운송장비용 주유소 운영업",
+        "시군구명": "장흥군",
+        "도로명주소": "전남광주통합특별시 장흥군 장흥읍 칠거리예양로 37",
+        "지번주소": "전남광주통합특별시 장흥군 장흥읍 예양리 114-3",
+        "위도": "34.6755985467784",
+        "경도": "126.901229717406",
+        "region": "전남"
+      },
+      "commercial_source": {
+        "archive_sha256": "57aa361544108ff4fc73334f87d2ced61e41fe8638dd70bcd842930f865d2386",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+        "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
+      },
+      "annual_candidate_ids": []
     }
   ]
 }
