@@ -41,3 +41,5 @@
 로컬 검증: 320×740 / 390×844 / 1280×800 기본 글자 및 320·390 너비의 200% 글자, 각각 라이트/다크 10조합에서 가로 넘침 0건. 결제 문구·유종·금액·할인 전 가격·할인 설명·경유 버튼의 실제 계산된 색상 대비 중 최저 **6.62:1**이었다. `python scripts/prepare_site.py`, 검수 페이지 생성, `git diff --check` 통과. CSS 변경이므로 구현을 복제하는 신규 테스트는 추가하지 않는다. 실제 기기 검증은 하지 않았다. 배포·실서비스 확인 결과는 아래에 이어 기록한다.
 
 다크모드 시각 검수에서 기존 `theme.css`의 `:is()`에 포함된 ID 선택자 때문에 경유 버튼만 기존 회색을 유지하는 우선순위 충돌을 발견했다. `!important` 없이 선택자 우선순위를 맞춰 수정했고 10조합 검사를 다시 통과했다. 대비뿐 아니라 밝은 모드 `rgb(39, 100, 87)` / 어두운 모드 `rgb(155, 216, 196)`의 실제 버튼 배경이 적용됐는지도 검사했다.
+
+색상 변주 배포: 구현 `b0a071d`, 다크모드 보완 `463bc76`. [전체 CI](https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41335011096), [배포 생성](https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41335011059), [Pages 게시](https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41335022848) 모두 성공. 실서비스를 새로 불러와 `responsive-ui.css?v=3f34c3f83c44`와 세이지 결제 배지·아이보리 유가 행·청록 경유 버튼을 확인했다. 닫기 버튼에서 Tab으로 카카오맵 링크에 이동하고 포커스 테두리가 표시됐다. 배포 화면 캡처는 로컬 `tmp/gas-map-ui-review-20261102/station-color-live.jpg`에 저장했다. CSS 이외의 기능·가격·가맹점 데이터는 수정하지 않았다. Global/Software UX Gate는 위 실행 증거로 완료하며, 실제 모바일 기기 동작과 외부 지도 앱 실행은 이번 색상 변경 검증 범위 밖이다.
