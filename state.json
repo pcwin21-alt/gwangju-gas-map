@@ -13,7 +13,7 @@
       "status": "active",
       "url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
       "scope": "Public unauthenticated Onnuri merchant form; issuer-specific evidence only; limits are our load caps, not a provider guarantee",
-      "next_allowed_at": 1793547149.3308108
+      "next_allowed_at": 1793547269.3309267
     },
     "datagov": {
       "status": "active",
@@ -62,6 +62,30 @@
       },
       "http_status": 200,
       "response_sha256": "2cdb163d5174f7ddcce2d861d8fa6630b1d2f1ee7ef70030e001eb5bba67783d"
+    },
+    {
+      "id": "19588547ea6b405cbdff40e1",
+      "job_id": "a1a48ef94db074777fc1eb7d",
+      "source": "kbcard",
+      "at": 1793547149.3309267,
+      "status": "reserved",
+      "run_id": "7b7e513e9775448d9441a248d89062cf",
+      "request": {
+        "method": "POST",
+        "url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+        "data": {
+          "mainCC": "a",
+          "isNoFrame": "Y",
+          "situXCdnt": 34.909833788336,
+          "situYCdnt": 126.553149552693,
+          "페이지번호": 1,
+          "useCase": "1",
+          "locationType": "1",
+          "startRow": 0,
+          "endRow": 10,
+          "mmcNm": "대동주유소"
+        }
+      }
     }
   ],
   "jobs": [
@@ -114,7 +138,7 @@
       "scope": "targeted annual fuel candidate; annual link remains unverified",
       "id": "a1a48ef94db074777fc1eb7d",
       "status": "pending",
-      "attempts": 0,
+      "attempts": 1,
       "page": 1,
       "observed_ids": []
     },
