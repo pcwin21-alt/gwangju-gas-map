@@ -24,4 +24,10 @@
 - 제어된 위치 거부 fixture에서 `가는 길 → 목적지 목포역 입력 → 최소화 → 다시 열기`의 입력/선택 상태와 summary 초점 유지 확인. `내 주변` 전환 시 위치 실패 안내와 재시도 활성화, 목적지 유지 확인. 실제 위치/경로 서버는 호출하지 않았다.
 - 실제 휴대전화 하드웨어 테스트는 수행하지 않았다. 아주 좁은 화면에서 200% 영문 버튼이 두 행으로 나뉠 수 있으나 단어·버튼 자체는 쪼개지지 않는다.
 
-배포 및 실서비스 결과는 완료 후 아래에 기록한다.
+## 배포 및 실서비스 확인
+
+- 구현 `f25ca18`. [전체 CI](https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41335895387), [배포](https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41335895462), [Pages 게시](https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41336019964) 성공.
+- 공유 배포 대기열의 기존 수집 작업이 끝난 뒤 순서대로 게시했다. 수집을 중단하거나 데이터/워크플로를 수정하지 않았다. 수집기의 최신 main 병합과 데이터 상수 교체가 새 메뉴 DOM을 보존하는 것도 코드로 확인했다.
+- 공개 사이트에서 `responsive-ui.css?v=396865d6d7b3` 확인. 실제 CSS viewport 390×844에서 탐색 버튼과 검색창의 왼쪽 시작점이 같고 버튼이 검색창 아래에 배치됐다. 문구 nowrap, 가로 넘침 없음. 1280×800에서는 검색창 옆 같은 행으로 배치됐고 넘침 없었다.
+- 공개 사이트의 가는 길 → 목적지 입력 → 최소화 → 재개에서 입력 유지, 선택 상태 및 summary 포커스 확인. 필터를 열면 경유 창이 접히고 입력이 보존됐다. 실제 GPS 권한과 목적지 검색/경로 조회는 실행하지 않았다.
+- 배포 캡처: 로컬 `tmp/gas-map-ui-review-20261102/search-actions-live-mobile.jpg`, `search-actions-live-pc.jpg`. Global/Software UX Gate는 위 증거로 통과했다. 구현·게시·기록 완료.
