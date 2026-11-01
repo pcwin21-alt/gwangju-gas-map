@@ -19,7 +19,7 @@
       "status": "active",
       "url": "https://www.data.go.kr/data/3060079/fileData.do",
       "scope": "Published official bulk download, no private API or credentials",
-      "next_allowed_at": 1793553023.1929665
+      "next_allowed_at": 1793553049.9399657
     }
   },
   "attempts": [
@@ -168,7 +168,7 @@
       "job_id": "eea3713d8e044c8c2036098a",
       "source": "datagov",
       "at": 1793552903.1929665,
-      "status": "reserved",
+      "status": "done",
       "run_id": "fc0bcd860b954b38b709e6b195a3a4c8",
       "request": {
         "method": "GET",
@@ -178,7 +178,10 @@
           "fileDetailSn": "1",
           "insertDataPrcus": "N"
         }
-      }
+      },
+      "http_status": 200,
+      "response_sha256": "66173bf934ad24d3195e9e0c1be0e62adcca0e4767e19a80c435f8e1aead4df6",
+      "finished_at": 1793552929.939964
     }
   ],
   "jobs": [
@@ -384,14 +387,17 @@
       "kind": "annual_download",
       "source": "datagov",
       "region": "전남",
-      "source_date": "20260731",
+      "source_date": "2026-07-31",
       "file_id": "FILE_000000007663918",
       "sequence": "1",
       "id": "eea3713d8e044c8c2036098a",
-      "status": "pending",
+      "status": "done",
       "attempts": 1,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "result": "official_file_downloaded",
+      "sha256": "66173bf934ad24d3195e9e0c1be0e62adcca0e4767e19a80c435f8e1aead4df6",
+      "total_rows": 225803
     },
     {
       "kind": "kb_search",
@@ -414,7 +420,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -437,7 +444,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -460,7 +468,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -483,7 +492,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -506,7 +516,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -529,7 +540,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -552,7 +564,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -575,7 +588,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -598,7 +612,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -621,7 +636,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -644,7 +660,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -667,7 +684,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -690,7 +708,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -713,7 +732,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -736,7 +756,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -759,7 +780,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -782,7 +804,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -805,7 +828,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -828,7 +852,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -851,7 +876,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -874,7 +900,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -897,7 +924,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -921,7 +949,8 @@
       "attempts": 0,
       "page": 1,
       "observed_ids": [],
-      "result": "recent_exact_issuer_evidence_reused"
+      "result": "recent_exact_issuer_evidence_reused",
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -944,7 +973,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -967,7 +997,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -990,7 +1021,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -1013,7 +1045,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -1036,7 +1069,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -1059,7 +1093,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "station_ids": []
     },
     {
       "kind": "kb_search",
@@ -1082,7 +1117,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "station_ids": []
     },
     {
       "kind": "kb_search",
@@ -1105,7 +1141,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "station_ids": []
     },
     {
       "kind": "kb_search",
@@ -1128,7 +1165,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "station_ids": []
     },
     {
       "kind": "kb_search",
@@ -1151,7 +1189,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "station_ids": []
     },
     {
       "kind": "kb_search",
@@ -1174,7 +1213,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -1197,7 +1237,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -1220,7 +1261,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -1243,7 +1285,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -1266,7 +1309,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -1289,7 +1333,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "station_ids": []
     },
     {
       "kind": "kb_search",
@@ -1312,7 +1357,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -1335,7 +1381,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -1358,7 +1405,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "station_ids": []
     },
     {
       "kind": "kb_search",
@@ -1381,7 +1429,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "station_ids": []
     },
     {
       "kind": "kb_search",
@@ -1404,7 +1453,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "station_ids": []
     },
     {
       "kind": "kb_search",
@@ -1453,7 +1503,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "station_ids": []
     },
     {
       "kind": "kb_search",
@@ -1476,7 +1527,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -1499,7 +1551,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -1522,7 +1575,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -1545,7 +1599,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -1594,7 +1649,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "station_ids": []
     },
     {
       "kind": "kb_search",
@@ -1617,7 +1673,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "station_ids": []
     },
     {
       "kind": "kb_search",
@@ -1640,7 +1697,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "station_ids": []
     },
     {
       "kind": "kb_search",
@@ -1762,7 +1820,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "station_ids": []
     },
     {
       "kind": "kb_search",
@@ -1785,7 +1844,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "station_ids": []
     },
     {
       "kind": "kb_search",
@@ -1808,7 +1868,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -1882,7 +1943,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "station_ids": []
     },
     {
       "kind": "kb_search",
@@ -1905,7 +1967,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "station_ids": []
     },
     {
       "kind": "kb_search",
@@ -1928,7 +1991,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "station_ids": []
     },
     {
       "kind": "kb_search",
@@ -1951,7 +2015,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -1974,7 +2039,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -2023,7 +2089,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -2046,7 +2113,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -2069,7 +2137,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -2092,7 +2161,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "station_ids": []
     },
     {
       "kind": "kb_search",
@@ -2115,7 +2185,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -2138,7 +2209,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "station_ids": []
     },
     {
       "kind": "kb_search",
@@ -2161,7 +2233,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "station_ids": []
     },
     {
       "kind": "kb_search",
@@ -2184,7 +2257,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "station_ids": []
     },
     {
       "kind": "kb_search",
@@ -2207,7 +2281,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -2230,7 +2305,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "station_ids": []
     },
     {
       "kind": "kb_search",
@@ -2253,7 +2329,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -2276,7 +2353,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -2299,7 +2377,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -2322,7 +2401,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -2345,7 +2425,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -2368,7 +2449,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -2391,7 +2473,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -2414,7 +2497,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -2437,7 +2521,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -2460,7 +2545,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -2483,7 +2569,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -2506,7 +2593,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -2529,7 +2617,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -2552,7 +2641,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -2575,7 +2665,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -2598,7 +2689,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -2621,7 +2713,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -2644,7 +2737,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -2667,7 +2761,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -2690,7 +2785,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -2713,7 +2809,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -2736,7 +2833,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -2759,7 +2857,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -2782,7 +2881,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -2805,7 +2905,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -2828,7 +2929,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -2851,7 +2953,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -2874,7 +2977,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -2897,7 +3001,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -2920,7 +3025,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -2943,7 +3049,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -2966,7 +3073,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -2989,7 +3097,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -3012,7 +3121,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -3035,7 +3145,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -3058,7 +3169,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -3081,7 +3193,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -3104,7 +3217,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -3127,7 +3241,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -3150,7 +3265,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -3173,7 +3289,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -3196,7 +3313,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -3219,7 +3337,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -3242,7 +3361,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -3265,7 +3385,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -3288,7 +3409,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -3311,7 +3433,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -3334,7 +3457,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -3357,7 +3481,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -3380,7 +3505,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -3403,7 +3529,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -3426,7 +3553,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -3449,7 +3577,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -3472,7 +3601,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -3495,7 +3625,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -3518,7 +3649,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -3541,7 +3673,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -3564,7 +3697,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -3587,7 +3721,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -3610,7 +3745,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -3633,7 +3769,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -3656,7 +3793,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -3679,7 +3817,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -3702,7 +3841,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -3725,7 +3865,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -3748,7 +3889,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -3771,7 +3913,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -3794,7 +3937,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -3817,7 +3961,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -3840,7 +3985,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -3863,7 +4009,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -3886,7 +4033,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -3909,7 +4057,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -3932,7 +4081,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -3955,7 +4105,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -3978,7 +4129,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -4001,7 +4153,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -4024,7 +4177,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -4047,7 +4201,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -4070,7 +4225,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -4093,7 +4249,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -4116,7 +4273,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -4139,7 +4297,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -4162,7 +4321,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -4185,7 +4345,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -4208,7 +4369,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -4231,7 +4393,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -4254,7 +4417,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -4277,7 +4441,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -4300,7 +4465,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -4323,7 +4489,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -4346,7 +4513,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -4369,7 +4537,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -4392,7 +4561,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -4415,7 +4585,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -4438,7 +4609,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -4461,7 +4633,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -4484,7 +4657,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -4507,7 +4681,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -4530,7 +4705,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -4553,7 +4729,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -4576,7 +4753,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -4599,7 +4777,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -4622,7 +4801,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -4645,7 +4825,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -4668,7 +4849,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -4691,7 +4873,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -4714,7 +4897,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -4737,7 +4921,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -4760,7 +4945,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -4783,7 +4969,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -4806,7 +4993,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -4829,7 +5017,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -4852,7 +5041,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -4875,7 +5065,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -4898,7 +5089,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -4921,7 +5113,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -4944,7 +5137,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -4967,7 +5161,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -4990,7 +5185,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -5013,7 +5209,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -5036,7 +5233,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -5059,7 +5257,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -5082,7 +5281,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -5105,7 +5305,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -5128,7 +5329,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -5151,7 +5353,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -5174,7 +5377,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -5197,7 +5401,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -5220,7 +5425,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -5243,7 +5449,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -5266,7 +5473,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -5289,7 +5497,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     },
     {
       "kind": "kb_search",
@@ -5312,7 +5521,8 @@
       "status": "pending",
       "attempts": 0,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "candidate_ids": []
     }
   ],
   "evidence": [
@@ -6057,6 +6267,14 @@
       "region": "세종",
       "status": "needs_source_inventory",
       "reason": "Latest designated-market membership/location coverage requires independent regional review"
+    },
+    {
+      "gap_id": "annual-identity:94ad0bf79e2ec65ee51b20fc",
+      "candidate_id": "94ad0bf79e2ec65ee51b20fc",
+      "region": "전남광주",
+      "name": "현대참기름",
+      "status": "needs_identity",
+      "reason": "Annual identity needs independent same-premise linkage or documented exclusion"
     }
   ],
   "status": "running",
@@ -12844,6 +13062,26 @@
         "digital": "N"
       },
       {
+        "candidate_id": "df4991bc79e1e31b572b81a2",
+        "row": {
+          "가맹점명": "삼보",
+          "소속 시장명(또는 상점가)": "반여농산물도매시장 관련상품동",
+          "소재지": "부산",
+          "취급품목": "식육외",
+          "지류형 가맹 여부": "Y",
+          "디지털형 가맹 여부": "Y",
+          "가맹 등록년도": "2024"
+        },
+        "possible_regions": [
+          "부산"
+        ],
+        "status": "discovery_only",
+        "mapped_ids": [],
+        "location_ids": [],
+        "paper": "Y",
+        "digital": "Y"
+      },
+      {
         "candidate_id": "0078094d52377216778ec3ed",
         "row": {
           "가맹점명": "명수",
@@ -13369,6 +13607,27 @@
         "location_ids": [],
         "paper": "Y",
         "digital": "Y"
+      },
+      {
+        "candidate_id": "94ad0bf79e2ec65ee51b20fc",
+        "row": {
+          "가맹점명": "현대참기름",
+          "소속 시장명(또는 상점가)": "황룡시장",
+          "소재지": "전남광주",
+          "취급품목": "참기름",
+          "지류형 가맹 여부": "Y",
+          "디지털형 가맹 여부": "N",
+          "가맹 등록년도": "2011"
+        },
+        "possible_regions": [
+          "전남",
+          "광주"
+        ],
+        "status": "discovery_only",
+        "mapped_ids": [],
+        "location_ids": [],
+        "paper": "Y",
+        "digital": "N"
       },
       {
         "candidate_id": "1054803b1165f961c8cb5967",
@@ -14529,6 +14788,27 @@
           "MA010120220807537202",
           "MA0101202309A0025265"
         ],
+        "paper": "Y",
+        "digital": "Y"
+      },
+      {
+        "candidate_id": "5b55f3a461dcd35401e6139f",
+        "row": {
+          "가맹점명": "용전주유마트",
+          "소속 시장명(또는 상점가)": "일곡동(제11지역:용전동) 골목형상점가",
+          "소재지": "전남광주",
+          "취급품목": "요소수 첨가제 등",
+          "지류형 가맹 여부": "Y",
+          "디지털형 가맹 여부": "Y",
+          "가맹 등록년도": "2025"
+        },
+        "possible_regions": [
+          "전남",
+          "광주"
+        ],
+        "status": "discovery_only",
+        "mapped_ids": [],
+        "location_ids": [],
         "paper": "Y",
         "digital": "Y"
       },
@@ -15722,6 +16002,29 @@
         "status": "discovery_only",
         "mapped_ids": [
           "onnuri:05181200076"
+        ],
+        "location_ids": [],
+        "paper": "Y",
+        "digital": "Y"
+      },
+      {
+        "candidate_id": "5ba93c7901431bdc40ffb221",
+        "row": {
+          "가맹점명": "반디가스앤오일(주)",
+          "소속 시장명(또는 상점가)": "공구의거리",
+          "소재지": "전남광주",
+          "취급품목": "",
+          "지류형 가맹 여부": "Y",
+          "디지털형 가맹 여부": "Y",
+          "가맹 등록년도": "2025"
+        },
+        "possible_regions": [
+          "전남",
+          "광주"
+        ],
+        "status": "discovery_only",
+        "mapped_ids": [
+          "onnuri:05023200019"
         ],
         "location_ids": [],
         "paper": "Y",
@@ -17944,88 +18247,19 @@
         "location_ids": [],
         "paper": "Y",
         "digital": "Y"
-      },
-      {
-        "candidate_id": "df4991bc79e1e31b572b81a2",
-        "row": {
-          "가맹점명": "삼보",
-          "소속 시장명(또는 상점가)": "반여농산물도매시장 관련상품동",
-          "소재지": "부산",
-          "취급품목": "식육외",
-          "지류형 가맹 여부": "Y",
-          "디지털형 가맹 여부": "Y",
-          "가맹 등록년도": "2024"
-        },
-        "possible_regions": [
-          "부산"
-        ],
-        "status": "discovery_only",
-        "mapped_ids": [],
-        "location_ids": [],
-        "paper": "Y",
-        "digital": "Y"
-      },
-      {
-        "candidate_id": "5b55f3a461dcd35401e6139f",
-        "row": {
-          "가맹점명": "용전주유마트",
-          "소속 시장명(또는 상점가)": "일곡동(제11지역:용전동) 골목형상점가",
-          "소재지": "전남광주",
-          "취급품목": "요소수 첨가제 등",
-          "지류형 가맹 여부": "Y",
-          "디지털형 가맹 여부": "Y",
-          "가맹 등록년도": "2025"
-        },
-        "possible_regions": [
-          "전남",
-          "광주"
-        ],
-        "status": "discovery_only",
-        "mapped_ids": [],
-        "location_ids": [],
-        "paper": "Y",
-        "digital": "Y"
-      },
-      {
-        "candidate_id": "5ba93c7901431bdc40ffb221",
-        "row": {
-          "가맹점명": "반디가스앤오일(주)",
-          "소속 시장명(또는 상점가)": "공구의거리",
-          "소재지": "전남광주",
-          "취급품목": "",
-          "지류형 가맹 여부": "Y",
-          "디지털형 가맹 여부": "Y",
-          "가맹 등록년도": "2025"
-        },
-        "possible_regions": [
-          "전남",
-          "광주"
-        ],
-        "status": "discovery_only",
-        "mapped_ids": [
-          "onnuri:05023200019"
-        ],
-        "location_ids": [],
-        "paper": "Y",
-        "digital": "Y"
       }
     ],
     "annual_source": {
       "source_url": "https://www.data.go.kr/data/3060079/fileData.do",
-      "download_url": "https://www.data.go.kr/data/3060079/fileData.do",
+      "download_url": "https://www.data.go.kr/cmm/cmm/fileDownload.do?atchFileId=FILE_000000007663918&fileDetailSn=1&insertDataPrcus=N",
       "source_date": "2026-07-31",
-      "retrieved_at": "2026-10-30T18:36:17+09:00",
+      "retrieved_at": "2026-11-02T02:08:47+09:00",
       "sha256": "66173bf934ad24d3195e9e0c1be0e62adcca0e4767e19a80c435f8e1aead4df6",
       "total_rows": 225803,
-      "regional_fuel_rows": 278,
+      "regional_fuel_rows": 280,
       "scope": "nationwide-v3",
       "fuel_selection_version": 2,
-      "registry_signature": "21ab1963657c413544cc0be02c7020f90c6774da5d577caf29fb0bae2bd71716",
-      "selection_methods": [
-        "name_product",
-        "commercial_reverse_name",
-        "prior_public_fuel_reverse_name"
-      ]
+      "registry_signature": "39938bc8747130b07876e1afffd68a5f90e54f1de1d7367bce4f57efb1c46ac1"
     },
     "location_source": {
       "archive_sha256": "57aa361544108ff4fc73334f87d2ced61e41fe8638dd70bcd842930f865d2386",
@@ -18043,8 +18277,8 @@
         "mapped_statuses": {
           "confirmed": 28
         },
-        "annual_discovery_rows": 177,
-        "annual_ambiguous_region_rows": 177,
+        "annual_discovery_rows": 178,
+        "annual_ambiguous_region_rows": 178,
         "annual_non_vehicle_exclusions": 8,
         "historic_point_lookup": {
           "fuel_records": 992,
@@ -18309,8 +18543,8 @@
           "confirmed": 130,
           "stale": 1
         },
-        "annual_discovery_rows": 177,
-        "annual_ambiguous_region_rows": 177,
+        "annual_discovery_rows": 178,
+        "annual_ambiguous_region_rows": 178,
         "annual_non_vehicle_exclusions": 8,
         "historic_point_lookup": {
           "fuel_records": 342,
@@ -18394,9 +18628,14 @@
   "coverage_checks": {
     "전남": {
       "annual_inventory": {
-        "status": "pending",
-        "evidence": [],
-        "checked_at": null
+        "status": "complete",
+        "evidence": [
+          "https://www.data.go.kr/data/3060079/fileData.do",
+          "66173bf934ad24d3195e9e0c1be0e62adcca0e4767e19a80c435f8e1aead4df6"
+        ],
+        "checked_at": "2026-11-02T02:08:47+09:00",
+        "source_date": "2026-07-31",
+        "scope": "latest advertised public snapshot downloaded; not all current merchants"
       },
       "location_inventory": {
         "status": "complete",
@@ -18424,9 +18663,14 @@
     },
     "전북": {
       "annual_inventory": {
-        "status": "pending",
-        "evidence": [],
-        "checked_at": null
+        "status": "complete",
+        "evidence": [
+          "https://www.data.go.kr/data/3060079/fileData.do",
+          "66173bf934ad24d3195e9e0c1be0e62adcca0e4767e19a80c435f8e1aead4df6"
+        ],
+        "checked_at": "2026-11-02T02:08:47+09:00",
+        "source_date": "2026-07-31",
+        "scope": "latest advertised public snapshot downloaded; not all current merchants"
       },
       "location_inventory": {
         "status": "complete",
@@ -18454,9 +18698,14 @@
     },
     "충남": {
       "annual_inventory": {
-        "status": "pending",
-        "evidence": [],
-        "checked_at": null
+        "status": "complete",
+        "evidence": [
+          "https://www.data.go.kr/data/3060079/fileData.do",
+          "66173bf934ad24d3195e9e0c1be0e62adcca0e4767e19a80c435f8e1aead4df6"
+        ],
+        "checked_at": "2026-11-02T02:08:47+09:00",
+        "source_date": "2026-07-31",
+        "scope": "latest advertised public snapshot downloaded; not all current merchants"
       },
       "location_inventory": {
         "status": "complete",
@@ -18484,9 +18733,14 @@
     },
     "충북": {
       "annual_inventory": {
-        "status": "pending",
-        "evidence": [],
-        "checked_at": null
+        "status": "complete",
+        "evidence": [
+          "https://www.data.go.kr/data/3060079/fileData.do",
+          "66173bf934ad24d3195e9e0c1be0e62adcca0e4767e19a80c435f8e1aead4df6"
+        ],
+        "checked_at": "2026-11-02T02:08:47+09:00",
+        "source_date": "2026-07-31",
+        "scope": "latest advertised public snapshot downloaded; not all current merchants"
       },
       "location_inventory": {
         "status": "complete",
@@ -18514,9 +18768,14 @@
     },
     "경기": {
       "annual_inventory": {
-        "status": "pending",
-        "evidence": [],
-        "checked_at": null
+        "status": "complete",
+        "evidence": [
+          "https://www.data.go.kr/data/3060079/fileData.do",
+          "66173bf934ad24d3195e9e0c1be0e62adcca0e4767e19a80c435f8e1aead4df6"
+        ],
+        "checked_at": "2026-11-02T02:08:47+09:00",
+        "source_date": "2026-07-31",
+        "scope": "latest advertised public snapshot downloaded; not all current merchants"
       },
       "location_inventory": {
         "status": "complete",
@@ -18544,9 +18803,14 @@
     },
     "인천": {
       "annual_inventory": {
-        "status": "pending",
-        "evidence": [],
-        "checked_at": null
+        "status": "complete",
+        "evidence": [
+          "https://www.data.go.kr/data/3060079/fileData.do",
+          "66173bf934ad24d3195e9e0c1be0e62adcca0e4767e19a80c435f8e1aead4df6"
+        ],
+        "checked_at": "2026-11-02T02:08:47+09:00",
+        "source_date": "2026-07-31",
+        "scope": "latest advertised public snapshot downloaded; not all current merchants"
       },
       "location_inventory": {
         "status": "complete",
@@ -18574,9 +18838,14 @@
     },
     "서울": {
       "annual_inventory": {
-        "status": "pending",
-        "evidence": [],
-        "checked_at": null
+        "status": "complete",
+        "evidence": [
+          "https://www.data.go.kr/data/3060079/fileData.do",
+          "66173bf934ad24d3195e9e0c1be0e62adcca0e4767e19a80c435f8e1aead4df6"
+        ],
+        "checked_at": "2026-11-02T02:08:47+09:00",
+        "source_date": "2026-07-31",
+        "scope": "latest advertised public snapshot downloaded; not all current merchants"
       },
       "location_inventory": {
         "status": "complete",
@@ -18604,9 +18873,14 @@
     },
     "강원": {
       "annual_inventory": {
-        "status": "pending",
-        "evidence": [],
-        "checked_at": null
+        "status": "complete",
+        "evidence": [
+          "https://www.data.go.kr/data/3060079/fileData.do",
+          "66173bf934ad24d3195e9e0c1be0e62adcca0e4767e19a80c435f8e1aead4df6"
+        ],
+        "checked_at": "2026-11-02T02:08:47+09:00",
+        "source_date": "2026-07-31",
+        "scope": "latest advertised public snapshot downloaded; not all current merchants"
       },
       "location_inventory": {
         "status": "complete",
@@ -18634,9 +18908,14 @@
     },
     "경북": {
       "annual_inventory": {
-        "status": "pending",
-        "evidence": [],
-        "checked_at": null
+        "status": "complete",
+        "evidence": [
+          "https://www.data.go.kr/data/3060079/fileData.do",
+          "66173bf934ad24d3195e9e0c1be0e62adcca0e4767e19a80c435f8e1aead4df6"
+        ],
+        "checked_at": "2026-11-02T02:08:47+09:00",
+        "source_date": "2026-07-31",
+        "scope": "latest advertised public snapshot downloaded; not all current merchants"
       },
       "location_inventory": {
         "status": "complete",
@@ -18664,9 +18943,14 @@
     },
     "대구": {
       "annual_inventory": {
-        "status": "pending",
-        "evidence": [],
-        "checked_at": null
+        "status": "complete",
+        "evidence": [
+          "https://www.data.go.kr/data/3060079/fileData.do",
+          "66173bf934ad24d3195e9e0c1be0e62adcca0e4767e19a80c435f8e1aead4df6"
+        ],
+        "checked_at": "2026-11-02T02:08:47+09:00",
+        "source_date": "2026-07-31",
+        "scope": "latest advertised public snapshot downloaded; not all current merchants"
       },
       "location_inventory": {
         "status": "complete",
@@ -18694,9 +18978,14 @@
     },
     "울산": {
       "annual_inventory": {
-        "status": "pending",
-        "evidence": [],
-        "checked_at": null
+        "status": "complete",
+        "evidence": [
+          "https://www.data.go.kr/data/3060079/fileData.do",
+          "66173bf934ad24d3195e9e0c1be0e62adcca0e4767e19a80c435f8e1aead4df6"
+        ],
+        "checked_at": "2026-11-02T02:08:47+09:00",
+        "source_date": "2026-07-31",
+        "scope": "latest advertised public snapshot downloaded; not all current merchants"
       },
       "location_inventory": {
         "status": "complete",
@@ -18724,9 +19013,14 @@
     },
     "부산": {
       "annual_inventory": {
-        "status": "pending",
-        "evidence": [],
-        "checked_at": null
+        "status": "complete",
+        "evidence": [
+          "https://www.data.go.kr/data/3060079/fileData.do",
+          "66173bf934ad24d3195e9e0c1be0e62adcca0e4767e19a80c435f8e1aead4df6"
+        ],
+        "checked_at": "2026-11-02T02:08:47+09:00",
+        "source_date": "2026-07-31",
+        "scope": "latest advertised public snapshot downloaded; not all current merchants"
       },
       "location_inventory": {
         "status": "complete",
@@ -18754,9 +19048,14 @@
     },
     "경남": {
       "annual_inventory": {
-        "status": "pending",
-        "evidence": [],
-        "checked_at": null
+        "status": "complete",
+        "evidence": [
+          "https://www.data.go.kr/data/3060079/fileData.do",
+          "66173bf934ad24d3195e9e0c1be0e62adcca0e4767e19a80c435f8e1aead4df6"
+        ],
+        "checked_at": "2026-11-02T02:08:47+09:00",
+        "source_date": "2026-07-31",
+        "scope": "latest advertised public snapshot downloaded; not all current merchants"
       },
       "location_inventory": {
         "status": "complete",
@@ -18784,9 +19083,14 @@
     },
     "광주": {
       "annual_inventory": {
-        "status": "pending",
-        "evidence": [],
-        "checked_at": null
+        "status": "complete",
+        "evidence": [
+          "https://www.data.go.kr/data/3060079/fileData.do",
+          "66173bf934ad24d3195e9e0c1be0e62adcca0e4767e19a80c435f8e1aead4df6"
+        ],
+        "checked_at": "2026-11-02T02:08:47+09:00",
+        "source_date": "2026-07-31",
+        "scope": "latest advertised public snapshot downloaded; not all current merchants"
       },
       "location_inventory": {
         "status": "complete",
@@ -18814,9 +19118,14 @@
     },
     "제주": {
       "annual_inventory": {
-        "status": "pending",
-        "evidence": [],
-        "checked_at": null
+        "status": "complete",
+        "evidence": [
+          "https://www.data.go.kr/data/3060079/fileData.do",
+          "66173bf934ad24d3195e9e0c1be0e62adcca0e4767e19a80c435f8e1aead4df6"
+        ],
+        "checked_at": "2026-11-02T02:08:47+09:00",
+        "source_date": "2026-07-31",
+        "scope": "latest advertised public snapshot downloaded; not all current merchants"
       },
       "location_inventory": {
         "status": "complete",
@@ -18844,9 +19153,14 @@
     },
     "대전": {
       "annual_inventory": {
-        "status": "pending",
-        "evidence": [],
-        "checked_at": null
+        "status": "complete",
+        "evidence": [
+          "https://www.data.go.kr/data/3060079/fileData.do",
+          "66173bf934ad24d3195e9e0c1be0e62adcca0e4767e19a80c435f8e1aead4df6"
+        ],
+        "checked_at": "2026-11-02T02:08:47+09:00",
+        "source_date": "2026-07-31",
+        "scope": "latest advertised public snapshot downloaded; not all current merchants"
       },
       "location_inventory": {
         "status": "complete",
@@ -18874,9 +19188,14 @@
     },
     "세종": {
       "annual_inventory": {
-        "status": "pending",
-        "evidence": [],
-        "checked_at": null
+        "status": "complete",
+        "evidence": [
+          "https://www.data.go.kr/data/3060079/fileData.do",
+          "66173bf934ad24d3195e9e0c1be0e62adcca0e4767e19a80c435f8e1aead4df6"
+        ],
+        "checked_at": "2026-11-02T02:08:47+09:00",
+        "source_date": "2026-07-31",
+        "scope": "latest advertised public snapshot downloaded; not all current merchants"
       },
       "location_inventory": {
         "status": "complete",
