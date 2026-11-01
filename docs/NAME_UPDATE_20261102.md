@@ -31,4 +31,18 @@
 - `node --test tests/i18n.test.js` 4개 통과, `git diff --check` 통과.
 - 로컬 브라우저 320×740: H1/document.title/description/og:title 모두 승인 문구와 일치, 가로 넘침 없음.
 - 영문 전환 후 H1/document.title 모두 'Korea Fuel Discount Map', 가로 넘침 없음. 로컬 지도 SDK 미로드는 이번 문구 검증과 별개이며 실제 지도 작동을 로컬에서 확인했다고 주장하지 않는다.
-- 공개 배포 결과는 배포 후 기록한다.
+- 구현 커밋: [`18138e1`](https://github.com/pcwin21-alt/gwangju-gas-map/commit/18138e1b0a8f1983b962425b5f79483af706e287).
+- [전체 CI 41329254964](https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41329254964), [배포 작업 41329254989](https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41329254989), [Pages 반영 41329271176](https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41329271176) 모두 성공.
+- 공개 페이지 `?region=광주&payment=onnuri&v=18138e1`의 실제 320×740 화면에서 H1/document.title/description/og:image를 확인했다. 승인 이름·문구·새 이미지 경로가 적용됐고 가로 넘침이 없다.
+- 공개 공유 이미지 HEAD 응답 200, `image/png`, 1,501,224 bytes 확인. 기존 카카오톡 등의 이미 만들어진 공유 캐시는 서비스 측 재수집 시점과 구분한다.
+- 변경 범위의 Global/UX Gate 통과. 이름 변경·공유 정보 반영·검증·저장소 기록 완료. 실제 기기 터치나 다른 기능의 새 동작을 검증했다고 확대 보고하지 않는다.
+
+## 후속 UI/UX 제안 — 미구현
+
+사용자가 함께 질문한 다른 기능/UI 변경은 다음 순서로 제안한다. 아래는 이번 배포에 포함하지 않는다.
+
+1. 검색 진입을 '내 주변'과 '가는 길'의 두 이용 목적으로 명확히 구분한다. 기존 검색·위치·경유 기능을 재사용하며 지도 공간을 크게 차지하는 설명 화면은 추가하지 않는다.
+2. 주유소 카드에서 결제 가능 유형·유종별 가격·거리/예상 추가 이동시간의 순서를 통일하고, 추천 이유와 확인일이 바로 읽히게 한다.
+3. 유종·결제 방식 등 반복 선택을 기기에 저장해 재방문 시 이어서 사용한다. 위치·경로의 서버 저장은 이 제안에 포함하지 않는다.
+
+절약액 계산은 상품권의 실제 구매 조건·주유량·비교 기준이 정해진 뒤 별도 기능으로 설계한다. 이번 이름 변경은 자동으로 새 계산이나 다른 할인수단 지원을 추가하지 않는다.
