@@ -1,0 +1,215 @@
+{
+  "checked_at": "2026-11-02T01:38:30+09:00",
+  "contract": {
+    "question": "Additional explanations for Gwangju versus other regions merchant counts",
+    "scope": "Offline data audit and primary public policy research; no new collection requests, no map mutation",
+    "completion": "Separate observed data defects, possible causal mechanisms and hypotheses contradicted by current evidence"
+  },
+  "harness": {
+    "always": [
+      "canonical AGENTS",
+      "Brain",
+      "Skill inventory router"
+    ],
+    "active": [
+      "Research Synthesis Agent",
+      "Source",
+      "Global Eval"
+    ],
+    "reference": [
+      "project collector policy",
+      "regional sequence"
+    ],
+    "excluded": [
+      "UI implementation skills: research only",
+      "Style: no author prose modeling"
+    ],
+    "inventory_drift": "Registry old workspace path is discovery metadata; current canonical root used"
+  },
+  "map": {
+    "onnuri_tagged_rows": 184,
+    "status_counts": {
+      "confirmed": 183,
+      "stale": 1
+    },
+    "gwangju_rows": 131,
+    "gwangju_status_counts": {
+      "confirmed": 130,
+      "stale": 1
+    },
+    "gwangju_checked_dates": {
+      "2026-10-25": 129,
+      "2026-03-03": 1,
+      "2026-10-30": 1
+    },
+    "gwangju_unique_ids": 131,
+    "gwangju_unique_full_addresses": 131,
+    "gwangju_unique_coordinates": 131,
+    "gwangju_outside_boundary": 0,
+    "gwangju_fuel_kinds": {
+      "liquid": 115,
+      "lpg": 16
+    },
+    "gas_stations_sha256": "89eec3d643de7b1cdfd64de711238b6d59c144a365499ffcb2453e6662c3b716"
+  },
+  "historic_unfiltered_location_cache": {
+    "regional_inventory": {
+      "전남": {
+        "fuel_records": 992,
+        "mapped_address": 24,
+        "dated_cache": 968,
+        "new_query": 0
+      },
+      "광주": {
+        "fuel_records": 342,
+        "mapped_address": 150,
+        "dated_cache": 192,
+        "new_query": 0
+      },
+      "전북": {
+        "fuel_records": 1035,
+        "mapped_address": 4,
+        "dated_cache": 1031,
+        "new_query": 0
+      },
+      "경남": {
+        "fuel_records": 1311,
+        "mapped_address": 1,
+        "dated_cache": 1310,
+        "new_query": 0
+      },
+      "경북": {
+        "fuel_records": 1490,
+        "mapped_address": 7,
+        "dated_cache": 1483,
+        "new_query": 0
+      },
+      "부산": {
+        "fuel_records": 537,
+        "mapped_address": 0,
+        "dated_cache": 537,
+        "new_query": 0
+      },
+      "대구": {
+        "fuel_records": 488,
+        "mapped_address": 1,
+        "dated_cache": 19,
+        "new_query": 384
+      },
+      "울산": {
+        "fuel_records": 295,
+        "mapped_address": 0,
+        "dated_cache": 0,
+        "new_query": 257
+      },
+      "충남": {
+        "fuel_records": 1233,
+        "mapped_address": 2,
+        "dated_cache": 0,
+        "new_query": 1081
+      },
+      "충북": {
+        "fuel_records": 877,
+        "mapped_address": 1,
+        "dated_cache": 0,
+        "new_query": 755
+      },
+      "대전": {
+        "fuel_records": 306,
+        "mapped_address": 1,
+        "dated_cache": 0,
+        "new_query": 260
+      },
+      "세종": {
+        "fuel_records": 92,
+        "mapped_address": 0,
+        "dated_cache": 0,
+        "new_query": 80
+      },
+      "강원": {
+        "fuel_records": 822,
+        "mapped_address": 0,
+        "dated_cache": 0,
+        "new_query": 732
+      },
+      "제주": {
+        "fuel_records": 249,
+        "mapped_address": 3,
+        "dated_cache": 0,
+        "new_query": 215
+      },
+      "경기": {
+        "fuel_records": 3158,
+        "mapped_address": 5,
+        "dated_cache": 0,
+        "new_query": 2628
+      },
+      "인천": {
+        "fuel_records": 461,
+        "mapped_address": 0,
+        "dated_cache": 0,
+        "new_query": 384
+      },
+      "서울": {
+        "fuel_records": 672,
+        "mapped_address": 1,
+        "dated_cache": 0,
+        "new_query": 548
+      }
+    },
+    "completed_query_cache_count": 5083,
+    "scope_warning": "Exact public business anchor cache coverage only; not all prior search types, not current membership and not a completeness measurement"
+  },
+  "annual_candidate_method_check": {
+    "source_date": "2026-07-31",
+    "source_sha256": "66173bf934ad24d3195e9e0c1be0e62adcca0e4767e19a80c435f8e1aead4df6",
+    "expanded_rows_without_recorded_non_vehicle_exclusions": 219,
+    "digital_y": 218,
+    "paper_only": 1,
+    "scope_warning": "Broad discovery candidates, not verified vehicle fuel businesses or a current merchant census"
+  },
+  "public_primary_sources": [
+    {
+      "url": "https://www.mss.go.kr/site/smba/ex/bbs/View.do?bcIdx=1069086&cbIdx=288",
+      "published": "2026-06-17",
+      "observed": "30억원 초과 등록 제한; 시행 전 등록 가맹점의 유효기간 내 매출제한 예외; 당시 등록 가맹점 절반 이상 2026-10 만료 예정",
+      "interpretation_limit": "Regional sales distributions, individual expiry dates and actual renewal outcomes not known"
+    },
+    {
+      "url": "https://www.korea.kr/news/policyNewsView.do?call_from=rsslink&newsId=148962460",
+      "published": "2026-04-13",
+      "observed": "입법예고에서 기존 가맹점의 시행 후 최초 갱신 시 매출 기준 적용 설명",
+      "interpretation_limit": "Proposal notice; current implementation corroborated against June ministry release"
+    },
+    {
+      "url": "https://www.wdcc.or.kr/upload/board/2/eoer/le/lb/main/38ee1978a06945a0817998c006d7ad20.pdf",
+      "published": "2025-12-12",
+      "pdf_pages_1_based": [
+        11,
+        63
+      ],
+      "observed": "완도군의회 감사보고서가 당시 완도 가맹 49개소 및 전통시장 중심, 광주 서구 주유소까지 가맹 확대 비교",
+      "interpretation_limit": "Historic county-specific observation; cannot generalize current Jeonnam total or treat designated area as proof every business registered"
+    }
+  ],
+  "conclusions": {
+    "observed": [
+      "Unequal prior location-query coverage means regional displayed counts are not a comparable completeness census",
+      "One Gwangju record is explicitly stale from March; 131 is not a currently confirmed 131",
+      "Broad annual candidate set has 1 paper-only row among 219, weak evidence for payment mode alone explaining the large gap",
+      "Simple full-address duplicates and outside-boundary Gwangju points were not found"
+    ],
+    "causal_hypotheses_needing_merchant_level_evidence": [
+      "Registration timing before versus after 2026-06-17 revenue restriction",
+      "Late-October renewal and cancellation timing",
+      "Actual station inclusion within designated zone and local registration outreach"
+    ],
+    "forecast_status": "Previous nationwide 220 and regional range table lack calibrated coverage or a validated capture model; withdraw as a working forecast"
+  },
+  "next_checks_in_authorized_region_sequence": [
+    "Finish Jeonnam source inventory and unresolved identities first",
+    "Record candidate universe and completed search methods separately for every region",
+    "Track paper/card/QR and issuer scopes without inferring unsupported methods",
+    "When region reaches its turn, reverify expiring/old records using independently authorized sources; preserve history and do not remove records solely on empty lookup"
+  ]
+}

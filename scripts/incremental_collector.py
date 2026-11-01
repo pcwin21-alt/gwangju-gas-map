@@ -21,11 +21,15 @@ import requests
 try:
     from discover_kb_fuel import parse_response, URL as KB_URL
     from nationwide import name_key, region, valid_coords
-    from supplemental_onnuri import station_from_evidence
+    from supplemental_onnuri import station_from_evidence, meters
+    from survey_inventory import (install_survey, survey_jobs, make_inventory,
+                                  survey_progress, completed_recheck)
 except ModuleNotFoundError:
     from scripts.discover_kb_fuel import parse_response, URL as KB_URL
     from scripts.nationwide import name_key, region, valid_coords
-    from scripts.supplemental_onnuri import station_from_evidence
+    from scripts.supplemental_onnuri import station_from_evidence, meters
+    from scripts.survey_inventory import (install_survey, survey_jobs, make_inventory,
+                                          survey_progress, completed_recheck)
 
 ROOT = Path(__file__).resolve().parents[1]
 POLICY = ROOT / 'config/collector-policy.json'
@@ -160,6 +164,18 @@ def corroborate(bank, checked, commercial, commercial_source, candidate_ids=()):
     return next(iter(unique.values())) if len(unique) == 1 else None
 
 
+def independent_fuel_leads(bank, commercial):
+    """Retain neutral/misclassified bank categories for review, not promotion."""
+    c, loc = bank['content'], bank.get('location', {})
+    if not valid_coords(loc.get('lat'), loc.get('lng')):
+        return []
+    point = (float(loc['lat']), float(loc['lng']))
+    return [f['상가업소번호'] for f in commercial if f.get('상권업종소분류코드') in ('G21401', 'G21402') and
+            name_key(c['title']) == name_key(f['상호명']) and region(c.get('address')) == f['region'] and
+            valid_coords(f.get('위도'), f.get('경도')) and
+            meters(point, (float(f['위도']), float(f['경도']))) <= 100]
+
+
 def handle_response(state, job, response, now, commercial, commercial_source):
     checked = stamp(now)
     if job['kind'] == 'kb_search':
@@ -183,11 +199,15 @@ def handle_response(state, job, response, now, commercial, commercial_source):
                 if job.get('annual_link_reviewed') and name_key(bank['content']['title']) == name_key(job['target']['name']):
                     e['annual_candidate_ids'] = job.get('candidate_ids', [])
                 state['evidence'].append(e)
-            elif bank['content'].get('category') in ('주유소', '충전소', 'LPG충전소', 'LPG 충전소', '가스충전소'):
-                state['review'].append({'job_id': job['id'], 'bank_record': bank, 'checked_at': checked,
-                                        'reason': 'Independent exact business/address evidence incomplete'})
+            else:
+                leads = independent_fuel_leads(bank, commercial)
+                if bank['content'].get('category') in ('주유소', '충전소', 'LPG충전소', 'LPG 충전소', '가스충전소') or leads:
+                    state['review'].append({'job_id': job['id'], 'bank_record': bank, 'checked_at': checked,
+                                            'independent_fuel_candidate_ids': leads,
+                                            'reason': 'Independent exact business/address/category evidence incomplete; do not exclude by bank category alone'})
         if len(job['observed_ids']) == total:
             job.update(status='done', result='no_match_not_nonmembership' if not total else 'observations_saved')
+            completed_recheck(state, job, checked)
         elif page >= 100:
             raise ValueError('Page bound exceeded')
         else:
@@ -215,11 +235,31 @@ def handle_response(state, job, response, now, commercial, commercial_source):
                         'source_date': job['source_date'], 'file_id': file_id, 'sequence': sequence})
         job.update(status='done', result='public_attachment_discovered')
     elif job['kind'] == 'annual_download':
-        from official_onnuri import parse_csv
-        snapshot = parse_csv(response.content, job['source_date'], checked, response.url)
+        try:
+            from official_onnuri import parse_csv
+        except ModuleNotFoundError:
+            from scripts.official_onnuri import parse_csv
+        date = job['source_date']
+        if re.fullmatch(r'\d{8}', date):
+            date = datetime.strptime(date, '%Y%m%d').date().isoformat()
+        keys = {(f['region'], name_key(f['상호명'])) for f in commercial}
+        for c in state.get('survey_inventory', {}).get('annual_candidates', []):
+            keys.update((area, name_key(c['row']['가맹점명'])) for area in c['possible_regions'])
+        snapshot = parse_csv(response.content, date, checked, response.url, keys)
         job.update(status='done', result='official_file_downloaded', sha256=snapshot['sha256'],
-                   total_rows=snapshot['total_rows'], source_date=job['source_date'])
-        # The whole file is retained; additions are NOT published from names only.
+                   total_rows=snapshot['total_rows'], source_date=date)
+        if state.get('survey_inventory'):
+            current = state['survey_inventory']
+            fuel = {**commercial_source, 'rows': commercial}
+            historic = {r['region']: r['historic_point_lookup'] for r in current['regions']}
+            inventory = make_inventory(current['known_stations'], fuel, snapshot, state['region_order'], historic)
+            install_survey(state, inventory, survey_jobs(inventory, fuel, state['region_order']))
+            for area in state['region_order']:
+                state['coverage_checks'][area]['annual_inventory'] = {
+                    'status': 'complete', 'evidence': [snapshot['source_url'], snapshot['sha256']],
+                    'checked_at': checked, 'source_date': snapshot['source_date'],
+                    'scope': 'latest advertised public snapshot downloaded; not all current merchants'}
+        # The whole file is retained; names alone never authorize publication.
         return response.content, 'csv'
     return json.dumps({'checked_at': checked, 'kind': job['kind'], 'sha256': hashlib.sha256(response.content).hexdigest()}, ensure_ascii=False).encode(), 'json'
 
@@ -246,6 +286,27 @@ def configure_regions(state, policy):
         receipts.setdefault(area, {'status': 'pending', 'evidence': [], 'checked_at': None})
 
 
+def merge_plan(state, plan):
+    inventory = plan.get('survey_inventory')
+    if not inventory:
+        return
+    install_survey(state, inventory, plan['jobs'])
+    for gap in state.get('source_gaps', []):
+        if gap.get('status') == 'needs_source_inventory' and gap.get('region'):
+            gap.setdefault('gap_id', 'market-coverage:' + gap['region'])
+    identities = {g.get('gap_id') or g.get('candidate_id') for g in state['source_gaps']}
+    for gap in plan.get('source_gaps', []):
+        identity = gap.get('gap_id') or gap.get('candidate_id')
+        if identity not in identities:
+            state['source_gaps'].append(dict(gap))
+            identities.add(identity)
+    state.setdefault('initial_plan_id', state['plan_id'])
+    state['plan_id'] = plan['id']
+    applied = state.setdefault('applied_plans', [])
+    if plan['id'] not in applied:
+        applied.append(plan['id'])
+
+
 def regional_progress(state):
     order = state.get('region_order', [])
     if not order:
@@ -266,7 +327,8 @@ def regional_progress(state):
         verified = receipt.get('status') == 'complete' and bool(receipt.get('evidence')) and bool(receipt.get('checked_at'))
         pending = sum(j['status'] not in TERMINAL for j in jobs)
         failed = sum(j['status'] in ('needs_review', 'blocked') for j in jobs)
-        ready = verified and not (pending or failed or gaps or reviews)
+        survey = survey_progress(state, area)
+        ready = verified and not (pending or failed or gaps or reviews) and survey.get('standard_checks_complete', True)
         if active is None and ready:
             status = 'complete'
         elif active is None:
@@ -277,7 +339,7 @@ def regional_progress(state):
         rows.append({'region': area, 'status': status, 'jobs_total': len(jobs),
                      'jobs_remaining': pending, 'jobs_needing_review': failed,
                      'source_gaps': len(gaps), 'review_records': len(reviews),
-                     'inventory_reviewed': bool(verified)})
+                     'inventory_reviewed': bool(verified), **survey})
     return {'active_region': active, 'regions': rows}
 
 
@@ -296,6 +358,9 @@ def summarize(state):
             'source_status': {k: v['status'] for k, v in state['sources'].items()}}
     if progress:
         result.update(progress, region_order=state['region_order'])
+    if state.get('survey_inventory'):
+        result.update(counts_are_not_regional_totals=True,
+                      recheck_after=state['survey_inventory']['recheck_after'], survey_revision=2)
     return result
 
 
@@ -415,7 +480,9 @@ def main():
     policy = read(POLICY)
     store = Store(args.state_dir, args.persist_git)
     path = args.state_dir/'state.json'
-    state = read(path) if path.exists() else initial_state(read(args.plan), policy)
+    plan = read(args.plan)
+    state = read(path) if path.exists() else initial_state(plan, policy)
+    merge_plan(state, plan)
     # Persist current restrictions; changing a config to active never clears a
     # previous rejection. Unblocking requires a separately reviewed state edit.
     for source, setting in policy['sources'].items():
