@@ -7473,10 +7473,10 @@
   "summary": {
     "status": "running",
     "jobs_total": 225,
-    "jobs_done": 15,
-    "jobs_remaining": 210,
-    "review_records": 2,
-    "evidence_records": 7,
+    "jobs_done": 18,
+    "jobs_remaining": 207,
+    "review_records": 3,
+    "evidence_records": 9,
     "source_gaps": 90,
     "source_status": {
       "onnuri": "blocked",
@@ -7489,15 +7489,16 @@
         "region": "전남",
         "status": "collecting",
         "jobs_total": 41,
-        "jobs_remaining": 26,
+        "jobs_remaining": 23,
         "jobs_needing_review": 0,
         "source_gaps": 26,
-        "review_records": 1,
+        "review_records": 2,
         "inventory_reviewed": false,
         "mapped_records_to_recheck": 28,
         "membership_check_status": {
-          "confirmed_in_issuer_scope": 7,
-          "pending": 21
+          "confirmed_in_issuer_scope": 9,
+          "needs_review_not_found": 1,
+          "pending": 18
         },
         "unresolved_annual_identities": 23,
         "missing_standard_checks": [
@@ -7878,7 +7879,7 @@
         "interval_seconds": 180,
         "stage": "pilot",
         "clean_since": 1793556784.2048566,
-        "valid_responses_in_clean_window": 3,
+        "valid_responses_in_clean_window": 6,
         "earliest_review_at": 1793729584.2048566
       },
       "datagov": {
@@ -7890,9 +7891,9 @@
     }
   },
   "last_run": {
-    "id": "15963053e9534781829b1e990c7899cc",
-    "checked_at": "2026-11-02T06:00:29+09:00",
-    "requests": 0
+    "id": "c748d50f988e41728382e3054ced2627",
+    "checked_at": "2026-11-02T07:12:34+09:00",
+    "requests": 3
   },
   "initial_scope": "finite cross-source fuel registration candidates, Jeonnam first and Seoul last; not a geographic census",
   "region_order": [
@@ -20794,7 +20795,7 @@
       "interval_seconds": 180,
       "stage": "pilot",
       "clean_since": 1793556784.2048566,
-      "valid_responses_in_clean_window": 3,
+      "valid_responses_in_clean_window": 6,
       "earliest_review_at": 1793729584.2048566
     },
     "datagov": {
