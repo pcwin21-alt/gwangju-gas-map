@@ -1,0 +1,322 @@
+{
+  "schema_version": 1,
+  "plan_id": "fuel-candidate-inventory-20261102-v1",
+  "scope": "finite cross-source fuel registration candidates, Jeonnam first and Seoul last; not a geographic census",
+  "sources": {
+    "onnuri": {
+      "status": "blocked",
+      "reason": "2026-10-30 HTTP 400 Request Blocked; no automatic reactivation",
+      "url": "https://www.onnuri.gift/place",
+      "next_allowed_at": 0
+    },
+    "kbcard": {
+      "status": "active",
+      "url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "scope": "Public unauthenticated Onnuri merchant form; issuer-specific evidence only; limits are our load caps, not a provider guarantee",
+      "next_allowed_at": 0
+    },
+    "datagov": {
+      "status": "active",
+      "url": "https://www.data.go.kr/data/3060079/fileData.do",
+      "scope": "Published official bulk download, no private API or credentials",
+      "next_allowed_at": 0
+    }
+  },
+  "attempts": [],
+  "jobs": [
+    {
+      "kind": "kb_search",
+      "source": "kbcard",
+      "region": "전남",
+      "control": true,
+      "target": {
+        "name": "현대주유소",
+        "keyword": "현대",
+        "lat": 34.9609772960504,
+        "lng": 127.484715824515,
+        "coordinate_source_id": "onnuri:kb:000000004645863"
+      },
+      "id": "6f4895eee3bfa314a3479e03",
+      "status": "pending",
+      "attempts": 0,
+      "page": 1,
+      "observed_ids": []
+    },
+    {
+      "kind": "annual_page",
+      "source": "datagov",
+      "region": "전남",
+      "id": "f93b972d7c39b57b73f1aff2",
+      "status": "pending",
+      "attempts": 0,
+      "page": 1,
+      "observed_ids": []
+    },
+    {
+      "kind": "kb_search",
+      "source": "kbcard",
+      "region": "전남",
+      "target": {
+        "name": "대동주유소",
+        "keyword": "대동주유소",
+        "lat": 34.909833788336,
+        "lng": 126.553149552693,
+        "coordinate_source_id": "MA010120220807748772",
+        "address": "전남광주통합특별시 나주시 동강면 동강로 246"
+      },
+      "scope": "targeted annual fuel candidate; annual link remains unverified",
+      "id": "a1a48ef94db074777fc1eb7d",
+      "status": "pending",
+      "attempts": 0,
+      "page": 1,
+      "observed_ids": []
+    },
+    {
+      "kind": "kb_search",
+      "source": "kbcard",
+      "region": "전남",
+      "target": {
+        "name": "대동주유소",
+        "keyword": "대동주유소",
+        "lat": 35.2799256278214,
+        "lng": 126.50076162042,
+        "coordinate_source_id": "MA010120220807626112",
+        "address": "전남광주통합특별시 영광군 영광읍 월현로 48"
+      },
+      "scope": "targeted annual fuel candidate; annual link remains unverified",
+      "id": "633fc2696193d9a03d2bc308",
+      "status": "pending",
+      "attempts": 0,
+      "page": 1,
+      "observed_ids": []
+    },
+    {
+      "kind": "kb_search",
+      "source": "kbcard",
+      "region": "전남",
+      "target": {
+        "name": "(주)백동산업",
+        "keyword": "백동산업",
+        "lat": 35.3090822678,
+        "lng": 126.984898723,
+        "coordinate_source_id": "public-bank:000000094538059"
+      },
+      "scope": "public discovery point only; independent location still required",
+      "id": "b8e1a3a0fb8b6cee132ca479",
+      "status": "pending",
+      "attempts": 0,
+      "page": 1,
+      "observed_ids": []
+    },
+    {
+      "kind": "kb_search",
+      "source": "kbcard",
+      "region": "충남",
+      "target": {
+        "name": "부흥주유소",
+        "keyword": "부흥주유소",
+        "lat": 36.5027318438102,
+        "lng": 126.625061986194,
+        "coordinate_source_id": "MA010120220805035213",
+        "address": "충청남도 홍성군 광천읍 광천로329번길 11"
+      },
+      "scope": "targeted annual fuel candidate; annual link remains unverified",
+      "id": "e8f23bec5efa86778f4a7b52",
+      "status": "pending",
+      "attempts": 0,
+      "page": 1,
+      "observed_ids": []
+    },
+    {
+      "kind": "kb_search",
+      "source": "kbcard",
+      "region": "충남",
+      "target": {
+        "name": "대창가스",
+        "keyword": "대창가스",
+        "lat": 36.2446827820629,
+        "lng": 126.611390389562,
+        "coordinate_source_id": "MA010120220806154841",
+        "address": "충청남도 보령시 웅천읍 성동큰길 162-105"
+      },
+      "scope": "targeted annual fuel candidate; annual link remains unverified",
+      "id": "22a3aa4d137d413fae518b61",
+      "status": "pending",
+      "attempts": 0,
+      "page": 1,
+      "observed_ids": []
+    },
+    {
+      "kind": "kb_search",
+      "source": "kbcard",
+      "region": "충북",
+      "target": {
+        "name": "원남주유소",
+        "keyword": "원남주유소",
+        "lat": 36.3945966586739,
+        "lng": 127.733382238697,
+        "coordinate_source_id": "MA010120220810462171",
+        "address": "충청북도 보은군 삼승면 원남로 8"
+      },
+      "scope": "targeted annual fuel candidate; annual link remains unverified",
+      "id": "2da0d1e82a69062f0a3ee5cb",
+      "status": "pending",
+      "attempts": 0,
+      "page": 1,
+      "observed_ids": []
+    },
+    {
+      "kind": "kb_search",
+      "source": "kbcard",
+      "region": "경기",
+      "target": {
+        "name": "광탄주유소",
+        "keyword": "광탄주유소",
+        "lat": 37.5064829560216,
+        "lng": 127.629813316167,
+        "coordinate_source_id": "MA0101202512A0007012",
+        "address": "경기도 양평군 용문면 용문로 794"
+      },
+      "scope": "targeted annual fuel candidate; annual link remains unverified",
+      "id": "505962c9cd9fd2f7da8afd57",
+      "status": "pending",
+      "attempts": 0,
+      "page": 1,
+      "observed_ids": []
+    }
+  ],
+  "evidence": [],
+  "review": [],
+  "source_gaps": [
+    {
+      "region": "전남",
+      "status": "needs_source_inventory",
+      "reason": "Latest 22-municipality designated-market shop lists not yet all available; no complete census claim"
+    },
+    {
+      "candidate_id": "7aec121a5094c5961ee57bc4",
+      "name": "대양종합가스",
+      "region": "경남",
+      "status": "needs_location",
+      "reason": "No independently linked vehicle-fuel location; no guessed point"
+    },
+    {
+      "candidate_id": "4ffd85ade67d4e3ece9bea21",
+      "name": "제일가스,설비",
+      "region": "경북",
+      "status": "needs_location",
+      "reason": "No independently linked vehicle-fuel location; no guessed point"
+    },
+    {
+      "candidate_id": "6cf6b5291c36bdd9f7fb20d1",
+      "name": "세진석유",
+      "region": "경북",
+      "status": "needs_location",
+      "reason": "No independently linked vehicle-fuel location; no guessed point"
+    },
+    {
+      "candidate_id": "0bf8e875e8a47f8917b48c5c",
+      "name": "대성석유",
+      "region": "대구",
+      "status": "needs_location",
+      "reason": "No independently linked vehicle-fuel location; no guessed point"
+    },
+    {
+      "candidate_id": "5b1c47a5cebce76e8f8f0890",
+      "name": "금성가스",
+      "region": "대구",
+      "status": "needs_location",
+      "reason": "No independently linked vehicle-fuel location; no guessed point"
+    },
+    {
+      "candidate_id": "634df12c95dd2fad8609c1ed",
+      "name": "경동가스",
+      "region": "대구",
+      "status": "needs_location",
+      "reason": "No independently linked vehicle-fuel location; no guessed point"
+    },
+    {
+      "candidate_id": "e971399ca41505931d7d9ca4",
+      "name": "영주석유",
+      "region": "대전",
+      "status": "needs_location",
+      "reason": "No independently linked vehicle-fuel location; no guessed point"
+    },
+    {
+      "candidate_id": "8dedc9fce3baf0dc2d230a00",
+      "name": "현대참기름",
+      "region": "전남광주",
+      "status": "needs_location",
+      "reason": "No independently linked vehicle-fuel location; no guessed point"
+    },
+    {
+      "candidate_id": "badaf1066867bde046275626",
+      "name": "청우에너지(주)",
+      "region": "전남광주",
+      "status": "needs_location",
+      "reason": "No independently linked vehicle-fuel location; no guessed point"
+    },
+    {
+      "candidate_id": "26b21e88211bfd8aa34da650",
+      "name": "아세아오일뱅크",
+      "region": "전남광주",
+      "status": "needs_location",
+      "reason": "No independently linked vehicle-fuel location; no guessed point"
+    },
+    {
+      "candidate_id": "76ce41be9eed4c5a2696b79a",
+      "name": "서부에너지",
+      "region": "전남광주",
+      "status": "needs_location",
+      "reason": "No independently linked vehicle-fuel location; no guessed point"
+    },
+    {
+      "candidate_id": "9048d648f7164ac10b9d7aaa",
+      "name": "도시에너지 주식회사",
+      "region": "전남광주",
+      "status": "needs_location",
+      "reason": "No independently linked vehicle-fuel location; no guessed point"
+    },
+    {
+      "candidate_id": "6bd0aa8c13da8305ab643354",
+      "name": "SK코끼리주유소",
+      "region": "전남광주",
+      "status": "needs_location",
+      "reason": "No independently linked vehicle-fuel location; no guessed point"
+    },
+    {
+      "candidate_id": "9e8ff2baaea7b95ae7a04d00",
+      "name": "오수가스",
+      "region": "전북",
+      "status": "needs_location",
+      "reason": "No independently linked vehicle-fuel location; no guessed point"
+    },
+    {
+      "candidate_id": "a7b69b2e80924865b67e40a7",
+      "name": "삼각지가스",
+      "region": "전북",
+      "status": "needs_location",
+      "reason": "No independently linked vehicle-fuel location; no guessed point"
+    }
+  ],
+  "status": "running",
+  "summary": {
+    "status": "running",
+    "jobs_total": 9,
+    "jobs_done": 0,
+    "jobs_remaining": 9,
+    "review_records": 0,
+    "evidence_records": 0,
+    "source_gaps": 16,
+    "source_status": {
+      "onnuri": "blocked",
+      "kbcard": "active",
+      "datagov": "active"
+    }
+  },
+  "last_run": {
+    "id": "b68559c5356b4020bc9c8ca4ac586ae2",
+    "checked_at": "2026-11-02T00:29:23+09:00",
+    "requests": 0
+  }
+}
