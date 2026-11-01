@@ -13,11 +13,12 @@
       "status": "active",
       "url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
       "scope": "Public unauthenticated Onnuri merchant form; issuer-specific evidence only; limits are our load caps, not a provider guarantee",
-      "next_allowed_at": 1793556964.205645,
+      "next_allowed_at": 1793556967.585777,
       "volume_ramp": {
         "stage": "pilot",
         "started_at": 1793556784.2048566,
-        "clean_since": 1793556784.2048566
+        "clean_since": 1793556784.2048566,
+        "slow_streak": 0
       }
     },
     "datagov": {
@@ -274,7 +275,7 @@
       "job_id": "52ac52745af7da62f128c34c",
       "source": "kbcard",
       "at": 1793556784.205645,
-      "status": "reserved",
+      "status": "done",
       "run_id": "f90e38c89b3a4cc98dcd9fb435c90417",
       "request": {
         "method": "POST",
@@ -291,7 +292,12 @@
           "endRow": 10,
           "mmcNm": ""
         }
-      }
+      },
+      "request_started_at": 1793556785.529558,
+      "network_duration_seconds": 1.0732777118682861,
+      "http_status": 200,
+      "response_sha256": "48ad6f494bfaf1a987f1e211277fa365d03b76c4a7a18f1a18c50552f4ffa370",
+      "finished_at": 1793556787.5857534
     }
   ],
   "jobs": [
@@ -818,11 +824,40 @@
       },
       "logical_key": "52ac52745af7da62f128c34c",
       "id": "52ac52745af7da62f128c34c",
-      "status": "pending",
+      "status": "done",
       "attempts": 1,
       "page": 1,
-      "observed_ids": [],
-      "candidate_ids": []
+      "observed_ids": [
+        "000000063753887",
+        "000000071625360",
+        "000000105714532",
+        "000000076142931",
+        "000000057598649",
+        "000000024693904",
+        "000000082513432",
+        "000000046433474",
+        "000000110968053",
+        "000000072003897",
+        "000000109887671",
+        "000000083142828",
+        "000000110755340",
+        "000000111341916",
+        "000000041411132",
+        "000000114508766",
+        "000000054700117",
+        "000000023292363",
+        "000000092798040",
+        "000000096378267",
+        "000000093138652",
+        "000000111473307",
+        "000000049046232",
+        "000000101608746",
+        "000000054613469"
+      ],
+      "candidate_ids": [],
+      "expected": 25,
+      "last_observed_at": "2026-11-02T03:13:06+09:00",
+      "result": "observations_saved"
     },
     {
       "kind": "kb_search",
@@ -6037,6 +6072,54 @@
         "지번주소": "전남광주통합특별시 함평군 함평읍 내교리 182-4",
         "위도": "35.0623835942896",
         "경도": "126.522633361389",
+        "region": "전남"
+      },
+      "commercial_source": {
+        "archive_sha256": "57aa361544108ff4fc73334f87d2ced61e41fe8638dd70bcd842930f865d2386",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+        "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
+      },
+      "annual_candidate_ids": []
+    },
+    {
+      "identity_review": "same_premise_confirmed",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "checked_at": "2026-11-02T03:13:06+09:00",
+      "bank_record": {
+        "location": {
+          "lat": "34.4928350465",
+          "lng": "126.5147580063"
+        },
+        "content": {
+          "tel": "061)535-0021",
+          "title": "화산주유소",
+          "category": "주유소",
+          "address": "전남 해남군 화산면 ",
+          "distance": "15",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000063753887",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        }
+      },
+      "commercial_record": {
+        "상가업소번호": "MA010120220807811979",
+        "상호명": "화산주유소",
+        "지점명": "",
+        "상권업종소분류코드": "G21401",
+        "상권업종소분류명": "주유소",
+        "표준산업분류코드": "G47711",
+        "표준산업분류명": "운송장비용 주유소 운영업",
+        "시군구명": "해남군",
+        "도로명주소": "전남광주통합특별시 해남군 화산면 해남화산로 1045",
+        "지번주소": "전남광주통합특별시 해남군 화산면 방축리 344-5",
+        "위도": "34.4927004921398",
+        "경도": "126.514787318713",
         "region": "전남"
       },
       "commercial_source": {
@@ -19960,6 +20043,14 @@
       "checked_at": "2026-11-02T02:14:36+09:00",
       "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
       "bank_id": "000000065992690",
+      "other_payment_methods": "not_reverified"
+    },
+    "onnuri:14262200012": {
+      "status": "confirmed_in_issuer_scope",
+      "issuer": "kbcard",
+      "checked_at": "2026-11-02T03:13:06+09:00",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "bank_id": "000000063753887",
       "other_payment_methods": "not_reverified"
     }
   },
