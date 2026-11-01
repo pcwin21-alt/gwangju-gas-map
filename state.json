@@ -68,7 +68,7 @@
       "job_id": "a1a48ef94db074777fc1eb7d",
       "source": "kbcard",
       "at": 1793547149.3309267,
-      "status": "reserved",
+      "status": "done",
       "run_id": "7b7e513e9775448d9441a248d89062cf",
       "request": {
         "method": "POST",
@@ -85,7 +85,9 @@
           "endRow": 10,
           "mmcNm": "대동주유소"
         }
-      }
+      },
+      "http_status": 200,
+      "response_sha256": "b8a92c7f66355eb244bd93e99c620c48934dc7bef3eccf5842c14b9a15ada40d"
     }
   ],
   "jobs": [
@@ -137,10 +139,13 @@
       },
       "scope": "targeted annual fuel candidate; annual link remains unverified",
       "id": "a1a48ef94db074777fc1eb7d",
-      "status": "pending",
+      "status": "done",
       "attempts": 1,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "expected": 0,
+      "last_observed_at": "2026-11-02T00:32:30+09:00",
+      "result": "no_match_not_nonmembership"
     },
     {
       "kind": "kb_search",
