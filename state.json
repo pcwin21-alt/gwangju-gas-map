@@ -13,7 +13,7 @@
       "status": "active",
       "url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
       "scope": "Public unauthenticated Onnuri merchant form; issuer-specific evidence only; limits are our load caps, not a provider guarantee",
-      "next_allowed_at": 1793557147.5858784,
+      "next_allowed_at": 1793557150.2092829,
       "volume_ramp": {
         "stage": "pilot",
         "started_at": 1793556784.2048566,
@@ -304,7 +304,7 @@
       "job_id": "cedbc96c76bbe002a7b81d90",
       "source": "kbcard",
       "at": 1793556967.5858784,
-      "status": "reserved",
+      "status": "done",
       "run_id": "f90e38c89b3a4cc98dcd9fb435c90417",
       "request": {
         "method": "POST",
@@ -321,7 +321,12 @@
           "endRow": 10,
           "mmcNm": ""
         }
-      }
+      },
+      "request_started_at": 1793556969.0442514,
+      "network_duration_seconds": 0.7778995037078857,
+      "http_status": 200,
+      "response_sha256": "52b753ff5ec1c4d047e94b0071880b03fa3f3369d9323e9f78fa899529ec104b",
+      "finished_at": 1793556970.2092555
     }
   ],
   "jobs": [
@@ -901,11 +906,25 @@
       },
       "logical_key": "cedbc96c76bbe002a7b81d90",
       "id": "cedbc96c76bbe002a7b81d90",
-      "status": "pending",
+      "status": "done",
       "attempts": 1,
       "page": 1,
-      "observed_ids": [],
-      "candidate_ids": []
+      "observed_ids": [
+        "000000047115107",
+        "000000102563699",
+        "000000119609500",
+        "000000110789172",
+        "000000110987018",
+        "000000047624948",
+        "000000109594091",
+        "000000109963022",
+        "000000094343681",
+        "000000012028341"
+      ],
+      "candidate_ids": [],
+      "expected": 10,
+      "last_observed_at": "2026-11-02T03:16:09+09:00",
+      "result": "observations_saved"
     },
     {
       "kind": "kb_search",
@@ -6144,6 +6163,54 @@
         "지번주소": "전남광주통합특별시 해남군 화산면 방축리 344-5",
         "위도": "34.4927004921398",
         "경도": "126.514787318713",
+        "region": "전남"
+      },
+      "commercial_source": {
+        "archive_sha256": "57aa361544108ff4fc73334f87d2ced61e41fe8638dd70bcd842930f865d2386",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+        "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
+      },
+      "annual_candidate_ids": []
+    },
+    {
+      "identity_review": "same_premise_confirmed",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "checked_at": "2026-11-02T03:16:09+09:00",
+      "bank_record": {
+        "location": {
+          "lat": "35.3312578683",
+          "lng": "126.9885043042"
+        },
+        "content": {
+          "tel": "061)381-1567",
+          "title": "부원주유소",
+          "category": "주유소",
+          "address": "전남 담양군 담양읍 ",
+          "distance": "10",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000047115107",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        }
+      },
+      "commercial_record": {
+        "상가업소번호": "MA010120220807539090",
+        "상호명": "부원주유소",
+        "지점명": "",
+        "상권업종소분류코드": "G21401",
+        "상권업종소분류명": "주유소",
+        "표준산업분류코드": "G47711",
+        "표준산업분류명": "운송장비용 주유소 운영업",
+        "시군구명": "담양군",
+        "도로명주소": "전남광주통합특별시 담양군 담양읍 죽녹원로 199",
+        "지번주소": "전남광주통합특별시 담양군 담양읍 운교리 89",
+        "위도": "35.3312679053853",
+        "경도": "126.98860520888",
         "region": "전남"
       },
       "commercial_source": {
@@ -20075,6 +20142,14 @@
       "checked_at": "2026-11-02T03:13:06+09:00",
       "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
       "bank_id": "000000063753887",
+      "other_payment_methods": "not_reverified"
+    },
+    "onnuri:14266200009": {
+      "status": "confirmed_in_issuer_scope",
+      "issuer": "kbcard",
+      "checked_at": "2026-11-02T03:16:09+09:00",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "bank_id": "000000047115107",
       "other_payment_methods": "not_reverified"
     }
   },
