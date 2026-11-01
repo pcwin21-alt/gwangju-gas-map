@@ -70,7 +70,25 @@
 - `node --test tests/*.test.js`: 93개 통과.
 - `python -m unittest discover -s tests -p 'test_*.py'`: 121개 통과. 기존 Shapely deprecation warning만 있으며 실패 없음.
 - `node --check assets/route-window.js`, `node --check assets/i18n.js`, `python scripts/prepare_site.py`, `git diff --check`: 성공.
-- 배포 및 공개 페이지 검증 결과는 배포 후 아래에 추가한다.
+- 첫 개선 커밋: [`c229753`](https://github.com/pcwin21-alt/gwangju-gas-map/commit/c2297536101c7b10f13e7a63f23d4909eac0452c).
+- 목록 조작 보완 커밋: [`f6cdd6f`](https://github.com/pcwin21-alt/gwangju-gas-map/commit/f6cdd6f181666bea4f60375649c1a57ad8761ad9).
+- 최종 [자동 검사 41323250176](https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41323250176), [배포 41323250169](https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41323250169), [Pages 반영 41323259582](https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41323259582) 모두 성공.
+
+## 실제 공개 지도 확인
+
+주소: `https://pcwin21-alt.github.io/gwangju-gas-map/?region=광주&payment=onnuri&v=f6cdd6f`.
+
+- 실제 CSS viewport 320×740에서 새 `responsive-ui.css`의 버전 해시, 범위 문구 '선택 지역', 모바일 toolbar의 `position:static` 적용 확인.
+- '돌고개' 입력 → 결과 1곳 → 목록 선택 → 돌고개주유소 상세창 열림 확인. 이전 sticky 조건 영역에서는 가려지던 실제 선택이 보완 후 정상 작동했다.
+- 목록 상호 18px, 주소/결제 16px 확인. 상세창 가로 넘침 없음. 닫기를 누르면 선택된 목록 행으로 복귀함을 확인했다.
+- 검색 지우기 후 131곳으로 복귀, 지도 핀 클릭으로 상록주유소 상세 표시 확인. 기존 핀 상세 안정성 수정은 유지했다.
+- 경유 목적지에 '서울역'을 입력만 하고 창 최소화/다시 열기 → 입력 유지, 포커스는 입력창이 아닌 summary, 본문 높이 약 320px 및 가로 넘침 없음. 검색/위치 조회/경로 요청은 실행하지 않았다.
+- 실제 가격 순위의 상호/주소/탭 16px, 패널 가로 넘침 없음 확인.
+- 실제 다크 모드·영문 전환 후 경유 입구 Stops, 페이지 가로 넘침 없음 확인. 원래 한국어·기기 테마 설정으로 복원했다.
+- 공개 페이지 console error 0. 임시 viewport는 복원했다.
+- 공개 지도 PNG 캡처는 브라우저의 Page.captureScreenshot 시간 초과가 있어 저장하지 못했다. 공개 페이지는 실제 조작·AX/DOM·계산 스타일/크기 측정으로 검증했고, 시각 이미지 검수는 위 로컬 렌더 화면에서 수행했다. 이를 실제 휴대전화 검증이나 공개 지도 스크린샷 저장으로 보고하지 않는다.
+
+Global Gate, Software and Website UX Gate 및 변경 범위의 KRDS 읽기성/줄바꿈 Gate 통과. 기기 미연결 상태의 브라우저 검증 범위에서 수정·배포 완료. 실제 iOS/Android 시스템 글자 설정·가상 키보드·물리 터치는 미검증으로 남긴다.
 
 ## 하네스와 완료 기준
 
