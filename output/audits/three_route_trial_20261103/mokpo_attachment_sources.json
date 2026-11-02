@@ -1,0 +1,26 @@
+[
+  {
+    "notice_url": "https://www.mokpo.go.kr/www/mokpo_news/notification/public_notice?idx=55187&mode=view",
+    "attachment_name": "목포시 골목형상점가 지정 고시.hwpx",
+    "download_endpoint": "https://eminwon.mokpo.go.kr/emwp/jsp/ofr/FileDownNew.jsp",
+    "http_status": 200,
+    "bytes": 61440,
+    "checked_at": "2026-11-03",
+    "sha256": "16c3c6d3e09f015615ce466232a124eeef4d3a9f78e83b49db99fb51df74b3db",
+    "is_zip": false,
+    "actual_format": ".hwp",
+    "file": "output/audits/three_route_trial_20261103/mokpo_notice_55187.hwp"
+  },
+  {
+    "notice_url": "https://www.mokpo.go.kr/www/mokpo_news/notification/public_notice?idx=55083&mode=view",
+    "attachment_name": "목포시 골목형상점가 지정 고시.hwpx",
+    "download_endpoint": "https://eminwon.mokpo.go.kr/emwp/jsp/ofr/FileDownNew.jsp",
+    "http_status": 200,
+    "bytes": 53760,
+    "checked_at": "2026-11-03",
+    "sha256": "63a8a8edd6029cd108267a60eca2296e4c288e20908c220fbfe15162496cc5fd",
+    "is_zip": false,
+    "actual_format": ".hwp",
+    "file": "output/audits/three_route_trial_20261103/mokpo_notice_55083.hwp"
+  }
+]

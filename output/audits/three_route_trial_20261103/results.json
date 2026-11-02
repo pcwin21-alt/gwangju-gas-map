@@ -1,0 +1,444 @@
+{
+  "checked_at": "2026-11-03T06:43:04+09:00",
+  "region": "전남",
+  "scope": "bounded three-route discovery trial, not provincial census",
+  "inputs": [
+    {
+      "file": "output/audits/full_region_crosscheck_20261103/issuer_address_snapshot.json.gz",
+      "sha256": "4e1650a394826f85238919291c58fab7ad613bc52b76e623d3707fd2c5a6486d"
+    },
+    {
+      "file": "output/audits/full_region_crosscheck_20261103/annual_region_unresolved.json.gz",
+      "sha256": "adcfd270d62b23cf1af2db94fdd23bbfb9997998e209ccb35b3a12267b346811"
+    },
+    {
+      "file": "output/audits/full_region_crosscheck_20261103/physical_fuel_records.json.gz",
+      "sha256": "f23b2357821eaacd6485e93728b590f1ab180e92db935b5d48dd471e3f11a4f0"
+    },
+    {
+      "file": "output/opinet_discovery_details.json",
+      "sha256": "1c3e46d2004c2083862aa1800b4c0d3b7a1e8072d277f46b62c56690b7235e3d"
+    }
+  ],
+  "opinet": {
+    "run": "https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41529851826",
+    "shared_price_collector_budget": true,
+    "max_calls_rolling_24h": 3,
+    "interval_seconds": 180,
+    "attempts": [
+      {
+        "id": "A0022485",
+        "region": "전남",
+        "reserved_at": 1793655383.483105,
+        "status": "done",
+        "http_status": 200,
+        "finished_at": 1793655385.737736
+      },
+      {
+        "id": "A0020419",
+        "region": "전남",
+        "reserved_at": 1793655565.7378619,
+        "status": "done",
+        "http_status": 200,
+        "finished_at": 1793655567.784304
+      },
+      {
+        "id": "A0019851",
+        "region": "전남",
+        "reserved_at": 1793655747.7844303,
+        "status": "done",
+        "http_status": 200,
+        "finished_at": 1793655749.78244
+      }
+    ],
+    "results": [
+      {
+        "opinet_id": "A0022485",
+        "name": "여수오렌지충전소",
+        "address": "전남광주통합특별시 여수시 한재로 9 (여서동)",
+        "phone": "061-651-4998",
+        "checked_at": "2026-11-03T06:36:25+09:00",
+        "issuer_phone_hits": [],
+        "decision": "no_full_phone_match_in_dated_KB_snapshot",
+        "membership": "not_verified_by_Opinet_or_empty_join"
+      },
+      {
+        "opinet_id": "A0020419",
+        "name": "태양LPG충전소",
+        "address": "전남광주통합특별시 영광군 영광읍 옥당로279",
+        "phone": "061-352-5400",
+        "checked_at": "2026-11-03T06:39:27+09:00",
+        "issuer_phone_hits": [],
+        "decision": "no_full_phone_match_in_dated_KB_snapshot",
+        "membership": "not_verified_by_Opinet_or_empty_join"
+      },
+      {
+        "opinet_id": "A0019851",
+        "name": "만재LPG충전소",
+        "address": "전남광주통합특별시 담양군 담양읍 죽향대로 1110",
+        "phone": "061-383-5896",
+        "checked_at": "2026-11-03T06:42:29+09:00",
+        "issuer_phone_hits": [],
+        "decision": "no_full_phone_match_in_dated_KB_snapshot",
+        "membership": "not_verified_by_Opinet_or_empty_join"
+      }
+    ],
+    "bank_snapshot_at": "2026-10-27T16:50:43+09:00",
+    "bank_scope": "KB_all_listed_address_options_not_all_issuers_or_payment_verification",
+    "full_phone_field": "content.tel",
+    "snapshot_ids_compared_per_station": 11385
+  },
+  "new_market_scope": {
+    "press_url": "https://www.mokpo.go.kr/www/mokpo_news/press_release/report_material?idx=548867&mode=view",
+    "press_date": "2026-09-22",
+    "annual_cutoff": "2026-07-31",
+    "markets": [
+      {
+        "market": "하당푸른솔",
+        "anchor_address": "목포시 비파로 4",
+        "registered_at": "2026-08-31",
+        "notice_url": "https://www.mokpo.go.kr/www/mokpo_news/notification/public_notice?mode=view&idx=55083",
+        "shops_in_notice_not_Onnuri_or_fuel_count": 136,
+        "change": "new",
+        "annual_market_name_matches": 0,
+        "boundary": "anchor_and_area_only_no_polygon_or_parcel_list",
+        "shop_member_inventory": "not_in_attachment",
+        "status": "pending_boundary_members_and_membership_crosscheck"
+      },
+      {
+        "market": "당가두로",
+        "anchor_address": "목포시 당가두로 24",
+        "registered_at": "2026-08-31",
+        "notice_url": "https://www.mokpo.go.kr/www/mokpo_news/notification/public_notice?mode=view&idx=55083",
+        "shops_in_notice_not_Onnuri_or_fuel_count": 102,
+        "change": "new",
+        "annual_market_name_matches": 0,
+        "boundary": "anchor_and_area_only_no_polygon_or_parcel_list",
+        "shop_member_inventory": "not_in_attachment",
+        "status": "pending_boundary_members_and_membership_crosscheck"
+      },
+      {
+        "market": "목포평화통일원형로",
+        "anchor_address": "목포시 원형동로 10",
+        "registered_at": "2026-08-31",
+        "notice_url": "https://www.mokpo.go.kr/www/mokpo_news/notification/public_notice?mode=view&idx=55083",
+        "shops_in_notice_not_Onnuri_or_fuel_count": 200,
+        "change": "new",
+        "annual_market_name_matches": 0,
+        "boundary": "anchor_and_area_only_no_polygon_or_parcel_list",
+        "shop_member_inventory": "not_in_attachment",
+        "status": "pending_boundary_members_and_membership_crosscheck"
+      },
+      {
+        "market": "텃골로십일자",
+        "anchor_address": "목포시 텃골로13번길 76",
+        "registered_at": "2026-09-16",
+        "notice_url": "https://www.mokpo.go.kr/www/mokpo_news/notification/public_notice?mode=view&idx=55187",
+        "shops_in_notice_not_Onnuri_or_fuel_count": 53,
+        "change": "new",
+        "annual_market_name_matches": 0,
+        "boundary": "anchor_and_area_only_no_polygon_or_parcel_list",
+        "shop_member_inventory": "not_in_attachment",
+        "status": "pending_boundary_members_and_membership_crosscheck"
+      },
+      {
+        "market": "비치앤팔레스",
+        "anchor_address": "목포시 청호로 206",
+        "registered_at": "2026-09-16",
+        "notice_url": "https://www.mokpo.go.kr/www/mokpo_news/notification/public_notice?mode=view&idx=55187",
+        "shops_in_notice_not_Onnuri_or_fuel_count": 34,
+        "change": "new",
+        "annual_market_name_matches": 0,
+        "boundary": "anchor_and_area_only_no_polygon_or_parcel_list",
+        "shop_member_inventory": "not_in_attachment",
+        "status": "pending_boundary_members_and_membership_crosscheck"
+      },
+      {
+        "market": "비파",
+        "anchor_address": "목포시 백년대로337번길 25",
+        "registered_at": "2026-09-16",
+        "notice_url": "https://www.mokpo.go.kr/www/mokpo_news/notification/public_notice?mode=view&idx=55187",
+        "shops_in_notice_not_Onnuri_or_fuel_count": 203,
+        "change": "new",
+        "annual_market_name_matches": 0,
+        "boundary": "anchor_and_area_only_no_polygon_or_parcel_list",
+        "shop_member_inventory": "not_in_attachment",
+        "status": "pending_boundary_members_and_membership_crosscheck"
+      },
+      {
+        "market": "옥암번영",
+        "anchor_address": "목포시 옥암로 18",
+        "registered_at": "2026-09-16",
+        "notice_url": "https://www.mokpo.go.kr/www/mokpo_news/notification/public_notice?mode=view&idx=55187",
+        "shops_in_notice_not_Onnuri_or_fuel_count": 270,
+        "change": "new",
+        "annual_market_name_matches": 0,
+        "boundary": "anchor_and_area_only_no_polygon_or_parcel_list",
+        "shop_member_inventory": "not_in_attachment",
+        "status": "pending_boundary_members_and_membership_crosscheck"
+      },
+      {
+        "market": "금호사랑",
+        "anchor_address": "목포시 백년대로375번길 29-1",
+        "registered_at": "2026-09-16",
+        "notice_url": "https://www.mokpo.go.kr/www/mokpo_news/notification/public_notice?mode=view&idx=55187",
+        "shops_in_notice_not_Onnuri_or_fuel_count": 208,
+        "change": "expanded_from_70_shops",
+        "annual_market_name_matches": 43,
+        "boundary": "anchor_and_area_only_no_polygon_or_parcel_list",
+        "shop_member_inventory": "not_in_attachment",
+        "status": "pending_boundary_members_and_membership_crosscheck"
+      }
+    ],
+    "new_markets": 7,
+    "new_market_shops": 998,
+    "expansion_extra_shops": 138,
+    "mokpo_physical_raw_rows_reviewed": 76,
+    "same_road_raw_rows": 14,
+    "same_road_leads": [
+      {
+        "source_id": "lpg_locations.json:1354",
+        "name": "(유)유정에너지",
+        "address": "전남광주통합특별시 목포시 백년대로 221",
+        "phone": null,
+        "lat": "34.8011548",
+        "lng": "126.4129181",
+        "fuel_kind": "lpg",
+        "source_date": "2026-09-11",
+        "source_url": "https://www.data.go.kr/data/15001643/fileData.do"
+      },
+      {
+        "source_id": "MA0106202201A0010120",
+        "name": "SK에너지신도시주유소",
+        "branch": "",
+        "address": "전남광주통합특별시 목포시 백년대로 281",
+        "phone": null,
+        "lat": "34.8034143716715",
+        "lng": "126.41856596769",
+        "fuel_kind": "liquid",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+      },
+      {
+        "source_id": "MA010120220805516557",
+        "name": "광은",
+        "branch": "",
+        "address": "전남광주통합특별시 목포시 비파로 54",
+        "phone": null,
+        "lat": "34.8034893590187",
+        "lng": "126.426772417825",
+        "fuel_kind": "liquid",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+      },
+      {
+        "source_id": "MA010120220807729541",
+        "name": "씨오에쓰주",
+        "branch": "",
+        "address": "전남광주통합특별시 목포시 청호로 110-1",
+        "phone": null,
+        "lat": "34.8023674260678",
+        "lng": "126.378183801191",
+        "fuel_kind": "liquid",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+      },
+      {
+        "source_id": "MA010120220807697144",
+        "name": "광장주유소",
+        "branch": "",
+        "address": "전남광주통합특별시 목포시 백년대로 234",
+        "phone": null,
+        "lat": "34.8006462421695",
+        "lng": "126.414629582662",
+        "fuel_kind": "liquid",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+      },
+      {
+        "source_id": "MA010120220808552146",
+        "name": "평화상주유소영산호현대",
+        "branch": "목포지점",
+        "address": "전남광주통합특별시 목포시 백년대로 81",
+        "phone": null,
+        "lat": "34.7992146867095",
+        "lng": "126.398335887577",
+        "fuel_kind": "liquid",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+      },
+      {
+        "source_id": "MA0101202301A0047929",
+        "name": "창조주유소",
+        "branch": "",
+        "address": "전남광주통합특별시 목포시 백년대로 197",
+        "phone": null,
+        "lat": "34.7995538916344",
+        "lng": "126.410550404901",
+        "fuel_kind": "liquid",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+      },
+      {
+        "source_id": "MA010120220809748134",
+        "name": "노벨상주유소그랑프리주유소",
+        "branch": "목포지점",
+        "address": "전남광주통합특별시 목포시 백년대로 82",
+        "phone": null,
+        "lat": "34.7986203269442",
+        "lng": "126.398449479853",
+        "fuel_kind": "liquid",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+      },
+      {
+        "source_id": "MA010120220807732547",
+        "name": "현대오일뱅크직영평화상주유소주",
+        "branch": "",
+        "address": "전남광주통합특별시 목포시 백년대로 81",
+        "phone": null,
+        "lat": "34.7992146867095",
+        "lng": "126.398335887577",
+        "fuel_kind": "liquid",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+      },
+      {
+        "source_id": "MA010120220807730889",
+        "name": "대성주유소",
+        "branch": "",
+        "address": "전남광주통합특별시 목포시 청호로 57",
+        "phone": null,
+        "lat": "34.7983305634978",
+        "lng": "126.381994978302",
+        "fuel_kind": "liquid",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+      },
+      {
+        "source_id": "MA010120220807470874",
+        "name": "kds상사",
+        "branch": "",
+        "address": "전남광주통합특별시 목포시 백년대로 281",
+        "phone": null,
+        "lat": "34.8034143716715",
+        "lng": "126.41856596769",
+        "fuel_kind": "liquid",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+      },
+      {
+        "source_id": "MA0101202502A0033680",
+        "name": "갓바위주유소",
+        "branch": "",
+        "address": "전남광주통합특별시 목포시 백년대로 190",
+        "phone": null,
+        "lat": "34.7985606426411",
+        "lng": "126.410196870298",
+        "fuel_kind": "liquid",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+      },
+      {
+        "source_id": "MA010120220807729682",
+        "name": "유정에너지",
+        "branch": "",
+        "address": "전남광주통합특별시 목포시 백년대로 221",
+        "phone": null,
+        "lat": "34.801232510524",
+        "lng": "126.412833285455",
+        "fuel_kind": "lpg",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+      },
+      {
+        "source_id": "MA010120220810057148",
+        "name": "현대셀프",
+        "branch": "",
+        "address": "전남광주통합특별시 목포시 백년대로 202-1",
+        "phone": null,
+        "lat": "34.7992978887671",
+        "lng": "126.411666832509",
+        "fuel_kind": "liquid",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+      }
+    ],
+    "same_road_is_not_boundary_inclusion_or_membership": true,
+    "attachments": [
+      {
+        "notice_url": "https://www.mokpo.go.kr/www/mokpo_news/notification/public_notice?idx=55187&mode=view",
+        "attachment_name": "목포시 골목형상점가 지정 고시.hwpx",
+        "download_endpoint": "https://eminwon.mokpo.go.kr/emwp/jsp/ofr/FileDownNew.jsp",
+        "http_status": 200,
+        "bytes": 61440,
+        "checked_at": "2026-11-03",
+        "sha256": "16c3c6d3e09f015615ce466232a124eeef4d3a9f78e83b49db99fb51df74b3db",
+        "is_zip": false,
+        "actual_format": ".hwp",
+        "file": "output/audits/three_route_trial_20261103/mokpo_notice_55187.hwp"
+      },
+      {
+        "notice_url": "https://www.mokpo.go.kr/www/mokpo_news/notification/public_notice?idx=55083&mode=view",
+        "attachment_name": "목포시 골목형상점가 지정 고시.hwpx",
+        "download_endpoint": "https://eminwon.mokpo.go.kr/emwp/jsp/ofr/FileDownNew.jsp",
+        "http_status": 200,
+        "bytes": 53760,
+        "checked_at": "2026-11-03",
+        "sha256": "63a8a8edd6029cd108267a60eca2296e4c288e20908c220fbfe15162496cc5fd",
+        "is_zip": false,
+        "actual_format": ".hwp",
+        "file": "output/audits/three_route_trial_20261103/mokpo_notice_55083.hwp"
+      }
+    ]
+  },
+  "paper_qr": {
+    "status": "attempted_no_new_current_primary_membership_proof",
+    "sources": [
+      {
+        "url": "https://economypub.tistory.com/26",
+        "published_at": "2025-06-13",
+        "leads": [
+          "현대주유소 순천 중앙로172",
+          "호남주유소 순천 팔마로9",
+          "순천주유소 강남로45"
+        ],
+        "decision": "already_mapped_secondary_claim_no_current_reconfirmation"
+      },
+      {
+        "url": "https://infospot2.anyddingyouneed.com/2026/03/2026-Onnuri-Gift-Certificate-Gas-Station-Discount.html",
+        "leads": [
+          "부원주유소 담양 죽녹원로199"
+        ],
+        "decision": "already_mapped_secondary_QR_claim_not_payment_evidence"
+      },
+      {
+        "url": "https://www.dealbada.com/bbs/board.php?bo_table=gal_free&wr_id=64598",
+        "decision": "same_Buwon_list_not_independent_confirmation"
+      },
+      {
+        "url": "https://emarryeight.tistory.com/entry/전남전북충남충북대구세종-온누리상품권-주유소-가능한-곳│종이-및-모바일-온누리상품권-사용처-주유소",
+        "published_at": "2025-09-09",
+        "paper_leads": [
+          "해제주유소 무안 신정리18-4",
+          "동부주유소 무안 현해로1441",
+          "순천주유소 강남로45",
+          "현대주유소 중앙로172",
+          "호남주유소 팔마로9"
+        ],
+        "decision": "three_already_mapped_two_historical_Muan_leads_already_in_review_not_new",
+        "primary_receipt_or_business_announcement": false
+      }
+    ],
+    "never_refresh_paper_QR_or_operator_dates_from_secondary_lists": true,
+    "no_blocked_endpoint_or_Naver_proxy_retry": true
+  },
+  "map_new_additions": 0,
+  "jeonnam_mapped_count": 28,
+  "map_or_payment_dates_changed": false,
+  "remaining": [
+    "new-market precise boundaries and member inventories",
+    "current issuer/operator evidence for any independent identity match",
+    "current primary paper/QR evidence beyond recycled lists"
+  ]
+}
