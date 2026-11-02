@@ -54,6 +54,11 @@ def parse_prices(detail):
     return prices
 
 def main():
+    import argparse
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--discovery-only',action='store_true')
+    parser.add_argument('--persist-git',action='store_true')
+    args=parser.parse_args()
     from dotenv import load_dotenv
     load_dotenv(ROOT/'.env')
     api_key=os.getenv('OPINET_API_KEY')
@@ -63,6 +68,25 @@ def main():
     budget=min(200,max(0,int(os.getenv('OPINET_DAILY_BUDGET','200'))))
     usage=read('opinet_usage.json',{})
     if usage.get('date')!=today:usage={'date':today,'attempts':0}
+    if args.discovery_only:
+        import subprocess
+        from scripts.opinet_details import collect
+        targets=json.loads((ROOT/'config/opinet-discovery-targets.json').read_text(encoding='utf-8'))['targets']
+        journal=read('opinet_discovery_details.json',{})
+        def checkpoint(shared_usage,details):
+            write('opinet_usage.json',shared_usage)
+            write('opinet_discovery_details.json',details)
+            if args.persist_git:
+                subprocess.run(['git','add','--','output/opinet_usage.json','output/opinet_discovery_details.json'],cwd=ROOT,check=True)
+                if subprocess.run(['git','diff','--cached','--quiet'],cwd=ROOT).returncode:
+                    subprocess.run(['git','commit','-m','checkpoint: Opinet independent fuel details'],cwd=ROOT,check=True,stdout=subprocess.DEVNULL)
+                    subprocess.run(['git','push','origin','HEAD:main'],cwd=ROOT,check=True)
+        with requests.Session() as session:
+            session.trust_env=False
+            count=collect(targets,usage,journal,api_key,checkpoint,session.request,
+                          budget=budget,key_param=os.getenv('OPINET_KEY_PARAM','code'))
+        print(f'전남 독립 상세정보 요청 {count}회 / 저장 {len(journal.get("details",{}))}개 / 상태 {journal.get("status")}')
+        return
     stations=read('gas_stations.json',[])
     legacy=read('opinet_cache.json',{})
     old=read('gas_prices.json',{})

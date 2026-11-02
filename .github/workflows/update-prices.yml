@@ -3,7 +3,12 @@ name: 오피넷 가격 자동 업데이트
 on:
   schedule:
     - cron: '15 0 * * *'  # KST 09:15, 기본 일일 호출 예산 내
-  workflow_dispatch:       # 수동 실행 가능
+  workflow_dispatch:
+    inputs:
+      discovery_details:
+        description: 전남 독립 연료업소 상세정보 시험만 수행 (최대 3회, 가격 예산 공유)
+        type: boolean
+        default: false
 
 concurrency:
   group: gas-map-data-write
@@ -12,6 +17,9 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      DISCOVERY_ONLY: ${{ github.event.inputs.discovery_details || 'false' }}
     permissions:
       contents: write
 
@@ -31,12 +39,20 @@ jobs:
         env:
           OPINET_API_KEY: ${{ secrets.OPINET_API_KEY }}
         run: |
-          python scripts/fetch_prices.py
+          if [ "$DISCOVERY_ONLY" = "true" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            python scripts/fetch_prices.py --discovery-only --persist-git
+          else
+            python scripts/fetch_prices.py
+          fi
 
       - name: map.html 가격 반영
+        if: env.DISCOVERY_ONLY != 'true'
         run: python scripts/sync_prices.py
 
       - name: 커밋 & 푸시
+        if: env.DISCOVERY_ONLY != 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -45,9 +61,11 @@ jobs:
           git push
 
       - name: index.html 준비
+        if: env.DISCOVERY_ONLY != 'true'
         run: python scripts/prepare_site.py
 
       - name: GitHub Pages 배포
+        if: env.DISCOVERY_ONLY != 'true'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

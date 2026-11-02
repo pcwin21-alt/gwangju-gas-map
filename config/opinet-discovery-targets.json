@@ -1,0 +1,59 @@
+{
+  "scope": "Jeonnam-only independent LPG identity pilot; no membership inference",
+  "targets": [
+    {
+      "id": "A0022485",
+      "region": "전남",
+      "name": "여수오렌지충전소",
+      "address": "전남광주통합특별시 여수시 한재로 9",
+      "independent_source": {
+        "file": "output\\alternatives\\opinet_district_audit_20261027.json",
+        "sha256": "0d5bfe637ca8dcb25730005cace7ba8ad23ab54ab57e14ce7008d0f18dc88c97",
+        "source_url": "https://www.opinet.co.kr/user/custapi/openApiInfoDtl.do?apiId=3",
+        "checked_at": "2026-10-27T15:59:30+09:00",
+        "product": "K015",
+        "registry_source_ids": [
+          "lpg_locations.json:1798",
+          "MA0101202503A0018745"
+        ]
+      },
+      "purpose": "Fill missing independent phone/address; no Onnuri membership assertion"
+    },
+    {
+      "id": "A0020419",
+      "region": "전남",
+      "name": "태양LPG충전소",
+      "address": "전남광주통합특별시 영광군 영광읍 옥당로 279 ",
+      "independent_source": {
+        "file": "output\\alternatives\\opinet_district_audit_20261027.json",
+        "sha256": "0d5bfe637ca8dcb25730005cace7ba8ad23ab54ab57e14ce7008d0f18dc88c97",
+        "source_url": "https://www.opinet.co.kr/user/custapi/openApiInfoDtl.do?apiId=3",
+        "checked_at": "2026-10-27T15:59:36+09:00",
+        "product": "K015",
+        "registry_source_ids": [
+          "lpg_locations.json:816",
+          "MA010120220807638618"
+        ]
+      },
+      "purpose": "Fill missing independent phone/address; no Onnuri membership assertion"
+    },
+    {
+      "id": "A0019851",
+      "region": "전남",
+      "name": "만재LPG충전소",
+      "address": "전남광주통합특별시 담양군 담양읍 죽향대로 1110 ",
+      "independent_source": {
+        "file": "output\\alternatives\\opinet_district_audit_20261027.json",
+        "sha256": "0d5bfe637ca8dcb25730005cace7ba8ad23ab54ab57e14ce7008d0f18dc88c97",
+        "source_url": "https://www.opinet.co.kr/user/custapi/openApiInfoDtl.do?apiId=3",
+        "checked_at": "2026-10-27T15:58:54+09:00",
+        "product": "K015",
+        "registry_source_ids": [
+          "lpg_locations.json:1507",
+          "MA0101202303A0059176"
+        ]
+      },
+      "purpose": "Fill missing independent phone/address; no Onnuri membership assertion"
+    }
+  ]
+}
