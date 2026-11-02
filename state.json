@@ -8588,8 +8588,14 @@
       "candidate_id": "d8649006e8f025dc123dffbf",
       "region": "전남광주",
       "name": "그대에너지",
-      "status": "needs_identity",
-      "reason": "Annual identity needs independent same-premise linkage or documented exclusion"
+      "status": "excluded",
+      "reason": "Annual identity needs independent same-premise linkage or documented exclusion",
+      "resolution": "excluded_non_vehicle",
+      "resolved_at": "2026-11-03T07:51:49+09:00",
+      "evidence": [
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f25f479/output/audits/regional_gap_20261102/nonfuel_reviews.json"
+      ],
+      "source_checked_at": "2026-10-25T10:51:11+09:00"
     },
     {
       "gap_id": "annual-identity:3d8d8f19bfe620a6108e4c04",
@@ -9277,10 +9283,11 @@
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f201100/output/audits/full_region_crosscheck_20261103/review_actions.json",
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/092ad8d/output/audits/region_comparison_20261103/analysis.json",
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/16c7c03/output/audits/three_route_trial_20261103/results.json",
-        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/2b72365/output/audits/portal_search_20261103/results.json"
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/2b72365/output/audits/portal_search_20261103/results.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f25f479/output/audits/regional_gap_20261102/nonfuel_reviews.json"
       ],
       "checked_at": null,
-      "last_reviewed_at": "2026-11-03T06:53:47+09:00"
+      "last_reviewed_at": "2026-11-03T07:51:49+09:00"
     },
     "전북": {
       "status": "pending",
@@ -14192,7 +14199,17 @@
           "source_url": "https://www.onnuri.gift/place",
           "match_basis": "official_place_id_address_coordinates",
           "market": "금천면 골목형상점가",
-          "candidate_ids": []
+          "candidate_ids": [],
+          "issuer_checks": {
+            "kbcard": {
+              "status": "confirmed_in_issuer_scope",
+              "issuer": "kbcard",
+              "checked_at": "2026-11-03T07:47:21+09:00",
+              "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+              "bank_id": "000000120167132",
+              "other_payment_methods": "not_reverified"
+            }
+          }
         }
       },
       {
@@ -14218,7 +14235,17 @@
           "source_url": "https://www.onnuri.gift/place",
           "match_basis": "official_place_id_address_coordinates",
           "market": "미락단지 골목형상점가",
-          "candidate_ids": []
+          "candidate_ids": [],
+          "issuer_checks": {
+            "kbcard": {
+              "status": "confirmed_in_issuer_scope",
+              "issuer": "kbcard",
+              "checked_at": "2026-11-03T07:50:24+09:00",
+              "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+              "bank_id": "000000033093565",
+              "other_payment_methods": "not_reverified"
+            }
+          }
         }
       },
       {
@@ -19999,7 +20026,7 @@
           "전남",
           "광주"
         ],
-        "status": "discovery_only",
+        "status": "excluded_non_vehicle",
         "mapped_ids": [],
         "location_ids": [],
         "paper": "Y",
@@ -21240,7 +21267,7 @@
         },
         "annual_discovery_rows": 178,
         "annual_ambiguous_region_rows": 178,
-        "annual_non_vehicle_exclusions": 11,
+        "annual_non_vehicle_exclusions": 12,
         "historic_point_lookup": {
           "fuel_records": 992,
           "mapped_address": 24,
@@ -21506,7 +21533,7 @@
         },
         "annual_discovery_rows": 178,
         "annual_ambiguous_region_rows": 178,
-        "annual_non_vehicle_exclusions": 11,
+        "annual_non_vehicle_exclusions": 12,
         "historic_point_lookup": {
           "fuel_records": 342,
           "mapped_address": 150,
@@ -21612,10 +21639,11 @@
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/fcd770a/output/audits/regional_gap_20261102/nonfuel_reviews.json",
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f201100/output/audits/full_region_crosscheck_20261103/report.json",
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/092ad8d/output/audits/region_comparison_20261103/analysis.json",
-          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/16c7c03/output/audits/three_route_trial_20261103/results.json"
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/16c7c03/output/audits/three_route_trial_20261103/results.json",
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f25f479/output/audits/regional_gap_20261102/nonfuel_reviews.json"
         ],
         "checked_at": null,
-        "last_reviewed_at": "2026-11-03T06:45:01+09:00"
+        "last_reviewed_at": "2026-11-03T07:51:49+09:00"
       },
       "membership_rechecks": {
         "status": "pending",
@@ -22537,6 +22565,16 @@
       "checked_at": "2026-11-02T17:07:23+09:00",
       "reason": "공식 연간 취급품목 커피와 동일 상호·시장명의 보관된 공식 장소 음식점업 등록이 일치한다. 이 학소로 카페 등록만 차량용 연료 후보에서 제외하며 같은 이름의 다른 사업장·온누리 가맹 자체에는 판단을 이전하지 않는다.",
       "source_record_id": "05358200010",
+      "source_checked_at": "2026-10-25T10:51:11+09:00"
+    },
+    "d8649006e8f025dc123dffbf": {
+      "status": "excluded_non_vehicle",
+      "evidence": [
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f25f479/output/audits/regional_gap_20261102/nonfuel_reviews.json"
+      ],
+      "checked_at": "2026-11-03T07:51:49+09:00",
+      "reason": "공식 연간 취급품목 축산물과 동일 상호·시장명의 보관된 운영사 축산물(02) 등록이 일치한다. 이 일곡동 축산물 개별 등록만 차량용 연료 후보에서 제외하며 다른 동명 에너지 사업장과 온누리 가맹 자체는 판정하지 않는다.",
+      "source_record_id": "05287200002",
       "source_checked_at": "2026-10-25T10:51:11+09:00"
     }
   }
