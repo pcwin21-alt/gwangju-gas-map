@@ -3,6 +3,7 @@
 Exclude legacy donation/report/reaction/analytics code and trial routing before
 packaging. Domain permissions and actual Toss runtime behavior still need testing.
 """
+import hashlib
 import json
 import re
 import shutil
@@ -82,6 +83,8 @@ def main():
     (dist / 'test-build-manifest.json').write_text(json.dumps({
         'appName': 'onnuri-fuel-map', 'buildKind': 'information_only_test_candidate',
         'runtimeVerified': False, 'externalHostsInHtml': hosts,
+        'sharedPalette': {'path': 'assets/theme.css', 'sha256': hashlib.sha256((dist / 'assets/theme.css').read_bytes()).hexdigest()},
+        'sourceHtmlSha256': hashlib.sha256(source.encode('utf-8')).hexdigest(),
         'excluded': ['donations', 'legacy_reporting', 'legacy_reactions', 'legacy_analytics', 'trial_routing', 'external_navigation_actions'],
     }, ensure_ascii=False, indent=2), encoding='utf-8')
     print('Prepared Toss information-only candidate; 5 embedded datasets preserved.')

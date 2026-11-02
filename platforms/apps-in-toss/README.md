@@ -27,3 +27,9 @@ npm run build
 추가 통과 조건: 실제 토스 앱에서 지도 렌더, 검색·필터·확대/이동 맥락 보존, 내 위치 허용/거절, 상세 닫기 복귀, Android 뒤로가기·종료, 반복 실행 상태 보존. 현재 단위 검사는 권한 거절/좌표 이상/중복 호출과 빌드 제외 항목·데이터 보존만 확인한다.
 
 공식 근거: [기존 웹 연동](https://developers-apps-in-toss.toss.im/ai-vibe-coding/tutorials/webview.md), [비게임 가이드](https://developers-apps-in-toss.toss.im/checklist/app-nongame.md), [Device.getLocation](https://developers-apps-in-toss.toss.im/documentation/sdk/domains-api/device/device.getlocation.md), [토스 앱 테스트·도메인](https://developers-apps-in-toss.toss.im/guide/operation/toss.md). 실제 설치한 SDK `3.9.0`의 타입과 CLI를 함께 확인했다.
+
+## 2026-11-02 공통 팔레트 반영
+
+최신 웹의 검색·지역·필터·메뉴·목록·상세·도움말·순위·업데이트 화면을 공유한다. `assets/theme.css`의 Sand / Indigo / Jade / Sage 토큰이 두 빌드의 공통 원천이다. 플랫폼은 기존 라이트 모드를 유지하고 `brand.primaryColor`도 Jade 12 `#1D3B31`로 맞췄다. 본문 Sand 1 `#FDFDFC`, 정보 Indigo 12 `#1F2D5C`, 주요 행동 Jade 12, 선택 Sage 3을 사용한다.
+
+`dist/test-build-manifest.json`에 실제 복사된 공통 CSS와 원본 HTML의 SHA-256을 남긴다. 기존 정보 조회용 제외 항목과 5개 데이터 보존 검사는 유지한다. 생성된 `.ait`는 새 테스트 후보이며 콘솔 업로드·실기기 확인·심사 제출을 대신하지 않는다.
