@@ -13,7 +13,7 @@
       "status": "active",
       "url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
       "scope": "Public unauthenticated Onnuri merchant form; issuer-specific evidence only; limits are our load caps, not a provider guarantee",
-      "next_allowed_at": 1793600428.9641812,
+      "next_allowed_at": 1793600431.582006,
       "volume_ramp": {
         "stage": "pilot",
         "started_at": 1793556784.2048566,
@@ -478,7 +478,7 @@
       "job_id": "d9442ced3e91e90c58403941",
       "source": "kbcard",
       "at": 1793600248.9641812,
-      "status": "reserved",
+      "status": "done",
       "run_id": "738763108cb547539059cf22f328bdf5",
       "request": {
         "method": "POST",
@@ -495,7 +495,12 @@
           "endRow": 10,
           "mmcNm": ""
         }
-      }
+      },
+      "request_started_at": 1793600250.4194312,
+      "network_duration_seconds": 0.9414477348327637,
+      "http_status": 200,
+      "response_sha256": "eca24c72472a69897cb4a374023991089c9351104f628cae5f2d41f626054c6e",
+      "finished_at": 1793600251.5819616
     }
   ],
   "jobs": [
@@ -1509,11 +1514,19 @@
       },
       "logical_key": "d9442ced3e91e90c58403941",
       "id": "d9442ced3e91e90c58403941",
-      "status": "pending",
+      "status": "done",
       "attempts": 1,
       "page": 1,
-      "observed_ids": [],
-      "candidate_ids": []
+      "observed_ids": [
+        "000000116009178",
+        "000000111058292",
+        "000000110073791",
+        "000000050080021"
+      ],
+      "candidate_ids": [],
+      "expected": 4,
+      "last_observed_at": "2026-11-02T15:17:31+09:00",
+      "result": "observations_saved"
     },
     {
       "kind": "kb_search",
@@ -6988,6 +7001,13 @@
       "checked_at": "2026-11-02T15:14:26+09:00",
       "independent_fuel_candidate_ids": [],
       "reason": "Independent exact business/address/category evidence incomplete; do not exclude by bank category alone"
+    },
+    {
+      "region": "전남",
+      "station_id": "onnuri:14499200032",
+      "job_id": "d9442ced3e91e90c58403941",
+      "checked_at": "2026-11-02T15:17:31+09:00",
+      "reason": "No independently matched current issuer record; preserve previous station"
     }
   ],
   "source_gaps": [
@@ -21021,6 +21041,12 @@
       "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
       "bank_id": "000000037510191",
       "other_payment_methods": "not_reverified"
+    },
+    "onnuri:14499200032": {
+      "status": "needs_review_not_found",
+      "checked_at": "2026-11-02T15:17:31+09:00",
+      "job_id": "d9442ced3e91e90c58403941",
+      "nonmembership": "not_established"
     }
   },
   "initial_plan_id": "fuel-candidate-inventory-20261102-v1",
