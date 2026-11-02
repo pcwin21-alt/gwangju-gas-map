@@ -13,7 +13,7 @@
       "status": "active",
       "url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
       "scope": "Public unauthenticated Onnuri merchant form; issuer-specific evidence only; limits are our load caps, not a provider guarantee",
-      "next_allowed_at": 1793648315.2858791,
+      "next_allowed_at": 1793648318.4390423,
       "volume_ramp": {
         "stage": "pilot",
         "started_at": 1793556784.2048566,
@@ -623,7 +623,7 @@
       "job_id": "4a02bb3414892127d2b9856f",
       "source": "kbcard",
       "at": 1793648135.2858791,
-      "status": "reserved",
+      "status": "done",
       "run_id": "a203bae157bb4799b2808389dcaa44bc",
       "request": {
         "method": "POST",
@@ -640,7 +640,12 @@
           "endRow": 10,
           "mmcNm": ""
         }
-      }
+      },
+      "request_started_at": 1793648136.6593466,
+      "network_duration_seconds": 1.4045207500457764,
+      "http_status": 200,
+      "response_sha256": "39dcdcba472a65e0f1c3b176286144b39b40ff6f33ad8d4a47cee2765f8bb86a",
+      "finished_at": 1793648138.438985
     }
   ],
   "jobs": [
@@ -1951,11 +1956,20 @@
       },
       "logical_key": "4a02bb3414892127d2b9856f",
       "id": "4a02bb3414892127d2b9856f",
-      "status": "pending",
+      "status": "done",
       "attempts": 1,
       "page": 1,
-      "observed_ids": [],
-      "candidate_ids": []
+      "observed_ids": [
+        "000000121636039",
+        "000000070212622",
+        "000000100442115",
+        "000000103971513",
+        "000000083811970"
+      ],
+      "candidate_ids": [],
+      "expected": 5,
+      "last_observed_at": "2026-11-03T04:35:38+09:00",
+      "result": "observations_saved"
     },
     {
       "kind": "kb_search",
@@ -7435,6 +7449,54 @@
         "지번주소": "전남광주통합특별시 보성군 보성읍 보성리 346",
         "위도": "34.7768899601977",
         "경도": "127.089113185852",
+        "region": "전남"
+      },
+      "commercial_source": {
+        "archive_sha256": "57aa361544108ff4fc73334f87d2ced61e41fe8638dd70bcd842930f865d2386",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+        "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
+      },
+      "annual_candidate_ids": []
+    },
+    {
+      "identity_review": "same_premise_confirmed",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "checked_at": "2026-11-03T04:35:38+09:00",
+      "bank_record": {
+        "location": {
+          "lat": "34.7719225187",
+          "lng": "127.093531174"
+        },
+        "content": {
+          "tel": "061)853-9731",
+          "title": "다향에너지주식회사",
+          "category": "충전소",
+          "address": "전남 보성군 보성읍 ",
+          "distance": "8",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000121636039",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        }
+      },
+      "commercial_record": {
+        "상가업소번호": "MA0101202604A0016728",
+        "상호명": "다향에너지",
+        "지점명": "",
+        "상권업종소분류코드": "G21402",
+        "상권업종소분류명": "가스 충전소",
+        "표준산업분류코드": "G47712",
+        "표준산업분류명": "운송장비용 가스 충전업",
+        "시군구명": "보성군",
+        "도로명주소": "전남광주통합특별시 보성군 보성읍 용문길 11",
+        "지번주소": "전남광주통합특별시 보성군 보성읍 보성리 342-20",
+        "위도": "34.7719199072915",
+        "경도": "127.093444707314",
         "region": "전남"
       },
       "commercial_source": {
@@ -21730,6 +21792,14 @@
       "checked_at": "2026-11-03T01:18:58+09:00",
       "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
       "bank_id": "000000025825147",
+      "other_payment_methods": "not_reverified"
+    },
+    "onnuri:18800200044": {
+      "status": "confirmed_in_issuer_scope",
+      "issuer": "kbcard",
+      "checked_at": "2026-11-03T04:35:38+09:00",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "bank_id": "000000121636039",
       "other_payment_methods": "not_reverified"
     }
   },
