@@ -11,6 +11,7 @@ import re
 import subprocess
 import time
 import uuid
+from collections import Counter
 from datetime import datetime, timezone, timedelta
 from email.utils import parsedate_to_datetime
 from pathlib import Path
@@ -368,6 +369,33 @@ def summarize(state):
     return result
 
 
+DISCOVERY_PURPOSES = {'annual_reverse_discovery', 'full_inventory_identity_followup'}
+
+
+def ordered_jobs(state, policy, run_id, active_region):
+    """Give discovery a turn without moving regions or rewriting checkpoints.
+
+    Only order KB slots; portal dependency jobs keep their existing positions.
+    Availability, quotas, blocked sources and page handling are checked by run.
+    """
+    if not active_region:
+        return list(state['jobs'])
+    target = max(0, int(policy.get('discovery_first_requests_per_run', 0)))
+    jobs_by_id = {j['id']: j for j in state['jobs']}
+    used = sum(a.get('run_id') == run_id and a.get('source') == 'kbcard' and
+               jobs_by_id.get(a.get('job_id'), {}).get('purpose') in DISCOVERY_PURPOSES
+               for a in state['attempts'])
+    if used >= target:
+        return list(state['jobs'])
+    favored = {j['id'] for j in state['jobs'] if j['status'] == 'pending' and
+               j['source'] == 'kbcard' and j.get('region') == active_region and
+               j.get('purpose') in DISCOVERY_PURPOSES}
+    kb = [j for j in state['jobs'] if j['source'] == 'kbcard']
+    kb.sort(key=lambda j: j['id'] not in favored)
+    ordered = iter(kb)
+    return [next(ordered) if j['source'] == 'kbcard' else j for j in state['jobs']]
+
+
 def run(state, store, policy, session, commercial, commercial_source, *, clock=time.time, sleeper=time.sleep, max_requests=5):
     maximum = min(max_requests, run_limit(state, policy, clock()))
     if maximum < 0:
@@ -395,7 +423,7 @@ def run(state, store, policy, session, commercial, commercial_source, *, clock=t
         now = clock()
         chosen, earliest = None, None
         progress = regional_progress(state)
-        for job in state['jobs']:
+        for job in ordered_jobs(state, policy, run_id, progress['active_region'] if progress else None):
             if job['status'] != 'pending':
                 continue
             if progress and job.get('region') != progress['active_region']:
@@ -486,7 +514,11 @@ def run(state, store, policy, session, commercial, commercial_source, *, clock=t
             break
     limits_snapshot(state, policy, clock())
     state['summary'] = summarize(state)
-    state['last_run'] = {'id': run_id, 'checked_at': stamp(clock()), 'requests': count}
+    jobs_by_id = {j['id']: j for j in state['jobs']}
+    purposes = Counter(jobs_by_id[a['job_id']].get('purpose', jobs_by_id[a['job_id']]['kind'])
+                       for a in state['attempts'] if a.get('run_id') == run_id)
+    state['last_run'] = {'id': run_id, 'checked_at': stamp(clock()), 'requests': count,
+                         'request_purposes': dict(purposes)}
     store.save(state)
     return state['summary']
 

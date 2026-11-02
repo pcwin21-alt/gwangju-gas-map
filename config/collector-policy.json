@@ -3,6 +3,7 @@
   "interval_seconds": 180,
   "requests_per_run": 3,
   "requests_per_24h": 24,
+  "discovery_first_requests_per_run": 1,
   "volume_ramp": {
     "enabled": true,
     "sources": ["kbcard"],

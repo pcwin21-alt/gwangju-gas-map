@@ -6,7 +6,7 @@ import unittest
 from pathlib import Path
 from unittest.mock import Mock
 
-from scripts.incremental_collector import initial_state, run, retry_after, request_for, corroborate, Store, summarize, configure_regions
+from scripts.incremental_collector import initial_state, run, retry_after, request_for, corroborate, Store, summarize, configure_regions, ordered_jobs
 from scripts.collector_policy import require_managed_collection
 
 
@@ -55,6 +55,50 @@ class CollectorTests(unittest.TestCase):
         s=self.state(1); self.assertEqual(self.execute(s)['status'], 'complete')
         self.clock.value+=21600; self.execute(s)
         self.assertEqual(self.session.request.call_count,1)
+
+    def test_discovery_gets_one_turn_then_existing_checks_resume(self):
+        s = self.state(4)
+        for j in s['jobs']:
+            j['purpose'] = 'post_renewal_recheck'
+        s['jobs'][-1]['purpose'] = 'annual_reverse_discovery'
+        self.policy.update(discovery_first_requests_per_run=1, region_order=['전남', '전북'])
+        original = copy.deepcopy(s['jobs'])
+        self.execute(s, 3)
+        self.assertEqual([a['job_id'] for a in s['attempts']], ['3', '0', '1'])
+        self.assertEqual([j['id'] for j in s['jobs']], [j['id'] for j in original])
+        self.assertEqual(s['last_run']['requests'], 3)
+        self.assertEqual(s['last_run']['request_purposes'],
+                         {'annual_reverse_discovery': 1, 'post_renewal_recheck': 2})
+
+    def test_discovery_order_keeps_portal_dependency_slots_and_other_regions(self):
+        s = self.state(3)
+        s['jobs'][0]['purpose'] = 'post_renewal_recheck'
+        s['jobs'][1].update(purpose='annual_reverse_discovery', region='전북')
+        s['jobs'][2]['purpose'] = 'full_inventory_identity_followup'
+        portal = {**job(9, 'onnuri'), 'kind': 'annual_page', 'status': 'pending'}
+        s['jobs'].insert(1, portal)
+        self.policy['discovery_first_requests_per_run'] = 1
+        before = copy.deepcopy(s)
+        result = ordered_jobs(s, self.policy, 'new', '전남')
+        self.assertEqual(result[0]['id'], '2')
+        self.assertEqual(result[1], portal)
+        self.assertEqual(s, before)
+
+    def test_discovery_preference_cannot_bypass_daily_budget(self):
+        s = self.state(2)
+        s['jobs'][-1]['purpose'] = 'annual_reverse_discovery'
+        self.policy.update(discovery_first_requests_per_run=1, region_order=['전남', '전북'])
+        s['attempts'] = [{'source': 'kbcard', 'at': self.clock()-300+i, 'status': 'done'} for i in range(20)]
+        self.execute(s, 3)
+        self.session.request.assert_not_called()
+
+    def test_discovery_preference_does_not_query_next_region(self):
+        s = self.state(2)
+        s['jobs'][0]['purpose'] = 'post_renewal_recheck'
+        s['jobs'][1].update(region='전북', purpose='annual_reverse_discovery')
+        self.policy.update(discovery_first_requests_per_run=1, region_order=['전남', '전북'])
+        self.execute(s, 3)
+        self.assertEqual([a['job_id'] for a in s['attempts']], ['0'])
 
     def test_waits_after_response_not_only_before_git_push(self):
         transmissions=[]
