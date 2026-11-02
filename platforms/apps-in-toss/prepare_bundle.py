@@ -38,8 +38,16 @@ def prepare(html):
     html = re.sub(r'<meta[^>]+(?:og:url|og:image|twitter:image)[^>]*>', '', html)
     html = html.replace('<html lang="ko">', '<html lang="ko" data-theme="light" style="color-scheme:light">')
     html = html.replace('content="light dark"', 'content="light"')
+    # The native navigation replaces the public header; keep its menu reachable.
+    menu = re.search(r'<button\b[^>]*\bid="toolsOpenBtn"[^>]*>[\s\S]*?</button>', html)
+    if not menu:
+        raise ValueError('Shared menu button missing; review the platform navigation.')
+    html = html[:menu.start()] + html[menu.end():]
+    html, count = re.subn(r'(<nav class="search-modes"[^>]*>[\s\S]*?)(</nav>)', lambda m: m[1] + menu[0] + m[2], html, count=1)
+    if count != 1:
+        raise ValueError('Shared search tools missing; menu cannot be exposed.')
     style = '''<style>
-      .header,.theme-picker,#tripLauncher,#tripPanel,.station-via,.info-overlay .route-actions,
+      .header,.theme-picker,#routeModeBtn,#tripLauncher,#tripPanel,.station-via,.info-overlay .route-actions,
       #coffeeBtn,#coffeeModal,#reportTriggerBtn,#reportPanel,#reportBanner,
       #reactFloatBtn,#reactPanel,.react-banner,.react-footer,.header-stats,
       #nearbyBtn,.tools-contact {display:none!important}
