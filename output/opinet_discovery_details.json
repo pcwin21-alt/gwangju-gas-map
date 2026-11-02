@@ -9,6 +9,12 @@
       "status": "done",
       "http_status": 200,
       "finished_at": 1793655385.737736
+    },
+    {
+      "id": "A0020419",
+      "region": "전남",
+      "reserved_at": 1793655565.7378619,
+      "status": "reserved"
     }
   ],
   "details": {
