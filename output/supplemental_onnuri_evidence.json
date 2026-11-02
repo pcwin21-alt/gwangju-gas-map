@@ -1327,6 +1327,198 @@
         "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
       },
       "annual_candidate_ids": []
+    },
+    {
+      "identity_review": "same_premise_confirmed",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "checked_at": "2026-11-03T01:12:46+09:00",
+      "bank_record": {
+        "location": {
+          "lat": "34.9703233967",
+          "lng": "126.3854175071"
+        },
+        "content": {
+          "tel": "061)802-0021",
+          "title": "공항에너지",
+          "category": "주유소",
+          "address": "전남 무안군 망운면 ",
+          "distance": "10",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000108555012",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        }
+      },
+      "commercial_record": {
+        "상가업소번호": "MA0101202212A0090887",
+        "상호명": "공항에너지",
+        "지점명": "",
+        "상권업종소분류코드": "G21401",
+        "상권업종소분류명": "주유소",
+        "표준산업분류코드": "G47711",
+        "표준산업분류명": "운송장비용 주유소 운영업",
+        "시군구명": "무안군",
+        "도로명주소": "전남광주통합특별시 무안군 망운면 청운로 767",
+        "지번주소": "전남광주통합특별시 무안군 망운면 피서리 809-36",
+        "위도": "34.9703771845017",
+        "경도": "126.385501769027",
+        "region": "전남"
+      },
+      "commercial_source": {
+        "archive_sha256": "57aa361544108ff4fc73334f87d2ced61e41fe8638dd70bcd842930f865d2386",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+        "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
+      },
+      "annual_candidate_ids": []
+    },
+    {
+      "identity_review": "same_premise_confirmed",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "checked_at": "2026-11-03T01:15:50+09:00",
+      "bank_record": {
+        "location": {
+          "lat": "35.0468513218",
+          "lng": "126.8414562348"
+        },
+        "content": {
+          "tel": "061)331-2008",
+          "title": "남평주유소",
+          "category": "주유소",
+          "address": "전남 나주시 남평읍 ",
+          "distance": "36",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000078287556",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        }
+      },
+      "commercial_record": {
+        "상가업소번호": "MA010120220807496308",
+        "상호명": "남평주유소",
+        "지점명": "",
+        "상권업종소분류코드": "G21401",
+        "상권업종소분류명": "주유소",
+        "표준산업분류코드": "G47711",
+        "표준산업분류명": "운송장비용 주유소 운영업",
+        "시군구명": "나주시",
+        "도로명주소": "전남광주통합특별시 나주시 남평읍 남평1로 36",
+        "지번주소": "전남광주통합특별시 나주시 남평읍 남평리 78",
+        "위도": "35.0469499452068",
+        "경도": "126.841794967919",
+        "region": "전남"
+      },
+      "commercial_source": {
+        "archive_sha256": "57aa361544108ff4fc73334f87d2ced61e41fe8638dd70bcd842930f865d2386",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+        "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
+      },
+      "annual_candidate_ids": []
+    },
+    {
+      "identity_review": "same_premise_confirmed",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "checked_at": "2026-11-03T01:15:50+09:00",
+      "bank_record": {
+        "location": {
+          "lat": "35.0471940076",
+          "lng": "126.8436075806"
+        },
+        "content": {
+          "tel": "061)331-2331",
+          "title": "광남주유소",
+          "category": "주유소",
+          "address": "전남 나주시 남평읍 ",
+          "distance": "165",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000034326741",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        }
+      },
+      "commercial_record": {
+        "상가업소번호": "MA010120220807741317",
+        "상호명": "광남주유소",
+        "지점명": "",
+        "상권업종소분류코드": "G21401",
+        "상권업종소분류명": "주유소",
+        "표준산업분류코드": "G47711",
+        "표준산업분류명": "운송장비용 주유소 운영업",
+        "시군구명": "나주시",
+        "도로명주소": "전남광주통합특별시 나주시 남평읍 남평1로 54",
+        "지번주소": "전남광주통합특별시 나주시 남평읍 남평리 16-1",
+        "위도": "35.0472136457652",
+        "경도": "126.84357007785",
+        "region": "전남"
+      },
+      "commercial_source": {
+        "archive_sha256": "57aa361544108ff4fc73334f87d2ced61e41fe8638dd70bcd842930f865d2386",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+        "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
+      },
+      "annual_candidate_ids": []
+    },
+    {
+      "identity_review": "same_premise_confirmed",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "checked_at": "2026-11-03T01:18:58+09:00",
+      "bank_record": {
+        "location": {
+          "lat": "34.7768886668",
+          "lng": "127.0891189623"
+        },
+        "content": {
+          "tel": "061)852-2357",
+          "title": "광주주유소",
+          "category": "주유소",
+          "address": "전남 보성군 보성읍 ",
+          "distance": "0",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000025825147",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        }
+      },
+      "commercial_record": {
+        "상가업소번호": "MA010120220807849360",
+        "상호명": "광주주유소",
+        "지점명": "",
+        "상권업종소분류코드": "G21401",
+        "상권업종소분류명": "주유소",
+        "표준산업분류코드": "G47711",
+        "표준산업분류명": "운송장비용 주유소 운영업",
+        "시군구명": "보성군",
+        "도로명주소": "전남광주통합특별시 보성군 보성읍 송재로 279",
+        "지번주소": "전남광주통합특별시 보성군 보성읍 보성리 346",
+        "위도": "34.7768899601977",
+        "경도": "127.089113185852",
+        "region": "전남"
+      },
+      "commercial_source": {
+        "archive_sha256": "57aa361544108ff4fc73334f87d2ced61e41fe8638dd70bcd842930f865d2386",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+        "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
+      },
+      "annual_candidate_ids": []
     }
   ]
 }
