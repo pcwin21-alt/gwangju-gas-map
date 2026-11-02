@@ -79,3 +79,11 @@
 이번 변경은 기존 사용자 과업과 Toss UX·codex-delivery-loop·하네스 Global/Software UX 계약에 따른 작은 UI 수정이다. 입력은 사용자 세 요청과 현재 공통 소스, 수락 조건은 세 항목의 화면 반영·삭제 버튼 참조 부재·결제 데이터/계산 불변·조회/닫기 초점 복구이며 출력은 웹/앱인토스 공통 소스와 배포 검증이다. 조사 자동화·새 결제수단 데이터·다른 지역의 지원 추정·서브에이전트는 제외한다.
 
 기존 JS 103개 검사를 통과했다. 소스에서 삭제 버튼/전용 CSS/이전 조회 문구/상생카드 UI 문자열이 남지 않은 것을 확인했다. 기존 결제/번역/초점 복귀 검사의 기대 표시만 새 명칭으로 맞췄다. 로컬 320×740(200% 글자), 390×844, 1280×800 × 한국어/영어 × 라이트/다크 × 지도/필터의 24조합에서 새 문구·지역화폐 필터·삭제 버튼 부재를 확인했고, 가로 넘침·줌과 겹침은 없었다. 증거는 Playground `output/currency-map-labels-20261102/`에 저장했다. 네트워크 없는 검수 화면이며 실제 지도 동작은 공개 반영 후 따로 확인한다.
+
+### 명칭 정리 공개·플랫폼 확인
+
+수정 `9fb9121`의 [배포 41418646422](https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41418646422), [전체 회귀 검사 41418646426](https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41418646426), [Pages 게시 41418665933](https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41418665933)가 성공했다. 공개 `v=9fb9121`의 390×844 / 1280×800에서 새 조회 문구·지역화폐 조건 요약·삭제 버튼 부재를 확인했다. 실제 지역화폐 필터의 내부 키는 saengsaeng을 유지했고, 이번 화면 범위 조회 71곳의 결제 표시는 ‘광주 지역화폐’였다. 목록·실제 상세·닫기 복귀가 동작하고 조회 전후 축척 8km도 동일했다. 지역화폐 필터를 다시 선택한 뒤 모바일 화면을 저장하고 임시 viewport를 복원했다. 현재 등록 자료에 따른 확인이며 다른 지역의 지역화폐 지원을 새로 확인한 것이 아니다.
+
+이 수정 전후 HTML의 STATIONS/PRICES/PRICE_INFO/MERCHANT_STATUS/NATIONAL_PENDING 다섯 상수가 정확히 같음을 별도로 검증했다. 앱인토스 플랫폼 검사 7개와 5개 데이터 보존도 통과했다. 빌드 ID는 `01a19b87-5a51-7322-9558-4ca03bdf6c2c`, `.ait` SHA-256은 `3bbacb733b1c1f7a06aefc5e96c870a32b08690afb9cc4cbbb49ff73dc877cfe`다. ZIP 내부 새 문구·지역화폐 필터/결제 표시와 fitResultsBtn 부재를 확인했다. 전달 파일은 Playground `output/apps-in-toss-currency-labels-20261102/onnuri-fuel-map.ait`이다. 이전 파일은 보존했다. 콘솔 업로드·실제 토스 앱·물리 휴대전화 검증·심사 제출은 수행하지 않았다.
+
+공개 동작 기록 `public-check.json`, `public-desktop-check.json`과 캡처 `public-mobile.png`는 위 증거 폴더에 있다. GPS·경유/발급사 원천 조회를 실행하지 않았다. 변경 범위의 Global/Software UX Gate를 통과했다.
