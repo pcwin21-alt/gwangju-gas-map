@@ -135,5 +135,9 @@
     }
   },
   "status": "active",
-  "next_allowed_at": 1793655929.7824404
+  "next_allowed_at": 1793655929.7824404,
+  "last_run": {
+    "checked_at": "2026-11-03T06:42:30+09:00",
+    "requests": 3
+  }
 }
