@@ -1,0 +1,260 @@
+{
+  "schema_version": 1,
+  "checked_on_kst": "2026-11-02",
+  "research_status": "complete",
+  "submission_status": "not_submitted_by_this_research",
+  "method": "Three sequential passes: policy; operating cases and distribution; counterevidence, freshness and project-gap verification.",
+  "boundaries": [
+    "No account, token or browser-profile inspection.",
+    "No support message, console submission, advertising spend or application code change.",
+    "Interviews and operator self-reports are not audited longitudinal outcome data."
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "question": "Approval conditions",
+      "gap_to_next": "Policies alone do not explain use, retention, distribution or operating outcomes."
+    },
+    {
+      "round": 2,
+      "question": "Continuing use and exposure",
+      "gap_to_next": "Selected success stories, unmatched observation periods, infrequent utility usage and actual candidate drift."
+    },
+    {
+      "round": 3,
+      "question": "Counterevidence, current policy and candidate applicability",
+      "remaining_unknowns": [
+        "Final automotive eligibility",
+        "Actual Toss runtime",
+        "Private recommendation thresholds",
+        "Audited long-term profitability",
+        "Our user retention"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "policy",
+      "url": "https://developers-apps-in-toss.toss.im/intro/guide.md",
+      "source_type": "official_policy",
+      "published_on": null,
+      "used_in_rounds": [
+        1,
+        3
+      ],
+      "scope_or_limit": "Automotive restriction and allowed service scope; no app-specific eligibility result.",
+      "access": "Read during this research; public web/documentation, not console evidence."
+    },
+    {
+      "id": "non_game",
+      "url": "https://developers-apps-in-toss.toss.im/checklist/app-nongame.md",
+      "source_type": "official_release_checklist",
+      "published_on": null,
+      "used_in_rounds": [
+        1,
+        3
+      ],
+      "scope_or_limit": "Runtime, navigation, permissions and light-theme requirements.",
+      "access": "Read during this research; public web/documentation, not console evidence."
+    },
+    {
+      "id": "registration",
+      "url": "https://developers-apps-in-toss.toss.im/guide/operation/console-workspace",
+      "source_type": "official_operations",
+      "published_on": null,
+      "used_in_rounds": [
+        1,
+        3
+      ],
+      "scope_or_limit": "Registration, review and release are separate; review guide says 3-7 business days.",
+      "access": "Read during this research; public web/documentation, not console evidence."
+    },
+    {
+      "id": "runtime",
+      "url": "https://developers-apps-in-toss.toss.im/guide/operation/toss.md",
+      "source_type": "official_technical_documentation",
+      "published_on": null,
+      "used_in_rounds": [
+        1,
+        3
+      ],
+      "scope_or_limit": "Actual Toss-app testing and SDK-version-specific origins.",
+      "access": "Read during this research; public web/documentation, not console evidence."
+    },
+    {
+      "id": "exposure",
+      "url": "https://developers-apps-in-toss.toss.im/guide/exposure",
+      "source_type": "official_distribution_policy",
+      "published_on": null,
+      "used_in_rounds": [
+        2,
+        3
+      ],
+      "scope_or_limit": "Launch, recommendation and boosting criteria; no guaranteed traffic.",
+      "access": "Read during this research; public web/documentation, not console evidence."
+    },
+    {
+      "id": "exposure_faq",
+      "url": "https://toss.im/apps-in-toss/blog/mini-app-exposure-faq",
+      "source_type": "official_explanation",
+      "published_on": "2026-10-06",
+      "used_in_rounds": [
+        2,
+        3
+      ],
+      "scope_or_limit": "Cold start, category comparison and ongoing reevaluation.",
+      "access": "Read during this research; public web/documentation, not console evidence."
+    },
+    {
+      "id": "metrics",
+      "url": "https://toss.im/apps-in-toss/blog/recommended-mini-app-metrics-guide",
+      "source_type": "official_explanation",
+      "published_on": "2026-10-12",
+      "used_in_rounds": [
+        2,
+        3
+      ],
+      "scope_or_limit": "Illustrative rates are not thresholds; retention, conversion, reviews and performance.",
+      "access": "Read during this research; public web/documentation, not console evidence."
+    },
+    {
+      "id": "metric_config",
+      "url": "https://developers-apps-in-toss.toss.im/guide/analytics/conversion-metrics",
+      "source_type": "official_technical_documentation",
+      "published_on": null,
+      "used_in_rounds": [
+        2,
+        3
+      ],
+      "scope_or_limit": "One activation metric, at most three conversion metrics and one primary conversion.",
+      "access": "Read during this research; public web/documentation, not console evidence."
+    },
+    {
+      "id": "events",
+      "url": "https://developers-apps-in-toss.toss.im/guide/analytics/logging",
+      "source_type": "official_technical_documentation",
+      "published_on": null,
+      "used_in_rounds": [
+        3
+      ],
+      "scope_or_limit": "Meaningful events, privacy limits and production-only analytics availability.",
+      "access": "Read during this research; public web/documentation, not console evidence."
+    },
+    {
+      "id": "september_update",
+      "url": "https://toss.im/apps-in-toss/blog/update-26-09-23",
+      "source_type": "official_announcement",
+      "published_on": "2026-09-23",
+      "used_in_rounds": [
+        2,
+        3
+      ],
+      "scope_or_limit": "Exposure change effective 2026-10-22.",
+      "access": "Read during this research; public web/documentation, not console evidence."
+    },
+    {
+      "id": "operational_review",
+      "url": "https://toss.im/apps-in-toss/blog/update-26-09-10",
+      "source_type": "official_announcement",
+      "published_on": "2026-09-10",
+      "used_in_rounds": [
+        1,
+        3
+      ],
+      "scope_or_limit": "Existing-app review, no individual pre-judgment in chat, ad smart-push closure and revised SDK deadline.",
+      "access": "Read during this research; public web/documentation, not console evidence."
+    },
+    {
+      "id": "ad_business_deferral",
+      "url": "https://toss.im/apps-in-toss/blog/update-26-08-27",
+      "source_type": "official_announcement",
+      "published_on": "2026-08-27",
+      "used_in_rounds": [
+        1,
+        3
+      ],
+      "scope_or_limit": "Limited ad business-registration deferral; older origin guidance must be checked against current runtime docs.",
+      "access": "Read during this research; public web/documentation, not console evidence."
+    },
+    {
+      "id": "ad_quality",
+      "url": "https://toss.im/apps-in-toss/blog/apps-in-toss-interstitial-ad-guide",
+      "source_type": "official_explanation",
+      "published_on": "2026-10-20",
+      "used_in_rounds": [
+        2,
+        3
+      ],
+      "scope_or_limit": "Ad timing, advertiser conversion and revenue uncertainty.",
+      "access": "Read during this research; public web/documentation, not console evidence."
+    },
+    {
+      "id": "geuneulro",
+      "url": "https://toss.im/apps-in-toss/blog/geuneulro",
+      "source_type": "platform_selected_partner_interview",
+      "published_on": "2026-08-14",
+      "used_in_rounds": [
+        2,
+        3
+      ],
+      "scope_or_limit": "Seasonal local-map value and data processing; not longitudinal survival evidence.",
+      "access": "Read during this research; public web/documentation, not console evidence."
+    },
+    {
+      "id": "cookie_map",
+      "url": "https://toss.im/apps-in-toss/blog/dubaicookiemap",
+      "source_type": "platform_selected_partner_interview",
+      "published_on": null,
+      "used_in_rounds": [
+        2,
+        3
+      ],
+      "scope_or_limit": "Stock accuracy and functional notifications; reported growth predates October policy changes.",
+      "access": "Read during this research; public web/documentation, not console evidence."
+    },
+    {
+      "id": "groundcode",
+      "url": "https://toss.im/apps-in-toss/blog/groundcode",
+      "source_type": "platform_selected_partner_interview",
+      "published_on": "2026-04-24",
+      "used_in_rounds": [
+        2,
+        3
+      ],
+      "scope_or_limit": "Target audience, repeated task and user feedback; revenue is not audited profit.",
+      "access": "Read during this research; public web/documentation, not console evidence."
+    },
+    {
+      "id": "traffic_counterexample",
+      "url": "https://fadongkwon.com/ko/posts/toss-exposure-policy-revenue-drop/",
+      "source_type": "operator_self_report",
+      "published_on": "2026-10-25",
+      "used_in_rounds": [
+        2,
+        3
+      ],
+      "scope_or_limit": "Single operator; before/after traffic does not establish policy causation.",
+      "access": "Read during this research; public web/documentation, not console evidence."
+    },
+    {
+      "id": "platform_release",
+      "url": "https://toss.im/newsroom/apps-in-toss-10000",
+      "source_type": "platform_press_release",
+      "published_on": "2026-08-14",
+      "used_in_rounds": [
+        3
+      ],
+      "scope_or_limit": "Account revenue incidence is not profit or survival rate.",
+      "access": "Read during this research; public web/documentation, not console evidence."
+    }
+  ],
+  "local_observations": {
+    "web_head": "09d53f4",
+    "platform_candidate_head": "373cd8c",
+    "platform_sdk_declared": "3.9.0",
+    "platform_source_has_latest_map_search_tools": false,
+    "platform_source_has_responsive_ui_css": false,
+    "platform_adapters_have_explicit_analytics_calls": false,
+    "account_state_basis": "Existing APPLICATION_20261101.md, application-draft.json and output/apps-in-toss-20261102/STATUS.json; no fresh console check."
+  }
+}
