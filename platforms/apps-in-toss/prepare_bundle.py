@@ -55,6 +55,11 @@ def prepare(html):
     </style>'''
     html = html.replace('</head>', style + '\n</head>')
     html = html.replace('</body>', '<script type="module" src="assets/toss-adapter.js"></script>\n</body>')
+    # Help must describe only actions included in this candidate.
+    html = re.sub(r'<div class="help-item">[\s\S]*?</div>', lambda m: '' if any(term in m[0] for term in ['경유 주유소 찾기', '<b>길찾기</b>', '<b>주변 내보내기</b>']) else m[0], html)
+    html = re.sub(r'<div class="help-section">\s*<div class="help-section-title">누락·오류 제보</div>[\s\S]*?(?=<div class="help-section">)', '', html, count=1)
+    html = html.replace('가격 순위·언어·사용법·제보 등 보조 기능', '가격 순위·언어·사용법 등 보조 기능')
+    html = html.replace('브라우저 위치 권한 필요', '토스 위치 권한 허용 필요')
     # Fail closed if legacy network/payment integrations leaked back into this build.
     for token in ['BIN_KEY', 'X-Master-Key', 'formspree.io', 'qr.kakaopay.com', 'goatcounter.com', 'gc.zgo.at', 'apps.apple.com', 'navigator.geolocation.getCurrentPosition']:
         if token in html:
