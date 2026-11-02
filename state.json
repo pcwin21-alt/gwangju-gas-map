@@ -7103,7 +7103,13 @@
       "station_id": "onnuri:14499200032",
       "job_id": "d9442ced3e91e90c58403941",
       "checked_at": "2026-11-02T15:17:31+09:00",
-      "reason": "No independently matched current issuer record; preserve previous station"
+      "reason": "No independently matched current issuer record; preserve previous station",
+      "status": "needs_review",
+      "investigation_evidence": [
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/fcd770a/output/audits/regional_gap_20261102/damyang_terminal_review.json"
+      ],
+      "investigated_at": "2026-11-02T17:07:23+09:00",
+      "investigation_scope": "Independent same-address location agrees within 0.34m; issuer nonmatch remains unresolved; no membership inference or coordinate change."
     },
     {
       "job_id": "9a2e82eee068b435d250fba9",
@@ -7561,8 +7567,14 @@
       "candidate_id": "99a16ec1f905b70a99edcfc8",
       "region": "전남광주",
       "name": "무등에너지협동조합",
-      "status": "needs_identity",
-      "reason": "Annual identity needs independent same-premise linkage or documented exclusion"
+      "status": "excluded",
+      "reason": "Annual identity needs independent same-premise linkage or documented exclusion",
+      "prior_status": "needs_identity",
+      "resolution_evidence": [
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/fcd770a/output/audits/regional_gap_20261102/nonfuel_reviews.json"
+      ],
+      "resolved_at": "2026-11-02T17:07:23+09:00",
+      "resolution_reason": "공식 연간 취급품목 커피와 동일 상호·시장명의 보관된 공식 장소 음식점업 등록이 일치한다. 이 학소로 카페 등록만 차량용 연료 후보에서 제외하며 같은 이름의 다른 사업장·온누리 가맹 자체에는 판단을 이전하지 않는다."
     },
     {
       "gap_id": "annual-identity:604ad71bee3d9a8881951202",
@@ -7840,7 +7852,7 @@
         "jobs_total": 42,
         "jobs_remaining": 21,
         "jobs_needing_review": 0,
-        "source_gaps": 26,
+        "source_gaps": 25,
         "review_records": 5,
         "inventory_reviewed": false,
         "mapped_records_to_recheck": 28,
@@ -7849,7 +7861,7 @@
           "needs_review_not_found": 2,
           "pending": 15
         },
-        "unresolved_annual_identities": 23,
+        "unresolved_annual_identities": 22,
         "missing_standard_checks": [
           "market_coverage",
           "membership_rechecks",
@@ -8115,14 +8127,14 @@
         "jobs_total": 131,
         "jobs_remaining": 131,
         "jobs_needing_review": 0,
-        "source_gaps": 26,
+        "source_gaps": 25,
         "review_records": 0,
         "inventory_reviewed": false,
         "mapped_records_to_recheck": 131,
         "membership_check_status": {
           "pending": 131
         },
-        "unresolved_annual_identities": 23,
+        "unresolved_annual_identities": 22,
         "missing_standard_checks": [
           "market_coverage",
           "membership_rechecks",
@@ -8268,9 +8280,12 @@
     "전남": {
       "status": "pending",
       "evidence": [
-        "output/audits/regional_gap_20261102/naju_innovation_coordinate_review.json"
+        "output/audits/regional_gap_20261102/naju_innovation_coordinate_review.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/fcd770a/output/audits/regional_gap_20261102/nonfuel_reviews.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/fcd770a/output/audits/regional_gap_20261102/damyang_terminal_review.json"
       ],
-      "checked_at": null
+      "checked_at": null,
+      "last_reviewed_at": "2026-11-02T17:07:23+09:00"
     },
     "전북": {
       "status": "pending",
@@ -18073,7 +18088,7 @@
           "전남",
           "광주"
         ],
-        "status": "discovery_only",
+        "status": "excluded_non_vehicle",
         "mapped_ids": [],
         "location_ids": [],
         "paper": "Y",
@@ -20134,7 +20149,7 @@
         },
         "annual_discovery_rows": 178,
         "annual_ambiguous_region_rows": 178,
-        "annual_non_vehicle_exclusions": 10,
+        "annual_non_vehicle_exclusions": 11,
         "historic_point_lookup": {
           "fuel_records": 992,
           "mapped_address": 24,
@@ -20400,7 +20415,7 @@
         },
         "annual_discovery_rows": 178,
         "annual_ambiguous_region_rows": 178,
-        "annual_non_vehicle_exclusions": 10,
+        "annual_non_vehicle_exclusions": 11,
         "historic_point_lookup": {
           "fuel_records": 342,
           "mapped_address": 150,
@@ -20502,8 +20517,11 @@
       },
       "annual_identities": {
         "status": "pending",
-        "evidence": [],
-        "checked_at": null
+        "evidence": [
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/fcd770a/output/audits/regional_gap_20261102/nonfuel_reviews.json"
+        ],
+        "checked_at": null,
+        "last_reviewed_at": "2026-11-02T17:07:23+09:00"
       },
       "membership_rechecks": {
         "status": "pending",
@@ -20515,8 +20533,12 @@
       },
       "market_coverage": {
         "status": "pending",
-        "evidence": [],
-        "checked_at": null
+        "evidence": [
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/fcd770a/output/audits/regional_gap_20261102/damyang_market_leads.json"
+        ],
+        "checked_at": null,
+        "last_reviewed_at": "2026-11-02T17:07:23+09:00",
+        "scope": "Pending primary designation boundaries and shop inventories across all 22 municipalities; Damyang secondary leads are not completed coverage."
       }
     },
     "전북": {
@@ -21228,6 +21250,16 @@
       "checked_at": "2026-11-02T05:54:15+09:00",
       "reason": "공식 장소 원본에서 동일한 사운드 동명 카페 지점명·시장명이 음식점업으로 확인됨. 같은 회사의 다른 주유소로 판단을 이전하지 않고 이 카페 등록만 제외.",
       "source_record_id": "05340200190",
+      "source_checked_at": "2026-10-25T10:51:11+09:00"
+    },
+    "99a16ec1f905b70a99edcfc8": {
+      "status": "excluded_non_vehicle",
+      "evidence": [
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/fcd770a/output/audits/regional_gap_20261102/nonfuel_reviews.json"
+      ],
+      "checked_at": "2026-11-02T17:07:23+09:00",
+      "reason": "공식 연간 취급품목 커피와 동일 상호·시장명의 보관된 공식 장소 음식점업 등록이 일치한다. 이 학소로 카페 등록만 차량용 연료 후보에서 제외하며 같은 이름의 다른 사업장·온누리 가맹 자체에는 판단을 이전하지 않는다.",
+      "source_record_id": "05358200010",
       "source_checked_at": "2026-10-25T10:51:11+09:00"
     }
   }
