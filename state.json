@@ -8841,7 +8841,7 @@
         "jobs_total": 43,
         "jobs_remaining": 12,
         "jobs_needing_review": 0,
-        "source_gaps": 25,
+        "source_gaps": 24,
         "review_records": 8,
         "inventory_reviewed": false,
         "mapped_records_to_recheck": 28,
@@ -8850,7 +8850,7 @@
           "needs_review_not_found": 3,
           "pending": 6
         },
-        "unresolved_annual_identities": 22,
+        "unresolved_annual_identities": 21,
         "missing_standard_checks": [
           "market_coverage",
           "membership_rechecks",
@@ -9116,14 +9116,14 @@
         "jobs_total": 131,
         "jobs_remaining": 131,
         "jobs_needing_review": 0,
-        "source_gaps": 25,
+        "source_gaps": 24,
         "review_records": 0,
         "inventory_reviewed": false,
         "mapped_records_to_recheck": 131,
         "membership_check_status": {
           "pending": 131
         },
-        "unresolved_annual_identities": 22,
+        "unresolved_annual_identities": 21,
         "missing_standard_checks": [
           "market_coverage",
           "membership_rechecks",
@@ -9284,10 +9284,11 @@
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/092ad8d/output/audits/region_comparison_20261103/analysis.json",
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/16c7c03/output/audits/three_route_trial_20261103/results.json",
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/2b72365/output/audits/portal_search_20261103/results.json",
-        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f25f479/output/audits/regional_gap_20261102/nonfuel_reviews.json"
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f25f479/output/audits/regional_gap_20261102/nonfuel_reviews.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/76d7041/output/audits/regional_gap_20261102/run_20261103_0743.json"
       ],
       "checked_at": null,
-      "last_reviewed_at": "2026-11-03T07:51:49+09:00"
+      "last_reviewed_at": "2026-11-03T07:53:25+09:00"
     },
     "전북": {
       "status": "pending",
@@ -21640,10 +21641,11 @@
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f201100/output/audits/full_region_crosscheck_20261103/report.json",
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/092ad8d/output/audits/region_comparison_20261103/analysis.json",
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/16c7c03/output/audits/three_route_trial_20261103/results.json",
-          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f25f479/output/audits/regional_gap_20261102/nonfuel_reviews.json"
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f25f479/output/audits/regional_gap_20261102/nonfuel_reviews.json",
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/76d7041/output/audits/regional_gap_20261102/run_20261103_0743.json"
         ],
         "checked_at": null,
-        "last_reviewed_at": "2026-11-03T07:51:49+09:00"
+        "last_reviewed_at": "2026-11-03T07:53:25+09:00"
       },
       "membership_rechecks": {
         "status": "pending",
@@ -21651,11 +21653,12 @@
           "output/audits/regional_gap_20261102/naju_innovation_coordinate_review.json",
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/0632768/output/audits/regional_gap_20261102/naju_namgomun_review_20261103.json",
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f201100/output/audits/full_region_crosscheck_20261103/report.json",
-          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/092ad8d/output/audits/region_comparison_20261103/analysis.json"
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/092ad8d/output/audits/region_comparison_20261103/analysis.json",
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/76d7041/output/audits/regional_gap_20261102/run_20261103_0743.json"
         ],
         "checked_at": null,
         "scope": "Current issuer rechecks incomplete; coordinate discrepancy follow-up is discovery only",
-        "last_reviewed_at": "2026-11-03T06:09:51+09:00"
+        "last_reviewed_at": "2026-11-03T07:53:25+09:00"
       },
       "market_coverage": {
         "status": "pending",
