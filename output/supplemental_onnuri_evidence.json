@@ -1519,6 +1519,102 @@
         "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
       },
       "annual_candidate_ids": []
+    },
+    {
+      "identity_review": "same_premise_confirmed",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "checked_at": "2026-11-03T04:35:38+09:00",
+      "bank_record": {
+        "location": {
+          "lat": "34.7719225187",
+          "lng": "127.093531174"
+        },
+        "content": {
+          "tel": "061)853-9731",
+          "title": "다향에너지주식회사",
+          "category": "충전소",
+          "address": "전남 보성군 보성읍 ",
+          "distance": "8",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000121636039",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        }
+      },
+      "commercial_record": {
+        "상가업소번호": "MA0101202604A0016728",
+        "상호명": "다향에너지",
+        "지점명": "",
+        "상권업종소분류코드": "G21402",
+        "상권업종소분류명": "가스 충전소",
+        "표준산업분류코드": "G47712",
+        "표준산업분류명": "운송장비용 가스 충전업",
+        "시군구명": "보성군",
+        "도로명주소": "전남광주통합특별시 보성군 보성읍 용문길 11",
+        "지번주소": "전남광주통합특별시 보성군 보성읍 보성리 342-20",
+        "위도": "34.7719199072915",
+        "경도": "127.093444707314",
+        "region": "전남"
+      },
+      "commercial_source": {
+        "archive_sha256": "57aa361544108ff4fc73334f87d2ced61e41fe8638dd70bcd842930f865d2386",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+        "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
+      },
+      "annual_candidate_ids": []
+    },
+    {
+      "identity_review": "same_premise_confirmed",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "checked_at": "2026-11-03T04:41:50+09:00",
+      "bank_record": {
+        "location": {
+          "lat": "34.9221517596",
+          "lng": "126.7479655283"
+        },
+        "content": {
+          "tel": "061)331-5188",
+          "title": "백제주유소",
+          "category": "주유소",
+          "address": "전남 나주시 세지면 ",
+          "distance": "8",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000110113418",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        }
+      },
+      "commercial_record": {
+        "상가업소번호": "MA0101202305A0114565",
+        "상호명": "백제주유소",
+        "지점명": "",
+        "상권업종소분류코드": "G21401",
+        "상권업종소분류명": "주유소",
+        "표준산업분류코드": "G47711",
+        "표준산업분류명": "운송장비용 주유소 운영업",
+        "시군구명": "나주시",
+        "도로명주소": "전남광주통합특별시 나주시 세지면 동창로 154",
+        "지번주소": "전남광주통합특별시 나주시 세지면 오봉리 236-9",
+        "위도": "34.9222110757088",
+        "경도": "126.747905819259",
+        "region": "전남"
+      },
+      "commercial_source": {
+        "archive_sha256": "57aa361544108ff4fc73334f87d2ced61e41fe8638dd70bcd842930f865d2386",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+        "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
+      },
+      "annual_candidate_ids": []
     }
   ]
 }
