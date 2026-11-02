@@ -13,7 +13,7 @@
       "status": "active",
       "url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
       "scope": "Public unauthenticated Onnuri merchant form; issuer-specific evidence only; limits are our load caps, not a provider guarantee",
-      "next_allowed_at": 1793636143.924564,
+      "next_allowed_at": 1793636148.254971,
       "volume_ramp": {
         "stage": "pilot",
         "started_at": 1793556784.2048566,
@@ -536,7 +536,7 @@
       "job_id": "89bed0780a762e443c95bb9a",
       "source": "kbcard",
       "at": 1793635963.924564,
-      "status": "reserved",
+      "status": "done",
       "run_id": "2c35f0223dfd4605a0d9df541d194e21",
       "request": {
         "method": "POST",
@@ -553,7 +553,12 @@
           "endRow": 10,
           "mmcNm": ""
         }
-      }
+      },
+      "request_started_at": 1793635965.2226584,
+      "network_duration_seconds": 1.4494233131408691,
+      "http_status": 200,
+      "response_sha256": "5637ae4b54fac73d06f8d00038d2460c45a5fa4b789d06f77b529805cbb62fcd",
+      "finished_at": 1793635968.2549167
     }
   ],
   "jobs": [
@@ -1642,11 +1647,38 @@
       },
       "logical_key": "89bed0780a762e443c95bb9a",
       "id": "89bed0780a762e443c95bb9a",
-      "status": "pending",
+      "status": "done",
       "attempts": 1,
       "page": 1,
-      "observed_ids": [],
-      "candidate_ids": []
+      "observed_ids": [
+        "000000120515181",
+        "000000108555012",
+        "000000088055131",
+        "000000047907541",
+        "000000118626945",
+        "000000119204027",
+        "000000033822528",
+        "000000061885039",
+        "000000084669508",
+        "000000117254920",
+        "000000106940927",
+        "000000074097529",
+        "000000109434450",
+        "000000109591294",
+        "000000122650196",
+        "000000115734643",
+        "000000122243103",
+        "000000120829372",
+        "000000115608016",
+        "000000105811995",
+        "000000096020701",
+        "000000104942441",
+        "000000035822306"
+      ],
+      "candidate_ids": [],
+      "expected": 23,
+      "last_observed_at": "2026-11-03T01:12:46+09:00",
+      "result": "observations_saved"
     },
     {
       "kind": "kb_search",
@@ -7030,6 +7062,54 @@
         "지번주소": "전남광주통합특별시 장성군 장성읍 영천리 1330-1",
         "위도": "35.2921931828988",
         "경도": "126.779711530487",
+        "region": "전남"
+      },
+      "commercial_source": {
+        "archive_sha256": "57aa361544108ff4fc73334f87d2ced61e41fe8638dd70bcd842930f865d2386",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+        "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
+      },
+      "annual_candidate_ids": []
+    },
+    {
+      "identity_review": "same_premise_confirmed",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "checked_at": "2026-11-03T01:12:46+09:00",
+      "bank_record": {
+        "location": {
+          "lat": "34.9703233967",
+          "lng": "126.3854175071"
+        },
+        "content": {
+          "tel": "061)802-0021",
+          "title": "공항에너지",
+          "category": "주유소",
+          "address": "전남 무안군 망운면 ",
+          "distance": "10",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000108555012",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        }
+      },
+      "commercial_record": {
+        "상가업소번호": "MA0101202212A0090887",
+        "상호명": "공항에너지",
+        "지점명": "",
+        "상권업종소분류코드": "G21401",
+        "상권업종소분류명": "주유소",
+        "표준산업분류코드": "G47711",
+        "표준산업분류명": "운송장비용 주유소 운영업",
+        "시군구명": "무안군",
+        "도로명주소": "전남광주통합특별시 무안군 망운면 청운로 767",
+        "지번주소": "전남광주통합특별시 무안군 망운면 피서리 809-36",
+        "위도": "34.9703771845017",
+        "경도": "126.385501769027",
         "region": "전남"
       },
       "commercial_source": {
@@ -21253,6 +21333,14 @@
       "checked_at": "2026-11-02T15:20:33+09:00",
       "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
       "bank_id": "000000100745478",
+      "other_payment_methods": "not_reverified"
+    },
+    "onnuri:14502200004": {
+      "status": "confirmed_in_issuer_scope",
+      "issuer": "kbcard",
+      "checked_at": "2026-11-03T01:12:46+09:00",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "bank_id": "000000108555012",
       "other_payment_methods": "not_reverified"
     }
   },
