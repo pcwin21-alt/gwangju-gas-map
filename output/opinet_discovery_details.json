@@ -6,9 +6,48 @@
       "id": "A0022485",
       "region": "전남",
       "reserved_at": 1793655383.483105,
-      "status": "reserved"
+      "status": "done",
+      "http_status": 200,
+      "finished_at": 1793655385.737736
     }
   ],
-  "details": {},
-  "status": "active"
+  "details": {
+    "A0022485": {
+      "checked_at": "2026-11-03T06:36:25+09:00",
+      "source_url": "https://www.opinet.co.kr/api/detailById.do",
+      "target": {
+        "id": "A0022485",
+        "region": "전남",
+        "name": "여수오렌지충전소",
+        "address": "전남광주통합특별시 여수시 한재로 9",
+        "independent_source": {
+          "file": "output\\alternatives\\opinet_district_audit_20261027.json",
+          "sha256": "0d5bfe637ca8dcb25730005cace7ba8ad23ab54ab57e14ce7008d0f18dc88c97",
+          "source_url": "https://www.opinet.co.kr/user/custapi/openApiInfoDtl.do?apiId=3",
+          "checked_at": "2026-10-27T15:59:30+09:00",
+          "product": "K015",
+          "registry_source_ids": [
+            "lpg_locations.json:1798",
+            "MA0101202503A0018745"
+          ]
+        },
+        "purpose": "Fill missing independent phone/address; no Onnuri membership assertion"
+      },
+      "detail": {
+        "UNI_ID": "A0022485",
+        "OS_NM": "여수오렌지충전소",
+        "NEW_ADR": "전남광주통합특별시 여수시 한재로 9 (여서동)",
+        "VAN_ADR": "전남광주통합특별시 여수시 여서동 144",
+        "TEL": "061-651-4998",
+        "LPG_YN": "Y",
+        "POLL_DIV_CO": "E1G",
+        "GIS_X_COOR": 373735.3,
+        "GIS_Y_COOR": 239002.5
+      },
+      "status": "fuel_identity_observed",
+      "onnuri_membership": "not_checked_by_this_source"
+    }
+  },
+  "status": "active",
+  "next_allowed_at": 1793655565.7377365
 }
