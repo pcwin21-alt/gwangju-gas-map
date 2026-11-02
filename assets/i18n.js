@@ -9,7 +9,7 @@
     '주유소':'Stations','결과 위치':'Show on map','조건에 맞는 주유소 위치로 지도 맞추기':'Fit matching stations on map',
     '직선거리':'Straight-line distance','이 주유소 경유':'Stop at this station','온누리 KB국민카드':'Onnuri KB Kookmin Card','최근 미확인':'Not recently verified','확인일 미확인':'Check date unknown','표시 중':'shown',
     '지도 보기':'Map view',
-    '지도 크게 보기':'Expand map','지도 작게 보기':'Restore map','지도 확대':'Zoom in','지도 축소':'Zoom out','지도 확대 축소':'Map zoom',
+    '지도 확대':'Zoom in','지도 축소':'Zoom out','지도 확대 축소':'Map zoom',
     '내 위치로 이동':'Go to my location','위치 찾는 중':'Finding location',
     '에서 결제수단·유종·시군구를 고릅니다. 선택한 조건은 접어도 표시됩니다.':'Choose payment, fuel and district. Active filters stay visible when collapsed.',
     '에서 목적지를 검색하고 선택하세요. 출발지·조건은 필요할 때 변경할 수 있습니다.':'Search for and select a destination. Change the start and options when needed.',
