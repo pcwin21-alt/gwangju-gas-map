@@ -7902,7 +7902,8 @@
       "reason": "Latest 22-municipality designated-market shop lists not yet all available; no complete census claim",
       "gap_id": "market-coverage:전남",
       "evidence": [
-        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/16c7c03/output/audits/three_route_trial_20261103/results.json"
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/16c7c03/output/audits/three_route_trial_20261103/results.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/2b72365/output/audits/portal_search_20261103/results.json"
       ],
       "latest_designation_review_at": "2026-11-03T06:45:01+09:00",
       "new_market_names_pending": [
@@ -7913,7 +7914,13 @@
         "비치앤팔레스",
         "비파",
         "옥암번영"
-      ]
+      ],
+      "portal_review": {
+        "checked_at": "2026-11-03T06:53:47+09:00",
+        "municipalities_searched": 22,
+        "gokseong_minutes": "2026-09-14 indexed official reply; direct access failed; current boundary/member inventory remains pending",
+        "new_membership_confirmations": 0
+      }
     },
     {
       "candidate_id": "7aec121a5094c5961ee57bc4",
@@ -9056,10 +9063,11 @@
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f201100/output/audits/full_region_crosscheck_20261103/report.json",
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f201100/output/audits/full_region_crosscheck_20261103/review_actions.json",
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/092ad8d/output/audits/region_comparison_20261103/analysis.json",
-        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/16c7c03/output/audits/three_route_trial_20261103/results.json"
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/16c7c03/output/audits/three_route_trial_20261103/results.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/2b72365/output/audits/portal_search_20261103/results.json"
       ],
       "checked_at": null,
-      "last_reviewed_at": "2026-11-03T06:45:01+09:00"
+      "last_reviewed_at": "2026-11-03T06:53:47+09:00"
     },
     "전북": {
       "status": "pending",
@@ -21389,10 +21397,11 @@
         "evidence": [
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/fcd770a/output/audits/regional_gap_20261102/damyang_market_leads.json",
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/0632768/output/audits/regional_gap_20261102/damyang_market_leads.json",
-          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/16c7c03/output/audits/three_route_trial_20261103/results.json"
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/16c7c03/output/audits/three_route_trial_20261103/results.json",
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/2b72365/output/audits/portal_search_20261103/results.json"
         ],
         "checked_at": null,
-        "last_reviewed_at": "2026-11-03T06:45:01+09:00",
+        "last_reviewed_at": "2026-11-03T06:53:47+09:00",
         "scope": "Pending primary designation boundaries and shop inventories across all 22 municipalities; Damyang secondary leads are not completed coverage.",
         "latest_designation_review": {
           "checked_at": "2026-11-03T06:45:01+09:00",
