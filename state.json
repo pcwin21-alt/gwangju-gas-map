@@ -7900,7 +7900,20 @@
       "region": "전남",
       "status": "needs_source_inventory",
       "reason": "Latest 22-municipality designated-market shop lists not yet all available; no complete census claim",
-      "gap_id": "market-coverage:전남"
+      "gap_id": "market-coverage:전남",
+      "evidence": [
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/16c7c03/output/audits/three_route_trial_20261103/results.json"
+      ],
+      "latest_designation_review_at": "2026-11-03T06:45:01+09:00",
+      "new_market_names_pending": [
+        "하당푸른솔",
+        "당가두로",
+        "목포평화통일원형로",
+        "텃골로십일자",
+        "비치앤팔레스",
+        "비파",
+        "옥암번영"
+      ]
     },
     {
       "candidate_id": "7aec121a5094c5961ee57bc4",
@@ -9042,10 +9055,11 @@
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/0632768/output/audits/regional_gap_20261102/naju_namgomun_review_20261103.json",
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f201100/output/audits/full_region_crosscheck_20261103/report.json",
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f201100/output/audits/full_region_crosscheck_20261103/review_actions.json",
-        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/092ad8d/output/audits/region_comparison_20261103/analysis.json"
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/092ad8d/output/audits/region_comparison_20261103/analysis.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/16c7c03/output/audits/three_route_trial_20261103/results.json"
       ],
       "checked_at": null,
-      "last_reviewed_at": "2026-11-03T06:09:51+09:00"
+      "last_reviewed_at": "2026-11-03T06:45:01+09:00"
     },
     "전북": {
       "status": "pending",
@@ -21340,21 +21354,23 @@
         "evidence": [
           "https://www.data.go.kr/data/15083033/fileData.do",
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/0632768/output/audits/regional_gap_20261102/municipal_name_crosscheck_20261103.json",
-          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f201100/output/audits/full_region_crosscheck_20261103/report.json"
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f201100/output/audits/full_region_crosscheck_20261103/report.json",
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/16c7c03/output/audits/three_route_trial_20261103/results.json"
         ],
         "checked_at": "2026-06-30",
         "scope": "dated physical source inventory only; not current membership",
-        "last_reviewed_at": "2026-11-03T05:22:19+09:00"
+        "last_reviewed_at": "2026-11-03T06:45:01+09:00"
       },
       "annual_identities": {
         "status": "pending",
         "evidence": [
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/fcd770a/output/audits/regional_gap_20261102/nonfuel_reviews.json",
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f201100/output/audits/full_region_crosscheck_20261103/report.json",
-          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/092ad8d/output/audits/region_comparison_20261103/analysis.json"
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/092ad8d/output/audits/region_comparison_20261103/analysis.json",
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/16c7c03/output/audits/three_route_trial_20261103/results.json"
         ],
         "checked_at": null,
-        "last_reviewed_at": "2026-11-03T06:09:51+09:00"
+        "last_reviewed_at": "2026-11-03T06:45:01+09:00"
       },
       "membership_rechecks": {
         "status": "pending",
@@ -21372,11 +21388,118 @@
         "status": "pending",
         "evidence": [
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/fcd770a/output/audits/regional_gap_20261102/damyang_market_leads.json",
-          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/0632768/output/audits/regional_gap_20261102/damyang_market_leads.json"
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/0632768/output/audits/regional_gap_20261102/damyang_market_leads.json",
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/16c7c03/output/audits/three_route_trial_20261103/results.json"
         ],
         "checked_at": null,
-        "last_reviewed_at": "2026-11-03T04:46:38+09:00",
-        "scope": "Pending primary designation boundaries and shop inventories across all 22 municipalities; Damyang secondary leads are not completed coverage."
+        "last_reviewed_at": "2026-11-03T06:45:01+09:00",
+        "scope": "Pending primary designation boundaries and shop inventories across all 22 municipalities; Damyang secondary leads are not completed coverage.",
+        "latest_designation_review": {
+          "checked_at": "2026-11-03T06:45:01+09:00",
+          "municipality": "목포시",
+          "evidence": "https://github.com/pcwin21-alt/gwangju-gas-map/blob/16c7c03/output/audits/three_route_trial_20261103/results.json",
+          "new_markets": 7,
+          "expanded_markets": 1,
+          "boundary_and_member_inventory": "pending",
+          "markets": [
+            {
+              "market": "하당푸른솔",
+              "anchor_address": "목포시 비파로 4",
+              "registered_at": "2026-08-31",
+              "notice_url": "https://www.mokpo.go.kr/www/mokpo_news/notification/public_notice?mode=view&idx=55083",
+              "shops_in_notice_not_Onnuri_or_fuel_count": 136,
+              "change": "new",
+              "annual_market_name_matches": 0,
+              "boundary": "anchor_and_area_only_no_polygon_or_parcel_list",
+              "shop_member_inventory": "not_in_attachment",
+              "status": "pending_boundary_members_and_membership_crosscheck"
+            },
+            {
+              "market": "당가두로",
+              "anchor_address": "목포시 당가두로 24",
+              "registered_at": "2026-08-31",
+              "notice_url": "https://www.mokpo.go.kr/www/mokpo_news/notification/public_notice?mode=view&idx=55083",
+              "shops_in_notice_not_Onnuri_or_fuel_count": 102,
+              "change": "new",
+              "annual_market_name_matches": 0,
+              "boundary": "anchor_and_area_only_no_polygon_or_parcel_list",
+              "shop_member_inventory": "not_in_attachment",
+              "status": "pending_boundary_members_and_membership_crosscheck"
+            },
+            {
+              "market": "목포평화통일원형로",
+              "anchor_address": "목포시 원형동로 10",
+              "registered_at": "2026-08-31",
+              "notice_url": "https://www.mokpo.go.kr/www/mokpo_news/notification/public_notice?mode=view&idx=55083",
+              "shops_in_notice_not_Onnuri_or_fuel_count": 200,
+              "change": "new",
+              "annual_market_name_matches": 0,
+              "boundary": "anchor_and_area_only_no_polygon_or_parcel_list",
+              "shop_member_inventory": "not_in_attachment",
+              "status": "pending_boundary_members_and_membership_crosscheck"
+            },
+            {
+              "market": "텃골로십일자",
+              "anchor_address": "목포시 텃골로13번길 76",
+              "registered_at": "2026-09-16",
+              "notice_url": "https://www.mokpo.go.kr/www/mokpo_news/notification/public_notice?mode=view&idx=55187",
+              "shops_in_notice_not_Onnuri_or_fuel_count": 53,
+              "change": "new",
+              "annual_market_name_matches": 0,
+              "boundary": "anchor_and_area_only_no_polygon_or_parcel_list",
+              "shop_member_inventory": "not_in_attachment",
+              "status": "pending_boundary_members_and_membership_crosscheck"
+            },
+            {
+              "market": "비치앤팔레스",
+              "anchor_address": "목포시 청호로 206",
+              "registered_at": "2026-09-16",
+              "notice_url": "https://www.mokpo.go.kr/www/mokpo_news/notification/public_notice?mode=view&idx=55187",
+              "shops_in_notice_not_Onnuri_or_fuel_count": 34,
+              "change": "new",
+              "annual_market_name_matches": 0,
+              "boundary": "anchor_and_area_only_no_polygon_or_parcel_list",
+              "shop_member_inventory": "not_in_attachment",
+              "status": "pending_boundary_members_and_membership_crosscheck"
+            },
+            {
+              "market": "비파",
+              "anchor_address": "목포시 백년대로337번길 25",
+              "registered_at": "2026-09-16",
+              "notice_url": "https://www.mokpo.go.kr/www/mokpo_news/notification/public_notice?mode=view&idx=55187",
+              "shops_in_notice_not_Onnuri_or_fuel_count": 203,
+              "change": "new",
+              "annual_market_name_matches": 0,
+              "boundary": "anchor_and_area_only_no_polygon_or_parcel_list",
+              "shop_member_inventory": "not_in_attachment",
+              "status": "pending_boundary_members_and_membership_crosscheck"
+            },
+            {
+              "market": "옥암번영",
+              "anchor_address": "목포시 옥암로 18",
+              "registered_at": "2026-09-16",
+              "notice_url": "https://www.mokpo.go.kr/www/mokpo_news/notification/public_notice?mode=view&idx=55187",
+              "shops_in_notice_not_Onnuri_or_fuel_count": 270,
+              "change": "new",
+              "annual_market_name_matches": 0,
+              "boundary": "anchor_and_area_only_no_polygon_or_parcel_list",
+              "shop_member_inventory": "not_in_attachment",
+              "status": "pending_boundary_members_and_membership_crosscheck"
+            },
+            {
+              "market": "금호사랑",
+              "anchor_address": "목포시 백년대로375번길 29-1",
+              "registered_at": "2026-09-16",
+              "notice_url": "https://www.mokpo.go.kr/www/mokpo_news/notification/public_notice?mode=view&idx=55187",
+              "shops_in_notice_not_Onnuri_or_fuel_count": 208,
+              "change": "expanded_from_70_shops",
+              "annual_market_name_matches": 43,
+              "boundary": "anchor_and_area_only_no_polygon_or_parcel_list",
+              "shop_member_inventory": "not_in_attachment",
+              "status": "pending_boundary_members_and_membership_crosscheck"
+            }
+          ]
+        }
       }
     },
     "전북": {
