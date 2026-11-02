@@ -8553,10 +8553,10 @@
   "summary": {
     "status": "running",
     "jobs_total": 226,
-    "jobs_done": 25,
-    "jobs_remaining": 201,
-    "review_records": 6,
-    "evidence_records": 15,
+    "jobs_done": 28,
+    "jobs_remaining": 198,
+    "review_records": 8,
+    "evidence_records": 17,
     "source_gaps": 90,
     "source_status": {
       "onnuri": "blocked",
@@ -8569,16 +8569,16 @@
         "region": "전남",
         "status": "collecting",
         "jobs_total": 42,
-        "jobs_remaining": 17,
+        "jobs_remaining": 14,
         "jobs_needing_review": 0,
         "source_gaps": 25,
-        "review_records": 5,
+        "review_records": 7,
         "inventory_reviewed": false,
         "mapped_records_to_recheck": 28,
         "membership_check_status": {
-          "confirmed_in_issuer_scope": 15,
-          "needs_review_not_found": 2,
-          "pending": 11
+          "confirmed_in_issuer_scope": 17,
+          "needs_review_not_found": 3,
+          "pending": 8
         },
         "unresolved_annual_identities": 22,
         "missing_standard_checks": [
@@ -8959,7 +8959,7 @@
         "interval_seconds": 180,
         "stage": "pilot",
         "clean_since": 1793556784.2048566,
-        "valid_responses_in_clean_window": 12,
+        "valid_responses_in_clean_window": 15,
         "earliest_review_at": 1793729584.2048566
       },
       "datagov": {
@@ -8971,8 +8971,8 @@
     }
   },
   "last_run": {
-    "id": "2c35f0223dfd4605a0d9df541d194e21",
-    "checked_at": "2026-11-03T01:19:00+09:00",
+    "id": "a203bae157bb4799b2808389dcaa44bc",
+    "checked_at": "2026-11-03T04:41:52+09:00",
     "requests": 3
   },
   "initial_scope": "finite cross-source fuel registration candidates, Jeonnam first and Seoul last; not a geographic census",
@@ -22062,7 +22062,7 @@
       "interval_seconds": 180,
       "stage": "pilot",
       "clean_since": 1793556784.2048566,
-      "valid_responses_in_clean_window": 12,
+      "valid_responses_in_clean_window": 15,
       "earliest_review_at": 1793729584.2048566
     },
     "datagov": {
