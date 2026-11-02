@@ -17,4 +17,4 @@
 .pending-section ul{padding-left:20px;}.pending-section li{margin-bottom:12px;}
 #moreStations{min-height:44px;width:100%;font-size:16px;background:var(--surface);border:0;cursor:pointer;}
 .header-text h1{font-size:20px!important;}.help-item{font-size:16px;line-height:1.5;}
-@media(max-width:600px){.national-select{flex:1 1 calc(33% - 8px);}.national-select select{width:100%;}.controls-bottom .mobile-district{flex:1 1 100%;}.national-results{top:8px;right:8px;width:calc(100% - 16px);max-height:70%;}.national-results:not([open]){width:auto;left:auto;}.header-text h1{font-size:18px!important;}.header-text p{font-size:12px!important;}.controls{padding:8px 12px!important;}}
+@media(max-width:600px){.national-select{flex:1 1 calc(33% - 8px);}.national-select select{width:100%;}.controls-bottom .mobile-district{flex:1 1 100%;}.national-results{top:8px;right:8px;width:calc(100% - 16px);max-height:70%;}.header-text h1{font-size:18px!important;}.header-text p{font-size:12px!important;}.controls{padding:8px 12px!important;}}

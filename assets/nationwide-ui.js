@@ -66,7 +66,7 @@
     const rows=core.select(all,{bounds:scope.value==='map'?areaBounds:null,location:point,order:order.value});
     byId('resultDataStatus').textContent=`온누리 공식 검색 ${MERCHANT_STATUS.onnuri?.source_date||'미확인'}${MERCHANT_STATUS.onnuri?.refresh_error?' · 최근 조회 실패, 이전 자료 유지':''}`+bankSummary();
     byId('nationalSummary').textContent=rows.length>limit?`${limit}곳 표시 중`:'';
-    byId('listCount').textContent=`${scope.value==='map'?'찾은 범위':'전체'} ${rows.length}곳`;
+    byId('listCount').textContent=`${rows.length}곳`;
     list.replaceChildren(...rows.slice(0,limit).map(stationRow));
     if(!rows.length){list.append(text('p','조건에 맞는 주유소가 없습니다.'));emptyActions(list);}
     byId('moreStations').hidden=rows.length<=limit;
@@ -86,10 +86,18 @@
     panel.style.setProperty('--results-available',available+'px');
     panel.style.setProperty('--results-body-height',Math.max(44,(panel.dataset.size==='full'?available:half)-heading)+'px');
   }
+  function syncResults() {
+    areaButton.hidden=panel.open||routeActive();
+    areaButton.setAttribute('aria-expanded',String(panel.open));
+    if(!panel.open&&panel.contains(document.activeElement))areaButton.focus({preventScroll:true});
+    resizeResults();
+  }
   const resultObserver=new ResizeObserver(resizeResults);resultObserver.observe(document.querySelector('.map-area'));resultObserver.observe(panel.querySelector('summary'));
-  panel.addEventListener('toggle',resizeResults);resizeResults();
+  panel.addEventListener('toggle',syncResults);resizeResults();
+  function closeResults() {panel.open=false;syncResults();areaButton.focus({preventScroll:true});}
+  panel.querySelector('summary').addEventListener('click',event=>{event.preventDefault();closeResults();});
   byId('resultsSize').addEventListener('click',()=>setSize(panel.dataset.size!=='full'));
-  panel.addEventListener('keydown',event=>{if(event.key==='Escape'&&panel.open){event.preventDefault();event.stopPropagation();panel.open=false;panel.querySelector('summary').focus({preventScroll:true});}});
+  panel.addEventListener('keydown',event=>{if(event.key==='Escape'&&panel.open){event.preventDefault();event.stopPropagation();closeResults();}});
   scope.addEventListener('change',()=>{if(scope.value==='map')areaBounds=boundsNow();limit=20;render(true);});
   order.addEventListener('change',()=>{orderChosen=true;limit=20;render(true);});
   byId('moreStations').addEventListener('click',()=>{limit+=20;render();});
@@ -107,8 +115,8 @@
     }
   };
   window.addEventListener('gas:locationchange',()=>{if(!orderChosen)order.value='distance';render();});
-  window.addEventListener('gas:routechange',()=>{areaButton.hidden=true;});
-  areaButton.addEventListener('click',()=>{if(routeActive())window.GasRoutePlanner?.clearForMapSearch();areaBounds=boundsNow();scope.value='map';limit=20;render(true);panel.open=true;areaButton.hidden=true;});
+  window.addEventListener('gas:routechange',syncResults);
+  areaButton.addEventListener('click',()=>{if(routeActive())window.GasRoutePlanner?.clearForMapSearch();areaBounds=boundsNow();scope.value=hasMap?'map':'region';limit=20;render(true);panel.open=true;syncResults();panel.querySelector('summary').focus({preventScroll:true});});
   function syncURL() {
     const u=new URL(location.href);
     for(const k of ['region','method','fuel']){if(state[k]==='all'&&k!=='region')u.searchParams.delete(k);else u.searchParams.set(k,state[k]);}
@@ -132,11 +140,11 @@
   [regionInput,method,fuel].forEach(el=>el.addEventListener('change',change));
   if(hasMap){
     const original=applyFilters;applyFilters=function(){scope.value='region';areaBounds=null;limit=20;original();render(true);};
-    for(const name of ['dragend','zoom_changed'])kakao.maps.event.addListener(map,name,()=>{if(!routeActive())areaButton.hidden=false;});
+    for(const name of ['dragend','zoom_changed'])kakao.maps.event.addListener(map,name,syncResults);
     kakao.maps.event.addListener(map,'idle',refreshMapCount);
     document.querySelectorAll('.filter-btn').forEach(el=>el.addEventListener('click',syncURL));byId('districtSelect').addEventListener('change',syncURL);
   }else{
-    scope.querySelector('option[value="map"]').disabled=true;panel.open=true;
+    scope.querySelector('option[value="map"]').disabled=true;panel.open=true;areaButton.textContent='검색 결과 보기';
     byId('map').textContent='지도를 불러오지 못했습니다. 목록에서 주소와 길찾기를 확인하세요.';
     for(const id of ['myLocBtn','rankBtn','fitResultsBtn','districtSelect'])byId(id).disabled=true;byId('tripPanel').hidden=true;
     byId('searchInput').addEventListener('input',()=>{limit=20;render(true);});
@@ -151,5 +159,5 @@
     document.querySelectorAll('.filter-btn').forEach(b=>{b.classList.toggle('active',b.dataset.filter===selected);b.setAttribute('aria-pressed',String(b.dataset.filter===selected));});change();
     if(hasMap&&district&&[...byId('districtSelect').options].some(o=>o.value===district))triggerDistrictSelect(district);syncURL();restoring=false;
   }
-  window.addEventListener('popstate',restore);restore();
+  window.addEventListener('popstate',restore);restore();syncResults();
 })();

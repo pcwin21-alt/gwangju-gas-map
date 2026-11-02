@@ -755,14 +755,14 @@
     .react-clist-empty, .react-clist-loading { font-size: 13px; color: #94a3b8; text-align: center; padding: 16px 0; }
   </style>
   <link rel="stylesheet" href="assets/visual-refresh.css?v=fa02c24b435e">
-  <link rel="stylesheet" href="assets/nationwide.css?v=ef0d548cbd31">
+  <link rel="stylesheet" href="assets/nationwide.css?v=4a3f064773c7">
   <link rel="stylesheet" href="assets/simple-controls.css?v=07cf501289f4">
   <link rel="stylesheet" href="assets/map-controls.css?v=281a5c7a85c1">
   <link rel="stylesheet" href="assets/route-window.css?v=e29163624949">
   <link rel="stylesheet" href="assets/district-context.css?v=208a8d8d1bdb">
   <link rel="stylesheet" href="assets/region-picker.css?v=3198cfebca29">
-  <link rel="stylesheet" href="assets/ux-fixes.css?v=abe157d68782">
-  <link rel="stylesheet" href="assets/responsive-ui.css?v=52019572bab6">
+  <link rel="stylesheet" href="assets/ux-fixes.css?v=26eb18f77eac">
+  <link rel="stylesheet" href="assets/responsive-ui.css?v=07a8c42e4625">
   <link rel="stylesheet" href="assets/theme.css?v=c42a25cb01d4">
   <script src="assets/nationwide.js?v=e1738fc77729"></script>
 </head>
@@ -1128,9 +1128,9 @@
     <div id="districtContext" class="district-context" role="status" aria-live="polite" hidden><strong id="districtContextName"></strong><span id="districtContextNear"></span></div>
     <div class="map-zoom-tools" role="group" aria-label="지도 확대 축소"><button id="mapZoomIn" type="button" aria-label="지도 확대" title="지도 확대">＋</button><button id="mapZoomOut" type="button" aria-label="지도 축소" title="지도 축소">−</button></div>
     <div class="map-search-tools">
-      <button class="search-area-btn" id="searchAreaBtn" type="button" hidden>이 지역에서 찾기</button>
+      <button class="search-area-btn" id="searchAreaBtn" type="button" aria-controls="nationalResults" aria-expanded="false">보고 있는 화면에서 조회하기</button>
     <details class="national-results" id="nationalResults" data-size="half">
-      <summary>주유소 <span id="listCount"></span></summary>
+      <summary aria-label="조회 결과 닫기" title="조회 결과 닫기">조회 결과 <span id="listCount"></span></summary>
       <div class="results-body" id="resultsBody">
       <div class="results-toolbar"><label>범위<select id="resultsScope"><option value="region">선택 지역</option><option value="map">찾은 범위</option></select></label><label>정렬<select id="resultsOrder"><option value="name">이름순</option><option value="distance" disabled>가까운 순</option></select></label><button id="resultsSize" type="button" aria-label="목록 전체로 펼치기" aria-expanded="false">크게</button></div>
       <p id="listScope">선택한 지역·검색어·필터에 따른 목록</p>
@@ -2614,7 +2614,7 @@ if (!localStorage.getItem('helpSeen')) {
 <script src="assets/route-planner.js?v=c7eefe29ebe5"></script>
 <script src="assets/updates.js?v=db39e7a48351"></script>
 <script src="assets/visual-refresh.js?v=58440547ed92"></script>
-<script src="assets/nationwide-ui.js?v=f6e3a8cdfb00"></script>
+<script src="assets/nationwide-ui.js?v=4440972c2f9a"></script>
 <script src="assets/simple-controls.js?v=e79c532e2bc3"></script>
 <script src="assets/region-picker.js?v=285abb1dcb98"></script>
 <script src="assets/ux-fixes.js?v=7f1466bfd7ca"></script>
@@ -2624,6 +2624,6 @@ if (!localStorage.getItem('helpSeen')) {
 <script src="assets/district-context.js?v=3150dc533d74"></script>
 <script src="assets/route-window.js?v=b24e4dc651ba"></script>
 <script src="assets/search-flow.js?v=50f68b49c146"></script>
-<script src="assets/i18n.js?v=dd10a33ee129"></script>
+<script src="assets/i18n.js?v=b491f576c7fc"></script>
 </body>
 </html>

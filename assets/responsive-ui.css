@@ -103,6 +103,8 @@ html {font-size:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%;}
 .app #resultsSize {flex:0 0 auto;}
 .app .results-body {scroll-padding-top:8rem;}
 .app .national-results>summary {font-size:var(--ui-body);line-height:1.5;}
+/* The map has one launcher; the results heading exists only inside an open list. */
+.app .national-results:not([open]) {display:none;}
 /* Keep area search at the left edge and results at the right without overlap.
    On phones, display:contents preserves the separate top/bottom map controls. */
 .map-search-tools {display:contents;}
@@ -141,7 +143,6 @@ html {font-size:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%;}
   .app .filter-selects {grid-template-columns:repeat(auto-fit,minmax(min(9rem,100%),1fr));}
   .app .filter-selects>label:last-child {grid-column:auto;}
   .app .region-options {grid-template-columns:repeat(auto-fit,minmax(min(5rem,100%),1fr));}
-  .app .national-results:not([open]) {left:68px;right:auto;bottom:max(24px,env(safe-area-inset-bottom));max-width:calc(100% - 136px);}
   .map-search-tools:has(.national-results[open]) .search-area-btn {display:none;}
   .app .map-area .fit-results-btn {bottom:calc(max(24px,env(safe-area-inset-bottom)) + 7rem);max-width:calc(100% - 84px);}
   /* On a short mobile sheet, a sticky multi-row toolbar can cover every result. */
