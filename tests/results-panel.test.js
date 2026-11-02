@@ -7,6 +7,7 @@ function fixture({fallback=false,count=25}={}) {
  class Element {
   constructor(){this.children=[];this.listeners={};this.dataset={};this.attributes={};this.style={setProperty(){}};this.scrollTop=0;this.value='';this.clientHeight=640;this.isConnected=true;const classes=new Set();this.classList={contains:k=>classes.has(k),toggle(k,v){if(v)classes.add(k);else classes.delete(k);}};}
   get options(){return this.children;}
+  contains(node){return this.children.some(child=>child===node||child.contains?.(node));}
   add(value){this.children.push(value);}
   append(...nodes){this.children.push(...nodes);}
   replaceChildren(...nodes){this.children=nodes;}
@@ -21,7 +22,7 @@ function fixture({fallback=false,count=25}={}) {
  function el(id){return nodes[id]||=(new Element());}
  const buttons=['all','onnuri','saengsaeng'].map(filter=>{const n=new Element();n.dataset.filter=filter;return n;});
  for(const [id,value] of Object.entries({regionSelect:'광주',onnuriMethod:'all',fuelSelect:'all',resultsScope:'region',resultsOrder:'name'}))el(id).value=value;
- el('nationalResults').dataset.size='half';
+ el('nationalResults').dataset.size='half';el('nationalResults').open=false;el('nationalResults').append(el('summary'));
  const stations=Array.from({length:count},(_,i)=>({id:String(i),name:'주유소 '+String(i).padStart(2,'0'),address:'광주 북구 '+i,region:'광주',lat:35+i*.01,lng:126,payment_types:['onnuri'],onnuri_methods:{paper:true},fuel_kind:'liquid'}));
  const window={addEventListener(type,fn){(events[type]||=[]).push(fn);},GasRouteMap:{isActive:()=>route}};
  sandbox={document,window,GasStationResults:core,GasNational:national,GasNationalState:{region:'all',fuel:'all',method:'all'},GasMerchantDisplay:display,MERCHANT_STATUS:{},STATIONS:stations,NATIONAL_PENDING:[],PRICES:{},
@@ -46,7 +47,8 @@ test('search this area captures a scope without fitting the map, while later map
  f.el('resultsBody').scrollTop=80;
  f.setBounds({south:34,north:34.1,west:125,east:125.1});f.emitMap('idle');
  assert.equal(f.el('stationList').children.length,2);assert.equal(f.el('resultsBody').scrollTop,80);assert.match(f.el('listScope').textContent,/현재 지도 안 0곳/);
- f.el('searchAreaBtn').emit('click');assert.match(f.el('stationList').children[0].textContent,/없습니다/);
+ f.el('nationalResults').open=false;f.el('nationalResults').emit('toggle');
+ assert.equal(f.el('searchAreaBtn').hidden,false);f.el('searchAreaBtn').emit('click');assert.match(f.el('stationList').children[0].textContent,/없습니다/);
  const actions=f.el('stationList').children[1];assert.ok(actions.children.some(b=>b.textContent==='선택 지역 전체 보기'));
  actions.children.find(b=>b.textContent==='선택 지역 전체 보기').emit('click');assert.equal(f.el('stationList').children.length,20);
 });
@@ -80,4 +82,24 @@ test('nearby results use the actual location while retaining the selected filter
  assert.equal(f.el('resultsOrder').value,'distance');assert.equal(f.el('stationList').children[0].dataset.stationId,'24');
  assert.equal(f.el('regionSelect').value,'광주');assert.equal(f.sandbox.currentFilter,'onnuri');assert.equal(f.fits(),fits);assert.equal(f.moves(),moves);
  assert.match(f.el('listScope').textContent,/광주 조건 결과/);assert.match(f.el('listScope').textContent,/내 위치 가까운 순/);
+});
+
+
+test('one launcher captures the current view, closes accessibly and reappears without moving the map',()=>{
+ const f=fixture(),fits=f.fits(),moves=f.moves();assert.equal(f.el('searchAreaBtn').hidden,false);
+ f.el('searchAreaBtn').emit('click');assert.equal(f.el('nationalResults').open,true);assert.equal(f.el('searchAreaBtn').hidden,true);
+ assert.equal(f.el('searchAreaBtn').attributes['aria-expanded'],'true');assert.equal(f.sandbox.document.activeElement,f.el('summary'));
+ f.emitMap('dragend');assert.equal(f.el('searchAreaBtn').hidden,true);
+ f.el('nationalResults').emit('keydown',{key:'Escape'});assert.equal(f.el('nationalResults').open,false);
+ assert.equal(f.el('searchAreaBtn').hidden,false);assert.equal(f.el('searchAreaBtn').attributes['aria-expanded'],'false');assert.equal(f.sandbox.document.activeElement,f.el('searchAreaBtn'));
+ f.el('searchAreaBtn').emit('click');f.el('summary').emit('click');
+ assert.equal(f.el('nationalResults').open,false);assert.equal(f.sandbox.document.activeElement,f.el('searchAreaBtn'));assert.equal(f.fits(),fits);assert.equal(f.moves(),moves);
+});
+
+test('map failure retains a launcher that reopens manual results with the query and region intact',()=>{
+ const f=fixture({fallback:true});f.el('searchInput').value='주유소 24';f.el('searchInput').emit('input');
+ assert.equal(f.el('searchAreaBtn').textContent,'검색 결과 보기');assert.equal(f.el('searchAreaBtn').hidden,true);
+ f.el('nationalResults').open=false;f.el('nationalResults').emit('toggle');assert.equal(f.el('searchAreaBtn').hidden,false);
+ f.el('searchAreaBtn').emit('click');assert.equal(f.el('nationalResults').open,true);assert.equal(f.el('stationList').children.length,1);
+ assert.equal(f.el('resultsScope').value,'region');assert.equal(f.el('regionSelect').value,'광주');assert.equal(f.el('searchInput').value,'주유소 24');
 });

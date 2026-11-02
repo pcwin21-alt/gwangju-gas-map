@@ -1128,9 +1128,9 @@
     <div id="districtContext" class="district-context" role="status" aria-live="polite" hidden><strong id="districtContextName"></strong><span id="districtContextNear"></span></div>
     <div class="map-zoom-tools" role="group" aria-label="지도 확대 축소"><button id="mapZoomIn" type="button" aria-label="지도 확대" title="지도 확대">＋</button><button id="mapZoomOut" type="button" aria-label="지도 축소" title="지도 축소">−</button></div>
     <div class="map-search-tools">
-      <button class="search-area-btn" id="searchAreaBtn" type="button" hidden>이 지역에서 찾기</button>
+      <button class="search-area-btn" id="searchAreaBtn" type="button" aria-controls="nationalResults" aria-expanded="false">보고 있는 화면에서 조회하기</button>
     <details class="national-results" id="nationalResults" data-size="half">
-      <summary>주유소 <span id="listCount"></span></summary>
+      <summary aria-label="조회 결과 닫기" title="조회 결과 닫기">조회 결과 <span id="listCount"></span></summary>
       <div class="results-body" id="resultsBody">
       <div class="results-toolbar"><label>범위<select id="resultsScope"><option value="region">선택 지역</option><option value="map">찾은 범위</option></select></label><label>정렬<select id="resultsOrder"><option value="name">이름순</option><option value="distance" disabled>가까운 순</option></select></label><button id="resultsSize" type="button" aria-label="목록 전체로 펼치기" aria-expanded="false">크게</button></div>
       <p id="listScope">선택한 지역·검색어·필터에 따른 목록</p>

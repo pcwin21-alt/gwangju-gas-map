@@ -36,7 +36,7 @@ const longName='가나다라마바사 에너지 직영 산업단지 제2 셀프�
 const longAddress=args.get('sample')==='normal'?'광주광역시 서구 상무대로 1180 (농성동)':'전라남도 무안군 삼향읍 남악리 아주긴도로명123번길 123-45 (산업단지 제2동)';
 const longToken=args.get('sample')==='normal'?'상록 주유소':'LongMerchantNameWithoutSpaces0123456789'.repeat(3);
 byId('map').textContent='지도 영역 — UI 배치 검수용';
-byId('countBadge').textContent='131곳';byId('listCount').textContent='전체 131곳';
+byId('countBadge').textContent='131곳';byId('listCount').textContent='131곳';
 if(args.get('area')==='1')byId('searchAreaBtn').hidden=false;
 if(args.get('active')==='1'){
   byId('activeFilters').hidden=false;
@@ -81,6 +81,10 @@ if(screen==='list'){
   byId('nationalResults').style.setProperty('--results-body-height',Math.max(88,areaHeight*.65-60)+'px');
   byId('stationList').innerHTML=Array.from({length:3},()=>`<button class="station-list-row"><strong>${longName}</strong><span class="station-address">${longAddress}</span><span class="station-payment">온누리 지류·디지털 / 광주상생카드</span><span class="station-price">휘발유 1,999원/L · 경유 1,899원/L</span></button>`).join('');
 }
+// Render the same closed/open launcher state without running map/network code.
+const previewResults=byId('nationalResults'),previewLaunch=byId('searchAreaBtn');
+const syncPreviewResults=()=>{previewLaunch.hidden=previewResults.open;previewLaunch.setAttribute('aria-expanded',String(previewResults.open));};
+previewResults.addEventListener('toggle',syncPreviewResults);syncPreviewResults();
 document.querySelectorAll('form').forEach(form=>form.addEventListener('submit',e=>e.preventDefault()));
 </script>'''
     # Run only the actual route-window sizing/gestures module. It has no network

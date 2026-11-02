@@ -38,7 +38,7 @@
     '조건에 맞는 주유소':'Filtered stations','선택한 지역·검색어·필터에 따른 목록':'Matches your selected region, search and filters','더 보기':'Show more','공식 가맹점 자료':'Official merchant data',
     '범위':'Scope','정렬':'Sort','선택 지역 전체':'Selected region','지도에서 찾은 범위':'Searched map area','이름순':'Name','내 위치 가까운 순':'Nearest to me','내 위치 직선거리순':'Straight-line distance from me',
     '선택 지역':'Region','찾은 범위':'Searched area',
-    '이 지역에서 찾기':'Search this area','선택 지역 전체 보기':'Show selected region','크게':'Expand','작게':'Reduce','목록 전체로 펼치기':'Expand station list','목록 절반으로 줄이기':'Reduce station list','열기/접기':'Open / close',
+    '보고 있는 화면에서 조회하기':'Search this map view','검색 결과 보기':'View search results','조회 결과':'Results','조회 결과 닫기':'Close results','선택 지역 전체 보기':'Show selected region','크게':'Expand','작게':'Reduce','목록 전체로 펼치기':'Expand station list','목록 절반으로 줄이기':'Reduce station list','열기/접기':'Open / close',
     '여기로 길찾기':'Get directions here','확인 정보':'Verification details','자료 확인 정보':'Data status','창 설정':'Window settings','조건에 맞는 주유소가 없습니다.':'No stations match your filters.',
     '지도 대신 주소 목록':'Address list without map','목록은 찾기를 누른 범위':'List uses your last searched area','기준일 미확인':'Source date unknown','상세주소 미확인':'Street address unverified','결제 유형 미확인':'Payment type unverified',
     '조건에 맞는 확인된 등록이 없습니다. 지역이나 결제 유형을 바꿔보세요.':'No verified listings match. Try another region or payment type.',
