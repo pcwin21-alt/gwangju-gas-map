@@ -2368,10 +2368,6 @@ document.getElementById('coffeeModal').addEventListener('click', function(e) {
 const helpModal = document.getElementById('helpModal');
 function openHelp() { helpModal.classList.add('open'); }
 function closeHelp() { helpModal.classList.remove('open'); }
-document.getElementById('helpBtn').addEventListener('click', openHelp);
-document.getElementById('helpModalClose').addEventListener('click', closeHelp);
-document.getElementById('helpModalClose2').addEventListener('click', closeHelp);
-helpModal.addEventListener('click', function(e) { if (e.target === this) closeHelp(); });
 // 최초 방문 시 자동 오픈
 if (!localStorage.getItem('helpSeen')) {
   openHelp();

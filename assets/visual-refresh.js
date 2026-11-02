@@ -19,4 +19,10 @@
     if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) tools.close();
   });
   document.getElementById('updatesDialog').addEventListener('close', () => open.focus());
+  // Help must remain available when the map SDK fails before its setup finishes.
+  const help = document.getElementById('helpModal');
+  const closeHelp = () => help.classList.remove('open');
+  document.getElementById('helpBtn').addEventListener('click', () => help.classList.add('open'));
+  for (const id of ['helpModalClose', 'helpModalClose2']) document.getElementById(id).addEventListener('click', closeHelp);
+  help.addEventListener('click', event => { if (event.target === help) closeHelp(); });
 })();
