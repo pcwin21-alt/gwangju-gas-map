@@ -53,7 +53,6 @@
 .map-location-btn.located {color:#1769d2;border-color:#a7c9f7;}
 .map-location-btn:disabled {opacity:.55;cursor:wait;}
 .map-location-btn.loading svg {animation:locating 1.2s linear infinite;}
-.map-area .fit-results-btn {bottom:calc(max(24px,env(safe-area-inset-bottom)) + 56px);}
 .map-area .national-results {max-height:max(44px,calc(100% - 152px));}
 @keyframes locating {to {transform:rotate(360deg);}}
 @media(prefers-reduced-motion:reduce){.map-location-btn.loading svg {animation:none;}}

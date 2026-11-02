@@ -146,7 +146,7 @@
   }else{
     scope.querySelector('option[value="map"]').disabled=true;panel.open=true;areaButton.textContent='검색 결과 보기';
     byId('map').textContent='지도를 불러오지 못했습니다. 목록에서 주소와 길찾기를 확인하세요.';
-    for(const id of ['myLocBtn','rankBtn','fitResultsBtn','districtSelect'])byId(id).disabled=true;byId('tripPanel').hidden=true;
+    for(const id of ['myLocBtn','rankBtn','districtSelect'])byId(id).disabled=true;byId('tripPanel').hidden=true;
     byId('searchInput').addEventListener('input',()=>{limit=20;render(true);});
     document.querySelectorAll('.filter-btn').forEach(b=>b.addEventListener('click',()=>{fallbackPayment=b.dataset.filter;document.querySelectorAll('.filter-btn').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b));});render(true);syncURL();}));
   }
