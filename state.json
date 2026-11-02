@@ -6302,6 +6302,30 @@
       "observed_ids": [],
       "result": "recent_exact_issuer_evidence_reused",
       "candidate_ids": []
+    },
+    {
+      "kind": "kb_search",
+      "source": "kbcard",
+      "region": "전남",
+      "purpose": "issuer_coordinate_identity_review",
+      "target": {
+        "name": "주식회사 혁신에너지",
+        "keyword": "혁신에너지",
+        "lat": 35.0253400897,
+        "lng": 126.7652237445,
+        "address": "전남 나주시 금천면 ",
+        "coordinate_source_id": "kbcard:000000088473697"
+      },
+      "discovery_only": true,
+      "review_station_id": "onnuri:14280200024",
+      "expected_bank_id": "000000088473697",
+      "source_evidence": "output/audits/regional_gap_20261102/naju_innovation_coordinate_review.json",
+      "logical_key": "cb87c8541476da05247da7c2",
+      "id": "cb87c8541476da05247da7c2",
+      "status": "pending",
+      "attempts": 0,
+      "page": 1,
+      "observed_ids": []
     }
   ],
   "evidence": [
@@ -6783,7 +6807,14 @@
       "station_id": "onnuri:14280200024",
       "job_id": "ce7d85b7fbf2733b81b53e99",
       "checked_at": "2026-11-02T07:09:23+09:00",
-      "reason": "No independently matched current issuer record; preserve previous station"
+      "reason": "No independently matched current issuer record; preserve previous station",
+      "status": "needs_review",
+      "investigation_evidence": [
+        "output/audits/regional_gap_20261102/naju_innovation_coordinate_review.json"
+      ],
+      "investigated_at": "2026-11-02T09:01:20+09:00",
+      "followup_job_id": "cb87c8541476da05247da7c2",
+      "investigation_scope": "Issuer coordinate/address mismatch hypothesis; no current membership conclusion"
     }
   ],
   "source_gaps": [
@@ -7472,9 +7503,9 @@
   "status": "running",
   "summary": {
     "status": "running",
-    "jobs_total": 225,
+    "jobs_total": 226,
     "jobs_done": 18,
-    "jobs_remaining": 207,
+    "jobs_remaining": 208,
     "review_records": 3,
     "evidence_records": 9,
     "source_gaps": 90,
@@ -7488,8 +7519,8 @@
       {
         "region": "전남",
         "status": "collecting",
-        "jobs_total": 41,
-        "jobs_remaining": 23,
+        "jobs_total": 42,
+        "jobs_remaining": 24,
         "jobs_needing_review": 0,
         "source_gaps": 26,
         "review_records": 2,
@@ -7918,7 +7949,9 @@
   "regional_reviews": {
     "전남": {
       "status": "pending",
-      "evidence": [],
+      "evidence": [
+        "output/audits/regional_gap_20261102/naju_innovation_coordinate_review.json"
+      ],
       "checked_at": null
     },
     "전북": {
@@ -20128,8 +20161,11 @@
       },
       "membership_rechecks": {
         "status": "pending",
-        "evidence": [],
-        "checked_at": null
+        "evidence": [
+          "output/audits/regional_gap_20261102/naju_innovation_coordinate_review.json"
+        ],
+        "checked_at": null,
+        "scope": "Current issuer rechecks incomplete; coordinate discrepancy follow-up is discovery only"
       },
       "market_coverage": {
         "status": "pending",
