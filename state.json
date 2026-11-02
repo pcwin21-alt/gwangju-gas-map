@@ -13,7 +13,7 @@
       "status": "active",
       "url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
       "scope": "Public unauthenticated Onnuri merchant form; issuer-specific evidence only; limits are our load caps, not a provider guarantee",
-      "next_allowed_at": 1793648686.657215,
+      "next_allowed_at": 1793648691.1636138,
       "volume_ramp": {
         "stage": "pilot",
         "started_at": 1793556784.2048566,
@@ -681,7 +681,7 @@
       "job_id": "273d70071f2c25a1a63ab7b9",
       "source": "kbcard",
       "at": 1793648506.657215,
-      "status": "reserved",
+      "status": "done",
       "run_id": "a203bae157bb4799b2808389dcaa44bc",
       "request": {
         "method": "POST",
@@ -698,7 +698,12 @@
           "endRow": 10,
           "mmcNm": ""
         }
-      }
+      },
+      "request_started_at": 1793648509.3545268,
+      "network_duration_seconds": 1.1166119575500488,
+      "http_status": 200,
+      "response_sha256": "32d17b00bc4e47c336b950578e64e3f1ea60de646d0e862a4d667b91ef7d926b",
+      "finished_at": 1793648511.163559
     }
   ],
   "jobs": [
@@ -2140,11 +2145,25 @@
       },
       "logical_key": "273d70071f2c25a1a63ab7b9",
       "id": "273d70071f2c25a1a63ab7b9",
-      "status": "pending",
+      "status": "done",
       "attempts": 1,
       "page": 1,
-      "observed_ids": [],
-      "candidate_ids": []
+      "observed_ids": [
+        "000000110113418",
+        "000000101503898",
+        "000000104327659",
+        "000000109755582",
+        "000000119687262",
+        "000000086998538",
+        "000000117413616",
+        "000000104883806",
+        "000000015477381",
+        "000000085705281"
+      ],
+      "candidate_ids": [],
+      "expected": 10,
+      "last_observed_at": "2026-11-03T04:41:50+09:00",
+      "result": "observations_saved"
     },
     {
       "kind": "kb_search",
@@ -7624,6 +7643,54 @@
         "지번주소": "전남광주통합특별시 보성군 보성읍 보성리 342-20",
         "위도": "34.7719199072915",
         "경도": "127.093444707314",
+        "region": "전남"
+      },
+      "commercial_source": {
+        "archive_sha256": "57aa361544108ff4fc73334f87d2ced61e41fe8638dd70bcd842930f865d2386",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+        "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
+      },
+      "annual_candidate_ids": []
+    },
+    {
+      "identity_review": "same_premise_confirmed",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "checked_at": "2026-11-03T04:41:50+09:00",
+      "bank_record": {
+        "location": {
+          "lat": "34.9221517596",
+          "lng": "126.7479655283"
+        },
+        "content": {
+          "tel": "061)331-5188",
+          "title": "백제주유소",
+          "category": "주유소",
+          "address": "전남 나주시 세지면 ",
+          "distance": "8",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000110113418",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        }
+      },
+      "commercial_record": {
+        "상가업소번호": "MA0101202305A0114565",
+        "상호명": "백제주유소",
+        "지점명": "",
+        "상권업종소분류코드": "G21401",
+        "상권업종소분류명": "주유소",
+        "표준산업분류코드": "G47711",
+        "표준산업분류명": "운송장비용 주유소 운영업",
+        "시군구명": "나주시",
+        "도로명주소": "전남광주통합특별시 나주시 세지면 동창로 154",
+        "지번주소": "전남광주통합특별시 나주시 세지면 오봉리 236-9",
+        "위도": "34.9222110757088",
+        "경도": "126.747905819259",
         "region": "전남"
       },
       "commercial_source": {
@@ -21968,6 +22035,14 @@
       "checked_at": "2026-11-03T04:38:41+09:00",
       "job_id": "de06432b3d9da466cd3d9ec5",
       "nonmembership": "not_established"
+    },
+    "onnuri:18804200010": {
+      "status": "confirmed_in_issuer_scope",
+      "issuer": "kbcard",
+      "checked_at": "2026-11-03T04:41:50+09:00",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "bank_id": "000000110113418",
+      "other_payment_methods": "not_reverified"
     }
   },
   "initial_plan_id": "fuel-candidate-inventory-20261102-v1",
