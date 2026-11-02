@@ -1,4 +1,3 @@
-:root {--ink:#18243c;--muted:#57647b;--line:#dce3ef;--accent:#233e78;--surface:#f5f7fc;}
 body {color:var(--ink);background:var(--surface);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;}
 button,a,input,select,summary {-webkit-tap-highlight-color:transparent;}
 button,a,summary {touch-action:manipulation;}
