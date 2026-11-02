@@ -7457,7 +7457,17 @@
         "market": "박물관거리 골목형상점가",
         "candidate_ids": [
           "873fddc3887654d789eb4063"
-        ]
+        ],
+        "issuer_checks": {
+          "kbcard": {
+            "status": "confirmed_in_issuer_scope",
+            "issuer": "kbcard",
+            "checked_at": "2026-11-02T15:14:26+09:00",
+            "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+            "bank_id": "000000037510191",
+            "other_payment_methods": "not_reverified"
+          }
+        }
       }
     },
     "onnuri_methods": {
@@ -7497,7 +7507,15 @@
         "market": "박물관거리 골목형상점가",
         "candidate_ids": [
           "84b4ca11d60b7efb7b2712c6"
-        ]
+        ],
+        "issuer_checks": {
+          "kbcard": {
+            "status": "needs_review_not_found",
+            "checked_at": "2026-11-02T15:17:31+09:00",
+            "job_id": "d9442ced3e91e90c58403941",
+            "nonmembership": "not_established"
+          }
+        }
       }
     },
     "onnuri_methods": {
@@ -7537,7 +7555,17 @@
         "market": "장성읍 골목형상점가",
         "candidate_ids": [
           "1971e423881e57e12ffe9add"
-        ]
+        ],
+        "issuer_checks": {
+          "kbcard": {
+            "status": "confirmed_in_issuer_scope",
+            "issuer": "kbcard",
+            "checked_at": "2026-11-02T15:20:33+09:00",
+            "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+            "bank_id": "000000100745478",
+            "other_payment_methods": "not_reverified"
+          }
+        }
       }
     },
     "onnuri_methods": {

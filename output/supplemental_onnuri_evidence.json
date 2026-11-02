@@ -1231,6 +1231,102 @@
         "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
       },
       "annual_candidate_ids": []
+    },
+    {
+      "identity_review": "same_premise_confirmed",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "checked_at": "2026-11-02T15:14:26+09:00",
+      "bank_record": {
+        "location": {
+          "lat": "35.3111466663",
+          "lng": "126.9811048273"
+        },
+        "content": {
+          "tel": "061)383-5179",
+          "title": "대나무주유소",
+          "category": "주유소",
+          "address": "전남 담양군 담양읍 ",
+          "distance": "9",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000037510191",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        }
+      },
+      "commercial_record": {
+        "상가업소번호": "MA010120220807533538",
+        "상호명": "대나무주유소",
+        "지점명": "",
+        "상권업종소분류코드": "G21401",
+        "상권업종소분류명": "주유소",
+        "표준산업분류코드": "G47711",
+        "표준산업분류명": "운송장비용 주유소 운영업",
+        "시군구명": "담양군",
+        "도로명주소": "전남광주통합특별시 담양군 담양읍 죽향대로 1179",
+        "지번주소": "전남광주통합특별시 담양군 담양읍 백동리 276-5",
+        "위도": "35.3111671969697",
+        "경도": "126.981196649484",
+        "region": "전남"
+      },
+      "commercial_source": {
+        "archive_sha256": "57aa361544108ff4fc73334f87d2ced61e41fe8638dd70bcd842930f865d2386",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+        "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
+      },
+      "annual_candidate_ids": []
+    },
+    {
+      "identity_review": "same_premise_confirmed",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "checked_at": "2026-11-02T15:20:33+09:00",
+      "bank_record": {
+        "location": {
+          "lat": "35.2924363629",
+          "lng": "126.779621544"
+        },
+        "content": {
+          "tel": "061)393-1000",
+          "title": "장성농협주유소",
+          "category": "주유소",
+          "address": "전남 장성군 장성읍 ",
+          "distance": "28",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000100745478",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        }
+      },
+      "commercial_record": {
+        "상가업소번호": "MA010120220808842825",
+        "상호명": "장성농협주유소",
+        "지점명": "",
+        "상권업종소분류코드": "G21401",
+        "상권업종소분류명": "주유소",
+        "표준산업분류코드": "G47711",
+        "표준산업분류명": "운송장비용 주유소 운영업",
+        "시군구명": "장성군",
+        "도로명주소": "전남광주통합특별시 장성군 장성읍 뱃나드리로 245",
+        "지번주소": "전남광주통합특별시 장성군 장성읍 영천리 1330-1",
+        "위도": "35.2921931828988",
+        "경도": "126.779711530487",
+        "region": "전남"
+      },
+      "commercial_source": {
+        "archive_sha256": "57aa361544108ff4fc73334f87d2ced61e41fe8638dd70bcd842930f865d2386",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+        "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
+      },
+      "annual_candidate_ids": []
     }
   ]
 }
