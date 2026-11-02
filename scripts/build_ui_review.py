@@ -72,14 +72,14 @@ if(screen==='trip'){
 }
 if(screen==='station'){
   byId('stationDetails').hidden=false;
-  byId('stationDetails').innerHTML=`<div class="info-overlay"><div class="info-heading"><div class="copy-row name"><span>${longToken}</span></div><button class="station-close">×</button></div><div class="copy-row address">${longAddress}</div><div class="tags"><span class="station-payment-label">온누리 지류·디지털 / 광주상생카드</span><span class="station-check">2026-11-02 확인</span></div><div class="prices"><span class="price-item"><span class="fuel-label">휘발유</span><span class="effective-price"><del>1,999원/L</del><b>1,799.1원/L</b></span></span></div><div class="route-actions"><a class="route-btn kakao">카카오맵</a><a class="route-btn naver">네이버지도</a></div><button class="route-btn station-via">이 주유소 경유</button></div>`;
+  byId('stationDetails').innerHTML=`<div class="info-overlay"><div class="info-heading"><div class="copy-row name"><span>${longToken}</span></div><button class="station-close">×</button></div><div class="copy-row address">${longAddress}</div><div class="tags"><span class="station-payment-label">온누리 지류·디지털 / 광주 지역화폐</span><span class="station-check">2026-11-02 확인</span></div><div class="prices"><span class="price-item"><span class="fuel-label">휘발유</span><span class="effective-price"><del>1,999원/L</del><b>1,799.1원/L</b></span></span></div><div class="route-actions"><a class="route-btn kakao">카카오맵</a><a class="route-btn naver">네이버지도</a></div><button class="route-btn station-via">이 주유소 경유</button></div>`;
 }
 if(screen==='list'){
   byId('nationalResults').open=true;
   const areaHeight=document.querySelector('.map-area').clientHeight;
   byId('nationalResults').style.setProperty('--results-available',Math.max(100,areaHeight-88)+'px');
   byId('nationalResults').style.setProperty('--results-body-height',Math.max(88,areaHeight*.65-60)+'px');
-  byId('stationList').innerHTML=Array.from({length:3},()=>`<button class="station-list-row"><strong>${longName}</strong><span class="station-address">${longAddress}</span><span class="station-payment">온누리 지류·디지털 / 광주상생카드</span><span class="station-price">휘발유 1,999원/L · 경유 1,899원/L</span></button>`).join('');
+  byId('stationList').innerHTML=Array.from({length:3},()=>`<button class="station-list-row"><strong>${longName}</strong><span class="station-address">${longAddress}</span><span class="station-payment">온누리 지류·디지털 / 광주 지역화폐</span><span class="station-price">휘발유 1,999원/L · 경유 1,899원/L</span></button>`).join('');
 }
 // Render the same closed/open launcher state without running map/network code.
 const previewResults=byId('nationalResults'),previewLaunch=byId('searchAreaBtn');

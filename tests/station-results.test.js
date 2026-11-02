@@ -32,7 +32,7 @@ test('only positive known prices for the station fuel appear, with a readable so
  assert.match(core.priceText({fuel_kind:'liquid'},{휘발유:1800}),/기준일 미확인$/);
 });
 test('list payment labels retain both schemes and do not turn unknown methods into support',()=>{
- assert.equal(display.paymentText({payment_types:['onnuri','saengsaeng'],onnuri_methods:{paper:true,digital:true}}),'온누리 지류·디지털 / 광주상생카드');
+ assert.equal(display.paymentText({payment_types:['onnuri','saengsaeng'],onnuri_methods:{paper:true,digital:true}}),'온누리 지류·디지털 / 광주 지역화폐');
  assert.equal(display.paymentText({payment_types:['onnuri'],onnuri_methods:{paper:null,digital:null}}),'온누리 종류 미확인');
  assert.equal(display.paymentText({payment_types:[]}),'결제 유형 미확인');
 });

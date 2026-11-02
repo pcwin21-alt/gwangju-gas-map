@@ -6,7 +6,7 @@
     '지역 선택':'Choose region','지역 선택 닫기':'Close region selection',
     '화면 테마':'Appearance','기기 설정':'System','밝게':'Light','어둡게':'Dark',
     '주유소 상세 닫기':'Close station details',
-    '주유소':'Stations','결과 위치':'Show on map','조건에 맞는 주유소 위치로 지도 맞추기':'Fit matching stations on map',
+    '주유소':'Stations',
     '직선거리':'Straight-line distance','이 주유소 경유':'Stop at this station','온누리 KB국민카드':'Onnuri KB Kookmin Card','최근 미확인':'Not recently verified','확인일 미확인':'Check date unknown','표시 중':'shown',
     '지도 보기':'Map view',
     '지도 확대':'Zoom in','지도 축소':'Zoom out','지도 확대 축소':'Map zoom',
@@ -25,20 +25,20 @@
     '내 주변':'Near me','가는 길':'On route','찾는 방식':'Search mode','목록 보기':'View list',
     '현재 위치를 확인하고 있습니다.':'Finding your current location.',
     '위치 확인 실패. 주소로 검색하세요.':'Location unavailable. Search an address.',
-    '온누리·광주상생카드 사용처와 주유 가격을 한눈에.':'Find Onnuri and Gwangju Sangsaeng stations and fuel prices at a glance.',
-    '상생카드와 온누리 공식 검색 결과를 표시합니다. 현행 검색과 대조되지 않은 곳은 과거 기록으로 구분합니다. 유가와 가맹점 확인일은 별개입니다.':'Sangsaeng and Onnuri use official search results. Unmatched older records are marked historical. Price and merchant check dates are separate.',
+    '온누리·광주 지역화폐 사용처와 주유 가격을 한눈에.':'Find Onnuri and Gwangju local currency stations and fuel prices at a glance.',
+    '지역화폐와 온누리 공식 검색 결과를 표시합니다. 현행 검색과 대조되지 않은 곳은 과거 기록으로 구분합니다. 유가와 가맹점 확인일은 별개입니다.':'Local currency and Onnuri use official search results. Unmatched older records are marked historical. Price and merchant check dates are separate.',
     '유가: 하루 1회 조회 · 가맹점: 매일 오전 6시 30분 확인':'Prices: daily lookup · Merchants: daily at 06:30 KST',
     '유가: 하루 1회 조회 · 가맹점: 확인된 자료부터 순차 반영':'Prices: daily lookup · Merchants: verified records added progressively',
     '공식 검색·품목 자료로 확인한 주유소입니다. 전국 모든 가맹점이 포함된 것은 아닙니다.':'Stations are checked against official search and product records. Coverage is not exhaustive.',
     '온누리 공식 검색 ↗':'Search official Onnuri merchants ↗',
     '최근 조회 실패, 이전 자료 유지':'Latest lookup failed; previous data retained',
-    '전국 온누리 · 광주상생카드 가맹점':'National Onnuri · Gwangju Sangsaeng merchants',
+    '전국 온누리 · 광주 지역화폐 가맹점':'National Onnuri · Gwangju local currency merchants',
     '시·도':'Province', '온누리 유형':'Onnuri type','유종':'Fuel','전국':'All regions',
     '디지털':'Digital','지류':'Paper','지류·디지털':'Paper · Digital','휘발유·경유':'Petrol · Diesel','전체 시·군·구':'All districts',
     '조건에 맞는 주유소':'Filtered stations','선택한 지역·검색어·필터에 따른 목록':'Matches your selected region, search and filters','더 보기':'Show more','공식 가맹점 자료':'Official merchant data',
     '범위':'Scope','정렬':'Sort','선택 지역 전체':'Selected region','지도에서 찾은 범위':'Searched map area','이름순':'Name','내 위치 가까운 순':'Nearest to me','내 위치 직선거리순':'Straight-line distance from me',
     '선택 지역':'Region','찾은 범위':'Searched area',
-    '보고 있는 화면에서 조회하기':'Search this map view','검색 결과 보기':'View search results','조회 결과':'Results','조회 결과 닫기':'Close results','선택 지역 전체 보기':'Show selected region','크게':'Expand','작게':'Reduce','목록 전체로 펼치기':'Expand station list','목록 절반으로 줄이기':'Reduce station list','열기/접기':'Open / close',
+    '현재 지도에서 주유소 찾기':'Search this map view','검색 결과 보기':'View search results','조회 결과':'Results','조회 결과 닫기':'Close results','선택 지역 전체 보기':'Show selected region','크게':'Expand','작게':'Reduce','목록 전체로 펼치기':'Expand station list','목록 절반으로 줄이기':'Reduce station list','열기/접기':'Open / close',
     '여기로 길찾기':'Get directions here','확인 정보':'Verification details','자료 확인 정보':'Data status','창 설정':'Window settings','조건에 맞는 주유소가 없습니다.':'No stations match your filters.',
     '지도 대신 주소 목록':'Address list without map','목록은 찾기를 누른 범위':'List uses your last searched area','기준일 미확인':'Source date unknown','상세주소 미확인':'Street address unverified','결제 유형 미확인':'Payment type unverified',
     '조건에 맞는 확인된 등록이 없습니다. 지역이나 결제 유형을 바꿔보세요.':'No verified listings match. Try another region or payment type.',
@@ -46,20 +46,20 @@
 
     '(구)광주광역시 주유소 지도':'Gas stations in former Gwangju',
     '주유소 지도 로고':'Gas station map logo',
-    '상생카드·온누리 할인 가맹점 모음':'Sangsaeng Card & Onnuri discount merchants',
+    '지역화폐·온누리 할인 가맹점 모음':'Local currency & Onnuri discount merchants',
     '오늘':'Today','· 전체':'· Total','더보기':'More','사용법 안내':'Help',
     '✉ 오류·누락 신고':'✉ Report an issue','오류·누락 신고 / 문의':'Report an issue / Contact',
     '☕ 커피 사주기':'☕ Buy me a coffee','이 지도가 도움이 됐다면':'If this map helped you,',
     '개발자에게 커피 한 잔 선물해주세요!':'buy the developer a coffee!',
     '카카오페이 QR코드':'Kakao Pay QR code','카카오페이 앱으로 QR을 스캔하세요':'Scan with the Kakao Pay app',
     '닫기':'Close','📖 사용 안내':'📖 Help','이 지도는?':'About this map',
-    '광주광역시에서':'In former Gwangju,','광주상생카드':'Gwangju Sangsaeng Card','또는':'or',
+    '광주광역시에서':'In former Gwangju,','광주 지역화폐':'Gwangju local currency','또는':'or',
     '온누리상품권':'Onnuri vouchers','으로 결제 가능한 주유소를 한눈에 볼 수 있는 지도입니다.':'find gas stations that accept these payment methods.',
-    '상생카드만':'Sangsaeng only','온누리만':'Onnuri only','둘 다 가능':'Both accepted',
+    '지역화폐만':'Local currency only','온누리만':'Onnuri only','둘 다 가능':'Both accepted',
     '주요 기능':'Features','마커 클릭':'Tap a marker',
     '→ 주유소 이름·주소, 결제 가능 수단, 현재 유가(휘발유·경유·LPG) 확인':'→ See the station name, address, payment methods and fuel prices.',
     '검색창':'Search','에 주유소명이나 주소를 입력하면 해당 위치로 이동합니다.':'Enter a station name or address to show matching stations.',
-    '상생카드 / 온누리 / 전체':'Sangsaeng / Onnuri / All',
+    '지역화폐 / 온누리 / 전체':'Local currency / Onnuri / All',
     '버튼으로 원하는 결제수단의 주유소만 볼 수 있습니다.':'Filter stations by the payment method you use.',
     '구 필터':'District filter','(광산구·남구·동구·북구·서구)로 원하는 지역만 볼 수 있습니다.':'Choose Gwangsan, Nam, Dong, Buk or Seo district.',
     '가격 순위':'Lowest prices','→ 현재 보이는 주유소 중 휘발유·경유·LPG 가격 TOP 5를 확인합니다.':'→ See the top 5 lowest prices among the filtered stations.',
@@ -72,13 +72,13 @@
     '누락·오류 제보':'Report an issue','지도에 없는 주유소, 잘못된 정보가 있다면':'Found a missing station or incorrect information?',
     '+ 제보':'+ Report','버튼을 눌러 알려주세요. 지도에서 위치를 직접 찍거나 주소를 입력하고, 사진도 첨부할 수 있습니다.':'Use Report to choose a map location or enter an address. You can also attach a photo.',
     '이메일로도 신고 가능 →':'You can also email →','데이터 출처':'Data sources',
-    '상생카드: 광주시 가맹점 조회 / 온누리: 소상공인시장진흥공단 공식 파일·기존 위치 기록 / 유가: 오피넷(한국석유공사)':'Sangsaeng: official city merchant lookup / Onnuri: official SEMAS file and existing location records / Fuel prices: Opinet (KNOC)',
-    '상생카드는 공식 조회 결과, 온누리는 연간 공식 자료와 대조한 기록을 표시합니다. 온누리 자료 기준일과 매칭 미완료 여부는 각 주유소에서 확인하세요. 유가 갱신일과 가맹점 자료 기준일은 다릅니다.':'Sangsaeng uses official lookup results. Onnuri records are matched against an annual official file. Check each station for the source date and unmatched status. Fuel price dates differ from merchant source dates.',
+    '지역화폐: 광주시 가맹점 조회 / 온누리: 소상공인시장진흥공단 공식 파일·기존 위치 기록 / 유가: 오피넷(한국석유공사)':'Local currency: official city merchant lookup / Onnuri: official SEMAS file and existing location records / Fuel prices: Opinet (KNOC)',
+    '지역화폐는 공식 조회 결과, 온누리는 연간 공식 자료와 대조한 기록을 표시합니다. 온누리 자료 기준일과 매칭 미완료 여부는 각 주유소에서 확인하세요. 유가 갱신일과 가맹점 자료 기준일은 다릅니다.':'Local currency uses official lookup results. Onnuri records are matched against an annual official file. Check each station for the source date and unmatched status. Fuel price dates differ from merchant source dates.',
     '공유 안내':'Sharing','이 지도는':'This map may be','주변에 자유롭게 공유':'freely shared',
     '하셔도 됩니다. 다만 트래픽이 몰릴 경우 서버가 불안정해질 수 있으니 양해 부탁드립니다. 관심과 성원이 많다면 서버를 확대해 보겠습니다.':'with others. High traffic may affect availability. More capacity may be added as usage grows.',
     '문의·건의사항 →':'Questions / Suggestions →',
     '주유소명 · 주소 검색...':'Search station or address…','주유소명 또는 주소 검색':'Search station name or address','지우기':'Clear',
-    '검색 결과 없음':'No matching stations','전체':'All','상생카드':'Sangsaeng','온누리':'Onnuri','둘 다':'Both',
+    '검색 결과 없음':'No matching stations','전체':'All','지역화폐':'Local currency','온누리':'Onnuri','둘 다':'Both',
     '지역 선택':'Choose a district','전체 지역':'All districts','전체 구':'All districts',
     '광산구':'Gwangsan-gu','남구':'Nam-gu','동구':'Dong-gu','북구':'Buk-gu','서구':'Seo-gu',
     '더보기 닫기':'Close menu','지도 도구':'Map tools','업데이트 내역':'Updates','업데이트 내역 닫기':'Close updates',
@@ -114,7 +114,7 @@
     '✏️ 반응 없이 댓글만 남기기':'✏️ Leave a comment only','💬 한 마디 남겨주세요':'💬 Leave a comment',
     '닉네임 (미입력 시 익명)':'Nickname (optional)','비밀번호 (삭제 시 사용)':'Password (to delete your comment)',
     '자유롭게 작성해 주세요...':'Write your comment…','등록하기':'Post','💬 방문자 댓글':'💬 Comments','불러오는 중...':'Loading…','복사됨':'Copied',
-    '할인 전 단가':'Unit price before discount','상생카드 10% 적용 체감가':'Effective price with 10% Sangsaeng discount',
+    '할인 전 단가':'Unit price before discount','지역화폐 10% 적용 체감가':'Effective price with 10% Local currency discount',
     '내 위치 직선거리':'Straight-line distance from me','내 위치 확인 전':'Location not set',
     '이 주유소 들러서 목적지로':'Via this station to destination','네이버 내비로 경유':'Navigate via station in Naver','카카오맵 경유':'Via station in KakaoMap',
     '추가 이동시간 미계산':'Detour not calculated','종류 미확인':'Type unverified','미확인':'Unverified','최근 미확인':'Not recently verified',
@@ -147,9 +147,9 @@
     '업데이트 후 이전 화면이 남는 캐시 문제를 보완했습니다.':'Improved cache handling after updates.',
     '출발지와 목적지를 정하고, 가는 길에 들를 주유소의 추가 이동시간·거리를 비교하는 기능을 추가했습니다. 도로 추정값이며 실시간 교통은 반영하지 않습니다.':'Added route detour time and distance comparison. Estimates use roads and exclude live traffic.',
     '선택한 주유소를 경유해 최종 목적지로 이동하는 네이버 내비·카카오맵 연결을 추가했습니다.':'Added Naver and KakaoMap routes via the selected station to the final destination.',
-    '상생카드 가맹점에 할인 전 가격과 10% 적용 체감가를 함께 표시합니다. 예: 1,818원/L → 1,636.2원/L.':'Sangsaeng merchants show both the original and 10% effective price, e.g. KRW 1,818/L → KRW 1,636.2/L.',
+    '지역화폐 가맹점에 할인 전 가격과 10% 적용 체감가를 함께 표시합니다. 예: 1,818원/L → 1,636.2원/L.':'Local currency merchants show both the original and 10% effective price, e.g. KRW 1,818/L → KRW 1,636.2/L.',
     '온누리 지류·디지털 결제수단과 휘발유·경유 주유소/LPG 충전소를 구분해 찾을 수 있습니다.':'Filter by Onnuri paper/digital payment and petrol/diesel or LPG stations.',
-    '상생카드 공식 목록의 자동 갱신, 가맹점별 확인일 표시, 좌표가 불확실한 장소의 경유 추천 제외를 반영했습니다.':'Added official Sangsaeng refreshes and merchant verification dates. Uncertain coordinates are excluded from route suggestions.',
+    '지역화폐 공식 목록의 자동 갱신, 가맹점별 확인일 표시, 좌표가 불확실한 장소의 경유 추천 제외를 반영했습니다.':'Added official Local currency refreshes and merchant verification dates. Uncertain coordinates are excluded from route suggestions.',
     '모바일에서 경유 검색과 후보 목록을 보기 편하게 조정했습니다.':'Improved mobile route search and candidate lists.',
     '위치 권한을 허용하거나 출발지를 직접 검색하세요.':'Allow location access or search for a start manually.',
     '최근 전체 갱신 미완료':'Full refresh not recently completed',
@@ -183,13 +183,13 @@
       else if (/^[\d,.]+원\/L$/.test(text)) result = 'KRW '+text.replace('원/L','/L');
       else if (/^선택됨: /.test(text)) result = text.replace('선택됨: ', 'Selected: ');
       else if (/^추가 이동 약 \d+분 · [\d.]+km$/.test(text)) result = text.replace('추가 이동 약 ','Approx. detour: ').replace('분',' min');
-      else if (/^상생카드 조회[: ]/.test(text)) result = text.replace(/^상생카드 조회:? /,'Sangsaeng checked: ');
+      else if (/^지역화폐 조회[: ]/.test(text)) result = text.replace(/^지역화폐 조회:? /,'Local currency checked: ');
       else if (/^공식 자료 [\d-]+ 대조 \d+곳$/.test(text)) result = text.replace(/^공식 자료 ([\d-]+) 대조 (\d+)곳$/, 'Official source: $1, $2 matched');
       else if (/^매칭 미완료 \d+곳$/.test(text)) result = text.replace(/^매칭 미완료 (\d+)곳$/, '$1 unmatched');
       else if (/^총 \d+개$/.test(text)) result = text.replace(/^총 (\d+)개$/, '$1 stations');
       else if (/^총 \d+곳$/.test(text)) result = text.replace(/^총 (\d+)곳$/, '$1 total');
       else if (/^\d+곳 표시 중$/.test(text)) result = text.replace(/^(\d+)곳 표시 중$/, '$1 shown');
-      else if (/^상생 \d+$/.test(text)) result = text.replace('상생 ', 'Sangsaeng ');
+      else if (/^상생 \d+$/.test(text)) result = text.replace('상생 ', 'Local currency ');
       else if (/^공식 검색 확인 /.test(text)) result = text.replace('공식 검색 확인 ','Official search checked: ');
       else if (/^공식 검색 [\d-]+ 확인 \d+곳$/.test(text)) result = text.replace(/^공식 검색 ([\d-]+) 확인 (\d+)곳$/, 'Official search: $1, $2 checked');
       else if (/^온누리 공식 검색 [\d-]+$/.test(text)) result = text.replace('온누리 공식 검색 ','Onnuri official search: ');

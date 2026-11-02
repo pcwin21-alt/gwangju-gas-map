@@ -34,7 +34,6 @@ button,a,summary {touch-action:manipulation;}
 .mobile-district {display:none;min-width:0;}
 .mobile-district select {width:100%;font:inherit;font-size:16px;}
 .map-area {min-height:0;isolation:isolate;}
-.map-area .fit-results-btn {position:absolute;right:14px;bottom:max(24px,env(safe-area-inset-bottom));z-index:100;min-height:46px;padding:10px 16px;border:1px solid var(--line);border-radius:14px;background:#fff;color:var(--ink);font-size:14px;font-weight:600;box-shadow:0 3px 14px #18243c26;cursor:pointer;}
 .trip-panel {padding:0 20px 12px;background:#fff;border-bottom:1px solid var(--line);}
 .trip-panel .trip-trigger {padding:12px 16px;gap:12px;background:var(--accent);border-color:var(--accent);border-radius:14px;}
 .trip-panel .trip-trigger:hover {background:#192e5d;}

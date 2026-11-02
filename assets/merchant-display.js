@@ -8,13 +8,13 @@
       const m=station.onnuri_methods,types=[m?.paper===true&&'지류',digital(m)&&'디지털'].filter(Boolean);
       labels.push('온누리 '+(types.join('·')||'종류 미확인'));
     }
-    if(station.payment_types?.includes('saengsaeng'))labels.push('광주상생카드');
+    if(station.payment_types?.includes('saengsaeng'))labels.push('광주 지역화폐');
     return labels.join(' / ')||'결제 유형 미확인';
   }
   function confirmationText(station) {
     const labels=[],v=station.verification;
     if(station.payment_types?.includes('onnuri'))labels.push(onnuriNote(station));
-    if(station.payment_types?.includes('saengsaeng'))labels.push('상생카드 조회 '+date(v?.saengsaeng?.checked_at));
+    if(station.payment_types?.includes('saengsaeng'))labels.push('지역화폐 조회 '+date(v?.saengsaeng?.checked_at));
     return labels.join(' / ');
   }
   function onnuriNote(station) {
@@ -25,14 +25,14 @@
   }
   function verificationText(station) {
     const labels=[];
-    if(station.verification?.saengsaeng) labels.push('상생카드 조회: '+date(station.verification.saengsaeng.checked_at));
+    if(station.verification?.saengsaeng) labels.push('지역화폐 조회: '+date(station.verification.saengsaeng.checked_at));
     if(station.payment_types?.includes('onnuri')) labels.push('온누리 '+onnuriNote(station));
     if(station.location_evidence) labels.push('위치: '+(station.location_evidence.source_type==='commercial_registry'?'상권자료 ':'지자체 주유소 자료 ')+(station.location_evidence.source_date||'기준일 미확인'));
     return labels.join(' / ');
   }
   function paymentSummary(station) {
     if(station.payment_types?.includes('onnuri')&&station.verification?.onnuri?.provider==='kbcard')
-      return '온누리 KB국민카드'+(station.payment_types.includes('saengsaeng')?' / 광주상생카드':'');
+      return '온누리 KB국민카드'+(station.payment_types.includes('saengsaeng')?' / 광주 지역화폐':'');
     return paymentText(station);
   }
   function checkCaption(station) {

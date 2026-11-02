@@ -53,7 +53,7 @@
   .national-results[open]>summary {flex-shrink:0;position:relative;}
   .results-body {height:var(--results-body-height,240px);max-height:var(--results-body-height,240px);min-height:0;}
   .results-toolbar {padding:8px;gap:6px;}
-  .map-area:has(.national-results[open]) :is(.map-zoom-tools,#fitResultsBtn,.district-context) {visibility:hidden;}
+  .map-area:has(.national-results[open]) :is(.map-zoom-tools,.district-context) {visibility:hidden;}
   .keyboard-open .national-results {display:none;}
 }
 

@@ -97,7 +97,7 @@ html {font-size:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%;}
 .app .station-list-row :is(.station-address,.station-payment,.station-price) {font-size:var(--ui-body);line-height:1.5;}
 .app .station-list-row :is(.station-proof) {font-size:var(--ui-meta);line-height:1.5;}
 .app :is(.station-list-row>strong,.trip-result h3) {font-size:var(--ui-heading);line-height:1.5;}
-.app :is(.fit-results-btn,.search-area-btn) {font-size:var(--ui-body);line-height:1.5;white-space:normal;}
+.app .search-area-btn {font-size:var(--ui-body);line-height:1.5;white-space:normal;}
 .app .results-toolbar {flex-wrap:wrap;}
 .results-toolbar label {flex:1 1 8rem;}
 .app #resultsSize {flex:0 0 auto;}
@@ -144,7 +144,6 @@ html {font-size:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%;}
   .app .filter-selects>label:last-child {grid-column:auto;}
   .app .region-options {grid-template-columns:repeat(auto-fit,minmax(min(5rem,100%),1fr));}
   .map-search-tools:has(.national-results[open]) .search-area-btn {display:none;}
-  .app .map-area .fit-results-btn {bottom:calc(max(24px,env(safe-area-inset-bottom)) + 7rem);max-width:calc(100% - 84px);}
   /* On a short mobile sheet, a sticky multi-row toolbar can cover every result. */
   .app .results-toolbar {position:static;}
   .app :is(.rank-panel,.nearby-panel-box,.report-panel-box,.react-panel-box,.help-panel,.modal-box) {max-width:100%;padding-bottom:max(1rem,env(safe-area-inset-bottom));}

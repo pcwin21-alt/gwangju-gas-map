@@ -10,7 +10,7 @@
     byId('tripMethod').disabled = !isOnnuri;
     if (!isOnnuri) byId('tripMethod').value = 'any';
     byId('tripRecommend').textContent = destination ? (requestedStop?'이 주유소로 경유 연결':'경유 주유소 찾기') : '목적지 검색';
-    const payment = {all:'모든 결제수단', onnuri:'온누리', saengsaeng:'상생카드'}[byId('tripPayment').value];
+    const payment = {all:'모든 결제수단', onnuri:'온누리', saengsaeng:'지역화폐'}[byId('tripPayment').value];
     const fuel = {all:'모든 유종', liquid:'휘발유·경유', lpg:'LPG'}[byId('tripFuel').value];
     const method = {any:'', paper:'지류', digital:'디지털'}[byId('tripMethod').value];
     byId('tripSettingsSummary').textContent = [start?.name || (byId('tripStart').value.trim() ? '출발지 선택 필요' : '내 위치'), payment, method, fuel].filter(Boolean).join(' · ');
@@ -223,6 +223,6 @@
   const metadata=typeof MERCHANT_STATUS==='undefined'?{}:MERCHANT_STATUS;
   const onnuri=metadata.onnuri;
   const onnuriSummary=onnuri?.status==='confirmed' ? `공식 검색 ${onnuri.checked_at.slice(0,10)} 확인 ${onnuri.matched_count}곳 · 과거 기록 ${onnuri.unmatched_count}곳` : (onnuri?.source_date ? `공식 자료 ${onnuri.source_date} 대조 ${onnuri.matched_count}곳` : '최근 전체 갱신 미완료');
-  byId('merchantFreshness').textContent=`상생카드 조회 ${metadata.saengsaeng?.checked_at?.slice(0,10)||'미확인'} · 온누리 ${onnuriSummary}${onnuri?.refresh_error ? ' · 새 조회 실패, 이전 자료 유지' : ''}`;
+  byId('merchantFreshness').textContent=`지역화폐 조회 ${metadata.saengsaeng?.checked_at?.slice(0,10)||'미확인'} · 온누리 ${onnuriSummary}${onnuri?.refresh_error ? ' · 새 조회 실패, 이전 자료 유지' : ''}`;
   window.GasRoutePlanner={chooseStation,clearForMapSearch(){clearResults();say('지도 검색 조건이 변경되어 경로 표시를 지웠습니다. 경유 찾기를 다시 누르면 비교할 수 있습니다.');}};
 })();

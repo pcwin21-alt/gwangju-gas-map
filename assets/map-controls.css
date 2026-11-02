@@ -4,5 +4,5 @@
 .map-zoom-tools button {border-radius:0;box-shadow:none;font-size:24px;}
 .map-zoom-tools button+button {border-top:0;}
 .map-zoom-tools button:disabled {opacity:.55;cursor:wait;}
-.map-area:has(.info-overlay) .map-zoom-tools,.map-area:has(.info-overlay) #fitResultsBtn {visibility:hidden;}
+.map-area:has(.info-overlay) .map-zoom-tools {visibility:hidden;}
 @media(max-height:440px){.map-zoom-tools button {height:44px;}}
