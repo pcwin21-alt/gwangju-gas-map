@@ -9,7 +9,7 @@
     const theme=mode==='system'?(query.matches?'dark':'light'):mode;
     document.documentElement.dataset.theme=theme;
     document.documentElement.style.colorScheme=theme;
-    document.querySelector('meta[name="theme-color"]')?.setAttribute('content',theme==='dark'?'#111d2e':'#ffffff');
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content',theme==='dark'?'#111113':'#fdfdfc');
     window.dispatchEvent(new CustomEvent('gas:themechange',{detail:{theme,mode}}));
   }
   function setMode(value) {mode=valid(value);try {localStorage.setItem('gas-map-theme',mode);}catch(_){}apply();}

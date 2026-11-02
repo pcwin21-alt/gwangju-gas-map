@@ -173,9 +173,7 @@ html {font-size:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%;}
 
 /* Radix Sand / Indigo / Jade / Sage: warm surfaces, navy information,
    and restrained green for payment context and the primary action. */
-:root {--detail-surface:#fdfdfc;--detail-ink:#1f2d5c;--detail-muted:#60646c;--detail-edge:#cfceca;--detail-tint:#f1f0ef;--detail-tint-hover:#e9e8e6;--detail-shadow:0 12px 36px #00000026,0 2px 8px #00000014;--detail-veil:#0000000a;--detail-payment-bg:#eef1f0;--detail-payment-ink:#1d3b31;--detail-payment-edge:#cbcfcd;--detail-price-bg:#f9f9f8;--detail-price-edge:#dad9d6;--detail-fuel-ink:#63635e;--detail-action-bg:#1d3b31;--detail-action-ink:#ffffff;--detail-action-hover:#208368;}
-:root[data-theme="dark"] {--detail-surface:#18191b;--detail-ink:#edeef0;--detail-muted:#b0b4ba;--detail-edge:#62605b;--detail-tint:#222221;--detail-tint-hover:#2a2a28;--detail-shadow:0 14px 40px #0009,0 2px 10px #0005;--detail-veil:#0000001a;--detail-payment-bg:#202221;--detail-payment-ink:#adf0d4;--detail-payment-edge:#444947;--detail-price-bg:#222221;--detail-price-edge:#494844;--detail-fuel-ink:#b5b3ad;--detail-action-bg:#adf0d4;--detail-action-ink:#0f2e22;--detail-action-hover:#c3e9d7;}
-#stationDetails .info-overlay {--panel:var(--detail-surface);--ink:var(--detail-ink);--muted:var(--detail-muted);--field:var(--detail-tint);--line:var(--detail-edge);background:var(--panel);border:1px solid var(--detail-edge);box-shadow:var(--detail-shadow);border-radius:1rem;}
+#stationDetails .info-overlay {background:var(--panel);border:1px solid var(--detail-edge);box-shadow:var(--detail-shadow);border-radius:1rem;}
 #stationDetails .info-heading .name {grid-column:1/-1;padding:.375rem calc(var(--ui-touch) + .375rem);background:transparent;color:var(--ink);margin:0 0 .75rem;text-align:center;}
 #stationDetails .station-close {background:var(--detail-tint);color:var(--ink);border:1px solid var(--detail-edge);border-radius:.625rem;}
 #stationDetails .station-close:hover {background:var(--detail-tint-hover);}

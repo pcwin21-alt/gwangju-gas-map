@@ -45,7 +45,7 @@ if(args.get('active')==='1'){
 if(screen==='filters')byId('mapFilters').hidden=false;
 if(screen==='region'){
   for(const name of ['광주','전남','서울','경기','세종','전북','충남','전국']){
-    const b=document.createElement('button');b.textContent=name;byId('regionOptions').append(b);
+    const b=document.createElement('button');b.textContent=name;b.setAttribute('aria-pressed',String(name==='광주'));byId('regionOptions').append(b);
   }
   byId('regionDialog').showModal();
 }
@@ -54,7 +54,7 @@ if(screen==='updates')byId('updatesDialog').showModal();
 const panels={rank:'rankModal',report:'reportPanel',nearby:'nearbyPanel',help:'helpModal',reaction:'reactPanel',coffee:'coffeeModal'};
 if(panels[screen])byId(panels[screen]).classList.add('open');
 if(screen==='rank'){
-  byId('rankList').innerHTML=Array.from({length:5},(_,i)=>`<button type="button" class="rank-item"><span class="rank-badge">${i+1}</span><span class="rank-info"><span class="rank-name">${i===0?longToken:longName}</span><span class="rank-addr">${longAddress}</span></span><span class="rank-price"><span class="effective-price"><del>1,999원/L</del><b>1,799.1원/L</b><small>상생 10% 적용 체감가</small></span></span></button>`).join('');
+  byId('rankList').innerHTML=Array.from({length:5},(_,i)=>`<button type="button" class="rank-item"><span class="rank-badge r${i+1}">${i+1}</span><span class="rank-info"><span class="rank-name">${i===0?longToken:longName}</span><span class="rank-addr">${longAddress}</span></span><span class="rank-price"><span class="effective-price"><del>1,999원/L</del><b>1,799.1원/L</b><small>상생 10% 적용 체감가</small></span></span></button>`).join('');
 }
 if(screen==='nearby')byId('nearbyList').innerHTML=`<button class="nearby-item"><span class="nearby-dist">1.25km</span><span class="nearby-info"><span class="nearby-name">${longToken}</span><span class="nearby-addr">${longAddress}</span></span></button>`;
 if(screen==='report'){
