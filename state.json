@@ -13,7 +13,7 @@
       "status": "active",
       "url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
       "scope": "Public unauthenticated Onnuri merchant form; issuer-specific evidence only; limits are our load caps, not a provider guarantee",
-      "next_allowed_at": 1793636516.0276601,
+      "next_allowed_at": 1793636519.1885064,
       "volume_ramp": {
         "stage": "pilot",
         "started_at": 1793556784.2048566,
@@ -594,7 +594,7 @@
       "job_id": "12e91e1c54a97c5f0368e686",
       "source": "kbcard",
       "at": 1793636336.0276601,
-      "status": "reserved",
+      "status": "done",
       "run_id": "2c35f0223dfd4605a0d9df541d194e21",
       "request": {
         "method": "POST",
@@ -611,7 +611,12 @@
           "endRow": 10,
           "mmcNm": ""
         }
-      }
+      },
+      "request_started_at": 1793636337.4159439,
+      "network_duration_seconds": 0.9427042007446289,
+      "http_status": 200,
+      "response_sha256": "48437f557dc6e30dd0f77a7b238f960505f5b8ebc0d141355caf8fc19ec30f54",
+      "finished_at": 1793636339.1884558
     }
   ],
   "jobs": [
@@ -1882,11 +1887,27 @@
       },
       "logical_key": "12e91e1c54a97c5f0368e686",
       "id": "12e91e1c54a97c5f0368e686",
-      "status": "pending",
+      "status": "done",
       "attempts": 1,
       "page": 1,
-      "observed_ids": [],
-      "candidate_ids": []
+      "observed_ids": [
+        "000000025825147",
+        "000000010252234",
+        "000000103807664",
+        "000000120907777",
+        "000000095628096",
+        "000000108513573",
+        "000000118165032",
+        "000000111239680",
+        "000000018263949",
+        "000000057174501",
+        "000000084388737",
+        "000000120990706"
+      ],
+      "candidate_ids": [],
+      "expected": 12,
+      "last_observed_at": "2026-11-03T01:18:58+09:00",
+      "result": "observations_saved"
     },
     {
       "kind": "kb_search",
@@ -7342,6 +7363,54 @@
         "지번주소": "전남광주통합특별시 나주시 남평읍 남평리 16-1",
         "위도": "35.0472136457652",
         "경도": "126.84357007785",
+        "region": "전남"
+      },
+      "commercial_source": {
+        "archive_sha256": "57aa361544108ff4fc73334f87d2ced61e41fe8638dd70bcd842930f865d2386",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+        "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
+      },
+      "annual_candidate_ids": []
+    },
+    {
+      "identity_review": "same_premise_confirmed",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "checked_at": "2026-11-03T01:18:58+09:00",
+      "bank_record": {
+        "location": {
+          "lat": "34.7768886668",
+          "lng": "127.0891189623"
+        },
+        "content": {
+          "tel": "061)852-2357",
+          "title": "광주주유소",
+          "category": "주유소",
+          "address": "전남 보성군 보성읍 ",
+          "distance": "0",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000025825147",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        }
+      },
+      "commercial_record": {
+        "상가업소번호": "MA010120220807849360",
+        "상호명": "광주주유소",
+        "지점명": "",
+        "상권업종소분류코드": "G21401",
+        "상권업종소분류명": "주유소",
+        "표준산업분류코드": "G47711",
+        "표준산업분류명": "운송장비용 주유소 운영업",
+        "시군구명": "보성군",
+        "도로명주소": "전남광주통합특별시 보성군 보성읍 송재로 279",
+        "지번주소": "전남광주통합특별시 보성군 보성읍 보성리 346",
+        "위도": "34.7768899601977",
+        "경도": "127.089113185852",
         "region": "전남"
       },
       "commercial_source": {
@@ -21589,6 +21658,14 @@
       "checked_at": "2026-11-03T01:15:50+09:00",
       "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
       "bank_id": "000000034326741",
+      "other_payment_methods": "not_reverified"
+    },
+    "onnuri:18800200009": {
+      "status": "confirmed_in_issuer_scope",
+      "issuer": "kbcard",
+      "checked_at": "2026-11-03T01:18:58+09:00",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "bank_id": "000000025825147",
       "other_payment_methods": "not_reverified"
     }
   },
