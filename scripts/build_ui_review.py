@@ -37,6 +37,7 @@ const longAddress=args.get('sample')==='normal'?'광주광역시 서구 상무�
 const longToken=args.get('sample')==='normal'?'상록 주유소':'LongMerchantNameWithoutSpaces0123456789'.repeat(3);
 byId('map').textContent='지도 영역 — UI 배치 검수용';
 byId('countBadge').textContent='131곳';byId('listCount').textContent='전체 131곳';
+if(args.get('area')==='1')byId('searchAreaBtn').hidden=false;
 if(args.get('active')==='1'){
   byId('activeFilters').hidden=false;
   byId('activeFilters').textContent='온누리 · 지류·디지털 · 휘발유 · 광산구';

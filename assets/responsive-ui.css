@@ -103,6 +103,16 @@ html {font-size:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%;}
 .app #resultsSize {flex:0 0 auto;}
 .app .results-body {scroll-padding-top:8rem;}
 .app .national-results>summary {font-size:var(--ui-body);line-height:1.5;}
+/* Share the available row so the area search cannot cover the results heading.
+   On phones, display:contents preserves the separate top/bottom map controls. */
+.map-search-tools {display:contents;}
+@media(min-width:701px) {
+  .map-search-tools {position:absolute;top:12px;left:72px;right:12px;z-index:110;display:flex;align-items:flex-start;justify-content:flex-end;gap:8px;pointer-events:none;}
+  .map-search-tools>* {pointer-events:auto;}
+  .app .map-search-tools .search-area-btn {position:static;transform:none;flex:0 1 auto;min-width:0;max-width:100%;}
+  .app .map-search-tools .national-results {position:relative;inset:auto;flex:0 1 390px;min-width:0;max-width:100%;max-height:var(--results-available,560px);}
+  .map-area:has(#nationalResults[open]) .map-search-tools {z-index:125;}
+}
 .app #tripPanel {overflow:auto;max-height:min(var(--trip-window-height,620px),calc(100% - 1.5rem));}
 /* Native details has an anonymous content wrapper in several browsers; a flex
    child cannot reliably size its body. Use the measured heading instead. */
@@ -132,6 +142,7 @@ html {font-size:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%;}
   .app .filter-selects>label:last-child {grid-column:auto;}
   .app .region-options {grid-template-columns:repeat(auto-fit,minmax(min(5rem,100%),1fr));}
   .app .national-results:not([open]) {left:68px;right:auto;bottom:max(24px,env(safe-area-inset-bottom));max-width:calc(100% - 136px);}
+  .map-search-tools:has(.national-results[open]) .search-area-btn {display:none;}
   .app .map-area .fit-results-btn {bottom:calc(max(24px,env(safe-area-inset-bottom)) + 7rem);max-width:calc(100% - 84px);}
   /* On a short mobile sheet, a sticky multi-row toolbar can cover every result. */
   .app .results-toolbar {position:static;}

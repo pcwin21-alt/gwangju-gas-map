@@ -1130,6 +1130,8 @@
       <button id="expandMapBtn" type="button" aria-label="지도 크게 보기" title="지도 크게 보기" aria-pressed="false">⛶</button>
     </div>
     <div class="map-zoom-tools" role="group" aria-label="지도 확대 축소"><button id="mapZoomIn" type="button" aria-label="지도 확대" title="지도 확대">＋</button><button id="mapZoomOut" type="button" aria-label="지도 축소" title="지도 축소">−</button></div>
+    <div class="map-search-tools">
+      <button class="search-area-btn" id="searchAreaBtn" type="button" hidden>이 지역에서 찾기</button>
     <details class="national-results" id="nationalResults" data-size="half">
       <summary>주유소 <span id="listCount"></span></summary>
       <div class="results-body" id="resultsBody">
@@ -1140,7 +1142,7 @@
       <details class="results-data"><summary>자료 확인 정보</summary><p id="resultDataStatus"></p></details>
       </div>
     </details>
-      <button class="search-area-btn" id="searchAreaBtn" type="button" hidden>이 지역에서 찾기</button>
+    </div>
       <button class="fit-results-btn" id="fitResultsBtn" type="button" aria-label="조건에 맞는 주유소 위치로 지도 맞추기">결과 위치</button>
       <button class="map-location-btn" id="myLocBtn" type="button" title="내 위치로 이동" aria-label="내 위치로 이동" aria-busy="false">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2.5" fill="currentColor" stroke="none"/><path d="M12 2v4m0 12v4M2 12h4m12 0h4" stroke-linecap="round"/></svg>
