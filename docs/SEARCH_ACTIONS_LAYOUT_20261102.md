@@ -61,3 +61,11 @@
 기존 Toss UX·codex-delivery-loop·공통 하네스/Global·Software UX Gate를 같은 변경 계약에 적용한다. 입력은 사용자 첨부와 현재 검색/목록 구조, 행동은 두 진입점의 통합과 닫기/재개 구현, 수락 조건은 정확한 문구·접힌 바 부재·범위 조회/빈 결과/SDK 실패 복구·지도 상태 및 초점 보존, 출력은 공통 웹/앱인토스 소스·배포·검증 기록이다. 데이터 수집·새 기능·서브에이전트는 제외한다.
 
 검증: JS 전체 103개 통과 후 닫기 초점 보완에 해당하는 목록·검색·핀·번역 23개도 통과했다. 새 회귀 검사는 단일 진입점의 열기/닫기/Escape/지도 상태 보존과 SDK 실패 시 재개를 다룬다. 검수 생성기에 네트워크 없는 열림/닫힘 표시 상태만 반영했고, 앞 절과 같은 128개 화면 조합에서 닫힘은 조회 버튼만, 열림은 목록만 표시됨을 확인했다. 목록·줌과 겹침, 페이지 가로 넘침은 없었고 조회 버튼은 왼쪽 12px이다. 이 검수의 예시 상태를 실제 지도 기능 확인으로 간주하지 않으며 공개 동작은 배포 뒤 별도로 확인한다. 증거 위치는 Playground `output/unified-map-search-20261102/`이다.
+
+### 통합 조회 공개 확인
+
+수정 `7a9486b`의 [배포 41416480544](https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41416480544), [전체 회귀 검사 41416480717](https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41416480717), [Pages 게시 41416496877](https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41416496877)가 성공했다. 공개 `v=7a9486b`를 390×844와 1280×800에서 확인했다. 초기/닫힌 상태의 결과 패널은 display:none이며 왼쪽 조회 버튼만 표시된다. 클릭 시 scope=map의 목록이 열리고 버튼은 숨겨진다. 모바일 최초 조회에서 축척 8km가 그대로이고 결과 164곳이 표시됐다. 헤더 × 클릭과 Escape는 패널을 숨기고 조회 버튼으로 초점을 돌렸다. 목록 행→실제 상세→상세 닫기에서는 기존 목록과 행 초점이 복구됐다. PC에서도 같은 단일 진입점·열기·닫기를 확인했다. GPS/경유/원천 수집 요청은 실행하지 않았다.
+
+앱인토스 빌드 ID `01a19b77-c8f9-7ec3-afd7-28de894ee170`, SHA-256 `1328b87f951e0e2eb6e9e3b4c2ef34e1a253adcbfd63aecce8c53b2e0cb9423c`이다. 플랫폼 3개 JS/4개 Python 검사, 5개 데이터 보존과 ZIP 내부의 새 문구·닫힌 패널 CSS·최신 목록 JS를 확인했다. 실제 생성 HTML의 브라우저 미리보기에서 지도 실패 후 ‘서양’ 검색→닫기→‘검색 결과 보기’ 재개가 한 지점·입력·광주 조건을 유지했고, Escape도 초점을 복구했다. 전달 파일은 Playground `output/apps-in-toss-unified-search-20261102/onnuri-fuel-map.ait`다. 콘솔 업로드·토스 실기기/심사·물리 휴대전화 검증은 수행하지 않았다.
+
+공개 캡처 `public-mobile.png`, `public-flow-check.json`, `public-desktop-check.json` 및 플랫폼 복구 기록 `toss-fallback-check.json`을 위 증거 폴더에 저장했다. 임시 viewport를 복원했으며 변경 범위의 Global/Software UX Gate를 통과했다.
