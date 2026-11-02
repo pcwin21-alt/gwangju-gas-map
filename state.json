@@ -9041,10 +9041,11 @@
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/0632768/output/audits/regional_gap_20261102/damyang_market_leads.json",
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/0632768/output/audits/regional_gap_20261102/naju_namgomun_review_20261103.json",
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f201100/output/audits/full_region_crosscheck_20261103/report.json",
-        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f201100/output/audits/full_region_crosscheck_20261103/review_actions.json"
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f201100/output/audits/full_region_crosscheck_20261103/review_actions.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/092ad8d/output/audits/region_comparison_20261103/analysis.json"
       ],
       "checked_at": null,
-      "last_reviewed_at": "2026-11-03T05:22:19+09:00"
+      "last_reviewed_at": "2026-11-03T06:09:51+09:00"
     },
     "전북": {
       "status": "pending",
@@ -21349,21 +21350,23 @@
         "status": "pending",
         "evidence": [
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/fcd770a/output/audits/regional_gap_20261102/nonfuel_reviews.json",
-          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f201100/output/audits/full_region_crosscheck_20261103/report.json"
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f201100/output/audits/full_region_crosscheck_20261103/report.json",
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/092ad8d/output/audits/region_comparison_20261103/analysis.json"
         ],
         "checked_at": null,
-        "last_reviewed_at": "2026-11-03T05:22:19+09:00"
+        "last_reviewed_at": "2026-11-03T06:09:51+09:00"
       },
       "membership_rechecks": {
         "status": "pending",
         "evidence": [
           "output/audits/regional_gap_20261102/naju_innovation_coordinate_review.json",
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/0632768/output/audits/regional_gap_20261102/naju_namgomun_review_20261103.json",
-          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f201100/output/audits/full_region_crosscheck_20261103/report.json"
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f201100/output/audits/full_region_crosscheck_20261103/report.json",
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/092ad8d/output/audits/region_comparison_20261103/analysis.json"
         ],
         "checked_at": null,
         "scope": "Current issuer rechecks incomplete; coordinate discrepancy follow-up is discovery only",
-        "last_reviewed_at": "2026-11-03T05:22:19+09:00"
+        "last_reviewed_at": "2026-11-03T06:09:51+09:00"
       },
       "market_coverage": {
         "status": "pending",
