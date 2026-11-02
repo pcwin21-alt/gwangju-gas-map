@@ -22,13 +22,17 @@ class Nationwide(unittest.TestCase):
         from pathlib import Path
         from scripts.nationwide import non_vehicle
         rules=json.loads((Path(__file__).resolve().parents[1]/'output/candidate_exclusions.json').read_text(encoding='utf-8'))['rows']
-        names={'엘피지다이어트 댄스','(주)지에스종합에너지 (사운드 동명 카페)','무등에너지협동조합'}
+        names={'엘피지다이어트 댄스','(주)지에스종합에너지 (사운드 동명 카페)','무등에너지협동조합','그대에너지'}
         reviewed=[r for r in rules if r['match']['가맹점명'] in names]
-        self.assertEqual(len(reviewed),3)
+        self.assertEqual(len(reviewed),4)
         for r in reviewed:
             self.assertTrue(non_vehicle(r['match']))
             other=dict(r['match'], 취급품목='휘발유 경유', 소재지='전남')
             self.assertFalse(non_vehicle(other))
+            for field in ('가맹점명','소속 시장명(또는 상점가)','소재지','취급품목'):
+                changed=dict(r['match'])
+                changed[field] = changed[field] + ' 별도등록'
+                self.assertFalse(non_vehicle(changed))
 
     def setUp(self):
         self.row={'가맹점명':'현리주유소','소속 시장명(또는 상점가)':'조종시장','소재지':'경기',
