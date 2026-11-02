@@ -1,0 +1,41 @@
+{
+  "reviewed_at": "2026-11-02T17:06:02+09:00",
+  "region": "전남",
+  "municipality": "담양군",
+  "status": "needs_primary_designation_and_shop_inventory",
+  "scope": "Secondary reporting provides discovery leads only; neither regional coverage completion nor any merchant membership is established. The two reports may share the same county release.",
+  "reported_at": "2026-05-14",
+  "sources": [
+    {
+      "url": "https://www.yna.co.kr/view/AKR20260514107400054",
+      "source_type": "secondary_county_release_reporting"
+    },
+    {
+      "url": "https://www.inews24.com/view/mp/1968514",
+      "source_type": "secondary_county_release_reporting"
+    }
+  ],
+  "reported_total_markets": 10,
+  "reported_shop_count": 898,
+  "reported_new_markets": [
+    "박물관거리",
+    "슬로시티창평",
+    "고서",
+    "담양중앙 2번가",
+    "담양중앙 3번가"
+  ],
+  "reported_existing_markets": [
+    "담양중앙",
+    "쓰담길",
+    "프로방스",
+    "죽녹원 북문",
+    "국수거리"
+  ],
+  "missing_evidence": [
+    "County designation notices with exact boundaries and dates",
+    "Shop/member lists for all designated markets",
+    "Independent vehicle-fuel businesses inside those boundaries",
+    "Current issuer-specific identity checks through managed collector"
+  ],
+  "next_action": "Verify county designation originals and shop inventories; match independent fuel premises before queuing any additional managed queries."
+}

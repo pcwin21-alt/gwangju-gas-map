@@ -133,6 +133,27 @@
         "category": "음식점업",
         "source_checked_at": "2026-10-25T10:51:11+09:00"
       }
+    },
+    {
+      "match": {
+        "가맹점명": "무등에너지협동조합",
+        "소속 시장명(또는 상점가)": "학소로 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": "커피"
+      },
+      "status": "excluded_non_vehicle_fuel",
+      "reason": "공식 연간 취급품목 커피와 동일 상호·시장명의 보관된 공식 장소 음식점업 등록이 일치한다. 이 학소로 카페 등록만 차량용 연료 후보에서 제외하며 같은 이름의 다른 사업장·온누리 가맹 자체에는 판단을 이전하지 않는다.",
+      "checked_at": "2026-11-02T17:04:37+09:00",
+      "sources": [
+        "https://www.data.go.kr/data/3060079/fileData.do",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/abae6ab/output/onnuri_live_snapshot.json"
+      ],
+      "evidence_record": {
+        "source_id": "05358200010",
+        "address": "광주광역시 동구 학소로106번길 13-1 (소태동)",
+        "category": "음식점업",
+        "source_checked_at": "2026-10-25T10:51:11+09:00"
+      }
     }
   ]
 }

@@ -1,0 +1,67 @@
+{
+  "reviewed_at": "2026-11-02T17:04:37+09:00",
+  "station_id": "onnuri:14499200032",
+  "station_name": "(주)터미널주유소",
+  "map_address": "전라남도 담양군 담양읍 죽향문화로 98",
+  "map_point": {
+    "lat": 35.314285,
+    "lng": 126.973458
+  },
+  "independent_commercial_record": {
+    "상가업소번호": "MA010120220807577934",
+    "상호명": "터미널주유소주",
+    "지점명": "",
+    "상권업종소분류코드": "G21401",
+    "상권업종소분류명": "주유소",
+    "표준산업분류코드": "G47711",
+    "표준산업분류명": "운송장비용 주유소 운영업",
+    "시군구명": "담양군",
+    "도로명주소": "전남광주통합특별시 담양군 담양읍 죽향문화로 98",
+    "지번주소": "전남광주통합특별시 담양군 담양읍 천변리 489",
+    "위도": "35.314284370684",
+    "경도": "126.973454368756",
+    "region": "전남"
+  },
+  "distance_map_to_commercial_m": 0.34,
+  "commercial_source": {
+    "archive_sha256": "57aa361544108ff4fc73334f87d2ced61e41fe8638dd70bcd842930f865d2386",
+    "source_date": "2026-06-30",
+    "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+    "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
+  },
+  "issuer_response": {
+    "path": "https://github.com/pcwin21-alt/gwangju-gas-map/blob/merchant-collector-state/responses/e155ca09be5c4408ac5e59b1.json",
+    "sha256": "913f1a64fd9f3cf1cbed3d4990a1ebe16c3695aa9dac2070bac283c5e34b9d07",
+    "checked_at": "2026-11-02T15:17:31+09:00",
+    "total": 4,
+    "rows": [
+      {
+        "bank_id": "000000116009178",
+        "name": "담양어탕",
+        "category": "한식",
+        "distance_m": 170.64
+      },
+      {
+        "bank_id": "000000111058292",
+        "name": "(주)오성철강",
+        "category": "농어업용품",
+        "distance_m": 206.9
+      },
+      {
+        "bank_id": "000000110073791",
+        "name": "금농반점",
+        "category": "중식",
+        "distance_m": 211.72
+      },
+      {
+        "bank_id": "000000050080021",
+        "name": "담양원예할인마트",
+        "category": "농어업용품",
+        "distance_m": 234.33
+      }
+    ]
+  },
+  "status": "needs_review_not_found",
+  "conclusion": "지도 좌표는 독립 동일 주소의 연료업소 위치와 일치하므로 정정하지 않는다. 이번 KB 응답 4개는 서로 다른 인근 업소이며 현재 주유소의 동일 사업장 확인을 제공하지 않는다. KB 미확인 상태를 유지하며 비가맹·폐업·지류/QR 중단으로 추론하지 않는다.",
+  "scope": "Offline corroboration only; no issuer/operator request or confirmation-date renewal"
+}

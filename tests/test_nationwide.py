@@ -22,9 +22,9 @@ class Nationwide(unittest.TestCase):
         from pathlib import Path
         from scripts.nationwide import non_vehicle
         rules=json.loads((Path(__file__).resolve().parents[1]/'output/candidate_exclusions.json').read_text(encoding='utf-8'))['rows']
-        names={'엘피지다이어트 댄스','(주)지에스종합에너지 (사운드 동명 카페)'}
+        names={'엘피지다이어트 댄스','(주)지에스종합에너지 (사운드 동명 카페)','무등에너지협동조합'}
         reviewed=[r for r in rules if r['match']['가맹점명'] in names]
-        self.assertEqual(len(reviewed),2)
+        self.assertEqual(len(reviewed),3)
         for r in reviewed:
             self.assertTrue(non_vehicle(r['match']))
             other=dict(r['match'], 취급품목='휘발유 경유', 소재지='전남')
