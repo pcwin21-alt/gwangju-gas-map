@@ -1,0 +1,14 @@
+{
+  "source_url": "https://www.opinet.co.kr/api/detailById.do",
+  "scope": "Independent fuel business identity only; not Onnuri verification",
+  "attempts": [
+    {
+      "id": "A0022485",
+      "region": "전남",
+      "reserved_at": 1793655383.483105,
+      "status": "reserved"
+    }
+  ],
+  "details": {},
+  "status": "active"
+}
