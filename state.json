@@ -13240,7 +13240,17 @@
           "market": "톱머리 골목형상점가",
           "candidate_ids": [
             "687b6a4379f9c9fa511001a2"
-          ]
+          ],
+          "issuer_checks": {
+            "kbcard": {
+              "status": "confirmed_in_issuer_scope",
+              "issuer": "kbcard",
+              "checked_at": "2026-11-03T01:12:46+09:00",
+              "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+              "bank_id": "000000108555012",
+              "other_payment_methods": "not_reverified"
+            }
+          }
         }
       },
       {
@@ -13268,7 +13278,17 @@
           "market": "남평읍1로 골목형상점가",
           "candidate_ids": [
             "377b06613fb18e0acc104682"
-          ]
+          ],
+          "issuer_checks": {
+            "kbcard": {
+              "status": "confirmed_in_issuer_scope",
+              "issuer": "kbcard",
+              "checked_at": "2026-11-03T01:15:50+09:00",
+              "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+              "bank_id": "000000078287556",
+              "other_payment_methods": "not_reverified"
+            }
+          }
         }
       },
       {
@@ -13294,7 +13314,17 @@
           "source_url": "https://www.onnuri.gift/place",
           "match_basis": "official_place_id_address_coordinates",
           "market": "남평읍1로 골목형상점가",
-          "candidate_ids": []
+          "candidate_ids": [],
+          "issuer_checks": {
+            "kbcard": {
+              "status": "confirmed_in_issuer_scope",
+              "issuer": "kbcard",
+              "checked_at": "2026-11-03T01:15:50+09:00",
+              "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+              "bank_id": "000000034326741",
+              "other_payment_methods": "not_reverified"
+            }
+          }
         }
       },
       {
@@ -13430,7 +13460,17 @@
           "source_url": "https://www.onnuri.gift/place",
           "match_basis": "official_place_id_address_coordinates",
           "market": "다향보성 골목형상점가",
-          "candidate_ids": []
+          "candidate_ids": [],
+          "issuer_checks": {
+            "kbcard": {
+              "status": "confirmed_in_issuer_scope",
+              "issuer": "kbcard",
+              "checked_at": "2026-11-03T01:18:58+09:00",
+              "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+              "bank_id": "000000025825147",
+              "other_payment_methods": "not_reverified"
+            }
+          }
         }
       },
       {
