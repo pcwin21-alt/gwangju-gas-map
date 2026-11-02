@@ -13,7 +13,7 @@
       "status": "active",
       "url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
       "scope": "Public unauthenticated Onnuri merchant form; issuer-specific evidence only; limits are our load caps, not a provider guarantee",
-      "next_allowed_at": 1793636328.2550967,
+      "next_allowed_at": 1793636336.0275407,
       "volume_ramp": {
         "stage": "pilot",
         "started_at": 1793556784.2048566,
@@ -565,7 +565,7 @@
       "job_id": "e6de654db97b15c21b7ef605",
       "source": "kbcard",
       "at": 1793636148.2550967,
-      "status": "reserved",
+      "status": "done",
       "run_id": "2c35f0223dfd4605a0d9df541d194e21",
       "request": {
         "method": "POST",
@@ -582,7 +582,12 @@
           "endRow": 10,
           "mmcNm": ""
         }
-      }
+      },
+      "request_started_at": 1793636149.5660121,
+      "network_duration_seconds": 1.1809933185577393,
+      "http_status": 200,
+      "response_sha256": "926fa78395ff002a6d93e3fdbf0ad0d85cce197694fb00a0a1e25c61abb5119d",
+      "finished_at": 1793636156.0274901
     }
   ],
   "jobs": [
@@ -1722,11 +1727,93 @@
       },
       "logical_key": "e6de654db97b15c21b7ef605",
       "id": "e6de654db97b15c21b7ef605",
-      "status": "pending",
+      "status": "done",
       "attempts": 1,
       "page": 1,
-      "observed_ids": [],
-      "candidate_ids": []
+      "observed_ids": [
+        "000000080760981",
+        "000000086422388",
+        "000000015133208",
+        "000000120226537",
+        "000000067519441",
+        "000000078287556",
+        "000000096688853",
+        "000000111188006",
+        "000000016426498",
+        "000000019488456",
+        "000000098083728",
+        "000000113083980",
+        "000000023850276",
+        "000000109463486",
+        "000000089342251",
+        "000000061940222",
+        "000000115526713",
+        "000000053957947",
+        "000000063033066",
+        "000000070919645",
+        "000000122919516",
+        "000000085223872",
+        "000000021079575",
+        "000000046226336",
+        "000000076635912",
+        "000000060919270",
+        "000000094939625",
+        "000000099516295",
+        "000000097997840",
+        "000000115939054",
+        "000000112964069",
+        "000000099654693",
+        "000000088345837",
+        "000000098175421",
+        "000000090340618",
+        "000000061037931",
+        "000000075704452",
+        "000000065595748",
+        "000000035938836",
+        "000000067424295",
+        "000000057946737",
+        "000000090015111",
+        "000000075390412",
+        "000000088837519",
+        "000000072992800",
+        "000000123161015",
+        "000000073321575",
+        "000000122085912",
+        "000000060656960",
+        "000000090662987",
+        "000000094470367",
+        "000000096603276",
+        "000000051937369",
+        "000000089759654",
+        "000000084785310",
+        "000000034326741",
+        "000000014025161",
+        "000000016995168",
+        "000000014002641",
+        "000000059281732",
+        "000000119390831",
+        "000000069853810",
+        "000000104526413",
+        "000000025771968",
+        "000000009527157",
+        "000000112840624",
+        "000000121083863",
+        "000000085895495",
+        "000000121618223",
+        "000000082854858",
+        "000000032889882",
+        "000000088742115",
+        "000000106640626",
+        "000000111817712",
+        "000000104419408",
+        "000000122852806",
+        "000000107537589",
+        "000000051362492"
+      ],
+      "candidate_ids": [],
+      "expected": 78,
+      "last_observed_at": "2026-11-03T01:15:50+09:00",
+      "result": "observations_saved"
     },
     {
       "kind": "kb_search",
@@ -1746,11 +1833,12 @@
       },
       "logical_key": "49d9f298996892321c776a1e",
       "id": "49d9f298996892321c776a1e",
-      "status": "pending",
+      "status": "done",
       "attempts": 0,
       "page": 1,
       "observed_ids": [],
-      "candidate_ids": []
+      "candidate_ids": [],
+      "result": "recent_exact_issuer_evidence_reused"
     },
     {
       "kind": "kb_search",
@@ -7134,6 +7222,102 @@
         "지번주소": "전남광주통합특별시 무안군 망운면 피서리 809-36",
         "위도": "34.9703771845017",
         "경도": "126.385501769027",
+        "region": "전남"
+      },
+      "commercial_source": {
+        "archive_sha256": "57aa361544108ff4fc73334f87d2ced61e41fe8638dd70bcd842930f865d2386",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+        "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
+      },
+      "annual_candidate_ids": []
+    },
+    {
+      "identity_review": "same_premise_confirmed",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "checked_at": "2026-11-03T01:15:50+09:00",
+      "bank_record": {
+        "location": {
+          "lat": "35.0468513218",
+          "lng": "126.8414562348"
+        },
+        "content": {
+          "tel": "061)331-2008",
+          "title": "남평주유소",
+          "category": "주유소",
+          "address": "전남 나주시 남평읍 ",
+          "distance": "36",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000078287556",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        }
+      },
+      "commercial_record": {
+        "상가업소번호": "MA010120220807496308",
+        "상호명": "남평주유소",
+        "지점명": "",
+        "상권업종소분류코드": "G21401",
+        "상권업종소분류명": "주유소",
+        "표준산업분류코드": "G47711",
+        "표준산업분류명": "운송장비용 주유소 운영업",
+        "시군구명": "나주시",
+        "도로명주소": "전남광주통합특별시 나주시 남평읍 남평1로 36",
+        "지번주소": "전남광주통합특별시 나주시 남평읍 남평리 78",
+        "위도": "35.0469499452068",
+        "경도": "126.841794967919",
+        "region": "전남"
+      },
+      "commercial_source": {
+        "archive_sha256": "57aa361544108ff4fc73334f87d2ced61e41fe8638dd70bcd842930f865d2386",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+        "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
+      },
+      "annual_candidate_ids": []
+    },
+    {
+      "identity_review": "same_premise_confirmed",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "checked_at": "2026-11-03T01:15:50+09:00",
+      "bank_record": {
+        "location": {
+          "lat": "35.0471940076",
+          "lng": "126.8436075806"
+        },
+        "content": {
+          "tel": "061)331-2331",
+          "title": "광남주유소",
+          "category": "주유소",
+          "address": "전남 나주시 남평읍 ",
+          "distance": "165",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000034326741",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        }
+      },
+      "commercial_record": {
+        "상가업소번호": "MA010120220807741317",
+        "상호명": "광남주유소",
+        "지점명": "",
+        "상권업종소분류코드": "G21401",
+        "상권업종소분류명": "주유소",
+        "표준산업분류코드": "G47711",
+        "표준산업분류명": "운송장비용 주유소 운영업",
+        "시군구명": "나주시",
+        "도로명주소": "전남광주통합특별시 나주시 남평읍 남평1로 54",
+        "지번주소": "전남광주통합특별시 나주시 남평읍 남평리 16-1",
+        "위도": "35.0472136457652",
+        "경도": "126.84357007785",
         "region": "전남"
       },
       "commercial_source": {
@@ -21365,6 +21549,22 @@
       "checked_at": "2026-11-03T01:12:46+09:00",
       "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
       "bank_id": "000000108555012",
+      "other_payment_methods": "not_reverified"
+    },
+    "onnuri:14512200035": {
+      "status": "confirmed_in_issuer_scope",
+      "issuer": "kbcard",
+      "checked_at": "2026-11-03T01:15:50+09:00",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "bank_id": "000000078287556",
+      "other_payment_methods": "not_reverified"
+    },
+    "onnuri:14512200050": {
+      "status": "confirmed_in_issuer_scope",
+      "issuer": "kbcard",
+      "checked_at": "2026-11-03T01:15:50+09:00",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "bank_id": "000000034326741",
       "other_payment_methods": "not_reverified"
     }
   },
