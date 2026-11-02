@@ -1,0 +1,43 @@
+{
+  "reviewed_at": "2026-11-03T07:49:39+09:00",
+  "candidate_source": "https://ongift.or.kr/",
+  "scope": "public provenance review only; no merchant searches, login or source enabling",
+  "findings": [
+    {
+      "url": "https://www.mss.go.kr/site/gyeonggi/ex/bbs/View.do?bcIdx=1053414&cbIdx=247",
+      "publisher": "중소벤처기업부 경기지방청",
+      "observation": "Public notice names ongift.or.kr as Onnuri merchant registration system",
+      "access": "web search indexed primary notice",
+      "proves_current_public_list_access": false
+    },
+    {
+      "url": "https://mss.go.kr/common/board/Download.do?bcIdx=1044345&cbIdx=256&streFileNm=a545dce0-5c3b-477c-b737-4052db404be2.pdf",
+      "publisher": "중소벤처기업부",
+      "observation": "2024 support programme material refers to ongift.or.kr for merchant registration",
+      "access": "web search indexed primary PDF",
+      "proves_current_public_list_access": false
+    },
+    {
+      "url": "https://www.easylaw.go.kr/CSP/OnhunqueansInfoRetrieve.laf?onhunqnaAstSeq=91&onhunqueSeq=6414&search_put=",
+      "publisher": "찾기쉬운 생활법령정보",
+      "observation": "Names ongift.or.kr as merchant registration system",
+      "access": "web search indexed official Q&A",
+      "proves_current_public_list_access": false
+    }
+  ],
+  "landing_check": {
+    "url": "https://ongift.or.kr/",
+    "result": "web timeout",
+    "merchant_queries": 0,
+    "retry": false
+  },
+  "status": "official_registration_reference_supported_public_list_access_and_policy_pending",
+  "remaining": [
+    "Current operator and public read permission",
+    "Current list fields, coverage, dates and payment method scopes",
+    "Relationship with existing rejected operator endpoint",
+    "Managed collector adapter and persisted shared policy review before data queries"
+  ],
+  "enabled_in_collector": false,
+  "unblocks_existing_rejected_source": false
+}
