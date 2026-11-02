@@ -1,0 +1,588 @@
+{
+  "reviewed_at": "2026-11-03T04:38:34+09:00",
+  "scope": "Offline exact-normalized-name discovery audit for active Jeonnam only; no current membership or same-premise linkage inferred. Combined Jeonnam/Gwangju annual labels remain ambiguous.",
+  "annual_source": {
+    "source_url": "https://www.data.go.kr/data/3060079/fileData.do",
+    "download_url": "https://www.data.go.kr/cmm/cmm/fileDownload.do?atchFileId=FILE_000000007663918&fileDetailSn=1&insertDataPrcus=N",
+    "source_date": "2026-07-31",
+    "retrieved_at": "2026-11-02T02:08:47+09:00",
+    "sha256": "66173bf934ad24d3195e9e0c1be0e62adcca0e4767e19a80c435f8e1aead4df6",
+    "total_rows": 225803,
+    "regional_fuel_rows": 280,
+    "scope": "nationwide-v3",
+    "fuel_selection_version": 2,
+    "registry_signature": "39938bc8747130b07876e1afffd68a5f90e54f1de1d7367bce4f57efb1c46ac1"
+  },
+  "raw_annual_sha256": "66173bf934ad24d3195e9e0c1be0e62adcca0e4767e19a80c435f8e1aead4df6",
+  "raw_annual_rows": 225803,
+  "physical_sources": [
+    {
+      "cached_file": "output/station_locations.json",
+      "retrieved_at": "2026-10-23T23:49:49+09:00",
+      "complete_registry": true,
+      "source_url": "https://www.data.go.kr/data/15129441/standard.do",
+      "total_rows": 5433,
+      "cache_sha256": "f9fc9c820a423195c3ad9eec8979e6c7c7cd3c0ce1f4ddc21f9bc155c7944cd6",
+      "jeonnam_rows": 419,
+      "jeonnam_distinct_names": 393
+    },
+    {
+      "cached_file": "output/lpg_locations.json",
+      "retrieved_at": "2026-10-23T23:55:54+09:00",
+      "source_url": "https://www.data.go.kr/data/15001643/fileData.do",
+      "cache_sha256": "be1fe8161b47459ceb26a7ab6b5db8057b549c96b645a2508e6da1cb7aab3dd9",
+      "jeonnam_rows": 197,
+      "jeonnam_distinct_names": 195
+    }
+  ],
+  "physical_name_union": 586,
+  "matched_annual_rows": 25,
+  "new_annual_rows_beyond_current_survey": 0,
+  "matches": [
+    {
+      "candidate_id": "7d40cee636f94826b382004e",
+      "annual_row": {
+        "가맹점명": "화산주유소",
+        "소속 시장명(또는 상점가)": "화산면 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": "휘발유",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2025"
+      },
+      "physical_name_candidates": [
+        {
+          "cached_file": "output/station_locations.json",
+          "name": "화산주유소",
+          "address": "전남광주통합특별시 해남군 화산면 해남화산로 1045",
+          "source_date": "2026-07-01"
+        }
+      ],
+      "already_in_survey": true
+    },
+    {
+      "candidate_id": "39774a4ec7933b356a046ef0",
+      "annual_row": {
+        "가맹점명": "호남주유소",
+        "소속 시장명(또는 상점가)": "장천동상가",
+        "소재지": "전남광주",
+        "취급품목": "휘발유",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2024"
+      },
+      "physical_name_candidates": [
+        {
+          "cached_file": "output/station_locations.json",
+          "name": "호남주유소",
+          "address": "전남광주통합특별시 강진군 신전면 백도로 1260",
+          "source_date": "2026-07-29"
+        },
+        {
+          "cached_file": "output/station_locations.json",
+          "name": "호남주유소",
+          "address": "전남광주통합특별시 해남군 해남읍 남부순환로 102",
+          "source_date": "2026-07-01"
+        },
+        {
+          "cached_file": "output/station_locations.json",
+          "name": "호남주유소",
+          "address": "전라남도 순천시 팔마로 9 (장천동)",
+          "source_date": "2025-12-01"
+        }
+      ],
+      "already_in_survey": true
+    },
+    {
+      "candidate_id": "1054803b1165f961c8cb5967",
+      "annual_row": {
+        "가맹점명": "현대주유소",
+        "소속 시장명(또는 상점가)": "웃장",
+        "소재지": "전남광주",
+        "취급품목": "주유소",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2020"
+      },
+      "physical_name_candidates": [
+        {
+          "cached_file": "output/station_locations.json",
+          "name": "현대주유소",
+          "address": "전라남도 영광군 홍농읍 연우로 334",
+          "source_date": "2025-09-24"
+        },
+        {
+          "cached_file": "output/station_locations.json",
+          "name": "현대주유소",
+          "address": "전라남도 순천시 중앙로 172 (매곡동)",
+          "source_date": "2025-12-01"
+        }
+      ],
+      "already_in_survey": true
+    },
+    {
+      "candidate_id": "420f2cfcfd8e0c2d53a1d70d",
+      "annual_row": {
+        "가맹점명": "행복가득주유소",
+        "소속 시장명(또는 상점가)": "일곡동(제11지역:용전동) 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": "유류",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2025"
+      },
+      "physical_name_candidates": [
+        {
+          "cached_file": "output/station_locations.json",
+          "name": "행복가득 주유소",
+          "address": "전라남도 순천시 별량면 녹색로 595",
+          "source_date": "2025-12-01"
+        }
+      ],
+      "already_in_survey": true
+    },
+    {
+      "candidate_id": "0aa8cdf72ea9f40f30c3e03c",
+      "annual_row": {
+        "가맹점명": "패밀리LPG충전소",
+        "소속 시장명(또는 상점가)": "일곡동(제8지역:롯데,벽산,동아,삼호,월드스파)",
+        "소재지": "전남광주",
+        "취급품목": "충전소",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2025"
+      },
+      "physical_name_candidates": [
+        {
+          "cached_file": "output/lpg_locations.json",
+          "name": "패밀리LPG충전소",
+          "address": "전남광주통합특별시 북구 우치로 654 (생용동) ",
+          "source_date": "2026-09-11"
+        }
+      ],
+      "already_in_survey": true
+    },
+    {
+      "candidate_id": "41832d65fdcaad0b6c151c4f",
+      "annual_row": {
+        "가맹점명": "천보주유소",
+        "소속 시장명(또는 상점가)": "일곡동(제11지역:용전동) 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": "경유 휘발유",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2025"
+      },
+      "physical_name_candidates": [
+        {
+          "cached_file": "output/station_locations.json",
+          "name": "천보주유소",
+          "address": "전남광주통합특별시 광양시 광양읍 인덕로 777",
+          "source_date": "2026-07-29"
+        }
+      ],
+      "already_in_survey": true
+    },
+    {
+      "candidate_id": "8d203ab77a7cffac49021839",
+      "annual_row": {
+        "가맹점명": "유한회사 우리주유소",
+        "소속 시장명(또는 상점가)": "운남골목 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": "주유소",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2025"
+      },
+      "physical_name_candidates": [
+        {
+          "cached_file": "output/station_locations.json",
+          "name": "(주)우리주유소",
+          "address": "전남광주통합특별시 광양시 남산길 11",
+          "source_date": "2026-07-29"
+        }
+      ],
+      "already_in_survey": true
+    },
+    {
+      "candidate_id": "af7353b7a35a028bb706ae71",
+      "annual_row": {
+        "가맹점명": "용전주유소",
+        "소속 시장명(또는 상점가)": "일곡동(제11지역:용전동) 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": "무연 경유",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2025"
+      },
+      "physical_name_candidates": [
+        {
+          "cached_file": "output/station_locations.json",
+          "name": "용전주유소",
+          "address": "전라남도 순천시 해룡면 여순로 1369",
+          "source_date": "2025-12-01"
+        }
+      ],
+      "already_in_survey": true
+    },
+    {
+      "candidate_id": "6b3301aeff72e492c6af7506",
+      "annual_row": {
+        "가맹점명": "영광주유소",
+        "소속 시장명(또는 상점가)": "금호아파트상인회 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": "유류",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2025"
+      },
+      "physical_name_candidates": [
+        {
+          "cached_file": "output/station_locations.json",
+          "name": "영광주유소",
+          "address": "전라남도 영광군 영광읍 천년로 1410",
+          "source_date": "2025-09-24"
+        }
+      ],
+      "already_in_survey": true
+    },
+    {
+      "candidate_id": "457c9616a5d71e984ce09d19",
+      "annual_row": {
+        "가맹점명": "순천주유소",
+        "소속 시장명(또는 상점가)": "장천동상가",
+        "소재지": "전남광주",
+        "취급품목": "주유소",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2023"
+      },
+      "physical_name_candidates": [
+        {
+          "cached_file": "output/station_locations.json",
+          "name": "순천주유소",
+          "address": "전라남도 순천시 강남로 45 (장천동)",
+          "source_date": "2025-12-01"
+        }
+      ],
+      "already_in_survey": true
+    },
+    {
+      "candidate_id": "810fbccd250ca03d66acf139",
+      "annual_row": {
+        "가맹점명": "성실주유소",
+        "소속 시장명(또는 상점가)": "31사단 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": "주유소",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2025"
+      },
+      "physical_name_candidates": [
+        {
+          "cached_file": "output/station_locations.json",
+          "name": "성실주유소",
+          "address": "전라남도 함평군 대동면 함장로 1661",
+          "source_date": "2025-07-02"
+        }
+      ],
+      "already_in_survey": true
+    },
+    {
+      "candidate_id": "5ba93c7901431bdc40ffb221",
+      "annual_row": {
+        "가맹점명": "반디가스앤오일(주)",
+        "소속 시장명(또는 상점가)": "공구의거리",
+        "소재지": "전남광주",
+        "취급품목": "",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2025"
+      },
+      "physical_name_candidates": [
+        {
+          "cached_file": "output/lpg_locations.json",
+          "name": "반디가스앤오일(주)",
+          "address": "전남광주통합특별시 북구 운신남길 146 (운암동) ",
+          "source_date": "2026-09-11"
+        }
+      ],
+      "already_in_survey": true
+    },
+    {
+      "candidate_id": "1a18e59b46f90bcd63bafffb",
+      "annual_row": {
+        "가맹점명": "바로오케이충전소",
+        "소속 시장명(또는 상점가)": "공구의거리",
+        "소재지": "전남광주",
+        "취급품목": "차량용 가스 충전",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2024"
+      },
+      "physical_name_candidates": [
+        {
+          "cached_file": "output/lpg_locations.json",
+          "name": "바로오케이충전소",
+          "address": "전남광주통합특별시 북구 하남대로 763 (운암동) ",
+          "source_date": "2026-09-11"
+        }
+      ],
+      "already_in_survey": true
+    },
+    {
+      "candidate_id": "49c492a487146ddc06e27daf",
+      "annual_row": {
+        "가맹점명": "미래주유소",
+        "소속 시장명(또는 상점가)": "봉주 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": "유류 자동차 관련 물품 세차",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2025"
+      },
+      "physical_name_candidates": [
+        {
+          "cached_file": "output/station_locations.json",
+          "name": "미래주유소",
+          "address": "전라남도 구례군 토지면 섬진강대로 5081",
+          "source_date": "2024-08-12"
+        }
+      ],
+      "already_in_survey": true
+    },
+    {
+      "candidate_id": "467f474880666061c1fbeee0",
+      "annual_row": {
+        "가맹점명": "미래LPG충전소",
+        "소속 시장명(또는 상점가)": "임방울대로 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": "차량용 부탄가스 소매",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2025"
+      },
+      "physical_name_candidates": [
+        {
+          "cached_file": "output/lpg_locations.json",
+          "name": "미래LPG충전소",
+          "address": "전남광주통합특별시 북구 임방울대로 983 (신용동) ",
+          "source_date": "2026-09-11"
+        }
+      ],
+      "already_in_survey": true
+    },
+    {
+      "candidate_id": "223ca709ca436d9d75198a02",
+      "annual_row": {
+        "가맹점명": "미래 주유소",
+        "소속 시장명(또는 상점가)": "토지면 섬진강대로 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": "주유소",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2026"
+      },
+      "physical_name_candidates": [
+        {
+          "cached_file": "output/station_locations.json",
+          "name": "미래주유소",
+          "address": "전라남도 구례군 토지면 섬진강대로 5081",
+          "source_date": "2024-08-12"
+        }
+      ],
+      "already_in_survey": true
+    },
+    {
+      "candidate_id": "4b6f05de86fcd5859a9fc021",
+      "annual_row": {
+        "가맹점명": "매일LPG충전소",
+        "소속 시장명(또는 상점가)": "일곡동(제11지역:용전동) 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": "차량용가스충전소",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2025"
+      },
+      "physical_name_candidates": [
+        {
+          "cached_file": "output/lpg_locations.json",
+          "name": "매일LPG충전소",
+          "address": "전남광주통합특별시 북구 우치로 850 (용전동) ",
+          "source_date": "2026-09-11"
+        }
+      ],
+      "already_in_survey": true
+    },
+    {
+      "candidate_id": "7117c52e34da33438412e21b",
+      "annual_row": {
+        "가맹점명": "동부충전소",
+        "소속 시장명(또는 상점가)": "동구문화센터인근 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": "",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2025"
+      },
+      "physical_name_candidates": [
+        {
+          "cached_file": "output/lpg_locations.json",
+          "name": "동부충전소",
+          "address": "전남광주통합특별시 동구 남문로 615 (용산동) ",
+          "source_date": "2026-09-11"
+        }
+      ],
+      "already_in_survey": true
+    },
+    {
+      "candidate_id": "36df9cddfa49c10fabac2ec1",
+      "annual_row": {
+        "가맹점명": "동광주LPG충전소",
+        "소속 시장명(또는 상점가)": "석곡동 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": "충전소",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2025"
+      },
+      "physical_name_candidates": [
+        {
+          "cached_file": "output/lpg_locations.json",
+          "name": "동광주LPG충전소",
+          "address": "전남광주통합특별시 북구 동문대로 560 (망월동) ",
+          "source_date": "2026-09-11"
+        }
+      ],
+      "already_in_survey": true
+    },
+    {
+      "candidate_id": "9048d648f7164ac10b9d7aaa",
+      "annual_row": {
+        "가맹점명": "도시에너지 주식회사",
+        "소속 시장명(또는 상점가)": "신안동용봉초건너편 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": "엘피지가스",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2025"
+      },
+      "physical_name_candidates": [
+        {
+          "cached_file": "output/lpg_locations.json",
+          "name": "(주)도시에너지",
+          "address": "전남광주통합특별시 북구 무등로137번길 8 (신안동) ",
+          "source_date": "2026-09-11"
+        }
+      ],
+      "already_in_survey": true
+    },
+    {
+      "candidate_id": "4358c398e727d6f8cc92c32e",
+      "annual_row": {
+        "가맹점명": "더푸른 주식회사 첨단충전소",
+        "소속 시장명(또는 상점가)": "정부청사 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": "차량용 엘피지",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2026"
+      },
+      "physical_name_candidates": [
+        {
+          "cached_file": "output/lpg_locations.json",
+          "name": "더푸른(주)첨단충전소",
+          "address": "전남광주통합특별시 북구 삼소로 330 (월출동) ",
+          "source_date": "2026-09-11"
+        }
+      ],
+      "already_in_survey": true
+    },
+    {
+      "candidate_id": "d748ff3635ae5317dcacd033",
+      "annual_row": {
+        "가맹점명": "대창주유소",
+        "소속 시장명(또는 상점가)": "함평천지 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": "유류",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2025"
+      },
+      "physical_name_candidates": [
+        {
+          "cached_file": "output/station_locations.json",
+          "name": "대창주유소",
+          "address": "전라남도 함평군 함평읍 중앙길 57",
+          "source_date": "2025-07-02"
+        }
+      ],
+      "already_in_survey": true
+    },
+    {
+      "candidate_id": "2f27f1aed634e2b8fc70a81a",
+      "annual_row": {
+        "가맹점명": "대동주유소",
+        "소속 시장명(또는 상점가)": "봉선중앙로 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": "유류",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2025"
+      },
+      "physical_name_candidates": [
+        {
+          "cached_file": "output/station_locations.json",
+          "name": "대동주유소",
+          "address": "전라남도 영광군 영광읍 월현로 48",
+          "source_date": "2025-09-24"
+        }
+      ],
+      "already_in_survey": true
+    },
+    {
+      "candidate_id": "b7bf7a689a786dd0c65079f5",
+      "annual_row": {
+        "가맹점명": "대광주유소",
+        "소속 시장명(또는 상점가)": "하남대로가구의거리상인회 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": "유류",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2025"
+      },
+      "physical_name_candidates": [
+        {
+          "cached_file": "output/station_locations.json",
+          "name": "대광주유소",
+          "address": "전라남도 순천시 별량면 녹색로 558",
+          "source_date": "2025-12-01"
+        }
+      ],
+      "already_in_survey": true
+    },
+    {
+      "candidate_id": "687b6a4379f9c9fa511001a2",
+      "annual_row": {
+        "가맹점명": "공항에너지",
+        "소속 시장명(또는 상점가)": "톱머리 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": "",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2026"
+      },
+      "physical_name_candidates": [
+        {
+          "cached_file": "output/station_locations.json",
+          "name": "공항에너지",
+          "address": "전남광주통합특별시 무안군 망운면 청운로 767",
+          "source_date": "2026-07-29"
+        }
+      ],
+      "already_in_survey": true
+    }
+  ],
+  "conclusion": "These municipal/LPG exact-name comparisons do not add an annual candidate beyond the current survey. This is not an exhaustive geographic or current merchant search. Name variants, missing historical records, later registrations and exact market boundaries still need independent evidence.",
+  "code_observation": "annual_download already adds every commercial fuel-index name to registry_keys before parse_csv; the current input is broader than known map station names alone. No new discovery method or merchant addition is claimed."
+}

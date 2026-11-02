@@ -37,5 +37,24 @@
     "Independent vehicle-fuel businesses inside those boundaries",
     "Current issuer-specific identity checks through managed collector"
   ],
-  "next_action": "Verify county designation originals and shop inventories; match independent fuel premises before queuing any additional managed queries."
+  "next_action": "Verify county designation originals and shop inventories; match independent fuel premises before queuing any additional managed queries.",
+  "primary_review_20261103": {
+    "reviewed_at": "2026-11-03T04:40:08+09:00",
+    "status": "primary_boundaries_and_shop_lists_not_verified",
+    "pages": [
+      {
+        "url": "https://www.damyang.go.kr/index.damyang",
+        "observed": "Official homepage and navigation accessible; no designation or shop inventory in this page."
+      },
+      {
+        "url": "https://www.damyang.go.kr/board/list?boardId=BBS_0000025&boardType=special&contentsSid=129&domainId=DOM_0000001&menuCd=DOM_000000190005002003",
+        "observed": "Disclosure-board retrieval timed out; no contents verified. This is not evidence of explicit blocking or absence of the document."
+      },
+      {
+        "url": "https://www.damyang.go.kr/menu/goToContentsPage?contentsSid=82&domainId=DOM_0000001&menuCd=DOM_000000190004006000",
+        "observed": "Enterprise-information link returned navigation without an inventory; no market or merchant coverage inferred."
+      }
+    ],
+    "impact": "Keep market_coverage pending. Secondary reports remain leads; no merchant or geographic completion claim."
+  }
 }

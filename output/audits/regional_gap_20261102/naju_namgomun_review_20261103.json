@@ -1,0 +1,44 @@
+{
+  "reviewed_at": "2026-11-03T04:45:27+09:00",
+  "station_id": "onnuri:18802200007",
+  "station_name": "남고문 self주유소",
+  "station_address": "전남광주통합특별시 나주시 남고문로 72 (남외동)",
+  "current_bank_observation": {
+    "job_id": "de06432b3d9da466cd3d9ec5",
+    "bank_record": {
+      "location": {
+        "lat": "35.0287060169",
+        "lng": "126.718846688"
+      },
+      "content": {
+        "tel": "061)337-4451",
+        "title": "남고문self주유소",
+        "category": "주유소",
+        "address": "전남 나주시 남외동 ",
+        "distance": "7",
+        "kindGb": "0",
+        "onNuliGb": "1",
+        "tradiGb": "0",
+        "liveHoodGb": "1",
+        "sangsaengGb": "1",
+        "franchiseNo": "000000034595536",
+        "highOilGb": "1",
+        "seoulGb": "0"
+      }
+    },
+    "checked_at": "2026-11-03T04:38:41+09:00",
+    "independent_fuel_candidate_ids": [],
+    "reason": "Independent exact business/address/category evidence incomplete; do not exclude by bank category alone"
+  },
+  "bank_distance_m": 6.58,
+  "interpretation": "A current issuer record with matching normalized name and close coordinates exists. Automatic independent exact-premise corroboration found no match; needs_review_not_found means no independently matched record, not empty issuer response or nonmembership.",
+  "status": "pending_independent_identity_evidence",
+  "unchanged_fields": [
+    "station id",
+    "coordinates",
+    "operator checked_at",
+    "payment methods",
+    "paper/QR dates"
+  ],
+  "next_action": "Obtain independent fuel-premise address/name or phone identity evidence; do not re-request the same issuer query merely to fix missing independent corroboration."
+}
