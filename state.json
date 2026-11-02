@@ -9001,10 +9001,13 @@
       "evidence": [
         "output/audits/regional_gap_20261102/naju_innovation_coordinate_review.json",
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/fcd770a/output/audits/regional_gap_20261102/nonfuel_reviews.json",
-        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/fcd770a/output/audits/regional_gap_20261102/damyang_terminal_review.json"
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/fcd770a/output/audits/regional_gap_20261102/damyang_terminal_review.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/0632768/output/audits/regional_gap_20261102/municipal_name_crosscheck_20261103.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/0632768/output/audits/regional_gap_20261102/damyang_market_leads.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/0632768/output/audits/regional_gap_20261102/naju_namgomun_review_20261103.json"
       ],
       "checked_at": null,
-      "last_reviewed_at": "2026-11-02T17:07:23+09:00"
+      "last_reviewed_at": "2026-11-03T04:46:38+09:00"
     },
     "전북": {
       "status": "pending",
@@ -21297,10 +21300,12 @@
       "location_inventory": {
         "status": "complete",
         "evidence": [
-          "https://www.data.go.kr/data/15083033/fileData.do"
+          "https://www.data.go.kr/data/15083033/fileData.do",
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/0632768/output/audits/regional_gap_20261102/municipal_name_crosscheck_20261103.json"
         ],
         "checked_at": "2026-06-30",
-        "scope": "dated physical source inventory only; not current membership"
+        "scope": "dated physical source inventory only; not current membership",
+        "last_reviewed_at": "2026-11-03T04:46:38+09:00"
       },
       "annual_identities": {
         "status": "pending",
@@ -21313,18 +21318,21 @@
       "membership_rechecks": {
         "status": "pending",
         "evidence": [
-          "output/audits/regional_gap_20261102/naju_innovation_coordinate_review.json"
+          "output/audits/regional_gap_20261102/naju_innovation_coordinate_review.json",
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/0632768/output/audits/regional_gap_20261102/naju_namgomun_review_20261103.json"
         ],
         "checked_at": null,
-        "scope": "Current issuer rechecks incomplete; coordinate discrepancy follow-up is discovery only"
+        "scope": "Current issuer rechecks incomplete; coordinate discrepancy follow-up is discovery only",
+        "last_reviewed_at": "2026-11-03T04:46:38+09:00"
       },
       "market_coverage": {
         "status": "pending",
         "evidence": [
-          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/fcd770a/output/audits/regional_gap_20261102/damyang_market_leads.json"
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/fcd770a/output/audits/regional_gap_20261102/damyang_market_leads.json",
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/0632768/output/audits/regional_gap_20261102/damyang_market_leads.json"
         ],
         "checked_at": null,
-        "last_reviewed_at": "2026-11-02T17:07:23+09:00",
+        "last_reviewed_at": "2026-11-03T04:46:38+09:00",
         "scope": "Pending primary designation boundaries and shop inventories across all 22 municipalities; Damyang secondary leads are not completed coverage."
       }
     },
