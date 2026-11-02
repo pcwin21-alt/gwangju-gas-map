@@ -43,3 +43,11 @@
 변경 계약은 ‘현재 지도 범위에서 다시 찾기 → 해당 범위 목록 확인’과 일반 확대/축소·경유창 동작 보존이다. 입력은 첨부 화면·현재 HTML/CSS/이벤트, 출력은 좁은 범위 UI 수정·배포 검증이다. 기존 Router/Brain/프로젝트 계약·Toss UX·codex-delivery-loop·Global/Software UX Gate를 재사용한다. 신규 기능·자료 수집·가맹점 데이터·서브에이전트는 제외한다.
 
 검증: 기존 JS 동작 검사 101개 통과. 로컬 실제 HTML/CSS에서 320×740, 390×844, 700×800, 701×800, 1280×800, 2816×900, 740×360, 844×390 × 기본/200% 글자 × 한국어/영어 × 라이트/다크 × 목록 접힘/열림의 128조합을 확인했다. 검색 버튼은 보이는 조건에서 지도 왼쪽 12px이며 목록·확대/축소와 겹침, 페이지 가로 넘침, 전체 화면 버튼 잔존은 없었다. 큰 글자의 짧은 가로 화면에서 하단 축소 버튼으로 실제 스크롤·접근도 확인했다. 검수 페이지는 실제 지도 SDK·위치·전송을 실행하지 않는 예시다. 캡처/배치 증거는 Playground `output/left-map-search-20261102/`에 보존한다. 실제 휴대전화 하드웨어 검증과는 구분한다.
+
+### 공개 반영·플랫폼 빌드 확인
+
+수정 `117ff5c`의 [웹 배포 41414286193](https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41414286193), [전체 회귀 검사 41414286250](https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41414286250), [Pages 게시 41414305466](https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41414305466)가 성공했다. 공개 `v=117ff5c`를 1280×800 / 390×844에서 확인해 검색 버튼 왼쪽 12px, 목록·줌과 겹침 없음, 전체 화면 버튼 부재를 확인했다.
+
+실제 지도 확대를 눌러 축척 4km→2km 변화와 범위 검색 버튼 표시를 확인했다. 범위 검색은 ‘찾은 범위 · 이름순 · 현재 지도 안 12곳’ 목록을 열었고 축척 2km는 유지했다. 목록을 접고 모바일에서 축소를 눌렀을 때도 검색 버튼과 기본 줌이 동작했다. GPS·경유 서버·가맹점 원천 조회는 실행하지 않았다. 임시 viewport를 복원했다. 공개 캡처는 `public-desktop.png`, `public-mobile.png`, 동작 기록은 `public-check.json`이다.
+
+앱인토스는 같은 공통 소스로 재빌드했다. 플랫폼 3개 JS/4개 Python 검사와 5개 내장 데이터 보존을 통과했고, `.ait` 내부 HTML·JS·CSS에서도 `expandMapBtn`/`map-expanded`가 없는 것을 확인했다. 빌드 ID `01a19b67-175c-7be3-8770-1e00b46b2363`, SHA-256 `a45fb3effe771ec0190f6b307de8a6291c0bb97741162f76b5de245fc49dab9e`이다. 전달 파일은 Playground `output/apps-in-toss-map-controls-20261102/onnuri-fuel-map.ait`다. 이전 파일은 보존했으며 콘솔 업로드·실제 토스 앱 검증·심사 제출은 수행하지 않았다. 변경 범위의 Global/Software UX Gate를 통과했다.
