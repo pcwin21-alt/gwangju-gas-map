@@ -1,0 +1,145 @@
+{
+  "checked_at": "2026-11-03T07:52:35+09:00",
+  "region": "전남",
+  "workflow_run": "https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41539719356",
+  "run": {
+    "id": "83e15309fe014ff0805b079f77281c8f",
+    "checked_at": "2026-11-03T07:50:25+09:00",
+    "requests": 3,
+    "request_purposes": {
+      "annual_reverse_discovery": 1,
+      "post_renewal_recheck": 2
+    }
+  },
+  "request_attempts": [
+    {
+      "source": "kbcard",
+      "job_id": "a7087ea5889ef7e3bedc8ce6",
+      "at": 1793659455.9106915,
+      "finished_at": 1793659458.9787214,
+      "status": "done",
+      "http_status": 200,
+      "network_duration_seconds": 1.781355619430542
+    },
+    {
+      "source": "kbcard",
+      "job_id": "2b326008927195e54b207b2d",
+      "at": 1793659638.9789083,
+      "finished_at": 1793659641.6099668,
+      "status": "done",
+      "http_status": 200,
+      "network_duration_seconds": 0.8833365440368652
+    },
+    {
+      "source": "kbcard",
+      "job_id": "cc6798cee06934c3f70faed5",
+      "at": 1793659821.6101222,
+      "finished_at": 1793659824.2089734,
+      "status": "done",
+      "http_status": 200,
+      "network_duration_seconds": 0.8889145851135254
+    }
+  ],
+  "fresh_existing_issuer_confirmations": [
+    {
+      "id": "onnuri:18806200009",
+      "name": "부건주유소",
+      "issuer_checks": {
+        "kbcard": {
+          "status": "confirmed_in_issuer_scope",
+          "issuer": "kbcard",
+          "checked_at": "2026-11-03T07:47:21+09:00",
+          "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+          "bank_id": "000000120167132",
+          "other_payment_methods": "not_reverified"
+        }
+      }
+    },
+    {
+      "id": "onnuri:18809200006",
+      "name": "재봉주유소",
+      "issuer_checks": {
+        "kbcard": {
+          "status": "confirmed_in_issuer_scope",
+          "issuer": "kbcard",
+          "checked_at": "2026-11-03T07:50:24+09:00",
+          "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+          "bank_id": "000000033093565",
+          "other_payment_methods": "not_reverified"
+        }
+      }
+    }
+  ],
+  "new_station_additions": 0,
+  "old_payment_types_operator_paper_QR_dates_preserved": true,
+  "excluded_annual_candidate": {
+    "id": "d8649006e8f025dc123dffbf",
+    "name": "그대에너지",
+    "source_record_id": "05287200002",
+    "source_checked_at": "2026-10-25T10:51:11+09:00",
+    "reason": "annual livestock product and same-name same-market historical operator livestock(02) registration"
+  },
+  "progress": {
+    "region": "전남",
+    "status": "collecting",
+    "jobs_total": 43,
+    "jobs_remaining": 12,
+    "jobs_needing_review": 0,
+    "source_gaps": 24,
+    "review_records": 8,
+    "inventory_reviewed": false,
+    "mapped_records_to_recheck": 28,
+    "membership_check_status": {
+      "confirmed_in_issuer_scope": 19,
+      "needs_review_not_found": 3,
+      "pending": 6
+    },
+    "unresolved_annual_identities": 21,
+    "missing_standard_checks": [
+      "market_coverage",
+      "membership_rechecks",
+      "annual_identities"
+    ],
+    "standard_checks_complete": false,
+    "scope": "issuer-scoped rechecks; paper/QR/operator freshness not inferred"
+  },
+  "limits": {
+    "onnuri": {
+      "requests_per_24h": 24,
+      "requests_per_run": 0,
+      "interval_seconds": 180,
+      "stage": "stopped"
+    },
+    "kbcard": {
+      "requests_per_24h": 24,
+      "requests_per_run": 3,
+      "interval_seconds": 180,
+      "stage": "pilot",
+      "clean_since": 1793556784.2048566,
+      "valid_responses_in_clean_window": 18,
+      "earliest_review_at": 1793729584.2048566
+    },
+    "datagov": {
+      "requests_per_24h": 20,
+      "requests_per_run": 3,
+      "interval_seconds": 180,
+      "stage": "fixed"
+    }
+  },
+  "public_verification": {
+    "url": "https://pcwin21-alt.github.io/gwangju-gas-map/?v=08cf3c1",
+    "http_status": 200,
+    "new_issuer_checks_match_main": true,
+    "station_count": 220
+  },
+  "unresolved": [
+    "21 annual identities",
+    "6 existing-station rechecks and 3 not-found reviews",
+    "latest market boundaries/member inventories"
+  ],
+  "next": [
+    "remaining Jeonnam discovery/rechecks under existing limits",
+    "Mokpo new district boundary/member inventory",
+    "public-list access review for provenance-supported ongift without bypassing rejected source"
+  ]
+}
