@@ -13,7 +13,7 @@
       "status": "active",
       "url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
       "scope": "Public unauthenticated Onnuri merchant form; issuer-specific evidence only; limits are our load caps, not a provider guarantee",
-      "next_allowed_at": 1793648498.4391356,
+      "next_allowed_at": 1793648506.6571214,
       "volume_ramp": {
         "stage": "pilot",
         "started_at": 1793556784.2048566,
@@ -652,7 +652,7 @@
       "job_id": "de06432b3d9da466cd3d9ec5",
       "source": "kbcard",
       "at": 1793648318.4391356,
-      "status": "reserved",
+      "status": "done",
       "run_id": "a203bae157bb4799b2808389dcaa44bc",
       "request": {
         "method": "POST",
@@ -669,7 +669,12 @@
           "endRow": 10,
           "mmcNm": ""
         }
-      }
+      },
+      "request_started_at": 1793648320.6968105,
+      "network_duration_seconds": 1.0988032817840576,
+      "http_status": 200,
+      "response_sha256": "e18fd1eeefd06f2164bb8bdec685328c9acabaaa1e8212fe6b633160d8d21374",
+      "finished_at": 1793648326.657068
     }
   ],
   "jobs": [
@@ -2013,11 +2018,85 @@
       },
       "logical_key": "de06432b3d9da466cd3d9ec5",
       "id": "de06432b3d9da466cd3d9ec5",
-      "status": "pending",
+      "status": "done",
       "attempts": 1,
       "page": 1,
-      "observed_ids": [],
-      "candidate_ids": []
+      "observed_ids": [
+        "000000034595536",
+        "000000103796532",
+        "000000110877391",
+        "000000037097286",
+        "000000035654491",
+        "000000110843574",
+        "000000111159954",
+        "000000029520378",
+        "000000120932494",
+        "000000106297904",
+        "000000054407279",
+        "000000059101019",
+        "000000010333995",
+        "000000048480543",
+        "000000081112001",
+        "000000096387282",
+        "000000109957461",
+        "000000019573981",
+        "000000119663489",
+        "000000025703161",
+        "000000122138685",
+        "000000005444803",
+        "000000088051322",
+        "000000065595783",
+        "000000116085034",
+        "000000004783506",
+        "000000064986518",
+        "000000069663718",
+        "000000116891417",
+        "000000069632361",
+        "000000111066157",
+        "000000018019419",
+        "000000072558674",
+        "000000094825797",
+        "000000117744032",
+        "000000029536775",
+        "000000110531801",
+        "000000113379139",
+        "000000118003300",
+        "000000016143843",
+        "000000077161048",
+        "000000105013863",
+        "000000021068377",
+        "000000064912272",
+        "000000083425611",
+        "000000105196606",
+        "000000021873496",
+        "000000113629992",
+        "000000119848511",
+        "000000031985271",
+        "000000081118763",
+        "000000100926047",
+        "000000062417143",
+        "000000110466921",
+        "000000105009356",
+        "000000061151751",
+        "000000096179375",
+        "000000110728928",
+        "000000016835215",
+        "000000100243845",
+        "000000060160392",
+        "000000118381871",
+        "000000094884836",
+        "000000107857515",
+        "000000095723433",
+        "000000065227451",
+        "000000121289240",
+        "000000027714809",
+        "000000114148596",
+        "000000103525467"
+      ],
+      "candidate_ids": [],
+      "expected": 70,
+      "last_observed_at": "2026-11-03T04:38:41+09:00",
+      "result": "observations_saved"
     },
     {
       "kind": "kb_search",
@@ -7654,6 +7733,40 @@
         "MA010120220808842825"
       ],
       "reason": "Independent exact business/address/category evidence incomplete; do not exclude by bank category alone"
+    },
+    {
+      "job_id": "de06432b3d9da466cd3d9ec5",
+      "bank_record": {
+        "location": {
+          "lat": "35.0287060169",
+          "lng": "126.718846688"
+        },
+        "content": {
+          "tel": "061)337-4451",
+          "title": "남고문self주유소",
+          "category": "주유소",
+          "address": "전남 나주시 남외동 ",
+          "distance": "7",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000034595536",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        }
+      },
+      "checked_at": "2026-11-03T04:38:41+09:00",
+      "independent_fuel_candidate_ids": [],
+      "reason": "Independent exact business/address/category evidence incomplete; do not exclude by bank category alone"
+    },
+    {
+      "region": "전남",
+      "station_id": "onnuri:18802200007",
+      "job_id": "de06432b3d9da466cd3d9ec5",
+      "checked_at": "2026-11-03T04:38:41+09:00",
+      "reason": "No independently matched current issuer record; preserve previous station"
     }
   ],
   "source_gaps": [
@@ -21825,6 +21938,12 @@
       "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
       "bank_id": "000000121636039",
       "other_payment_methods": "not_reverified"
+    },
+    "onnuri:18802200007": {
+      "status": "needs_review_not_found",
+      "checked_at": "2026-11-03T04:38:41+09:00",
+      "job_id": "de06432b3d9da466cd3d9ec5",
+      "nonmembership": "not_established"
     }
   },
   "initial_plan_id": "fuel-candidate-inventory-20261102-v1",
