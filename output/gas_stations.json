@@ -8099,7 +8099,17 @@
         "source_url": "https://www.onnuri.gift/place",
         "match_basis": "official_place_id_address_coordinates",
         "market": "금천면 골목형상점가",
-        "candidate_ids": []
+        "candidate_ids": [],
+        "issuer_checks": {
+          "kbcard": {
+            "status": "confirmed_in_issuer_scope",
+            "issuer": "kbcard",
+            "checked_at": "2026-11-03T07:47:21+09:00",
+            "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+            "bank_id": "000000120167132",
+            "other_payment_methods": "not_reverified"
+          }
+        }
       }
     },
     "onnuri_methods": {
@@ -8137,7 +8147,17 @@
         "source_url": "https://www.onnuri.gift/place",
         "match_basis": "official_place_id_address_coordinates",
         "market": "미락단지 골목형상점가",
-        "candidate_ids": []
+        "candidate_ids": [],
+        "issuer_checks": {
+          "kbcard": {
+            "status": "confirmed_in_issuer_scope",
+            "issuer": "kbcard",
+            "checked_at": "2026-11-03T07:50:24+09:00",
+            "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+            "bank_id": "000000033093565",
+            "other_payment_methods": "not_reverified"
+          }
+        }
       }
     },
     "onnuri_methods": {
