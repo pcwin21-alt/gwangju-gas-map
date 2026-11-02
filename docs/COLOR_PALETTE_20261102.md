@@ -59,3 +59,11 @@
 4. 최종 `.ait` ZIP 내부 `sources/assets/theme.css`와 웹 원천/빌드 CSS가 바이트 단위로 같고 SHA-256은 `84ebf4f6695358f05c6809b5b2213072e9f47dfbba1d103fb5be1f8cc5e896a8`이다. `bundle.json`의 Jade 브랜드 값도 확인했다. `.ait` SHA-256은 `a3a5bfe16f8f2313c2ff22e3a32390b416133dbd3eb4ce2ecd461a9bcf28a156`이다.
 
 증거는 Playground `output/palette-all-20261102/`의 `render-audit.json`, `toss-browser-preview-audit.json`, 화면 캡처에 있다. 플랫폼 전달 파일은 `output/apps-in-toss-palette-20261102/onnuri-fuel-map.ait`와 `STATUS.json`이다. 이전 전달 파일은 보존했다. `runtimeVerified`, `uploadedToConsole`, `reviewSubmitted`는 모두 false다. 공개 웹 배포 결과는 최종 확인 후 아래에 기록한다.
+
+### 확장판 공개 배포 최종 확인
+
+수정·빌드 기록을 포함한 `7e548a0`의 [웹 배포 41407800230](https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41407800230), [회귀 검사 41407800191](https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41407800191), [Pages 게시 41407816085](https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41407816085)가 모두 성공했다.
+
+공개 `v=7e548a0`에서 더보기·도움말·지역 선택의 라이트 화면과 더보기·필터·지역 선택·실제 서양새마을금고 주유소 상세의 다크 화면을 확인했다. 대비 미달·페이지 가로 넘침이 없고, 도움말 열기/닫기·검색 → 목록 → 상세 → 닫기 흐름이 동작한다. 실제 가맹점 확인일 2026-10-25와 유가 기준 2026-11-02를 각각 유지한다. 공개 확인 뒤 검증용 테마와 viewport를 복원했다.
+
+공개 자산은 `theme.css?v=c42a25cb01d4`다. 공개 서버의 LF 개행 SHA-256은 `c42a25cb01d4ae21c2ef13e592821a78867482fc7e6196c984eecbe9e5754823`이며 위 로컬/플랫폼 CRLF 파일을 LF로 정규화한 값과 동일하다. 배포 환경의 개행 차이이고 팔레트/규칙은 같다. 콘솔 업로드·토스 실기기·심사·출시는 수행하지 않았다. Global/Software UX와 변경 범위의 읽기성·Design Gate 검증을 통과했다.
