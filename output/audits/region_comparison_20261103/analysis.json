@@ -1,0 +1,4311 @@
+{
+  "reviewed_at": "2026-11-03T06:07:28+09:00",
+  "contract": "Reassess the apparent Gwangju/Jeonnam gap without equating issuer IDs, map records and current total merchants. Offline historical controls only, no collection or map changes.",
+  "regions": [
+    {
+      "region": "광주",
+      "map_records": 131,
+      "fuel_kinds": {
+        "liquid": 115,
+        "lpg": 16
+      },
+      "operator_source_records": 130,
+      "bank_only_source_records": 1,
+      "alley_market_name_records": 121,
+      "same_address_and_kind_map_groups": 131,
+      "physical_source_rows": 393,
+      "exact_name_100m_controls_pass": 89,
+      "exact_name_100m_controls_fail": 42,
+      "same_address_and_kind_controls_hit": 122,
+      "original_operator_checked_at": "2026-10-25T10:51:11+09:00",
+      "original_operator_keyword_queries": 14,
+      "original_operator_raw_rows_including_nonfuel": 204,
+      "original_operator_street_address_parseable": 204,
+      "controls": [
+        {
+          "station_id": "sangsaeng:4846",
+          "name": "하진에너지 주식회사",
+          "address": "광주광역시 광산구 손재로 415 (오선동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807240698",
+              "name": "성현주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 광산구 손재로 415",
+              "phone": null,
+              "lat": "35.2027340761553",
+              "lng": "126.794712436689",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            },
+            {
+              "source_id": "MA0101202512A0010646",
+              "name": "하진에너지",
+              "branch": "",
+              "address": "전남광주통합특별시 광산구 손재로 415",
+              "phone": null,
+              "lat": "35.2027340761553",
+              "lng": "126.794712436689",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "sangsaeng:5064",
+          "name": "진영주유소",
+          "address": "광주광역시 광산구 송도로 292 (송정동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807620888",
+              "name": "진영주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 광산구 송도로 292",
+              "phone": null,
+              "lat": "35.1390630115843",
+              "lng": "126.800545395672",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "sangsaeng:7652",
+          "name": "전송주유소",
+          "address": "광주광역시 광산구 어등대로 583 (운수동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807650878",
+              "name": "전송주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 광산구 어등대로 583",
+              "phone": null,
+              "lat": "35.151045524249",
+              "lng": "126.786688286376",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "sangsaeng:7661",
+          "name": "순양주유소",
+          "address": "광주광역시 광산구 어등대로 667 (소촌동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "sangsaeng:8171",
+          "name": "브이넥스 주식회사",
+          "address": "광주광역시 광산구 용아로 330 (산정동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA0106202201A0010116",
+              "name": "SK에너지태양주유소광주광산",
+              "branch": "",
+              "address": "전남광주통합특별시 광산구 용아로 330",
+              "phone": null,
+              "lat": "35.1728245718006",
+              "lng": "126.804030642361",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "sangsaeng:15430",
+          "name": "대촌주유소",
+          "address": "광주광역시 남구 고싸움로 169 (지석동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807478398",
+              "name": "대촌주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 남구 고싸움로 169",
+              "phone": null,
+              "lat": "35.081855237197",
+              "lng": "126.831486077701",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "sangsaeng:16701",
+          "name": "대남로 주유소",
+          "address": "광주광역시 남구 대남대로 399 (월산동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA0101202305A0006703",
+              "name": "대남로주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 남구 대남대로 399",
+              "phone": null,
+              "lat": "35.1464236214013",
+              "lng": "126.889394019831",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            },
+            {
+              "source_id": "MA010120220812603889",
+              "name": "마트몰",
+              "branch": "",
+              "address": "전남광주통합특별시 남구 대남대로 399",
+              "phone": null,
+              "lat": "35.1464236214013",
+              "lng": "126.889394019831",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "sangsaeng:16763",
+          "name": "대원주유소",
+          "address": "광주광역시 남구 대남대로 329 (월산동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807465130",
+              "name": "대원주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 남구 대남대로 329",
+              "phone": null,
+              "lat": "35.1410101697167",
+              "lng": "126.893560175776",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "sangsaeng:19756",
+          "name": "주식회사 21세기에너지",
+          "address": "전남광주통합특별시 남구 서문대로 697 (진월동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220803065198",
+              "name": "길이앤에스",
+              "branch": "",
+              "address": "전남광주통합특별시 남구 서문대로 697",
+              "phone": null,
+              "lat": "35.1216168369716",
+              "lng": "126.898225961135",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            },
+            {
+              "source_id": "MA010120220807663968",
+              "name": "지에스칼텍스21세기주유소주",
+              "branch": "",
+              "address": "전남광주통합특별시 남구 서문대로 697",
+              "phone": null,
+              "lat": "35.1216168369716",
+              "lng": "126.898225961135",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "sangsaeng:21836",
+          "name": "양촌주유소",
+          "address": "광주광역시 남구 포충로 121 (양촌동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220813093727",
+              "name": "양촌주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 남구 포충로 121",
+              "phone": null,
+              "lat": "35.0607630163055",
+              "lng": "126.790869844809",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "sangsaeng:22185",
+          "name": "풍암주유소",
+          "address": "광주광역시 남구 회재로 1208 (주월동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA0101202406A0554768",
+              "name": "풍암주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 남구 회재로 1208",
+              "phone": null,
+              "lat": "35.1327266187093",
+              "lng": "126.893527068464",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            },
+            {
+              "source_id": "MA010120220807504859",
+              "name": "지에스칼텍스풍암주유소주",
+              "branch": "",
+              "address": "전남광주통합특별시 남구 회재로 1208",
+              "phone": null,
+              "lat": "35.1327266187093",
+              "lng": "126.893527068464",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "sangsaeng:22303",
+          "name": "대촌상주유소",
+          "address": "전남광주통합특별시 남구 회재로 206 (지석동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807467316",
+              "name": "대촌상주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 남구 회재로 206",
+              "phone": null,
+              "lat": "35.0818006976065",
+              "lng": "126.831157232978",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "sangsaeng:30730",
+          "name": "두암주유소",
+          "address": "광주광역시 북구 군왕로 103 (두암동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807566926",
+              "name": "두암주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 군왕로 103",
+              "phone": null,
+              "lat": "35.1702959392769",
+              "lng": "126.931919951003",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "sangsaeng:31205",
+          "name": "북성주유소",
+          "address": "광주광역시 북구 금남로 49 (임동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807543348",
+              "name": "북성주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 금남로 49",
+              "phone": null,
+              "lat": "35.1590080109805",
+              "lng": "126.901461112823",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "sangsaeng:32796",
+          "name": "도동재주유소",
+          "address": "광주광역시 북구 동문대로 410 (문흥동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220810172254",
+              "name": "도동재주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 동문대로 410",
+              "phone": null,
+              "lat": "35.1982308209701",
+              "lng": "126.935322681196",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "sangsaeng:34201",
+          "name": "서림주유소",
+          "address": "광주광역시 북구 무등로 126 (신안동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807556675",
+              "name": "서림주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 무등로 126",
+              "phone": null,
+              "lat": "35.1670539967923",
+              "lng": "126.897664456298",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "sangsaeng:34326",
+          "name": "경기장주유소",
+          "address": "광주광역시 북구 무등로 76 (임동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA0106202201A0010174",
+              "name": "SK에너지경기장주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 무등로 76",
+              "phone": null,
+              "lat": "35.1684555774303",
+              "lng": "126.892426738464",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            },
+            {
+              "source_id": "MA010120220807542443",
+              "name": "효강",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 무등로 76",
+              "phone": null,
+              "lat": "35.1684555774303",
+              "lng": "126.892426738464",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            },
+            {
+              "source_id": "MA010120220807550188",
+              "name": "바른에너지",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 무등로 76",
+              "phone": null,
+              "lat": "35.1684555774303",
+              "lng": "126.892426738464",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "sangsaeng:35433",
+          "name": "주공주유소",
+          "address": "광주광역시 북구 북문대로 190 (운암동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807530440",
+              "name": "주공주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 북문대로 190",
+              "phone": null,
+              "lat": "35.1852176837897",
+              "lng": "126.870786784505",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "sangsaeng:36241",
+          "name": "용두주유소",
+          "address": "광주광역시 북구 빛고을대로 652 (용두동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA0101202512A0021203",
+              "name": "용두주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 빛고을대로 652",
+              "phone": null,
+              "lat": "35.2198641897789",
+              "lng": "126.869402859985",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "sangsaeng:38500",
+          "name": "77번가주유소",
+          "address": "광주광역시 북구 서하로 77 (매곡동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807538553",
+              "name": "코끼리주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 서하로 77",
+              "phone": null,
+              "lat": "35.1877232413733",
+              "lng": "126.888734215586",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "sangsaeng:39096",
+          "name": "주식회사 오림이사",
+          "address": "광주광역시 북구 설죽로 421 (삼각동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA0106202201A0010140",
+              "name": "SK에너지일곡제일주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 설죽로 421",
+              "phone": null,
+              "lat": "35.1969085902606",
+              "lng": "126.899680416022",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            },
+            {
+              "source_id": "MA010120220807700141",
+              "name": "행복날개넷",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 설죽로 421",
+              "phone": null,
+              "lat": "35.1969085902606",
+              "lng": "126.899680416022",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "sangsaeng:40989",
+          "name": "지산주유소",
+          "address": "광주광역시 북구 양산택지로 157 (본촌동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807463777",
+              "name": "지산주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 양산택지로 157",
+              "phone": null,
+              "lat": "35.2173945187918",
+              "lng": "126.878072750935",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "sangsaeng:42168",
+          "name": "세본주유소",
+          "address": "광주광역시 북구 용주로 21 (용봉동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807555883",
+              "name": "세본주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 용주로 21",
+              "phone": null,
+              "lat": "35.18148699576",
+              "lng": "126.900391021504",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "sangsaeng:42611",
+          "name": "패밀리셀프주유소 주식회사",
+          "address": "광주광역시 북구 우치로 670 (생용동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220802519178",
+              "name": "패밀리셀프주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 우치로 670",
+              "phone": null,
+              "lat": "35.2241947483012",
+              "lng": "126.902425889558",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "sangsaeng:42628",
+          "name": "자모셀프주유소",
+          "address": "광주광역시 북구 우치로 7 (중흥동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA0106202201A0010231",
+              "name": "SK에너지자모셀프주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 우치로 7",
+              "phone": null,
+              "lat": "35.1683889164774",
+              "lng": "126.910176394497",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "sangsaeng:42664",
+          "name": "용전IC주유소",
+          "address": "광주광역시 북구 우치로 842 (용전동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220809682626",
+              "name": "용전IC주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 우치로 842",
+              "phone": null,
+              "lat": "35.237653314054",
+              "lng": "126.893434069292",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            },
+            {
+              "source_id": "MA010120220813618232",
+              "name": "용전IC주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 우치로 842",
+              "phone": null,
+              "lat": "35.237653314054",
+              "lng": "126.893434069292",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "sangsaeng:43007",
+          "name": "(주)일곡석유",
+          "address": "광주광역시 북구 우치로422번길 22 (삼각동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807574393",
+              "name": "일곡석유주",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 우치로422번길 22",
+              "phone": null,
+              "lat": "35.2045902836406",
+              "lng": "126.902328546242",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "sangsaeng:44039",
+          "name": "세오 주식회사",
+          "address": "광주광역시 북구 임방울대로 979 (신용동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220812384611",
+              "name": "세오",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 임방울대로 979",
+              "phone": null,
+              "lat": "35.214910868959",
+              "lng": "126.864929686573",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "sangsaeng:46655",
+          "name": "마트몰(주)더믿음가득주유소",
+          "address": "광주광역시 북구 하남대로 777 (운암동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807580502",
+              "name": "신광장주유소주",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 하남대로 777",
+              "phone": null,
+              "lat": "35.1715245375279",
+              "lng": "126.87798758566",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "sangsaeng:46883",
+          "name": "행복가득양산주유소",
+          "address": "광주광역시 북구 하서로 255 (양산동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220812722988",
+              "name": "현대오일뱅크직영양산주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 하서로 255",
+              "phone": null,
+              "lat": "35.198085349733",
+              "lng": "126.875894463001",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "sangsaeng:51395",
+          "name": "컨벤션주유소",
+          "address": "광주광역시 서구 상무대로 714 (마륵동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807522818",
+              "name": "컨벤션주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 서구 상무대로 714",
+              "phone": null,
+              "lat": "35.1433340405302",
+              "lng": "126.842409752056",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "sangsaeng:51879",
+          "name": "골든타임주유소",
+          "address": "광주광역시 서구 상무대로1206번길 3 (농성동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA0101202509A0019812",
+              "name": "골든타임주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 서구 상무대로1206번길 3",
+              "phone": null,
+              "lat": "35.1553420704733",
+              "lng": "126.893859790391",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "sangsaeng:2944",
+          "name": "수완LPG충전소",
+          "address": "광주광역시 광산구 사암로 668 (장덕동)",
+          "fuel_kind": "lpg",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "lpg_locations.json:1769",
+              "name": "(주)수완엘피지건설",
+              "address": "전남광주통합특별시 광산구 사암로 668 (장덕동) ",
+              "phone": null,
+              "lat": "35.2032822",
+              "lng": "126.8120213",
+              "fuel_kind": "lpg",
+              "source_date": "2026-09-11",
+              "source_url": "https://www.data.go.kr/data/15001643/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "sangsaeng:4080",
+          "name": "신공항엘피지충전소",
+          "address": "전남광주통합특별시 광산구 상무대로 404 (신촌동)",
+          "fuel_kind": "lpg",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "lpg_locations.json:1266",
+              "name": "신공항LPG충전소",
+              "address": "전남광주통합특별시 광산구 상무대로 404 (신촌동) ",
+              "phone": null,
+              "lat": "35.1650242",
+              "lng": "126.7528769",
+              "fuel_kind": "lpg",
+              "source_date": "2026-09-11",
+              "source_url": "https://www.data.go.kr/data/15001643/fileData.do"
+            },
+            {
+              "source_id": "MA010120220807622437",
+              "name": "신공항엘피지충전소",
+              "branch": "",
+              "address": "전남광주통합특별시 광산구 상무대로 404",
+              "phone": null,
+              "lat": "35.1439278225305",
+              "lng": "126.810190252181",
+              "fuel_kind": "lpg",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "sangsaeng:36271",
+          "name": "더푸른 주식회사 첨단충전소",
+          "address": "광주광역시 북구 삼소로 330 (월출동)",
+          "fuel_kind": "lpg",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "lpg_locations.json:1048",
+              "name": "더푸른(주)첨단충전소",
+              "address": "전남광주통합특별시 북구 삼소로 330 (월출동) ",
+              "phone": null,
+              "lat": "35.2405682",
+              "lng": "126.8698688",
+              "fuel_kind": "lpg",
+              "source_date": "2026-09-11",
+              "source_url": "https://www.data.go.kr/data/15001643/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "sangsaeng:42608",
+          "name": "패밀리LPG충전소",
+          "address": "광주광역시 북구 우치로 654 (생용동)",
+          "fuel_kind": "lpg",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "lpg_locations.json:1511",
+              "name": "패밀리LPG충전소",
+              "address": "전남광주통합특별시 북구 우치로 654 (생용동) ",
+              "phone": null,
+              "lat": "35.2225413",
+              "lng": "126.9028346",
+              "fuel_kind": "lpg",
+              "source_date": "2026-09-11",
+              "source_url": "https://www.data.go.kr/data/15001643/fileData.do"
+            },
+            {
+              "source_id": "MA010120220807555312",
+              "name": "패밀리LPG충전소",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 우치로 654",
+              "phone": null,
+              "lat": "35.2225817311835",
+              "lng": "126.902922106763",
+              "fuel_kind": "lpg",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "sangsaeng:42666",
+          "name": "매일LPG충전소",
+          "address": "광주광역시 북구 우치로 850 (용전동)",
+          "fuel_kind": "lpg",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "lpg_locations.json:1508",
+              "name": "매일LPG충전소",
+              "address": "전남광주통합특별시 북구 우치로 850 (용전동) ",
+              "phone": null,
+              "lat": "35.2381968",
+              "lng": "126.8932943",
+              "fuel_kind": "lpg",
+              "source_date": "2026-09-11",
+              "source_url": "https://www.data.go.kr/data/15001643/fileData.do"
+            },
+            {
+              "source_id": "MA010120220812301629",
+              "name": "매일엘피지",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 우치로 850",
+              "phone": null,
+              "lat": "35.2381939476568",
+              "lng": "126.893235609694",
+              "fuel_kind": "lpg",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "sangsaeng:47198",
+          "name": "(주)무등엘피지충전소",
+          "address": "광주광역시 북구 하서로 553 (본촌동)",
+          "fuel_kind": "lpg",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "lpg_locations.json:807",
+              "name": "(주)무등엘피지충전소",
+              "address": "전남광주통합특별시 북구 하서로 553 (본촌동) ",
+              "phone": null,
+              "lat": "35.2231971",
+              "lng": "126.8806989",
+              "fuel_kind": "lpg",
+              "source_date": "2026-09-11",
+              "source_url": "https://www.data.go.kr/data/15001643/fileData.do"
+            },
+            {
+              "source_id": "MA010120220807577508",
+              "name": "무등엘피지충전소",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 하서로 553",
+              "phone": null,
+              "lat": "35.2234905213126",
+              "lng": "126.880963479071",
+              "fuel_kind": "lpg",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05023200002",
+          "name": "바로오케이충전소",
+          "address": "광주광역시 북구 하남대로 763 (운암동)",
+          "fuel_kind": "lpg",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "lpg_locations.json:567",
+              "name": "바로오케이충전소",
+              "address": "전남광주통합특별시 북구 하남대로 763 (운암동) ",
+              "phone": null,
+              "lat": "35.1716153",
+              "lng": "126.8760285",
+              "fuel_kind": "lpg",
+              "source_date": "2026-09-11",
+              "source_url": "https://www.data.go.kr/data/15001643/fileData.do"
+            },
+            {
+              "source_id": "MA010120220804890338",
+              "name": "바로오케이충전소",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 하남대로 763",
+              "phone": null,
+              "lat": "35.1715675653088",
+              "lng": "126.875978680009",
+              "fuel_kind": "lpg",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05023200019",
+          "name": "반디가스앤오일(주)",
+          "address": "광주광역시 북구 운신남길 146 (운암동)",
+          "fuel_kind": "lpg",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "lpg_locations.json:812",
+              "name": "반디가스앤오일(주)",
+              "address": "전남광주통합특별시 북구 운신남길 146 (운암동) ",
+              "phone": null,
+              "lat": "35.1719077",
+              "lng": "126.8827712",
+              "fuel_kind": "lpg",
+              "source_date": "2026-09-11",
+              "source_url": "https://www.data.go.kr/data/15001643/fileData.do"
+            },
+            {
+              "source_id": "MA010120220807573685",
+              "name": "반디가스앤오일주",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 운신남길 146",
+              "phone": null,
+              "lat": "35.1718357034406",
+              "lng": "126.882751274109",
+              "fuel_kind": "lpg",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05023200021",
+          "name": "(주)반디석유 본점",
+          "address": "광주광역시 북구 하남대로 819 (운암동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807582096",
+              "name": "반디석유주",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 하남대로 819",
+              "phone": null,
+              "lat": "35.1712674020267",
+              "lng": "126.882291046048",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05076200204",
+          "name": "송정현대주유소",
+          "address": "광주광역시 광산구 송도로 104 (도산동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807625072",
+              "name": "송정현대주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 광산구 송도로 104",
+              "phone": null,
+              "lat": "35.1263422061668",
+              "lng": "126.788387423908",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05077200232",
+          "name": "박물관주유소",
+          "address": "광주광역시 북구 하서로 211 (양산동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05080200146",
+          "name": "(주)대창석유 직영 국일충전소",
+          "address": "광주광역시 북구 탁영로 11 (두암동)",
+          "fuel_kind": "lpg",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "lpg_locations.json:575",
+              "name": "(주)대창석유 국일충전소",
+              "address": "전남광주통합특별시 북구 탁영로 11 (두암동) ",
+              "phone": null,
+              "lat": "35.166804",
+              "lng": "126.9341113",
+              "fuel_kind": "lpg",
+              "source_date": "2026-09-11",
+              "source_url": "https://www.data.go.kr/data/15001643/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05090200085",
+          "name": "수완 구도일주유소",
+          "address": "광주광역시 광산구 풍영로101번안길 19-2 (흑석동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05102200074",
+          "name": "미래주유소",
+          "address": "광주광역시 남구 금화로 380 (주월동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220800099738",
+              "name": "미래주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 남구 금화로 380",
+              "phone": null,
+              "lat": "35.1414192526576",
+              "lng": "126.887425608805",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            },
+            {
+              "source_id": "MA010120220809608377",
+              "name": "미래에너지",
+              "branch": "",
+              "address": "전남광주통합특별시 남구 금화로 380",
+              "phone": null,
+              "lat": "35.1414192526576",
+              "lng": "126.887425608805",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05120200106",
+          "name": "플러스주유소",
+          "address": "광주광역시 북구 설죽로 408 (삼각동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220813960840",
+              "name": "플러스주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 설죽로 408",
+              "phone": null,
+              "lat": "35.1955930867464",
+              "lng": "126.900253019802",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05123200033",
+          "name": "차나라주유소",
+          "address": "광주광역시 북구 동문대로 138 (두암동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220811757221",
+              "name": "차나라주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 동문대로 138",
+              "phone": null,
+              "lat": "35.1749892976842",
+              "lng": "126.927250498622",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            },
+            {
+              "source_id": "MA0101202406A0561974",
+              "name": "차나라주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 동문대로 138",
+              "phone": null,
+              "lat": "35.1749892976842",
+              "lng": "126.927250498622",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05145200017",
+          "name": "부일주유소",
+          "address": "광주광역시 서구 상무대로 933 (쌍촌동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA0101202505A0020493",
+              "name": "부일주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 서구 상무대로 933",
+              "phone": null,
+              "lat": "35.1516255762899",
+              "lng": "126.863914943016",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05158200037",
+          "name": "영광주유소",
+          "address": "광주광역시 서구 풍서우로 128 (금호동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220810388384",
+              "name": "영광주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 서구 풍서우로 128",
+              "phone": null,
+              "lat": "35.1270900093169",
+              "lng": "126.84831069457",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05164200043",
+          "name": "대동주유소",
+          "address": "광주광역시 남구 대남대로 153 (봉선동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA0101202406A0532078",
+              "name": "유신산업",
+              "branch": "",
+              "address": "전남광주통합특별시 남구 대남대로 153",
+              "phone": null,
+              "lat": "35.133558891604",
+              "lng": "126.908239671047",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            },
+            {
+              "source_id": "MA0101202512A0036819",
+              "name": "대주에너지",
+              "branch": "",
+              "address": "전남광주통합특별시 남구 대남대로 153",
+              "phone": null,
+              "lat": "35.133558891604",
+              "lng": "126.908239671047",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05166200013",
+          "name": "우리셀프주유소",
+          "address": "광주광역시 서구 죽봉대로 24 (농성동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807626310",
+              "name": "우리셀프주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 서구 죽봉대로 24",
+              "phone": null,
+              "lat": "35.1555761501985",
+              "lng": "126.883740418033",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            },
+            {
+              "source_id": "MA0101202411A0034296",
+              "name": "우리셀프주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 서구 죽봉대로 24",
+              "phone": null,
+              "lat": "35.1555761501985",
+              "lng": "126.883740418033",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05171200003",
+          "name": "돌고개주유소",
+          "address": "광주광역시 서구 경열로 54 (농성동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA0101202412A0090586",
+              "name": "돌고개주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 서구 경열로 54",
+              "phone": null,
+              "lat": "35.1504280341408",
+              "lng": "126.892022466363",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05177200032",
+          "name": "아세아오일뱅크",
+          "address": "광주광역시 서구 내방로 264 (쌍촌동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807672779",
+              "name": "광원에너지",
+              "branch": "",
+              "address": "전남광주통합특별시 서구 내방로 264",
+              "phone": null,
+              "lat": "35.1575085643733",
+              "lng": "126.869480642069",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            },
+            {
+              "source_id": "MA0101202511A0018908",
+              "name": "더푸른",
+              "branch": "",
+              "address": "전남광주통합특별시 서구 내방로 264",
+              "phone": null,
+              "lat": "35.1575085643733",
+              "lng": "126.869480642069",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05179200017",
+          "name": "유한회사신상무",
+          "address": "광주광역시 서구 운천로 170 (쌍촌동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807669806",
+              "name": "신상무",
+              "branch": "",
+              "address": "전남광주통합특별시 서구 운천로 170",
+              "phone": null,
+              "lat": "35.1476424678991",
+              "lng": "126.85687622823",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            },
+            {
+              "source_id": "MA010120220807610555",
+              "name": "신상무주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 서구 운천로 170",
+              "phone": null,
+              "lat": "35.1476424678991",
+              "lng": "126.85687622823",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05181200076",
+          "name": "백일셀프오일뱅크",
+          "address": "광주광역시 서구 화정로 68 (쌍촌동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA0101202504A0020579",
+              "name": "안전에너지백일셀프주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 서구 화정로 68",
+              "phone": null,
+              "lat": "35.1443158265849",
+              "lng": "126.864168530832",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05196200003",
+          "name": "매월유통단지주유소",
+          "address": "광주광역시 서구 회재로 746 (매월동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807614668",
+              "name": "매월유통단지주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 서구 회재로 746",
+              "phone": null,
+              "lat": "35.1139770579327",
+              "lng": "126.849837827837",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            },
+            {
+              "source_id": "MA0101202406A0538547",
+              "name": "매월유통단지주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 서구 회재로 746",
+              "phone": null,
+              "lat": "35.1139770579327",
+              "lng": "126.849837827837",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05197200015",
+          "name": "운천주유소",
+          "address": "광주광역시 서구 상무대로 758 (마륵동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807600063",
+              "name": "운천주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 서구 상무대로 758",
+              "phone": null,
+              "lat": "35.1452682576561",
+              "lng": "126.846543122787",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            },
+            {
+              "source_id": "MA0101202411A0009391",
+              "name": "운천주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 서구 상무대로 758",
+              "phone": null,
+              "lat": "35.1452682576561",
+              "lng": "126.846543122787",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05203200080",
+          "name": "예향주유소",
+          "address": "광주광역시 서구 풍암신흥로 2 (풍암동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807612215",
+              "name": "예향주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 서구 풍암신흥로 2",
+              "phone": null,
+              "lat": "35.1190504104229",
+              "lng": "126.863980106338",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05214200012",
+          "name": "대광주유소",
+          "address": "광주광역시 서구 하남대로 556 (동천동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807515128",
+              "name": "대광주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 서구 하남대로 556",
+              "phone": null,
+              "lat": "35.1731467545794",
+              "lng": "126.853395593856",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05216200026",
+          "name": "상록 주유소",
+          "address": "광주광역시 서구 상무대로 1180 (농성동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220808353836",
+              "name": "상록주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 서구 상무대로 1180",
+              "phone": null,
+              "lat": "35.1543566999995",
+              "lng": "126.890612480496",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05219200013",
+          "name": "한강주유소",
+          "address": "광주광역시 서구 천변좌로 6 (광천동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807611091",
+              "name": "한강주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 서구 천변좌로 6",
+              "phone": null,
+              "lat": "35.1671052068377",
+              "lng": "126.884448472548",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05232200037",
+          "name": "주식회사 일프로주유소",
+          "address": "광주광역시 서구 운천로 206 (치평동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220814375089",
+              "name": "일프로주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 서구 운천로 206",
+              "phone": null,
+              "lat": "35.1510301696521",
+              "lng": "126.855685049019",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            },
+            {
+              "source_id": "MA010120220813416693",
+              "name": "현대오일뱅크직영베스트현대주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 서구 운천로 206",
+              "phone": null,
+              "lat": "35.1510301696521",
+              "lng": "126.855685049019",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05250200009",
+          "name": "성실주유소",
+          "address": "광주광역시 북구 우치로 347 (삼각동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807520185",
+              "name": "성실주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 우치로 347",
+              "phone": null,
+              "lat": "35.195541813842",
+              "lng": "126.903722921283",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05272200029",
+          "name": "서광주역주유소",
+          "address": "광주광역시 서구 풍서우로 152 (매월동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807609422",
+              "name": "서광주역주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 서구 풍서우로 152",
+              "phone": null,
+              "lat": "35.1277624126559",
+              "lng": "126.845445915185",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05273200024",
+          "name": "(유)매월주유소",
+          "address": "광주광역시 서구 회재로 845 (매월동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220806754857",
+              "name": "매월주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 서구 회재로 845",
+              "phone": null,
+              "lat": "35.1198099051693",
+              "lng": "126.85816457151",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05290200001",
+          "name": "경훈에너지",
+          "address": "광주광역시 북구 서하로 237 (오치동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220813723718",
+              "name": "경훈에너지",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 서하로 237",
+              "phone": null,
+              "lat": "35.1872966630339",
+              "lng": "126.90658728971",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05300200021",
+          "name": "주식회사 스피드주유소",
+          "address": "광주광역시 북구 설죽로 226 (용봉동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220809375139",
+              "name": "스피드주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 설죽로 226",
+              "phone": null,
+              "lat": "35.1797636924693",
+              "lng": "126.898329188502",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            },
+            {
+              "source_id": "MA010120220807530419",
+              "name": "스피드주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 설죽로 226",
+              "phone": null,
+              "lat": "35.1797636924693",
+              "lng": "126.898329188502",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05310200130",
+          "name": "호대아름주유소",
+          "address": "광주광역시 광산구 어등대로 473 (선암동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220809470466",
+              "name": "호대아름주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 광산구 어등대로 473",
+              "phone": null,
+              "lat": "35.1516275778155",
+              "lng": "126.774614731755",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05322200024",
+          "name": "유한회사 우리주유소",
+          "address": "광주광역시 광산구 목련로 225 (운남동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220814148454",
+              "name": "우리주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 광산구 목련로 225",
+              "phone": null,
+              "lat": "35.1725551861619",
+              "lng": "126.822220835184",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05323200011",
+          "name": "빛고을충전소",
+          "address": "광주광역시 광산구 하남대로 378 (신가동)",
+          "fuel_kind": "lpg",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "lpg_locations.json:1271",
+              "name": "빛고을LPG충전소",
+              "address": "전남광주통합특별시 광산구 하남대로 378 (신가동) ",
+              "phone": null,
+              "lat": "35.1774468",
+              "lng": "126.8353052",
+              "fuel_kind": "lpg",
+              "source_date": "2026-09-11",
+              "source_url": "https://www.data.go.kr/data/15001643/fileData.do"
+            },
+            {
+              "source_id": "MA010120220807653150",
+              "name": "빛고을충전소",
+              "branch": "",
+              "address": "전남광주통합특별시 광산구 하남대로 378",
+              "phone": null,
+              "lat": "35.1776210694504",
+              "lng": "126.83515296387",
+              "fuel_kind": "lpg",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05323200014",
+          "name": "이든랜드(주)반디석유 운남점",
+          "address": "광주광역시 광산구 하남대로 364 (신가동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA0101202409A0187726",
+              "name": "이든랜드반디석유운남점",
+              "branch": "",
+              "address": "전남광주통합특별시 광산구 하남대로 364",
+              "phone": null,
+              "lat": "35.1779791924156",
+              "lng": "126.833384761923",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            },
+            {
+              "source_id": "MA010120220807015863",
+              "name": "반디석유운남점",
+              "branch": "",
+              "address": "전남광주통합특별시 광산구 하남대로 364",
+              "phone": null,
+              "lat": "35.1779791924156",
+              "lng": "126.833384761923",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05323200015",
+          "name": "주식회사 반디엘피지 신가점",
+          "address": "광주광역시 광산구 하남대로 361 (신가동)",
+          "fuel_kind": "lpg",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "lpg_locations.json:1513",
+              "name": "(주)반디엘피지",
+              "address": "전남광주통합특별시 광산구 하남대로 361 (신가동) ",
+              "phone": null,
+              "lat": "35.1790558",
+              "lng": "126.8333843",
+              "fuel_kind": "lpg",
+              "source_date": "2026-09-11",
+              "source_url": "https://www.data.go.kr/data/15001643/fileData.do"
+            },
+            {
+              "source_id": "MA010120220807577870",
+              "name": "반디이원(e1)주",
+              "branch": "",
+              "address": "전남광주통합특별시 광산구 하남대로 361",
+              "phone": null,
+              "lat": "35.1787903195606",
+              "lng": "126.833317237349",
+              "fuel_kind": "lpg",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05380200054",
+          "name": "(주)대창석유직영 지산주유소",
+          "address": "광주광역시 동구 필문대로 219 (지산동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05383200013",
+          "name": "주남셀프주유소",
+          "address": "광주광역시 동구 남문로 350 (월남동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220805304770",
+              "name": "현대오일뱅크주남주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 동구 남문로 350",
+              "phone": null,
+              "lat": "35.1035900986557",
+              "lng": "126.939510586423",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            },
+            {
+              "source_id": "MA0101202508A0032140",
+              "name": "주남셀프주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 동구 남문로 350",
+              "phone": null,
+              "lat": "35.1035900986557",
+              "lng": "126.939510586423",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05398200001",
+          "name": "매곡주유소",
+          "address": "광주광역시 북구 서하로 86 (매곡동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807516522",
+              "name": "매곡주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 서하로 86",
+              "phone": null,
+              "lat": "35.1870752902461",
+              "lng": "126.889854993744",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05404200002",
+          "name": "한일주유소",
+          "address": "광주광역시 북구 하서로 225 (양산동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807577757",
+              "name": "한일주유소주",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 하서로 225",
+              "phone": null,
+              "lat": "35.1953999604205",
+              "lng": "126.876524434659",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05432200024",
+          "name": "효천주유소",
+          "address": "광주광역시 남구 서문대로 321 (임암동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807455627",
+              "name": "효천주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 남구 서문대로 321",
+              "phone": null,
+              "lat": "35.0970253727921",
+              "lng": "126.876475518669",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05432200041",
+          "name": "주식회사 우성고속관광 효천산업주유소",
+          "address": "광주광역시 남구 서문대로 329 (임암동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA0101202603A0017996",
+              "name": "우성고속관광효천산업주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 남구 서문대로 329",
+              "phone": null,
+              "lat": "35.0977828445726",
+              "lng": "126.876792430118",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05441200001",
+          "name": "독립로주유소",
+          "address": "광주광역시 남구 독립로 143 (월산동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220808913918",
+              "name": "독립로주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 남구 독립로 143",
+              "phone": null,
+              "lat": "35.1464536471676",
+              "lng": "126.90342960295",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05441200013",
+          "name": "서양새마을금고 주유소",
+          "address": "광주광역시 남구 독립로 140 (월산동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807504250",
+              "name": "서양새마을금고주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 남구 독립로 140",
+              "phone": null,
+              "lat": "35.1457689187241",
+              "lng": "126.903814495265",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05443200031",
+          "name": "드림에너지",
+          "address": "광주광역시 남구 대남대로 336 (월산동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807506123",
+              "name": "드림에너지주",
+              "branch": "",
+              "address": "전남광주통합특별시 남구 대남대로 336",
+              "phone": null,
+              "lat": "35.1418396623503",
+              "lng": "126.893833428079",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05444200037",
+          "name": "무지개셀프주유소",
+          "address": "광주광역시 남구 독립로 24 (백운동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807861024",
+              "name": "무지개Self주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 남구 독립로 24",
+              "phone": null,
+              "lat": "35.1356991035839",
+              "lng": "126.901818379455",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05448200003",
+          "name": "신성에너지송암공단주유소",
+          "address": "광주광역시 남구 송암로 49 (송하동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807459822",
+              "name": "송암공단주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 남구 송암로 49",
+              "phone": null,
+              "lat": "35.1093658423385",
+              "lng": "126.877213756762",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            },
+            {
+              "source_id": "MA0101202406A0528625",
+              "name": "신성에너지송암공단주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 남구 송암로 49",
+              "phone": null,
+              "lat": "35.1093658423385",
+              "lng": "126.877213756762",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05448200037",
+          "name": "반디가스 송암점",
+          "address": "광주광역시 남구 송암로 28 (송하동)",
+          "fuel_kind": "lpg",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "lpg_locations.json:1043",
+              "name": "(주)반디가스",
+              "address": "전남광주통합특별시 남구 송암로 28 (송하동) ",
+              "phone": null,
+              "lat": "35.1085275",
+              "lng": "126.8797192",
+              "fuel_kind": "lpg",
+              "source_date": "2026-09-11",
+              "source_url": "https://www.data.go.kr/data/15001643/fileData.do"
+            },
+            {
+              "source_id": "MA010120220807506574",
+              "name": "반디가스",
+              "branch": "",
+              "address": "전남광주통합특별시 남구 송암로 28",
+              "phone": null,
+              "lat": "35.1086291865026",
+              "lng": "126.879671879435",
+              "fuel_kind": "lpg",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05448200038",
+          "name": "송암b주유소",
+          "address": "광주광역시 남구 서문대로 483 (송하동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807505974",
+              "name": "송암주유소주",
+              "branch": "",
+              "address": "전남광주통합특별시 남구 서문대로 483",
+              "phone": null,
+              "lat": "35.1084637958552",
+              "lng": "126.885737873244",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05448200048",
+          "name": "송암a주유소",
+          "address": "광주광역시 남구 서문대로 566 (송하동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807611859",
+              "name": "송암주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 남구 서문대로 566",
+              "phone": null,
+              "lat": "35.1107074214725",
+              "lng": "126.894839102386",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05471200001",
+          "name": "수완현대주유소",
+          "address": "광주광역시 광산구 임방울대로 472 (수완동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807668814",
+              "name": "수완현대주유소유",
+              "branch": "",
+              "address": "전남광주통합특별시 광산구 임방울대로 472",
+              "phone": null,
+              "lat": "35.2020534923229",
+              "lng": "126.820179930913",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05471200010",
+          "name": "수완행복주유소",
+          "address": "광주광역시 광산구 왕버들로 113 (수완동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807611900",
+              "name": "수완행복주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 광산구 왕버들로 113",
+              "phone": null,
+              "lat": "35.2021930292565",
+              "lng": "126.823122634564",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05484200036",
+          "name": "온누리주유소",
+          "address": "광주광역시 남구 금화로 407 (월산동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807503319",
+              "name": "온누리주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 남구 금화로 407",
+              "phone": null,
+              "lat": "35.1431248930486",
+              "lng": "126.889672818993",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05484200040",
+          "name": "(주)대창석유직영 월드컵주유소",
+          "address": "광주광역시 남구 금화로 412 (월산동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05503200013",
+          "name": "(주)대창석유 직영 운암주유소",
+          "address": "광주광역시 북구 북문대로 34 (운암동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05528200007",
+          "name": "SK오치한전주유소",
+          "address": "광주광역시 북구 천지인로 91 (오치동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220814246620",
+              "name": "케이아이엠",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 천지인로 91",
+              "phone": null,
+              "lat": "35.1843057069134",
+              "lng": "126.908610846763",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05532200007",
+          "name": "동광주LPG충전소",
+          "address": "광주광역시 북구 동문대로 560 (망월동)",
+          "fuel_kind": "lpg",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "lpg_locations.json:98",
+              "name": "동광주LPG충전소",
+              "address": "전남광주통합특별시 북구 동문대로 560 (망월동) ",
+              "phone": null,
+              "lat": "35.2085605",
+              "lng": "126.9434511",
+              "fuel_kind": "lpg",
+              "source_date": "2026-09-11",
+              "source_url": "https://www.data.go.kr/data/15001643/fileData.do"
+            },
+            {
+              "source_id": "MA0101202406A0411800",
+              "name": "동광주LPG충전소",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 동문대로 560",
+              "phone": null,
+              "lat": "35.2084561975521",
+              "lng": "126.943375540942",
+              "fuel_kind": "lpg",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05532200009",
+          "name": "S-OIL 망월주유소",
+          "address": "광주광역시 북구 동문대로 603 (망월동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807529302",
+              "name": "망월주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 동문대로 603",
+              "phone": null,
+              "lat": "35.2115038526939",
+              "lng": "126.945745678423",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05535200020",
+          "name": "행복가득주유소",
+          "address": "광주광역시 북구 우치로 952 (용전동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220809332058",
+              "name": "행복가득주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 우치로 952",
+              "phone": null,
+              "lat": "35.2448116858656",
+              "lng": "126.885404093047",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05541200006",
+          "name": "북광주 ic주유소",
+          "address": "광주광역시 북구 하서로 678 (지야동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220806877640",
+              "name": "북광주IC주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 하서로 678",
+              "phone": null,
+              "lat": "35.2328894052117",
+              "lng": "126.88812330243",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05541200007",
+          "name": "(주)스피드에너지주유소",
+          "address": "광주광역시 북구 빛고을대로 849 (지야동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220806694602",
+              "name": "오일패밀리",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 빛고을대로 849",
+              "phone": null,
+              "lat": "35.2366639501875",
+              "lng": "126.876681652815",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            },
+            {
+              "source_id": "MA0101202504A0046758",
+              "name": "스피드에너지",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 빛고을대로 849",
+              "phone": null,
+              "lat": "35.2366639501875",
+              "lng": "126.876681652815",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05542200012",
+          "name": "동부에너지주유소",
+          "address": "광주광역시 북구 하서로 571 (본촌동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807534232",
+              "name": "동부에너지주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 하서로 571",
+              "phone": null,
+              "lat": "35.2247983691606",
+              "lng": "126.881873277683",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05542200017",
+          "name": "본촌주유소",
+          "address": "광주광역시 북구 하서로 530 (본촌동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807577663",
+              "name": "케이피유통본촌주유소주",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 하서로 530",
+              "phone": null,
+              "lat": "35.2215251382348",
+              "lng": "126.880516005001",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05547200017",
+          "name": "미래LPG충전소",
+          "address": "광주광역시 북구 임방울대로 983 (신용동)",
+          "fuel_kind": "lpg",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "lpg_locations.json:96",
+              "name": "미래LPG충전소",
+              "address": "전남광주통합특별시 북구 임방울대로 983 (신용동) ",
+              "phone": null,
+              "lat": "35.2147238",
+              "lng": "126.865504",
+              "fuel_kind": "lpg",
+              "source_date": "2026-09-11",
+              "source_url": "https://www.data.go.kr/data/15001643/fileData.do"
+            },
+            {
+              "source_id": "MA0101202406A0238948",
+              "name": "미래LPG충전소",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 임방울대로 983",
+              "phone": null,
+              "lat": "35.2146951932095",
+              "lng": "126.86551214687",
+              "fuel_kind": "lpg",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05552200034",
+          "name": "어등산주유소",
+          "address": "광주광역시 광산구 무진대로 68 (소촌동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807649952",
+              "name": "어등산주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 광산구 무진대로 68",
+              "phone": null,
+              "lat": "35.159971989652",
+              "lng": "126.788410121501",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05552200035",
+          "name": "주식회사 무진대로주유소",
+          "address": "광주광역시 광산구 무진대로 80 (소촌동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807660042",
+              "name": "무진대로주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 광산구 무진대로 80",
+              "phone": null,
+              "lat": "35.1599744160282",
+              "lng": "126.789804029227",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05553200004",
+          "name": "유한회사 모우리주유소",
+          "address": "광주광역시 광산구 소촌로 68 (소촌동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220805193560",
+              "name": "모우리주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 광산구 소촌로 68",
+              "phone": null,
+              "lat": "35.1505075599011",
+              "lng": "126.793537734469",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05562200034",
+          "name": "다올주유소",
+          "address": "전남광주통합특별시 광산구 북문대로 393 (신창동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA0101202507A0037720",
+              "name": "다올에너지산업",
+              "branch": "",
+              "address": "전남광주통합특별시 광산구 북문대로 393",
+              "phone": null,
+              "lat": "35.1921257513413",
+              "lng": "126.850495719104",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05577200009",
+          "name": "동부충전소",
+          "address": "광주광역시 동구 남문로 615 (용산동)",
+          "fuel_kind": "lpg",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "lpg_locations.json:1514",
+              "name": "동부충전소",
+              "address": "전남광주통합특별시 동구 남문로 615 (용산동) ",
+              "phone": null,
+              "lat": "35.1257903",
+              "lng": "126.930903",
+              "fuel_kind": "lpg",
+              "source_date": "2026-09-11",
+              "source_url": "https://www.data.go.kr/data/15001643/fileData.do"
+            },
+            {
+              "source_id": "MA0101202406A0214778",
+              "name": "동부충전소",
+              "branch": "",
+              "address": "전남광주통합특별시 동구 남문로 615",
+              "phone": null,
+              "lat": "35.1257320096285",
+              "lng": "126.930805086751",
+              "fuel_kind": "lpg",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05596200020",
+          "name": "에코주유소",
+          "address": "광주광역시 북구 무등로 213 (신안동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807582314",
+              "name": "에코주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 무등로 213",
+              "phone": null,
+              "lat": "35.1652589975815",
+              "lng": "126.907249128898",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05598200003",
+          "name": "도시에너지 주식회사",
+          "address": "광주광역시 북구 무등로137번길 8 (신안동)",
+          "fuel_kind": "lpg",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "lpg_locations.json:1040",
+              "name": "(주)도시에너지",
+              "address": "전남광주통합특별시 북구 무등로137번길 8 (신안동) ",
+              "phone": null,
+              "lat": "35.1673413",
+              "lng": "126.8991882",
+              "fuel_kind": "lpg",
+              "source_date": "2026-09-11",
+              "source_url": "https://www.data.go.kr/data/15001643/fileData.do"
+            },
+            {
+              "source_id": "MA010120220807579349",
+              "name": "도시에너지신안영업소",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 무등로137번길 8",
+              "phone": null,
+              "lat": "35.1673077017244",
+              "lng": "126.899244784055",
+              "fuel_kind": "lpg",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05598200008",
+          "name": "전대주유소",
+          "address": "광주광역시 북구 무등로 165 (신안동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807543435",
+              "name": "전대주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 무등로 165",
+              "phone": null,
+              "lat": "35.1665080021039",
+              "lng": "126.902308241343",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05610200012",
+          "name": "주식회사 아승클린",
+          "address": "광주광역시 북구 우치로 170 (용봉동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220811640993",
+              "name": "아승클린",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 우치로 170",
+              "phone": null,
+              "lat": "35.182233846092",
+              "lng": "126.910292909175",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05633200023",
+          "name": "신용주유소",
+          "address": "광주광역시 북구 임방울대로 959 (신용동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220801716399",
+              "name": "신용주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 임방울대로 959",
+              "phone": null,
+              "lat": "35.2153141298957",
+              "lng": "126.86284221829",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05633200029",
+          "name": "빛고을로셀프주유소",
+          "address": "광주광역시 북구 빛고을대로 657 (용두동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA0101202406A0586898",
+              "name": "빛고을로셀프주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 빛고을대로 657",
+              "phone": null,
+              "lat": "35.2205481560015",
+              "lng": "126.868424200319",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05633200037",
+          "name": "광주주유소",
+          "address": "광주광역시 북구 빛고을대로 825 (지야동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05633200078",
+          "name": "첨단용두주유소",
+          "address": "광주광역시 북구 빛고을대로 663 (용두동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05633200089",
+          "name": "신용 구도일주유소",
+          "address": "광주광역시 북구 임방울대로 953 (신용동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807669900",
+              "name": "신용무들",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 임방울대로 953",
+              "phone": null,
+              "lat": "35.2154666983396",
+              "lng": "126.862259853129",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            },
+            {
+              "source_id": "MA010120220812700102",
+              "name": "신용구도일주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 임방울대로 953",
+              "phone": null,
+              "lat": "35.2154666983396",
+              "lng": "126.862259853129",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05634200003",
+          "name": "용전주유소",
+          "address": "광주광역시 북구 우치로 809 (용전동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA0101202309A0025265",
+              "name": "용전주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 우치로 809",
+              "phone": null,
+              "lat": "35.2344092171303",
+              "lng": "126.894295199654",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            },
+            {
+              "source_id": "MA010120220807537202",
+              "name": "용전주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 우치로 809",
+              "phone": null,
+              "lat": "35.2344092171303",
+              "lng": "126.894295199654",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05634200014",
+          "name": "천보주유소",
+          "address": "광주광역시 북구 우치로 812 (용전동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220810102959",
+              "name": "천보주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 우치로 812",
+              "phone": null,
+              "lat": "35.2349862421372",
+              "lng": "126.894481209941",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05635200076",
+          "name": "첨단북광주IC주유소",
+          "address": "광주광역시 북구 삼소로 318 (월출동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220814015277",
+              "name": "첨단북광주IC주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 삼소로 318",
+              "phone": null,
+              "lat": "35.2402519302353",
+              "lng": "126.86870000689",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05635200099",
+          "name": "테크노파크주유소",
+          "address": "광주광역시 북구 삼소로 307 (월출동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807455884",
+              "name": "테크노파크주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 삼소로 307",
+              "phone": null,
+              "lat": "35.2404846016579",
+              "lng": "126.867161514531",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05647200003",
+          "name": "장덕셀프주유소",
+          "address": "광주광역시 광산구 왕버들로 59 (장덕동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA0101202406A0310637",
+              "name": "장덕셀프주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 광산구 왕버들로 59",
+              "phone": null,
+              "lat": "35.202635078892",
+              "lng": "126.817312492067",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            },
+            {
+              "source_id": "MA010120220807901023",
+              "name": "현대오일뱅크직영장덕셀프주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 광산구 왕버들로 59",
+              "phone": null,
+              "lat": "35.202635078892",
+              "lng": "126.817312492067",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            },
+            {
+              "source_id": "MA010120220807919407",
+              "name": "장덕주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 광산구 왕버들로 59",
+              "phone": null,
+              "lat": "35.202635078892",
+              "lng": "126.817312492067",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05653200002",
+          "name": "동림주유소(현대오일뱅크)",
+          "address": "광주광역시 북구 북문대로 257 (동림동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220806624445",
+              "name": "오씨동림주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 북문대로 257",
+              "phone": null,
+              "lat": "35.1872294956629",
+              "lng": "126.864184992687",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            },
+            {
+              "source_id": "MA010120220809928351",
+              "name": "오씨",
+              "branch": "",
+              "address": "전남광주통합특별시 북구 북문대로 257",
+              "phone": null,
+              "lat": "35.1872294956629",
+              "lng": "126.864184992687",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05662200001",
+          "name": "(주)아승SK셀프주유소",
+          "address": "광주광역시 동구 필문대로153번길 3 (산수동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220812683262",
+              "name": "아승",
+              "branch": "",
+              "address": "전남광주통합특별시 동구 필문대로153번길 3",
+              "phone": null,
+              "lat": "35.1571811492096",
+              "lng": "126.931886977537",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05670200004",
+          "name": "(주)대창석유 직영 동명주유소",
+          "address": "광주광역시 동구 필문대로 237 (동명동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05694200015",
+          "name": "주식회사 아프리카주유소",
+          "address": "광주광역시 서구 천변좌하로 168 (치평동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220800172772",
+              "name": "아프리카주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 서구 천변좌하로 168",
+              "phone": null,
+              "lat": "35.1541696699432",
+              "lng": "126.836572147012",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05709200006",
+          "name": "웰컴신가주유소",
+          "address": "광주광역시 광산구 목련로 375 (신가동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807667303",
+              "name": "웰컴신가주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 광산구 목련로 375",
+              "phone": null,
+              "lat": "35.1821594824836",
+              "lng": "126.831938022506",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            },
+            {
+              "source_id": "MA0101202406A0057152",
+              "name": "웰컴신가주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 광산구 목련로 375",
+              "phone": null,
+              "lat": "35.1821594824836",
+              "lng": "126.831938022506",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05795200004",
+          "name": "한백석유첨단주유소",
+          "address": "광주광역시 광산구 첨단과기로 53 (비아동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807610298",
+              "name": "한백석유첨단주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 광산구 첨단과기로 53",
+              "phone": null,
+              "lat": "35.2222429957794",
+              "lng": "126.832217902084",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05796200012",
+          "name": "대근주유소",
+          "address": "전남광주통합특별시 광산구 북문대로 639 (수완동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA0101202411A0093691",
+              "name": "대근주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 광산구 북문대로 639",
+              "phone": null,
+              "lat": "35.2080380929873",
+              "lng": "126.832488735841",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05796200014",
+          "name": "산월SELF주유소",
+          "address": "광주광역시 광산구 북문대로 579 (수완동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220813491561",
+              "name": "산월self주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 광산구 북문대로 579",
+              "phone": null,
+              "lat": "35.2043035066503",
+              "lng": "126.836900055498",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:99001200884",
+          "name": "늘푸른 주유소",
+          "address": "광주광역시 남구 독립로 69 (백운동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA0101202209A0071227",
+              "name": "늘푸른주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 남구 독립로 69",
+              "phone": null,
+              "lat": "35.1399805623757",
+              "lng": "126.901802265903",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:05443200005",
+          "name": "새론주유소",
+          "address": "광주광역시 남구 대남대로 347 (월산동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA0106202604A1145725",
+              "name": "한영광주",
+              "branch": "남지점",
+              "address": "전남광주통합특별시 남구 대남대로 347",
+              "phone": null,
+              "lat": "35.1425234578021",
+              "lng": "126.892427947997",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:kb:000000084182837",
+          "name": "(주)동행",
+          "address": "전남광주통합특별시 광산구 북문대로 364-5",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220809878430",
+              "name": "동행",
+              "branch": "",
+              "address": "전남광주통합특별시 광산구 북문대로 364-5",
+              "phone": null,
+              "lat": "35.1912457839957",
+              "lng": "126.853242310473",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        }
+      ]
+    },
+    {
+      "region": "전남",
+      "map_records": 28,
+      "fuel_kinds": {
+        "liquid": 27,
+        "lpg": 1
+      },
+      "operator_source_records": 22,
+      "bank_only_source_records": 6,
+      "alley_market_name_records": 20,
+      "same_address_and_kind_map_groups": 28,
+      "physical_source_rows": 1557,
+      "exact_name_100m_controls_pass": 21,
+      "exact_name_100m_controls_fail": 7,
+      "same_address_and_kind_controls_hit": 26,
+      "original_operator_checked_at": "2026-10-25T10:51:11+09:00",
+      "original_operator_keyword_queries": 14,
+      "original_operator_raw_rows_including_nonfuel": 36,
+      "original_operator_street_address_parseable": 36,
+      "controls": [
+        {
+          "station_id": "onnuri:14077200010",
+          "name": "순천주유소",
+          "address": "전라남도 순천시 강남로 45(장천동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "station_locations.json:4632",
+              "name": "순천주유소",
+              "address": "전라남도 순천시 강남로 45 (장천동)",
+              "phone": "061-744-4887",
+              "lat": "34.949742",
+              "lng": "127.491117",
+              "fuel_kind": "liquid",
+              "source_date": "2025-12-01",
+              "source_url": "https://www.data.go.kr/data/15129441/standard.do"
+            },
+            {
+              "source_id": "MA010120220807840885",
+              "name": "순천주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 순천시 강남로 45",
+              "phone": null,
+              "lat": "34.9497741641493",
+              "lng": "127.491196476659",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:14077200045",
+          "name": "호남주유소",
+          "address": "전라남도 순천시 팔마로 9(장천동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "station_locations.json:4566",
+              "name": "호남주유소",
+              "address": "전라남도 순천시 팔마로 9 (장천동)",
+              "phone": "061-744-3677",
+              "lat": "34.947028",
+              "lng": "127.489429",
+              "fuel_kind": "liquid",
+              "source_date": "2025-12-01",
+              "source_url": "https://www.data.go.kr/data/15129441/standard.do"
+            },
+            {
+              "source_id": "MA0101202406A0144191",
+              "name": "호남주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 순천시 팔마로 9",
+              "phone": null,
+              "lat": "34.9470230784057",
+              "lng": "127.489428526916",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:14215200029",
+          "name": "대창주유소",
+          "address": "전라남도 함평군 함평읍 중앙길 57",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "station_locations.json:4287",
+              "name": "대창주유소",
+              "address": "전라남도 함평군 함평읍 중앙길 57",
+              "phone": "061-322-2140",
+              "lat": "35.06238369",
+              "lng": "126.5226356",
+              "fuel_kind": "liquid",
+              "source_date": "2025-07-02",
+              "source_url": "https://www.data.go.kr/data/15129441/standard.do"
+            },
+            {
+              "source_id": "MA010120220807742043",
+              "name": "대창주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 함평군 함평읍 중앙길 57",
+              "phone": null,
+              "lat": "35.0623835942896",
+              "lng": "126.522633361389",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:14262200012",
+          "name": "화산주유소",
+          "address": "전라남도 해남군 화산면 해남화산로 1045",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "station_locations.json:2500",
+              "name": "화산주유소",
+              "address": "전남광주통합특별시 해남군 화산면 해남화산로 1045",
+              "phone": "061-532-6664",
+              "lat": "34.49269425",
+              "lng": "126.5147809",
+              "fuel_kind": "liquid",
+              "source_date": "2026-07-01",
+              "source_url": "https://www.data.go.kr/data/15129441/standard.do"
+            },
+            {
+              "source_id": "MA010120220807811979",
+              "name": "화산주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 해남군 화산면 해남화산로 1045",
+              "phone": null,
+              "lat": "34.4927004921398",
+              "lng": "126.514787318713",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:14266200009",
+          "name": "부원주유소",
+          "address": "전라남도 담양군 담양읍 죽녹원로 199",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807539090",
+              "name": "부원주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 담양군 담양읍 죽녹원로 199",
+              "phone": null,
+              "lat": "35.3312679053853",
+              "lng": "126.98860520888",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:14270200092",
+          "name": "용앙주유소",
+          "address": "전라남도 영암군 삼호읍 삼호중앙로 241",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807722913",
+              "name": "용앙주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 영암군 삼호읍 삼호중앙로 241",
+              "phone": null,
+              "lat": "34.7461775255411",
+              "lng": "126.476660474872",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:14273200009",
+          "name": "미래 주유소",
+          "address": "전라남도 구례군 토지면 섬진강대로 5081",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "station_locations.json:4496",
+              "name": "미래주유소",
+              "address": "전라남도 구례군 토지면 섬진강대로 5081",
+              "phone": "061-782-5189",
+              "lat": "35.19896448",
+              "lng": "127.5224969",
+              "fuel_kind": "liquid",
+              "source_date": "2024-08-12",
+              "source_url": "https://www.data.go.kr/data/15129441/standard.do"
+            },
+            {
+              "source_id": "MA010120220807870982",
+              "name": "미래주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 구례군 토지면 섬진강대로 5081",
+              "phone": null,
+              "lat": "35.1989686421532",
+              "lng": "127.522494023105",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:14280200024",
+          "name": "주식회사 혁신에너지",
+          "address": "전라남도 나주시 그린로 116 (빛가람동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807764996",
+              "name": "혁신에너지",
+              "branch": "",
+              "address": "전남광주통합특별시 나주시 그린로 116",
+              "phone": null,
+              "lat": "35.011951712444",
+              "lng": "126.779665776366",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:14283200040",
+          "name": "진남주유소",
+          "address": "전남광주통합특별시 장흥군 장흥읍 칠거리예양로 37",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807815247",
+              "name": "진남주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 장흥군 장흥읍 칠거리예양로 37",
+              "phone": null,
+              "lat": "34.6755985467784",
+              "lng": "126.901229717406",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:14499200028",
+          "name": "대나무주유소",
+          "address": "전라남도 담양군 담양읍 죽향대로 1179",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807533538",
+              "name": "대나무주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 담양군 담양읍 죽향대로 1179",
+              "phone": null,
+              "lat": "35.3111671969697",
+              "lng": "126.981196649484",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:14499200032",
+          "name": "(주)터미널주유소",
+          "address": "전라남도 담양군 담양읍 죽향문화로 98",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807577934",
+              "name": "터미널주유소주",
+              "branch": "",
+              "address": "전남광주통합특별시 담양군 담양읍 죽향문화로 98",
+              "phone": null,
+              "lat": "35.314284370684",
+              "lng": "126.973454368756",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:14500200210",
+          "name": "장성농협주유소",
+          "address": "전라남도 장성군 장성읍 뱃나드리로 245",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220808842825",
+              "name": "장성농협주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 장성군 장성읍 뱃나드리로 245",
+              "phone": null,
+              "lat": "35.2921931828988",
+              "lng": "126.779711530487",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:14502200004",
+          "name": "공항에너지",
+          "address": "전라남도 무안군 망운면 청운로 767",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "station_locations.json:2570",
+              "name": "공항에너지",
+              "address": "전남광주통합특별시 무안군 망운면 청운로 767",
+              "phone": "061-454-8260",
+              "lat": "34.9702620096",
+              "lng": "126.3853667873",
+              "fuel_kind": "liquid",
+              "source_date": "2026-07-29",
+              "source_url": "https://www.data.go.kr/data/15129441/standard.do"
+            },
+            {
+              "source_id": "MA0101202212A0090887",
+              "name": "공항에너지",
+              "branch": "",
+              "address": "전남광주통합특별시 무안군 망운면 청운로 767",
+              "phone": null,
+              "lat": "34.9703771845017",
+              "lng": "126.385501769027",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:14512200035",
+          "name": "남평주유소",
+          "address": "전라남도 나주시 남평읍 남평1로 36",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807496308",
+              "name": "남평주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 나주시 남평읍 남평1로 36",
+              "phone": null,
+              "lat": "35.0469499452068",
+              "lng": "126.841794967919",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:14512200050",
+          "name": "광남주유소",
+          "address": "전남광주통합특별시 나주시 남평읍 남평1로 54",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807741317",
+              "name": "광남주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 나주시 남평읍 남평1로 54",
+              "phone": null,
+              "lat": "35.0472136457652",
+              "lng": "126.84357007785",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:18800200009",
+          "name": "광주주유소",
+          "address": "전남광주통합특별시 보성군 보성읍 송재로 279",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807849360",
+              "name": "광주주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 보성군 보성읍 송재로 279",
+              "phone": null,
+              "lat": "34.7768899601977",
+              "lng": "127.089113185852",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:18800200044",
+          "name": "다향에너지 주식회사",
+          "address": "전남광주통합특별시 보성군 보성읍 용문길 11",
+          "fuel_kind": "lpg",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "lpg_locations.json:1302",
+              "name": "다향에너지 주식회사",
+              "address": "전남광주통합특별시 보성군 보성읍 용문길 11 ",
+              "phone": null,
+              "lat": "34.771906",
+              "lng": "127.093523",
+              "fuel_kind": "lpg",
+              "source_date": "2026-09-11",
+              "source_url": "https://www.data.go.kr/data/15001643/fileData.do"
+            },
+            {
+              "source_id": "MA0101202604A0016728",
+              "name": "다향에너지",
+              "branch": "",
+              "address": "전남광주통합특별시 보성군 보성읍 용문길 11",
+              "phone": null,
+              "lat": "34.7719199072915",
+              "lng": "127.093444707314",
+              "fuel_kind": "lpg",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:18802200007",
+          "name": "남고문 self주유소",
+          "address": "전남광주통합특별시 나주시 남고문로 72 (남외동)",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:18804200010",
+          "name": "백제주유소",
+          "address": "전남광주통합특별시 나주시 세지면 동창로 154",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA0101202305A0114565",
+              "name": "백제주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 나주시 세지면 동창로 154",
+              "phone": null,
+              "lat": "34.9222110757088",
+              "lng": "126.747905819259",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:18806200009",
+          "name": "부건주유소",
+          "address": "전남광주통합특별시 나주시 금천면 영산로 5703",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA0101202510A0015685",
+              "name": "부건주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 나주시 금천면 영산로 5703",
+              "phone": null,
+              "lat": "35.0355696110884",
+              "lng": "126.752544544107",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:18809200006",
+          "name": "재봉주유소",
+          "address": "전남광주통합특별시 장성군 장성읍 단풍로 450",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807541760",
+              "name": "재봉주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 장성군 장성읍 단풍로 450",
+              "phone": null,
+              "lat": "35.3385720615952",
+              "lng": "126.81510408541",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:18811200003",
+          "name": "영신 주유소",
+          "address": "전남광주통합특별시 장성군 진원면 영신2길 7",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "MA010120220807719020",
+              "name": "영신주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 장성군 진원면 영신2길 7",
+              "phone": null,
+              "lat": "35.2673862626297",
+              "lng": "126.804759351774",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:kb:000000004645863",
+          "name": "현대주유소",
+          "address": "전남광주통합특별시 순천시 중앙로 172",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": true,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "station_locations.json:4577",
+              "name": "현대주유소",
+              "address": "전라남도 순천시 중앙로 172 (매곡동)",
+              "phone": "061-752-3327",
+              "lat": "34.96097252",
+              "lng": "127.4847157",
+              "fuel_kind": "liquid",
+              "source_date": "2025-12-01",
+              "source_url": "https://www.data.go.kr/data/15129441/standard.do"
+            },
+            {
+              "source_id": "MA010120220807846418",
+              "name": "현대주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 순천시 중앙로 172",
+              "phone": null,
+              "lat": "34.9609772960504",
+              "lng": "127.484715824515",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:kb:000000055922363",
+          "name": "(주)대창석유 (삼학)",
+          "address": "전라남도 목포시 영산로 668",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:kb:000000055922645",
+          "name": "(주)대창석유 (대인)",
+          "address": "전라남도 곡성군 곡성읍 곡성로 796",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "station_locations.json:4446",
+              "name": "(주)대창석유 직영 대인주유소",
+              "address": "전라남도 곡성군 곡성읍 곡성로 796",
+              "phone": "",
+              "lat": "35.2769531114",
+              "lng": "127.2917794284",
+              "fuel_kind": "liquid",
+              "source_date": "2024-08-19",
+              "source_url": "https://www.data.go.kr/data/15129441/standard.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:kb:000000055922220",
+          "name": "(주)대창석유 (태인)",
+          "address": "전남광주통합특별시 광양시 백운1로 107",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "station_locations.json:58",
+              "name": "태인주유소",
+              "address": "전남광주통합특별시 광양시 백운1로 107",
+              "phone": "061-792-3105",
+              "lat": "34.94036623",
+              "lng": "127.7543479",
+              "fuel_kind": "liquid",
+              "source_date": "2026-07-29",
+              "source_url": "https://www.data.go.kr/data/15129441/standard.do"
+            },
+            {
+              "source_id": "MA0101202503A0025892",
+              "name": "태인주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 광양시 백운1로 107",
+              "phone": null,
+              "lat": "34.940285652818",
+              "lng": "127.754350964769",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:kb:000000055922242",
+          "name": "(주)대창석유 (갑산)",
+          "address": "전남광주통합특별시 순천시 녹색로 1656",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "station_locations.json:4624",
+              "name": "갑산주유소",
+              "address": "전라남도 순천시 녹색로 1656 (덕월동)",
+              "phone": "061-744-5680",
+              "lat": "34.92819119",
+              "lng": "127.491242",
+              "fuel_kind": "liquid",
+              "source_date": "2025-12-01",
+              "source_url": "https://www.data.go.kr/data/15129441/standard.do"
+            },
+            {
+              "source_id": "MA0101202503A0053009",
+              "name": "갑산주유소",
+              "branch": "",
+              "address": "전남광주통합특별시 순천시 녹색로 1656",
+              "phone": null,
+              "lat": "34.9281857676441",
+              "lng": "127.491275722294",
+              "fuel_kind": "liquid",
+              "source_date": "2026-06-30",
+              "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        },
+        {
+          "station_id": "onnuri:kb:000000055922616",
+          "name": "(주)대창석유 (남창)",
+          "address": "전라남도 해남군 북평면 현산북평로 1139",
+          "fuel_kind": "liquid",
+          "exact_normalized_name_and_100m": false,
+          "same_address_and_kind_records": [
+            {
+              "source_id": "station_locations.json:2481",
+              "name": "(주)대창석유 직영 남창주유소",
+              "address": "전남광주통합특별시 해남군 북평면 현산북평로 1139",
+              "phone": "061-533-6760",
+              "lat": "34.40867856",
+              "lng": "126.6249243",
+              "fuel_kind": "liquid",
+              "source_date": "2026-07-01",
+              "source_url": "https://www.data.go.kr/data/15129441/standard.do"
+            }
+          ],
+          "status": "historical_positive_control_not_a_current_membership_test"
+        }
+      ]
+    }
+  ],
+  "jeonnam_bank_snapshot": {
+    "checked_at": "2026-10-27T16:50:43+09:00",
+    "merchant_ids": 11385,
+    "all_ids_onnuri_flag_1": true,
+    "parseable_street_addresses": 0,
+    "usable_phone_rows": 8685,
+    "usable_coordinate_rows": 11381,
+    "fuel_category_ids": 29,
+    "name_linked_fuel_ids": 28,
+    "unlinked_fuel_ids": [
+      {
+        "bank_id": "000000094538059",
+        "title": "(주)백동산업",
+        "mapped_name_candidates": [],
+        "status": "name_link_only_not_current_same_premise_confirmation"
+      }
+    ],
+    "fuel_name_links": [
+      {
+        "bank_id": "000000055922645",
+        "title": "(주)대창석유 (대인)",
+        "mapped_name_candidates": [
+          "onnuri:kb:000000055922645"
+        ],
+        "status": "name_link_only_not_current_same_premise_confirmation"
+      },
+      {
+        "bank_id": "000000055922220",
+        "title": "(주)대창석유 (태인)",
+        "mapped_name_candidates": [
+          "onnuri:kb:000000055922220"
+        ],
+        "status": "name_link_only_not_current_same_premise_confirmation"
+      },
+      {
+        "bank_id": "000000064282436",
+        "title": "미래주유소",
+        "mapped_name_candidates": [
+          "onnuri:14273200009"
+        ],
+        "status": "name_link_only_not_current_same_premise_confirmation"
+      },
+      {
+        "bank_id": "000000120167132",
+        "title": "부건주유소",
+        "mapped_name_candidates": [
+          "onnuri:18806200009"
+        ],
+        "status": "name_link_only_not_current_same_premise_confirmation"
+      },
+      {
+        "bank_id": "000000088473697",
+        "title": "(주)혁신에너지",
+        "mapped_name_candidates": [
+          "onnuri:14280200024"
+        ],
+        "status": "name_link_only_not_current_same_premise_confirmation"
+      },
+      {
+        "bank_id": "000000034595536",
+        "title": "남고문self주유소",
+        "mapped_name_candidates": [
+          "onnuri:18802200007"
+        ],
+        "status": "name_link_only_not_current_same_premise_confirmation"
+      },
+      {
+        "bank_id": "000000034326741",
+        "title": "광남주유소",
+        "mapped_name_candidates": [
+          "onnuri:14512200050"
+        ],
+        "status": "name_link_only_not_current_same_premise_confirmation"
+      },
+      {
+        "bank_id": "000000078287556",
+        "title": "남평주유소",
+        "mapped_name_candidates": [
+          "onnuri:14512200035"
+        ],
+        "status": "name_link_only_not_current_same_premise_confirmation"
+      },
+      {
+        "bank_id": "000000110113418",
+        "title": "백제주유소",
+        "mapped_name_candidates": [
+          "onnuri:18804200010"
+        ],
+        "status": "name_link_only_not_current_same_premise_confirmation"
+      },
+      {
+        "bank_id": "000000094538059",
+        "title": "(주)백동산업",
+        "mapped_name_candidates": [],
+        "status": "name_link_only_not_current_same_premise_confirmation"
+      },
+      {
+        "bank_id": "000000037510191",
+        "title": "대나무주유소",
+        "mapped_name_candidates": [
+          "onnuri:14499200028"
+        ],
+        "status": "name_link_only_not_current_same_premise_confirmation"
+      },
+      {
+        "bank_id": "000000045660313",
+        "title": "(주)터미널주유소",
+        "mapped_name_candidates": [
+          "onnuri:14499200032"
+        ],
+        "status": "name_link_only_not_current_same_premise_confirmation"
+      },
+      {
+        "bank_id": "000000047115107",
+        "title": "부원주유소",
+        "mapped_name_candidates": [
+          "onnuri:14266200009"
+        ],
+        "status": "name_link_only_not_current_same_premise_confirmation"
+      },
+      {
+        "bank_id": "000000055922363",
+        "title": "(주)대창석유 (삼학)",
+        "mapped_name_candidates": [
+          "onnuri:kb:000000055922363"
+        ],
+        "status": "name_link_only_not_current_same_premise_confirmation"
+      },
+      {
+        "bank_id": "000000108555012",
+        "title": "공항에너지",
+        "mapped_name_candidates": [
+          "onnuri:14502200004"
+        ],
+        "status": "name_link_only_not_current_same_premise_confirmation"
+      },
+      {
+        "bank_id": "000000025825147",
+        "title": "광주주유소",
+        "mapped_name_candidates": [
+          "onnuri:18800200009"
+        ],
+        "status": "name_link_only_not_current_same_premise_confirmation"
+      },
+      {
+        "bank_id": "000000121636039",
+        "title": "다향에너지주식회사",
+        "mapped_name_candidates": [
+          "onnuri:18800200044"
+        ],
+        "status": "name_link_only_not_current_same_premise_confirmation"
+      },
+      {
+        "bank_id": "000000055922242",
+        "title": "(주)대창석유 (갑산)",
+        "mapped_name_candidates": [
+          "onnuri:kb:000000055922242"
+        ],
+        "status": "name_link_only_not_current_same_premise_confirmation"
+      },
+      {
+        "bank_id": "000000004645863",
+        "title": "현대주유소",
+        "mapped_name_candidates": [
+          "onnuri:kb:000000004645863"
+        ],
+        "status": "name_link_only_not_current_same_premise_confirmation"
+      },
+      {
+        "bank_id": "000000009989174",
+        "title": "순천주유소",
+        "mapped_name_candidates": [
+          "onnuri:14077200010"
+        ],
+        "status": "name_link_only_not_current_same_premise_confirmation"
+      },
+      {
+        "bank_id": "000000113153165",
+        "title": "호남주유소",
+        "mapped_name_candidates": [
+          "onnuri:14077200045"
+        ],
+        "status": "name_link_only_not_current_same_premise_confirmation"
+      },
+      {
+        "bank_id": "000000013496826",
+        "title": "용앙주유소",
+        "mapped_name_candidates": [
+          "onnuri:14270200092"
+        ],
+        "status": "name_link_only_not_current_same_premise_confirmation"
+      },
+      {
+        "bank_id": "000000033093565",
+        "title": "재봉주유소",
+        "mapped_name_candidates": [
+          "onnuri:18809200006"
+        ],
+        "status": "name_link_only_not_current_same_premise_confirmation"
+      },
+      {
+        "bank_id": "000000100745478",
+        "title": "장성농협주유소",
+        "mapped_name_candidates": [
+          "onnuri:14500200210"
+        ],
+        "status": "name_link_only_not_current_same_premise_confirmation"
+      },
+      {
+        "bank_id": "000000099959398",
+        "title": "영신주유소",
+        "mapped_name_candidates": [
+          "onnuri:18811200003"
+        ],
+        "status": "name_link_only_not_current_same_premise_confirmation"
+      },
+      {
+        "bank_id": "000000052037478",
+        "title": "진남주유소",
+        "mapped_name_candidates": [
+          "onnuri:14283200040"
+        ],
+        "status": "name_link_only_not_current_same_premise_confirmation"
+      },
+      {
+        "bank_id": "000000065992690",
+        "title": "대창주유소",
+        "mapped_name_candidates": [
+          "onnuri:14215200029"
+        ],
+        "status": "name_link_only_not_current_same_premise_confirmation"
+      },
+      {
+        "bank_id": "000000055922616",
+        "title": "(주)대창석유 (남창)",
+        "mapped_name_candidates": [
+          "onnuri:kb:000000055922616"
+        ],
+        "status": "name_link_only_not_current_same_premise_confirmation"
+      },
+      {
+        "bank_id": "000000063753887",
+        "title": "화산주유소",
+        "mapped_name_candidates": [
+          "onnuri:14262200012"
+        ],
+        "status": "name_link_only_not_current_same_premise_confirmation"
+      }
+    ],
+    "distinct_business_count": "not_established; multiple payment terminal IDs can share a premise"
+  },
+  "jeonnam_independent_fields": {
+    "rows": 1557,
+    "usable_phone_rows": 346,
+    "lpg_rows": 282,
+    "lpg_rows_with_phone": 0
+  },
+  "difference_decomposition": {
+    "map_record_gap": 103,
+    "liquid_gap": 88,
+    "lpg_gap": 15,
+    "lpg_share_of_map_gap": 0.14563106796116504,
+    "alley_name_record_gap": 101,
+    "alley_name_gap_is_not_causal_attribution": true
+  },
+  "primary_historical_policy_evidence": [
+    {
+      "url": "https://www.mss.go.kr/site/gyeongnam/ex/bbs/View.do?bcIdx=1064101&cbIdx=217",
+      "published_at": "2025-12-17",
+      "observation": "Document states Gwangju 619 alley shopping districts and Jeonnam 46. Historical designation counts, not current fuel merchant counts."
+    },
+    {
+      "url": "https://newscms.gwangju.go.kr/gallery.es?act=view&b_list=12&bid=0009&cg_code=C01&keyField=&list_no=4405&mid=a50101000000&nPage=13&orderby=&vlist_no_npage=0",
+      "published_at": "2025-09-26",
+      "observation": "City publication states 480 alley shopping districts and 44 percent of nationwide districts at that time."
+    }
+  ],
+  "conclusions": {
+    "confirmed": "11385 is a dated KB merchant ID count, not a proven all-issuer distinct-premise total. 28 is the current historical map count, not a census result. Matching limitations demonstrated by historical positive controls.",
+    "supported_explanation": "Exceptional Gwangju shopping-district designation expansion supports a real registration-access difference. It does not quantify how much of the present fuel gap is real.",
+    "not_established": [
+      "Current total Jeonnam fuel merchants",
+      "Number of missed Jeonnam stations",
+      "Percentage of map gap caused by policy versus data loss",
+      "Current Gwangju/Jeonnam same-issuer and same-date prevalence"
+    ],
+    "next_focus": [
+      "Independent detailed address and business identity for Baekdong Industry and unresolved fuel/gas observations",
+      "Detailed current designated-market member lists in active Jeonnam municipalities",
+      "Keep legal/brand alias links as candidates with independent address/phone evidence",
+      "Preserve no-auto-add rule for neighboring stores and reused phone numbers"
+    ]
+  },
+  "live_requests": 0,
+  "map_changed": false,
+  "source_refs": [
+    {
+      "file": "output\\gas_stations.json",
+      "sha256": "00a054ab8f5912ebfb5590f03fc682e687fb8f38dfa9e421b45052df1feb6d89"
+    },
+    {
+      "file": "output\\audits\\full_region_crosscheck_20261103\\issuer_address_snapshot.json.gz",
+      "sha256": "4e1650a394826f85238919291c58fab7ad613bc52b76e623d3707fd2c5a6486d"
+    },
+    {
+      "file": "output\\onnuri_live_snapshot.json",
+      "sha256": "af6866d59fd471cbe26ed0cefa112ca046c4e00641479ba45b5f3082e39d55aa"
+    },
+    {
+      "file": "config\\collector-fuel-index.json.gz",
+      "sha256": "2f23391dc079f52dae1ecf9e562330d83f365cfb41e70c47ebfa690514edb122"
+    },
+    {
+      "file": "output\\station_locations.json",
+      "sha256": "f9fc9c820a423195c3ad9eec8979e6c7c7cd3c0ce1f4ddc21f9bc155c7944cd6"
+    },
+    {
+      "file": "output\\lpg_locations.json",
+      "sha256": "be1fe8161b47459ceb26a7ab6b5db8057b549c96b645a2508e6da1cb7aab3dd9"
+    }
+  ],
+  "control_definition": "Offline historical positive control using only exact normalized display name, distance <=100m and matching fuel kind. Not full pipeline recall, not current issuer verification, and not an estimate of missed Jeonnam merchants."
+}
