@@ -103,14 +103,14 @@ html {font-size:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%;}
 .app #resultsSize {flex:0 0 auto;}
 .app .results-body {scroll-padding-top:8rem;}
 .app .national-results>summary {font-size:var(--ui-body);line-height:1.5;}
-/* Share the available row so the area search cannot cover the results heading.
+/* Keep area search at the left edge and results at the right without overlap.
    On phones, display:contents preserves the separate top/bottom map controls. */
 .map-search-tools {display:contents;}
 @media(min-width:701px) {
-  .map-search-tools {position:absolute;top:12px;left:72px;right:12px;z-index:110;display:flex;align-items:flex-start;justify-content:flex-end;gap:8px;pointer-events:none;}
+  .map-search-tools {position:absolute;top:12px;left:12px;right:12px;z-index:110;display:flex;align-items:flex-start;justify-content:space-between;gap:12px;pointer-events:none;}
   .map-search-tools>* {pointer-events:auto;}
   .app .map-search-tools .search-area-btn {position:static;transform:none;flex:0 1 auto;min-width:0;max-width:100%;}
-  .app .map-search-tools .national-results {position:relative;inset:auto;flex:0 1 390px;min-width:0;max-width:100%;max-height:var(--results-available,560px);}
+  .app .map-search-tools .national-results {position:relative;inset:auto;margin-left:auto;flex:0 1 390px;min-width:0;max-width:100%;max-height:var(--results-available,560px);}
   .map-area:has(#nationalResults[open]) .map-search-tools {z-index:125;}
 }
 .app #tripPanel {overflow:auto;max-height:min(var(--trip-window-height,620px),calc(100% - 1.5rem));}
@@ -157,6 +157,10 @@ html {font-size:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%;}
   .app .trip-settings .trip-input-row button {white-space:normal;}
 }
 @media(max-width:380px) {
+  /* Large text needs a usable map below the controls instead of stacked targets.
+     Normal phone layouts retain their available map height. */
+  .app {overflow-y:auto;}
+  .app .map-area {min-height:18rem;flex-shrink:0;}
   .app .controls .controls-top {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem;}
   .app .controls .search-box {grid-column:1/-1;width:100%;}
   .app .controls #regionOpen,.app .controls #filtersToggle {width:100%;}
@@ -164,6 +168,10 @@ html {font-size:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%;}
   .app #resultsSize {grid-column:1/-1;width:100%;}
   .app .trip-search-options,.app .trip-recommendation {grid-template-columns:minmax(0,1fr);gap:.25rem;}
   .app .trip-search-options select,.app .trip-recommendation select {margin-bottom:.5rem;}
+}
+@media(max-height:500px) and (min-width:381px) {
+  .app {overflow-y:auto;}
+  .app .map-area {min-height:12rem;flex-shrink:0;}
 }
 @media(max-height:500px) {
   .app .header {padding-block:.25rem;}

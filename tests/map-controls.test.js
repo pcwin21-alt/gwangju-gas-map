@@ -16,10 +16,6 @@ test('single Kakao map retains bounded zoom; dark theme has no second map or rot
  assert.equal(f.elements.rotationMap,undefined);assert.equal(f.elements.rotationBtn,undefined);assert.equal(f.elements.plainMapBtn,undefined);
  assert.equal(f.windowListeners['gas:themechange'],undefined);
 });
-test('expanded map retains a reachable exit and Escape restores the app controls',()=>{
- const f=fixture();f.elements.expandMapBtn.emit('click');assert.equal(f.elements.app.classList.contains('map-expanded'),true);
- assert.equal(f.elements.expandMapBtn.attributes['aria-pressed'],'true');f.docListeners.keydown({key:'Escape'});assert.equal(f.elements.app.classList.contains('map-expanded'),false);
-});
 test('filter changes keep the single-map route markers separate and clear restores the regular view',()=>{
  const f=fixture();f.context.applyFilters();assert.equal(f.filters(),1);assert.equal(f.refreshes(),1);
  f.setActive(true);f.windowListeners['gas:routechange']();assert.equal(f.elements.area.classList.contains('trip-route-active'),true);

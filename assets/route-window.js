@@ -26,7 +26,6 @@
   }
   function open() {if(panel.hidden)return;wasOpened=true;panel.open=true;sync();panel.querySelector('summary').focus({preventScroll:true});}
   launcher.addEventListener('click',open);panel.addEventListener('toggle',sync);
-  byId('expandMapBtn').addEventListener('click',()=>minimize());
   function mapGesture(event) {if(!panel.open||event.target.closest('#tripPanel,#tripLauncher'))return;minimize();}
   area.addEventListener('pointerdown',mapGesture,{capture:true,passive:true});
   area.addEventListener('touchstart',mapGesture,{capture:true,passive:true});
