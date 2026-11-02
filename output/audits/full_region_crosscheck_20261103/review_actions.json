@@ -1,0 +1,74 @@
+{
+  "reviewed_at": "2026-11-03T05:19:07+09:00",
+  "scope": "Lead disposition only. No source date, membership or map change.",
+  "independent_name_or_phone_match_ids": 29,
+  "within_100m_only_is_not_identity": true,
+  "annual_matching_rows": 133,
+  "annual_exact_normalized_name_rows": 29,
+  "annual_reduced_name_only_rows": 104,
+  "actions": [
+    {
+      "id": "manjae-damyang",
+      "status": "pending_independent_premise_identity",
+      "bank_id": "000000069335783",
+      "bank_checked_at": "2026-10-27T16:42:29+09:00",
+      "bank_title": "(주) 만재",
+      "bank_category": "차량 정비/부품/인테리어",
+      "physical_source_ids": [
+        "MA0101202303A0059176",
+        "lpg_locations.json:1507"
+      ],
+      "distances_m": [
+        784.19,
+        761.08
+      ],
+      "reason": "Shortened name matches, but the issuer describes repair and its coordinates differ by 761-784m. No same-premise evidence. Query the independent LPG location only through the managed queue; no automatic addition.",
+      "managed_job": {
+        "kind": "kb_search",
+        "source": "kbcard",
+        "region": "전남",
+        "purpose": "full_inventory_identity_followup",
+        "target": {
+          "name": "만재LPG충전소",
+          "keyword": "",
+          "lat": 35.3048307993974,
+          "lng": 126.981231101399,
+          "address": "전남광주통합특별시 담양군 담양읍 죽향대로 1110",
+          "coordinate_source_id": "MA0101202303A0059176"
+        },
+        "discovery_scope": "A shortened company name at a repair premise 761-784m away is a lead only. Do not transfer membership from that premise to the LPG station.",
+        "logical_key": "0c02256288b07ee840ecef2f"
+      }
+    },
+    {
+      "id": "phone-reuse-suncheon",
+      "status": "not_accepted_as_same_business",
+      "bank_id": "000000099970150",
+      "bank_title": "부부팥죽",
+      "physical_name": "백진주유소",
+      "distance_m": 4414.21,
+      "reason": "Telephone match alone conflicts with name/category and is 4.4km away. Neither business membership is inferred."
+    },
+    {
+      "id": "same-name-hardware",
+      "status": "not_accepted_as_same_business",
+      "bank_id": "000000042251439",
+      "bank_title": "남도종합상사",
+      "distance_m": 64612.86,
+      "reason": "Same company title but different locality, hardware category and 64.6km separation. No station linkage."
+    },
+    {
+      "id": "jangseong-wash-terminal",
+      "status": "pending_same_business_not_new_station",
+      "bank_id": "000000100747978",
+      "bank_title": "장성농협주유소",
+      "bank_category": "세차장",
+      "mapped_id": "onnuri:14500200210",
+      "distance_m": 28.25,
+      "reason": "Retain non-fuel-category candidate for existing mapped premise; do not create another station for a different payment terminal."
+    }
+  ],
+  "annual_scope": "All 48119 related source rows have a combined Jeonnam/Gwangju label. None is automatically region-resolved through a shortened fuel name.",
+  "new_verified_stations": 0,
+  "map_changed": false
+}
