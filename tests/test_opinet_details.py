@@ -48,6 +48,26 @@ class OpinetDetailsTests(unittest.TestCase):
         self.assertEqual(detail['onnuri_membership'], 'not_checked_by_this_source')
         self.assertNotIn('internal', detail['detail'])
 
+    def test_completed_discovery_does_not_restart_when_daily_cap_expires(self):
+        self.assertEqual(self.execute(), 3)
+        previous = copy.deepcopy(self.journal['details'])
+        self.clock.sleep(86401)
+        self.assertEqual(self.execute(), 0)
+        self.assertEqual(self.request.call_count, 3)
+        self.assertEqual(self.usage['attempts'], 0)
+        self.assertEqual(self.journal['details'], previous)
+        self.assertEqual(len(self.journal['attempts']), 3)
+
+    def test_next_day_continues_to_new_ids_without_spending_on_completed_ids(self):
+        self.targets.append({'id': 'A0000003', 'region': '전남', 'name': '다음충전소',
+                             'independent_source': {'source_url': 'https://www.data.go.kr'}})
+        self.assertEqual(self.execute(), 3)
+        self.clock.sleep(86401)
+        self.assertEqual(self.execute(), 1)
+        self.assertEqual(self.request.call_count, 4)
+        self.assertEqual(self.journal['attempts'][-1]['id'], 'A0000003')
+        self.assertEqual(self.usage['attempts'], 1)
+
     def test_reservation_failure_prevents_transmission(self):
         with self.assertRaises(RuntimeError):
             collect(self.targets, {}, {}, 'test-secret', Mock(side_effect=RuntimeError('push')),

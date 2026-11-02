@@ -52,6 +52,13 @@ def collect(targets, usage, journal, api_key, checkpoint, request, *, budget=200
     for target in targets:
         if count >= remaining:
             break
+        # Discovery consumes each successfully observed ID once. Expiration of
+        # the rolling load cap is not a request to refresh the same identity.
+        observed = journal['details'].get(target['id'], {})
+        if observed.get('status') == 'fuel_identity_observed' and \
+                observed.get('source_url') == URL and \
+                observed.get('detail', {}).get('UNI_ID') == target['id']:
+            continue
         if any(a['id'] == target['id'] for a in recent):
             continue
         wait = max(0, journal.get('next_allowed_at', 0)-clock())
