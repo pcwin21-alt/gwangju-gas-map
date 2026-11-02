@@ -13,7 +13,7 @@
       "status": "active",
       "url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
       "scope": "Public unauthenticated Onnuri merchant form; issuer-specific evidence only; limits are our load caps, not a provider guarantee",
-      "next_allowed_at": 1793659818.9789083,
+      "next_allowed_at": 1793659821.6100142,
       "volume_ramp": {
         "stage": "pilot",
         "started_at": 1793556784.2048566,
@@ -739,7 +739,7 @@
       "job_id": "2b326008927195e54b207b2d",
       "source": "kbcard",
       "at": 1793659638.9789083,
-      "status": "reserved",
+      "status": "done",
       "run_id": "83e15309fe014ff0805b079f77281c8f",
       "request": {
         "method": "POST",
@@ -756,7 +756,12 @@
           "endRow": 10,
           "mmcNm": ""
         }
-      }
+      },
+      "request_started_at": 1793659640.222599,
+      "network_duration_seconds": 0.8833365440368652,
+      "http_status": 200,
+      "response_sha256": "4e6d1265c1c23a273f2430dd7bc82bcc26d324fa8b089f15a07de79969a9be0f",
+      "finished_at": 1793659641.6099668
     }
   ],
   "jobs": [
@@ -2236,11 +2241,27 @@
       },
       "logical_key": "2b326008927195e54b207b2d",
       "id": "2b326008927195e54b207b2d",
-      "status": "pending",
+      "status": "done",
       "attempts": 1,
       "page": 1,
-      "observed_ids": [],
-      "candidate_ids": []
+      "observed_ids": [
+        "000000120167132",
+        "000000048624434",
+        "000000116338384",
+        "000000015194978",
+        "000000107945071",
+        "000000077595252",
+        "000000051307047",
+        "000000095524103",
+        "000000015477996",
+        "000000019825330",
+        "000000091859168",
+        "000000050478804"
+      ],
+      "candidate_ids": [],
+      "expected": 12,
+      "last_observed_at": "2026-11-03T07:47:21+09:00",
+      "result": "observations_saved"
     },
     {
       "kind": "kb_search",
@@ -7768,6 +7789,54 @@
         "지번주소": "전남광주통합특별시 나주시 세지면 오봉리 236-9",
         "위도": "34.9222110757088",
         "경도": "126.747905819259",
+        "region": "전남"
+      },
+      "commercial_source": {
+        "archive_sha256": "57aa361544108ff4fc73334f87d2ced61e41fe8638dd70bcd842930f865d2386",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+        "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
+      },
+      "annual_candidate_ids": []
+    },
+    {
+      "identity_review": "same_premise_confirmed",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "checked_at": "2026-11-03T07:47:21+09:00",
+      "bank_record": {
+        "location": {
+          "lat": "35.0358689352",
+          "lng": "126.7525723357"
+        },
+        "content": {
+          "tel": "061)337-0875",
+          "title": "부건주유소",
+          "category": "주유소",
+          "address": "전남 나주시 금천면 ",
+          "distance": "33",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000120167132",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        }
+      },
+      "commercial_record": {
+        "상가업소번호": "MA0101202510A0015685",
+        "상호명": "부건주유소",
+        "지점명": "",
+        "상권업종소분류코드": "G21401",
+        "상권업종소분류명": "주유소",
+        "표준산업분류코드": "G47711",
+        "표준산업분류명": "운송장비용 주유소 운영업",
+        "시군구명": "나주시",
+        "도로명주소": "전남광주통합특별시 나주시 금천면 영산로 5703",
+        "지번주소": "전남광주통합특별시 나주시 금천면 원곡리 227-3",
+        "위도": "35.0355696110884",
+        "경도": "126.752544544107",
         "region": "전남"
       },
       "commercial_source": {
@@ -22305,6 +22374,14 @@
       "checked_at": "2026-11-03T04:41:50+09:00",
       "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
       "bank_id": "000000110113418",
+      "other_payment_methods": "not_reverified"
+    },
+    "onnuri:18806200009": {
+      "status": "confirmed_in_issuer_scope",
+      "issuer": "kbcard",
+      "checked_at": "2026-11-03T07:47:21+09:00",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "bank_id": "000000120167132",
       "other_payment_methods": "not_reverified"
     }
   },
