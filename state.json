@@ -6882,6 +6882,27 @@
       "attempts": 0,
       "page": 1,
       "observed_ids": []
+    },
+    {
+      "kind": "kb_search",
+      "source": "kbcard",
+      "region": "전남",
+      "purpose": "full_inventory_identity_followup",
+      "target": {
+        "name": "만재LPG충전소",
+        "keyword": "",
+        "lat": 35.3048307993974,
+        "lng": 126.981231101399,
+        "address": "전남광주통합특별시 담양군 담양읍 죽향대로 1110",
+        "coordinate_source_id": "MA0101202303A0059176"
+      },
+      "discovery_scope": "A shortened company name at a repair premise 761-784m away is a lead only. Do not transfer membership from that premise to the LPG station.",
+      "logical_key": "0c02256288b07ee840ecef2f",
+      "id": "0c02256288b07ee840ecef2f",
+      "status": "pending",
+      "attempts": 0,
+      "page": 1,
+      "observed_ids": []
     }
   ],
   "evidence": [
@@ -7858,6 +7879,20 @@
       "job_id": "de06432b3d9da466cd3d9ec5",
       "checked_at": "2026-11-03T04:38:41+09:00",
       "reason": "No independently matched current issuer record; preserve previous station"
+    },
+    {
+      "review_id": "full-inventory:manjae-damyang-20261103",
+      "region": "전남",
+      "job_id": "0c02256288b07ee840ecef2f",
+      "status": "pending_independent_identity",
+      "reviewed_at": "2026-11-03T05:22:19+09:00",
+      "source_checked_at": "2026-10-27T16:42:29+09:00",
+      "bank_id": "000000069335783",
+      "reason": "Shortened name matches, but the issuer describes repair and its coordinates differ by 761-784m. No same-premise evidence. Query the independent LPG location only through the managed queue; no automatic addition.",
+      "evidence": [
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f201100/output/audits/full_region_crosscheck_20261103/report.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f201100/output/audits/full_region_crosscheck_20261103/review_actions.json"
+      ]
     }
   ],
   "source_gaps": [
@@ -8552,10 +8587,10 @@
   "status": "running",
   "summary": {
     "status": "running",
-    "jobs_total": 226,
+    "jobs_total": 227,
     "jobs_done": 28,
-    "jobs_remaining": 198,
-    "review_records": 8,
+    "jobs_remaining": 199,
+    "review_records": 9,
     "evidence_records": 17,
     "source_gaps": 90,
     "source_status": {
@@ -8568,11 +8603,11 @@
       {
         "region": "전남",
         "status": "collecting",
-        "jobs_total": 42,
-        "jobs_remaining": 14,
+        "jobs_total": 43,
+        "jobs_remaining": 15,
         "jobs_needing_review": 0,
         "source_gaps": 25,
-        "review_records": 7,
+        "review_records": 8,
         "inventory_reviewed": false,
         "mapped_records_to_recheck": 28,
         "membership_check_status": {
@@ -9004,10 +9039,12 @@
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/fcd770a/output/audits/regional_gap_20261102/damyang_terminal_review.json",
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/0632768/output/audits/regional_gap_20261102/municipal_name_crosscheck_20261103.json",
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/0632768/output/audits/regional_gap_20261102/damyang_market_leads.json",
-        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/0632768/output/audits/regional_gap_20261102/naju_namgomun_review_20261103.json"
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/0632768/output/audits/regional_gap_20261102/naju_namgomun_review_20261103.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f201100/output/audits/full_region_crosscheck_20261103/report.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f201100/output/audits/full_region_crosscheck_20261103/review_actions.json"
       ],
       "checked_at": null,
-      "last_reviewed_at": "2026-11-03T04:46:38+09:00"
+      "last_reviewed_at": "2026-11-03T05:22:19+09:00"
     },
     "전북": {
       "status": "pending",
@@ -21301,29 +21338,32 @@
         "status": "complete",
         "evidence": [
           "https://www.data.go.kr/data/15083033/fileData.do",
-          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/0632768/output/audits/regional_gap_20261102/municipal_name_crosscheck_20261103.json"
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/0632768/output/audits/regional_gap_20261102/municipal_name_crosscheck_20261103.json",
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f201100/output/audits/full_region_crosscheck_20261103/report.json"
         ],
         "checked_at": "2026-06-30",
         "scope": "dated physical source inventory only; not current membership",
-        "last_reviewed_at": "2026-11-03T04:46:38+09:00"
+        "last_reviewed_at": "2026-11-03T05:22:19+09:00"
       },
       "annual_identities": {
         "status": "pending",
         "evidence": [
-          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/fcd770a/output/audits/regional_gap_20261102/nonfuel_reviews.json"
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/fcd770a/output/audits/regional_gap_20261102/nonfuel_reviews.json",
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f201100/output/audits/full_region_crosscheck_20261103/report.json"
         ],
         "checked_at": null,
-        "last_reviewed_at": "2026-11-02T17:07:23+09:00"
+        "last_reviewed_at": "2026-11-03T05:22:19+09:00"
       },
       "membership_rechecks": {
         "status": "pending",
         "evidence": [
           "output/audits/regional_gap_20261102/naju_innovation_coordinate_review.json",
-          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/0632768/output/audits/regional_gap_20261102/naju_namgomun_review_20261103.json"
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/0632768/output/audits/regional_gap_20261102/naju_namgomun_review_20261103.json",
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f201100/output/audits/full_region_crosscheck_20261103/report.json"
         ],
         "checked_at": null,
         "scope": "Current issuer rechecks incomplete; coordinate discrepancy follow-up is discovery only",
-        "last_reviewed_at": "2026-11-03T04:46:38+09:00"
+        "last_reviewed_at": "2026-11-03T05:22:19+09:00"
       },
       "market_coverage": {
         "status": "pending",
