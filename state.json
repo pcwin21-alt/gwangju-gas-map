@@ -13,7 +13,7 @@
       "status": "active",
       "url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
       "scope": "Public unauthenticated Onnuri merchant form; issuer-specific evidence only; limits are our load caps, not a provider guarantee",
-      "next_allowed_at": 1793600243.9176204,
+      "next_allowed_at": 1793600248.964053,
       "volume_ramp": {
         "stage": "pilot",
         "started_at": 1793556784.2048566,
@@ -449,7 +449,7 @@
       "job_id": "c1aca64d9b556a9b15aae8b7",
       "source": "kbcard",
       "at": 1793600063.9176204,
-      "status": "reserved",
+      "status": "done",
       "run_id": "738763108cb547539059cf22f328bdf5",
       "request": {
         "method": "POST",
@@ -466,7 +466,12 @@
           "endRow": 10,
           "mmcNm": ""
         }
-      }
+      },
+      "request_started_at": 1793600065.0972488,
+      "network_duration_seconds": 1.2562155723571777,
+      "http_status": 200,
+      "response_sha256": "a6edac694b69c3847c176c9bfd5dd17e9277347019a5c23158c22eedccda9b3b",
+      "finished_at": 1793600068.964001
     }
   ],
   "jobs": [
@@ -1411,11 +1416,56 @@
       },
       "logical_key": "c1aca64d9b556a9b15aae8b7",
       "id": "c1aca64d9b556a9b15aae8b7",
-      "status": "pending",
+      "status": "done",
       "attempts": 1,
       "page": 1,
-      "observed_ids": [],
-      "candidate_ids": []
+      "observed_ids": [
+        "000000037510191",
+        "000000101652993",
+        "000000101642191",
+        "000000051778637",
+        "000000119758824",
+        "000000072776347",
+        "000000110666571",
+        "000000086489688",
+        "000000073689968",
+        "000000015611437",
+        "000000113093526",
+        "000000072159723",
+        "000000110579411",
+        "000000072200387",
+        "000000120742109",
+        "000000041077782",
+        "000000058163963",
+        "000000109851803",
+        "000000087985651",
+        "000000098010010",
+        "000000094587729",
+        "000000102659112",
+        "000000114427980",
+        "000000118322905",
+        "000000077299513",
+        "000000116490652",
+        "000000083434211",
+        "000000092792521",
+        "000000116738524",
+        "000000103936713",
+        "000000093934733",
+        "000000110582791",
+        "000000110340849",
+        "000000101675392",
+        "000000085099016",
+        "000000082006742",
+        "000000032945459",
+        "000000099830408",
+        "000000094538059",
+        "000000049858331",
+        "000000112121995"
+      ],
+      "candidate_ids": [],
+      "expected": 41,
+      "last_observed_at": "2026-11-02T15:14:26+09:00",
+      "result": "observations_saved"
     },
     {
       "kind": "kb_search",
@@ -6784,6 +6834,54 @@
         "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
       },
       "annual_candidate_ids": []
+    },
+    {
+      "identity_review": "same_premise_confirmed",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "checked_at": "2026-11-02T15:14:26+09:00",
+      "bank_record": {
+        "location": {
+          "lat": "35.3111466663",
+          "lng": "126.9811048273"
+        },
+        "content": {
+          "tel": "061)383-5179",
+          "title": "대나무주유소",
+          "category": "주유소",
+          "address": "전남 담양군 담양읍 ",
+          "distance": "9",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000037510191",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        }
+      },
+      "commercial_record": {
+        "상가업소번호": "MA010120220807533538",
+        "상호명": "대나무주유소",
+        "지점명": "",
+        "상권업종소분류코드": "G21401",
+        "상권업종소분류명": "주유소",
+        "표준산업분류코드": "G47711",
+        "표준산업분류명": "운송장비용 주유소 운영업",
+        "시군구명": "담양군",
+        "도로명주소": "전남광주통합특별시 담양군 담양읍 죽향대로 1179",
+        "지번주소": "전남광주통합특별시 담양군 담양읍 백동리 276-5",
+        "위도": "35.3111671969697",
+        "경도": "126.981196649484",
+        "region": "전남"
+      },
+      "commercial_source": {
+        "archive_sha256": "57aa361544108ff4fc73334f87d2ced61e41fe8638dd70bcd842930f865d2386",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+        "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
+      },
+      "annual_candidate_ids": []
     }
   ],
   "review": [
@@ -6839,6 +6937,33 @@
       "investigated_at": "2026-11-02T09:01:20+09:00",
       "followup_job_id": "cb87c8541476da05247da7c2",
       "investigation_scope": "Issuer coordinate/address mismatch hypothesis; no current membership conclusion"
+    },
+    {
+      "job_id": "c1aca64d9b556a9b15aae8b7",
+      "bank_record": {
+        "location": {
+          "lat": "35.3090822678",
+          "lng": "126.984898723"
+        },
+        "content": {
+          "tel": "061)381-8878",
+          "title": "(주)백동산업",
+          "category": "주유소",
+          "address": "전남 담양군 담양읍 ",
+          "distance": "408",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000094538059",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        }
+      },
+      "checked_at": "2026-11-02T15:14:26+09:00",
+      "independent_fuel_candidate_ids": [],
+      "reason": "Independent exact business/address/category evidence incomplete; do not exclude by bank category alone"
     }
   ],
   "source_gaps": [
@@ -20863,6 +20988,14 @@
       "checked_at": "2026-11-02T07:12:26+09:00",
       "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
       "bank_id": "000000052037478",
+      "other_payment_methods": "not_reverified"
+    },
+    "onnuri:14499200028": {
+      "status": "confirmed_in_issuer_scope",
+      "issuer": "kbcard",
+      "checked_at": "2026-11-02T15:14:26+09:00",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "bank_id": "000000037510191",
       "other_payment_methods": "not_reverified"
     }
   },
