@@ -1,0 +1,1419 @@
+{
+  "url": "https://noble3.tistory.com/entry/%EA%B4%91%EC%A3%BC%C2%B7%EC%A0%84%EB%82%A8-%EC%98%A8%EB%88%84%EB%A6%AC%EC%83%81%ED%92%88%EA%B6%8C-%EC%A3%BC%EC%9C%A0%EC%86%8C-155%EA%B3%B3-%EC%A0%95%EB%A6%AC-%EA%B4%91%EC%A3%BC%C2%B7%EC%A0%84%EB%82%A8-155%EA%B3%B3-%EB%A7%A4%EC%9E%A5-%EC%9C%84%EC%B9%98-%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0",
+  "http_status": 200,
+  "checked_at": "2026-11-03",
+  "article_date": "2026-10-30",
+  "claimed_total": 155,
+  "table_rows": 155,
+  "matched_existing_annual_pairs": 154,
+  "unmatched": [
+    {
+      "name": "대남로 주유소",
+      "market": "도군머리 골목형상점가",
+      "product": "주유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": false
+    }
+  ],
+  "rows": [
+    {
+      "name": "성실주유소",
+      "market": "31사단 골목형상점가",
+      "product": "주유소",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "(주)반디석유 본점",
+      "market": "공구의거리",
+      "product": "차량용 무연 경유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "마트몰(주)더믿음가득주유소",
+      "market": "공구의거리",
+      "product": "주유, 자동차용품",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "동신 석유",
+      "market": "광주고인근 골목형상점가",
+      "product": "등유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "우리셀프주유소",
+      "market": "광주캠코앞상인회 골목형상점가",
+      "product": "주유소매",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "한강주유소",
+      "market": "광천동상인회 골목형상점가",
+      "product": "주유소",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "서구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "S-OIL지산주유소",
+      "market": "금메달 양산택지로 골목형상점가",
+      "product": "유류",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "영광주유소",
+      "market": "금호아파트상인회 골목형상점가",
+      "product": "유류",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "서광주역주유소",
+      "market": "금호푸른상인회 골목형상점가",
+      "product": "주유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "남평주유소",
+      "market": "남평읍1로 골목형상점가",
+      "product": "-",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "나주시",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "돌고개주유소",
+      "market": "농성세대공감상인회 골목형상점가",
+      "product": "주유소",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "서구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "더푸른주식회사",
+      "market": "늘해랑상인회 골목형상점가",
+      "product": "주유소",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "아세아오일뱅크",
+      "market": "늘해랑상인회 골목형상점가",
+      "product": "석유류",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "브이넥스 주식회사",
+      "market": "달아실 골목형상점가",
+      "product": "주유소",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "대원주유소",
+      "market": "대남마주길 골목형상점가",
+      "product": "주유소",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "드림에너지",
+      "market": "대남마주길 골목형상점가",
+      "product": "주유소",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "(주)대창석유직영 월드컵주유소",
+      "market": "도군머리 골목형상점가",
+      "product": "유류",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "대남로 주유소",
+      "market": "도군머리 골목형상점가",
+      "product": "주유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": false,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "온누리주유소",
+      "market": "도군머리 골목형상점가",
+      "product": "기름",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "동림주유소(현대오일뱅크)",
+      "market": "동림4단지 골목형상점가",
+      "product": "휘발유 경유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "북구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "주공주유소",
+      "market": "동림4단지 골목형상점가",
+      "product": "주유소",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "북구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "SK경인석유",
+      "market": "두암1동군왕로 골목형상점가",
+      "product": "등유,경유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "북구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "차나라주유소",
+      "market": "두암2동 골목형상점가",
+      "product": "주유소",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "북구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "(주)대창석유 직영 국일충전소",
+      "market": "두암3동 먹자골목 골목형상점가",
+      "product": "가스충전소",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "북구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "두암주유소",
+      "market": "두암시장주변 골목형상점가",
+      "product": "주유소",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "북구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "(주)아승SK셀프주유소",
+      "market": "두암지구입구 골목형상점가",
+      "product": "유류",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "북구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "SK삼성에너지",
+      "market": "두암초주변 골목형상점가",
+      "product": "석유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "북구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "운천주유소",
+      "market": "마륵동상인회 골목형상점가",
+      "product": "유류",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "서구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "컨벤션주유소",
+      "market": "마륵동상인회 골목형상점가",
+      "product": "유류",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "서구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "서부에너지",
+      "market": "맛조이상인회 골목형상점가",
+      "product": "LPG",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "매곡주유소",
+      "market": "매곡 가인 골목형상점가",
+      "product": "유류소매업",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "북구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "(유)매월주유소",
+      "market": "매월동상인회 골목형상점가",
+      "product": "유류",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "서구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "대성석유",
+      "market": "매월동상인회 골목형상점가",
+      "product": "등경유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "서구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "청우에너지(주)",
+      "market": "매월동상인회 골목형상점가",
+      "product": "유류",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "서구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "77번가주유소",
+      "market": "매화 하백로 골목형상점가",
+      "product": "휘발유,경유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "SK코끼리주유소",
+      "market": "매화 하백로 골목형상점가",
+      "product": "유류",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "빛고을충전소",
+      "market": "목련 골목형상점가",
+      "product": "주유소",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "이든랜드(주)반디석유 운남점",
+      "market": "목련 골목형상점가",
+      "product": "차량용 무연 경유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "주식회사 반디엘피지 신가점",
+      "market": "목련 골목형상점가",
+      "product": "차량용 엘피지",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "경기장주유소",
+      "market": "무등로해피 골목형상점가",
+      "product": "석유류",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "서림주유소",
+      "market": "무등로해피 골목형상점가",
+      "product": "유류",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "(주)터미널주유소",
+      "market": "박물관거리 골목형상점가",
+      "product": "주유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "대나무주유소",
+      "market": "박물관거리 골목형상점가",
+      "product": "주유소",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "늘푸른 주유소",
+      "market": "백운브릿지 골목형상점가",
+      "product": "유류",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "남구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "무지개셀프주유소",
+      "market": "백운브릿지 골목형상점가",
+      "product": "휘발유경유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "남구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "(주)대창석유직영 지산주유소",
+      "market": "법원 앞 사과마을 골목형상점가",
+      "product": "유류",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "(주)대창석유 직영 동명주유소",
+      "market": "법조타운 골목형상점가",
+      "product": "유류",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "동부에너지주유소",
+      "market": "본촌 하서로 골목형상점가",
+      "product": "유류",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "북구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "본촌주유소",
+      "market": "본촌 하서로 골목형상점가",
+      "product": "휘발유 및 경유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "북구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "주) 무등LPG충전소",
+      "market": "본촌 하서로 골목형상점가",
+      "product": "가스",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "북구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "(주)스피드에너지주유소",
+      "market": "본촌지야 골목형상점가",
+      "product": "휘발유경유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "북구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "북광주 ic주유소",
+      "market": "본촌지야 골목형상점가",
+      "product": "휘발유 경유 등유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "북구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "대동주유소",
+      "market": "봉선중앙로 골목형상점가",
+      "product": "유류",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "남구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "대주에너지",
+      "market": "봉선중앙로 골목형상점가",
+      "product": "석유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "남구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "미래주유소",
+      "market": "봉주 골목형상점가",
+      "product": "유류 자동차 관련 물품 세차",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "오림이사삼각그린주유소",
+      "market": "삼각동 골목형상점가",
+      "product": "휴발유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "북구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "플러스주유소",
+      "market": "삼각동 골목형상점가",
+      "product": "휘발유 경유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "북구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "S-oil일곡주유소",
+      "market": "삼각초 골목형상점가",
+      "product": "휘발유경유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "북구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "용앙주유소",
+      "market": "삼호읍 중앙 골목형상점가",
+      "product": "주유소",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "영암군",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "주식회사 아프리카주유소",
+      "market": "상무누리로상인회 골목형상점가",
+      "product": "유류",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "대근주유소",
+      "market": "상하완길 골목형상점가",
+      "product": "유류",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "산월SELF주유소",
+      "market": "상하완길 골목형상점가",
+      "product": "휘발유, 경유, 요소수, 첨가제, 각종오일",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "부일주유소",
+      "market": "서광주세무서앞상인회 골목형상점가",
+      "product": "주유소",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "CU망월주유소점",
+      "market": "석곡동 골목형상점가",
+      "product": "생활용품",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "곡성군",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "S-OIL 망월주유소",
+      "market": "석곡동 골목형상점가",
+      "product": "주유소",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "곡성군",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "도동재주유소",
+      "market": "석곡동 골목형상점가",
+      "product": "휘발유 경유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "곡성군",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "동광주LPG충전소",
+      "market": "석곡동 골목형상점가",
+      "product": "충전소",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "곡성군",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "수완행복주유소",
+      "market": "석세스",
+      "product": "주유소",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "수완현대주유소",
+      "market": "석세스",
+      "product": "유류",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "전송주유소",
+      "market": "선운별 골목형상점가",
+      "product": "차량연료",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "호대아름주유소",
+      "market": "선운별 골목형상점가",
+      "product": "유류",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "주식회사 스피드주유소",
+      "market": "설죽로 패션의거리 골목형상점가",
+      "product": "주유소",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "어등산주유소",
+      "market": "소촌골 골목형상점가",
+      "product": "유류",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "광산구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "주식회사 무진대로주유소",
+      "market": "소촌골 골목형상점가",
+      "product": "유류",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "광산구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "순양주유소",
+      "market": "소촌중앙 골목형상점가",
+      "product": "무연 경유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "광산구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "유한회사 모우리주유소",
+      "market": "소촌중앙 골목형상점가",
+      "product": "주유소",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "광산구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "진영주유소",
+      "market": "송도용보 골목형상점가",
+      "product": "유류",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "금호석유",
+      "market": "송정매일시장",
+      "product": "석유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "광산구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "반디가스 송암점",
+      "market": "송하동 골목형상점가",
+      "product": "차량용 엘피지충전",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "남구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "송암a주유소",
+      "market": "송하동 골목형상점가",
+      "product": "무연 경유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "남구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "송암b주유소",
+      "market": "송하동 골목형상점가",
+      "product": "휘발유경유등유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "남구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "신성에너지송암공단주유소",
+      "market": "송하동 골목형상점가",
+      "product": "휘발유 경유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "남구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "웰컴신가주유소",
+      "market": "수등로 골목형상점가",
+      "product": "고급휘발유, 휘발유, 경유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "광주석유판매협동조합",
+      "market": "신안동광주역앞상가 골목형상점가",
+      "product": "유류",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "신안군",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "에코주유소",
+      "market": "신안동광주역앞상가 골목형상점가",
+      "product": "경유 휘발유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "신안군",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "도시에너지 주식회사",
+      "market": "신안동용봉초건너편 골목형상점가",
+      "product": "엘피지가스",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "신안군",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "전대주유소",
+      "market": "신안동용봉초건너편 골목형상점가",
+      "product": "유류",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "신안군",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "㈜동행",
+      "market": "신창동가구의거리일번국도상점가",
+      "product": "주유소",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "광산구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "다올에너지산업(주)",
+      "market": "신창동가구의거리일번국도상점가",
+      "product": "무연 경유 등유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "광산구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "주식회사 우성고속관광 효천산업주유소",
+      "market": "신효천 골목형상점가",
+      "product": "주유소",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "효천주유소",
+      "market": "신효천 골목형상점가",
+      "product": "휘발유 경유 등유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "백일셀프오일뱅크",
+      "market": "쌍학로상인회 골목형상점가",
+      "product": "휘발유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "박물관주유소",
+      "market": "양산동 하서로 골목형상점가",
+      "product": "주유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "북구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "한일주유소",
+      "market": "양산동 하서로 골목형상점가",
+      "product": "무연 경유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "북구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "행복가득양산주유소",
+      "market": "양산동 하서로 골목형상점가",
+      "product": "-",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "북구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "현대참기름",
+      "market": "여수교동시장",
+      "product": "석유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "여수시",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "경훈에너지",
+      "market": "오치1동 골목형상점가",
+      "product": "유류",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "북구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "SK오치한전주유소",
+      "market": "오치동 천지인로 골목형상점가",
+      "product": "자동차용 연료",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "북구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "장덕셀프주유소",
+      "market": "왕버들 골목형상점가",
+      "product": "유류",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "주식회사 아승클린",
+      "market": "용봉우치로 골목형상점가",
+      "product": "휘발유 경유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "세본주유소",
+      "market": "용주로사랑길 골목형상점가",
+      "product": "무연 경유 등유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "주유소기사식당",
+      "market": "우방이어라 골목형상점가",
+      "product": "간이음식",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "유한회사 우리주유소",
+      "market": "운남골목 골목형상점가",
+      "product": "주유소",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "(주)대창석유 직영 운암주유소",
+      "market": "운암 예술 골목형상점가",
+      "product": "주유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "북구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "주식회사 일프로주유소",
+      "market": "운천역상인회 골목형상점가",
+      "product": "유류",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "유한회사신상무",
+      "market": "운천테라스길상인회 골목형상점가",
+      "product": "주유소",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "현대주유소",
+      "market": "웃장",
+      "product": "주유소",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "순천시",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "주남셀프주유소",
+      "market": "월남 호반베르디움 골목형상점가",
+      "product": "주유소",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "동구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "에스케이(SK)금호석유",
+      "market": "월산4동 골목형상점가",
+      "product": "등유,경유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "남구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "독립로주유소",
+      "market": "월산독립로 골목형상점가",
+      "product": "주유소업",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "서양새마을금고 주유소",
+      "market": "월산독립로 골목형상점가",
+      "product": "주유소",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "골든타임 주유소",
+      "market": "월산로상인회 골목형상점가",
+      "product": "주유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "상록 주유소",
+      "market": "월산로상인회 골목형상점가",
+      "product": "주유소",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "매일LPG충전소",
+      "market": "일곡동(제11지역:용전동) 골목형상점가",
+      "product": "차량용가스충전소",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "북구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "용전IC주유소",
+      "market": "일곡동(제11지역:용전동) 골목형상점가",
+      "product": "차량용 주유소 운영업",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "북구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "용전주유소",
+      "market": "일곡동(제11지역:용전동) 골목형상점가",
+      "product": "무연 경유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "북구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "천보주유소",
+      "market": "일곡동(제11지역:용전동) 골목형상점가",
+      "product": "경유 휘발유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "북구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "행복가득주유소",
+      "market": "일곡동(제11지역:용전동) 골목형상점가",
+      "product": "유류",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "북구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "패밀리LPG충전소",
+      "market": "일곡동(제8지역:롯데,벽산,동아,삼호,월드스파)",
+      "product": "충전소",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "북구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "패밀리셀프주유소",
+      "market": "일곡동(제8지역:롯데,벽산,동아,삼호,월드스파)",
+      "product": "주유소",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "북구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "에스케이신안석유",
+      "market": "임동 골목형상점가",
+      "product": "등유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "북구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "북성주유소",
+      "market": "임동오거리 골목형상점가",
+      "product": "휘발유경유등유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "북구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "송정현대주유소",
+      "market": "임방울거리1구역 골목형상점가",
+      "product": "주유소",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "광주주유소",
+      "market": "임방울대로 골목형상점가",
+      "product": "유류",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "미래LPG충전소",
+      "market": "임방울대로 골목형상점가",
+      "product": "차량용 부탄가스 소매",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "빛고을로셀프주유소",
+      "market": "임방울대로 골목형상점가",
+      "product": "유류",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "세오(주)직영 미래주유소",
+      "market": "임방울대로 골목형상점가",
+      "product": "휘발유경유등유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "신용 구도일주유소",
+      "market": "임방울대로 골목형상점가",
+      "product": "휘발유 경유 등유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "신용주유소",
+      "market": "임방울대로 골목형상점가",
+      "product": "무연 경유 제석유류",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "용두주유소",
+      "market": "임방울대로 골목형상점가",
+      "product": "휘발유 경유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "첨단용두주유소",
+      "market": "임방울대로 골목형상점가",
+      "product": "휘발유경유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "장성농협주유소",
+      "market": "장성읍 골목형상점가",
+      "product": "-",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "장성군",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "순천주유소",
+      "market": "장천동상가",
+      "product": "주유소",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "순천시",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "호남주유소",
+      "market": "장천동상가",
+      "product": "휘발유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "순천시",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "진남주유소",
+      "market": "장흥시장 골목형상점가",
+      "product": "-",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "장흥군",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "매월유통단지주유소",
+      "market": "전평제상인회 골목형상점가",
+      "product": "석유판매업",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "더푸른 주식회사 첨단충전소",
+      "market": "정부청사 골목형상점가",
+      "product": "차량용 엘피지",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "첨단북광주IC주유소",
+      "market": "정부청사 골목형상점가",
+      "product": "주유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "테크노파크주유소",
+      "market": "정부청사 골목형상점가",
+      "product": "주유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "(주)풍암주유소",
+      "market": "주월1동독립로 골목형상점가",
+      "product": "휘발유 경유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "남구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "부원주유소",
+      "market": "죽녹원 북문 골목형상점가",
+      "product": "주유소",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "SK동진석유",
+      "market": "중흥중가로 골목형상점가",
+      "product": "유류",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "대촌주유소",
+      "market": "지석사거리 골목형상점가",
+      "product": "주유소",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "장성군",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "양촌주유소",
+      "market": "지석사거리 골목형상점가",
+      "product": "주유소",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "장성군",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "한백석유첨단주유소",
+      "market": "첨단과기로 골목형상점가",
+      "product": "차량용 기름 및 그외 차량 용품",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "자모셀프주유소",
+      "market": "추억담은광주역뒷길 골목형상점가",
+      "product": "자동차용 연료",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "유창석유",
+      "market": "큰방림길 골목형상점가",
+      "product": "석유류",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "미래 주유소",
+      "market": "토지면 섬진강대로 골목형상점가",
+      "product": "주유소",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "구례군",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "예향주유소",
+      "market": "풍암SK.광명상가상인회 골목형상점가",
+      "product": "주유소",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "서구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "대광주유소",
+      "market": "하남대로가구의거리상인회 골목형상점가",
+      "product": "유류",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "광산구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "하진에너지(주) 하진주유소",
+      "market": "하남진곡 골목형상점가",
+      "product": "휘발유경유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "광산구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "대창주유소",
+      "market": "함평천지 골목형상점가",
+      "product": "유류",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "함평군",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "에스케이(sk)만국석유",
+      "market": "호랑꼬두메마을 골목형상점가",
+      "product": "석유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "-",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "화산주유소",
+      "market": "화산면 골목형상점가",
+      "product": "휘발유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "해남군",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    },
+    {
+      "name": "수완 구도일주유소",
+      "market": "흑석동 골목형상점가",
+      "product": "휘발유 경유 등유",
+      "claimed_payment": "지류/디지털",
+      "claimed_county": "광산구",
+      "same_name_market_in_existing_annual": true,
+      "normalized_pair_in_existing_annual": true
+    }
+  ],
+  "not_independent_current_membership": true,
+  "normalized_existing_annual_pairs": 155,
+  "new_name_market_pairs": []
+}

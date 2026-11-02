@@ -1,0 +1,140 @@
+{
+  "checked_at": "2026-11-03T06:52:58+09:00",
+  "region": "전남",
+  "scope": "bounded portal research, not exhaustive web or merchant census",
+  "web_search_tool_queries": [
+    "\"전남\" \"주유소\" \"온누리\" \"결제\"",
+    "\"전라남도\" \"충전소\" \"온누리\"",
+    "site:blog.naver.com \"전남\" \"온누리\" \"주유소\"",
+    "site:cafe.naver.com \"온누리\" \"주유소\" \"전남\"",
+    "\"온누리\" \"주유소\" \"목포\" -site:mobi.114.ai.kr -site:park.ayo.pe.kr",
+    "\"온누리\" \"주유소\" \"여수\" -site:mobi.114.ai.kr -site:place.udanax.org",
+    "\"온누리\" \"주유소\" \"나주\" -site:mobi.114.ai.kr -site:place.udanax.org",
+    "\"온누리\" \"주유소\" \"광양\" -site:mobi.114.ai.kr -site:place.udanax.org",
+    "\"온누리\" \"주유\" \"순천\" 후기",
+    "\"온누리\" \"주유소\" \"무안\" -site:mobi.114.ai.kr",
+    "\"온누리\" \"주유소\" \"담양\" 결제 -site:mobi.114.ai.kr",
+    "\"온누리\" \"주유소\" \"화순\" -site:mobi.114.ai.kr",
+    "\"온누리상품권\" \"주유소\" \"강진\"",
+    "\"온누리상품권\" \"주유소\" \"고흥\"",
+    "\"온누리상품권\" \"주유소\" \"곡성\"",
+    "\"온누리상품권\" \"주유소\" \"구례\"",
+    "\"온누리상품권\" \"주유소\" \"보성\"",
+    "\"온누리상품권\" \"주유소\" \"신안\"",
+    "\"온누리상품권\" \"주유소\" \"영광\"",
+    "\"온누리상품권\" \"주유소\" \"영암\"",
+    "\"온누리상품권\" \"주유소\" \"완도\"",
+    "\"온누리상품권\" \"주유소\" \"장성\"",
+    "\"온누리상품권\" \"주유소\" \"장흥\"",
+    "\"온누리상품권\" \"주유소\" \"진도\"",
+    "\"온누리상품권\" \"주유소\" \"함평\"",
+    "\"온누리상품권\" \"주유소\" \"해남\"",
+    "\"온누리 상품권 주유소 서울 1곳뿐\"",
+    "\"온누리상품권\" \"LPG\" \"전남\"",
+    "온누리 주유 결제 후기 전남 순천 담양",
+    "\"온누리\" \"주유소\" \"전남\" \"영수증\"",
+    "\"온누리\" \"주유\" \"담양\" \"부원\"",
+    "\"온누리\" \"LPG충전소\" \"여수\"",
+    "\"온누리\" \"주유소\" \"순천\" \"결제했\""
+  ],
+  "regional_name_keywords": [
+    "목포",
+    "여수",
+    "나주",
+    "광양",
+    "순천",
+    "무안",
+    "담양",
+    "화순",
+    "강진",
+    "고흥",
+    "곡성",
+    "구례",
+    "보성",
+    "신안",
+    "영광",
+    "영암",
+    "완도",
+    "장성",
+    "장흥",
+    "진도",
+    "함평",
+    "해남"
+  ],
+  "naver": "one request HTTP403, stopped, no alternate address/IP/proxy retry",
+  "google": "real browser search verified; AI overview excluded; strongest 155-row result opened and fully joined",
+  "daum": "real search results and article read",
+  "sources": [
+    {
+      "url": "https://biz.chosun.com/topics/topics_social/2026/04/24/ZWHOC73ZURF6RNRVPUWDO7RGRE/?outputType=amp",
+      "published_at": "2026-04-24",
+      "kind": "publisher_reporting_SEMAS_counts_secondary",
+      "reported_counts_then": {
+        "nationwide": 150,
+        "Gwangju": 109,
+        "Jeonnam": 11
+      },
+      "current_census": false,
+      "individual_merchant_ids_provided": false
+    },
+    {
+      "url": "https://assembly.gokseong.go.kr/minutes/cnts/mnt/mntsViewer.php?mode=spkr1&schSn=12473&spkrCd=MBR00031",
+      "meeting_date": "2026-09-14",
+      "kind": "official_minutes_search_index_content",
+      "finding": "official describes fuel outlets as outside existing designated market scope",
+      "direct_access": "web timeout; local SSL certificate verification error; not bypassed",
+      "not_all_Gokseong_businesses_membership_decision": true
+    },
+    {
+      "url": "https://noble3.tistory.com/entry/%EA%B4%91%EC%A3%BC%C2%B7%EC%A0%84%EB%82%A8-%EC%98%A8%EB%88%84%EB%A6%AC%EC%83%81%ED%92%88%EA%B6%8C-%EC%A3%BC%EC%9C%A0%EC%86%8C-155%EA%B3%B3-%EC%A0%95%EB%A6%AC-%EA%B4%91%EC%A3%BC%C2%B7%EC%A0%84%EB%82%A8-155%EA%B3%B3-%EB%A7%A4%EC%9E%A5-%EC%9C%84%EC%B9%98-%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0",
+      "kind": "secondary_annual_republication",
+      "rows": 155,
+      "normalized_existing_annual_name_market_pairs": 155,
+      "new_pairs": 0,
+      "region_assignment_conflicts": [
+        "망월/도동재: blog 곡성군 versus mapped 광주",
+        "에코/전대: blog 신안군 versus mapped 광주"
+      ],
+      "nonfuel_registration_examples": [
+        "CU망월주유소점: 생활용품",
+        "주유소기사식당: 간이음식"
+      ]
+    },
+    {
+      "url": "https://economypub.tistory.com/26",
+      "published_at": "2025-06-13",
+      "named_Jeonnam_leads": [
+        "현대주유소 순천 중앙로172",
+        "호남주유소 순천 팔마로9",
+        "순천주유소 강남로45"
+      ],
+      "decision": "already mapped; no current payment confirmation"
+    },
+    {
+      "url": "https://infospot2.anyddingyouneed.com/2026/03/2026-Onnuri-Gift-Certificate-Gas-Station-Discount.html",
+      "named_Jeonnam_leads": [
+        "부원주유소 담양 죽녹원로199"
+      ],
+      "decision": "already mapped; secondary QR/card claim"
+    },
+    {
+      "url": "https://www.dealbada.com/bbs/board.php?bo_table=gal_free&wr_id=64598",
+      "decision": "repeated Buwon list; not independent confirmation"
+    },
+    {
+      "url": "https://gall.dcinside.com/board/view/?id=car_q&no=24672&page=1",
+      "decision": "repeated Buwon list; not receipt or independent confirmation"
+    }
+  ],
+  "new_current_membership_confirmations": 0,
+  "map_additions": 0,
+  "existing_stations_reconfirmed_by_new_primary_source": 0,
+  "current_Jeonnam_map_count": 28,
+  "map_sha256": "00a054ab8f5912ebfb5590f03fc682e687fb8f38dfa9e421b45052df1feb6d89",
+  "map_or_payment_dates_changed": false,
+  "pending": [
+    "Gokseong current district boundaries and member inventories",
+    "current membership for old Muan paper leads",
+    "ongift platform provenance and policy review before any merchant query"
+  ]
+}

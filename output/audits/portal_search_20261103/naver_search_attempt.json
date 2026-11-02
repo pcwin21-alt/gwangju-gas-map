@@ -1,0 +1,10 @@
+{
+  "checked_at": "2026-11-03T06:47:54+09:00",
+  "query": "전남 온누리 주유소 결제",
+  "engine": "naver",
+  "source": "https://search.naver.com/search.naver",
+  "page_cap": 1,
+  "status": "failed",
+  "error": "RuntimeError",
+  "message": "Naver search returned HTTP 403. The request may have been blocked. Retry later or reduce request volume."
+}

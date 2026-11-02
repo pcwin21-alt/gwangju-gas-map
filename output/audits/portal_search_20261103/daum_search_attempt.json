@@ -1,0 +1,35 @@
+{
+  "engine": "daum",
+  "query": "전남 온누리 주유소 결제",
+  "source": "https://search.daum.net/search",
+  "checked_at": "2026-11-03T06:48:14+09:00",
+  "http_status": 200,
+  "title": "전남 온누리 주유소 결제 – Daum 검색",
+  "status": "search_results_verified",
+  "links": [
+    {
+      "text": "2",
+      "url": "http://v.daum.net/v/20260424144332581"
+    },
+    {
+      "text": "[단독] 기름값 아끼려 했더니… 온누리 상품권 주유소 서울 1곳뿐",
+      "url": "http://v.daum.net/v/20260424144332581"
+    },
+    {
+      "text": "2",
+      "url": "http://v.daum.net/v/20260429000013644"
+    },
+    {
+      "text": "\"단골 주유소 못 가나요?”…고유가 지원금 주유소 제한 두고 '갑론을박'",
+      "url": "http://v.daum.net/v/20260429000013644"
+    },
+    {
+      "text": "“안 쓰면 손해“ 온누리 상품권, 일상 소비 화폐 자리 잡아",
+      "url": "http://v.daum.net/v/20260302141513793"
+    },
+    {
+      "text": "\"안 쓰면 나만 손해\" 온누리 상품권, 일상 소비 화폐 자리 잡아",
+      "url": "http://v.daum.net/v/20260302083159305"
+    }
+  ]
+}

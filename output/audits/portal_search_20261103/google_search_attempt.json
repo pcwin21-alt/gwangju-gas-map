@@ -1,0 +1,40 @@
+{
+  "engine": "google",
+  "query": "전남 온누리 주유소 결제",
+  "source": "https://www.google.com/search",
+  "checked_at": "2026-11-03T06:48:14+09:00",
+  "http_status": 200,
+  "title": "Google Search",
+  "status": "browser_rendered_results_verified",
+  "links": [
+    {
+      "text": "의견",
+      "url": "https://support.google.com/websearch"
+    }
+  ],
+  "initial_HTTP_result": "javascript_shell_without_search_results",
+  "browser_query": "전남 온누리 주유소 결제",
+  "browser_observations": [
+    {
+      "title": "광주·전남 온누리상품권 주유소 155곳 정리",
+      "source": "noble3.tistory.com",
+      "result": "opened_and_compared_155_rows_to_existing_annual"
+    },
+    {
+      "title": "전국 온누리 상품권 사용 가능 주유소 목록",
+      "source": "blog.naver.com/norinori2",
+      "date": "2025-05-03",
+      "scope": "Google_snippet_only_Naver_original_not_retried"
+    },
+    {
+      "title": "온누리상품권 가맹점정보 조회",
+      "source": "ongift.or.kr",
+      "scope": "search_result_only_no_merchant_query"
+    },
+    {
+      "title": "광주 동네별 온누리상품권 결제가능 주유소 리스트",
+      "source": "blog.naver.com",
+      "scope": "Google_snippet_only_outside_active_Jeonnam_scope"
+    }
+  ]
+}
