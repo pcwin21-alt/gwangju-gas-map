@@ -169,7 +169,7 @@
   },
   "supplemental_onnuri": {
     "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
-    "checked_at": "2026-11-03T07:50:24+09:00",
+    "checked_at": "2026-11-03T10:05:11+09:00",
     "confirmed_count": 14,
     "stale_count": 0,
     "scope": "issuer_specific_corroboration_not_nationwide_refresh"
@@ -177,10 +177,10 @@
   "incremental_collection": {
     "status": "running",
     "jobs_total": 227,
-    "jobs_done": 31,
-    "jobs_remaining": 196,
-    "review_records": 9,
-    "evidence_records": 19,
+    "jobs_done": 34,
+    "jobs_remaining": 193,
+    "review_records": 12,
+    "evidence_records": 21,
     "source_gaps": 90,
     "source_status": {
       "onnuri": "blocked",
@@ -193,18 +193,18 @@
         "region": "전남",
         "status": "collecting",
         "jobs_total": 43,
-        "jobs_remaining": 12,
+        "jobs_remaining": 9,
         "jobs_needing_review": 0,
-        "source_gaps": 25,
-        "review_records": 8,
+        "source_gaps": 24,
+        "review_records": 11,
         "inventory_reviewed": false,
         "mapped_records_to_recheck": 28,
         "membership_check_status": {
-          "confirmed_in_issuer_scope": 19,
-          "needs_review_not_found": 3,
-          "pending": 6
+          "confirmed_in_issuer_scope": 20,
+          "needs_review_not_found": 4,
+          "pending": 4
         },
-        "unresolved_annual_identities": 22,
+        "unresolved_annual_identities": 21,
         "missing_standard_checks": [
           "market_coverage",
           "membership_rechecks",
@@ -470,14 +470,14 @@
         "jobs_total": 131,
         "jobs_remaining": 131,
         "jobs_needing_review": 0,
-        "source_gaps": 25,
+        "source_gaps": 24,
         "review_records": 0,
         "inventory_reviewed": false,
         "mapped_records_to_recheck": 131,
         "membership_check_status": {
           "pending": 131
         },
-        "unresolved_annual_identities": 22,
+        "unresolved_annual_identities": 21,
         "missing_standard_checks": [
           "market_coverage",
           "membership_rechecks",
@@ -583,7 +583,7 @@
         "interval_seconds": 180,
         "stage": "pilot",
         "clean_since": 1793556784.2048566,
-        "valid_responses_in_clean_window": 18,
+        "valid_responses_in_clean_window": 21,
         "earliest_review_at": 1793729584.2048566
       },
       "datagov": {
@@ -593,7 +593,7 @@
         "stage": "fixed"
       }
     },
-    "checked_at": "2026-11-03T07:50:25+09:00",
+    "checked_at": "2026-11-03T10:08:15+09:00",
     "scope": "strictly sequential regional fuel-merchant verification; not a geographic census",
     "new_station_count": 0
   }
