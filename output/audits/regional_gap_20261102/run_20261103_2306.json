@@ -1,0 +1,185 @@
+{
+  "checked_at": "2026-11-03T23:21:11+09:00",
+  "region": "전남",
+  "collection_run": "https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41650474177",
+  "publication_run": "https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41652414908",
+  "pages_run": "https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41652486785",
+  "source_requests_this_round": 1,
+  "request_purpose": "issuer_coordinate_identity_review",
+  "query": {
+    "target": "(주)대창석유 (남창)",
+    "attempt_id": "a5b5a121c14a4894b058d3e6",
+    "http_status": 200,
+    "checked_at": "2026-11-03T23:07:02+09:00",
+    "exact_bank_id": "000000055922616"
+  },
+  "additional_requests_for_manual_review_and_publication": 0,
+  "previous_run_to_this_run_seconds": 10854.594025611877,
+  "new_existing_station_rechecks": 1,
+  "new_station_discoveries": 0,
+  "new_map_stations": 0,
+  "changed_station_ids": [
+    "onnuri:kb:000000055922616"
+  ],
+  "change_scope": "KB issuer_checks only; all operator/paper/QR dates, identities, map locations and payment methods preserved",
+  "province_only_annual_resolutions_added": 3,
+  "province_resolution_scope": "Existing same-market consistent-region rule reused with two distinct dated archived operator IDs/addresses, valid coordinates and exact market name. These three candidate businesses remain unresolved in Gwangju. No matching-name or proximity membership promotion.",
+  "progress_before": {
+    "region": "전남",
+    "status": "collecting",
+    "jobs_total": 44,
+    "jobs_remaining": 1,
+    "jobs_needing_review": 0,
+    "source_gaps": 12,
+    "review_records": 10,
+    "inventory_reviewed": false,
+    "mapped_records_to_recheck": 28,
+    "membership_check_status": {
+      "confirmed_in_issuer_scope": 25,
+      "needs_review_not_found": 3
+    },
+    "unresolved_annual_identities": 9,
+    "missing_standard_checks": [
+      "market_coverage",
+      "membership_rechecks",
+      "annual_identities"
+    ],
+    "standard_checks_complete": false,
+    "scope": "issuer-scoped rechecks; paper/QR/operator freshness not inferred"
+  },
+  "progress_after": {
+    "region": "전남",
+    "status": "needs_review",
+    "jobs_total": 44,
+    "jobs_remaining": 0,
+    "jobs_needing_review": 0,
+    "source_gaps": 9,
+    "review_records": 9,
+    "inventory_reviewed": false,
+    "mapped_records_to_recheck": 28,
+    "membership_check_status": {
+      "confirmed_in_issuer_scope": 26,
+      "needs_review_not_found": 2
+    },
+    "unresolved_annual_identities": 6,
+    "missing_standard_checks": [
+      "market_coverage",
+      "membership_rechecks",
+      "annual_identities"
+    ],
+    "standard_checks_complete": false,
+    "scope": "issuer-scoped rechecks; paper/QR/operator freshness not inferred"
+  },
+  "gwangju_unresolved_preserved": 21,
+  "coverage_checks": {
+    "annual_inventory": {
+      "status": "complete",
+      "checked_at": "2026-11-02T02:08:47+09:00",
+      "source_date": "2026-07-31",
+      "scope": "latest advertised public snapshot downloaded; not all current merchants"
+    },
+    "location_inventory": {
+      "status": "complete",
+      "checked_at": "2026-06-30",
+      "source_date": null,
+      "scope": "dated physical source inventory only; not current membership"
+    },
+    "annual_identities": {
+      "status": "pending",
+      "checked_at": null,
+      "source_date": null,
+      "scope": null
+    },
+    "membership_rechecks": {
+      "status": "pending",
+      "checked_at": null,
+      "source_date": null,
+      "scope": "Current issuer rechecks incomplete; coordinate discrepancy follow-up is discovery only"
+    },
+    "market_coverage": {
+      "status": "pending",
+      "checked_at": null,
+      "source_date": null,
+      "scope": "Pending primary designation boundaries and shop inventories across all 22 municipalities; Damyang secondary leads are not completed coverage."
+    }
+  },
+  "rolling_24h_requests": {
+    "kbcard": 22
+  },
+  "effective_limits": {
+    "onnuri": {
+      "requests_per_24h": 24,
+      "requests_per_run": 0,
+      "interval_seconds": 180,
+      "stage": "stopped"
+    },
+    "kbcard": {
+      "requests_per_24h": 24,
+      "requests_per_run": 3,
+      "interval_seconds": 180,
+      "stage": "pilot",
+      "clean_since": 1793556784.2048566,
+      "valid_responses_in_clean_window": 31,
+      "earliest_review_at": 1793729584.2048566
+    },
+    "datagov": {
+      "requests_per_24h": 20,
+      "requests_per_run": 3,
+      "interval_seconds": 180,
+      "stage": "fixed"
+    }
+  },
+  "next_allowed_collection_at": "2026-11-04T02:06:59+09:00",
+  "earliest_kb_ramp_review_at": "2026-11-04T03:13:04+09:00",
+  "python_tests_passed_after_change": 191,
+  "regression_checks_added": 2,
+  "guard_scope": "Insufficient/same-ID/same-address/conflicting-region/wrong-market/undated/unofficial evidence cannot narrow a candidate region; source gaps and home-region identities stay open.",
+  "preserved": {
+    "previous_attempts": true,
+    "no_new_region_queries": true,
+    "operator_block": true,
+    "zero_request_publication_preserved_cadence": true,
+    "raw_annual_rows_source_gaps_prior_candidate_resolutions": true,
+    "only_expected_issuer_field_changed": true,
+    "pinned_toss_bundle": true
+  },
+  "supplemental_primary_discovery": {
+    "Namgomun_search_result": "https://mbolt.tistory.com/863",
+    "kind": "2022 secondary permit-list reproduction; historical physical identity lead only",
+    "observed_name": "남고문 주유소",
+    "observed_lot_address": "전라남도 나주시 남외동 41",
+    "observed_raw_phone": "6103374451",
+    "decision": "Do not promote current issuer recheck from an old secondary list or silently repair this phone value. Municipal or primary registry corroboration remains open.",
+    "official_Naju_or_bulk_Opinet_search": "No new primary exact-premise source secured this round. Unrelated API documentation or search absence is not nonmembership.",
+    "archived_jeonnam_grid_market_search": "No additional exact market witnesses found for the four remaining ambiguous-market candidates; not a fresh source lookup or a completeness proof."
+  },
+  "public_verification": {
+    "status": "passed",
+    "checked_at": "2026-11-03T23:21:33+09:00",
+    "url": "https://pcwin21-alt.github.io/gwangju-gas-map/?v=7d51d07",
+    "http_status": 200,
+    "embedded_stations_match_main": true,
+    "total_records": 220,
+    "onnuri_tagged": 184,
+    "jeonnam_historical_records": 28,
+    "fresh_issuer_check": {
+      "status": "confirmed_in_issuer_scope",
+      "issuer": "kbcard",
+      "checked_at": "2026-11-03T23:07:02+09:00",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "bank_id": "000000055922616",
+      "other_payment_methods": "not_reverified",
+      "identity_review_evidence": "https://github.com/pcwin21-alt/gwangju-gas-map/blob/b94117e11e726b40100125bb0fcf019221a3775c/output/audits/regional_gap_20261102/namchang_and_market_review_20261103_2310.json",
+      "match_basis": "bank_onnuri_flag_reviewed_name_phone_registry_opinet_address_coordinates",
+      "map_location_changed": false
+    },
+    "pages_workflow_conclusion": "success"
+  },
+  "region_complete": false,
+  "next_work": [
+    "Acquire independent Namgomun fuel-premise identity and current Terminal membership evidence",
+    "Resolve the 6 annual identities with exact business/market linkage or documented exclusions",
+    "Obtain current market designation boundaries and member inventories across Jeonnam; keep Jeonbuk queued",
+    "Supplement discovery sources and merge genuinely new work; 44 executed jobs are not a complete regional census"
+  ]
+}
