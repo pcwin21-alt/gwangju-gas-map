@@ -9,6 +9,7 @@ npm ci
 npm test
 python -X utf8 -m unittest discover -s tests -p 'test_*.py'
 npm run build
+python -X utf8 verify_bundle.py
 ```
 
 출력 `onnuri-fuel-map.ait`를 콘솔에서 테스트용으로 올린다. API 키·콘솔 토큰을 소스/명령행에 추가하지 않는다. 로고는 기존 `favicon.svg`를 불투명한 배경으로 600px PNG 렌더링한 `submission-assets/logo-600.png`다.

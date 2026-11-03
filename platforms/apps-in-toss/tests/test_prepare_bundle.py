@@ -1,5 +1,6 @@
 import importlib.util
 import re
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -34,9 +35,37 @@ class PlatformBuild(unittest.TestCase):
     def test_failed_map_fallback_does_not_send_users_to_external_navigation(self):
         js = (builder.ROOT / 'assets/nationwide-ui.js').read_text(encoding='utf-8')
         result = builder.prepare_results(js)
-        self.assertIn("createElement(hasMap?'button':'div')", result)
+        self.assertIn("createElement('button')", result)
         self.assertNotIn('node.href=', result)
+        self.assertIn('window.GasTossUI.showStationDetails(station,node)', result)
         self.assertIn('목록에서 주유소 정보를 확인하세요.', result)
+
+    def test_candidate_registers_detail_fallback_before_results(self):
+        self.assertLess(self.html.index('src="assets/information-ui.js"'), self.html.index('src="assets/nationwide-ui.js"'))
+        self.assertIn('<title>온누리 주유소 지도</title>', self.html)
+        self.assertNotIn('결제 가능 수단, 현재 유가', self.html)
+
+    def test_old_trial_assets_cannot_survive_rebuild(self):
+        from unittest.mock import patch
+        # Use a separate output root, including a leftover from an earlier build.
+        with tempfile.TemporaryDirectory() as temporary:
+            here = Path(temporary)
+            (here / 'src').mkdir()
+            for path in (builder.HERE / 'src').glob('information-ui.*'):
+                (here / 'src' / path.name).write_bytes(path.read_bytes())
+            dist = here / 'dist'
+            (dist / 'assets').mkdir(parents=True)
+            (dist / 'assets' / 'old-trial.js').write_text('old network integration')
+            with patch.object(builder, 'HERE', here):
+                references = builder.copy_assets(self.html, dist)
+            self.assertFalse((dist / 'assets' / 'old-trial.js').exists())
+            self.assertFalse((dist / 'assets' / 'route-planner.js').exists())
+            self.assertFalse((dist / 'assets' / 'theme.js').exists())
+            self.assertIn('assets/information-ui.js', references)
+            self.assertTrue((dist / 'assets' / 'information-ui.js').is_file())
+            translation = (dist / 'assets' / 'i18n.js').read_text(encoding='utf-8')
+            self.assertNotIn('전국 주유소 할인 지도', translation)
+            self.assertIn('Onnuri FuelMap', translation)
 
 
 if __name__ == '__main__':

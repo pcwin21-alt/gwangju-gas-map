@@ -1,0 +1,13 @@
+.toss-station-dialog {
+  box-sizing:border-box;width:min(32rem,calc(100vw - 24px));max-height:calc(100dvh - 32px);
+  overflow:auto;margin:auto;padding:20px;border:1px solid var(--line);border-radius:20px;
+  background:var(--panel);color:var(--ink);box-shadow:var(--panel-shadow);font-size:16px;line-height:1.6;
+}
+.toss-station-dialog::backdrop {background:var(--veil);}
+.toss-station-heading {display:flex;align-items:flex-start;gap:12px;}
+.toss-station-heading h2 {flex:1;margin:0;font-size:20px;overflow-wrap:anywhere;}
+.toss-station-heading button {min-width:52px;min-height:44px;flex:none;cursor:pointer;border:1px solid var(--line);border-radius:12px;}
+.toss-station-dialog p {margin:16px 0 0;overflow-wrap:anywhere;}
+.toss-station-payment {padding:10px;border-radius:12px;background:var(--selected);color:var(--selected-ink);font-weight:600;}
+.toss-station-note {color:var(--muted);}
+.toss-station-prices {padding:12px;background:var(--surface);border:1px solid var(--soft-line);border-radius:12px;}
