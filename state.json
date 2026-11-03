@@ -13,7 +13,7 @@
       "status": "active",
       "url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
       "scope": "Public unauthenticated Onnuri merchant form; issuer-specific evidence only; limits are our load caps, not a provider guarantee",
-      "next_allowed_at": 1793693295.5209043,
+      "next_allowed_at": 1793693298.2186446,
       "volume_ramp": {
         "stage": "pilot",
         "started_at": 1793556784.2048566,
@@ -971,7 +971,7 @@
       "job_id": "61e909439fc59f61a0845e38",
       "source": "kbcard",
       "at": 1793693115.5209043,
-      "status": "reserved",
+      "status": "done",
       "run_id": "86e12d78bbf948259f21a94fd03640e7",
       "request": {
         "method": "POST",
@@ -988,7 +988,12 @@
           "endRow": 10,
           "mmcNm": ""
         }
-      }
+      },
+      "request_started_at": 1793693116.8018594,
+      "network_duration_seconds": 1.1592438220977783,
+      "http_status": 200,
+      "response_sha256": "4c5e03c8a8efc5a862c04a55ca6b622b202add77fe092cce6cb566234f333fee",
+      "finished_at": 1793693118.2185764
     }
   ],
   "jobs": [
@@ -2839,11 +2844,18 @@
       },
       "logical_key": "61e909439fc59f61a0845e38",
       "id": "61e909439fc59f61a0845e38",
-      "status": "pending",
+      "status": "done",
       "attempts": 1,
       "page": 1,
-      "observed_ids": [],
-      "station_ids": []
+      "observed_ids": [
+        "000000086997337",
+        "000000073028201",
+        "000000011945141"
+      ],
+      "station_ids": [],
+      "expected": 3,
+      "last_observed_at": "2026-11-03T17:05:17+09:00",
+      "result": "observations_saved"
     },
     {
       "kind": "kb_search",
