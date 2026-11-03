@@ -195,15 +195,15 @@
         "jobs_total": 44,
         "jobs_remaining": 0,
         "jobs_needing_review": 0,
-        "source_gaps": 12,
-        "review_records": 11,
+        "source_gaps": 9,
+        "review_records": 9,
         "inventory_reviewed": false,
         "mapped_records_to_recheck": 28,
         "membership_check_status": {
-          "confirmed_in_issuer_scope": 25,
-          "needs_review_not_found": 3
+          "confirmed_in_issuer_scope": 26,
+          "needs_review_not_found": 2
         },
-        "unresolved_annual_identities": 9,
+        "unresolved_annual_identities": 6,
         "missing_standard_checks": [
           "market_coverage",
           "membership_rechecks",
@@ -598,7 +598,7 @@
       "next_allowed_at": 1793725619.3262494,
       "waiting": true
     },
-    "checked_at": "2026-11-03T23:07:04+09:00",
+    "checked_at": "2026-11-03T23:18:55+09:00",
     "scope": "strictly sequential regional fuel-merchant verification; not a geographic census",
     "new_station_count": 0
   }
