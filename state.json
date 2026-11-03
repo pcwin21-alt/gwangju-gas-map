@@ -13,7 +13,7 @@
       "status": "active",
       "url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
       "scope": "Public unauthenticated Onnuri merchant form; issuer-specific evidence only; limits are our load caps, not a provider guarantee",
-      "next_allowed_at": 1793748067.8709557,
+      "next_allowed_at": 1793748071.519407,
       "volume_ramp": {
         "stage": "promoted",
         "started_at": 1793556784.2048566,
@@ -1259,7 +1259,7 @@
       "job_id": "9b6c0fa15ed446aa75703f34",
       "source": "kbcard",
       "at": 1793747887.8709557,
-      "status": "reserved",
+      "status": "done",
       "run_id": "a13266130d034aa0b524a55f618ed2c9",
       "request": {
         "method": "POST",
@@ -1276,7 +1276,12 @@
           "endRow": 10,
           "mmcNm": ""
         }
-      }
+      },
+      "request_started_at": 1793747889.0820878,
+      "network_duration_seconds": 0.9103329181671143,
+      "http_status": 200,
+      "response_sha256": "244be4050537d0dbc68f720c420d29cdf3d947e478da9b4f821364a490216ce0",
+      "finished_at": 1793747891.5193496
     }
   ],
   "jobs": [
@@ -8049,10 +8054,51 @@
       "scope": "One unfiltered issuer lookup anchored at one independently recorded vehicle-fuel location. Road context does not establish market containment or Onnuri membership.",
       "id": "9b6c0fa15ed446aa75703f34",
       "logical_key": "9b6c0fa15ed446aa75703f34",
-      "status": "pending",
+      "status": "done",
       "attempts": 1,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [
+        "000000081951303",
+        "000000120943801",
+        "000000107106270",
+        "000000120941946",
+        "000000120160752",
+        "000000106736811",
+        "000000104461593",
+        "000000105002918",
+        "000000080574905",
+        "000000096194401",
+        "000000071793718",
+        "000000009549180",
+        "000000122046262",
+        "000000098141011",
+        "000000074168648",
+        "000000072511229",
+        "000000115980348",
+        "000000080749907",
+        "000000116740082",
+        "000000069354725",
+        "000000034068242",
+        "000000069470301",
+        "000000036774996",
+        "000000109201551",
+        "000000025992352",
+        "000000069921031",
+        "000000004353491",
+        "000000121511278",
+        "000000072665834",
+        "000000028737011",
+        "000000090442704",
+        "000000113025196",
+        "000000045501171",
+        "000000111461749",
+        "000000115918010",
+        "000000077054661",
+        "000000010210956"
+      ],
+      "expected": 37,
+      "last_observed_at": "2026-11-04T08:18:09+09:00",
+      "result": "observations_saved"
     },
     {
       "kind": "kb_search",
