@@ -14155,7 +14155,7 @@
             "kbcard": {
               "status": "confirmed_in_issuer_scope",
               "issuer": "kbcard",
-              "checked_at": "2026-11-02T15:20:33+09:00",
+              "checked_at": "2026-11-03T10:02:08+09:00",
               "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
               "bank_id": "000000100745478",
               "other_payment_methods": "not_reverified"
@@ -14622,7 +14622,17 @@
           "source_url": "https://www.onnuri.gift/place",
           "match_basis": "official_place_id_address_coordinates",
           "market": "분향리 골목형상점가",
-          "candidate_ids": []
+          "candidate_ids": [],
+          "issuer_checks": {
+            "kbcard": {
+              "status": "confirmed_in_issuer_scope",
+              "issuer": "kbcard",
+              "checked_at": "2026-11-03T10:05:11+09:00",
+              "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+              "bank_id": "000000099959398",
+              "other_payment_methods": "not_reverified"
+            }
+          }
         }
       },
       {
@@ -14995,7 +15005,15 @@
           ],
           "match_basis": "bank_onnuri_flag_fuel_category_reviewed_name_phone_municipal_address",
           "candidate_ids": [],
-          "note": "KB국민카드 온누리 사용처 조회 기준. 카드사 반영 지연 가능. 지류·QR·다른 카드사는 별도 확인."
+          "note": "KB국민카드 온누리 사용처 조회 기준. 카드사 반영 지연 가능. 지류·QR·다른 카드사는 별도 확인.",
+          "issuer_checks": {
+            "kbcard": {
+              "status": "needs_review_not_found",
+              "checked_at": "2026-11-03T10:08:14+09:00",
+              "job_id": "504058b68c3f51a4ff1d8e1f",
+              "nonmembership": "not_established"
+            }
+          }
         }
       },
       {
