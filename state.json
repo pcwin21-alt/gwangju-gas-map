@@ -13,7 +13,7 @@
       "status": "active",
       "url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
       "scope": "Public unauthenticated Onnuri merchant form; issuer-specific evidence only; limits are our load caps, not a provider guarantee",
-      "next_allowed_at": 1793714999.3262494,
+      "next_allowed_at": 1793715002.9116232,
       "volume_ramp": {
         "stage": "pilot",
         "started_at": 1793556784.2048566,
@@ -1145,7 +1145,7 @@
       "job_id": "6a1d9da1fc4a77b64d6332db",
       "source": "kbcard",
       "at": 1793714819.3262494,
-      "status": "reserved",
+      "status": "done",
       "run_id": "1e8ec0d2b6c640c9b96d83af1ab7af0a",
       "request": {
         "method": "POST",
@@ -1162,7 +1162,12 @@
           "endRow": 10,
           "mmcNm": "남창"
         }
-      }
+      },
+      "request_started_at": 1793714821.5605013,
+      "network_duration_seconds": 1.2432529926300049,
+      "http_status": 200,
+      "response_sha256": "023db2023407a3d43e6adae602db58640a74e8edd77b4cad812cfd101cc92d69",
+      "finished_at": 1793714822.9115517
     }
   ],
   "jobs": [
@@ -7491,10 +7496,15 @@
       "discovery_scope": "Query the archived issuer point only to inspect this exact issuer ID; keep the municipal/Opinet map location and current membership unresolved until identity review.",
       "id": "6a1d9da1fc4a77b64d6332db",
       "logical_key": "6a1d9da1fc4a77b64d6332db",
-      "status": "pending",
+      "status": "done",
       "attempts": 1,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [
+        "000000055922616"
+      ],
+      "expected": 1,
+      "last_observed_at": "2026-11-03T23:07:02+09:00",
+      "result": "observations_saved"
     }
   ],
   "evidence": [
@@ -9091,6 +9101,33 @@
       "resolution_evidence": [
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/55cb2325f8fe833cb88267006d89686c0f9268e9/output/audits/regional_gap_20261102/innovation_identity_recheck_20261103.json"
       ]
+    },
+    {
+      "job_id": "6a1d9da1fc4a77b64d6332db",
+      "bank_record": {
+        "location": {
+          "lat": "34.4156236591",
+          "lng": "126.6304928486"
+        },
+        "content": {
+          "tel": "061)533-6760",
+          "title": "(주)대창석유 (남창)",
+          "category": "주유소",
+          "address": "전남 해남군 북평면 ",
+          "distance": "999",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000055922616",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        }
+      },
+      "checked_at": "2026-11-03T23:07:02+09:00",
+      "independent_fuel_candidate_ids": [],
+      "reason": "Independent exact business/address/category evidence incomplete; do not exclude by bank category alone"
     }
   ],
   "source_gaps": [
