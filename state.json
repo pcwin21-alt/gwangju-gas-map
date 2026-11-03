@@ -9787,9 +9787,9 @@
   "summary": {
     "status": "running",
     "jobs_total": 228,
-    "jobs_done": 40,
-    "jobs_remaining": 188,
-    "review_records": 19,
+    "jobs_done": 43,
+    "jobs_remaining": 185,
+    "review_records": 20,
     "evidence_records": 24,
     "source_gaps": 90,
     "source_status": {
@@ -9803,10 +9803,10 @@
         "region": "전남",
         "status": "collecting",
         "jobs_total": 44,
-        "jobs_remaining": 4,
+        "jobs_remaining": 1,
         "jobs_needing_review": 0,
         "source_gaps": 12,
-        "review_records": 11,
+        "review_records": 12,
         "inventory_reviewed": false,
         "mapped_records_to_recheck": 28,
         "membership_check_status": {
@@ -10192,7 +10192,7 @@
         "interval_seconds": 180,
         "stage": "pilot",
         "clean_since": 1793556784.2048566,
-        "valid_responses_in_clean_window": 27,
+        "valid_responses_in_clean_window": 30,
         "earliest_review_at": 1793729584.2048566
       },
       "datagov": {
@@ -10204,16 +10204,20 @@
     },
     "collection_schedule": {
       "minimum_run_interval_seconds": 10800,
-      "last_collection_started_at": 1793693115.5209043,
-      "next_allowed_at": 1793703915.5209043,
+      "last_collection_started_at": 1793703964.7322237,
+      "next_allowed_at": 1793714764.7322237,
       "waiting": true
     }
   },
   "last_run": {
-    "id": "551fa4c68c254b0dacc84de476c5f352",
-    "checked_at": "2026-11-03T19:56:56+09:00",
-    "requests": 0,
-    "request_purposes": {}
+    "id": "f87df8ce7a8441c2a02fce4125b03c37",
+    "checked_at": "2026-11-03T20:12:13+09:00",
+    "requests": 3,
+    "request_purposes": {
+      "annual_reverse_discovery": 1,
+      "issuer_coordinate_identity_review": 1,
+      "full_inventory_identity_followup": 1
+    }
   },
   "initial_scope": "finite cross-source fuel registration candidates, Jeonnam first and Seoul last; not a geographic census",
   "region_order": [
@@ -23619,7 +23623,7 @@
       "interval_seconds": 180,
       "stage": "pilot",
       "clean_since": 1793556784.2048566,
-      "valid_responses_in_clean_window": 27,
+      "valid_responses_in_clean_window": 30,
       "earliest_review_at": 1793729584.2048566
     },
     "datagov": {
@@ -24093,8 +24097,8 @@
   },
   "collection_schedule": {
     "minimum_run_interval_seconds": 10800,
-    "last_collection_started_at": 1793693115.5209043,
-    "next_allowed_at": 1793703915.5209043,
+    "last_collection_started_at": 1793703964.7322237,
+    "next_allowed_at": 1793714764.7322237,
     "waiting": true
   }
 }
