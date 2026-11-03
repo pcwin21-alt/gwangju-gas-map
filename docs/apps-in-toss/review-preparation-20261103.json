@@ -1,6 +1,6 @@
 {
   "preparedAt": "2026-11-03T14:12:40.087248+09:00",
-  "status": "map_domain_fixed_toss_device_retest_pending",
+  "status": "map_display_confirmed_logo_saved_remaining_device_checks",
   "appName": "onnuri-fuel-map",
   "workspaceId": "105239",
   "consoleUrl": "https://apps-in-toss.toss.im/workspace/105239/mini-app/onnuri-fuel-map/app-build",
@@ -8,23 +8,23 @@
   "readyForSubmission": false,
   "bundleUploadedThisRun": false,
   "reviewSubmittedThisRun": false,
-  "tossDeviceTest": "user_reported_entire_app_blank_retest_pending",
-  "consoleInspection": "Test version 20261103-1 QR observed; Kakao SDK domains saved and reloaded; real Toss retest pending",
+  "tossDeviceTest": "map_and_markers_passed_user_report_other_flows_pending",
+  "consoleInspection": "Actual QR test version map/markers confirmed by user; primary logo uploaded, draft saved and reload verified; final acknowledgements unchecked and review disabled",
   "checks": {
     "nodeTestsPassed": 3,
     "pythonTestsPassed": 6,
     "inlineScriptsSyntaxPassed": 1,
     "embeddedDatasetsPreserved": 5,
     "sourceAndPaletteHashMatched": true,
-    "logo": "600x600 PNG, opaque",
+    "logo": "600x600 PNG uploaded, draft saved, reloaded and rendered dimensions verified",
     "browser": "manual lookup, clear/reset, region and fuel/payment filters, pagination, reload state, local details and focus return, help and language; widths 288/360/1280; no real Toss device",
     "javascriptSyntaxPassed": 20,
     "bundleArtifactChecksPassed": 9,
-    "mapRepair": "Same pinned .ait rendered map and markers on the already registered localhost:8080; 177 loaded map images and no browser warnings/errors. Native Toss runtime is not certified."
+    "mapRepair": "User confirmed actual Toss test version 20261103-1 renders map and markers after Kakao SDK domain registration; other device flows remain unverified."
   },
   "blockingChecks": [
-    "Reopen test version 20261103-1 in the real Toss app and verify the reported blank screen; capture Web Debug Tools Log/Network if it persists",
-    "Verify remaining logo, functional device tests and truthful operator acknowledgements before submission"
+    "Complete remaining real Toss search/details/touch, location allow/deny and native navigation checks",
+    "Confirm final platform eligibility, applicable operational notices and truthful operator acknowledgements before submission"
   ],
   "files": {
     "artifact-audit.json": {
@@ -36,8 +36,8 @@
       "sha256": "63386aac30bfa30d722ee3ac2d56e1147cec02066f2be591ff903611722d62e1"
     },
     "console-recheck.json": {
-      "bytes": 2428,
-      "sha256": "e4eb629e201e5cb68be08616b1c1154ea3a40767ab6c620aae34bdd05314891f"
+      "bytes": 3149,
+      "sha256": "305abb2d089b4a8bc6aced21523b8100cf8a1398a013e7967a03a9ac14db343f"
     },
     "logo-600.png": {
       "bytes": 14747,
@@ -52,16 +52,16 @@
       "sha256": "e1f72f65b654b4b5bc2bc7430261c5614a824697d4c85d91a8dc0b85faf63c7f"
     },
     "START_HERE.md": {
-      "bytes": 23859,
-      "sha256": "403b30862854091af1df77a6ebe7c83944ce429aeff0d6ffdd2ce2597d8467ea"
+      "bytes": 25506,
+      "sha256": "04339df8d6a694f25d7ec827c404838c033f7a125ed59574ce86482657676876"
     },
     "test-build-manifest.json": {
       "bytes": 6277,
       "sha256": "9a7f267568487492fb65d9eed22c0cd8a4a3fd71d8b13b64ead010714a8e461a"
     },
     "map-domain-fix-20261103.json": {
-      "bytes": 1770,
-      "sha256": "8a6c975497bff789c20c91760ef50edbeb71ae372617f480b1680cb6cadfad02"
+      "bytes": 2134,
+      "sha256": "3027b771a3a32cb2a7cfb49ba002ea75477ccd0b319a1f3435169e975425e15a"
     },
     "map-domains-saved.jpg": {
       "bytes": 71929,
@@ -72,8 +72,12 @@
       "sha256": "93e97f358434db15e8dcf2814f1180d5b75d8a3e3ce1a0760a6bfd06331d9f53"
     },
     "NEXT_STEP.md": {
-      "bytes": 1192,
-      "sha256": "626ee977808d31d89ceb2687ab88df8e30d154832ee2417b2282aab6d79adab4"
+      "bytes": 1330,
+      "sha256": "09718d265aa4e2f888f32c81f96214b188e1b40e8e9732567b2d68639c4135a9"
+    },
+    "console-logo-saved.jpg": {
+      "bytes": 69387,
+      "sha256": "2152f1ae33bbe8a7682e2ff2245f73242694076eff1b0d42c4f4368c3d4eabb6"
     }
   },
   "sourceCodeCommit": "fa8c949",
@@ -86,7 +90,7 @@
     "previousLocalUiChecks": "unchanged platform code; device certification still pending"
   },
   "consoleRecheck": {
-    "checkedAt": "2026-11-03T18:50:02+09:00",
+    "checkedAt": "2026-11-03T19:06:43+09:00",
     "appName": "onnuri-fuel-map",
     "workspaceId": "105239",
     "consoleUrl": "https://apps-in-toss.toss.im/workspace/105239/mini-app/onnuri-fuel-map/meta/edit",
@@ -108,12 +112,12 @@
       "지역화폐"
     ],
     "bundleUploaded": true,
-    "logoUploaded": null,
+    "logoUploaded": true,
     "tossAppTestButtonEnabled": true,
-    "reviewRequestButtonEnabled": null,
+    "reviewRequestButtonEnabled": false,
     "reviewSubmitted": false,
-    "tossDeviceTest": "user_reported_entire_app_blank_retest_pending",
-    "acknowledgements": "not_changed_this_run",
+    "tossDeviceTest": "map_and_markers_passed_user_report_other_flows_pending",
+    "acknowledgements": "all_six_unchecked",
     "uploadOutcome": "Actual console QR test deployment observed; no automated upload performed in this repair",
     "serverReviewRejection": false,
     "screenshots": "platform AI capture default observed; no local fallback screenshot uploaded",
@@ -123,8 +127,8 @@
     "handoffCandidatePinned": true,
     "evidenceScreenshot": "console-category-review.jpg",
     "testVersionName": "20261103-1",
-    "logoInspection": "not_rechecked_this_run",
-    "reviewRequestInspection": "not_rechecked_this_run",
+    "logoInspection": "uploaded_saved_and_reload_verified_600x600",
+    "reviewRequestInspection": "live_console_disabled_with_all_six_acknowledgements_unchecked",
     "mapDomainRepair": {
       "verifiedAt": "2026-11-03T18:50:02+09:00",
       "originalDomains": [
@@ -142,8 +146,25 @@
       "originalDomainsPreserved": true,
       "bundleRebuiltOrReuploaded": false,
       "evidenceScreenshot": "map-domains-saved.jpg",
-      "actualTossRetest": "awaiting_user_result",
+      "actualTossRetest": "map_and_markers_passed_user_report",
       "localPinnedMapRendered": true
+    },
+    "deviceMapCheck": {
+      "status": "passed_user_report",
+      "testVersionName": "20261103-1",
+      "confirmedAt": "2026-11-03T19:06:43+09:00",
+      "evidence": "지도와 마커가 정상 표시됨",
+      "scope": "Actual Toss app map and markers only; search, touch, location and native navigation are not certified by this report."
+    },
+    "logoCheck": {
+      "sourceFilename": "logo-600.png",
+      "sourceSha256": "5272f4fccda35b5234a909bb18ae890dffb1f46306cebc138b4ab41de0b2aa0c",
+      "persistedAfterReload": true,
+      "loadedDimensions": [
+        600,
+        600
+      ],
+      "evidenceScreenshot": "console-logo-saved.jpg"
     }
   }
 }
