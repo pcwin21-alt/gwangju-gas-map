@@ -1,6 +1,6 @@
 {
   "preparedAt": "2026-11-03T14:12:40.087248+09:00",
-  "status": "map_display_confirmed_logo_saved_remaining_device_checks",
+  "status": "browser_map_qa_passed_policy_and_device_checks_pending",
   "appName": "onnuri-fuel-map",
   "workspaceId": "105239",
   "consoleUrl": "https://apps-in-toss.toss.im/workspace/105239/mini-app/onnuri-fuel-map/app-build",
@@ -20,11 +20,14 @@
     "browser": "manual lookup, clear/reset, region and fuel/payment filters, pagination, reload state, local details and focus return, help and language; widths 288/360/1280; no real Toss device",
     "javascriptSyntaxPassed": 20,
     "bundleArtifactChecksPassed": 9,
-    "mapRepair": "User confirmed actual Toss test version 20261103-1 renders map and markers after Kakao SDK domain registration; other device flows remain unverified."
+    "mapRepair": "User confirmed actual Toss test version 20261103-1 renders map and markers after Kakao SDK domain registration; other device flows remain unverified.",
+    "browserMapInteractionsPassed": 9,
+    "browserMapQaScope": "Pinned candidate, CSS 360x780, actual Kakao map, mouse/keyboard only; native touch/GPS/back not certified."
   },
   "blockingChecks": [
-    "Complete remaining real Toss search/details/touch, location allow/deny and native navigation checks",
-    "Confirm final platform eligibility, applicable operational notices and truthful operator acknowledgements before submission"
+    "Obtain remaining actual Toss device search/details/touch/keyboard, location allow/deny and native navigation results",
+    "Authorize the prepared official support inquiry and establish final automotive/fuel-map eligibility",
+    "Confirm applicable operating notices, support reception and operator eligibility/required filings; obtain truthful final acknowledgements before review submission"
   ],
   "files": {
     "artifact-audit.json": {
@@ -36,8 +39,8 @@
       "sha256": "63386aac30bfa30d722ee3ac2d56e1147cec02066f2be591ff903611722d62e1"
     },
     "console-recheck.json": {
-      "bytes": 3149,
-      "sha256": "305abb2d089b4a8bc6aced21523b8100cf8a1398a013e7967a03a9ac14db343f"
+      "bytes": 3868,
+      "sha256": "4b932ab74f86c38ee6579806f2559669ddd4fac00133eeb8a03f5d9d64ea1596"
     },
     "logo-600.png": {
       "bytes": 14747,
@@ -52,8 +55,8 @@
       "sha256": "e1f72f65b654b4b5bc2bc7430261c5614a824697d4c85d91a8dc0b85faf63c7f"
     },
     "START_HERE.md": {
-      "bytes": 25506,
-      "sha256": "04339df8d6a694f25d7ec827c404838c033f7a125ed59574ce86482657676876"
+      "bytes": 28856,
+      "sha256": "7f0a00fe69f3ed178dbd7adba3674b9b9adce757e571ea232e3a230114bff6d7"
     },
     "test-build-manifest.json": {
       "bytes": 6277,
@@ -72,12 +75,36 @@
       "sha256": "93e97f358434db15e8dcf2814f1180d5b75d8a3e3ce1a0760a6bfd06331d9f53"
     },
     "NEXT_STEP.md": {
-      "bytes": 1330,
-      "sha256": "09718d265aa4e2f888f32c81f96214b188e1b40e8e9732567b2d68639c4135a9"
+      "bytes": 1871,
+      "sha256": "e156745860f3e282b3325b21bb46065198e21c0644961fb7cddf9990db2ed6e7"
     },
     "console-logo-saved.jpg": {
       "bytes": 69387,
       "sha256": "2152f1ae33bbe8a7682e2ff2245f73242694076eff1b0d42c4f4368c3d4eabb6"
+    },
+    "POLICY_INQUIRY.md": {
+      "bytes": 1964,
+      "sha256": "0d6eb915d4bebc1ffc28d5891bd080acc3da434d7cbf89cfc981b56bb4fd0914"
+    },
+    "qa-live-map-20261103.json": {
+      "bytes": 4423,
+      "sha256": "2a04656e578c63fdc17bb5cfa543d850d368cbeecfe187f6ba94b9c4dfb722b0"
+    },
+    "qa-mobile-map-before.jpg": {
+      "bytes": 57249,
+      "sha256": "668082385e74ea6d7e24cfd888c1172f9fb0cd2049606fa452dae18682b07616"
+    },
+    "qa-mobile-filter.jpg": {
+      "bytes": 47352,
+      "sha256": "5ea5194294c9b8f19b5237e437f93c8aa5129618d92a5f495caec83c26c86516"
+    },
+    "qa-mobile-map-final.jpg": {
+      "bytes": 58914,
+      "sha256": "ab84dd584367248a075d9d0c4a06a9d66a46b1c76fb30c5755648d35c3c0abf2"
+    },
+    "console-policy-inquiry-ready.jpg": {
+      "bytes": 92276,
+      "sha256": "5b0f8652de880bd5f1444dff5cf8933e65dbd0d1e9a9d16f2465518ac4614261"
     }
   },
   "sourceCodeCommit": "fa8c949",
@@ -165,6 +192,46 @@
         600
       ],
       "evidenceScreenshot": "console-logo-saved.jpg"
+    },
+    "followupCheckedAt": "2026-11-03T19:39:12+09:00",
+    "supportInquiry": {
+      "status": "draft_ready_awaiting_send_authorization",
+      "draft": "POLICY_INQUIRY_20261103.md",
+      "sent": false,
+      "replyReceived": false,
+      "channel": "Existing official Apps in Toss console support widget",
+      "openingHoursDisplay": "Weekdays 10:00-17:00, lunch 13:00-14:00; next opening tomorrow 10:00",
+      "privacyConsentAccepted": false
+    },
+    "browserFollowupQa": {
+      "file": "browser-map-qa-20261103.json",
+      "passed": 9,
+      "candidateSha256": "e1f72f65b654b4b5bc2bc7430261c5614a824697d4c85d91a8dc0b85faf63c7f",
+      "viewportCss": [
+        360,
+        780
+      ],
+      "actualNativePhoneTest": false
     }
+  },
+  "updatedAt": "2026-11-03T19:39:12+09:00",
+  "supportInquiry": {
+    "status": "draft_ready_awaiting_send_authorization",
+    "draft": "POLICY_INQUIRY_20261103.md",
+    "sent": false,
+    "replyReceived": false,
+    "channel": "Existing official Apps in Toss console support widget",
+    "openingHoursDisplay": "Weekdays 10:00-17:00, lunch 13:00-14:00; next opening tomorrow 10:00",
+    "privacyConsentAccepted": false
+  },
+  "browserFollowupQa": {
+    "file": "browser-map-qa-20261103.json",
+    "passed": 9,
+    "candidateSha256": "e1f72f65b654b4b5bc2bc7430261c5614a824697d4c85d91a8dc0b85faf63c7f",
+    "viewportCss": [
+      360,
+      780
+    ],
+    "actualNativePhoneTest": false
   }
 }

@@ -74,5 +74,25 @@
       600
     ],
     "evidenceScreenshot": "console-logo-saved.jpg"
+  },
+  "followupCheckedAt": "2026-11-03T19:39:12+09:00",
+  "supportInquiry": {
+    "status": "draft_ready_awaiting_send_authorization",
+    "draft": "POLICY_INQUIRY_20261103.md",
+    "sent": false,
+    "replyReceived": false,
+    "channel": "Existing official Apps in Toss console support widget",
+    "openingHoursDisplay": "Weekdays 10:00-17:00, lunch 13:00-14:00; next opening tomorrow 10:00",
+    "privacyConsentAccepted": false
+  },
+  "browserFollowupQa": {
+    "file": "browser-map-qa-20261103.json",
+    "passed": 9,
+    "candidateSha256": "e1f72f65b654b4b5bc2bc7430261c5614a824697d4c85d91a8dc0b85faf63c7f",
+    "viewportCss": [
+      360,
+      780
+    ],
+    "actualNativePhoneTest": false
   }
 }

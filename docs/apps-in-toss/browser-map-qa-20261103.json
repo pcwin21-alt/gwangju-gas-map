@@ -1,0 +1,139 @@
+{
+  "checkedAt": "2026-11-03T10:37:01.060Z",
+  "candidateSha256": "e1f72f65b654b4b5bc2bc7430261c5614a824697d4c85d91a8dc0b85faf63c7f",
+  "artifactSource": "Pinned .ait sources extracted and served at registered http://localhost:8080",
+  "viewport": {
+    "cssWidth": 360,
+    "cssHeight": 780
+  },
+  "input": "Desktop mouse and keyboard in resized browser; no native mobile touch or permission assertion",
+  "checks": [
+    {
+      "check": "map_click_preserves_zoom_and_no_search_focus",
+      "passed": true,
+      "before": {
+        "activeElement": "mapZoomIn",
+        "loadedMapImages": 156,
+        "mapRect": {
+          "height": 616.9736938476562,
+          "width": 360,
+          "x": 0,
+          "y": 163.0263214111328
+        },
+        "mapText": "1km",
+        "overflow": false,
+        "search": ""
+      },
+      "after": {
+        "activeElement": "mapZoomIn",
+        "loadedMapImages": 156,
+        "mapRect": {
+          "height": 616.9736938476562,
+          "width": 360,
+          "x": 0,
+          "y": 163.0263214111328
+        },
+        "mapText": "1km",
+        "overflow": false,
+        "search": ""
+      }
+    },
+    {
+      "check": "mouse_drag_moves_map_without_zoom_reset_or_search_focus",
+      "passed": true,
+      "beforeScale": "1km",
+      "afterScale": "1km",
+      "tilesChanged": true,
+      "nativeTouch": false
+    },
+    {
+      "check": "viewport_results_open_preserves_zoom",
+      "passed": true,
+      "beforeScale": "1km",
+      "afterScale": "1km"
+    },
+    {
+      "check": "station_detail_close_preserves_selected_map_view",
+      "passed": true,
+      "beforeScale": "100m",
+      "afterScale": "100m",
+      "visibleTilesUnchanged": true,
+      "displayedAddress": "광주광역시 서구 회재로 845 (매월동)",
+      "displayedMerchantDate": "2026-10-25",
+      "displayedPriceDate": "2026-11-02",
+      "externalNavigationButtonsVisible": false
+    },
+    {
+      "check": "search_empty_and_clear_recover_results",
+      "passed": true,
+      "emptyResultText": "조회 결과\n0곳\n범위\n선택 지역\n찾은 범위\n정렬\n이름순\n가까운 순\n크게\n\n광주 조건 결과 · 이름순 · 현재 지도 안 0곳\n\n조건에 맞는 주유소가 없습니다.\n\n검색어 지우기\n필터 초기화\n지역 바꾸기\n자료 확인 정보",
+      "after": {
+        "activeElement": "searchInput",
+        "loadedMapImages": 156,
+        "mapRect": {
+          "height": 616.9736938476562,
+          "width": 360,
+          "x": 0,
+          "y": 163.0263214111328
+        },
+        "mapText": "100m",
+        "overflow": false,
+        "search": ""
+      },
+      "note": "Immediate DOM state after clear was 100m; the scheduled explicit result fit then settled at 4km. This check validates empty-result recovery, not preservation on deliberate search clear."
+    },
+    {
+      "passed": true,
+      "beforeScale": "1km",
+      "after": {
+        "activeElement": "filtersToggle",
+        "loadedMapImages": 153,
+        "mapRect": {
+          "height": 346.51318359375,
+          "width": 360,
+          "x": 0,
+          "y": 433.4868469238281
+        },
+        "mapText": "서구\n북구\n1km",
+        "overflow": false,
+        "search": ""
+      },
+      "note": "Previous 4km observation followed the intentional search-clear fit, not the filter toggle.",
+      "check": "filter_open_preserves_zoom"
+    },
+    {
+      "passed": true,
+      "results": 16,
+      "fuel": "lpg",
+      "payment": "onnuri",
+      "overflow": false,
+      "url": "http://localhost:8080/?region=%EA%B4%91%EC%A3%BC&payment=onnuri&fuel=lpg",
+      "check": "fuel_filter_applies_and_keeps_browsing"
+    },
+    {
+      "passed": true,
+      "region": "전남",
+      "results": 28,
+      "payment": "onnuri",
+      "fuel": "all",
+      "url": "http://localhost:8080/?region=%EC%A0%84%EB%82%A8&payment=onnuri",
+      "check": "region_change_updates_districts_and_filters"
+    },
+    {
+      "passed": true,
+      "region": "전남",
+      "results": 28,
+      "url": "http://localhost:8080/?region=%EC%A0%84%EB%82%A8&payment=onnuri",
+      "nativeReopen": false,
+      "check": "reload_preserves_selected_region_payment"
+    }
+  ],
+  "consoleErrorsWarnings": [],
+  "notCovered": [
+    "Native pinch and OS keyboard",
+    "Native SDK location allow and deny on real phone",
+    "Toss native back and close",
+    "Native app reopening across OS versions"
+  ],
+  "schemaVersion": 1
+}
