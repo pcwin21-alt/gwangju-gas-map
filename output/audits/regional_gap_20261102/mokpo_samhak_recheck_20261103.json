@@ -1,0 +1,103 @@
+{
+  "reviewed_at": "2026-11-03T10:44:02+09:00",
+  "station_id": "onnuri:kb:000000055922363",
+  "name": "(주)대창석유 (삼학)",
+  "decision": "confirmed_in_issuer_scope",
+  "bank_id": "000000055922363",
+  "source_checked_at": "2026-11-03T10:08:14+09:00",
+  "current_response_file": "responses/bdd9952d7a5b41aaad884a6f.json",
+  "current_response_sha256": "3020b3a9610bfe4306da2b4c4bd67e09652889960853040cce785238406c03c6",
+  "current_bank_record": {
+    "location": {
+      "lat": "34.8244227459",
+      "lng": "126.4238800097"
+    },
+    "content": {
+      "tel": "061)283-5671",
+      "title": "(주)대창석유 (삼학)",
+      "category": "주유소",
+      "address": "전남 목포시 석현동 ",
+      "distance": "999",
+      "kindGb": "0",
+      "onNuliGb": "1",
+      "tradiGb": "0",
+      "liveHoodGb": "1",
+      "sangsaengGb": "1",
+      "franchiseNo": "000000055922363",
+      "highOilGb": "1",
+      "seoulGb": "0"
+    }
+  },
+  "prior_curated_identity": {
+    "identity_review": "same_premise_confirmed",
+    "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+    "checked_at": "2026-10-27T16:43:41+09:00",
+    "bank_record": {
+      "location": {
+        "lat": "34.8244227459",
+        "lng": "126.4238800097"
+      },
+      "content": {
+        "tel": "061)283-5671",
+        "title": "(주)대창석유 (삼학)",
+        "category": "주유소",
+        "address": "전남 목포시 석현동 ",
+        "distance": "74234",
+        "kindGb": "0",
+        "onNuliGb": "1",
+        "tradiGb": "0",
+        "liveHoodGb": "1",
+        "sangsaengGb": "1",
+        "franchiseNo": "000000055922363",
+        "highOilGb": "1",
+        "seoulGb": "0"
+      },
+      "checked_at": "2026-10-27T16:43:41+09:00",
+      "query_address": [
+        "전남",
+        "목포시",
+        "석현동"
+      ],
+      "coordinate_status": "present_unverified"
+    },
+    "municipal_record": {
+      "name": "삼학(셀프)주유소",
+      "address": "전라남도 목포시 영산로 668",
+      "category": "주유소",
+      "source_url": "https://www.data.go.kr/data/15116429/fileData.do",
+      "source_date": "2026-08-04"
+    },
+    "identity_record": {
+      "name": "sk대창석유 삼학주유소",
+      "address": "전라남도 목포시 영산로 668",
+      "phone": "061-283-5671",
+      "source_url": "https://www.daangn.com/kr/local-profile/sk대창석유-삼학주유소-동네업체-sk대창석유-삼학주유소-10540331/",
+      "access_method": "search_index_full_record",
+      "checked_at": "2026-10-26"
+    },
+    "annual_candidate_ids": [],
+    "identity_support": "Reviewed bank corporate/branch name, explicit fuel category, exact phone and locality against municipal fuel listing. Bank coordinates retained with separate provenance; no nearby commercial address substitution.",
+    "municipal_raw_record": {
+      "주유소명": "삼학(셀프)주유소",
+      "시도명": "전남광주통합특별시",
+      "시군구명": "목포시",
+      "소재지도로명주소": "영산로 668",
+      "상표구분명": "SK",
+      "데이터기준일자": "2026-08-04"
+    },
+    "municipal_file_sha256": "7fd79c4ab3bc737bff9e9564220fdc87bf14dc6f9de596ff1cf76b2942807361"
+  },
+  "why_automatic_review_failed": "Current KB ID was returned; generic commercial fuel index lacks the independently reviewed municipal branch name/address. This is not a missing KB response.",
+  "checks": [
+    "same issuer ID",
+    "same normalized corporate/branch name",
+    "same full telephone as independent identity record",
+    "same locality and coordinates",
+    "explicit fuel category and onNuliGb=1",
+    "unchanged municipal raw file SHA256"
+  ],
+  "municipal_source_date_preserved": "2026-08-04",
+  "operator_paper_QR_dates_change": false,
+  "new_station_addition": false,
+  "future_other_cases": "No generic bypass or relaxed distance rule; each curated identity needs independent review."
+}
