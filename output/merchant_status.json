@@ -578,13 +578,13 @@
         "stage": "stopped"
       },
       "kbcard": {
-        "requests_per_24h": 24,
-        "requests_per_run": 3,
+        "requests_per_24h": 32,
+        "requests_per_run": 4,
         "interval_seconds": 180,
-        "stage": "pilot",
-        "clean_since": 1793556784.2048566,
-        "valid_responses_in_clean_window": 31,
-        "earliest_review_at": 1793729584.2048566
+        "stage": "promoted",
+        "clean_since": 1793734374.0146263,
+        "valid_responses_in_clean_window": 0,
+        "earliest_review_at": 1793907174.0146263
       },
       "datagov": {
         "requests_per_24h": 20,
@@ -605,7 +605,7 @@
       "next_allowed_at": 1793736805.4152296,
       "waiting": true
     },
-    "checked_at": "2026-11-04T02:19:20+09:00",
+    "checked_at": "2026-11-04T04:32:54+09:00",
     "scope": "strictly sequential regional fuel-merchant verification; not a geographic census",
     "new_station_count": 0
   }
