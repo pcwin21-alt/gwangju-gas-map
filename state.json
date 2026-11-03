@@ -9061,13 +9061,18 @@
       "job_id": "a99de73b338c5f780aaa112f",
       "checked_at": "2026-11-03T17:11:22+09:00",
       "reason": "No independently matched current issuer record; preserve previous station",
-      "status": "needs_review",
+      "status": "resolved",
       "followup_job_id": "6a1d9da1fc4a77b64d6332db",
       "investigated_at": "2026-11-03T17:14:30+09:00",
       "investigation_evidence": [
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/590ca19/output/audits/regional_gap_20261102/curated_rechecks_20261103_1712.json"
       ],
-      "investigation_scope": "Empty at independent physical point; archived issuer point differs by 925.9m; not evidence of nonmembership."
+      "investigation_scope": "Empty at independent physical point; archived issuer point differs by 925.9m; not evidence of nonmembership.",
+      "resolved_at": "2026-11-03T23:17:12+09:00",
+      "resolution": "Exact current issuer ID/name/phone and prior independently reviewed municipal/Opinet premise; keep physical map position and archived issuer discrepancy.",
+      "resolution_evidence": [
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/b94117e11e726b40100125bb0fcf019221a3775c/output/audits/regional_gap_20261102/namchang_and_market_review_20261103_2310.json"
+      ]
     },
     {
       "job_id": "cb87c8541476da05247da7c2",
@@ -9127,7 +9132,13 @@
       },
       "checked_at": "2026-11-03T23:07:02+09:00",
       "independent_fuel_candidate_ids": [],
-      "reason": "Independent exact business/address/category evidence incomplete; do not exclude by bank category alone"
+      "reason": "Independent exact business/address/category evidence incomplete; do not exclude by bank category alone",
+      "status": "resolved",
+      "resolved_at": "2026-11-03T23:17:12+09:00",
+      "resolution": "Exact current issuer ID/name/phone and prior independently reviewed municipal/Opinet premise; keep physical map position and archived issuer discrepancy.",
+      "resolution_evidence": [
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/b94117e11e726b40100125bb0fcf019221a3775c/output/audits/regional_gap_20261102/namchang_and_market_review_20261103_2310.json"
+      ]
     }
   ],
   "source_gaps": [
@@ -9877,15 +9888,15 @@
         "jobs_total": 44,
         "jobs_remaining": 0,
         "jobs_needing_review": 0,
-        "source_gaps": 12,
-        "review_records": 11,
+        "source_gaps": 9,
+        "review_records": 9,
         "inventory_reviewed": false,
         "mapped_records_to_recheck": 28,
         "membership_check_status": {
-          "confirmed_in_issuer_scope": 25,
-          "needs_review_not_found": 3
+          "confirmed_in_issuer_scope": 26,
+          "needs_review_not_found": 2
         },
-        "unresolved_annual_identities": 9,
+        "unresolved_annual_identities": 6,
         "missing_standard_checks": [
           "market_coverage",
           "membership_rechecks",
@@ -10332,10 +10343,11 @@
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/04059f2/output/audits/regional_gap_20261102/curated_rechecks_20261103_1405.json",
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/590ca19/output/audits/regional_gap_20261102/curated_rechecks_20261103_1712.json",
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/cc81165/output/audits/regional_gap_20261102/candidate_regions_20261103_1700.json",
-        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/55cb2325f8fe833cb88267006d89686c0f9268e9/output/audits/regional_gap_20261102/innovation_identity_recheck_20261103.json"
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/55cb2325f8fe833cb88267006d89686c0f9268e9/output/audits/regional_gap_20261102/innovation_identity_recheck_20261103.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/b94117e11e726b40100125bb0fcf019221a3775c/output/audits/regional_gap_20261102/namchang_and_market_review_20261103_2310.json"
       ],
       "checked_at": null,
-      "last_reviewed_at": "2026-11-03T20:14:57+09:00"
+      "last_reviewed_at": "2026-11-03T23:17:12+09:00"
     },
     "전북": {
       "status": "pending",
@@ -22759,10 +22771,11 @@
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/76d7041/output/audits/regional_gap_20261102/run_20261103_0743.json",
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f12f94c/output/audits/regional_gap_20261102/run_20261103_1001.json",
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f12f94c/output/audits/regional_gap_20261102/yeosu_hyundai_identity_lead_20261103.json",
-          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/cc81165/output/audits/regional_gap_20261102/candidate_regions_20261103_1700.json"
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/cc81165/output/audits/regional_gap_20261102/candidate_regions_20261103_1700.json",
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/b94117e11e726b40100125bb0fcf019221a3775c/output/audits/regional_gap_20261102/namchang_and_market_review_20261103_2310.json"
         ],
         "checked_at": null,
-        "last_reviewed_at": "2026-11-03T17:14:30+09:00"
+        "last_reviewed_at": "2026-11-03T23:17:12+09:00"
       },
       "membership_rechecks": {
         "status": "pending",
@@ -22777,11 +22790,12 @@
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f12f94c/output/audits/regional_gap_20261102/yeosu_hyundai_identity_lead_20261103.json",
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/04059f2/output/audits/regional_gap_20261102/curated_rechecks_20261103_1405.json",
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/590ca19/output/audits/regional_gap_20261102/curated_rechecks_20261103_1712.json",
-          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/55cb2325f8fe833cb88267006d89686c0f9268e9/output/audits/regional_gap_20261102/innovation_identity_recheck_20261103.json"
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/55cb2325f8fe833cb88267006d89686c0f9268e9/output/audits/regional_gap_20261102/innovation_identity_recheck_20261103.json",
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/b94117e11e726b40100125bb0fcf019221a3775c/output/audits/regional_gap_20261102/namchang_and_market_review_20261103_2310.json"
         ],
         "checked_at": null,
         "scope": "Current issuer rechecks incomplete; coordinate discrepancy follow-up is discovery only",
-        "last_reviewed_at": "2026-11-03T20:14:57+09:00"
+        "last_reviewed_at": "2026-11-03T23:17:12+09:00"
       },
       "market_coverage": {
         "status": "pending",
@@ -23684,10 +23698,15 @@
       "identity_review_evidence": "https://github.com/pcwin21-alt/gwangju-gas-map/blob/590ca19/output/audits/regional_gap_20261102/curated_rechecks_20261103_1712.json"
     },
     "onnuri:kb:000000055922616": {
-      "status": "needs_review_not_found",
-      "checked_at": "2026-11-03T17:11:22+09:00",
-      "job_id": "a99de73b338c5f780aaa112f",
-      "nonmembership": "not_established"
+      "status": "confirmed_in_issuer_scope",
+      "issuer": "kbcard",
+      "checked_at": "2026-11-03T23:07:02+09:00",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "bank_id": "000000055922616",
+      "other_payment_methods": "not_reverified",
+      "identity_review_evidence": "https://github.com/pcwin21-alt/gwangju-gas-map/blob/b94117e11e726b40100125bb0fcf019221a3775c/output/audits/regional_gap_20261102/namchang_and_market_review_20261103_2310.json",
+      "match_basis": "bank_onnuri_flag_reviewed_name_phone_registry_opinet_address_coordinates",
+      "map_location_changed": false
     }
   },
   "initial_plan_id": "fuel-candidate-inventory-20261102-v1",
@@ -24177,6 +24196,156 @@
       "source_url": "https://www.onnuri.gift/place",
       "source_snapshot_sha256": "af6866d59fd471cbe26ed0cefa112ca046c4e00641479ba45b5f3082e39d55aa",
       "scope": "Province-only linkage between the exact annual name/market and archived operator address. Vehicle-fuel identity and current membership remain unresolved in the supported region."
+    },
+    "badaf1066867bde046275626": {
+      "status": "region_identified",
+      "source_kind": "archived_operator_market",
+      "source_url": "https://www.onnuri.gift/place",
+      "annual_row": {
+        "가맹점명": "청우에너지(주)",
+        "소속 시장명(또는 상점가)": "매월동상인회 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": "유류",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2025"
+      },
+      "evidence": [
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/b94117e11e726b40100125bb0fcf019221a3775c/output/audits/regional_gap_20261102/namchang_and_market_review_20261103_2310.json"
+      ],
+      "checked_at": "2026-11-03T23:15:09+09:00",
+      "source_checked_at": "2026-10-25T10:51:11+09:00",
+      "market_records": [
+        {
+          "frCd": "05273200024",
+          "frcsNm": "(유)매월주유소",
+          "frcsAddr": "광주광역시 서구 회재로 845 (매월동)",
+          "mrktNm": "매월동상인회 골목형상점가",
+          "placeTypeCd": "08",
+          "placeTypeNm": "기타소매업",
+          "addrCd": "12240",
+          "latitude": 35.119808,
+          "longitude": 126.858163,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        },
+        {
+          "frCd": "05273200078",
+          "frcsNm": "대성석유",
+          "frcsAddr": "광주광역시 서구 화개길 24-3 (매월동)",
+          "mrktNm": "매월동상인회 골목형상점가",
+          "placeTypeCd": "08",
+          "placeTypeNm": "기타소매업",
+          "addrCd": "12240",
+          "latitude": 35.120688,
+          "longitude": 126.856856,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        }
+      ],
+      "scope": "province_only_no_candidate_address_fuel_identity_or_membership_confirmation"
+    },
+    "76ce41be9eed4c5a2696b79a": {
+      "status": "region_identified",
+      "source_kind": "archived_operator_market",
+      "source_url": "https://www.onnuri.gift/place",
+      "annual_row": {
+        "가맹점명": "서부에너지",
+        "소속 시장명(또는 상점가)": "맛조이상인회 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": "LPG",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2025"
+      },
+      "evidence": [
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/b94117e11e726b40100125bb0fcf019221a3775c/output/audits/regional_gap_20261102/namchang_and_market_review_20261103_2310.json"
+      ],
+      "checked_at": "2026-11-03T23:15:09+09:00",
+      "source_checked_at": "2026-10-25T10:25:47+09:00",
+      "market_records": [
+        {
+          "frCd": "05238200025",
+          "frcsNm": "힐링산야초 ",
+          "frcsAddr": "광주광역시 서구 내방로 316 (내방동)",
+          "mrktNm": "맛조이상인회 골목형상점가",
+          "placeTypeCd": "08",
+          "placeTypeNm": "기타소매업",
+          "addrCd": "12240",
+          "latitude": 35.157391,
+          "longitude": 126.875002,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        },
+        {
+          "frCd": "05238200049",
+          "frcsNm": "내방체육관",
+          "frcsAddr": "광주광역시 서구 화운로175번길 22 (내방동)",
+          "mrktNm": "맛조이상인회 골목형상점가",
+          "placeTypeCd": "09",
+          "placeTypeNm": "근린상권서비스",
+          "addrCd": "12240",
+          "latitude": 35.154736,
+          "longitude": 126.874446,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        }
+      ],
+      "scope": "province_only_no_candidate_address_fuel_identity_or_membership_confirmation"
+    },
+    "cf3ff4625254ab01c09918eb": {
+      "status": "region_identified",
+      "source_kind": "archived_operator_market",
+      "source_url": "https://www.onnuri.gift/place",
+      "annual_row": {
+        "가맹점명": "(주)일원",
+        "소속 시장명(또는 상점가)": "매월동상인회 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": "골프연습장/그 외 기타 종합 소매업",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2026"
+      },
+      "evidence": [
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/b94117e11e726b40100125bb0fcf019221a3775c/output/audits/regional_gap_20261102/namchang_and_market_review_20261103_2310.json"
+      ],
+      "checked_at": "2026-11-03T23:15:09+09:00",
+      "source_checked_at": "2026-10-25T10:51:11+09:00",
+      "market_records": [
+        {
+          "frCd": "05273200024",
+          "frcsNm": "(유)매월주유소",
+          "frcsAddr": "광주광역시 서구 회재로 845 (매월동)",
+          "mrktNm": "매월동상인회 골목형상점가",
+          "placeTypeCd": "08",
+          "placeTypeNm": "기타소매업",
+          "addrCd": "12240",
+          "latitude": 35.119808,
+          "longitude": 126.858163,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        },
+        {
+          "frCd": "05273200078",
+          "frcsNm": "대성석유",
+          "frcsAddr": "광주광역시 서구 화개길 24-3 (매월동)",
+          "mrktNm": "매월동상인회 골목형상점가",
+          "placeTypeCd": "08",
+          "placeTypeNm": "기타소매업",
+          "addrCd": "12240",
+          "latitude": 35.120688,
+          "longitude": 126.856856,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        }
+      ],
+      "scope": "province_only_no_candidate_address_fuel_identity_or_membership_confirmation"
     }
   },
   "collection_schedule": {
