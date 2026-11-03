@@ -26,6 +26,15 @@
       "url": "https://www.data.go.kr/data/3060079/fileData.do",
       "scope": "Published official bulk download, no private API or credentials",
       "next_allowed_at": 1793553049.9399657
+    },
+    "kakao_local": {
+      "status": "active",
+      "requests_per_24h": 2,
+      "requests_per_run": 1,
+      "interval_seconds": 180,
+      "url": "https://developers.kakao.com/docs/ko/local/dev-guide#search-by-keyword",
+      "scope": "One named public business identity via installed kakao-map skill relay; no bulk indexing, membership inference, blocked-source retry or host rotation",
+      "next_allowed_at": 0
     }
   },
   "attempts": [
@@ -7505,6 +7514,29 @@
       "expected": 1,
       "last_observed_at": "2026-11-03T23:07:02+09:00",
       "result": "observations_saved"
+    },
+    {
+      "kind": "kakao_place_identity",
+      "source": "kakao_local",
+      "region": "전남",
+      "purpose": "independent_premise_identity",
+      "review_station_id": "onnuri:18802200007",
+      "discovery_only": true,
+      "target": {
+        "name": "남고문 self주유소",
+        "query": "나주 남고문주유소",
+        "address": "전남광주통합특별시 나주시 남고문로 72 (남외동)",
+        "lat": 35.028658,
+        "lng": 126.718889
+      },
+      "source_evidence": "output/audits/regional_gap_20261102/naju_namgomun_review_20261103.json",
+      "scope": "Inspect independent place category/full address/phone against already saved KB ID 000000034595536; never auto-confirm membership, relocate or merge a station.",
+      "logical_key": "90ee175ab2efcb026a6a14b5",
+      "id": "90ee175ab2efcb026a6a14b5",
+      "status": "pending",
+      "attempts": 0,
+      "page": 1,
+      "observed_ids": []
     }
   ],
   "evidence": [
@@ -9866,27 +9898,28 @@
       "reason": "Annual identity needs independent same-premise linkage or documented exclusion"
     }
   ],
-  "status": "needs_attention",
+  "status": "running",
   "summary": {
-    "status": "needs_attention",
-    "jobs_total": 228,
+    "status": "running",
+    "jobs_total": 229,
     "jobs_done": 44,
-    "jobs_remaining": 184,
+    "jobs_remaining": 185,
     "review_records": 21,
     "evidence_records": 24,
     "source_gaps": 90,
     "source_status": {
       "onnuri": "blocked",
       "kbcard": "active",
-      "datagov": "active"
+      "datagov": "active",
+      "kakao_local": "active"
     },
     "active_region": "전남",
     "regions": [
       {
         "region": "전남",
-        "status": "needs_review",
-        "jobs_total": 44,
-        "jobs_remaining": 0,
+        "status": "collecting",
+        "jobs_total": 45,
+        "jobs_remaining": 1,
         "jobs_needing_review": 0,
         "source_gaps": 9,
         "review_records": 9,
@@ -10342,10 +10375,11 @@
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/590ca19/output/audits/regional_gap_20261102/curated_rechecks_20261103_1712.json",
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/cc81165/output/audits/regional_gap_20261102/candidate_regions_20261103_1700.json",
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/55cb2325f8fe833cb88267006d89686c0f9268e9/output/audits/regional_gap_20261102/innovation_identity_recheck_20261103.json",
-        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/b94117e11e726b40100125bb0fcf019221a3775c/output/audits/regional_gap_20261102/namchang_and_market_review_20261103_2310.json"
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/b94117e11e726b40100125bb0fcf019221a3775c/output/audits/regional_gap_20261102/namchang_and_market_review_20261103_2310.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/4d1c3fe22086b12d0e9b9f45064f5660de60d775/output/audits/regional_gap_20261102/independent_place_plan_20261104.json"
       ],
       "checked_at": null,
-      "last_reviewed_at": "2026-11-03T23:17:12+09:00"
+      "last_reviewed_at": "2026-11-04T02:12:18+09:00"
     },
     "전북": {
       "status": "pending",
