@@ -13,7 +13,7 @@
       "status": "active",
       "url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
       "scope": "Public unauthenticated Onnuri merchant form; issuer-specific evidence only; limits are our load caps, not a provider guarantee",
-      "next_allowed_at": 1793693478.218782,
+      "next_allowed_at": 1793693480.6206286,
       "volume_ramp": {
         "stage": "pilot",
         "started_at": 1793556784.2048566,
@@ -1000,7 +1000,7 @@
       "job_id": "9d7968370dc5f87d87698425",
       "source": "kbcard",
       "at": 1793693298.218782,
-      "status": "reserved",
+      "status": "done",
       "run_id": "86e12d78bbf948259f21a94fd03640e7",
       "request": {
         "method": "POST",
@@ -1017,7 +1017,12 @@
           "endRow": 10,
           "mmcNm": ""
         }
-      }
+      },
+      "request_started_at": 1793693299.5635383,
+      "network_duration_seconds": 0.9398007392883301,
+      "http_status": 200,
+      "response_sha256": "32ce3bd29b33b64e0aa0f86bb458490d1fede544ffc55770a06bcf9a7e0989c1",
+      "finished_at": 1793693300.6205678
     }
   ],
   "jobs": [
@@ -2711,11 +2716,16 @@
       },
       "logical_key": "9d7968370dc5f87d87698425",
       "id": "9d7968370dc5f87d87698425",
-      "status": "pending",
+      "status": "done",
       "attempts": 1,
       "page": 1,
-      "observed_ids": [],
-      "candidate_ids": []
+      "observed_ids": [
+        "000000055922242"
+      ],
+      "candidate_ids": [],
+      "expected": 1,
+      "last_observed_at": "2026-11-03T17:08:20+09:00",
+      "result": "observations_saved"
     },
     {
       "kind": "kb_search",
@@ -8804,6 +8814,40 @@
       "evidence": [
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/04059f2/output/audits/regional_gap_20261102/curated_rechecks_20261103_1405.json"
       ]
+    },
+    {
+      "job_id": "9d7968370dc5f87d87698425",
+      "bank_record": {
+        "location": {
+          "lat": "34.9281354878",
+          "lng": "127.4912519472"
+        },
+        "content": {
+          "tel": "061)744-5680",
+          "title": "(주)대창석유 (갑산)",
+          "category": "주유소",
+          "address": "전남 순천시 덕월동 ",
+          "distance": "6",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000055922242",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        }
+      },
+      "checked_at": "2026-11-03T17:08:20+09:00",
+      "independent_fuel_candidate_ids": [],
+      "reason": "Independent exact business/address/category evidence incomplete; do not exclude by bank category alone"
+    },
+    {
+      "region": "전남",
+      "station_id": "onnuri:kb:000000055922242",
+      "job_id": "9d7968370dc5f87d87698425",
+      "checked_at": "2026-11-03T17:08:20+09:00",
+      "reason": "No independently matched current issuer record; preserve previous station"
     }
   ],
   "source_gaps": [
@@ -23305,6 +23349,12 @@
       "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
       "bank_id": "000000055922220",
       "other_payment_methods": "not_reverified"
+    },
+    "onnuri:kb:000000055922242": {
+      "status": "needs_review_not_found",
+      "checked_at": "2026-11-03T17:08:20+09:00",
+      "job_id": "9d7968370dc5f87d87698425",
+      "nonmembership": "not_established"
     }
   },
   "initial_plan_id": "fuel-candidate-inventory-20261102-v1",
