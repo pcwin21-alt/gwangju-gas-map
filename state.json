@@ -13,7 +13,7 @@
       "status": "active",
       "url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
       "scope": "Public unauthenticated Onnuri merchant form; issuer-specific evidence only; limits are our load caps, not a provider guarantee",
-      "next_allowed_at": 1793704147.5806923,
+      "next_allowed_at": 1793704327.580803,
       "volume_ramp": {
         "stage": "pilot",
         "started_at": 1793556784.2048566,
@@ -1081,6 +1081,30 @@
       "http_status": 200,
       "response_sha256": "81a269f8ea3341f1276a0b135e81569a10ec99327cc912eed75491f73843aba3",
       "finished_at": 1793703967.580625
+    },
+    {
+      "id": "3024e104537042a3a728ba67",
+      "job_id": "cb87c8541476da05247da7c2",
+      "source": "kbcard",
+      "at": 1793704147.580803,
+      "status": "reserved",
+      "run_id": "f87df8ce7a8441c2a02fce4125b03c37",
+      "request": {
+        "method": "POST",
+        "url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+        "data": {
+          "mainCC": "a",
+          "isNoFrame": "Y",
+          "situXCdnt": 35.0253400897,
+          "situYCdnt": 126.7652237445,
+          "페이지번호": 1,
+          "useCase": "1",
+          "locationType": "1",
+          "startRow": 0,
+          "endRow": 10,
+          "mmcNm": "혁신에너지"
+        }
+      }
     }
   ],
   "jobs": [
@@ -7356,7 +7380,7 @@
       "logical_key": "cb87c8541476da05247da7c2",
       "id": "cb87c8541476da05247da7c2",
       "status": "pending",
-      "attempts": 0,
+      "attempts": 1,
       "page": 1,
       "observed_ids": []
     },
