@@ -13,7 +13,7 @@
       "status": "active",
       "url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
       "scope": "Public unauthenticated Onnuri merchant form; issuer-specific evidence only; limits are our load caps, not a provider guarantee",
-      "next_allowed_at": 1793748434.0821567,
+      "next_allowed_at": 1793748436.2602606,
       "volume_ramp": {
         "stage": "promoted",
         "started_at": 1793556784.2048566,
@@ -1317,7 +1317,7 @@
       "job_id": "51ed2a92703d35e05062c878",
       "source": "kbcard",
       "at": 1793748254.0821567,
-      "status": "reserved",
+      "status": "done",
       "run_id": "a13266130d034aa0b524a55f618ed2c9",
       "request": {
         "method": "POST",
@@ -1334,7 +1334,12 @@
           "endRow": 10,
           "mmcNm": ""
         }
-      }
+      },
+      "request_started_at": 1793748255.376804,
+      "network_duration_seconds": 0.8763406276702881,
+      "http_status": 200,
+      "response_sha256": "8a8d8a0a731e7b891b0b76db161ac2ae13f37a4688ec2deda072aec5a798ccf4",
+      "finished_at": 1793748256.2602074
     }
   ],
   "jobs": [
@@ -8205,10 +8210,13 @@
       "scope": "One unfiltered issuer lookup anchored at one independently recorded vehicle-fuel location. Road context does not establish market containment or Onnuri membership.",
       "id": "51ed2a92703d35e05062c878",
       "logical_key": "51ed2a92703d35e05062c878",
-      "status": "pending",
+      "status": "done",
       "attempts": 1,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "expected": 0,
+      "last_observed_at": "2026-11-04T08:24:16+09:00",
+      "result": "no_match_not_nonmembership"
     },
     {
       "kind": "kb_search",
