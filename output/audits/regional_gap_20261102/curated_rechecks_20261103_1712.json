@@ -1,0 +1,327 @@
+{
+  "reviewed_at": "2026-11-03T17:14:30+09:00",
+  "region": "전남",
+  "collection_run": "https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41600638482",
+  "new_source_requests_for_review": 0,
+  "state_before_sha256": "037c7f37ac448632015ef6a1ee1e80a3d85e71d80bd9d8b7de0bb9d9bd82bee2",
+  "state_before_commit": "6bb1c27747b7ee910dbe4264110a1f2c8998ad8b",
+  "curated_rechecks": [
+    {
+      "station_id": "onnuri:kb:000000055922242",
+      "name": "(주)대창석유 (갑산)",
+      "source_checked_at": "2026-11-03T17:08:20+09:00",
+      "current_response_file": "responses/a4be5bf80f284abe8a46ad6d.json",
+      "current_response_sha256": "1051dd6809b8e091b576421df51df5df802c1fbb979d2caaf4fe3304d443bc1a",
+      "network_response_sha256": "32ce3bd29b33b64e0aa0f86bb458490d1fede544ffc55770a06bcf9a7e0989c1",
+      "current_bank_record": {
+        "location": {
+          "lat": "34.9281354878",
+          "lng": "127.4912519472"
+        },
+        "content": {
+          "tel": "061)744-5680",
+          "title": "(주)대창석유 (갑산)",
+          "category": "주유소",
+          "address": "전남 순천시 덕월동 ",
+          "distance": "6",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000055922242",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        }
+      },
+      "prior_independent_identity": {
+        "identity_review": "same_premise_confirmed",
+        "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+        "checked_at": "2026-10-27T16:45:29+09:00",
+        "bank_record": {
+          "location": {
+            "lat": "34.9281354878",
+            "lng": "127.4912519472"
+          },
+          "content": {
+            "tel": "061)744-5680",
+            "title": "(주)대창석유 (갑산)",
+            "category": "주유소",
+            "address": "전남 순천시 덕월동 ",
+            "distance": "62569",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000055922242",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          },
+          "checked_at": "2026-10-27T16:45:29+09:00",
+          "query_address": [
+            "전남",
+            "순천시",
+            "덕월동"
+          ],
+          "coordinate_status": "present_unverified"
+        },
+        "commercial_record": {
+          "상가업소번호": "MA0101202503A0053009",
+          "상호명": "갑산주유소",
+          "지점명": "",
+          "상권업종소분류코드": "G21401",
+          "상권업종소분류명": "주유소",
+          "표준산업분류코드": "G47711",
+          "표준산업분류명": "운송장비용 주유소 운영업",
+          "시군구명": "순천시",
+          "도로명주소": "전남광주통합특별시 순천시 녹색로 1656",
+          "지번주소": "전남광주통합특별시 순천시 덕월동 355-44",
+          "위도": "34.9281857676441",
+          "경도": "127.491275722294",
+          "region": "전남"
+        },
+        "commercial_source": {
+          "archive_sha256": "57aa361544108ff4fc73334f87d2ced61e41fe8638dd70bcd842930f865d2386",
+          "source_date": "2026-06-30",
+          "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+          "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
+        },
+        "annual_candidate_ids": [],
+        "identity_support": "Current commercial fuel record and bank agree on branch name, locality and coordinates (6m). Municipal Suncheon fuel list additionally gives corporate full name, 녹색로1656 and matching phone 061-744-5680; older municipal list is identity support, not current membership.",
+        "municipal_identity_support": {
+          "source_url": "https://www.data.go.kr/data/15117815/fileData.do",
+          "sha256": "8456a982b74aa01b7d8cc3428e73884ba133abbacad95296e00f42e0367f35ac",
+          "raw_record": {
+            "연번": "82",
+            "상호명": "(주)대창석유 직영 갑산주유소",
+            "도로명주소": "전라남도 순천시 녹색로 1656 (덕월동)",
+            "지번주소": "전라남도 순천시 덕월동  342 번지1 호 ",
+            "전화번호": "061-744-5680"
+          }
+        }
+      },
+      "validated_station": {
+        "id": "onnuri:kb:000000055922242",
+        "name": "(주)대창석유 (갑산)",
+        "address": "전남광주통합특별시 순천시 녹색로 1656",
+        "lat": 34.9281857676441,
+        "lng": 127.491275722294,
+        "payment_types": [
+          "onnuri"
+        ],
+        "source": [
+          "kb_onnuri"
+        ],
+        "aliases": [
+          "대창석유 직영 갑산주유소",
+          "갑산주유소"
+        ],
+        "fuel_kind": "liquid",
+        "route_eligible": true,
+        "region": "전남",
+        "onnuri_methods": {
+          "paper": null,
+          "card": true,
+          "qr": null,
+          "digital": true
+        },
+        "verification": {
+          "onnuri": {
+            "status": "confirmed",
+            "checked_at": "2026-11-03T17:08:20+09:00",
+            "source_date": null,
+            "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+            "source_id": "kb:000000055922242",
+            "source_ids": [
+              "kb:000000055922242"
+            ],
+            "provider": "kbcard",
+            "issuer_scope": [
+              "KB국민카드"
+            ],
+            "match_basis": "bank_onnuri_flag_fuel_category_name_locality_coordinates_commercial_address",
+            "candidate_ids": [],
+            "note": "KB국민카드 온누리 사용처 조회 기준. 카드사 반영 지연 가능. 지류·QR·다른 카드사는 별도 확인."
+          }
+        },
+        "location_evidence": {
+          "source_type": "commercial_registry",
+          "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+          "source_date": "2026-06-30",
+          "source_id": "MA0101202503A0053009",
+          "bank_distance_m": 6.0
+        }
+      },
+      "same_map_premise_distance_m": 0.0,
+      "resolved_review_indexes": [
+        16,
+        17
+      ],
+      "check": {
+        "status": "confirmed_in_issuer_scope",
+        "issuer": "kbcard",
+        "checked_at": "2026-11-03T17:08:20+09:00",
+        "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+        "bank_id": "000000055922242",
+        "other_payment_methods": "not_reverified",
+        "identity_review_evidence": "output/audits/regional_gap_20261102/curated_rechecks_20261103_1712.json"
+      }
+    }
+  ],
+  "namchang_followup": {
+    "station_id": "onnuri:kb:000000055922616",
+    "source_checked_at": "2026-11-03T17:11:22+09:00",
+    "result": "no_match_not_nonmembership",
+    "physical_point": [
+      34.40867856,
+      126.6249243
+    ],
+    "archived_issuer_point": [
+      34.4156236591,
+      126.6304928486
+    ],
+    "distance_m": 925.9,
+    "archived_issuer_checked_at": "2026-10-27T16:50:06+09:00",
+    "prior_independent_identity": {
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "checked_at": "2026-10-27T16:50:06+09:00",
+      "identity_review": "same_premise_confirmed",
+      "bank_record": {
+        "location": {
+          "lat": "34.4156236591",
+          "lng": "126.6304928486"
+        },
+        "content": {
+          "tel": "061)533-6760",
+          "title": "(주)대창석유 (남창)",
+          "category": "주유소",
+          "address": "전남 해남군 북평면 ",
+          "distance": "104473",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000055922616",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-27T16:50:06+09:00",
+        "query_address": [
+          "전남",
+          "해남군",
+          "북평면"
+        ],
+        "coordinate_status": "present_unverified"
+      },
+      "registry_record": {
+        "CONM_NM": "(주)대창석유 직영 남창주유소",
+        "CTPV_NM": "전남광주통합특별시",
+        "SGG_NM": "해남군",
+        "LCTN_ROAD_NM": "전남광주통합특별시 해남군 북평면 현산북평로 1139",
+        "LCTN_LOTNO_ADDR": "전남광주통합특별시 해남군 북평면 남창리 845-2",
+        "LAT": "34.40867856",
+        "LOT": "126.6249243",
+        "TELNO": "061-533-6760",
+        "DATA_CRTR_YMD": "2026-07-01"
+      },
+      "registry_source_url": "https://www.data.go.kr/data/15129441/standard.do",
+      "opinet_record": {
+        "UNI_ID": "A0020659",
+        "POLL_DIV_CO": "SKE",
+        "GPOLL_DIV_CO": "   ",
+        "OS_NM": "(주)대창석유직영 남창주유소",
+        "VAN_ADR": "전남광주통합특별시 해남군 북평면 남창리 845-2",
+        "NEW_ADR": "전남광주통합특별시 해남군 북평면 현산북평로 1139",
+        "TEL": "061-533-6760",
+        "SIGUNCD": "2029",
+        "LPG_YN": "N",
+        "MAINT_YN": "N",
+        "CAR_WASH_YN": "N",
+        "KPETRO_YN": "N",
+        "CVS_YN": "N",
+        "GOOD_YN": "N",
+        "GOOD_YN5": "N",
+        "GIS_X_COOR": 273778.0,
+        "GIS_Y_COOR": 202085.0,
+        "OIL_PRICE": [
+          {
+            "PRODCD": "B027",
+            "PRICE": 1899,
+            "TRADE_DT": "20261021",
+            "TRADE_TM": "133520"
+          },
+          {
+            "PRODCD": "D047",
+            "PRICE": 1889,
+            "TRADE_DT": "20261021",
+            "TRADE_TM": "133612"
+          }
+        ]
+      },
+      "opinet_source_url": "https://www.opinet.co.kr",
+      "opinet_checked_at": "2026-10-27T16:54:03+09:00",
+      "annual_candidate_ids": []
+    },
+    "queued_job": {
+      "kind": "kb_search",
+      "source": "kbcard",
+      "region": "전남",
+      "purpose": "issuer_coordinate_identity_review",
+      "target": {
+        "name": "(주)대창석유 (남창)",
+        "keyword": "남창",
+        "lat": 34.4156236591,
+        "lng": 126.6304928486,
+        "address": "전남 해남군 북평면 ",
+        "coordinate_source_id": "kbcard:000000055922616"
+      },
+      "discovery_only": true,
+      "review_station_id": "onnuri:kb:000000055922616",
+      "expected_bank_id": "000000055922616",
+      "source_evidence": "output/audits/regional_gap_20261102/curated_rechecks_20261103_1712.json",
+      "discovery_scope": "Query the archived issuer point only to inspect this exact issuer ID; keep the municipal/Opinet map location and current membership unresolved until identity review."
+    },
+    "job_id": "6a1d9da1fc4a77b64d6332db",
+    "current_issuer_membership": "unresolved",
+    "map_location_changed": false
+  },
+  "region_only_resolutions_added": 12,
+  "preserved": {
+    "attempts": true,
+    "sources": true,
+    "effective_collection_limits": true,
+    "survey_inventory": true,
+    "evidence": true,
+    "source_gaps": true,
+    "last_run": true,
+    "region_order": true
+  },
+  "existing_jobs_unchanged": true,
+  "map_mutated_by_review": false,
+  "new_map_stations": 0,
+  "new_regional_progress": {
+    "region": "전남",
+    "status": "collecting",
+    "jobs_total": 44,
+    "jobs_remaining": 4,
+    "jobs_needing_review": 0,
+    "source_gaps": 12,
+    "review_records": 11,
+    "inventory_reviewed": false,
+    "mapped_records_to_recheck": 28,
+    "membership_check_status": {
+      "confirmed_in_issuer_scope": 24,
+      "needs_review_not_found": 4
+    },
+    "unresolved_annual_identities": 9,
+    "missing_standard_checks": [
+      "market_coverage",
+      "membership_rechecks",
+      "annual_identities"
+    ],
+    "standard_checks_complete": false,
+    "scope": "issuer-scoped rechecks; paper/QR/operator freshness not inferred"
+  }
+}

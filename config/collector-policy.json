@@ -1,5 +1,6 @@
 {
   "schema_version": 1,
+  "minimum_run_interval_seconds": 10800,
   "interval_seconds": 180,
   "requests_per_run": 3,
   "requests_per_24h": 24,

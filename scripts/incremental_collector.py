@@ -370,6 +370,8 @@ def summarize(state):
                       recheck_after=state['survey_inventory']['recheck_after'], survey_revision=2)
     if state.get('effective_collection_limits'):
         result['collection_limits'] = state['effective_collection_limits']
+    if state.get('collection_schedule'):
+        result['collection_schedule'] = state['collection_schedule']
     return result
 
 
@@ -400,6 +402,20 @@ def ordered_jobs(state, policy, run_id, active_region):
     return [next(ordered) if j['source'] == 'kbcard' else j for j in state['jobs']]
 
 
+def collection_schedule(state, policy, now):
+    """Share the run cadence across manual/scheduled runs and zero-request upkeep."""
+    interval = int(policy.get('minimum_run_interval_seconds', 0))
+    if interval < 0:
+        raise ValueError('Invalid run interval')
+    attempts = state['attempts']
+    latest = attempts[-1] if attempts else None
+    started = min(a['at'] for a in attempts if a.get('run_id') == latest['run_id']) \
+        if latest and latest.get('run_id') else latest['at'] if latest else None
+    allowed = started + interval if started is not None else 0
+    return {'minimum_run_interval_seconds': interval, 'last_collection_started_at': started,
+            'next_allowed_at': allowed, 'waiting': now < allowed}
+
+
 def run(state, store, policy, session, commercial, commercial_source, *, clock=time.time, sleeper=time.sleep, max_requests=5):
     maximum = min(max_requests, run_limit(state, policy, clock()))
     if maximum < 0:
@@ -414,6 +430,8 @@ def run(state, store, policy, session, commercial, commercial_source, *, clock=t
             job.update(status='needs_review', reason='Interrupted attempt; not retried automatically')
             observe(state, policy, attempt['source'], attempt, clock())
     maximum = min(max_requests, run_limit(state, policy, clock()))
+    if collection_schedule(state, policy, clock())['waiting']:
+        maximum = 0
     session.trust_env = False
     progress = regional_progress(state)
     for job in state['jobs']:
@@ -517,6 +535,7 @@ def run(state, store, policy, session, commercial, commercial_source, *, clock=t
         if attempt['status'] != 'done':
             break
     limits_snapshot(state, policy, clock())
+    state['collection_schedule'] = collection_schedule(state, policy, clock())
     state['summary'] = summarize(state)
     jobs_by_id = {j['id']: j for j in state['jobs']}
     purposes = Counter(jobs_by_id[a['job_id']].get('purpose', jobs_by_id[a['job_id']]['kind'])

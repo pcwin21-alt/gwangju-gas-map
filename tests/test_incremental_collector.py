@@ -56,6 +56,37 @@ class CollectorTests(unittest.TestCase):
         self.clock.value+=21600; self.execute(s)
         self.assertEqual(self.session.request.call_count,1)
 
+    def test_manual_and_scheduled_runs_share_cadence_across_zero_request_upkeep(self):
+        self.policy['minimum_run_interval_seconds'] = 10800
+        s = self.state(4);started = self.clock()
+        self.execute(s, 1)
+        previous = copy.deepcopy(s)
+        self.clock.value = started+3600
+        self.execute(s, 2)
+        self.execute(s, 0)
+        self.assertEqual(self.session.request.call_count, 1)
+        for field in ('attempts', 'jobs', 'sources'):
+            self.assertEqual(s[field], previous[field])
+        self.assertEqual(s['collection_schedule']['next_allowed_at'], started+10800)
+        self.assertTrue(s['summary']['collection_schedule']['waiting'])
+        self.clock.value = started+10800
+        self.execute(s, 1)
+        self.assertEqual(self.session.request.call_count, 2)
+
+    def test_cadence_uses_first_attempt_of_run_without_shortening_in_run_gaps(self):
+        self.policy.update(minimum_run_interval_seconds=10800, interval_seconds=180)
+        def slow_response(*args, **kwargs):
+            self.clock.value += 30
+            return response()
+        self.session.request.side_effect = slow_response
+        s = self.state(4);started = self.clock()
+        self.execute(s, 3)
+        self.assertEqual([a['at']-started for a in s['attempts']], [0, 210, 420])
+        self.assertEqual(s['collection_schedule']['next_allowed_at'], started+10800)
+        self.clock.value = started+10800
+        self.execute(s, 1)
+        self.assertEqual(self.session.request.call_count, 4)
+
     def test_discovery_gets_one_turn_then_existing_checks_resume(self):
         s = self.state(4)
         for j in s['jobs']:
