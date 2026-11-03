@@ -8534,7 +8534,17 @@
       "name": "현대참기름",
       "region": "전남광주",
       "status": "needs_location",
-      "reason": "No independently linked vehicle-fuel location; no guessed point"
+      "reason": "No independently linked vehicle-fuel location; no guessed point",
+      "evidence": [
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f12f94c/output/audits/regional_gap_20261102/yeosu_hyundai_identity_lead_20261103.json"
+      ],
+      "identity_lead_review": {
+        "reviewed_at": "2026-11-03T10:46:54+09:00",
+        "status": "pending_primary_identity",
+        "secondary_street_address": "여수시 교동시장4길 12-1",
+        "secondary_phone": "061-663-6746",
+        "conflict": "annual petroleum versus mirrored food permit classification; not resolved"
+      }
     },
     {
       "candidate_id": "badaf1066867bde046275626",
@@ -9632,10 +9642,12 @@
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/2b72365/output/audits/portal_search_20261103/results.json",
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f25f479/output/audits/regional_gap_20261102/nonfuel_reviews.json",
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/76d7041/output/audits/regional_gap_20261102/run_20261103_0743.json",
-        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/06457ac/output/audits/regional_gap_20261102/mokpo_samhak_recheck_20261103.json"
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/06457ac/output/audits/regional_gap_20261102/mokpo_samhak_recheck_20261103.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f12f94c/output/audits/regional_gap_20261102/run_20261103_1001.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f12f94c/output/audits/regional_gap_20261102/yeosu_hyundai_identity_lead_20261103.json"
       ],
       "checked_at": null,
-      "last_reviewed_at": "2026-11-03T10:44:02+09:00"
+      "last_reviewed_at": "2026-11-03T10:46:54+09:00"
     },
     "전북": {
       "status": "pending",
@@ -22007,10 +22019,12 @@
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/092ad8d/output/audits/region_comparison_20261103/analysis.json",
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/16c7c03/output/audits/three_route_trial_20261103/results.json",
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f25f479/output/audits/regional_gap_20261102/nonfuel_reviews.json",
-          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/76d7041/output/audits/regional_gap_20261102/run_20261103_0743.json"
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/76d7041/output/audits/regional_gap_20261102/run_20261103_0743.json",
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f12f94c/output/audits/regional_gap_20261102/run_20261103_1001.json",
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f12f94c/output/audits/regional_gap_20261102/yeosu_hyundai_identity_lead_20261103.json"
         ],
         "checked_at": null,
-        "last_reviewed_at": "2026-11-03T07:53:25+09:00"
+        "last_reviewed_at": "2026-11-03T10:46:54+09:00"
       },
       "membership_rechecks": {
         "status": "pending",
@@ -22020,11 +22034,13 @@
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f201100/output/audits/full_region_crosscheck_20261103/report.json",
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/092ad8d/output/audits/region_comparison_20261103/analysis.json",
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/76d7041/output/audits/regional_gap_20261102/run_20261103_0743.json",
-          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/06457ac/output/audits/regional_gap_20261102/mokpo_samhak_recheck_20261103.json"
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/06457ac/output/audits/regional_gap_20261102/mokpo_samhak_recheck_20261103.json",
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f12f94c/output/audits/regional_gap_20261102/run_20261103_1001.json",
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f12f94c/output/audits/regional_gap_20261102/yeosu_hyundai_identity_lead_20261103.json"
         ],
         "checked_at": null,
         "scope": "Current issuer rechecks incomplete; coordinate discrepancy follow-up is discovery only",
-        "last_reviewed_at": "2026-11-03T10:44:02+09:00"
+        "last_reviewed_at": "2026-11-03T10:46:54+09:00"
       },
       "market_coverage": {
         "status": "pending",
