@@ -14639,10 +14639,16 @@
           ],
           "issuer_checks": {
             "kbcard": {
-              "status": "needs_review_not_found",
-              "checked_at": "2026-11-02T07:09:23+09:00",
-              "job_id": "ce7d85b7fbf2733b81b53e99",
-              "nonmembership": "not_established"
+              "status": "confirmed_in_issuer_scope",
+              "issuer": "kbcard",
+              "checked_at": "2026-11-03T20:09:09+09:00",
+              "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+              "bank_id": "000000088473697",
+              "other_payment_methods": "not_reverified",
+              "match_basis": "reviewed_exact_issuer_id_name_full_phone_opinet_commercial_operator_address",
+              "identity_review_evidence": "https://github.com/pcwin21-alt/gwangju-gas-map/blob/55cb2325f8fe833cb88267006d89686c0f9268e9/output/audits/regional_gap_20261102/innovation_identity_recheck_20261103.json",
+              "issuer_map_coordinate_discrepancy_m": 1986.9,
+              "map_location_changed": false
             }
           }
         }
