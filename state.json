@@ -13,7 +13,7 @@
       "status": "active",
       "url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
       "scope": "Public unauthenticated Onnuri merchant form; issuer-specific evidence only; limits are our load caps, not a provider guarantee",
-      "next_allowed_at": 1793668272.1128175,
+      "next_allowed_at": 1793668274.168724,
       "volume_ramp": {
         "stage": "pilot",
         "started_at": 1793556784.2048566,
@@ -855,7 +855,7 @@
       "job_id": "504058b68c3f51a4ff1d8e1f",
       "source": "kbcard",
       "at": 1793668092.1128175,
-      "status": "reserved",
+      "status": "done",
       "run_id": "94f92e0e76f6460eb744b6d2b4839b4d",
       "request": {
         "method": "POST",
@@ -872,7 +872,12 @@
           "endRow": 10,
           "mmcNm": ""
         }
-      }
+      },
+      "request_started_at": 1793668093.3158622,
+      "network_duration_seconds": 0.7469639778137207,
+      "http_status": 200,
+      "response_sha256": "49ec6eaf8e6dafa93a00958d6b0b1626a90d9973f14ddf36af88862a1dd75d1f",
+      "finished_at": 1793668094.168663
     }
   ],
   "jobs": [
@@ -2478,11 +2483,16 @@
       },
       "logical_key": "504058b68c3f51a4ff1d8e1f",
       "id": "504058b68c3f51a4ff1d8e1f",
-      "status": "pending",
+      "status": "done",
       "attempts": 1,
       "page": 1,
-      "observed_ids": [],
-      "candidate_ids": []
+      "observed_ids": [
+        "000000055922363"
+      ],
+      "candidate_ids": [],
+      "expected": 1,
+      "last_observed_at": "2026-11-03T10:08:14+09:00",
+      "result": "observations_saved"
     },
     {
       "kind": "kb_search",
@@ -8346,6 +8356,40 @@
         "MA010120220808842825"
       ],
       "reason": "Independent exact business/address/category evidence incomplete; do not exclude by bank category alone"
+    },
+    {
+      "job_id": "504058b68c3f51a4ff1d8e1f",
+      "bank_record": {
+        "location": {
+          "lat": "34.8244227459",
+          "lng": "126.4238800097"
+        },
+        "content": {
+          "tel": "061)283-5671",
+          "title": "(주)대창석유 (삼학)",
+          "category": "주유소",
+          "address": "전남 목포시 석현동 ",
+          "distance": "999",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000055922363",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        }
+      },
+      "checked_at": "2026-11-03T10:08:14+09:00",
+      "independent_fuel_candidate_ids": [],
+      "reason": "Independent exact business/address/category evidence incomplete; do not exclude by bank category alone"
+    },
+    {
+      "region": "전남",
+      "station_id": "onnuri:kb:000000055922363",
+      "job_id": "504058b68c3f51a4ff1d8e1f",
+      "checked_at": "2026-11-03T10:08:14+09:00",
+      "reason": "No independently matched current issuer record; preserve previous station"
     }
   ],
   "source_gaps": [
@@ -22762,6 +22806,12 @@
       "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
       "bank_id": "000000099959398",
       "other_payment_methods": "not_reverified"
+    },
+    "onnuri:kb:000000055922363": {
+      "status": "needs_review_not_found",
+      "checked_at": "2026-11-03T10:08:14+09:00",
+      "job_id": "504058b68c3f51a4ff1d8e1f",
+      "nonmembership": "not_established"
     }
   },
   "initial_plan_id": "fuel-candidate-inventory-20261102-v1",
