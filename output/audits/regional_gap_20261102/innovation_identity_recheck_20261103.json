@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-11-03T20:11:41+09:00",
+  "region": "전남",
+  "station_id": "onnuri:14280200024",
+  "station_name": "주식회사 혁신에너지",
+  "decision": "same_existing_premise_current_issuer_recheck_confirmed",
+  "new_station_count": 0,
+  "additional_source_requests_for_identity_review": 0,
+  "collection_run": "https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41624681843",
+  "current_issuer": {
+    "checked_at": "2026-11-03T20:09:09+09:00",
+    "bank_record": {
+      "location": {
+        "lat": "35.0253400897",
+        "lng": "126.7652237445"
+      },
+      "content": {
+        "tel": "061)336-2250",
+        "title": "(주)혁신에너지",
+        "category": "주유소",
+        "address": "전남 나주시 금천면 ",
+        "distance": "999",
+        "kindGb": "0",
+        "onNuliGb": "1",
+        "tradiGb": "0",
+        "liveHoodGb": "1",
+        "sangsaengGb": "1",
+        "franchiseNo": "000000088473697",
+        "highOilGb": "1",
+        "seoulGb": "0"
+      }
+    },
+    "response_file": "responses/3024e104537042a3a728ba67.json",
+    "state_commit_containing_response": "3098f37",
+    "response_file_sha256": "1e093b39d92d84234e057db42c251dcb322771235aad3386e14f6071c0dda675",
+    "response_wire_sha256": "f111b85138a589c338cd782a3fd54b2a1aadef0108e15e6eabdcb040f9d4f053"
+  },
+  "independent_identity": {
+    "opinet_source_url": "https://www.opinet.co.kr",
+    "opinet_archived_record": {
+      "UNI_ID": "A0033279",
+      "POLL_DIV_CO": "SOL",
+      "GPOLL_DIV_CO": "   ",
+      "OS_NM": "혁신주유소",
+      "VAN_ADR": "전남광주통합특별시 나주시 빛가람동 540",
+      "NEW_ADR": "전남광주통합특별시 나주시 그린로 116",
+      "TEL": "061-336-2250",
+      "SIGUNCD": "2009",
+      "LPG_YN": "N",
+      "MAINT_YN": "Y",
+      "CAR_WASH_YN": "Y",
+      "KPETRO_YN": "N",
+      "CVS_YN": "N",
+      "GOOD_YN": "N",
+      "GOOD_YN5": "N",
+      "GIS_X_COOR": 288845.54915,
+      "GIS_Y_COOR": 268829.53777,
+      "OIL_PRICE": [
+        {
+          "PRODCD": "B027",
+          "PRICE": 1867,
+          "TRADE_DT": "20261027",
+          "TRADE_TM": "145820"
+        },
+        {
+          "PRODCD": "D047",
+          "PRICE": 1847,
+          "TRADE_DT": "20261027",
+          "TRADE_TM": "142834"
+        }
+      ]
+    },
+    "opinet_archive_commit": "124f77de59292aef9d4c4d74013d51e72386396e",
+    "opinet_archive_committed_at": "2026-10-27T16:57:28+09:00",
+    "opinet_original_fetch_timestamp": "not_stored_in_this_raw_file; do not claim a new Opinet query",
+    "commercial_record": {
+      "상가업소번호": "MA010120220807764996",
+      "상호명": "혁신에너지",
+      "지점명": "",
+      "상권업종소분류코드": "G21401",
+      "상권업종소분류명": "주유소",
+      "표준산업분류코드": "G47711",
+      "표준산업분류명": "운송장비용 주유소 운영업",
+      "시군구명": "나주시",
+      "도로명주소": "전남광주통합특별시 나주시 그린로 116",
+      "지번주소": "전남광주통합특별시 나주시 빛가람동 540",
+      "위도": "35.011951712444",
+      "경도": "126.779665776366",
+      "region": "전남"
+    },
+    "commercial_source": {
+      "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+      "source_date": "2026-06-30"
+    },
+    "operator_archived_record": {
+      "frCd": "14280200024",
+      "frcsNm": "주식회사 혁신에너지",
+      "frcsAddr": "전라남도 나주시 그린로 116 (빛가람동)",
+      "mrktNm": "빛가람 호수로 골목형상점가",
+      "placeTypeCd": "08",
+      "placeTypeNm": "기타소매업",
+      "addrCd": "12170",
+      "latitude": 35.01195,
+      "longitude": 126.779671,
+      "paperYn": "Y",
+      "cardYn": "Y",
+      "qrYn": "Y"
+    },
+    "operator_original_checked_at": "2026-10-25T10:51:11+09:00"
+  },
+  "checks": {
+    "same_expected_current_bank_id": true,
+    "current_bank_onnuri_flag": true,
+    "current_bank_fuel_category": true,
+    "bank_legal_name_matches_commercial_and_operator": true,
+    "exact_full_phone_between_current_bank_and_independent_opinet": true,
+    "opinet_vehicle_fuel_identity": true,
+    "exact_road_address_across_map_operator_commercial_opinet": true,
+    "independent_vehicle_fuel_commercial_classification": true,
+    "map_to_independent_commercial_within_100m": true,
+    "map_to_independent_opinet_within_100m": true,
+    "current_and_archived_exact_issuer_identity_unchanged": true
+  },
+  "distances_m": {
+    "map_to_commercial": 0.51,
+    "map_to_opinet": 26.69,
+    "map_to_current_bank_point": 1986.9
+  },
+  "coordinate_decision": "Keep independently corroborated map position; preserve the different issuer address/point as source evidence. Do not transfer another premise solely by proximity.",
+  "scope": "Only KB issuer_checks for this existing identity. Operator, paper, QR and other issuers are not reverified. No name/distance matching rule changed.",
+  "source_files": [
+    {
+      "path": "output/alternatives/opinet_hyeoksin_naju_20261027.json",
+      "sha256": "c66e65c5f67e0d2a022e2ea362027a8ba96d121269b510c96887beee4a3e91a9"
+    },
+    {
+      "path": "output/onnuri_live_snapshot.json",
+      "sha256": "af6866d59fd471cbe26ed0cefa112ca046c4e00641479ba45b5f3082e39d55aa"
+    },
+    {
+      "path": "output/audits/regional_gap_20261102/naju_innovation_coordinate_review.json",
+      "sha256": "904561df347922c0f69a9b94eb111478c80868d3faa0631ecd00f659b05f78f0"
+    },
+    {
+      "path": "config/collector-fuel-index.json.gz",
+      "sha256": "2f23391dc079f52dae1ecf9e562330d83f365cfb41e70c47ebfa690514edb122"
+    }
+  ]
+}
