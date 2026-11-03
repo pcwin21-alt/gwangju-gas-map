@@ -7562,6 +7562,29 @@
       "observed_ids": [],
       "result": "independent_identity_observations_saved",
       "last_observed_at": "2026-11-04T02:13:27+09:00"
+    },
+    {
+      "kind": "kakao_place_identity",
+      "source": "kakao_local",
+      "region": "전남",
+      "purpose": "independent_annual_candidate_identity",
+      "candidate_ids": [
+        "8dedc9fce3baf0dc2d230a00"
+      ],
+      "discovery_only": true,
+      "target": {
+        "name": "현대참기름",
+        "query": "여수 교동시장 현대참기름",
+        "address": "전라남도 여수시 교동시장4길 12-1"
+      },
+      "source_evidence": "output/audits/regional_gap_20261102/yeosu_hyundai_identity_lead_20261103.json",
+      "scope": "One named physical identity observation to inspect food-versus-fuel category and address. No automatic annual exclusion, current membership inference, blocked LOCALDATA retry or alternate host.",
+      "logical_key": "4a5d002a2eee71585252d910",
+      "id": "4a5d002a2eee71585252d910",
+      "status": "pending",
+      "attempts": 0,
+      "page": 1,
+      "observed_ids": []
     }
   ],
   "evidence": [
@@ -8877,14 +8900,26 @@
       },
       "checked_at": "2026-11-03T04:38:41+09:00",
       "independent_fuel_candidate_ids": [],
-      "reason": "Independent exact business/address/category evidence incomplete; do not exclude by bank category alone"
+      "reason": "Independent exact business/address/category evidence incomplete; do not exclude by bank category alone",
+      "status": "resolved",
+      "resolved_at": "2026-11-04T02:18:03+09:00",
+      "resolution": "Saved exact KB identity corroborated by named Kakao Local liquid-fuel premise, exact phone/road address/locality and all points within100m. Reuse issuer date; no fresh KB request or operator/paper/QR renewal.",
+      "resolution_evidence": [
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/2bbcc43da943e4d13f510d2e5016b07f1f9ef884/output/audits/regional_gap_20261102/namgomun_place_identity_review_20261104.json"
+      ]
     },
     {
       "region": "전남",
       "station_id": "onnuri:18802200007",
       "job_id": "de06432b3d9da466cd3d9ec5",
       "checked_at": "2026-11-03T04:38:41+09:00",
-      "reason": "No independently matched current issuer record; preserve previous station"
+      "reason": "No independently matched current issuer record; preserve previous station",
+      "status": "resolved",
+      "resolved_at": "2026-11-04T02:18:03+09:00",
+      "resolution": "Saved exact KB identity corroborated by named Kakao Local liquid-fuel premise, exact phone/road address/locality and all points within100m. Reuse issuer date; no fresh KB request or operator/paper/QR renewal.",
+      "resolution_evidence": [
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/2bbcc43da943e4d13f510d2e5016b07f1f9ef884/output/audits/regional_gap_20261102/namgomun_place_identity_review_20261104.json"
+      ]
     },
     {
       "review_id": "full-inventory:manjae-damyang-20261103",
@@ -9923,12 +9958,12 @@
       "reason": "Annual identity needs independent same-premise linkage or documented exclusion"
     }
   ],
-  "status": "needs_attention",
+  "status": "running",
   "summary": {
-    "status": "needs_attention",
-    "jobs_total": 229,
+    "status": "running",
+    "jobs_total": 230,
     "jobs_done": 45,
-    "jobs_remaining": 184,
+    "jobs_remaining": 185,
     "review_records": 21,
     "evidence_records": 24,
     "source_gaps": 90,
@@ -9942,17 +9977,17 @@
     "regions": [
       {
         "region": "전남",
-        "status": "needs_review",
-        "jobs_total": 45,
-        "jobs_remaining": 0,
+        "status": "collecting",
+        "jobs_total": 46,
+        "jobs_remaining": 1,
         "jobs_needing_review": 0,
         "source_gaps": 9,
-        "review_records": 9,
+        "review_records": 7,
         "inventory_reviewed": false,
         "mapped_records_to_recheck": 28,
         "membership_check_status": {
-          "confirmed_in_issuer_scope": 26,
-          "needs_review_not_found": 2
+          "confirmed_in_issuer_scope": 27,
+          "needs_review_not_found": 1
         },
         "unresolved_annual_identities": 6,
         "missing_standard_checks": [
@@ -10409,10 +10444,11 @@
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/cc81165/output/audits/regional_gap_20261102/candidate_regions_20261103_1700.json",
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/55cb2325f8fe833cb88267006d89686c0f9268e9/output/audits/regional_gap_20261102/innovation_identity_recheck_20261103.json",
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/b94117e11e726b40100125bb0fcf019221a3775c/output/audits/regional_gap_20261102/namchang_and_market_review_20261103_2310.json",
-        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/4d1c3fe22086b12d0e9b9f45064f5660de60d775/output/audits/regional_gap_20261102/independent_place_plan_20261104.json"
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/4d1c3fe22086b12d0e9b9f45064f5660de60d775/output/audits/regional_gap_20261102/independent_place_plan_20261104.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/2bbcc43da943e4d13f510d2e5016b07f1f9ef884/output/audits/regional_gap_20261102/namgomun_place_identity_review_20261104.json"
       ],
       "checked_at": null,
-      "last_reviewed_at": "2026-11-04T02:12:18+09:00"
+      "last_reviewed_at": "2026-11-04T02:18:03+09:00"
     },
     "전북": {
       "status": "pending",
@@ -22861,11 +22897,12 @@
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/04059f2/output/audits/regional_gap_20261102/curated_rechecks_20261103_1405.json",
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/590ca19/output/audits/regional_gap_20261102/curated_rechecks_20261103_1712.json",
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/55cb2325f8fe833cb88267006d89686c0f9268e9/output/audits/regional_gap_20261102/innovation_identity_recheck_20261103.json",
-          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/b94117e11e726b40100125bb0fcf019221a3775c/output/audits/regional_gap_20261102/namchang_and_market_review_20261103_2310.json"
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/b94117e11e726b40100125bb0fcf019221a3775c/output/audits/regional_gap_20261102/namchang_and_market_review_20261103_2310.json",
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/2bbcc43da943e4d13f510d2e5016b07f1f9ef884/output/audits/regional_gap_20261102/namgomun_place_identity_review_20261104.json"
         ],
         "checked_at": null,
         "scope": "Current issuer rechecks incomplete; coordinate discrepancy follow-up is discovery only",
-        "last_reviewed_at": "2026-11-03T23:17:12+09:00"
+        "last_reviewed_at": "2026-11-04T02:18:03+09:00"
       },
       "market_coverage": {
         "status": "pending",
@@ -23695,10 +23732,18 @@
       "other_payment_methods": "not_reverified"
     },
     "onnuri:18802200007": {
-      "status": "needs_review_not_found",
+      "status": "confirmed_in_issuer_scope",
+      "issuer": "kbcard",
       "checked_at": "2026-11-03T04:38:41+09:00",
-      "job_id": "de06432b3d9da466cd3d9ec5",
-      "nonmembership": "not_established"
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "bank_id": "000000034595536",
+      "other_payment_methods": "not_reverified",
+      "match_basis": "reviewed_single_station_name_pair_exact_phone_road_locality_fuel_category_and_coordinates_with_independent_Kakao_Local",
+      "identity_review_evidence": "https://github.com/pcwin21-alt/gwangju-gas-map/blob/2bbcc43da943e4d13f510d2e5016b07f1f9ef884/output/audits/regional_gap_20261102/namgomun_place_identity_review_20261104.json",
+      "independent_identity_checked_at": "2026-11-04T02:13:27+09:00",
+      "independent_identity_source": "Kakao Local",
+      "independent_place_id": "8247983",
+      "map_location_changed": false
     },
     "onnuri:18804200010": {
       "status": "confirmed_in_issuer_scope",
