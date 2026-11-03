@@ -13,7 +13,7 @@
       "status": "active",
       "url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
       "scope": "Public unauthenticated Onnuri merchant form; issuer-specific evidence only; limits are our load caps, not a provider guarantee",
-      "next_allowed_at": 1793693660.6207514,
+      "next_allowed_at": 1793693662.8573017,
       "volume_ramp": {
         "stage": "pilot",
         "started_at": 1793556784.2048566,
@@ -1029,7 +1029,7 @@
       "job_id": "a99de73b338c5f780aaa112f",
       "source": "kbcard",
       "at": 1793693480.6207514,
-      "status": "reserved",
+      "status": "done",
       "run_id": "86e12d78bbf948259f21a94fd03640e7",
       "request": {
         "method": "POST",
@@ -1046,7 +1046,12 @@
           "endRow": 10,
           "mmcNm": ""
         }
-      }
+      },
+      "request_started_at": 1793693481.896118,
+      "network_duration_seconds": 0.9476487636566162,
+      "http_status": 200,
+      "response_sha256": "ed9cc0421b5ec98455d55e8f292af98c795f13d7cc64c60c8fc317eb6b903641",
+      "finished_at": 1793693482.8572404
     }
   ],
   "jobs": [
@@ -2769,11 +2774,14 @@
       },
       "logical_key": "a99de73b338c5f780aaa112f",
       "id": "a99de73b338c5f780aaa112f",
-      "status": "pending",
+      "status": "done",
       "attempts": 1,
       "page": 1,
       "observed_ids": [],
-      "candidate_ids": []
+      "candidate_ids": [],
+      "expected": 0,
+      "last_observed_at": "2026-11-03T17:11:22+09:00",
+      "result": "no_match_not_nonmembership"
     },
     {
       "kind": "kb_search",
@@ -8871,6 +8879,13 @@
       "station_id": "onnuri:kb:000000055922242",
       "job_id": "9d7968370dc5f87d87698425",
       "checked_at": "2026-11-03T17:08:20+09:00",
+      "reason": "No independently matched current issuer record; preserve previous station"
+    },
+    {
+      "region": "전남",
+      "station_id": "onnuri:kb:000000055922616",
+      "job_id": "a99de73b338c5f780aaa112f",
+      "checked_at": "2026-11-03T17:11:22+09:00",
       "reason": "No independently matched current issuer record; preserve previous station"
     }
   ],
@@ -23378,6 +23393,12 @@
       "status": "needs_review_not_found",
       "checked_at": "2026-11-03T17:08:20+09:00",
       "job_id": "9d7968370dc5f87d87698425",
+      "nonmembership": "not_established"
+    },
+    "onnuri:kb:000000055922616": {
+      "status": "needs_review_not_found",
+      "checked_at": "2026-11-03T17:11:22+09:00",
+      "job_id": "a99de73b338c5f780aaa112f",
       "nonmembership": "not_established"
     }
   },
