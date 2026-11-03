@@ -1,0 +1,48 @@
+{
+  "preparedAt": "2026-11-03T13:35:59.848132+09:00",
+  "status": "prepared_local_build_not_submitted",
+  "appName": "onnuri-fuel-map",
+  "workspaceId": "105239",
+  "consoleUrl": "https://apps-in-toss.toss.im/workspace/105239/mini-app/onnuri-fuel-map/app-build",
+  "sourceCommit": "f12f94c1397f8f3cf007036612ca5d15970037cc",
+  "readyForSubmission": false,
+  "bundleUploadedThisRun": false,
+  "reviewSubmittedThisRun": false,
+  "tossDeviceTest": "not_run",
+  "consoleInspection": "redirected_to_login; previous metadata save not reverified",
+  "checks": {
+    "nodeTestsPassed": 3,
+    "pythonTestsPassed": 4,
+    "inlineScriptsSyntaxPassed": 1,
+    "embeddedDatasetsPreserved": 5,
+    "sourceAndPaletteHashMatched": true,
+    "logo": "600x600 PNG, opaque",
+    "browser": "fallback_list, empty_result_recovery, tools_menu, 360x780 rendering"
+  },
+  "blockingChecks": [
+    "console login and actual upload state",
+    "map origins and runtime map rendering",
+    "real Toss app test at least once",
+    "platform navigation and state preservation",
+    "data flow and required notices",
+    "final platform eligibility and truthful attestations"
+  ],
+  "files": {
+    "logo-600.png": {
+      "bytes": 14747,
+      "sha256": "5272f4fccda35b5234a909bb18ae890dffb1f46306cebc138b4ab41de0b2aa0c"
+    },
+    "onnuri-fuel-map.ait": {
+      "bytes": 153408,
+      "sha256": "608a4e8dc97c211ec94636a0280033fb3c3cea7f9da5779c6375119ac34dcac2"
+    },
+    "START_HERE.md": {
+      "bytes": 10945,
+      "sha256": "0411aa6ec95a9971db16bf3a0eaaa581a472f82c9365c97c7cbb7b3144c34d63"
+    },
+    "test-build-manifest.json": {
+      "bytes": 909,
+      "sha256": "5301fc113851ec4eaaaae9bf8c0e9a3bb06a56cb8f0b41b6b30db172e2a724fd"
+    }
+  }
+}
