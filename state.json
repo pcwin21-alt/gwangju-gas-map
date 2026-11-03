@@ -8679,13 +8679,18 @@
       "job_id": "ce7d85b7fbf2733b81b53e99",
       "checked_at": "2026-11-02T07:09:23+09:00",
       "reason": "No independently matched current issuer record; preserve previous station",
-      "status": "needs_review",
+      "status": "resolved",
       "investigation_evidence": [
         "output/audits/regional_gap_20261102/naju_innovation_coordinate_review.json"
       ],
       "investigated_at": "2026-11-02T09:01:20+09:00",
       "followup_job_id": "cb87c8541476da05247da7c2",
-      "investigation_scope": "Issuer coordinate/address mismatch hypothesis; no current membership conclusion"
+      "investigation_scope": "Issuer coordinate/address mismatch hypothesis; no current membership conclusion",
+      "resolved_at": "2026-11-03T20:14:57+09:00",
+      "resolution": "Same existing premise corroborated by full phone, archived independent Opinet road address, commercial fuel identity and exact current KB ID; source locality/point discrepancy preserved.",
+      "resolution_evidence": [
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/55cb2325f8fe833cb88267006d89686c0f9268e9/output/audits/regional_gap_20261102/innovation_identity_recheck_20261103.json"
+      ]
     },
     {
       "job_id": "c1aca64d9b556a9b15aae8b7",
@@ -9055,7 +9060,13 @@
       },
       "checked_at": "2026-11-03T20:09:09+09:00",
       "independent_fuel_candidate_ids": [],
-      "reason": "Independent exact business/address/category evidence incomplete; do not exclude by bank category alone"
+      "reason": "Independent exact business/address/category evidence incomplete; do not exclude by bank category alone",
+      "status": "resolved",
+      "resolved_at": "2026-11-03T20:14:57+09:00",
+      "resolution": "Same existing premise corroborated by full phone, archived independent Opinet road address, commercial fuel identity and exact current KB ID; source locality/point discrepancy preserved.",
+      "resolution_evidence": [
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/55cb2325f8fe833cb88267006d89686c0f9268e9/output/audits/regional_gap_20261102/innovation_identity_recheck_20261103.json"
+      ]
     }
   ],
   "source_gaps": [
@@ -9806,12 +9817,12 @@
         "jobs_remaining": 1,
         "jobs_needing_review": 0,
         "source_gaps": 12,
-        "review_records": 12,
+        "review_records": 10,
         "inventory_reviewed": false,
         "mapped_records_to_recheck": 28,
         "membership_check_status": {
-          "confirmed_in_issuer_scope": 24,
-          "needs_review_not_found": 4
+          "confirmed_in_issuer_scope": 25,
+          "needs_review_not_found": 3
         },
         "unresolved_annual_identities": 9,
         "missing_standard_checks": [
@@ -10261,10 +10272,11 @@
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f12f94c/output/audits/regional_gap_20261102/yeosu_hyundai_identity_lead_20261103.json",
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/04059f2/output/audits/regional_gap_20261102/curated_rechecks_20261103_1405.json",
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/590ca19/output/audits/regional_gap_20261102/curated_rechecks_20261103_1712.json",
-        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/cc81165/output/audits/regional_gap_20261102/candidate_regions_20261103_1700.json"
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/cc81165/output/audits/regional_gap_20261102/candidate_regions_20261103_1700.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/55cb2325f8fe833cb88267006d89686c0f9268e9/output/audits/regional_gap_20261102/innovation_identity_recheck_20261103.json"
       ],
       "checked_at": null,
-      "last_reviewed_at": "2026-11-03T17:14:30+09:00"
+      "last_reviewed_at": "2026-11-03T20:14:57+09:00"
     },
     "전북": {
       "status": "pending",
@@ -22699,11 +22711,12 @@
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f12f94c/output/audits/regional_gap_20261102/run_20261103_1001.json",
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f12f94c/output/audits/regional_gap_20261102/yeosu_hyundai_identity_lead_20261103.json",
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/04059f2/output/audits/regional_gap_20261102/curated_rechecks_20261103_1405.json",
-          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/590ca19/output/audits/regional_gap_20261102/curated_rechecks_20261103_1712.json"
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/590ca19/output/audits/regional_gap_20261102/curated_rechecks_20261103_1712.json",
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/55cb2325f8fe833cb88267006d89686c0f9268e9/output/audits/regional_gap_20261102/innovation_identity_recheck_20261103.json"
         ],
         "checked_at": null,
         "scope": "Current issuer rechecks incomplete; coordinate discrepancy follow-up is discovery only",
-        "last_reviewed_at": "2026-11-03T17:14:30+09:00"
+        "last_reviewed_at": "2026-11-03T20:14:57+09:00"
       },
       "market_coverage": {
         "status": "pending",
@@ -23451,10 +23464,16 @@
       "other_payment_methods": "not_reverified"
     },
     "onnuri:14280200024": {
-      "status": "needs_review_not_found",
-      "checked_at": "2026-11-02T07:09:23+09:00",
-      "job_id": "ce7d85b7fbf2733b81b53e99",
-      "nonmembership": "not_established"
+      "status": "confirmed_in_issuer_scope",
+      "issuer": "kbcard",
+      "checked_at": "2026-11-03T20:09:09+09:00",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "bank_id": "000000088473697",
+      "other_payment_methods": "not_reverified",
+      "match_basis": "reviewed_exact_issuer_id_name_full_phone_opinet_commercial_operator_address",
+      "identity_review_evidence": "https://github.com/pcwin21-alt/gwangju-gas-map/blob/55cb2325f8fe833cb88267006d89686c0f9268e9/output/audits/regional_gap_20261102/innovation_identity_recheck_20261103.json",
+      "issuer_map_coordinate_discrepancy_m": 1986.9,
+      "map_location_changed": false
     },
     "onnuri:14283200040": {
       "status": "confirmed_in_issuer_scope",
