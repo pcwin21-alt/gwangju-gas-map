@@ -35,7 +35,7 @@
       "interval_seconds": 180,
       "url": "https://developers.kakao.com/docs/ko/local/dev-guide#search-by-keyword",
       "scope": "One named public business identity via installed kakao-map skill relay; no bulk indexing, membership inference, blocked-source retry or host rotation",
-      "next_allowed_at": 1793726187.6988142
+      "next_allowed_at": 1793737025.3973277
     }
   },
   "attempts": [
@@ -1201,6 +1201,24 @@
       "http_status": 200,
       "response_sha256": "95063f8eabb9e1ce7da2fff891e83b25a15305bbeccc0b24456343860d5eb91b",
       "finished_at": 1793726007.6988027
+    },
+    {
+      "id": "b114b31a34b24105bf560564",
+      "job_id": "4a5d002a2eee71585252d910",
+      "source": "kakao_local",
+      "at": 1793736845.3973277,
+      "status": "reserved",
+      "run_id": "c29e6845cd2f4e29bc8f6ebff010fee7",
+      "request": {
+        "method": "GET",
+        "url": "https://k-skill-proxy.nomadamas.org/v1/kakao-map/search/keyword",
+        "params": {
+          "q": "여수 교동시장 현대참기름",
+          "page": 1,
+          "size": 15,
+          "sort": "accuracy"
+        }
+      }
     }
   ],
   "jobs": [
@@ -7583,7 +7601,7 @@
       "logical_key": "4a5d002a2eee71585252d910",
       "id": "4a5d002a2eee71585252d910",
       "status": "pending",
-      "attempts": 0,
+      "attempts": 1,
       "page": 1,
       "observed_ids": []
     }
