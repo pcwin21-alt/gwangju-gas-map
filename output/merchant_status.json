@@ -176,8 +176,8 @@
   },
   "incremental_collection": {
     "status": "needs_attention",
-    "jobs_total": 228,
-    "jobs_done": 44,
+    "jobs_total": 229,
+    "jobs_done": 45,
     "jobs_remaining": 184,
     "review_records": 21,
     "evidence_records": 24,
@@ -185,14 +185,15 @@
     "source_status": {
       "onnuri": "blocked",
       "kbcard": "active",
-      "datagov": "active"
+      "datagov": "active",
+      "kakao_local": "active"
     },
     "active_region": "전남",
     "regions": [
       {
         "region": "전남",
         "status": "needs_review",
-        "jobs_total": 44,
+        "jobs_total": 45,
         "jobs_remaining": 0,
         "jobs_needing_review": 0,
         "source_gaps": 9,
@@ -590,15 +591,21 @@
         "requests_per_run": 3,
         "interval_seconds": 180,
         "stage": "fixed"
+      },
+      "kakao_local": {
+        "requests_per_24h": 2,
+        "requests_per_run": 1,
+        "interval_seconds": 180,
+        "stage": "fixed"
       }
     },
     "collection_schedule": {
       "minimum_run_interval_seconds": 10800,
-      "last_collection_started_at": 1793714819.3262494,
-      "next_allowed_at": 1793725619.3262494,
+      "last_collection_started_at": 1793726005.4152296,
+      "next_allowed_at": 1793736805.4152296,
       "waiting": true
     },
-    "checked_at": "2026-11-03T23:18:55+09:00",
+    "checked_at": "2026-11-04T02:13:29+09:00",
     "scope": "strictly sequential regional fuel-merchant verification; not a geographic census",
     "new_station_count": 0
   }
