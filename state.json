@@ -15017,10 +15017,13 @@
           "note": "KB국민카드 온누리 사용처 조회 기준. 카드사 반영 지연 가능. 지류·QR·다른 카드사는 별도 확인.",
           "issuer_checks": {
             "kbcard": {
-              "status": "needs_review_not_found",
+              "status": "confirmed_in_issuer_scope",
+              "issuer": "kbcard",
               "checked_at": "2026-11-03T10:08:14+09:00",
-              "job_id": "504058b68c3f51a4ff1d8e1f",
-              "nonmembership": "not_established"
+              "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+              "bank_id": "000000055922363",
+              "other_payment_methods": "not_reverified",
+              "identity_review_evidence": "https://github.com/pcwin21-alt/gwangju-gas-map/blob/06457ac/output/audits/regional_gap_20261102/mokpo_samhak_recheck_20261103.json"
             }
           }
         }
