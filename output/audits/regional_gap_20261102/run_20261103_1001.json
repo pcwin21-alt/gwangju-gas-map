@@ -1,0 +1,159 @@
+{
+  "checked_at": "2026-11-03T10:46:00+09:00",
+  "region": "전남",
+  "collection_run": "https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41556979025",
+  "publication_only_run": "https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41561730811",
+  "collection_purposes": {
+    "annual_reverse_discovery": 1,
+    "post_renewal_recheck": 2
+  },
+  "requests_this_review": 0,
+  "scheduled_collection_requests": 3,
+  "scheduled_attempts": [
+    {
+      "job_id": "1f7576ef6453ee52147d2844",
+      "at": 1793667725.6134572,
+      "finished_at": 1793667730.0270498,
+      "status": "done",
+      "http_status": 200
+    },
+    {
+      "job_id": "091e7f3c8182386ec64f3473",
+      "at": 1793667910.0272732,
+      "finished_at": 1793667912.1126423,
+      "status": "done",
+      "http_status": 200
+    },
+    {
+      "job_id": "504058b68c3f51a4ff1d8e1f",
+      "at": 1793668092.1128175,
+      "finished_at": 1793668094.168663,
+      "status": "done",
+      "http_status": 200
+    }
+  ],
+  "new_station_additions": 0,
+  "issuer_reconfirmed_existing_records": [
+    {
+      "id": "onnuri:14500200210",
+      "name": "장성농협주유소",
+      "old": {
+        "kbcard": {
+          "status": "confirmed_in_issuer_scope",
+          "issuer": "kbcard",
+          "checked_at": "2026-11-02T15:20:33+09:00",
+          "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+          "bank_id": "000000100745478",
+          "other_payment_methods": "not_reverified"
+        }
+      },
+      "new": {
+        "kbcard": {
+          "status": "confirmed_in_issuer_scope",
+          "issuer": "kbcard",
+          "checked_at": "2026-11-03T10:02:08+09:00",
+          "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+          "bank_id": "000000100745478",
+          "other_payment_methods": "not_reverified"
+        }
+      }
+    },
+    {
+      "id": "onnuri:18811200003",
+      "name": "영신 주유소",
+      "old": {},
+      "new": {
+        "kbcard": {
+          "status": "confirmed_in_issuer_scope",
+          "issuer": "kbcard",
+          "checked_at": "2026-11-03T10:05:11+09:00",
+          "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+          "bank_id": "000000099959398",
+          "other_payment_methods": "not_reverified"
+        }
+      }
+    },
+    {
+      "id": "onnuri:kb:000000055922363",
+      "name": "(주)대창석유 (삼학)",
+      "old": {},
+      "new": {
+        "kbcard": {
+          "status": "confirmed_in_issuer_scope",
+          "issuer": "kbcard",
+          "checked_at": "2026-11-03T10:08:14+09:00",
+          "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+          "bank_id": "000000055922363",
+          "other_payment_methods": "not_reverified",
+          "identity_review_evidence": "https://github.com/pcwin21-alt/gwangju-gas-map/blob/06457ac/output/audits/regional_gap_20261102/mokpo_samhak_recheck_20261103.json"
+        }
+      }
+    }
+  ],
+  "newly_covered_existing_station_ids": [
+    "onnuri:18811200003",
+    "onnuri:kb:000000055922363"
+  ],
+  "same_membership_already_confirmed_before": 1,
+  "old_operator_paper_QR_dates_payment_types_preserved": true,
+  "progress": {
+    "region": "전남",
+    "status": "collecting",
+    "jobs_total": 43,
+    "jobs_remaining": 9,
+    "jobs_needing_review": 0,
+    "source_gaps": 24,
+    "review_records": 10,
+    "inventory_reviewed": false,
+    "mapped_records_to_recheck": 28,
+    "membership_check_status": {
+      "confirmed_in_issuer_scope": 21,
+      "needs_review_not_found": 3,
+      "pending": 4
+    },
+    "unresolved_annual_identities": 21,
+    "missing_standard_checks": [
+      "market_coverage",
+      "membership_rechecks",
+      "annual_identities"
+    ],
+    "standard_checks_complete": false,
+    "scope": "issuer-scoped rechecks; paper/QR/operator freshness not inferred"
+  },
+  "limits": {
+    "onnuri": {
+      "requests_per_24h": 24,
+      "requests_per_run": 0,
+      "interval_seconds": 180,
+      "stage": "stopped"
+    },
+    "kbcard": {
+      "requests_per_24h": 24,
+      "requests_per_run": 3,
+      "interval_seconds": 180,
+      "stage": "pilot",
+      "clean_since": 1793556784.2048566,
+      "valid_responses_in_clean_window": 21,
+      "earliest_review_at": 1793729584.2048566
+    },
+    "datagov": {
+      "requests_per_24h": 20,
+      "requests_per_run": 3,
+      "interval_seconds": 180,
+      "stage": "fixed"
+    }
+  },
+  "public_verification": {
+    "url": "https://pcwin21-alt.github.io/gwangju-gas-map/?v=1a6ae52",
+    "http_status": 200,
+    "all_three_current_issuer_checks_match_main": true,
+    "map_records": 220
+  },
+  "remaining": [
+    "9 Jeonnam queued lookups",
+    "21 unresolved annual identities",
+    "3 not-found reviews and 4 pending known-station rechecks",
+    "latest designated-market boundaries/member inventories"
+  ],
+  "new_secondary_identity_lead": "yeosu_hyundai_identity_lead_20261103.json; pending primary proof, not exclusion"
+}

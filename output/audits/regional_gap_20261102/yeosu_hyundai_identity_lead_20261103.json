@@ -1,0 +1,46 @@
+{
+  "reviewed_at": "2026-11-03T10:45:30+09:00",
+  "candidate": {
+    "candidate_id": "8dedc9fce3baf0dc2d230a00",
+    "name": "현대참기름",
+    "market": "여수교동시장",
+    "annual_product": "석유"
+  },
+  "status": "pending_primary_identity_confirmation_no_automatic_exclusion",
+  "new_location_lead": {
+    "address": "전라남도 여수시 교동시장4길 12-1",
+    "lot_address": "여수시 교동 622-15",
+    "phone": "061-663-6746",
+    "claimed_business_type": "immediate food manufacturing/processing, not independently current-verified"
+  },
+  "sources": [
+    {
+      "url": "https://place.clariosync.com/p/6814265/현대참기름",
+      "kind": "secondary mirror of LOCALDATA",
+      "claimed_source_date": "2026-09-04",
+      "observation": "food-processing listing at same name/address/telephone"
+    },
+    {
+      "url": "https://opengo.kr/5601fb1d0e887edf2cdbf537",
+      "kind": "secondary mirror of LOCALDATA, same underlying source family",
+      "observation": "indexed immediate food manufacturing/processing, permit date1972-03-22, same address",
+      "direct_access": "HTTP403, stopped without retry"
+    },
+    {
+      "url": "https://kaienpolice.tistory.com/entry/여수시-온누리상품권-가맹점",
+      "kind": "2025-01-26 secondary membership table",
+      "observation": "same-name Yeosu Gyodong market row explicitly supplies same street address but petroleum product"
+    },
+    {
+      "url": "https://kt99.tistory.com/413",
+      "kind": "historical local-currency secondary table, not Onnuri proof",
+      "observation": "same name/address/telephone under food/produce"
+    }
+  ],
+  "existing_KB_snapshot_date": "2026-10-27T16:50:43+09:00",
+  "existing_KB_full_phone_hits": [],
+  "interpretation": "Petroleum product may be an erroneous label for an edible-oil shop; primary named-premise and market link remains to be verified. Mirrors sharing LOCALDATA are not independent sources.",
+  "remaining": "official municipal/localdata food registry or official market member list at this exact address; do not retry rejected LOCALDATA endpoint or other IP",
+  "map_changes": 0,
+  "candidate_resolution_changed": false
+}
