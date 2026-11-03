@@ -1,0 +1,58 @@
+{
+  "reviewed_at": "2026-11-04T02:18:03+09:00",
+  "before_state_commit": "73f734a3799f19ea12d7b41d85b6d2f8904341da",
+  "audit_evidence": "https://github.com/pcwin21-alt/gwangju-gas-map/blob/2bbcc43da943e4d13f510d2e5016b07f1f9ef884/output/audits/regional_gap_20261102/namgomun_place_identity_review_20261104.json",
+  "resolved_review_indexes": [
+    6,
+    7
+  ],
+  "stored_KB_checked_at_preserved": "2026-11-03T04:38:41+09:00",
+  "independent_place_checked_at": "2026-11-04T02:13:27+09:00",
+  "new_source_requests_this_review": 0,
+  "preserved_state_fields": {
+    "attempts": true,
+    "sources": true,
+    "effective_collection_limits": true,
+    "collection_schedule": true,
+    "survey_inventory": true,
+    "candidate_resolutions": true,
+    "source_gaps": true,
+    "evidence": true,
+    "last_run": true,
+    "region_order": true,
+    "independent_place_checks": true
+  },
+  "existing_jobs_preserved": true,
+  "new_job_id": "4a5d002a2eee71585252d910",
+  "new_regional_progress": {
+    "region": "전남",
+    "status": "collecting",
+    "jobs_total": 46,
+    "jobs_remaining": 1,
+    "jobs_needing_review": 0,
+    "source_gaps": 9,
+    "review_records": 7,
+    "inventory_reviewed": false,
+    "mapped_records_to_recheck": 28,
+    "membership_check_status": {
+      "confirmed_in_issuer_scope": 27,
+      "needs_review_not_found": 1
+    },
+    "unresolved_annual_identities": 6,
+    "missing_standard_checks": [
+      "market_coverage",
+      "membership_rechecks",
+      "annual_identities"
+    ],
+    "standard_checks_complete": false,
+    "scope": "issuer-scoped rechecks; paper/QR/operator freshness not inferred"
+  },
+  "map_preview": {
+    "changed_station_ids": [
+      "onnuri:18802200007"
+    ],
+    "new_stations": 0,
+    "only_issuer_checks_changed": true,
+    "operator_paper_qr_dates_and_coordinates_preserved": true
+  }
+}
