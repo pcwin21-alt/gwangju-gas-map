@@ -7611,6 +7611,144 @@
       "observed_ids": [],
       "result": "independent_identity_observations_saved",
       "last_observed_at": "2026-11-04T05:14:08+09:00"
+    },
+    {
+      "kind": "kb_search",
+      "source": "kbcard",
+      "region": "전남",
+      "purpose": "full_inventory_identity_followup",
+      "discovery_only": true,
+      "target": {
+        "name": "광은",
+        "keyword": "",
+        "lat": 34.8034893590187,
+        "lng": 126.426772417825,
+        "address": "전남광주통합특별시 목포시 비파로 54",
+        "coordinate_source_id": "MA010120220805516557"
+      },
+      "source_evidence": "https://github.com/pcwin21-alt/gwangju-gas-map/blob/51bc818/output/audits/regional_gap_20261102/mokpo_location_discovery_plan_20261104.json",
+      "scope": "One unfiltered issuer lookup anchored at one independently recorded vehicle-fuel location. Road context does not establish market containment or Onnuri membership.",
+      "id": "6331c23ddf63c1967e3d7ff5",
+      "logical_key": "6331c23ddf63c1967e3d7ff5",
+      "status": "pending",
+      "attempts": 0,
+      "page": 1,
+      "observed_ids": []
+    },
+    {
+      "kind": "kb_search",
+      "source": "kbcard",
+      "region": "전남",
+      "purpose": "full_inventory_identity_followup",
+      "discovery_only": true,
+      "target": {
+        "name": "씨오에쓰주",
+        "keyword": "",
+        "lat": 34.8023674260678,
+        "lng": 126.378183801191,
+        "address": "전남광주통합특별시 목포시 청호로 110-1",
+        "coordinate_source_id": "MA010120220807729541"
+      },
+      "source_evidence": "https://github.com/pcwin21-alt/gwangju-gas-map/blob/51bc818/output/audits/regional_gap_20261102/mokpo_location_discovery_plan_20261104.json",
+      "scope": "One unfiltered issuer lookup anchored at one independently recorded vehicle-fuel location. Road context does not establish market containment or Onnuri membership.",
+      "id": "9b6c0fa15ed446aa75703f34",
+      "logical_key": "9b6c0fa15ed446aa75703f34",
+      "status": "pending",
+      "attempts": 0,
+      "page": 1,
+      "observed_ids": []
+    },
+    {
+      "kind": "kb_search",
+      "source": "kbcard",
+      "region": "전남",
+      "purpose": "full_inventory_identity_followup",
+      "discovery_only": true,
+      "target": {
+        "name": "대성주유소",
+        "keyword": "",
+        "lat": 34.7983305634978,
+        "lng": 126.381994978302,
+        "address": "전남광주통합특별시 목포시 청호로 57",
+        "coordinate_source_id": "MA010120220807730889"
+      },
+      "source_evidence": "https://github.com/pcwin21-alt/gwangju-gas-map/blob/51bc818/output/audits/regional_gap_20261102/mokpo_location_discovery_plan_20261104.json",
+      "scope": "One unfiltered issuer lookup anchored at one independently recorded vehicle-fuel location. Road context does not establish market containment or Onnuri membership.",
+      "id": "b120f4a0e8525c7890e9ba33",
+      "logical_key": "b120f4a0e8525c7890e9ba33",
+      "status": "pending",
+      "attempts": 0,
+      "page": 1,
+      "observed_ids": []
+    },
+    {
+      "kind": "kb_search",
+      "source": "kbcard",
+      "region": "전남",
+      "purpose": "full_inventory_identity_followup",
+      "discovery_only": true,
+      "target": {
+        "name": "청호에너지충전소",
+        "keyword": "",
+        "lat": 34.8195530667249,
+        "lng": 126.384503480242,
+        "address": "전남광주통합특별시 목포시 고하대로 856",
+        "coordinate_source_id": "MA010120220807707950"
+      },
+      "source_evidence": "https://github.com/pcwin21-alt/gwangju-gas-map/blob/51bc818/output/audits/regional_gap_20261102/mokpo_location_discovery_plan_20261104.json",
+      "scope": "One unfiltered issuer lookup anchored at one independently recorded vehicle-fuel location. Road context does not establish market containment or Onnuri membership.",
+      "id": "51ed2a92703d35e05062c878",
+      "logical_key": "51ed2a92703d35e05062c878",
+      "status": "pending",
+      "attempts": 0,
+      "page": 1,
+      "observed_ids": []
+    },
+    {
+      "kind": "kb_search",
+      "source": "kbcard",
+      "region": "전남",
+      "purpose": "full_inventory_identity_followup",
+      "discovery_only": true,
+      "target": {
+        "name": "청호충전소",
+        "keyword": "",
+        "lat": 34.8201508368806,
+        "lng": 126.385067406292,
+        "address": "전남광주통합특별시 목포시 대양로 52",
+        "coordinate_source_id": "MA010120220807727669"
+      },
+      "source_evidence": "https://github.com/pcwin21-alt/gwangju-gas-map/blob/51bc818/output/audits/regional_gap_20261102/mokpo_location_discovery_plan_20261104.json",
+      "scope": "One unfiltered issuer lookup anchored at one independently recorded vehicle-fuel location. Road context does not establish market containment or Onnuri membership.",
+      "id": "db6738bb5477d9d95cf55d55",
+      "logical_key": "db6738bb5477d9d95cf55d55",
+      "status": "pending",
+      "attempts": 0,
+      "page": 1,
+      "observed_ids": []
+    },
+    {
+      "kind": "kb_search",
+      "source": "kbcard",
+      "region": "전남",
+      "purpose": "full_inventory_identity_followup",
+      "discovery_only": true,
+      "target": {
+        "name": "유정에너지",
+        "keyword": "",
+        "lat": 34.801232510524,
+        "lng": 126.412833285455,
+        "address": "전남광주통합특별시 목포시 백년대로 221",
+        "coordinate_source_id": "MA010120220807729682"
+      },
+      "source_evidence": "https://github.com/pcwin21-alt/gwangju-gas-map/blob/51bc818/output/audits/regional_gap_20261102/mokpo_location_discovery_plan_20261104.json",
+      "scope": "One unfiltered issuer lookup anchored at one independently recorded vehicle-fuel location. Road context does not establish market containment or Onnuri membership.",
+      "id": "0341c52dde980ab4a6230766",
+      "logical_key": "0341c52dde980ab4a6230766",
+      "status": "pending",
+      "attempts": 0,
+      "page": 1,
+      "observed_ids": []
     }
   ],
   "evidence": [
@@ -9339,10 +9477,11 @@
       "candidate_id": "8dedc9fce3baf0dc2d230a00",
       "name": "현대참기름",
       "region": "전남광주",
-      "status": "needs_location",
+      "status": "excluded",
       "reason": "No independently linked vehicle-fuel location; no guessed point",
       "evidence": [
-        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f12f94c/output/audits/regional_gap_20261102/yeosu_hyundai_identity_lead_20261103.json"
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f12f94c/output/audits/regional_gap_20261102/yeosu_hyundai_identity_lead_20261103.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/849cb33/output/audits/regional_gap_20261102/yeosu_hyundai_nonfuel_review_20261104.json"
       ],
       "identity_lead_review": {
         "reviewed_at": "2026-11-03T10:46:54+09:00",
@@ -9350,7 +9489,10 @@
         "secondary_street_address": "여수시 교동시장4길 12-1",
         "secondary_phone": "061-663-6746",
         "conflict": "annual petroleum versus mirrored food permit classification; not resolved"
-      }
+      },
+      "resolution_checked_at": "2026-11-04T05:16:24+09:00",
+      "resolution_source_checked_at": "2026-11-04T05:14:08+09:00",
+      "resolution": "Documented same-premise food mill; vehicle-fuel discovery exclusion only. Original annual petroleum item and historic source dates preserved."
     },
     {
       "candidate_id": "badaf1066867bde046275626",
@@ -9984,12 +10126,12 @@
       "reason": "Annual identity needs independent same-premise linkage or documented exclusion"
     }
   ],
-  "status": "needs_attention",
+  "status": "running",
   "summary": {
-    "status": "needs_attention",
-    "jobs_total": 230,
+    "status": "running",
+    "jobs_total": 236,
     "jobs_done": 46,
-    "jobs_remaining": 184,
+    "jobs_remaining": 190,
     "review_records": 21,
     "evidence_records": 24,
     "source_gaps": 90,
@@ -10003,11 +10145,11 @@
     "regions": [
       {
         "region": "전남",
-        "status": "needs_review",
-        "jobs_total": 46,
-        "jobs_remaining": 0,
+        "status": "collecting",
+        "jobs_total": 52,
+        "jobs_remaining": 6,
         "jobs_needing_review": 0,
-        "source_gaps": 9,
+        "source_gaps": 8,
         "review_records": 7,
         "inventory_reviewed": false,
         "mapped_records_to_recheck": 28,
@@ -10015,7 +10157,7 @@
           "confirmed_in_issuer_scope": 27,
           "needs_review_not_found": 1
         },
-        "unresolved_annual_identities": 6,
+        "unresolved_annual_identities": 5,
         "missing_standard_checks": [
           "market_coverage",
           "membership_rechecks",
@@ -10281,14 +10423,14 @@
         "jobs_total": 131,
         "jobs_remaining": 131,
         "jobs_needing_review": 0,
-        "source_gaps": 24,
+        "source_gaps": 23,
         "review_records": 0,
         "inventory_reviewed": false,
         "mapped_records_to_recheck": 131,
         "membership_check_status": {
           "pending": 131
         },
-        "unresolved_annual_identities": 21,
+        "unresolved_annual_identities": 20,
         "missing_standard_checks": [
           "market_coverage",
           "membership_rechecks",
@@ -10471,10 +10613,13 @@
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/55cb2325f8fe833cb88267006d89686c0f9268e9/output/audits/regional_gap_20261102/innovation_identity_recheck_20261103.json",
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/b94117e11e726b40100125bb0fcf019221a3775c/output/audits/regional_gap_20261102/namchang_and_market_review_20261103_2310.json",
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/4d1c3fe22086b12d0e9b9f45064f5660de60d775/output/audits/regional_gap_20261102/independent_place_plan_20261104.json",
-        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/2bbcc43da943e4d13f510d2e5016b07f1f9ef884/output/audits/regional_gap_20261102/namgomun_place_identity_review_20261104.json"
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/2bbcc43da943e4d13f510d2e5016b07f1f9ef884/output/audits/regional_gap_20261102/namgomun_place_identity_review_20261104.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/849cb33/output/audits/regional_gap_20261102/yeosu_hyundai_nonfuel_review_20261104.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/51bc818/output/audits/regional_gap_20261102/mokpo_location_discovery_plan_20261104.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/849cb33/output/audits/regional_gap_20261102/jeonnam_physical_coverage_ledger_20261104.json"
       ],
       "checked_at": null,
-      "last_reviewed_at": "2026-11-04T02:18:03+09:00"
+      "last_reviewed_at": "2026-11-04T05:16:24+09:00"
     },
     "전북": {
       "status": "pending",
@@ -22912,10 +23057,11 @@
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f12f94c/output/audits/regional_gap_20261102/run_20261103_1001.json",
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f12f94c/output/audits/regional_gap_20261102/yeosu_hyundai_identity_lead_20261103.json",
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/cc81165/output/audits/regional_gap_20261102/candidate_regions_20261103_1700.json",
-          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/b94117e11e726b40100125bb0fcf019221a3775c/output/audits/regional_gap_20261102/namchang_and_market_review_20261103_2310.json"
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/b94117e11e726b40100125bb0fcf019221a3775c/output/audits/regional_gap_20261102/namchang_and_market_review_20261103_2310.json",
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/849cb33/output/audits/regional_gap_20261102/yeosu_hyundai_nonfuel_review_20261104.json"
         ],
         "checked_at": null,
-        "last_reviewed_at": "2026-11-03T23:17:12+09:00"
+        "last_reviewed_at": "2026-11-04T05:16:24+09:00"
       },
       "membership_rechecks": {
         "status": "pending",
@@ -24501,6 +24647,28 @@
         }
       ],
       "scope": "province_only_no_candidate_address_fuel_identity_or_membership_confirmation"
+    },
+    "8dedc9fce3baf0dc2d230a00": {
+      "status": "excluded_non_vehicle",
+      "checked_at": "2026-11-04T05:16:24+09:00",
+      "source_kind": "reviewed_independent_named_food_premise_with_historical_market_address",
+      "source_url": "http://place.map.kakao.com/21350046",
+      "source_checked_at": "2026-11-04T05:14:08+09:00",
+      "annual_row": {
+        "가맹점명": "현대참기름",
+        "소속 시장명(또는 상점가)": "여수교동시장",
+        "소재지": "전남광주",
+        "취급품목": "석유",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2020"
+      },
+      "evidence": [
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/849cb33/output/audits/regional_gap_20261102/yeosu_hyundai_nonfuel_review_20261104.json"
+      ],
+      "independent_place_id": "21350046",
+      "reason": "Same named market candidate is linked by a specific historical street address to the independently observed food mill; exact address and phone also corroborate the dated food-permit mirror. Exclude this annual candidate from vehicle-fuel discovery only.",
+      "scope": "No present membership, operating permit, paper/QR/digital status or registry correction inferred; no map deletion and no exclusion of another same-name store."
     }
   },
   "collection_schedule": {
