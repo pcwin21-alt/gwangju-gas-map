@@ -13,7 +13,7 @@
       "status": "active",
       "url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
       "scope": "Public unauthenticated Onnuri merchant form; issuer-specific evidence only; limits are our load caps, not a provider guarantee",
-      "next_allowed_at": 1793682464.849396,
+      "next_allowed_at": 1793682467.056311,
       "volume_ramp": {
         "stage": "pilot",
         "started_at": 1793556784.2048566,
@@ -942,7 +942,7 @@
       "job_id": "b232bd4b131f52e779fe25d8",
       "source": "kbcard",
       "at": 1793682284.849396,
-      "status": "reserved",
+      "status": "done",
       "run_id": "5de8286d15bc4b8d821d2f29f3d9a1ee",
       "request": {
         "method": "POST",
@@ -959,7 +959,12 @@
           "endRow": 10,
           "mmcNm": ""
         }
-      }
+      },
+      "request_started_at": 1793682285.9872632,
+      "network_duration_seconds": 0.9547872543334961,
+      "http_status": 200,
+      "response_sha256": "94f7b11711776be104854241fa528247f3b92f1a8da0ecc13c48ea5b286654aa",
+      "finished_at": 1793682287.0562513
     }
   ],
   "jobs": [
@@ -2624,11 +2629,16 @@
       },
       "logical_key": "b232bd4b131f52e779fe25d8",
       "id": "b232bd4b131f52e779fe25d8",
-      "status": "pending",
+      "status": "done",
       "attempts": 1,
       "page": 1,
-      "observed_ids": [],
-      "candidate_ids": []
+      "observed_ids": [
+        "000000055922220"
+      ],
+      "candidate_ids": [],
+      "expected": 1,
+      "last_observed_at": "2026-11-03T14:04:46+09:00",
+      "result": "observations_saved"
     },
     {
       "kind": "kb_search",
@@ -8575,6 +8585,40 @@
       "station_id": "onnuri:kb:000000055922645",
       "job_id": "2c0ae8db0c7828f8bbe5e0d1",
       "checked_at": "2026-11-03T14:01:44+09:00",
+      "reason": "No independently matched current issuer record; preserve previous station"
+    },
+    {
+      "job_id": "b232bd4b131f52e779fe25d8",
+      "bank_record": {
+        "location": {
+          "lat": "34.940399796",
+          "lng": "127.7543484052"
+        },
+        "content": {
+          "tel": "061)792-3105",
+          "title": "(주)대창석유 (태인)",
+          "category": "주유소",
+          "address": "전남 광양시 태인동 ",
+          "distance": "13",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000055922220",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        }
+      },
+      "checked_at": "2026-11-03T14:04:46+09:00",
+      "independent_fuel_candidate_ids": [],
+      "reason": "Independent exact business/address/category evidence incomplete; do not exclude by bank category alone"
+    },
+    {
+      "region": "전남",
+      "station_id": "onnuri:kb:000000055922220",
+      "job_id": "b232bd4b131f52e779fe25d8",
+      "checked_at": "2026-11-03T14:04:46+09:00",
       "reason": "No independently matched current issuer record; preserve previous station"
     }
   ],
@@ -23042,6 +23086,12 @@
       "status": "needs_review_not_found",
       "checked_at": "2026-11-03T14:01:44+09:00",
       "job_id": "2c0ae8db0c7828f8bbe5e0d1",
+      "nonmembership": "not_established"
+    },
+    "onnuri:kb:000000055922220": {
+      "status": "needs_review_not_found",
+      "checked_at": "2026-11-03T14:04:46+09:00",
+      "job_id": "b232bd4b131f52e779fe25d8",
       "nonmembership": "not_established"
     }
   },
