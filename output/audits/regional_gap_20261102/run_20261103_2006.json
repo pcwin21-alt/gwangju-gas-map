@@ -1,0 +1,355 @@
+{
+  "checked_at": "2026-11-03T20:17:44+09:00",
+  "region": "전남",
+  "scheduled_skipped_run": "https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41623441889",
+  "scheduled_skip_reason": "3-hour shared cadence gate; requests=0 at 19:56 KST",
+  "collection_run": "https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41624681843",
+  "publication_run": "https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41626132921",
+  "pages_run": "https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41626180774",
+  "queries": [
+    {
+      "target": "(주)일원",
+      "purpose": "annual_reverse_discovery",
+      "attempt_id": "a47e951831f44c6d937bc9b8",
+      "http_status": 200,
+      "checked_at": "2026-11-03T20:06:07+09:00",
+      "result_count": 0,
+      "response_file_sha256": "8db98e779af2754c3078a5cde0fec584c12256c79ea4d7a52e16ea315df7df31",
+      "wire_response_sha256": "81a269f8ea3341f1276a0b135e81569a10ec99327cc912eed75491f73843aba3",
+      "scope": "empty results are not nonmembership; returned rows still require exact independent identity"
+    },
+    {
+      "target": "주식회사 혁신에너지",
+      "purpose": "issuer_coordinate_identity_review",
+      "attempt_id": "3024e104537042a3a728ba67",
+      "http_status": 200,
+      "checked_at": "2026-11-03T20:09:09+09:00",
+      "result_count": 1,
+      "response_file_sha256": "1e093b39d92d84234e057db42c251dcb322771235aad3386e14f6071c0dda675",
+      "wire_response_sha256": "f111b85138a589c338cd782a3fd54b2a1aadef0108e15e6eabdcb040f9d4f053",
+      "scope": "empty results are not nonmembership; returned rows still require exact independent identity"
+    },
+    {
+      "target": "만재LPG충전소",
+      "purpose": "full_inventory_identity_followup",
+      "attempt_id": "0dc0d440ca20445a94cae70e",
+      "http_status": 200,
+      "checked_at": "2026-11-03T20:12:12+09:00",
+      "result_count": 0,
+      "response_file_sha256": "098d28aaa7fedc6839e06df2d9082c6dcc2881d08b6b868ed1e72db339f9bd24",
+      "wire_response_sha256": "61d5c8bf59f44e5743082c8446b915f4353c2e2047fb8941a25ca04dce000e63",
+      "scope": "empty results are not nonmembership; returned rows still require exact independent identity"
+    }
+  ],
+  "source_requests_this_round": 3,
+  "additional_requests_for_manual_review_and_publication": 0,
+  "intent_counts": {
+    "annual_reverse_discovery": 1,
+    "issuer_coordinate_identity_review": 1,
+    "full_inventory_identity_followup": 1
+  },
+  "response_to_next_reservation_seconds": [
+    180.00017786026,
+    180.00018429756165
+  ],
+  "prior_run_to_this_run_seconds": 10849.211319446564,
+  "rolling_24h_requests": {
+    "kbcard": 21
+  },
+  "effective_limits": {
+    "onnuri": {
+      "requests_per_24h": 24,
+      "requests_per_run": 0,
+      "interval_seconds": 180,
+      "stage": "stopped"
+    },
+    "kbcard": {
+      "requests_per_24h": 24,
+      "requests_per_run": 3,
+      "interval_seconds": 180,
+      "stage": "pilot",
+      "clean_since": 1793556784.2048566,
+      "valid_responses_in_clean_window": 30,
+      "earliest_review_at": 1793729584.2048566
+    },
+    "datagov": {
+      "requests_per_24h": 20,
+      "requests_per_run": 3,
+      "interval_seconds": 180,
+      "stage": "fixed"
+    }
+  },
+  "next_allowed_collection_at": "2026-11-03T23:06:04+09:00",
+  "earliest_kb_ramp_review_at": "2026-11-04T03:13:04+09:00",
+  "new_existing_station_rechecks": 1,
+  "new_station_discoveries": 0,
+  "new_map_stations": 0,
+  "changed_station_ids": [
+    "onnuri:14280200024"
+  ],
+  "change_scope": "KB issuer_checks only; all operator/paper/QR dates, identities, location and payment methods preserved",
+  "progress_before": {
+    "region": "전남",
+    "status": "collecting",
+    "jobs_total": 44,
+    "jobs_remaining": 4,
+    "jobs_needing_review": 0,
+    "source_gaps": 12,
+    "review_records": 11,
+    "inventory_reviewed": false,
+    "mapped_records_to_recheck": 28,
+    "membership_check_status": {
+      "confirmed_in_issuer_scope": 24,
+      "needs_review_not_found": 4
+    },
+    "unresolved_annual_identities": 9,
+    "missing_standard_checks": [
+      "market_coverage",
+      "membership_rechecks",
+      "annual_identities"
+    ],
+    "standard_checks_complete": false,
+    "scope": "issuer-scoped rechecks; paper/QR/operator freshness not inferred"
+  },
+  "progress_after": {
+    "region": "전남",
+    "status": "collecting",
+    "jobs_total": 44,
+    "jobs_remaining": 1,
+    "jobs_needing_review": 0,
+    "source_gaps": 12,
+    "review_records": 10,
+    "inventory_reviewed": false,
+    "mapped_records_to_recheck": 28,
+    "membership_check_status": {
+      "confirmed_in_issuer_scope": 25,
+      "needs_review_not_found": 3
+    },
+    "unresolved_annual_identities": 9,
+    "missing_standard_checks": [
+      "market_coverage",
+      "membership_rechecks",
+      "annual_identities"
+    ],
+    "standard_checks_complete": false,
+    "scope": "issuer-scoped rechecks; paper/QR/operator freshness not inferred"
+  },
+  "coverage_checks": {
+    "annual_inventory": {
+      "status": "complete",
+      "evidence": [
+        "https://www.data.go.kr/data/3060079/fileData.do",
+        "66173bf934ad24d3195e9e0c1be0e62adcca0e4767e19a80c435f8e1aead4df6"
+      ],
+      "checked_at": "2026-11-02T02:08:47+09:00",
+      "source_date": "2026-07-31",
+      "scope": "latest advertised public snapshot downloaded; not all current merchants"
+    },
+    "location_inventory": {
+      "status": "complete",
+      "evidence": [
+        "https://www.data.go.kr/data/15083033/fileData.do"
+      ],
+      "checked_at": "2026-06-30",
+      "scope": "dated physical source inventory only; not current membership"
+    },
+    "annual_identities": {
+      "status": "pending",
+      "evidence": [
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/fcd770a/output/audits/regional_gap_20261102/nonfuel_reviews.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f201100/output/audits/full_region_crosscheck_20261103/report.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/092ad8d/output/audits/region_comparison_20261103/analysis.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/16c7c03/output/audits/three_route_trial_20261103/results.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f25f479/output/audits/regional_gap_20261102/nonfuel_reviews.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/76d7041/output/audits/regional_gap_20261102/run_20261103_0743.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f12f94c/output/audits/regional_gap_20261102/run_20261103_1001.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f12f94c/output/audits/regional_gap_20261102/yeosu_hyundai_identity_lead_20261103.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/cc81165/output/audits/regional_gap_20261102/candidate_regions_20261103_1700.json"
+      ],
+      "checked_at": null,
+      "last_reviewed_at": "2026-11-03T17:14:30+09:00"
+    },
+    "membership_rechecks": {
+      "status": "pending",
+      "evidence": [
+        "output/audits/regional_gap_20261102/naju_innovation_coordinate_review.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/0632768/output/audits/regional_gap_20261102/naju_namgomun_review_20261103.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f201100/output/audits/full_region_crosscheck_20261103/report.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/092ad8d/output/audits/region_comparison_20261103/analysis.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/76d7041/output/audits/regional_gap_20261102/run_20261103_0743.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/06457ac/output/audits/regional_gap_20261102/mokpo_samhak_recheck_20261103.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f12f94c/output/audits/regional_gap_20261102/run_20261103_1001.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f12f94c/output/audits/regional_gap_20261102/yeosu_hyundai_identity_lead_20261103.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/04059f2/output/audits/regional_gap_20261102/curated_rechecks_20261103_1405.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/590ca19/output/audits/regional_gap_20261102/curated_rechecks_20261103_1712.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/55cb2325f8fe833cb88267006d89686c0f9268e9/output/audits/regional_gap_20261102/innovation_identity_recheck_20261103.json"
+      ],
+      "checked_at": null,
+      "scope": "Current issuer rechecks incomplete; coordinate discrepancy follow-up is discovery only",
+      "last_reviewed_at": "2026-11-03T20:14:57+09:00"
+    },
+    "market_coverage": {
+      "status": "pending",
+      "evidence": [
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/fcd770a/output/audits/regional_gap_20261102/damyang_market_leads.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/0632768/output/audits/regional_gap_20261102/damyang_market_leads.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/16c7c03/output/audits/three_route_trial_20261103/results.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/2b72365/output/audits/portal_search_20261103/results.json"
+      ],
+      "checked_at": null,
+      "last_reviewed_at": "2026-11-03T06:53:47+09:00",
+      "scope": "Pending primary designation boundaries and shop inventories across all 22 municipalities; Damyang secondary leads are not completed coverage.",
+      "latest_designation_review": {
+        "checked_at": "2026-11-03T06:45:01+09:00",
+        "municipality": "목포시",
+        "evidence": "https://github.com/pcwin21-alt/gwangju-gas-map/blob/16c7c03/output/audits/three_route_trial_20261103/results.json",
+        "new_markets": 7,
+        "expanded_markets": 1,
+        "boundary_and_member_inventory": "pending",
+        "markets": [
+          {
+            "market": "하당푸른솔",
+            "anchor_address": "목포시 비파로 4",
+            "registered_at": "2026-08-31",
+            "notice_url": "https://www.mokpo.go.kr/www/mokpo_news/notification/public_notice?mode=view&idx=55083",
+            "shops_in_notice_not_Onnuri_or_fuel_count": 136,
+            "change": "new",
+            "annual_market_name_matches": 0,
+            "boundary": "anchor_and_area_only_no_polygon_or_parcel_list",
+            "shop_member_inventory": "not_in_attachment",
+            "status": "pending_boundary_members_and_membership_crosscheck"
+          },
+          {
+            "market": "당가두로",
+            "anchor_address": "목포시 당가두로 24",
+            "registered_at": "2026-08-31",
+            "notice_url": "https://www.mokpo.go.kr/www/mokpo_news/notification/public_notice?mode=view&idx=55083",
+            "shops_in_notice_not_Onnuri_or_fuel_count": 102,
+            "change": "new",
+            "annual_market_name_matches": 0,
+            "boundary": "anchor_and_area_only_no_polygon_or_parcel_list",
+            "shop_member_inventory": "not_in_attachment",
+            "status": "pending_boundary_members_and_membership_crosscheck"
+          },
+          {
+            "market": "목포평화통일원형로",
+            "anchor_address": "목포시 원형동로 10",
+            "registered_at": "2026-08-31",
+            "notice_url": "https://www.mokpo.go.kr/www/mokpo_news/notification/public_notice?mode=view&idx=55083",
+            "shops_in_notice_not_Onnuri_or_fuel_count": 200,
+            "change": "new",
+            "annual_market_name_matches": 0,
+            "boundary": "anchor_and_area_only_no_polygon_or_parcel_list",
+            "shop_member_inventory": "not_in_attachment",
+            "status": "pending_boundary_members_and_membership_crosscheck"
+          },
+          {
+            "market": "텃골로십일자",
+            "anchor_address": "목포시 텃골로13번길 76",
+            "registered_at": "2026-09-16",
+            "notice_url": "https://www.mokpo.go.kr/www/mokpo_news/notification/public_notice?mode=view&idx=55187",
+            "shops_in_notice_not_Onnuri_or_fuel_count": 53,
+            "change": "new",
+            "annual_market_name_matches": 0,
+            "boundary": "anchor_and_area_only_no_polygon_or_parcel_list",
+            "shop_member_inventory": "not_in_attachment",
+            "status": "pending_boundary_members_and_membership_crosscheck"
+          },
+          {
+            "market": "비치앤팔레스",
+            "anchor_address": "목포시 청호로 206",
+            "registered_at": "2026-09-16",
+            "notice_url": "https://www.mokpo.go.kr/www/mokpo_news/notification/public_notice?mode=view&idx=55187",
+            "shops_in_notice_not_Onnuri_or_fuel_count": 34,
+            "change": "new",
+            "annual_market_name_matches": 0,
+            "boundary": "anchor_and_area_only_no_polygon_or_parcel_list",
+            "shop_member_inventory": "not_in_attachment",
+            "status": "pending_boundary_members_and_membership_crosscheck"
+          },
+          {
+            "market": "비파",
+            "anchor_address": "목포시 백년대로337번길 25",
+            "registered_at": "2026-09-16",
+            "notice_url": "https://www.mokpo.go.kr/www/mokpo_news/notification/public_notice?mode=view&idx=55187",
+            "shops_in_notice_not_Onnuri_or_fuel_count": 203,
+            "change": "new",
+            "annual_market_name_matches": 0,
+            "boundary": "anchor_and_area_only_no_polygon_or_parcel_list",
+            "shop_member_inventory": "not_in_attachment",
+            "status": "pending_boundary_members_and_membership_crosscheck"
+          },
+          {
+            "market": "옥암번영",
+            "anchor_address": "목포시 옥암로 18",
+            "registered_at": "2026-09-16",
+            "notice_url": "https://www.mokpo.go.kr/www/mokpo_news/notification/public_notice?mode=view&idx=55187",
+            "shops_in_notice_not_Onnuri_or_fuel_count": 270,
+            "change": "new",
+            "annual_market_name_matches": 0,
+            "boundary": "anchor_and_area_only_no_polygon_or_parcel_list",
+            "shop_member_inventory": "not_in_attachment",
+            "status": "pending_boundary_members_and_membership_crosscheck"
+          },
+          {
+            "market": "금호사랑",
+            "anchor_address": "목포시 백년대로375번길 29-1",
+            "registered_at": "2026-09-16",
+            "notice_url": "https://www.mokpo.go.kr/www/mokpo_news/notification/public_notice?mode=view&idx=55187",
+            "shops_in_notice_not_Onnuri_or_fuel_count": 208,
+            "change": "expanded_from_70_shops",
+            "annual_market_name_matches": 43,
+            "boundary": "anchor_and_area_only_no_polygon_or_parcel_list",
+            "shop_member_inventory": "not_in_attachment",
+            "status": "pending_boundary_members_and_membership_crosscheck"
+          }
+        ]
+      }
+    }
+  },
+  "pending_targets": [
+    {
+      "id": "6a1d9da1fc4a77b64d6332db",
+      "name": "(주)대창석유 (남창)",
+      "purpose": "issuer_coordinate_identity_review"
+    }
+  ],
+  "python_tests_passed_on_collection_and_publication": 189,
+  "preserved": {
+    "all_previous_attempts": true,
+    "region_order": true,
+    "operator_block": true,
+    "zero_request_publication_did_not_reset_cadence": true,
+    "only_expected_issuer_field_changed": true,
+    "pinned_toss_bundle_unchanged": true
+  },
+  "public_verification": {
+    "status": "passed",
+    "checked_at": "2026-11-03T20:18:03+09:00",
+    "url": "https://pcwin21-alt.github.io/gwangju-gas-map/?v=53f3e88",
+    "http_status": 200,
+    "embedded_stations_match_main": true,
+    "total_records": 220,
+    "onnuri_tagged": 184,
+    "jeonnam_historical_map_records": 28,
+    "new_current_issuer_check": {
+      "status": "confirmed_in_issuer_scope",
+      "issuer": "kbcard",
+      "checked_at": "2026-11-03T20:09:09+09:00",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "bank_id": "000000088473697",
+      "other_payment_methods": "not_reverified",
+      "match_basis": "reviewed_exact_issuer_id_name_full_phone_opinet_commercial_operator_address",
+      "identity_review_evidence": "https://github.com/pcwin21-alt/gwangju-gas-map/blob/55cb2325f8fe833cb88267006d89686c0f9268e9/output/audits/regional_gap_20261102/innovation_identity_recheck_20261103.json",
+      "issuer_map_coordinate_discrepancy_m": 1986.9,
+      "map_location_changed": false
+    },
+    "pages_workflow_conclusion": "success"
+  },
+  "region_complete": false,
+  "next_work": [
+    "Finish exact Namchang issuer-point follow-up after shared cadence allows",
+    "Corroborate Terminal and Namgomun remaining current membership/independent physical identities",
+    "Resolve 9 annual identities and 12 source gaps, plus primary designated market boundaries and member inventories; do not advance to Jeonbuk yet"
+  ]
+}

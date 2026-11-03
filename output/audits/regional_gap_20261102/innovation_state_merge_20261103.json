@@ -1,0 +1,68 @@
+{
+  "reviewed_at": "2026-11-03T20:14:57+09:00",
+  "before_state_commit": "e2f97485bac24e43f7ea63072f8eb68acd2dc37c",
+  "audit_evidence": "https://github.com/pcwin21-alt/gwangju-gas-map/blob/55cb2325f8fe833cb88267006d89686c0f9268e9/output/audits/regional_gap_20261102/innovation_identity_recheck_20261103.json",
+  "resolved_review_indexes": [
+    2,
+    19
+  ],
+  "new_check": {
+    "status": "confirmed_in_issuer_scope",
+    "issuer": "kbcard",
+    "checked_at": "2026-11-03T20:09:09+09:00",
+    "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+    "bank_id": "000000088473697",
+    "other_payment_methods": "not_reverified",
+    "match_basis": "reviewed_exact_issuer_id_name_full_phone_opinet_commercial_operator_address",
+    "identity_review_evidence": "https://github.com/pcwin21-alt/gwangju-gas-map/blob/55cb2325f8fe833cb88267006d89686c0f9268e9/output/audits/regional_gap_20261102/innovation_identity_recheck_20261103.json",
+    "issuer_map_coordinate_discrepancy_m": 1986.9,
+    "map_location_changed": false
+  },
+  "preserved_state_fields": {
+    "attempts": true,
+    "sources": true,
+    "effective_collection_limits": true,
+    "collection_schedule": true,
+    "jobs": true,
+    "survey_inventory": true,
+    "evidence": true,
+    "source_gaps": true,
+    "candidate_resolutions": true,
+    "last_run": true,
+    "region_order": true
+  },
+  "new_regional_progress": {
+    "region": "전남",
+    "status": "collecting",
+    "jobs_total": 44,
+    "jobs_remaining": 1,
+    "jobs_needing_review": 0,
+    "source_gaps": 12,
+    "review_records": 10,
+    "inventory_reviewed": false,
+    "mapped_records_to_recheck": 28,
+    "membership_check_status": {
+      "confirmed_in_issuer_scope": 25,
+      "needs_review_not_found": 3
+    },
+    "unresolved_annual_identities": 9,
+    "missing_standard_checks": [
+      "market_coverage",
+      "membership_rechecks",
+      "annual_identities"
+    ],
+    "standard_checks_complete": false,
+    "scope": "issuer-scoped rechecks; paper/QR/operator freshness not inferred"
+  },
+  "source_requests_by_this_review": 0,
+  "map_or_payment_dates_changed_by_review": false,
+  "publication_preview": {
+    "records": 220,
+    "changedStationIds": [
+      "onnuri:14280200024"
+    ],
+    "onlyIssuerChecksChanged": true,
+    "operatorPaperQrDatesAndMapLocationPreserved": true,
+    "newStations": 0
+  }
+}
