@@ -13,7 +13,7 @@
       "status": "active",
       "url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
       "scope": "Public unauthenticated Onnuri merchant form; issuer-specific evidence only; limits are our load caps, not a provider guarantee",
-      "next_allowed_at": 1793704327.580803,
+      "next_allowed_at": 1793704330.0239224,
       "volume_ramp": {
         "stage": "pilot",
         "started_at": 1793556784.2048566,
@@ -1087,7 +1087,7 @@
       "job_id": "cb87c8541476da05247da7c2",
       "source": "kbcard",
       "at": 1793704147.580803,
-      "status": "reserved",
+      "status": "done",
       "run_id": "f87df8ce7a8441c2a02fce4125b03c37",
       "request": {
         "method": "POST",
@@ -1104,7 +1104,12 @@
           "endRow": 10,
           "mmcNm": "혁신에너지"
         }
-      }
+      },
+      "request_started_at": 1793704148.9413986,
+      "network_duration_seconds": 0.9860801696777344,
+      "http_status": 200,
+      "response_sha256": "f111b85138a589c338cd782a3fd54b2a1aadef0108e15e6eabdcb040f9d4f053",
+      "finished_at": 1793704150.023869
     }
   ],
   "jobs": [
@@ -7379,10 +7384,15 @@
       "source_evidence": "output/audits/regional_gap_20261102/naju_innovation_coordinate_review.json",
       "logical_key": "cb87c8541476da05247da7c2",
       "id": "cb87c8541476da05247da7c2",
-      "status": "pending",
+      "status": "done",
       "attempts": 1,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [
+        "000000088473697"
+      ],
+      "expected": 1,
+      "last_observed_at": "2026-11-03T20:09:09+09:00",
+      "result": "observations_saved"
     },
     {
       "kind": "kb_search",
@@ -8987,6 +8997,33 @@
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/590ca19/output/audits/regional_gap_20261102/curated_rechecks_20261103_1712.json"
       ],
       "investigation_scope": "Empty at independent physical point; archived issuer point differs by 925.9m; not evidence of nonmembership."
+    },
+    {
+      "job_id": "cb87c8541476da05247da7c2",
+      "bank_record": {
+        "location": {
+          "lat": "35.0253400897",
+          "lng": "126.7652237445"
+        },
+        "content": {
+          "tel": "061)336-2250",
+          "title": "(주)혁신에너지",
+          "category": "주유소",
+          "address": "전남 나주시 금천면 ",
+          "distance": "999",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000088473697",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        }
+      },
+      "checked_at": "2026-11-03T20:09:09+09:00",
+      "independent_fuel_candidate_ids": [],
+      "reason": "Independent exact business/address/category evidence incomplete; do not exclude by bank category alone"
     }
   ],
   "source_gaps": [
