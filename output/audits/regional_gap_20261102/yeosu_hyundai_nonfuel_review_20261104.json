@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-11-04T05:16:24+09:00",
+  "region": "전남",
+  "collection_run": "https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41710604077",
+  "state_response_commit": "23282aa",
+  "candidate_id": "8dedc9fce3baf0dc2d230a00",
+  "original_annual_candidate": {
+    "candidate_id": "8dedc9fce3baf0dc2d230a00",
+    "row": {
+      "가맹점명": "현대참기름",
+      "소속 시장명(또는 상점가)": "여수교동시장",
+      "소재지": "전남광주",
+      "취급품목": "석유",
+      "지류형 가맹 여부": "Y",
+      "디지털형 가맹 여부": "Y",
+      "가맹 등록년도": "2020"
+    },
+    "possible_regions": [
+      "전남",
+      "광주"
+    ],
+    "status": "discovery_only",
+    "mapped_ids": [],
+    "location_ids": [],
+    "paper": "Y",
+    "digital": "Y"
+  },
+  "primary_independent_place": {
+    "checked_at": "2026-11-04T05:14:08+09:00",
+    "source": "kakao_local",
+    "source_url": "https://developers.kakao.com/docs/ko/local/dev-guide#search-by-keyword",
+    "query": "여수 교동시장 현대참기름",
+    "payload": {
+      "documents": [
+        {
+          "address_name": "전남광주통합특별시 여수시 교동 622-15",
+          "category_group_code": "",
+          "category_group_name": "",
+          "category_name": "서비스,산업 > 식품 > 식품가공,제조 > 전통식품제조 > 방앗간",
+          "distance": "",
+          "id": "21350046",
+          "phone": "061-663-6746",
+          "place_name": "현대참기름",
+          "place_url": "http://place.map.kakao.com/21350046",
+          "road_address_name": "전남광주통합특별시 여수시 교동시장4길 12-1",
+          "x": "127.7300742956194",
+          "y": "34.73951781586628"
+        }
+      ],
+      "meta": {
+        "is_end": true,
+        "pageable_count": 1,
+        "same_name": {
+          "keyword": "현대참기름",
+          "region": [],
+          "selected_region": "전남광주 여수시 여수교동시장"
+        },
+        "total_count": 1
+      },
+      "proxy": {
+        "name": "k-skill-proxy",
+        "cache": {
+          "hit": false,
+          "ttl_ms": 300000
+        },
+        "requested_at": "2026-11-03T20:14:08.849Z"
+      }
+    },
+    "scope": "one named first-page identity observation; not membership or a complete area search"
+  },
+  "attempt_id": "b114b31a34b24105bf560564",
+  "wire_response_sha256": "a7e762aa1c13bfc519dedaa64718fb270cb6a41f0925d526085c7c27815eed74",
+  "stored_response_file": "responses/b114b31a34b24105bf560564.json",
+  "stored_response_file_sha256": "2cd6fa74d70d6eef4e9c6fe88b2a3d3e63d3d0f98b9872e0068cd277d12d34b9",
+  "historical_secondary_market_link": {
+    "name": "현대참기름",
+    "market": "여수교동시장",
+    "address": "전라남도 여수시 교동시장4길 12-1 (교동)",
+    "product": "석유",
+    "phone": "",
+    "published_at": "2025-01-26",
+    "url": "https://kaienpolice.tistory.com/entry/여수시-온누리상품권-가맹점",
+    "source_role": "historical secondary market-to-premise linkage, not current membership or independent food classification"
+  },
+  "secondary_food_permit_source": {
+    "url": "https://place.clariosync.com/p/6814265/현대참기름",
+    "kind": "secondary mirror of LOCALDATA",
+    "claimed_source_date": "2026-09-04",
+    "observation": "food-processing listing at same name/address/telephone"
+  },
+  "secondary_food_permit_scope": "LOCALDATA mirror family counted once; not a current official permit lookup and not independent from its other mirrors.",
+  "identity_checks": {
+    "single_named_place": true,
+    "response_valid_and_successful": true,
+    "expected_named_place_id": true,
+    "exact_annual_candidate_name": true,
+    "exact_annual_market_in_historical_table": true,
+    "historical_specific_road_address_matches": true,
+    "prior_food_permit_specific_address_matches": true,
+    "prior_food_permit_phone_matches": true,
+    "lot_address_matches_prior_food_permit": true,
+    "positive_named_food_mill_category": true,
+    "not_fuel_provider_group": true,
+    "Jeonnam_address": true,
+    "valid_provider_coordinates": true,
+    "annual_row_unmapped": true,
+    "distinct_Hwangryong_annual_candidate_retained": true,
+    "original_annual_product_and_methods_retained": true,
+    "known_inventory_and_membership_rechecks_preserved": true
+  },
+  "resolution": {
+    "status": "excluded_non_vehicle",
+    "checked_at": "2026-11-04T05:16:24+09:00",
+    "source_kind": "reviewed_independent_named_food_premise_with_historical_market_address",
+    "source_url": "http://place.map.kakao.com/21350046",
+    "source_checked_at": "2026-11-04T05:14:08+09:00",
+    "annual_row": {
+      "가맹점명": "현대참기름",
+      "소속 시장명(또는 상점가)": "여수교동시장",
+      "소재지": "전남광주",
+      "취급품목": "석유",
+      "지류형 가맹 여부": "Y",
+      "디지털형 가맹 여부": "Y",
+      "가맹 등록년도": "2020"
+    },
+    "evidence": [
+      "output/audits/regional_gap_20261102/yeosu_hyundai_nonfuel_review_20261104.json"
+    ],
+    "independent_place_id": "21350046",
+    "reason": "Same named market candidate is linked by a specific historical street address to the independently observed food mill; exact address and phone also corroborate the dated food-permit mirror. Exclude this annual candidate from vehicle-fuel discovery only.",
+    "scope": "No present membership, operating permit, paper/QR/digital status or registry correction inferred; no map deletion and no exclusion of another same-name store."
+  },
+  "inference": "The petroleum item is inconsistent with the independently matched food-mill identity; this is a documented vehicle-fuel exclusion, not an official correction of the original annual registration or evidence of Onnuri nonmembership.",
+  "new_source_requests": {
+    "kakao_local": 1,
+    "kbcard": 0,
+    "datagov": 0,
+    "onnuri": 0
+  },
+  "new_map_stations": 0,
+  "map_station_deletions": 0,
+  "Hwangryong_same_name_not_excluded": true,
+  "preview_progress_after_resolution_and_six_new_jobs": {
+    "region": "전남",
+    "status": "collecting",
+    "jobs_total": 52,
+    "jobs_remaining": 6,
+    "jobs_needing_review": 0,
+    "source_gaps": 8,
+    "review_records": 7,
+    "inventory_reviewed": false,
+    "mapped_records_to_recheck": 28,
+    "membership_check_status": {
+      "confirmed_in_issuer_scope": 27,
+      "needs_review_not_found": 1
+    },
+    "unresolved_annual_identities": 5,
+    "missing_standard_checks": [
+      "market_coverage",
+      "membership_rechecks",
+      "annual_identities"
+    ],
+    "standard_checks_complete": false,
+    "scope": "issuer-scoped rechecks; paper/QR/operator freshness not inferred"
+  }
+}

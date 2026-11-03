@@ -1,0 +1,236 @@
+{
+  "reviewed_at": "2026-11-04T05:10:03+09:00",
+  "region": "전남",
+  "snapshot_state_commit": "b4c9101",
+  "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+  "physical_source_date": "2026-06-30",
+  "source_archive_sha256": "57aa361544108ff4fc73334f87d2ced61e41fe8638dd70bcd842930f865d2386",
+  "physical_rows": 992,
+  "municipalities": [
+    {
+      "municipality": "강진군",
+      "dated_physical_rows": 29,
+      "dated_unique_parsed_addresses": 28,
+      "current_unfiltered_query_anchor_addresses_exact_6dp": 0,
+      "current_named_query_anchor_addresses_exact_6dp": 0,
+      "map_history_records": 0,
+      "linked_current_issuer_records": 0,
+      "market_boundary_member_inventory": "pending"
+    },
+    {
+      "municipality": "고흥군",
+      "dated_physical_rows": 47,
+      "dated_unique_parsed_addresses": 42,
+      "current_unfiltered_query_anchor_addresses_exact_6dp": 0,
+      "current_named_query_anchor_addresses_exact_6dp": 0,
+      "map_history_records": 0,
+      "linked_current_issuer_records": 0,
+      "market_boundary_member_inventory": "pending"
+    },
+    {
+      "municipality": "곡성군",
+      "dated_physical_rows": 22,
+      "dated_unique_parsed_addresses": 22,
+      "current_unfiltered_query_anchor_addresses_exact_6dp": 0,
+      "current_named_query_anchor_addresses_exact_6dp": 0,
+      "map_history_records": 1,
+      "linked_current_issuer_records": 1,
+      "market_boundary_member_inventory": "pending"
+    },
+    {
+      "municipality": "광양시",
+      "dated_physical_rows": 81,
+      "dated_unique_parsed_addresses": 73,
+      "current_unfiltered_query_anchor_addresses_exact_6dp": 2,
+      "current_named_query_anchor_addresses_exact_6dp": 0,
+      "map_history_records": 1,
+      "linked_current_issuer_records": 1,
+      "market_boundary_member_inventory": "pending"
+    },
+    {
+      "municipality": "구례군",
+      "dated_physical_rows": 18,
+      "dated_unique_parsed_addresses": 18,
+      "current_unfiltered_query_anchor_addresses_exact_6dp": 0,
+      "current_named_query_anchor_addresses_exact_6dp": 0,
+      "map_history_records": 1,
+      "linked_current_issuer_records": 1,
+      "market_boundary_member_inventory": "pending"
+    },
+    {
+      "municipality": "나주시",
+      "dated_physical_rows": 73,
+      "dated_unique_parsed_addresses": 66,
+      "current_unfiltered_query_anchor_addresses_exact_6dp": 1,
+      "current_named_query_anchor_addresses_exact_6dp": 1,
+      "map_history_records": 6,
+      "linked_current_issuer_records": 6,
+      "market_boundary_member_inventory": "pending"
+    },
+    {
+      "municipality": "담양군",
+      "dated_physical_rows": 25,
+      "dated_unique_parsed_addresses": 24,
+      "current_unfiltered_query_anchor_addresses_exact_6dp": 1,
+      "current_named_query_anchor_addresses_exact_6dp": 0,
+      "map_history_records": 3,
+      "linked_current_issuer_records": 2,
+      "market_boundary_member_inventory": "pending"
+    },
+    {
+      "municipality": "목포시",
+      "dated_physical_rows": 64,
+      "dated_unique_parsed_addresses": 56,
+      "current_unfiltered_query_anchor_addresses_exact_6dp": 0,
+      "current_named_query_anchor_addresses_exact_6dp": 0,
+      "map_history_records": 1,
+      "linked_current_issuer_records": 1,
+      "market_boundary_member_inventory": "pending"
+    },
+    {
+      "municipality": "무안군",
+      "dated_physical_rows": 38,
+      "dated_unique_parsed_addresses": 34,
+      "current_unfiltered_query_anchor_addresses_exact_6dp": 0,
+      "current_named_query_anchor_addresses_exact_6dp": 0,
+      "map_history_records": 1,
+      "linked_current_issuer_records": 1,
+      "market_boundary_member_inventory": "pending"
+    },
+    {
+      "municipality": "보성군",
+      "dated_physical_rows": 44,
+      "dated_unique_parsed_addresses": 40,
+      "current_unfiltered_query_anchor_addresses_exact_6dp": 0,
+      "current_named_query_anchor_addresses_exact_6dp": 0,
+      "map_history_records": 2,
+      "linked_current_issuer_records": 2,
+      "market_boundary_member_inventory": "pending"
+    },
+    {
+      "municipality": "순천시",
+      "dated_physical_rows": 109,
+      "dated_unique_parsed_addresses": 93,
+      "current_unfiltered_query_anchor_addresses_exact_6dp": 3,
+      "current_named_query_anchor_addresses_exact_6dp": 1,
+      "map_history_records": 4,
+      "linked_current_issuer_records": 4,
+      "market_boundary_member_inventory": "pending"
+    },
+    {
+      "municipality": "신안군",
+      "dated_physical_rows": 17,
+      "dated_unique_parsed_addresses": 15,
+      "current_unfiltered_query_anchor_addresses_exact_6dp": 0,
+      "current_named_query_anchor_addresses_exact_6dp": 0,
+      "map_history_records": 0,
+      "linked_current_issuer_records": 0,
+      "market_boundary_member_inventory": "pending"
+    },
+    {
+      "municipality": "여수시",
+      "dated_physical_rows": 128,
+      "dated_unique_parsed_addresses": 104,
+      "current_unfiltered_query_anchor_addresses_exact_6dp": 1,
+      "current_named_query_anchor_addresses_exact_6dp": 0,
+      "map_history_records": 0,
+      "linked_current_issuer_records": 0,
+      "market_boundary_member_inventory": "pending"
+    },
+    {
+      "municipality": "영광군",
+      "dated_physical_rows": 34,
+      "dated_unique_parsed_addresses": 33,
+      "current_unfiltered_query_anchor_addresses_exact_6dp": 0,
+      "current_named_query_anchor_addresses_exact_6dp": 1,
+      "map_history_records": 0,
+      "linked_current_issuer_records": 0,
+      "market_boundary_member_inventory": "pending"
+    },
+    {
+      "municipality": "영암군",
+      "dated_physical_rows": 57,
+      "dated_unique_parsed_addresses": 51,
+      "current_unfiltered_query_anchor_addresses_exact_6dp": 0,
+      "current_named_query_anchor_addresses_exact_6dp": 0,
+      "map_history_records": 1,
+      "linked_current_issuer_records": 1,
+      "market_boundary_member_inventory": "pending"
+    },
+    {
+      "municipality": "완도군",
+      "dated_physical_rows": 24,
+      "dated_unique_parsed_addresses": 24,
+      "current_unfiltered_query_anchor_addresses_exact_6dp": 0,
+      "current_named_query_anchor_addresses_exact_6dp": 0,
+      "map_history_records": 0,
+      "linked_current_issuer_records": 0,
+      "market_boundary_member_inventory": "pending"
+    },
+    {
+      "municipality": "장성군",
+      "dated_physical_rows": 38,
+      "dated_unique_parsed_addresses": 36,
+      "current_unfiltered_query_anchor_addresses_exact_6dp": 1,
+      "current_named_query_anchor_addresses_exact_6dp": 0,
+      "map_history_records": 3,
+      "linked_current_issuer_records": 3,
+      "market_boundary_member_inventory": "pending"
+    },
+    {
+      "municipality": "장흥군",
+      "dated_physical_rows": 26,
+      "dated_unique_parsed_addresses": 24,
+      "current_unfiltered_query_anchor_addresses_exact_6dp": 0,
+      "current_named_query_anchor_addresses_exact_6dp": 0,
+      "map_history_records": 1,
+      "linked_current_issuer_records": 1,
+      "market_boundary_member_inventory": "pending"
+    },
+    {
+      "municipality": "진도군",
+      "dated_physical_rows": 19,
+      "dated_unique_parsed_addresses": 17,
+      "current_unfiltered_query_anchor_addresses_exact_6dp": 0,
+      "current_named_query_anchor_addresses_exact_6dp": 0,
+      "map_history_records": 0,
+      "linked_current_issuer_records": 0,
+      "market_boundary_member_inventory": "pending"
+    },
+    {
+      "municipality": "함평군",
+      "dated_physical_rows": 20,
+      "dated_unique_parsed_addresses": 20,
+      "current_unfiltered_query_anchor_addresses_exact_6dp": 0,
+      "current_named_query_anchor_addresses_exact_6dp": 0,
+      "map_history_records": 1,
+      "linked_current_issuer_records": 1,
+      "market_boundary_member_inventory": "pending"
+    },
+    {
+      "municipality": "해남군",
+      "dated_physical_rows": 41,
+      "dated_unique_parsed_addresses": 41,
+      "current_unfiltered_query_anchor_addresses_exact_6dp": 0,
+      "current_named_query_anchor_addresses_exact_6dp": 0,
+      "map_history_records": 2,
+      "linked_current_issuer_records": 2,
+      "market_boundary_member_inventory": "pending"
+    },
+    {
+      "municipality": "화순군",
+      "dated_physical_rows": 38,
+      "dated_unique_parsed_addresses": 34,
+      "current_unfiltered_query_anchor_addresses_exact_6dp": 0,
+      "current_named_query_anchor_addresses_exact_6dp": 0,
+      "map_history_records": 0,
+      "linked_current_issuer_records": 0,
+      "market_boundary_member_inventory": "pending"
+    }
+  ],
+  "actual_valid_recent_KB_requests": 38,
+  "interpretation": "A full annual name/address comparison is a different operation from current point-based issuer checks. Exact 6-decimal coordinate anchors below are a reproducible lower-bound location-query accounting, never a geographic completeness rate, nonmembership classification, or total merchant estimate. Responses may return surrounding businesses. Different physical aliases at one parsed address share one denominator entry. The 28 mapped records are history, not an exhaustive regional count.",
+  "no_new_source_requests": true,
+  "new_discovery_pilot": "output/audits/regional_gap_20261102/mokpo_location_discovery_plan_20261104.json",
+  "current_regional_market_coverage_status": "pending"
+}
