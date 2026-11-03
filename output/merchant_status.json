@@ -175,11 +175,11 @@
     "scope": "issuer_specific_corroboration_not_nationwide_refresh"
   },
   "incremental_collection": {
-    "status": "running",
+    "status": "needs_attention",
     "jobs_total": 228,
-    "jobs_done": 43,
-    "jobs_remaining": 185,
-    "review_records": 20,
+    "jobs_done": 44,
+    "jobs_remaining": 184,
+    "review_records": 21,
     "evidence_records": 24,
     "source_gaps": 90,
     "source_status": {
@@ -191,12 +191,12 @@
     "regions": [
       {
         "region": "전남",
-        "status": "collecting",
+        "status": "needs_review",
         "jobs_total": 44,
-        "jobs_remaining": 1,
+        "jobs_remaining": 0,
         "jobs_needing_review": 0,
         "source_gaps": 12,
-        "review_records": 10,
+        "review_records": 11,
         "inventory_reviewed": false,
         "mapped_records_to_recheck": 28,
         "membership_check_status": {
@@ -582,7 +582,7 @@
         "interval_seconds": 180,
         "stage": "pilot",
         "clean_since": 1793556784.2048566,
-        "valid_responses_in_clean_window": 30,
+        "valid_responses_in_clean_window": 31,
         "earliest_review_at": 1793729584.2048566
       },
       "datagov": {
@@ -594,11 +594,11 @@
     },
     "collection_schedule": {
       "minimum_run_interval_seconds": 10800,
-      "last_collection_started_at": 1793703964.7322237,
-      "next_allowed_at": 1793714764.7322237,
+      "last_collection_started_at": 1793714819.3262494,
+      "next_allowed_at": 1793725619.3262494,
       "waiting": true
     },
-    "checked_at": "2026-11-03T20:16:26+09:00",
+    "checked_at": "2026-11-03T23:07:04+09:00",
     "scope": "strictly sequential regional fuel-merchant verification; not a geographic census",
     "new_station_count": 0
   }
