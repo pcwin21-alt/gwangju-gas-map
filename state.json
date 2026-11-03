@@ -15,10 +15,11 @@
       "scope": "Public unauthenticated Onnuri merchant form; issuer-specific evidence only; limits are our load caps, not a provider guarantee",
       "next_allowed_at": 1793715002.9116232,
       "volume_ramp": {
-        "stage": "pilot",
+        "stage": "promoted",
         "started_at": 1793556784.2048566,
-        "clean_since": 1793556784.2048566,
-        "slow_streak": 0
+        "clean_since": 1793734374.0146263,
+        "slow_streak": 0,
+        "changed_at": 1793734374.0146263
       }
     },
     "datagov": {
@@ -10363,13 +10364,13 @@
         "stage": "stopped"
       },
       "kbcard": {
-        "requests_per_24h": 24,
-        "requests_per_run": 3,
+        "requests_per_24h": 32,
+        "requests_per_run": 4,
         "interval_seconds": 180,
-        "stage": "pilot",
-        "clean_since": 1793556784.2048566,
-        "valid_responses_in_clean_window": 31,
-        "earliest_review_at": 1793729584.2048566
+        "stage": "promoted",
+        "clean_since": 1793734374.0146263,
+        "valid_responses_in_clean_window": 0,
+        "earliest_review_at": 1793907174.0146263
       },
       "datagov": {
         "requests_per_24h": 20,
@@ -10392,8 +10393,8 @@
     }
   },
   "last_run": {
-    "id": "d4a93826e1d94e959ae84a752f9534be",
-    "checked_at": "2026-11-04T02:19:20+09:00",
+    "id": "6589776334b5440bae5c3f49cca16b32",
+    "checked_at": "2026-11-04T04:32:54+09:00",
     "requests": 0,
     "request_purposes": {}
   },
@@ -23842,13 +23843,13 @@
       "stage": "stopped"
     },
     "kbcard": {
-      "requests_per_24h": 24,
-      "requests_per_run": 3,
+      "requests_per_24h": 32,
+      "requests_per_run": 4,
       "interval_seconds": 180,
-      "stage": "pilot",
-      "clean_since": 1793556784.2048566,
-      "valid_responses_in_clean_window": 31,
-      "earliest_review_at": 1793729584.2048566
+      "stage": "promoted",
+      "clean_since": 1793734374.0146263,
+      "valid_responses_in_clean_window": 0,
+      "earliest_review_at": 1793907174.0146263
     },
     "datagov": {
       "requests_per_24h": 20,
