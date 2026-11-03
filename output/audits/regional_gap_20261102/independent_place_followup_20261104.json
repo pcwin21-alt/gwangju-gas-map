@@ -1,0 +1,25 @@
+{
+  "prepared_at": "2026-11-04T02:16:19+09:00",
+  "region": "전남",
+  "job": {
+    "kind": "kakao_place_identity",
+    "source": "kakao_local",
+    "region": "전남",
+    "purpose": "independent_annual_candidate_identity",
+    "candidate_ids": [
+      "8dedc9fce3baf0dc2d230a00"
+    ],
+    "discovery_only": true,
+    "target": {
+      "name": "현대참기름",
+      "query": "여수 교동시장 현대참기름",
+      "address": "전라남도 여수시 교동시장4길 12-1"
+    },
+    "source_evidence": "output/audits/regional_gap_20261102/yeosu_hyundai_identity_lead_20261103.json",
+    "scope": "One named physical identity observation to inspect food-versus-fuel category and address. No automatic annual exclusion, current membership inference, blocked LOCALDATA retry or alternate host.",
+    "logical_key": "4a5d002a2eee71585252d910"
+  },
+  "source_requests_so_far": 0,
+  "must_wait_for": "shared 3-hour cadence and kakao_local 1/run,2/rolling24h; no immediate second call",
+  "scope": "Only current Jeonnam unresolved identity; no other region queried"
+}

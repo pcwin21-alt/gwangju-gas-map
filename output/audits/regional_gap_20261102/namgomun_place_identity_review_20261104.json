@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-11-04T02:16:19+09:00",
+  "region": "전남",
+  "station_id": "onnuri:18802200007",
+  "station_name": "남고문 self주유소",
+  "decision": "same_existing_fuel_premise_corroborated; reuse actual stored KB observation without a duplicate issuer request",
+  "new_station_count": 0,
+  "collection_run": "https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41682049360",
+  "actual_source_requests_this_round": {
+    "kakao_local": 1,
+    "kbcard": 0,
+    "onnuri": 0
+  },
+  "kb_evidence": {
+    "checked_at": "2026-11-03T04:38:41+09:00",
+    "bank_record": {
+      "location": {
+        "lat": "35.0287060169",
+        "lng": "126.718846688"
+      },
+      "content": {
+        "tel": "061)337-4451",
+        "title": "남고문self주유소",
+        "category": "주유소",
+        "address": "전남 나주시 남외동 ",
+        "distance": "7",
+        "kindGb": "0",
+        "onNuliGb": "1",
+        "tradiGb": "0",
+        "liveHoodGb": "1",
+        "sangsaengGb": "1",
+        "franchiseNo": "000000034595536",
+        "highOilGb": "1",
+        "seoulGb": "0"
+      }
+    },
+    "response_file": "responses/1554a6fa246541d4ba188e30.json",
+    "response_file_sha256": "9a7619478b6a8045062a5db093dadbe43a15f0ba7ee066a2ff9bcbfa09e1a2d5",
+    "wire_response_sha256": "e18fd1eeefd06f2164bb8bdec685328c9acabaaa1e8212fe6b633160d8d21374"
+  },
+  "independent_place_evidence": {
+    "checked_at": "2026-11-04T02:13:27+09:00",
+    "provider": "Kakao Local",
+    "source_url": "https://developers.kakao.com/docs/ko/local/dev-guide#search-by-keyword",
+    "record": {
+      "address_name": "전남광주통합특별시 나주시 남외동 41",
+      "category_group_code": "OL7",
+      "category_group_name": "주유소,충전소",
+      "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > SK주유소",
+      "distance": "",
+      "id": "8247983",
+      "phone": "061-337-4451",
+      "place_name": "남고문셀프주유소",
+      "place_url": "http://place.map.kakao.com/8247983",
+      "road_address_name": "전남광주통합특별시 나주시 남고문로 72",
+      "x": "126.71870243056291",
+      "y": "35.02872024118589"
+    },
+    "response_file": "responses/b7fb34692e364cd6b32f8e2a.json",
+    "response_file_sha256": "b9b9982b5769da9053e6f68b322e4b79f3e24c987eecc2e91f9796bb57423f1c",
+    "wire_response_sha256": "95063f8eabb9e1ce7da2fff891e83b25a15305bbeccc0b24456343860d5eb91b",
+    "transport_endpoint": "https://k-skill-proxy.nomadamas.org/v1/kakao-map/search/keyword",
+    "cache_hit": false
+  },
+  "checks": {
+    "expected_existing_map_identity": true,
+    "expected_exact_current_issuer_id": true,
+    "valid_recent_stored_issuer_evidence": true,
+    "issuer_onnuri_flag_and_vehicle_fuel_category": true,
+    "reviewed_single_identity_name_pair": true,
+    "exact_full_phone": true,
+    "exact_full_road_address": true,
+    "exact_issuer_locality_in_independent_lot_address": true,
+    "independent_liquid_fuel_classification": true,
+    "map_to_bank_under_100m": true,
+    "map_to_independent_place_under_100m": true,
+    "bank_to_independent_place_under_100m": true,
+    "one_bounded_provider_result": true,
+    "independent_provider_place_id": true
+  },
+  "distances_m": {
+    "map_to_bank": 6.58,
+    "map_to_kakao": 18.34,
+    "bank_to_kakao": 13.23
+  },
+  "check": {
+    "status": "confirmed_in_issuer_scope",
+    "issuer": "kbcard",
+    "checked_at": "2026-11-03T04:38:41+09:00",
+    "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+    "bank_id": "000000034595536",
+    "other_payment_methods": "not_reverified",
+    "match_basis": "reviewed_single_station_name_pair_exact_phone_road_locality_fuel_category_and_coordinates_with_independent_Kakao_Local",
+    "identity_review_evidence": "output/audits/regional_gap_20261102/namgomun_place_identity_review_20261104.json",
+    "independent_identity_checked_at": "2026-11-04T02:13:27+09:00",
+    "independent_identity_source": "Kakao Local",
+    "independent_place_id": "8247983",
+    "map_location_changed": false
+  },
+  "scope": "Kakao verifies physical identity only. KB membership checked_at stays at the actual 2026-11-03 04:38:41 observation. Do not renew operator/paper/QR/other issuer dates, change the map point, generalize the self/셀프 name pair, or infer a new merchant.",
+  "new_query_for_old_bank_record": false,
+  "old_operator_checked_at": "2026-10-25T10:51:11+09:00",
+  "map_or_methods_changed": false
+}
