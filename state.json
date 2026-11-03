@@ -9920,7 +9920,8 @@
       "evidence": [
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/16c7c03/output/audits/three_route_trial_20261103/results.json",
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/2b72365/output/audits/portal_search_20261103/results.json",
-        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/2bdf397/output/audits/regional_gap_20261102/mokpo_attachment_visual_review_20261104.json"
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/2bdf397/output/audits/regional_gap_20261102/mokpo_attachment_visual_review_20261104.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/18e65bd/output/audits/regional_gap_20261102/mokpo_observation_crosscheck_20261104_0814.json"
       ],
       "latest_designation_review_at": "2026-11-03T06:45:01+09:00",
       "new_market_names_pending": [
@@ -9942,6 +9943,19 @@
         "checked_at": "2026-11-04T08:10:35+09:00",
         "evidence": "https://github.com/pcwin21-alt/gwangju-gas-map/blob/2bdf397/output/audits/regional_gap_20261102/mokpo_attachment_visual_review_20261104.json",
         "result": "Two one-page stored notices have no boundary maps, parcel lists or individual member inventories; source gap remains."
+      },
+      "latest_location_probe": {
+        "evidence": "https://github.com/pcwin21-alt/gwangju-gas-map/blob/18e65bd/output/audits/regional_gap_20261102/mokpo_observation_crosscheck_20261104_0814.json",
+        "reviewed_at": "2026-11-04T08:27:43+09:00",
+        "source_checked_at": "2026-11-04T08:24:16+09:00",
+        "managed_source_requests": 4,
+        "completed_target_locations": 4,
+        "row_observations": 383,
+        "unique_bank_ids": 383,
+        "categories_compared": 67,
+        "independent_physical_rows": 1557,
+        "new_fuel_membership_confirmations": 0,
+        "scope": "Four bounded physical anchors and current issuer observations only; absence does not establish nonmembership, closure, market-boundary coverage or all-issuer completeness."
       }
     },
     {
@@ -11137,10 +11151,12 @@
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/849cb33/output/audits/regional_gap_20261102/yeosu_hyundai_nonfuel_review_20261104.json",
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/51bc818/output/audits/regional_gap_20261102/mokpo_location_discovery_plan_20261104.json",
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/849cb33/output/audits/regional_gap_20261102/jeonnam_physical_coverage_ledger_20261104.json",
-        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/2bdf397/output/audits/regional_gap_20261102/mokpo_attachment_visual_review_20261104.json"
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/2bdf397/output/audits/regional_gap_20261102/mokpo_attachment_visual_review_20261104.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/18e65bd/output/audits/regional_gap_20261102/mokpo_observation_crosscheck_20261104_0814.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/18e65bd/output/audits/regional_gap_20261102/alternative_issuer_surface_review_20261104.json"
       ],
       "checked_at": null,
-      "last_reviewed_at": "2026-11-04T08:10:35+09:00"
+      "last_reviewed_at": "2026-11-04T08:27:43+09:00"
     },
     "전북": {
       "status": "pending",
@@ -23612,10 +23628,11 @@
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/0632768/output/audits/regional_gap_20261102/damyang_market_leads.json",
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/16c7c03/output/audits/three_route_trial_20261103/results.json",
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/2b72365/output/audits/portal_search_20261103/results.json",
-          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/2bdf397/output/audits/regional_gap_20261102/mokpo_attachment_visual_review_20261104.json"
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/2bdf397/output/audits/regional_gap_20261102/mokpo_attachment_visual_review_20261104.json",
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/18e65bd/output/audits/regional_gap_20261102/mokpo_observation_crosscheck_20261104_0814.json"
         ],
         "checked_at": null,
-        "last_reviewed_at": "2026-11-04T08:10:35+09:00",
+        "last_reviewed_at": "2026-11-04T08:27:43+09:00",
         "scope": "Pending primary designation boundaries and shop inventories across all 22 municipalities; Damyang secondary leads are not completed coverage.",
         "latest_designation_review": {
           "checked_at": "2026-11-03T06:45:01+09:00",
@@ -23735,6 +23752,19 @@
           "boundary_maps_found": 0,
           "member_shop_lists_found": 0,
           "source_status": "pending_boundary_and_member_inventory"
+        },
+        "latest_location_probe": {
+          "evidence": "https://github.com/pcwin21-alt/gwangju-gas-map/blob/18e65bd/output/audits/regional_gap_20261102/mokpo_observation_crosscheck_20261104_0814.json",
+          "reviewed_at": "2026-11-04T08:27:43+09:00",
+          "source_checked_at": "2026-11-04T08:24:16+09:00",
+          "managed_source_requests": 4,
+          "completed_target_locations": 4,
+          "row_observations": 383,
+          "unique_bank_ids": 383,
+          "categories_compared": 67,
+          "independent_physical_rows": 1557,
+          "new_fuel_membership_confirmations": 0,
+          "scope": "Four bounded physical anchors and current issuer observations only; absence does not establish nonmembership, closure, market-boundary coverage or all-issuer completeness."
         }
       }
     },
