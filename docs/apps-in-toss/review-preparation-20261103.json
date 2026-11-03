@@ -1,10 +1,10 @@
 {
-  "preparedAt": "2026-11-03T13:35:59.848132+09:00",
-  "status": "prepared_local_build_not_submitted",
+  "preparedAt": "2026-11-03T13:54:33.770482+09:00",
+  "status": "final_local_check_complete_external_gates_pending",
   "appName": "onnuri-fuel-map",
   "workspaceId": "105239",
   "consoleUrl": "https://apps-in-toss.toss.im/workspace/105239/mini-app/onnuri-fuel-map/app-build",
-  "sourceCommit": "f12f94c1397f8f3cf007036612ca5d15970037cc",
+  "sourceCommit": "fa8c949",
   "readyForSubmission": false,
   "bundleUploadedThisRun": false,
   "reviewSubmittedThisRun": false,
@@ -12,12 +12,14 @@
   "consoleInspection": "redirected_to_login; previous metadata save not reverified",
   "checks": {
     "nodeTestsPassed": 3,
-    "pythonTestsPassed": 4,
+    "pythonTestsPassed": 6,
     "inlineScriptsSyntaxPassed": 1,
     "embeddedDatasetsPreserved": 5,
     "sourceAndPaletteHashMatched": true,
     "logo": "600x600 PNG, opaque",
-    "browser": "fallback_list, empty_result_recovery, tools_menu, 360x780 rendering"
+    "browser": "manual lookup, clear/reset, region and fuel/payment filters, pagination, reload state, local details and focus return, help and language; widths 288/360/1280; no real Toss device",
+    "javascriptSyntaxPassed": 20,
+    "bundleArtifactChecksPassed": 9
   },
   "blockingChecks": [
     "console login and actual upload state",
@@ -28,21 +30,29 @@
     "final platform eligibility and truthful attestations"
   ],
   "files": {
+    "artifact-audit.json": {
+      "bytes": 1422,
+      "sha256": "f0034e7c566766e80d35e27bcb17916e1386ea605de37226b354abb26593f9cd"
+    },
     "logo-600.png": {
       "bytes": 14747,
       "sha256": "5272f4fccda35b5234a909bb18ae890dffb1f46306cebc138b4ab41de0b2aa0c"
     },
+    "mobile-fallback-detail.jpg": {
+      "bytes": 33766,
+      "sha256": "a38a6e5ea7e41d0cfab8d6c238a50d473258bddeaed11c4ac4458a8d428955df"
+    },
     "onnuri-fuel-map.ait": {
-      "bytes": 153408,
-      "sha256": "608a4e8dc97c211ec94636a0280033fb3c3cea7f9da5779c6375119ac34dcac2"
+      "bytes": 144820,
+      "sha256": "0d1452d2aec2532120e7a3a6d699a9ff509bc1aef7e703c07ae31f9da78acc20"
     },
     "START_HERE.md": {
-      "bytes": 10945,
-      "sha256": "0411aa6ec95a9971db16bf3a0eaaa581a472f82c9365c97c7cbb7b3144c34d63"
+      "bytes": 15287,
+      "sha256": "3c83f3bd271ee43405b409d4f8de88ccb2e5b5e605e8f6d047797c706500b715"
     },
     "test-build-manifest.json": {
-      "bytes": 909,
-      "sha256": "5301fc113851ec4eaaaae9bf8c0e9a3bb06a56cb8f0b41b6b30db172e2a724fd"
+      "bytes": 6277,
+      "sha256": "023f700c72cd2853909ff2c896854f043c13894701459e3dd39619ffda4f4fa5"
     }
   }
 }
