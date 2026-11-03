@@ -1,0 +1,68 @@
+{
+  "reviewed_at": "2026-11-04T05:16:24+09:00",
+  "before_state_commit": "23282aa782edeba5af27562108fc8f92d77d5475",
+  "candidate_resolution_added": "8dedc9fce3baf0dc2d230a00",
+  "source_gap_excluded_indexes": [
+    8
+  ],
+  "evidence": "https://github.com/pcwin21-alt/gwangju-gas-map/blob/849cb33/output/audits/regional_gap_20261102/yeosu_hyundai_nonfuel_review_20261104.json",
+  "new_jobs": [
+    "6331c23ddf63c1967e3d7ff5",
+    "9b6c0fa15ed446aa75703f34",
+    "b120f4a0e8525c7890e9ba33",
+    "51ed2a92703d35e05062c878",
+    "db6738bb5477d9d95cf55d55",
+    "0341c52dde980ab4a6230766"
+  ],
+  "preserved_state_fields": {
+    "schema_version": true,
+    "plan_id": true,
+    "scope": true,
+    "sources": true,
+    "attempts": true,
+    "evidence": true,
+    "review": true,
+    "last_run": true,
+    "initial_scope": true,
+    "region_order": true,
+    "survey_inventory": true,
+    "membership_rechecks": true,
+    "initial_plan_id": true,
+    "applied_plans": true,
+    "effective_collection_limits": true,
+    "collection_schedule": true,
+    "independent_place_checks": true
+  },
+  "old_jobs_pages_results_preserved": true,
+  "all_other_candidate_resolutions_preserved": true,
+  "source_gap_original_reason_and_dates_preserved": true,
+  "annual_candidate_row_untouched": true,
+  "Hwangryong_same_name_not_excluded": true,
+  "membership_rechecks_unchanged": true,
+  "new_source_requests_during_merge": 0,
+  "regional_progress": {
+    "region": "전남",
+    "status": "collecting",
+    "jobs_total": 52,
+    "jobs_remaining": 6,
+    "jobs_needing_review": 0,
+    "source_gaps": 8,
+    "review_records": 7,
+    "inventory_reviewed": false,
+    "mapped_records_to_recheck": 28,
+    "membership_check_status": {
+      "confirmed_in_issuer_scope": 27,
+      "needs_review_not_found": 1
+    },
+    "unresolved_annual_identities": 5,
+    "missing_standard_checks": [
+      "market_coverage",
+      "membership_rechecks",
+      "annual_identities"
+    ],
+    "standard_checks_complete": false,
+    "scope": "issuer-scoped rechecks; paper/QR/operator freshness not inferred"
+  },
+  "next_region": "전북 queued",
+  "next_collection_allowed_at": "2026-11-04T08:14:05+09:00"
+}

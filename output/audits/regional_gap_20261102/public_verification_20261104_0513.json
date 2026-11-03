@@ -1,0 +1,215 @@
+{
+  "checked_at": "2026-11-04T05:21:21+09:00",
+  "url": "https://pcwin21-alt.github.io/gwangju-gas-map/?v=95b799e-verify",
+  "http_status": 200,
+  "all_embedded_stations_match_main": true,
+  "entire_published_HTML_matches_prepared_main": true,
+  "public_HTML_contains_current_annual_progress": true,
+  "station_count": 220,
+  "onnuri_tagged": 184,
+  "jeonnam_historical_records": 28,
+  "station_data_sha256": "65d372e0bf06118645943811799434aa81b1894b2c6e9f61da5f7a28762c147d",
+  "state_progress": {
+    "region": "전남",
+    "status": "collecting",
+    "jobs_total": 52,
+    "jobs_remaining": 6,
+    "jobs_needing_review": 0,
+    "source_gaps": 8,
+    "review_records": 7,
+    "inventory_reviewed": false,
+    "mapped_records_to_recheck": 28,
+    "membership_check_status": {
+      "confirmed_in_issuer_scope": 27,
+      "needs_review_not_found": 1
+    },
+    "unresolved_annual_identities": 5,
+    "missing_standard_checks": [
+      "market_coverage",
+      "membership_rechecks",
+      "annual_identities"
+    ],
+    "standard_checks_complete": false,
+    "scope": "issuer-scoped rechecks; paper/QR/operator freshness not inferred"
+  },
+  "zero_request_publication": true,
+  "cadence_next_allowed_at": "2026-11-04T08:14:05+09:00",
+  "prepared_asset_hash_basis": "canonical Git blob bytes, same LF content as Linux runner; not Windows worktree CRLF bytes",
+  "asset_hashes": [
+    {
+      "path": "assets/theme.js",
+      "git_blob_hash": "0846e1da224f",
+      "windows_worktree_byte_hash": "0846e1da224f"
+    },
+    {
+      "path": "assets/route-planner.css",
+      "git_blob_hash": "4c6f1648fb89",
+      "windows_worktree_byte_hash": "a82392d4c61b"
+    },
+    {
+      "path": "assets/price-display.css",
+      "git_blob_hash": "7aa9555f0e95",
+      "windows_worktree_byte_hash": "7aa9555f0e95"
+    },
+    {
+      "path": "assets/updates.css",
+      "git_blob_hash": "dfaa761f2f4e",
+      "windows_worktree_byte_hash": "dfaa761f2f4e"
+    },
+    {
+      "path": "assets/map-viewport.js",
+      "git_blob_hash": "2113d069e011",
+      "windows_worktree_byte_hash": "c9613c90416d"
+    },
+    {
+      "path": "assets/price-display.js",
+      "git_blob_hash": "76b61eb28cac",
+      "windows_worktree_byte_hash": "4c90fe47425d"
+    },
+    {
+      "path": "assets/merchant-display.js",
+      "git_blob_hash": "1be16c0ca267",
+      "windows_worktree_byte_hash": "371c68ec347e"
+    },
+    {
+      "path": "assets/station-results-core.js",
+      "git_blob_hash": "5e55d0b83a65",
+      "windows_worktree_byte_hash": "3cbf029dbc1c"
+    },
+    {
+      "path": "assets/visual-refresh.css",
+      "git_blob_hash": "9a6adccc5ba1",
+      "windows_worktree_byte_hash": "b9705468b644"
+    },
+    {
+      "path": "assets/nationwide.css",
+      "git_blob_hash": "4a3f064773c7",
+      "windows_worktree_byte_hash": "7725efc22eac"
+    },
+    {
+      "path": "assets/simple-controls.css",
+      "git_blob_hash": "855bc38ff4c7",
+      "windows_worktree_byte_hash": "da84230e6e66"
+    },
+    {
+      "path": "assets/map-controls.css",
+      "git_blob_hash": "933863ef5172",
+      "windows_worktree_byte_hash": "ae1bbe69d5c2"
+    },
+    {
+      "path": "assets/route-window.css",
+      "git_blob_hash": "e29163624949",
+      "windows_worktree_byte_hash": "fb16018f9661"
+    },
+    {
+      "path": "assets/district-context.css",
+      "git_blob_hash": "208a8d8d1bdb",
+      "windows_worktree_byte_hash": "03f20f5dbae7"
+    },
+    {
+      "path": "assets/region-picker.css",
+      "git_blob_hash": "3198cfebca29",
+      "windows_worktree_byte_hash": "3198cfebca29"
+    },
+    {
+      "path": "assets/ux-fixes.css",
+      "git_blob_hash": "2df80643d424",
+      "windows_worktree_byte_hash": "604bb661496a"
+    },
+    {
+      "path": "assets/responsive-ui.css",
+      "git_blob_hash": "c5dbf9ed40a2",
+      "windows_worktree_byte_hash": "f632e2abf41b"
+    },
+    {
+      "path": "assets/theme.css",
+      "git_blob_hash": "c42a25cb01d4",
+      "windows_worktree_byte_hash": "84ebf4f66953"
+    },
+    {
+      "path": "assets/nationwide.js",
+      "git_blob_hash": "e1738fc77729",
+      "windows_worktree_byte_hash": "e1738fc77729"
+    },
+    {
+      "path": "assets/route-core.js",
+      "git_blob_hash": "874a3207b088",
+      "windows_worktree_byte_hash": "8313f025de7f"
+    },
+    {
+      "path": "assets/route-map.js",
+      "git_blob_hash": "54c476f92b85",
+      "windows_worktree_byte_hash": "41dcff95306e"
+    },
+    {
+      "path": "assets/route-planner.js",
+      "git_blob_hash": "787ce0354e88",
+      "windows_worktree_byte_hash": "de910f093e4e"
+    },
+    {
+      "path": "assets/updates.js",
+      "git_blob_hash": "db39e7a48351",
+      "windows_worktree_byte_hash": "db39e7a48351"
+    },
+    {
+      "path": "assets/visual-refresh.js",
+      "git_blob_hash": "58440547ed92",
+      "windows_worktree_byte_hash": "39f0fd9e86a5"
+    },
+    {
+      "path": "assets/nationwide-ui.js",
+      "git_blob_hash": "8267a14a247e",
+      "windows_worktree_byte_hash": "6f1914a9fb24"
+    },
+    {
+      "path": "assets/simple-controls.js",
+      "git_blob_hash": "48c97dd1a966",
+      "windows_worktree_byte_hash": "9f242563b224"
+    },
+    {
+      "path": "assets/region-picker.js",
+      "git_blob_hash": "285abb1dcb98",
+      "windows_worktree_byte_hash": "285abb1dcb98"
+    },
+    {
+      "path": "assets/ux-fixes.js",
+      "git_blob_hash": "7f1466bfd7ca",
+      "windows_worktree_byte_hash": "7f1466bfd7ca"
+    },
+    {
+      "path": "assets/input-ux.js",
+      "git_blob_hash": "1809ebe00951",
+      "windows_worktree_byte_hash": "1809ebe00951"
+    },
+    {
+      "path": "assets/map-controls.js",
+      "git_blob_hash": "1ae1546514a1",
+      "windows_worktree_byte_hash": "86ed7b4857e7"
+    },
+    {
+      "path": "assets/district-context-core.js",
+      "git_blob_hash": "0934e655aaf9",
+      "windows_worktree_byte_hash": "0934e655aaf9"
+    },
+    {
+      "path": "assets/district-context.js",
+      "git_blob_hash": "3150dc533d74",
+      "windows_worktree_byte_hash": "3150dc533d74"
+    },
+    {
+      "path": "assets/route-window.js",
+      "git_blob_hash": "b24e4dc651ba",
+      "windows_worktree_byte_hash": "8183e9b92668"
+    },
+    {
+      "path": "assets/search-flow.js",
+      "git_blob_hash": "50f68b49c146",
+      "windows_worktree_byte_hash": "c47d3aefd0e0"
+    },
+    {
+      "path": "assets/i18n.js",
+      "git_blob_hash": "0c8cc22565bb",
+      "windows_worktree_byte_hash": "954315619f0a"
+    }
+  ]
+}

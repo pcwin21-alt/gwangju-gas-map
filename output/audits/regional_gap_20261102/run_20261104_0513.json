@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-11-04T05:22:01+09:00",
+  "region": "전남",
+  "scheduled_maintenance_run": "https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41704081065",
+  "collection_run": "https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41710604077",
+  "publication_run": "https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41711350535",
+  "source_requests_this_round": {
+    "kakao_local": 1,
+    "kbcard": 0,
+    "datagov": 0,
+    "onnuri": 0
+  },
+  "source_request_scope": "Counts are managed provider attempts; public portal discovery and own-site deployment readback are separate. No blocked provider contacted.",
+  "new_existing_station_rechecks": 0,
+  "existing_station_rechecks_cumulative": {
+    "confirmed_in_issuer_scope": 27,
+    "needs_review_not_found": 1,
+    "denominator": 28
+  },
+  "new_annual_identity_exclusions": 1,
+  "excluded_candidate_id": "8dedc9fce3baf0dc2d230a00",
+  "excluded_candidate_reason": "Independently matched food mill at exact historical market-premise address and phone; vehicle-fuel discovery exclusion only, no current membership or registry correction claim.",
+  "same_name_Hwangryong_candidate_retained": true,
+  "new_station_discoveries": 0,
+  "new_map_stations": 0,
+  "map_station_deletions": 0,
+  "map_station_data_unchanged": true,
+  "progress_before": {
+    "region": "전남",
+    "status": "collecting",
+    "jobs_total": 46,
+    "jobs_remaining": 1,
+    "jobs_needing_review": 0,
+    "source_gaps": 9,
+    "review_records": 7,
+    "inventory_reviewed": false,
+    "mapped_records_to_recheck": 28,
+    "membership_check_status": {
+      "confirmed_in_issuer_scope": 27,
+      "needs_review_not_found": 1
+    },
+    "unresolved_annual_identities": 6,
+    "missing_standard_checks": [
+      "market_coverage",
+      "membership_rechecks",
+      "annual_identities"
+    ],
+    "standard_checks_complete": false,
+    "scope": "issuer-scoped rechecks; paper/QR/operator freshness not inferred"
+  },
+  "progress_after": {
+    "region": "전남",
+    "status": "collecting",
+    "jobs_total": 52,
+    "jobs_remaining": 6,
+    "jobs_needing_review": 0,
+    "source_gaps": 8,
+    "review_records": 7,
+    "inventory_reviewed": false,
+    "mapped_records_to_recheck": 28,
+    "membership_check_status": {
+      "confirmed_in_issuer_scope": 27,
+      "needs_review_not_found": 1
+    },
+    "unresolved_annual_identities": 5,
+    "missing_standard_checks": [
+      "market_coverage",
+      "membership_rechecks",
+      "annual_identities"
+    ],
+    "standard_checks_complete": false,
+    "scope": "issuer-scoped rechecks; paper/QR/operator freshness not inferred"
+  },
+  "jobs_processed_cumulative": 46,
+  "jobs_total_after_six_merged": 52,
+  "jobs_are_not_regional_census_completion": true,
+  "new_KB_discovery_jobs_queued": 6,
+  "new_KB_discovery_jobs_requests_so_far": 0,
+  "next_collection_allowed_at": "2026-11-04T08:14:05+09:00",
+  "rolling24h": {
+    "kbcard": 16,
+    "kakao_local": 2
+  },
+  "effective_limits": {
+    "onnuri": {
+      "requests_per_24h": 24,
+      "requests_per_run": 0,
+      "interval_seconds": 180,
+      "stage": "stopped"
+    },
+    "kbcard": {
+      "requests_per_24h": 32,
+      "requests_per_run": 4,
+      "interval_seconds": 180,
+      "stage": "promoted",
+      "clean_since": 1793734374.0146263,
+      "valid_responses_in_clean_window": 0,
+      "earliest_review_at": 1793907174.0146263
+    },
+    "datagov": {
+      "requests_per_24h": 20,
+      "requests_per_run": 3,
+      "interval_seconds": 180,
+      "stage": "fixed"
+    },
+    "kakao_local": {
+      "requests_per_24h": 2,
+      "requests_per_run": 1,
+      "interval_seconds": 180,
+      "stage": "fixed"
+    }
+  },
+  "KB_promotion_review": "output/audits/regional_gap_20261102/kb_promotion_review_20261104.json",
+  "python_tests_passed_on_collection_and_publication": 198,
+  "manual_identity_guards_passed": 17,
+  "preserved": {
+    "old_attempts": true,
+    "old_jobs_pages_and_results": true,
+    "blocked_source_states": true,
+    "daily_budgets_and_minimum_cadence": true,
+    "operator_paper_QR_and_issuer_dates": true,
+    "no_next_region_source_query": true,
+    "source_gap_original_reason_and_dates": true,
+    "original_annual_rows_and_other_resolutions": true
+  },
+  "public_verification": {
+    "checked_at": "2026-11-04T05:21:21+09:00",
+    "url": "https://pcwin21-alt.github.io/gwangju-gas-map/?v=95b799e-verify",
+    "http_status": 200,
+    "all_embedded_stations_match_main": true,
+    "entire_published_HTML_matches_prepared_main": true,
+    "public_HTML_contains_current_annual_progress": true,
+    "station_count": 220,
+    "onnuri_tagged": 184,
+    "jeonnam_historical_records": 28,
+    "station_data_sha256": "65d372e0bf06118645943811799434aa81b1894b2c6e9f61da5f7a28762c147d",
+    "state_progress": {
+      "region": "전남",
+      "status": "collecting",
+      "jobs_total": 52,
+      "jobs_remaining": 6,
+      "jobs_needing_review": 0,
+      "source_gaps": 8,
+      "review_records": 7,
+      "inventory_reviewed": false,
+      "mapped_records_to_recheck": 28,
+      "membership_check_status": {
+        "confirmed_in_issuer_scope": 27,
+        "needs_review_not_found": 1
+      },
+      "unresolved_annual_identities": 5,
+      "missing_standard_checks": [
+        "market_coverage",
+        "membership_rechecks",
+        "annual_identities"
+      ],
+      "standard_checks_complete": false,
+      "scope": "issuer-scoped rechecks; paper/QR/operator freshness not inferred"
+    },
+    "zero_request_publication": true,
+    "cadence_next_allowed_at": "2026-11-04T08:14:05+09:00",
+    "prepared_asset_hash_basis": "canonical Git blob bytes, same LF content as Linux runner; not Windows worktree CRLF bytes"
+  },
+  "verification_method_note": "Initial full-HTML comparison with Windows working-tree asset byte hashes differed due to CRLF. Comparing canonical Git blob hashes, as used by Linux publication, passed; no product change was needed.",
+  "pinned_Toss_bundle_sha256": "e1f72f65b654b4b5bc2bc7430261c5614a824697d4c85d91a8dc0b85faf63c7f",
+  "Toss_bundle_rebuilt_or_uploaded": false,
+  "region_complete": false,
+  "remaining": [
+    "Terminal current issuer membership recheck",
+    "Five annual candidate identities",
+    "Eight regional source gaps including market boundary and member inventories",
+    "Six named physical fuel-premise unfiltered KB queries after cadence and budgets allow"
+  ],
+  "audit_evidence": [
+    "output/audits/regional_gap_20261102/yeosu_hyundai_nonfuel_review_20261104.json",
+    "output/audits/regional_gap_20261102/mokpo_location_discovery_plan_20261104.json",
+    "output/audits/regional_gap_20261102/yeosu_mokpo_state_merge_20261104.json",
+    "output/audits/regional_gap_20261102/jeonnam_physical_coverage_ledger_20261104.json"
+  ]
+}
