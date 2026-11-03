@@ -1,0 +1,32 @@
+{
+  "reviewed_at": "2026-11-04T08:10:35+09:00",
+  "before_state_commit": "9c4896534c12a8e8efafaf7139cdaa826ffb11d4",
+  "evidence": "https://github.com/pcwin21-alt/gwangju-gas-map/blob/2bdf397/output/audits/regional_gap_20261102/mokpo_attachment_visual_review_20261104.json",
+  "scope": "Add proof of stored-document limitation only; source gap and all coverage completion statuses remain pending.",
+  "source_gap_original_reason_and_dates_preserved": true,
+  "protected_state_fields": [
+    "schema_version",
+    "plan_id",
+    "scope",
+    "sources",
+    "attempts",
+    "jobs",
+    "evidence",
+    "review",
+    "status",
+    "last_run",
+    "initial_scope",
+    "region_order",
+    "survey_inventory",
+    "membership_rechecks",
+    "initial_plan_id",
+    "applied_plans",
+    "effective_collection_limits",
+    "candidate_resolutions",
+    "collection_schedule",
+    "independent_place_checks"
+  ],
+  "request_count": 0,
+  "jobs_pages_and_attempts_preserved": true,
+  "regional_progress_unchanged": true
+}

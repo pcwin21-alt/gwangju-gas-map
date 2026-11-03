@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-11-04T08:24:22+09:00",
+  "scope": "Bounded official information-page research for additional independent merchant sources; no merchant-search query submitted",
+  "sources": [
+    {
+      "url": "https://www.bccard.com/app/card/ContentsLinkActn.do?pgm_id=ind0797",
+      "kind": "Official BC Onnuri prepaid/electronic product information",
+      "finding": "Product and use guidance observed; no independently verified modern digital-Onnuri merchant dataset adopted from this page. Prepaid and other methods are not inferred interchangeable."
+    },
+    {
+      "url": "https://m.bccard.com/app/mobileweb/goConMer.do",
+      "kind": "Official BC merchant performance-eligibility information",
+      "finding": "This surface concerns card spending/performance eligibility; it is not accepted as proof of Onnuri registration."
+    },
+    {
+      "url": "https://www.shinhancard.com/mob/MOBFM204N/MOBFM204R02.shc",
+      "kind": "Indexed official Shinhan general/point merchant finder",
+      "finding": "General merchant and MyShinhanPoint labels observed; not accepted as Onnuri-specific membership. No merchant query sent."
+    },
+    {
+      "url": "https://m.kakaobank.com/Notices/view/18855",
+      "kind": "Official KakaoBank digital-Onnuri guidance dated 2026-05-08",
+      "finding": "Guidance links to the existing operator finder; it does not establish an independent merchant list. The blocked operator endpoint was not retried."
+    }
+  ],
+  "official_searches": [
+    "BC Onnuri merchant finder",
+    "Shinhan Onnuri merchant finder, official-domain search",
+    "Samsung Onnuri merchant finder, official-domain search"
+  ],
+  "search_limit": "Failure to locate a verified independent Onnuri finder in these bounded results does not prove no such service exists.",
+  "new_collection_sources_added": 0,
+  "provider_merchant_queries_sent": 0,
+  "new_membership_confirmations": 0,
+  "source_limits_or_blocked_statuses_changed": false,
+  "decision": "Retain as source-research notes. Only add a separately verified public Onnuri-specific source through the managed collector with explicit caps and issuer scope."
+}
