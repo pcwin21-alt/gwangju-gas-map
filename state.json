@@ -10650,8 +10650,8 @@
   "summary": {
     "status": "running",
     "jobs_total": 236,
-    "jobs_done": 46,
-    "jobs_remaining": 190,
+    "jobs_done": 50,
+    "jobs_remaining": 186,
     "review_records": 21,
     "evidence_records": 24,
     "source_gaps": 90,
@@ -10667,7 +10667,7 @@
         "region": "전남",
         "status": "collecting",
         "jobs_total": 52,
-        "jobs_remaining": 6,
+        "jobs_remaining": 2,
         "jobs_needing_review": 0,
         "source_gaps": 8,
         "review_records": 7,
@@ -11056,7 +11056,7 @@
         "interval_seconds": 180,
         "stage": "promoted",
         "clean_since": 1793734374.0146263,
-        "valid_responses_in_clean_window": 0,
+        "valid_responses_in_clean_window": 4,
         "earliest_review_at": 1793907174.0146263
       },
       "datagov": {
@@ -11074,16 +11074,18 @@
     },
     "collection_schedule": {
       "minimum_run_interval_seconds": 10800,
-      "last_collection_started_at": 1793736845.3973277,
-      "next_allowed_at": 1793747645.3973277,
+      "last_collection_started_at": 1793747689.7425997,
+      "next_allowed_at": 1793758489.7425997,
       "waiting": true
     }
   },
   "last_run": {
-    "id": "64f24967ea4c4948b78c59c557a3c923",
-    "checked_at": "2026-11-04T05:19:17+09:00",
-    "requests": 0,
-    "request_purposes": {}
+    "id": "a13266130d034aa0b524a55f618ed2c9",
+    "checked_at": "2026-11-04T08:24:17+09:00",
+    "requests": 4,
+    "request_purposes": {
+      "full_inventory_identity_followup": 4
+    }
   },
   "initial_scope": "finite cross-source fuel registration candidates, Jeonnam first and Seoul last; not a geographic census",
   "region_order": [
@@ -24554,7 +24556,7 @@
       "interval_seconds": 180,
       "stage": "promoted",
       "clean_since": 1793734374.0146263,
-      "valid_responses_in_clean_window": 0,
+      "valid_responses_in_clean_window": 4,
       "earliest_review_at": 1793907174.0146263
     },
     "datagov": {
@@ -25206,8 +25208,8 @@
   },
   "collection_schedule": {
     "minimum_run_interval_seconds": 10800,
-    "last_collection_started_at": 1793736845.3973277,
-    "next_allowed_at": 1793747645.3973277,
+    "last_collection_started_at": 1793747689.7425997,
+    "next_allowed_at": 1793758489.7425997,
     "waiting": true
   },
   "independent_place_checks": {
