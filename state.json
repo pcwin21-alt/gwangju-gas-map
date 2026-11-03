@@ -34,7 +34,7 @@
       "interval_seconds": 180,
       "url": "https://developers.kakao.com/docs/ko/local/dev-guide#search-by-keyword",
       "scope": "One named public business identity via installed kakao-map skill relay; no bulk indexing, membership inference, blocked-source retry or host rotation",
-      "next_allowed_at": 1793726185.4152296
+      "next_allowed_at": 1793726187.6988142
     }
   },
   "attempts": [
@@ -1183,7 +1183,7 @@
       "job_id": "90ee175ab2efcb026a6a14b5",
       "source": "kakao_local",
       "at": 1793726005.4152296,
-      "status": "reserved",
+      "status": "done",
       "run_id": "3a76051fb35a409eae987003621d71c9",
       "request": {
         "method": "GET",
@@ -1194,7 +1194,12 @@
           "size": 15,
           "sort": "accuracy"
         }
-      }
+      },
+      "request_started_at": 1793726007.1123576,
+      "network_duration_seconds": 0.5862469673156738,
+      "http_status": 200,
+      "response_sha256": "95063f8eabb9e1ce7da2fff891e83b25a15305bbeccc0b24456343860d5eb91b",
+      "finished_at": 1793726007.6988027
     }
   ],
   "jobs": [
@@ -7551,10 +7556,12 @@
       "scope": "Inspect independent place category/full address/phone against already saved KB ID 000000034595536; never auto-confirm membership, relocate or merge a station.",
       "logical_key": "90ee175ab2efcb026a6a14b5",
       "id": "90ee175ab2efcb026a6a14b5",
-      "status": "pending",
+      "status": "done",
       "attempts": 1,
       "page": 1,
-      "observed_ids": []
+      "observed_ids": [],
+      "result": "independent_identity_observations_saved",
+      "last_observed_at": "2026-11-04T02:13:27+09:00"
     }
   ],
   "evidence": [
@@ -24408,5 +24415,50 @@
     "last_collection_started_at": 1793714819.3262494,
     "next_allowed_at": 1793725619.3262494,
     "waiting": true
+  },
+  "independent_place_checks": {
+    "90ee175ab2efcb026a6a14b5": {
+      "checked_at": "2026-11-04T02:13:27+09:00",
+      "source": "kakao_local",
+      "source_url": "https://developers.kakao.com/docs/ko/local/dev-guide#search-by-keyword",
+      "query": "나주 남고문주유소",
+      "payload": {
+        "documents": [
+          {
+            "address_name": "전남광주통합특별시 나주시 남외동 41",
+            "category_group_code": "OL7",
+            "category_group_name": "주유소,충전소",
+            "category_name": "교통,수송 > 자동차 > 주유,가스 > 주유소 > SK주유소",
+            "distance": "",
+            "id": "8247983",
+            "phone": "061-337-4451",
+            "place_name": "남고문셀프주유소",
+            "place_url": "http://place.map.kakao.com/8247983",
+            "road_address_name": "전남광주통합특별시 나주시 남고문로 72",
+            "x": "126.71870243056291",
+            "y": "35.02872024118589"
+          }
+        ],
+        "meta": {
+          "is_end": true,
+          "pageable_count": 1,
+          "same_name": {
+            "keyword": "남고문주유소",
+            "region": [],
+            "selected_region": "전남광주 나주시"
+          },
+          "total_count": 1
+        },
+        "proxy": {
+          "name": "k-skill-proxy",
+          "cache": {
+            "hit": false,
+            "ttl_ms": 300000
+          },
+          "requested_at": "2026-11-03T17:13:27.589Z"
+        }
+      },
+      "scope": "one named first-page identity observation; not membership or a complete area search"
+    }
   }
 }
