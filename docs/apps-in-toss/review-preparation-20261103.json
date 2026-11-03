@@ -1,10 +1,10 @@
 {
-  "preparedAt": "2026-11-03T13:54:33.770482+09:00",
+  "preparedAt": "2026-11-03T14:12:40.087248+09:00",
   "status": "final_local_check_complete_external_gates_pending",
   "appName": "onnuri-fuel-map",
   "workspaceId": "105239",
   "consoleUrl": "https://apps-in-toss.toss.im/workspace/105239/mini-app/onnuri-fuel-map/app-build",
-  "sourceCommit": "fa8c949",
+  "sourceCommit": "8a93bf0",
   "readyForSubmission": false,
   "bundleUploadedThisRun": false,
   "reviewSubmittedThisRun": false,
@@ -32,7 +32,7 @@
   "files": {
     "artifact-audit.json": {
       "bytes": 1422,
-      "sha256": "f0034e7c566766e80d35e27bcb17916e1386ea605de37226b354abb26593f9cd"
+      "sha256": "92456a8687455309bea066375d60b0bb773b5f5a9aeac518bbb17a611b9c7d27"
     },
     "logo-600.png": {
       "bytes": 14747,
@@ -43,8 +43,8 @@
       "sha256": "a38a6e5ea7e41d0cfab8d6c238a50d473258bddeaed11c4ac4458a8d428955df"
     },
     "onnuri-fuel-map.ait": {
-      "bytes": 144820,
-      "sha256": "0d1452d2aec2532120e7a3a6d699a9ff509bc1aef7e703c07ae31f9da78acc20"
+      "bytes": 144867,
+      "sha256": "e1f72f65b654b4b5bc2bc7430261c5614a824697d4c85d91a8dc0b85faf63c7f"
     },
     "START_HERE.md": {
       "bytes": 15287,
@@ -52,7 +52,16 @@
     },
     "test-build-manifest.json": {
       "bytes": 6277,
-      "sha256": "023f700c72cd2853909ff2c896854f043c13894701459e3dd39619ffda4f4fa5"
+      "sha256": "9a7f267568487492fb65d9eed22c0cd8a4a3fd71d8b13b64ead010714a8e461a"
     }
+  },
+  "sourceCodeCommit": "fa8c949",
+  "dataOnlyRefresh": {
+    "publicationCommit": "8a93bf0",
+    "existingIssuerChecksRefreshed": 2,
+    "newStations": 0,
+    "webAndTossUiCodeChanged": false,
+    "deviceTests": "not_run",
+    "previousLocalUiChecks": "unchanged platform code; device certification still pending"
   }
 }

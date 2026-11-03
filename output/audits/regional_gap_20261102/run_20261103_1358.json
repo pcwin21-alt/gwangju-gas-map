@@ -1,0 +1,133 @@
+{
+  "checked_at": "2026-11-03T14:10:18+09:00",
+  "region": "전남",
+  "collection_run": "https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41581130188",
+  "publication_only_run": "https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41582054311",
+  "source_requests_for_manual_identity_review": 0,
+  "requests": [
+    {
+      "id": "bf038cf3007d432a846d383e",
+      "job_id": "cc02bbcd0f2ce341e0d3ed3c",
+      "source": "kbcard",
+      "at": 1793681920.018757,
+      "finished_at": 1793681922.485599,
+      "status": "done",
+      "http_status": 200
+    },
+    {
+      "id": "f0c814be34b74f59a196a33c",
+      "job_id": "2c0ae8db0c7828f8bbe5e0d1",
+      "source": "kbcard",
+      "at": 1793682102.4857912,
+      "finished_at": 1793682104.8492143,
+      "status": "done",
+      "http_status": 200
+    },
+    {
+      "id": "94fc2f829cb44fcd8b97dc65",
+      "job_id": "b232bd4b131f52e779fe25d8",
+      "source": "kbcard",
+      "at": 1793682284.849396,
+      "finished_at": 1793682287.0562513,
+      "status": "done",
+      "http_status": 200
+    }
+  ],
+  "request_purposes": {
+    "annual_reverse_discovery": 1,
+    "post_renewal_recheck": 2
+  },
+  "new_station_additions": 0,
+  "issuer_reconfirmed_existing_records": [
+    {
+      "id": "onnuri:kb:000000055922645",
+      "name": "(주)대창석유 (대인)",
+      "old": null,
+      "new": {
+        "kbcard": {
+          "status": "confirmed_in_issuer_scope",
+          "issuer": "kbcard",
+          "checked_at": "2026-11-03T14:01:44+09:00",
+          "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+          "bank_id": "000000055922645",
+          "other_payment_methods": "not_reverified",
+          "identity_review_evidence": "https://github.com/pcwin21-alt/gwangju-gas-map/blob/04059f2/output/audits/regional_gap_20261102/curated_rechecks_20261103_1405.json"
+        }
+      }
+    },
+    {
+      "id": "onnuri:kb:000000055922220",
+      "name": "(주)대창석유 (태인)",
+      "old": null,
+      "new": {
+        "kbcard": {
+          "status": "confirmed_in_issuer_scope",
+          "issuer": "kbcard",
+          "checked_at": "2026-11-03T14:04:46+09:00",
+          "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+          "bank_id": "000000055922220",
+          "other_payment_methods": "not_reverified"
+        }
+      }
+    }
+  ],
+  "regional_progress": {
+    "region": "전남",
+    "status": "collecting",
+    "jobs_total": 43,
+    "jobs_remaining": 6,
+    "jobs_needing_review": 0,
+    "source_gaps": 24,
+    "review_records": 10,
+    "inventory_reviewed": false,
+    "mapped_records_to_recheck": 28,
+    "membership_check_status": {
+      "confirmed_in_issuer_scope": 23,
+      "needs_review_not_found": 3,
+      "pending": 2
+    },
+    "unresolved_annual_identities": 21,
+    "missing_standard_checks": [
+      "market_coverage",
+      "membership_rechecks",
+      "annual_identities"
+    ],
+    "standard_checks_complete": false,
+    "scope": "issuer-scoped rechecks; paper/QR/operator freshness not inferred"
+  },
+  "effective_limits": {
+    "onnuri": {
+      "requests_per_24h": 24,
+      "requests_per_run": 0,
+      "interval_seconds": 180,
+      "stage": "stopped"
+    },
+    "kbcard": {
+      "requests_per_24h": 24,
+      "requests_per_run": 3,
+      "interval_seconds": 180,
+      "stage": "pilot",
+      "clean_since": 1793556784.2048566,
+      "valid_responses_in_clean_window": 24,
+      "earliest_review_at": 1793729584.2048566
+    },
+    "datagov": {
+      "requests_per_24h": 20,
+      "requests_per_run": 3,
+      "interval_seconds": 180,
+      "stage": "fixed"
+    }
+  },
+  "operator_paper_QR_dates_and_other_business_fields_unchanged": true,
+  "published": {
+    "status": 200,
+    "url": "https://pcwin21-alt.github.io/gwangju-gas-map/?v=8a93bf0",
+    "main_commit": "8a93bf028518af1157b107252ae226346d3ff77b",
+    "html_sha256": "e5c92b30c612d0a6366adde762105f170cc82f13c78fd08b54d4da8c0f65fbc9",
+    "embedded_stations_match_main": true,
+    "all_records": 220,
+    "onnuri_tags": 184
+  },
+  "remaining": "Existing 2 pending issuer queries plus 3 not-matched reviews, 21 annual identities and market boundaries/member inventory. Jeonbuk and subsequent regions not queried.",
+  "regional_completion": false
+}
