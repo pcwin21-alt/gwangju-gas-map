@@ -1,0 +1,509 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-11-03T23:15:09+09:00",
+  "region": "전남",
+  "collection_run": "https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41650474177",
+  "new_source_requests_for_manual_review": 0,
+  "namchang_recheck": {
+    "station_id": "onnuri:kb:000000055922616",
+    "current_issuer_checked_at": "2026-11-03T23:07:02+09:00",
+    "current_response_file": "responses/a5b5a121c14a4894b058d3e6.json",
+    "current_response_file_sha256": "e5a19f5cd909ed23856e8c871829ea9c01513f2ce3c05c1a89245c2c29cbf62b",
+    "wire_response_sha256": "023db2023407a3d43e6adae602db58640a74e8edd77b4cad812cfd101cc92d69",
+    "current_bank_record": {
+      "location": {
+        "lat": "34.4156236591",
+        "lng": "126.6304928486"
+      },
+      "content": {
+        "tel": "061)533-6760",
+        "title": "(주)대창석유 (남창)",
+        "category": "주유소",
+        "address": "전남 해남군 북평면 ",
+        "distance": "999",
+        "kindGb": "0",
+        "onNuliGb": "1",
+        "tradiGb": "0",
+        "liveHoodGb": "1",
+        "sangsaengGb": "1",
+        "franchiseNo": "000000055922616",
+        "highOilGb": "1",
+        "seoulGb": "0"
+      }
+    },
+    "prior_independent_identity": {
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "checked_at": "2026-10-27T16:50:06+09:00",
+      "identity_review": "same_premise_confirmed",
+      "bank_record": {
+        "location": {
+          "lat": "34.4156236591",
+          "lng": "126.6304928486"
+        },
+        "content": {
+          "tel": "061)533-6760",
+          "title": "(주)대창석유 (남창)",
+          "category": "주유소",
+          "address": "전남 해남군 북평면 ",
+          "distance": "104473",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000055922616",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-10-27T16:50:06+09:00",
+        "query_address": [
+          "전남",
+          "해남군",
+          "북평면"
+        ],
+        "coordinate_status": "present_unverified"
+      },
+      "registry_record": {
+        "CONM_NM": "(주)대창석유 직영 남창주유소",
+        "CTPV_NM": "전남광주통합특별시",
+        "SGG_NM": "해남군",
+        "LCTN_ROAD_NM": "전남광주통합특별시 해남군 북평면 현산북평로 1139",
+        "LCTN_LOTNO_ADDR": "전남광주통합특별시 해남군 북평면 남창리 845-2",
+        "LAT": "34.40867856",
+        "LOT": "126.6249243",
+        "TELNO": "061-533-6760",
+        "DATA_CRTR_YMD": "2026-07-01"
+      },
+      "registry_source_url": "https://www.data.go.kr/data/15129441/standard.do",
+      "opinet_record": {
+        "UNI_ID": "A0020659",
+        "POLL_DIV_CO": "SKE",
+        "GPOLL_DIV_CO": "   ",
+        "OS_NM": "(주)대창석유직영 남창주유소",
+        "VAN_ADR": "전남광주통합특별시 해남군 북평면 남창리 845-2",
+        "NEW_ADR": "전남광주통합특별시 해남군 북평면 현산북평로 1139",
+        "TEL": "061-533-6760",
+        "SIGUNCD": "2029",
+        "LPG_YN": "N",
+        "MAINT_YN": "N",
+        "CAR_WASH_YN": "N",
+        "KPETRO_YN": "N",
+        "CVS_YN": "N",
+        "GOOD_YN": "N",
+        "GOOD_YN5": "N",
+        "GIS_X_COOR": 273778.0,
+        "GIS_Y_COOR": 202085.0,
+        "OIL_PRICE": [
+          {
+            "PRODCD": "B027",
+            "PRICE": 1899,
+            "TRADE_DT": "20261021",
+            "TRADE_TM": "133520"
+          },
+          {
+            "PRODCD": "D047",
+            "PRICE": 1889,
+            "TRADE_DT": "20261021",
+            "TRADE_TM": "133612"
+          }
+        ]
+      },
+      "opinet_source_url": "https://www.opinet.co.kr",
+      "opinet_checked_at": "2026-10-27T16:54:03+09:00",
+      "annual_candidate_ids": []
+    },
+    "validated_existing_station": {
+      "id": "onnuri:kb:000000055922616",
+      "name": "(주)대창석유 (남창)",
+      "address": "전라남도 해남군 북평면 현산북평로 1139",
+      "lat": 34.40867856,
+      "lng": 126.6249243,
+      "payment_types": [
+        "onnuri"
+      ],
+      "source": [
+        "kb_onnuri"
+      ],
+      "aliases": [
+        "(주)대창석유 직영 남창주유소",
+        "(주)대창석유직영 남창주유소",
+        "남창주유소"
+      ],
+      "fuel_kind": "liquid",
+      "route_eligible": true,
+      "region": "전남",
+      "onnuri_methods": {
+        "paper": null,
+        "card": true,
+        "qr": null,
+        "digital": true
+      },
+      "verification": {
+        "onnuri": {
+          "status": "confirmed",
+          "checked_at": "2026-11-03T23:07:02+09:00",
+          "source_date": null,
+          "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+          "source_id": "kb:000000055922616",
+          "source_ids": [
+            "kb:000000055922616"
+          ],
+          "provider": "kbcard",
+          "issuer_scope": [
+            "KB국민카드"
+          ],
+          "match_basis": "bank_onnuri_flag_reviewed_name_phone_registry_opinet_address_coordinates",
+          "candidate_ids": [],
+          "note": "KB국민카드 온누리 사용처 조회 기준. 카드사 반영 지연 가능. 지류·QR·다른 카드사는 별도 확인."
+        }
+      },
+      "location_evidence": {
+        "source_type": "municipal_registry",
+        "source_url": "https://www.data.go.kr/data/15129441/standard.do",
+        "source_date": "2026-07-01",
+        "source_id": "(주)대창석유 직영 남창주유소",
+        "coordinate_source": "municipal_registry",
+        "identity_source_url": "https://www.opinet.co.kr",
+        "opinet_id": "A0020659",
+        "opinet_distance_m": 4.3,
+        "note": "KB 상호·전화·주소권역과 지자체·오피넷 동일성 확인. 오류가 있는 KB 좌표는 사용하지 않음."
+      }
+    },
+    "map_premise_distance_m": 0.0,
+    "check": {
+      "status": "confirmed_in_issuer_scope",
+      "issuer": "kbcard",
+      "checked_at": "2026-11-03T23:07:02+09:00",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "bank_id": "000000055922616",
+      "other_payment_methods": "not_reverified",
+      "identity_review_evidence": "output/audits/regional_gap_20261102/namchang_and_market_review_20261103_2310.json",
+      "match_basis": "bank_onnuri_flag_reviewed_name_phone_registry_opinet_address_coordinates",
+      "map_location_changed": false
+    },
+    "new_map_station": false,
+    "operator_paper_qr_dates_changed": false
+  },
+  "market_region_resolutions": [
+    {
+      "candidate_id": "badaf1066867bde046275626",
+      "resolution": {
+        "status": "region_identified",
+        "source_kind": "archived_operator_market",
+        "source_url": "https://www.onnuri.gift/place",
+        "annual_row": {
+          "가맹점명": "청우에너지(주)",
+          "소속 시장명(또는 상점가)": "매월동상인회 골목형상점가",
+          "소재지": "전남광주",
+          "취급품목": "유류",
+          "지류형 가맹 여부": "Y",
+          "디지털형 가맹 여부": "Y",
+          "가맹 등록년도": "2025"
+        },
+        "evidence": [
+          "output/audits/regional_gap_20261102/namchang_and_market_review_20261103_2310.json"
+        ],
+        "checked_at": "2026-11-03T23:15:09+09:00",
+        "source_checked_at": "2026-10-25T10:51:11+09:00",
+        "market_records": [
+          {
+            "frCd": "05273200024",
+            "frcsNm": "(유)매월주유소",
+            "frcsAddr": "광주광역시 서구 회재로 845 (매월동)",
+            "mrktNm": "매월동상인회 골목형상점가",
+            "placeTypeCd": "08",
+            "placeTypeNm": "기타소매업",
+            "addrCd": "12240",
+            "latitude": 35.119808,
+            "longitude": 126.858163,
+            "paperYn": "Y",
+            "cardYn": "Y",
+            "qrYn": "Y"
+          },
+          {
+            "frCd": "05273200078",
+            "frcsNm": "대성석유",
+            "frcsAddr": "광주광역시 서구 화개길 24-3 (매월동)",
+            "mrktNm": "매월동상인회 골목형상점가",
+            "placeTypeCd": "08",
+            "placeTypeNm": "기타소매업",
+            "addrCd": "12240",
+            "latitude": 35.120688,
+            "longitude": 126.856856,
+            "paperYn": "Y",
+            "cardYn": "Y",
+            "qrYn": "Y"
+          }
+        ],
+        "scope": "province_only_no_candidate_address_fuel_identity_or_membership_confirmation"
+      },
+      "witness_sources": [
+        {
+          "source_file": "output/onnuri_live_snapshot.json",
+          "source_checked_at": "2026-10-25T10:51:11+09:00"
+        },
+        {
+          "source_file": "output/onnuri_live_snapshot.json",
+          "source_checked_at": "2026-10-25T10:51:11+09:00"
+        }
+      ]
+    },
+    {
+      "candidate_id": "76ce41be9eed4c5a2696b79a",
+      "resolution": {
+        "status": "region_identified",
+        "source_kind": "archived_operator_market",
+        "source_url": "https://www.onnuri.gift/place",
+        "annual_row": {
+          "가맹점명": "서부에너지",
+          "소속 시장명(또는 상점가)": "맛조이상인회 골목형상점가",
+          "소재지": "전남광주",
+          "취급품목": "LPG",
+          "지류형 가맹 여부": "Y",
+          "디지털형 가맹 여부": "Y",
+          "가맹 등록년도": "2025"
+        },
+        "evidence": [
+          "output/audits/regional_gap_20261102/namchang_and_market_review_20261103_2310.json"
+        ],
+        "checked_at": "2026-11-03T23:15:09+09:00",
+        "source_checked_at": "2026-10-25T10:25:47+09:00",
+        "market_records": [
+          {
+            "frCd": "05238200025",
+            "frcsNm": "힐링산야초 ",
+            "frcsAddr": "광주광역시 서구 내방로 316 (내방동)",
+            "mrktNm": "맛조이상인회 골목형상점가",
+            "placeTypeCd": "08",
+            "placeTypeNm": "기타소매업",
+            "addrCd": "12240",
+            "latitude": 35.157391,
+            "longitude": 126.875002,
+            "paperYn": "Y",
+            "cardYn": "Y",
+            "qrYn": "Y"
+          },
+          {
+            "frCd": "05238200049",
+            "frcsNm": "내방체육관",
+            "frcsAddr": "광주광역시 서구 화운로175번길 22 (내방동)",
+            "mrktNm": "맛조이상인회 골목형상점가",
+            "placeTypeCd": "09",
+            "placeTypeNm": "근린상권서비스",
+            "addrCd": "12240",
+            "latitude": 35.154736,
+            "longitude": 126.874446,
+            "paperYn": "Y",
+            "cardYn": "Y",
+            "qrYn": "Y"
+          }
+        ],
+        "scope": "province_only_no_candidate_address_fuel_identity_or_membership_confirmation"
+      },
+      "witness_sources": [
+        {
+          "source_file": "output/market_region_queries_20261025.json",
+          "source_checked_at": "2026-10-25T10:25:47+09:00"
+        },
+        {
+          "source_file": "output/market_region_queries_20261025.json",
+          "source_checked_at": "2026-10-25T10:25:47+09:00"
+        }
+      ]
+    },
+    {
+      "candidate_id": "cf3ff4625254ab01c09918eb",
+      "resolution": {
+        "status": "region_identified",
+        "source_kind": "archived_operator_market",
+        "source_url": "https://www.onnuri.gift/place",
+        "annual_row": {
+          "가맹점명": "(주)일원",
+          "소속 시장명(또는 상점가)": "매월동상인회 골목형상점가",
+          "소재지": "전남광주",
+          "취급품목": "골프연습장/그 외 기타 종합 소매업",
+          "지류형 가맹 여부": "Y",
+          "디지털형 가맹 여부": "Y",
+          "가맹 등록년도": "2026"
+        },
+        "evidence": [
+          "output/audits/regional_gap_20261102/namchang_and_market_review_20261103_2310.json"
+        ],
+        "checked_at": "2026-11-03T23:15:09+09:00",
+        "source_checked_at": "2026-10-25T10:51:11+09:00",
+        "market_records": [
+          {
+            "frCd": "05273200024",
+            "frcsNm": "(유)매월주유소",
+            "frcsAddr": "광주광역시 서구 회재로 845 (매월동)",
+            "mrktNm": "매월동상인회 골목형상점가",
+            "placeTypeCd": "08",
+            "placeTypeNm": "기타소매업",
+            "addrCd": "12240",
+            "latitude": 35.119808,
+            "longitude": 126.858163,
+            "paperYn": "Y",
+            "cardYn": "Y",
+            "qrYn": "Y"
+          },
+          {
+            "frCd": "05273200078",
+            "frcsNm": "대성석유",
+            "frcsAddr": "광주광역시 서구 화개길 24-3 (매월동)",
+            "mrktNm": "매월동상인회 골목형상점가",
+            "placeTypeCd": "08",
+            "placeTypeNm": "기타소매업",
+            "addrCd": "12240",
+            "latitude": 35.120688,
+            "longitude": 126.856856,
+            "paperYn": "Y",
+            "cardYn": "Y",
+            "qrYn": "Y"
+          }
+        ],
+        "scope": "province_only_no_candidate_address_fuel_identity_or_membership_confirmation"
+      },
+      "witness_sources": [
+        {
+          "source_file": "output/onnuri_live_snapshot.json",
+          "source_checked_at": "2026-10-25T10:51:11+09:00"
+        },
+        {
+          "source_file": "output/onnuri_live_snapshot.json",
+          "source_checked_at": "2026-10-25T10:51:11+09:00"
+        }
+      ]
+    }
+  ],
+  "all_unresolved_jeonnam_annual_candidates_screened": [
+    {
+      "candidate_id": "8dedc9fce3baf0dc2d230a00",
+      "name": "현대참기름",
+      "market": "여수교동시장",
+      "archived_witness_count": 0,
+      "regions_after_guard": [
+        "전남",
+        "광주"
+      ]
+    },
+    {
+      "candidate_id": "94ad0bf79e2ec65ee51b20fc",
+      "name": "현대참기름",
+      "market": "황룡시장",
+      "archived_witness_count": 0,
+      "regions_after_guard": [
+        "전남",
+        "광주"
+      ]
+    },
+    {
+      "candidate_id": "badaf1066867bde046275626",
+      "name": "청우에너지(주)",
+      "market": "매월동상인회 골목형상점가",
+      "archived_witness_count": 2,
+      "regions_after_guard": [
+        "광주"
+      ]
+    },
+    {
+      "candidate_id": "b7bc7ce3957efa25dcc2b305",
+      "name": "오케이",
+      "market": "첨단이웃사랑 골목형상점가",
+      "archived_witness_count": 1,
+      "regions_after_guard": [
+        "전남",
+        "광주"
+      ]
+    },
+    {
+      "candidate_id": "e061fa9f9442e97f096c9f93",
+      "name": "세븐",
+      "market": "광주송정역세권 상권활성화구역",
+      "archived_witness_count": 1,
+      "regions_after_guard": [
+        "전남",
+        "광주"
+      ]
+    },
+    {
+      "candidate_id": "4aa645e064d146a5398a8518",
+      "name": "성산",
+      "market": "동구청앞 골목형상점가",
+      "archived_witness_count": 0,
+      "regions_after_guard": [
+        "전남",
+        "광주"
+      ]
+    },
+    {
+      "candidate_id": "76ce41be9eed4c5a2696b79a",
+      "name": "서부에너지",
+      "market": "맛조이상인회 골목형상점가",
+      "archived_witness_count": 2,
+      "regions_after_guard": [
+        "광주"
+      ]
+    },
+    {
+      "candidate_id": "84933c3564f2347528fdf67e",
+      "name": "나이스",
+      "market": "쌍촌역상인회 골목형상점가",
+      "archived_witness_count": 0,
+      "regions_after_guard": [
+        "전남",
+        "광주"
+      ]
+    },
+    {
+      "candidate_id": "cf3ff4625254ab01c09918eb",
+      "name": "(주)일원",
+      "market": "매월동상인회 골목형상점가",
+      "archived_witness_count": 2,
+      "regions_after_guard": [
+        "광주"
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "path": "output/onnuri_live_snapshot.json",
+      "sha256": "af6866d59fd471cbe26ed0cefa112ca046c4e00641479ba45b5f3082e39d55aa"
+    },
+    {
+      "path": "output/market_region_queries_20261025.json",
+      "sha256": "fb8e1089b2abc2bdeb5b900a325c2dfd01da40cbf83de4922875ac47945abac3"
+    },
+    {
+      "path": "output/audits/regional_gap_20261102/curated_rechecks_20261103_1712.json",
+      "sha256": "0f72d0b20333aafe2fc91bc397ffce8e39ed613e341d2a9f0dd1b645da4409be"
+    }
+  ],
+  "projected_progress": [
+    {
+      "region": "전남",
+      "status": "needs_review",
+      "jobs_total": 44,
+      "jobs_remaining": 0,
+      "jobs_needing_review": 0,
+      "source_gaps": 9,
+      "review_records": 11,
+      "inventory_reviewed": false,
+      "mapped_records_to_recheck": 28,
+      "membership_check_status": {
+        "confirmed_in_issuer_scope": 26,
+        "needs_review_not_found": 2
+      },
+      "unresolved_annual_identities": 6,
+      "missing_standard_checks": [
+        "market_coverage",
+        "membership_rechecks",
+        "annual_identities"
+      ],
+      "standard_checks_complete": false,
+      "scope": "issuer-scoped rechecks; paper/QR/operator freshness not inferred"
+    }
+  ],
+  "gwangju_unresolved_after": 21,
+  "raw_annual_rows_and_source_gaps_preserved": true,
+  "scope": "Market witnesses identify province only. The annual businesses are not confirmed fuel premises, linked to witness shops, excluded or added to the map. No Gwangju source request or operator retry."
+}

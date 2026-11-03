@@ -15,12 +15,12 @@ try:
     from nationwide import name_key, region, row_id, non_vehicle, valid_coords
     from discover_address_candidates import address_key
     from supplemental_onnuri import meters
-    from market_regions import market_key
+    from market_regions import market_key, resolve_pending_regions
 except ModuleNotFoundError:
     from scripts.nationwide import name_key, region, row_id, non_vehicle, valid_coords
     from scripts.discover_address_candidates import address_key
     from scripts.supplemental_onnuri import meters
-    from scripts.market_regions import market_key
+    from scripts.market_regions import market_key, resolve_pending_regions
 
 ROOT = Path(__file__).resolve().parents[1]
 RECHECK_AFTER = '2026-11-01T00:00:00+09:00'
@@ -58,14 +58,14 @@ def after_cutoff(value, cutoff=RECHECK_AFTER):
 def candidate_regions(candidate, resolution=None):
     """Locate one ambiguous annual identity without certifying fuel or membership.
 
-    Only a separately reviewed exact name/market record may narrow the combined
-    regional label. The candidate stays unresolved in its supported region.
+    Exact-premise evidence or the existing consistent-market rule may narrow
+    the combined label. Neither certifies fuel identity or current membership.
     """
     possible = candidate['possible_regions']
     resolution = resolution or {}
     if set(possible) != {'전남', '광주'} or resolution.get('status') != 'region_identified':
         return possible
-    if resolution.get('source_kind') != 'archived_operator_place' or not resolution.get('evidence'):
+    if resolution.get('source_kind') not in ('archived_operator_place', 'archived_operator_market') or not resolution.get('evidence'):
         return possible
     if resolution.get('annual_row') != candidate['row']:
         return possible
@@ -75,8 +75,29 @@ def candidate_regions(candidate, resolution=None):
             return possible
     except (KeyError, TypeError, ValueError):
         return possible
-    record = resolution.get('operator_record') or {}
     row = candidate['row']
+    if resolution['source_kind'] == 'archived_operator_market':
+        records = resolution.get('market_records')
+        if not market_key(row['소속 시장명(또는 상점가)']) or \
+                resolution.get('source_url') != 'https://www.onnuri.gift/place' or not isinstance(records, list) or len(records) < 2:
+            return possible
+        evidence = []
+        for record in records:
+            if not isinstance(record, dict) or not record.get('frCd') or not record.get('frcsNm') or \
+                    region(record.get('frcsAddr', '')) not in possible or \
+                    not valid_coords(record.get('latitude'), record.get('longitude')) or \
+                    market_key(record.get('mrktNm')) != market_key(row['소속 시장명(또는 상점가)']):
+                return possible
+            evidence.append({'market': record['mrktNm'], 'reference_address': record['frcsAddr'],
+                             'source_kind': 'official_place_search', 'source_id': record['frCd']})
+        if len({e['source_id'] for e in evidence}) < 2 or \
+                len({address_key(e['reference_address']) for e in evidence if address_key(e['reference_address'])}) < 2:
+            return possible
+        resolved = resolve_pending_regions([{'region': '전남광주', 'status': 'needs_review',
+                                             'market': row['소속 시장명(또는 상점가)']}], evidence)[0]
+        area = resolved['region']
+        return [area] if area in possible else possible
+    record = resolution.get('operator_record') or {}
     area = region(record.get('frcsAddr', ''))
     if not record.get('frCd') or area not in possible or not valid_coords(record.get('latitude'), record.get('longitude')):
         return possible

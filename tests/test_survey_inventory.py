@@ -214,6 +214,44 @@ class SurveyTests(unittest.TestCase):
         self.assertNotIn('issuer_checks', out['verification']['onnuri'])
         self.assertEqual(reached_regions(state), {self.area})
 
+    def market_region_state(self):
+        state, cid = self.regional_identity_state()
+        proof = state['candidate_resolutions'][cid]
+        record = proof.pop('operator_record')
+        record['frcsNm'] = '다른 상권 입점업소'
+        second = {**record, 'frCd': 'second-market-witness', 'frcsAddr': '광주광역시 북구 검증로 2'}
+        proof.update(source_kind='archived_operator_market', source_url='https://www.onnuri.gift/place',
+                     market_records=[record, second])
+        return state, cid
+
+    def test_market_region_evidence_keeps_business_identity_open_and_preserves_inputs(self):
+        state, cid = self.market_region_state()
+        before = copy.deepcopy(state)
+        jeonnam, gwangju = summarize(state)['regions']
+        self.assertEqual((jeonnam['unresolved_annual_identities'], jeonnam['source_gaps']), (0, 0))
+        self.assertEqual((gwangju['unresolved_annual_identities'], gwangju['source_gaps']), (1, 1))
+        self.assertFalse(jeonnam['standard_checks_complete'])
+        self.assertEqual(state['candidate_resolutions'][cid]['status'], 'region_identified')
+        for field in ('survey_inventory', 'source_gaps', 'candidate_resolutions', 'attempts', 'jobs', 'sources', 'evidence', 'membership_rechecks'):
+            self.assertEqual(state[field], before[field])
+
+    def test_market_region_requires_two_distinct_consistent_dated_official_records(self):
+        state, cid = self.market_region_state()
+        for field, value in [('source_url', 'https://example.test'), ('source_checked_at', '2026-10-25'),
+                             ('annual_row', {}), ('evidence', []), ('market_records', [])]:
+            with self.subTest(field=field):
+                changed = copy.deepcopy(state);changed['candidate_resolutions'][cid][field] = value
+                self.assertEqual(survey_progress(changed, '전남')['unresolved_annual_identities'], 1)
+        proof = state['candidate_resolutions'][cid]
+        variants = [proof['market_records'][:1], [proof['market_records'][0]] * 2]
+        for field, value in [('frCd', None), ('mrktNm', '다른시장'), ('latitude', None),
+                             ('frcsAddr', '전라남도 나주시 검증로 2'), ('frcsAddr', '광주광역시 북구 검증로 1')]:
+            records = copy.deepcopy(proof['market_records']);records[1][field] = value;variants.append(records)
+        for records in variants:
+            with self.subTest(records=records):
+                changed = copy.deepcopy(state);changed['candidate_resolutions'][cid]['market_records'] = records
+                self.assertEqual(survey_progress(changed, '전남')['unresolved_annual_identities'], 1)
+
     def test_neutral_or_conflicting_bank_category_is_retained_as_lead_not_promoted(self):
         for category in ('기타소매업', '근린상권서비스', '식당'):
             state, _ = self.state()
