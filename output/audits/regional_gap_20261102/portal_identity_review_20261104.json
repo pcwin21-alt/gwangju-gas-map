@@ -1,0 +1,30 @@
+{
+  "reviewed_at": "2026-11-04T05:08:33+09:00",
+  "region": "전남",
+  "method": "Two public search-engine calls, six queries; not direct provider membership requests or blocked-source retry",
+  "primary_candidate_member_list_found": false,
+  "annual_candidates_resolved": 0,
+  "sources": [
+    {
+      "url": "https://www.mokpo.go.kr/www/mokpo_news/press_release/report_material?idx=548867&mode=view",
+      "role": "2026-09-22 indexed official designation context; already in prior audit; no shop-level membership proof"
+    },
+    {
+      "url": "https://kaienpolice.tistory.com/entry/여수시-온누리상품권-가맹점",
+      "role": "Dated 2025 secondary table repeats existing exact-address/petroleum lead; not current official membership"
+    },
+    {
+      "url": "https://onnuri.ayo.pe.kr/onnuri/region/전남/여수시/교동",
+      "role": "Indexed secondary aggregator repeats a common market address for many stores, including 현대참기름; not accepted as an exact premise address"
+    },
+    {
+      "url": "https://market.moneydog.co.kr/markets/jeonnam/장성군/황룡시장",
+      "role": "Secondary market page repeats 현대참기름 edible-oil row; not an independent physical-premise identity"
+    },
+    {
+      "url": "https://park.ayo.pe.kr/onnuri/region/전남/장성군",
+      "role": "Secondary page uses common market address; no exact premise identity accepted"
+    }
+  ],
+  "scope": "No new current membership or physical coordinates adopted; no resolved/excluded flags from search snippets; one fixed managed named-place query remains queued."
+}

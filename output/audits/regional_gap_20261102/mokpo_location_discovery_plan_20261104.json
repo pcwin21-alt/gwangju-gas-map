@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-11-04T05:07:46+09:00",
+  "region": "전남",
+  "municipality": "목포시",
+  "purpose": "Incremental new discovery rather than only rechecking existing map records",
+  "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+  "source_date": "2026-06-30",
+  "source_archive_sha256": "57aa361544108ff4fc73334f87d2ced61e41fe8638dd70bcd842930f865d2386",
+  "index_file_sha256": "2f23391dc079f52dae1ecf9e562330d83f365cfb41e70c47ebfa690514edb122",
+  "municipal_context_sources": [
+    "https://www.mokpo.go.kr/www/mokpo_news/press_release/report_material?idx=548867&mode=view",
+    "https://www.mokpo.go.kr/www/mokpo_news/notification/public_notice?mode=view&idx=55083",
+    "https://www.mokpo.go.kr/www/mokpo_news/notification/public_notice?mode=view&idx=55187"
+  ],
+  "selection": "Three liquid-fuel premises on roads appearing in current designation anchors, and three LPG premises to diversify discovery. Same-road context is priority only; no distance, boundary inclusion or registration inferred. This is an explicit six-premise pilot, not all Mokpo fuel businesses.",
+  "jobs": [
+    {
+      "kind": "kb_search",
+      "source": "kbcard",
+      "region": "전남",
+      "purpose": "full_inventory_identity_followup",
+      "discovery_only": true,
+      "target": {
+        "name": "광은",
+        "keyword": "",
+        "lat": 34.8034893590187,
+        "lng": 126.426772417825,
+        "address": "전남광주통합특별시 목포시 비파로 54",
+        "coordinate_source_id": "MA010120220805516557"
+      },
+      "source_evidence": "output/audits/regional_gap_20261102/mokpo_location_discovery_plan_20261104.json",
+      "scope": "One unfiltered issuer lookup anchored at one independently recorded vehicle-fuel location. Road context does not establish market containment or Onnuri membership."
+    },
+    {
+      "kind": "kb_search",
+      "source": "kbcard",
+      "region": "전남",
+      "purpose": "full_inventory_identity_followup",
+      "discovery_only": true,
+      "target": {
+        "name": "씨오에쓰주",
+        "keyword": "",
+        "lat": 34.8023674260678,
+        "lng": 126.378183801191,
+        "address": "전남광주통합특별시 목포시 청호로 110-1",
+        "coordinate_source_id": "MA010120220807729541"
+      },
+      "source_evidence": "output/audits/regional_gap_20261102/mokpo_location_discovery_plan_20261104.json",
+      "scope": "One unfiltered issuer lookup anchored at one independently recorded vehicle-fuel location. Road context does not establish market containment or Onnuri membership."
+    },
+    {
+      "kind": "kb_search",
+      "source": "kbcard",
+      "region": "전남",
+      "purpose": "full_inventory_identity_followup",
+      "discovery_only": true,
+      "target": {
+        "name": "대성주유소",
+        "keyword": "",
+        "lat": 34.7983305634978,
+        "lng": 126.381994978302,
+        "address": "전남광주통합특별시 목포시 청호로 57",
+        "coordinate_source_id": "MA010120220807730889"
+      },
+      "source_evidence": "output/audits/regional_gap_20261102/mokpo_location_discovery_plan_20261104.json",
+      "scope": "One unfiltered issuer lookup anchored at one independently recorded vehicle-fuel location. Road context does not establish market containment or Onnuri membership."
+    },
+    {
+      "kind": "kb_search",
+      "source": "kbcard",
+      "region": "전남",
+      "purpose": "full_inventory_identity_followup",
+      "discovery_only": true,
+      "target": {
+        "name": "청호에너지충전소",
+        "keyword": "",
+        "lat": 34.8195530667249,
+        "lng": 126.384503480242,
+        "address": "전남광주통합특별시 목포시 고하대로 856",
+        "coordinate_source_id": "MA010120220807707950"
+      },
+      "source_evidence": "output/audits/regional_gap_20261102/mokpo_location_discovery_plan_20261104.json",
+      "scope": "One unfiltered issuer lookup anchored at one independently recorded vehicle-fuel location. Road context does not establish market containment or Onnuri membership."
+    },
+    {
+      "kind": "kb_search",
+      "source": "kbcard",
+      "region": "전남",
+      "purpose": "full_inventory_identity_followup",
+      "discovery_only": true,
+      "target": {
+        "name": "청호충전소",
+        "keyword": "",
+        "lat": 34.8201508368806,
+        "lng": 126.385067406292,
+        "address": "전남광주통합특별시 목포시 대양로 52",
+        "coordinate_source_id": "MA010120220807727669"
+      },
+      "source_evidence": "output/audits/regional_gap_20261102/mokpo_location_discovery_plan_20261104.json",
+      "scope": "One unfiltered issuer lookup anchored at one independently recorded vehicle-fuel location. Road context does not establish market containment or Onnuri membership."
+    },
+    {
+      "kind": "kb_search",
+      "source": "kbcard",
+      "region": "전남",
+      "purpose": "full_inventory_identity_followup",
+      "discovery_only": true,
+      "target": {
+        "name": "유정에너지",
+        "keyword": "",
+        "lat": 34.801232510524,
+        "lng": 126.412833285455,
+        "address": "전남광주통합특별시 목포시 백년대로 221",
+        "coordinate_source_id": "MA010120220807729682"
+      },
+      "source_evidence": "output/audits/regional_gap_20261102/mokpo_location_discovery_plan_20261104.json",
+      "scope": "One unfiltered issuer lookup anchored at one independently recorded vehicle-fuel location. Road context does not establish market containment or Onnuri membership."
+    }
+  ],
+  "commercial_records": [
+    {
+      "상가업소번호": "MA010120220805516557",
+      "상호명": "광은",
+      "지점명": "",
+      "상권업종소분류코드": "G21401",
+      "상권업종소분류명": "주유소",
+      "표준산업분류코드": "G47711",
+      "표준산업분류명": "운송장비용 주유소 운영업",
+      "시군구명": "목포시",
+      "도로명주소": "전남광주통합특별시 목포시 비파로 54",
+      "지번주소": "전남광주통합특별시 목포시 상동 1000",
+      "위도": "34.8034893590187",
+      "경도": "126.426772417825",
+      "region": "전남"
+    },
+    {
+      "상가업소번호": "MA010120220807729541",
+      "상호명": "씨오에쓰주",
+      "지점명": "",
+      "상권업종소분류코드": "G21401",
+      "상권업종소분류명": "주유소",
+      "표준산업분류코드": "G47711",
+      "표준산업분류명": "운송장비용 주유소 운영업",
+      "시군구명": "목포시",
+      "도로명주소": "전남광주통합특별시 목포시 청호로 110-1",
+      "지번주소": "전남광주통합특별시 목포시 산정동 1785-9",
+      "위도": "34.8023674260678",
+      "경도": "126.378183801191",
+      "region": "전남"
+    },
+    {
+      "상가업소번호": "MA010120220807730889",
+      "상호명": "대성주유소",
+      "지점명": "",
+      "상권업종소분류코드": "G21401",
+      "상권업종소분류명": "주유소",
+      "표준산업분류코드": "G47711",
+      "표준산업분류명": "운송장비용 주유소 운영업",
+      "시군구명": "목포시",
+      "도로명주소": "전남광주통합특별시 목포시 청호로 57",
+      "지번주소": "전남광주통합특별시 목포시 대성동 127-114",
+      "위도": "34.7983305634978",
+      "경도": "126.381994978302",
+      "region": "전남"
+    },
+    {
+      "상가업소번호": "MA010120220807707950",
+      "상호명": "청호에너지충전소",
+      "지점명": "",
+      "상권업종소분류코드": "G21402",
+      "상권업종소분류명": "가스 충전소",
+      "표준산업분류코드": "G47712",
+      "표준산업분류명": "운송장비용 가스 충전업",
+      "시군구명": "목포시",
+      "도로명주소": "전남광주통합특별시 목포시 고하대로 856",
+      "지번주소": "전남광주통합특별시 목포시 연산동 660-2",
+      "위도": "34.8195530667249",
+      "경도": "126.384503480242",
+      "region": "전남"
+    },
+    {
+      "상가업소번호": "MA010120220807727669",
+      "상호명": "청호충전소",
+      "지점명": "",
+      "상권업종소분류코드": "G21402",
+      "상권업종소분류명": "가스 충전소",
+      "표준산업분류코드": "G47712",
+      "표준산업분류명": "운송장비용 가스 충전업",
+      "시군구명": "목포시",
+      "도로명주소": "전남광주통합특별시 목포시 대양로 52",
+      "지번주소": "전남광주통합특별시 목포시 연산동 669",
+      "위도": "34.8201508368806",
+      "경도": "126.385067406292",
+      "region": "전남"
+    },
+    {
+      "상가업소번호": "MA010120220807729682",
+      "상호명": "유정에너지",
+      "지점명": "",
+      "상권업종소분류코드": "G21402",
+      "상권업종소분류명": "가스 충전소",
+      "표준산업분류코드": "G47712",
+      "표준산업분류명": "운송장비용 가스 충전업",
+      "시군구명": "목포시",
+      "도로명주소": "전남광주통합특별시 목포시 백년대로 221",
+      "지번주소": "전남광주통합특별시 목포시 상동 608-3",
+      "위도": "34.801232510524",
+      "경도": "126.412833285455",
+      "region": "전남"
+    }
+  ],
+  "request_limits": "Existing KB effective stage and rolling budget plus shared 3h cadence; no source limit changed",
+  "enqueue_after": "First finish the already queued single Yeosu independent-place lookup; then merge these jobs, retaining all historical fields and pending work.",
+  "scope_limits": [
+    "June dated physical index is not a current membership list",
+    "No road or location context establishes designated-market membership",
+    "No nearby business is merged into a fuel premise",
+    "No name substring alone is sufficient for map publication",
+    "Empty responses do not delete or establish nonmembership",
+    "No Gwangju or later-region source queries",
+    "Remaining physical inventory and market boundary/member work stay pending"
+  ],
+  "new_stations_added": 0,
+  "requests_sent_preparing_plan": 0,
+  "offline_merge_checks": {
+    "new_jobs": 6,
+    "old_jobs_pages_results_unchanged": true,
+    "all_other_state_fields_unchanged": true,
+    "second_merge_added_zero": true,
+    "active_region_remains_Jeonnam": true,
+    "next_region_remains_queued": true
+  }
+}

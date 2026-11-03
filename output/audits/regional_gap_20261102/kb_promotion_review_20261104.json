@@ -1,0 +1,13 @@
+{
+  "reviewed_at": "2026-11-04T05:07:46+09:00",
+  "scheduled_run": "https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41704081065",
+  "promotion_at": "2026-11-04T04:32:54+09:00",
+  "clean_seconds_at_promotion": 177589.80976963043,
+  "required_clean_seconds": 172800,
+  "valid_recent_48h_responses_at_promotion": 28,
+  "required_valid_responses": 24,
+  "replayed_policy_stage": "promoted",
+  "no_new_source_requests_in_scheduled_run": true,
+  "shared_cadence_preserved": true,
+  "limits_changed_manually": false
+}
