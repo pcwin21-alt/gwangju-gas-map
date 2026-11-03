@@ -8978,7 +8978,15 @@
         ],
         "match_basis": "bank_onnuri_flag_fuel_category_name_locality_coordinates_commercial_address",
         "candidate_ids": [],
-        "note": "KB국민카드 온누리 사용처 조회 기준. 카드사 반영 지연 가능. 지류·QR·다른 카드사는 별도 확인."
+        "note": "KB국민카드 온누리 사용처 조회 기준. 카드사 반영 지연 가능. 지류·QR·다른 카드사는 별도 확인.",
+        "issuer_checks": {
+          "kbcard": {
+            "status": "needs_review_not_found",
+            "checked_at": "2026-11-03T17:08:20+09:00",
+            "job_id": "9d7968370dc5f87d87698425",
+            "nonmembership": "not_established"
+          }
+        }
       }
     },
     "location_evidence": {
@@ -9031,7 +9039,15 @@
         ],
         "match_basis": "bank_onnuri_flag_reviewed_name_phone_registry_opinet_address_coordinates",
         "candidate_ids": [],
-        "note": "KB국민카드 온누리 사용처 조회 기준. 카드사 반영 지연 가능. 지류·QR·다른 카드사는 별도 확인."
+        "note": "KB국민카드 온누리 사용처 조회 기준. 카드사 반영 지연 가능. 지류·QR·다른 카드사는 별도 확인.",
+        "issuer_checks": {
+          "kbcard": {
+            "status": "needs_review_not_found",
+            "checked_at": "2026-11-03T17:11:22+09:00",
+            "job_id": "a99de73b338c5f780aaa112f",
+            "nonmembership": "not_established"
+          }
+        }
       }
     },
     "location_evidence": {
