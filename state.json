@@ -9923,12 +9923,12 @@
       "reason": "Annual identity needs independent same-premise linkage or documented exclusion"
     }
   ],
-  "status": "running",
+  "status": "needs_attention",
   "summary": {
-    "status": "running",
+    "status": "needs_attention",
     "jobs_total": 229,
-    "jobs_done": 44,
-    "jobs_remaining": 185,
+    "jobs_done": 45,
+    "jobs_remaining": 184,
     "review_records": 21,
     "evidence_records": 24,
     "source_gaps": 90,
@@ -9942,9 +9942,9 @@
     "regions": [
       {
         "region": "전남",
-        "status": "collecting",
+        "status": "needs_review",
         "jobs_total": 45,
-        "jobs_remaining": 1,
+        "jobs_remaining": 0,
         "jobs_needing_review": 0,
         "source_gaps": 9,
         "review_records": 9,
@@ -10341,20 +10341,28 @@
         "requests_per_run": 3,
         "interval_seconds": 180,
         "stage": "fixed"
+      },
+      "kakao_local": {
+        "requests_per_24h": 2,
+        "requests_per_run": 1,
+        "interval_seconds": 180,
+        "stage": "fixed"
       }
     },
     "collection_schedule": {
       "minimum_run_interval_seconds": 10800,
-      "last_collection_started_at": 1793714819.3262494,
-      "next_allowed_at": 1793725619.3262494,
+      "last_collection_started_at": 1793726005.4152296,
+      "next_allowed_at": 1793736805.4152296,
       "waiting": true
     }
   },
   "last_run": {
-    "id": "402e04eda2e7417fb8452e4d4ee173e8",
-    "checked_at": "2026-11-03T23:18:55+09:00",
-    "requests": 0,
-    "request_purposes": {}
+    "id": "3a76051fb35a409eae987003621d71c9",
+    "checked_at": "2026-11-04T02:13:29+09:00",
+    "requests": 1,
+    "request_purposes": {
+      "independent_premise_identity": 1
+    }
   },
   "initial_scope": "finite cross-source fuel registration candidates, Jeonnam first and Seoul last; not a geographic census",
   "region_order": [
@@ -23796,6 +23804,12 @@
       "requests_per_run": 3,
       "interval_seconds": 180,
       "stage": "fixed"
+    },
+    "kakao_local": {
+      "requests_per_24h": 2,
+      "requests_per_run": 1,
+      "interval_seconds": 180,
+      "stage": "fixed"
     }
   },
   "candidate_resolutions": {
@@ -24412,8 +24426,8 @@
   },
   "collection_schedule": {
     "minimum_run_interval_seconds": 10800,
-    "last_collection_started_at": 1793714819.3262494,
-    "next_allowed_at": 1793725619.3262494,
+    "last_collection_started_at": 1793726005.4152296,
+    "next_allowed_at": 1793736805.4152296,
     "waiting": true
   },
   "independent_place_checks": {
