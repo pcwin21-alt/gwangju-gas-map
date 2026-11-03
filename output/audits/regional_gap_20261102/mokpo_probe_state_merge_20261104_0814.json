@@ -1,0 +1,39 @@
+{
+  "reviewed_at": "2026-11-04T08:27:43+09:00",
+  "before_state_commit": "7568876dbc993da7ba3b07971ab266edc87d18ae",
+  "evidence": "https://github.com/pcwin21-alt/gwangju-gas-map/blob/18e65bd/output/audits/regional_gap_20261102/mokpo_observation_crosscheck_20261104_0814.json",
+  "added_to": [
+    "coverage_checks.전남.market_coverage",
+    "source_gaps.market-coverage:전남",
+    "regional_reviews.전남"
+  ],
+  "current_statuses_remain_pending": true,
+  "all_existing_gap_reasons_and_dates_preserved": true,
+  "other_coverage_checks_and_regions_preserved": true,
+  "protected_state_fields": [
+    "schema_version",
+    "plan_id",
+    "scope",
+    "sources",
+    "attempts",
+    "jobs",
+    "evidence",
+    "review",
+    "status",
+    "last_run",
+    "initial_scope",
+    "region_order",
+    "survey_inventory",
+    "membership_rechecks",
+    "initial_plan_id",
+    "applied_plans",
+    "effective_collection_limits",
+    "candidate_resolutions",
+    "collection_schedule",
+    "independent_place_checks"
+  ],
+  "raw_attempts_response_records_jobs_pages_and_timers_preserved": true,
+  "membership_and_annual_resolutions_unchanged": true,
+  "new_source_requests_during_review": 0,
+  "progress_unchanged": true
+}

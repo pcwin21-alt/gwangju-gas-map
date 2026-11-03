@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-11-04T08:30:21+09:00",
+  "region": "전남",
+  "collection_and_publication_run": "https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41737585046",
+  "source_requests_this_round": {
+    "kbcard": 4,
+    "kakao_local": 0,
+    "datagov": 0,
+    "onnuri": 0
+  },
+  "bounded_query_locations": [
+    "목포 비파로54 광은",
+    "목포 청호로110-1 씨오에쓰주",
+    "목포 청호로57 대성주유소",
+    "목포 고하대로856 청호에너지충전소"
+  ],
+  "response_observations_by_location": [
+    339,
+    37,
+    7,
+    0
+  ],
+  "unique_bank_merchants_observed": 383,
+  "categories_compared": 67,
+  "independent_physical_source_rows": 1557,
+  "physical_rows_scope": "Dated municipal/LPG/commercial source observations including duplicate aliases; not unique current stations or current Onnuri merchants.",
+  "nonproximity_identity_leads_found": 0,
+  "nearby_only_pairs_not_promoted": 42,
+  "new_existing_station_rechecks": 0,
+  "existing_station_rechecks_cumulative": {
+    "confirmed_in_issuer_scope": 27,
+    "needs_review_not_found": 1,
+    "denominator": 28
+  },
+  "new_annual_identity_resolutions": 0,
+  "new_station_discoveries": 0,
+  "new_map_stations": 0,
+  "map_station_deletions": 0,
+  "jobs_processed_this_round": 4,
+  "jobs_processed_cumulative": 50,
+  "jobs_total": 52,
+  "jobs_remaining": 2,
+  "remaining_KB_jobs": [
+    {
+      "id": "db6738bb5477d9d95cf55d55",
+      "target": {
+        "name": "청호충전소",
+        "keyword": "",
+        "lat": 34.8201508368806,
+        "lng": 126.385067406292,
+        "address": "전남광주통합특별시 목포시 대양로 52",
+        "coordinate_source_id": "MA010120220807727669"
+      }
+    },
+    {
+      "id": "0341c52dde980ab4a6230766",
+      "target": {
+        "name": "유정에너지",
+        "keyword": "",
+        "lat": 34.801232510524,
+        "lng": 126.412833285455,
+        "address": "전남광주통합특별시 목포시 백년대로 221",
+        "coordinate_source_id": "MA010120220807729682"
+      }
+    }
+  ],
+  "jobs_do_not_measure_regional_census_completion": true,
+  "progress": {
+    "region": "전남",
+    "status": "collecting",
+    "jobs_total": 52,
+    "jobs_remaining": 2,
+    "jobs_needing_review": 0,
+    "source_gaps": 8,
+    "review_records": 7,
+    "inventory_reviewed": false,
+    "mapped_records_to_recheck": 28,
+    "membership_check_status": {
+      "confirmed_in_issuer_scope": 27,
+      "needs_review_not_found": 1
+    },
+    "unresolved_annual_identities": 5,
+    "missing_standard_checks": [
+      "market_coverage",
+      "membership_rechecks",
+      "annual_identities"
+    ],
+    "standard_checks_complete": false,
+    "scope": "issuer-scoped rechecks; paper/QR/operator freshness not inferred"
+  },
+  "rolling24h": {
+    "kbcard": 17,
+    "kakao_local": 2
+  },
+  "effective_collection_limits": {
+    "onnuri": {
+      "requests_per_24h": 24,
+      "requests_per_run": 0,
+      "interval_seconds": 180,
+      "stage": "stopped"
+    },
+    "kbcard": {
+      "requests_per_24h": 32,
+      "requests_per_run": 4,
+      "interval_seconds": 180,
+      "stage": "promoted",
+      "clean_since": 1793734374.0146263,
+      "valid_responses_in_clean_window": 4,
+      "earliest_review_at": 1793907174.0146263
+    },
+    "datagov": {
+      "requests_per_24h": 20,
+      "requests_per_run": 3,
+      "interval_seconds": 180,
+      "stage": "fixed"
+    },
+    "kakao_local": {
+      "requests_per_24h": 2,
+      "requests_per_run": 1,
+      "interval_seconds": 180,
+      "stage": "fixed"
+    }
+  },
+  "request_completion_to_next_network_start_seconds": [
+    181.21127820014954,
+    181.41737461090088,
+    181.29479384422302
+  ],
+  "next_collection_allowed_at": "2026-11-04T11:14:49+09:00",
+  "source_failures": 0,
+  "source_blocks_this_round": 0,
+  "KB_stage_unchanged": "promoted 4/run,32/rolling24h,180s",
+  "python_tests_passed_on_server": 198,
+  "code_changed": false,
+  "local_work": "Stored HWP attachments parsed/rendered and visually inspected; all-category offline crosscheck; evidence ledger only.",
+  "stored_notice_result": {
+    "notice_ids": [
+      "55083",
+      "55187"
+    ],
+    "parser": "kordoc 4.24.41",
+    "total_pages": 2,
+    "boundary_maps": 0,
+    "individual_member_lists": 0,
+    "status": "source_gap_retained"
+  },
+  "alternative_issuer_surface_research": "Bounded official information-page search found general card/point/performance/product pages, not a verified independent current Onnuri dataset. No provider merchant query sent and no new collection source added.",
+  "state_evidence_commit": "e86a2dd6bf78f5d84ce139aca23dcb9f25948d63",
+  "preserved": {
+    "previous_attempts": true,
+    "other_jobs_pages_and_results": true,
+    "old_member_and_annual_evidence": true,
+    "operator_paper_QR_and_issuer_dates": true,
+    "Onnuri_blocked_state": true,
+    "all_daily_caps_and_three_hour_cadence": true,
+    "all_regions_after_Jeonnam_queued": true,
+    "no_nearby_only_promotion": true,
+    "source_gap_original_reasons_and_dates": true
+  },
+  "public_verification": {
+    "checked_at": "2026-11-04T08:28:36+09:00",
+    "url": "https://pcwin21-alt.github.io/gwangju-gas-map/?v=18e65bd-0814",
+    "http_status": 200,
+    "canonical_main_commit": "18e65bd4551d2fa01f2889560e2d2f7ad79706ac",
+    "entire_HTML_matches_prepared_canonical_main": true,
+    "asset_hash_basis": "Canonical Git blob bytes as used by Linux publication; not Windows CRLF working-tree bytes",
+    "all_embedded_stations_match_main": true,
+    "all_station_data_unchanged_since_4b6b715": true,
+    "station_count": 220,
+    "onnuri_tagged": 184,
+    "jeonnam_history_records": 28,
+    "new_map_stations": 0,
+    "operator_paper_QR_and_prior_issuer_dates_unchanged": true,
+    "public_progress_updated": true,
+    "pinned_Toss_bundle_sha256": "e1f72f65b654b4b5bc2bc7430261c5614a824697d4c85d91a8dc0b85faf63c7f",
+    "Toss_bundle_rebuilt_or_uploaded": false,
+    "public_HTML_sha256": "b8b4c92c6f3b8a4b559907470332a83adecde50a6332c34cf058616840a5ba3e"
+  },
+  "remaining": [
+    "Two Mokpo physical-location KB discovery jobs after cadence/budgets allow",
+    "Terminal current issuer membership recheck",
+    "Five annual candidate identities",
+    "Eight source gaps, including current designated-market boundaries and member inventories across 22 municipalities"
+  ],
+  "region_complete": false
+}

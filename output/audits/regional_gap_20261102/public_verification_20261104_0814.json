@@ -1,0 +1,19 @@
+{
+  "checked_at": "2026-11-04T08:28:36+09:00",
+  "url": "https://pcwin21-alt.github.io/gwangju-gas-map/?v=18e65bd-0814",
+  "http_status": 200,
+  "canonical_main_commit": "18e65bd4551d2fa01f2889560e2d2f7ad79706ac",
+  "entire_HTML_matches_prepared_canonical_main": true,
+  "asset_hash_basis": "Canonical Git blob bytes as used by Linux publication; not Windows CRLF working-tree bytes",
+  "all_embedded_stations_match_main": true,
+  "all_station_data_unchanged_since_4b6b715": true,
+  "station_count": 220,
+  "onnuri_tagged": 184,
+  "jeonnam_history_records": 28,
+  "new_map_stations": 0,
+  "operator_paper_QR_and_prior_issuer_dates_unchanged": true,
+  "public_progress_updated": true,
+  "pinned_Toss_bundle_sha256": "e1f72f65b654b4b5bc2bc7430261c5614a824697d4c85d91a8dc0b85faf63c7f",
+  "Toss_bundle_rebuilt_or_uploaded": false,
+  "public_HTML_sha256": "b8b4c92c6f3b8a4b559907470332a83adecde50a6332c34cf058616840a5ba3e"
+}
