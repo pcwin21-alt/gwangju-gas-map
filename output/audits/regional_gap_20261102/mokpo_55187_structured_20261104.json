@@ -1,0 +1,366 @@
+{
+  "success": true,
+  "fileType": "hwp",
+  "markdown": "목포시 고시 제2026–162호\n\n\n# 목포시 골목형상점가 지정 고시\n\n「전통시장 및 상점가 육성을 위한 특별법」제2조2의2, 「목포시 골목형상점가 지정에 관한 조례」제2조에 따라 아래와 같이 골목형상점가를 지정하고 고시합니다.\n\n2026년 9월 16일\n\n목포시장\n\n1. 고시명 : 목포시 골목형상점가 지정고시\n\n2. 골목형상점가 지정사항\n\n<table>\n<tr><th rowspan=\"2\">연번</th><th rowspan=\"2\">골목형상점가명<br>(상인회명)</th><th rowspan=\"2\">대표자</th><th rowspan=\"2\">업무구역</th><th colspan=\"2\">규모</th><th rowspan=\"2\">등록일</th></tr>\n<tr><td>면적(㎡)</td><td>점포수</td></tr>\n<tr><td>1</td><td>텃골로십일자<br>골목형상점가<br>(텃골로십일자상인회)</td><td>고효석</td><td>텃골로 13번길<br>76 일대</td><td>4,080㎡</td><td>53개</td><td>‘26. 9. 16.</td></tr>\n<tr><td>2</td><td>비치앤팔레스<br>골목형상점가<br>(비치앤팔레스상가번영회)</td><td>배황석</td><td>청호로 206<br>일대</td><td>1,853㎡</td><td>34개</td><td>‘26. 9. 16.</td></tr>\n<tr><td>3</td><td>비파<br>골목형상점가<br>(비파상인회)</td><td>이성임</td><td>백년대로 337번길<br>25 일대</td><td>20,471㎡</td><td>203개</td><td>‘26. 9. 16.</td></tr>\n<tr><td>4</td><td>옥암번영<br>골목형상점가<br>(옥암번영상인회)</td><td>김재봉</td><td>옥암로 18<br>일대</td><td>35,311㎡</td><td>270개</td><td>‘26. 9. 16.</td></tr>\n<tr><td>5</td><td>금호사랑<br>골목형상점가<br>(금호사랑상인회)</td><td>신점옥</td><td>백년대로 375번길<br>29-1 일대</td><td>&lt;기존&gt;<br>5,825㎡<br>&lt;변경&gt;<br>26,689㎡</td><td>&lt;기존&gt;<br>70개<br>&lt;변경&gt;<br>208개</td><td>‘26. 9. 16.</td></tr>\n</table>\n\n기타 자세한 사항은 목포시청 지역경제과(061-270-8638)로 문의하여 주시기 바랍니다. 끝.",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "목포시 고시 제2026–162호",
+      "pageNumber": 1,
+      "style": {
+        "fontSize": 110,
+        "bold": true
+      }
+    },
+    {
+      "type": "heading",
+      "text": "목포시 골목형상점가 지정 고시",
+      "pageNumber": 1,
+      "style": {
+        "fontSize": 240
+      },
+      "level": 1
+    },
+    {
+      "type": "paragraph",
+      "text": "「전통시장 및 상점가 육성을 위한 특별법」제2조2의2, 「목포시 골목형상점가 지정에 관한 조례」제2조에 따라 아래와 같이 골목형상점가를 지정하고 고시합니다.",
+      "pageNumber": 1,
+      "style": {
+        "fontSize": 160
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "2026년  9월  16일",
+      "pageNumber": 1,
+      "style": {
+        "fontSize": 160
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "목포시장",
+      "pageNumber": 1,
+      "style": {
+        "fontSize": 160
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "1. 고시명 : 목포시 골목형상점가 지정고시",
+      "pageNumber": 1,
+      "style": {
+        "fontSize": 160
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "2. 골목형상점가 지정사항",
+      "pageNumber": 1,
+      "style": {
+        "fontSize": 160
+      }
+    },
+    {
+      "type": "table",
+      "table": {
+        "rows": 7,
+        "cols": 7,
+        "cells": [
+          [
+            {
+              "text": "연번",
+              "colSpan": 1,
+              "rowSpan": 2
+            },
+            {
+              "text": "골목형상점가명\n(상인회명)",
+              "colSpan": 1,
+              "rowSpan": 2
+            },
+            {
+              "text": "대표자",
+              "colSpan": 1,
+              "rowSpan": 2
+            },
+            {
+              "text": "업무구역",
+              "colSpan": 1,
+              "rowSpan": 2
+            },
+            {
+              "text": "규모",
+              "colSpan": 2,
+              "rowSpan": 1
+            },
+            {
+              "text": "",
+              "colSpan": 1,
+              "rowSpan": 1
+            },
+            {
+              "text": "등록일",
+              "colSpan": 1,
+              "rowSpan": 2
+            }
+          ],
+          [
+            {
+              "text": "",
+              "colSpan": 1,
+              "rowSpan": 1
+            },
+            {
+              "text": "",
+              "colSpan": 1,
+              "rowSpan": 1
+            },
+            {
+              "text": "",
+              "colSpan": 1,
+              "rowSpan": 1
+            },
+            {
+              "text": "",
+              "colSpan": 1,
+              "rowSpan": 1
+            },
+            {
+              "text": "면적(㎡)",
+              "colSpan": 1,
+              "rowSpan": 1
+            },
+            {
+              "text": "점포수",
+              "colSpan": 1,
+              "rowSpan": 1
+            },
+            {
+              "text": "",
+              "colSpan": 1,
+              "rowSpan": 1
+            }
+          ],
+          [
+            {
+              "text": "1",
+              "colSpan": 1,
+              "rowSpan": 1
+            },
+            {
+              "text": "텃골로십일자\n골목형상점가\n(텃골로십일자상인회)",
+              "colSpan": 1,
+              "rowSpan": 1
+            },
+            {
+              "text": "고효석",
+              "colSpan": 1,
+              "rowSpan": 1
+            },
+            {
+              "text": "텃골로 13번길\n76 일대",
+              "colSpan": 1,
+              "rowSpan": 1
+            },
+            {
+              "text": "4,080㎡",
+              "colSpan": 1,
+              "rowSpan": 1
+            },
+            {
+              "text": "53개",
+              "colSpan": 1,
+              "rowSpan": 1
+            },
+            {
+              "text": "‘26. 9. 16.",
+              "colSpan": 1,
+              "rowSpan": 1
+            }
+          ],
+          [
+            {
+              "text": "2",
+              "colSpan": 1,
+              "rowSpan": 1
+            },
+            {
+              "text": "비치앤팔레스\n골목형상점가\n(비치앤팔레스상가번영회)",
+              "colSpan": 1,
+              "rowSpan": 1
+            },
+            {
+              "text": "배황석",
+              "colSpan": 1,
+              "rowSpan": 1
+            },
+            {
+              "text": "청호로 206\n일대",
+              "colSpan": 1,
+              "rowSpan": 1
+            },
+            {
+              "text": "1,853㎡",
+              "colSpan": 1,
+              "rowSpan": 1
+            },
+            {
+              "text": "34개",
+              "colSpan": 1,
+              "rowSpan": 1
+            },
+            {
+              "text": "‘26. 9. 16.",
+              "colSpan": 1,
+              "rowSpan": 1
+            }
+          ],
+          [
+            {
+              "text": "3",
+              "colSpan": 1,
+              "rowSpan": 1
+            },
+            {
+              "text": "비파\n골목형상점가\n(비파상인회)",
+              "colSpan": 1,
+              "rowSpan": 1
+            },
+            {
+              "text": "이성임",
+              "colSpan": 1,
+              "rowSpan": 1
+            },
+            {
+              "text": "백년대로 337번길\n25 일대",
+              "colSpan": 1,
+              "rowSpan": 1
+            },
+            {
+              "text": "20,471㎡",
+              "colSpan": 1,
+              "rowSpan": 1
+            },
+            {
+              "text": "203개",
+              "colSpan": 1,
+              "rowSpan": 1
+            },
+            {
+              "text": "‘26. 9. 16.",
+              "colSpan": 1,
+              "rowSpan": 1
+            }
+          ],
+          [
+            {
+              "text": "4",
+              "colSpan": 1,
+              "rowSpan": 1
+            },
+            {
+              "text": "옥암번영\n골목형상점가\n(옥암번영상인회)",
+              "colSpan": 1,
+              "rowSpan": 1
+            },
+            {
+              "text": "김재봉",
+              "colSpan": 1,
+              "rowSpan": 1
+            },
+            {
+              "text": "옥암로 18\n일대",
+              "colSpan": 1,
+              "rowSpan": 1
+            },
+            {
+              "text": "35,311㎡",
+              "colSpan": 1,
+              "rowSpan": 1
+            },
+            {
+              "text": "270개",
+              "colSpan": 1,
+              "rowSpan": 1
+            },
+            {
+              "text": "‘26. 9. 16.",
+              "colSpan": 1,
+              "rowSpan": 1
+            }
+          ],
+          [
+            {
+              "text": "5",
+              "colSpan": 1,
+              "rowSpan": 1
+            },
+            {
+              "text": "금호사랑\n골목형상점가\n(금호사랑상인회)",
+              "colSpan": 1,
+              "rowSpan": 1
+            },
+            {
+              "text": "신점옥",
+              "colSpan": 1,
+              "rowSpan": 1
+            },
+            {
+              "text": "백년대로 375번길\n29-1 일대",
+              "colSpan": 1,
+              "rowSpan": 1
+            },
+            {
+              "text": "<기존>\n5,825㎡\n<변경>\n26,689㎡",
+              "colSpan": 1,
+              "rowSpan": 1
+            },
+            {
+              "text": "<기존>\n70개\n<변경>\n208개",
+              "colSpan": 1,
+              "rowSpan": 1
+            },
+            {
+              "text": "‘26. 9. 16.",
+              "colSpan": 1,
+              "rowSpan": 1
+            }
+          ]
+        ],
+        "hasHeader": true,
+        "sourceId": "t1"
+      },
+      "pageNumber": 1
+    },
+    {
+      "type": "paragraph",
+      "text": "기타 자세한 사항은 목포시청 지역경제과(061-270-8638)로 문의하여 주시기 바랍니다.  끝.",
+      "pageNumber": 1,
+      "style": {
+        "fontSize": 140
+      }
+    }
+  ],
+  "metadata": {
+    "version": "5.x",
+    "author": "user",
+    "createdAt": "2018-04-03T06:30:26Z",
+    "modifiedAt": "2026-09-16T11:19:53Z",
+    "pageMode": "layout",
+    "pageCount": 1
+  },
+  "outline": [
+    {
+      "level": 1,
+      "text": "목포시 골목형상점가 지정 고시",
+      "pageNumber": 1
+    }
+  ],
+  "pageCount": 1,
+  "pages": [
+    {
+      "pageNumber": 1,
+      "markdown": "목포시 고시 제2026–162호\n\n\n# 목포시 골목형상점가 지정 고시\n\n「전통시장 및 상점가 육성을 위한 특별법」제2조2의2, 「목포시 골목형상점가 지정에 관한 조례」제2조에 따라 아래와 같이 골목형상점가를 지정하고 고시합니다.\n\n2026년 9월 16일\n\n목포시장\n\n1. 고시명 : 목포시 골목형상점가 지정고시\n\n2. 골목형상점가 지정사항\n\n<table>\n<tr><th rowspan=\"2\">연번</th><th rowspan=\"2\">골목형상점가명<br>(상인회명)</th><th rowspan=\"2\">대표자</th><th rowspan=\"2\">업무구역</th><th colspan=\"2\">규모</th><th rowspan=\"2\">등록일</th></tr>\n<tr><td>면적(㎡)</td><td>점포수</td></tr>\n<tr><td>1</td><td>텃골로십일자<br>골목형상점가<br>(텃골로십일자상인회)</td><td>고효석</td><td>텃골로 13번길<br>76 일대</td><td>4,080㎡</td><td>53개</td><td>‘26. 9. 16.</td></tr>\n<tr><td>2</td><td>비치앤팔레스<br>골목형상점가<br>(비치앤팔레스상가번영회)</td><td>배황석</td><td>청호로 206<br>일대</td><td>1,853㎡</td><td>34개</td><td>‘26. 9. 16.</td></tr>\n<tr><td>3</td><td>비파<br>골목형상점가<br>(비파상인회)</td><td>이성임</td><td>백년대로 337번길<br>25 일대</td><td>20,471㎡</td><td>203개</td><td>‘26. 9. 16.</td></tr>\n<tr><td>4</td><td>옥암번영<br>골목형상점가<br>(옥암번영상인회)</td><td>김재봉</td><td>옥암로 18<br>일대</td><td>35,311㎡</td><td>270개</td><td>‘26. 9. 16.</td></tr>\n<tr><td>5</td><td>금호사랑<br>골목형상점가<br>(금호사랑상인회)</td><td>신점옥</td><td>백년대로 375번길<br>29-1 일대</td><td>&lt;기존&gt;<br>5,825㎡<br>&lt;변경&gt;<br>26,689㎡</td><td>&lt;기존&gt;<br>70개<br>&lt;변경&gt;<br>208개</td><td>‘26. 9. 16.</td></tr>\n</table>\n\n기타 자세한 사항은 목포시청 지역경제과(061-270-8638)로 문의하여 주시기 바랍니다. 끝."
+    }
+  ]
+}

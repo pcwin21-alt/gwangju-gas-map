@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-11-04T08:10:35+09:00",
+  "region": "전남",
+  "municipality": "목포시",
+  "hypothesis_tested": "Earlier text extraction may have missed embedded boundary images or member lists",
+  "documents": [
+    {
+      "notice_id": "55083",
+      "notice_url": "https://www.mokpo.go.kr/www/mokpo_news/notification/public_notice?idx=55083&mode=view",
+      "source_file": "output/audits/three_route_trial_20261103/mokpo_notice_55083.hwp",
+      "source_sha256": "63a8a8edd6029cd108267a60eca2296e4c288e20908c220fbfe15162496cc5fd",
+      "source_retrieved_at": "2026-11-03",
+      "review_method": "kordoc structured parse plus one-page PNG render, visually inspected",
+      "page_count": 1,
+      "structured_block_counts": {
+        "paragraph": 7,
+        "heading": 1,
+        "table": 1
+      },
+      "renderer_image_count": 0,
+      "renderer_shape_count": 0,
+      "structured_file": "output/audits/regional_gap_20261102/mokpo_55083_structured_20261104.json",
+      "structured_file_sha256": "223299fc6a173de700d9711505be7fa73461f0b254eec5008abd33b8681ce61e",
+      "visual_result": "One notice table containing market name, representative, anchor-road scope, area, aggregate shop count and registration date; no boundary map, parcel list or individual member shop list."
+    },
+    {
+      "notice_id": "55187",
+      "notice_url": "https://www.mokpo.go.kr/www/mokpo_news/notification/public_notice?idx=55187&mode=view",
+      "source_file": "output/audits/three_route_trial_20261103/mokpo_notice_55187.hwp",
+      "source_sha256": "16c3c6d3e09f015615ce466232a124eeef4d3a9f78e83b49db99fb51df74b3db",
+      "source_retrieved_at": "2026-11-03",
+      "review_method": "kordoc structured parse plus one-page PNG render, visually inspected",
+      "page_count": 1,
+      "structured_block_counts": {
+        "paragraph": 7,
+        "heading": 1,
+        "table": 1
+      },
+      "renderer_image_count": 0,
+      "renderer_shape_count": 0,
+      "structured_file": "output/audits/regional_gap_20261102/mokpo_55187_structured_20261104.json",
+      "structured_file_sha256": "d6cca15a76b1c65c596cb227db8923e62ea3782641e903d5b984d867ccc3a3cb",
+      "visual_result": "One notice table containing market name, representative, anchor-road scope, area, aggregate shop count and registration date; no boundary map, parcel list or individual member shop list."
+    }
+  ],
+  "result": "No additional boundary or individual shop inventory was found in these two stored primary attachments. The earlier source gap remains.",
+  "status": "pending_boundary_and_member_inventory",
+  "new_managed_source_requests": 0,
+  "new_map_stations": 0,
+  "new_membership_confirmations": 0,
+  "original_source_hashes_unchanged": true,
+  "scope": "Two dated official attachments only; not proof that no other municipal boundary/member publication exists. No source status, collector limit or candidate resolution changed."
+}
