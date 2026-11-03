@@ -34,7 +34,7 @@
       "interval_seconds": 180,
       "url": "https://developers.kakao.com/docs/ko/local/dev-guide#search-by-keyword",
       "scope": "One named public business identity via installed kakao-map skill relay; no bulk indexing, membership inference, blocked-source retry or host rotation",
-      "next_allowed_at": 0
+      "next_allowed_at": 1793726185.4152296
     }
   },
   "attempts": [
@@ -1177,6 +1177,24 @@
       "http_status": 200,
       "response_sha256": "023db2023407a3d43e6adae602db58640a74e8edd77b4cad812cfd101cc92d69",
       "finished_at": 1793714822.9115517
+    },
+    {
+      "id": "b7fb34692e364cd6b32f8e2a",
+      "job_id": "90ee175ab2efcb026a6a14b5",
+      "source": "kakao_local",
+      "at": 1793726005.4152296,
+      "status": "reserved",
+      "run_id": "3a76051fb35a409eae987003621d71c9",
+      "request": {
+        "method": "GET",
+        "url": "https://k-skill-proxy.nomadamas.org/v1/kakao-map/search/keyword",
+        "params": {
+          "q": "나주 남고문주유소",
+          "page": 1,
+          "size": 15,
+          "sort": "accuracy"
+        }
+      }
     }
   ],
   "jobs": [
@@ -7534,7 +7552,7 @@
       "logical_key": "90ee175ab2efcb026a6a14b5",
       "id": "90ee175ab2efcb026a6a14b5",
       "status": "pending",
-      "attempts": 0,
+      "attempts": 1,
       "page": 1,
       "observed_ids": []
     }
