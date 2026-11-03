@@ -1,6 +1,6 @@
 {
   "preparedAt": "2026-11-03T14:12:40.087248+09:00",
-  "status": "final_local_check_complete_external_gates_pending",
+  "status": "console_draft_saved_upload_and_device_test_pending",
   "appName": "onnuri-fuel-map",
   "workspaceId": "105239",
   "consoleUrl": "https://apps-in-toss.toss.im/workspace/105239/mini-app/onnuri-fuel-map/app-build",
@@ -9,7 +9,7 @@
   "bundleUploadedThisRun": false,
   "reviewSubmittedThisRun": false,
   "tossDeviceTest": "not_run",
-  "consoleInspection": "redirected_to_login; previous metadata save not reverified",
+  "consoleInspection": "authenticated console; actual metadata and category saved and reloaded; upload locally blocked; review button disabled",
   "checks": {
     "nodeTestsPassed": 3,
     "pythonTestsPassed": 6,
@@ -22,17 +22,22 @@
     "bundleArtifactChecksPassed": 9
   },
   "blockingChecks": [
-    "console login and actual upload state",
-    "map origins and runtime map rendering",
-    "real Toss app test at least once",
-    "platform navigation and state preservation",
-    "data flow and required notices",
-    "final platform eligibility and truthful attestations"
+    "Upload pinned .ait bundle and logo; browser file URL access currently prevents automated upload",
+    "Complete actual Toss-app test at least once; map origins, GPS and native back unverified",
+    "Confirm final platform eligibility, applicable notices and truthful operator acknowledgements before submission"
   ],
   "files": {
     "artifact-audit.json": {
       "bytes": 1422,
       "sha256": "92456a8687455309bea066375d60b0bb773b5f5a9aeac518bbb17a611b9c7d27"
+    },
+    "console-category-review.jpg": {
+      "bytes": 67428,
+      "sha256": "63386aac30bfa30d722ee3ac2d56e1147cec02066f2be591ff903611722d62e1"
+    },
+    "console-recheck.json": {
+      "bytes": 1542,
+      "sha256": "cc4e1907e3f94ee8e126979dd6848301943872ffaf3a5433ca1af852bc226be4"
     },
     "logo-600.png": {
       "bytes": 14747,
@@ -47,8 +52,8 @@
       "sha256": "e1f72f65b654b4b5bc2bc7430261c5614a824697d4c85d91a8dc0b85faf63c7f"
     },
     "START_HERE.md": {
-      "bytes": 15287,
-      "sha256": "3c83f3bd271ee43405b409d4f8de88ccb2e5b5e605e8f6d047797c706500b715"
+      "bytes": 20504,
+      "sha256": "1974dbacc1a96e2e454d2404d2dbd2498a7b8d62a816d9f0a5ff6170fb437b77"
     },
     "test-build-manifest.json": {
       "bytes": 6277,
@@ -63,5 +68,43 @@
     "webAndTossUiCodeChanged": false,
     "deviceTests": "not_run",
     "previousLocalUiChecks": "unchanged platform code; device certification still pending"
+  },
+  "consoleRecheck": {
+    "checkedAt": "2026-11-03T15:27:32+09:00",
+    "appName": "onnuri-fuel-map",
+    "workspaceId": "105239",
+    "consoleUrl": "https://apps-in-toss.toss.im/workspace/105239/mini-app/onnuri-fuel-map/meta/edit",
+    "loggedIn": true,
+    "basicInfoDraftSaved": true,
+    "categoryDraftSavedAndReloadVerified": true,
+    "category": [
+      "자동차",
+      "주유·충전"
+    ],
+    "thirdCategoryInput": "disabled_not_required",
+    "englishName": "Onnuri FuelMap",
+    "subtitle": "온누리·지역화폐 주유소 찾기",
+    "subtitleCodepoints": 15,
+    "keywords": [
+      "온누리",
+      "주유소",
+      "유가",
+      "지역화폐"
+    ],
+    "bundleUploaded": false,
+    "logoUploaded": false,
+    "tossAppTestButtonEnabled": false,
+    "reviewRequestButtonEnabled": false,
+    "reviewSubmitted": false,
+    "tossDeviceTest": "not_run",
+    "acknowledgements": "unchecked",
+    "uploadOutcome": "Chrome extension local file URL access restriction; no file attached",
+    "serverReviewRejection": false,
+    "screenshots": "platform AI capture default observed; no local fallback screenshot uploaded",
+    "policyQualification": "Public automotive restriction and live automotive/fuel category differ; final eligibility not established",
+    "handoffFolder": "C:\\Users\\unw\\OneDrive\\Documents\\Playground\\output\\apps-in-toss-review-20261103\\candidate-e1f72f65",
+    "candidateSha256": "e1f72f65b654b4b5bc2bc7430261c5614a824697d4c85d91a8dc0b85faf63c7f",
+    "handoffCandidatePinned": true,
+    "evidenceScreenshot": "console-category-review.jpg"
   }
 }

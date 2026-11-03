@@ -1,0 +1,38 @@
+{
+  "checkedAt": "2026-11-03T15:27:32+09:00",
+  "appName": "onnuri-fuel-map",
+  "workspaceId": "105239",
+  "consoleUrl": "https://apps-in-toss.toss.im/workspace/105239/mini-app/onnuri-fuel-map/meta/edit",
+  "loggedIn": true,
+  "basicInfoDraftSaved": true,
+  "categoryDraftSavedAndReloadVerified": true,
+  "category": [
+    "자동차",
+    "주유·충전"
+  ],
+  "thirdCategoryInput": "disabled_not_required",
+  "englishName": "Onnuri FuelMap",
+  "subtitle": "온누리·지역화폐 주유소 찾기",
+  "subtitleCodepoints": 15,
+  "keywords": [
+    "온누리",
+    "주유소",
+    "유가",
+    "지역화폐"
+  ],
+  "bundleUploaded": false,
+  "logoUploaded": false,
+  "tossAppTestButtonEnabled": false,
+  "reviewRequestButtonEnabled": false,
+  "reviewSubmitted": false,
+  "tossDeviceTest": "not_run",
+  "acknowledgements": "unchecked",
+  "uploadOutcome": "Chrome extension local file URL access restriction; no file attached",
+  "serverReviewRejection": false,
+  "screenshots": "platform AI capture default observed; no local fallback screenshot uploaded",
+  "policyQualification": "Public automotive restriction and live automotive/fuel category differ; final eligibility not established",
+  "handoffFolder": "C:\\Users\\unw\\OneDrive\\Documents\\Playground\\output\\apps-in-toss-review-20261103\\candidate-e1f72f65",
+  "candidateSha256": "e1f72f65b654b4b5bc2bc7430261c5614a824697d4c85d91a8dc0b85faf63c7f",
+  "handoffCandidatePinned": true,
+  "evidenceScreenshot": "console-category-review.jpg"
+}
