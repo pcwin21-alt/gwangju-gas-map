@@ -1,0 +1,227 @@
+{
+  "checked_at": "2026-11-03T17:20:37+09:00",
+  "region": "전남",
+  "collection_run": "https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41600638482",
+  "publication_only_run": "https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41602159048",
+  "pages_run": "https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41602205819",
+  "requests": [
+    {
+      "id": "20b9811a641c4210960eadf1",
+      "job_id": "61e909439fc59f61a0845e38",
+      "source": "kbcard",
+      "at": 1793693115.5209043,
+      "status": "done",
+      "run_id": "86e12d78bbf948259f21a94fd03640e7",
+      "request": {
+        "method": "POST",
+        "url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+        "data": {
+          "mainCC": "a",
+          "isNoFrame": "Y",
+          "situXCdnt": 34.9433523017851,
+          "situYCdnt": 127.513960022324,
+          "페이지번호": 1,
+          "useCase": "1",
+          "locationType": "1",
+          "startRow": 0,
+          "endRow": 10,
+          "mmcNm": ""
+        }
+      },
+      "request_started_at": 1793693116.8018594,
+      "network_duration_seconds": 1.1592438220977783,
+      "http_status": 200,
+      "response_sha256": "4c5e03c8a8efc5a862c04a55ca6b622b202add77fe092cce6cb566234f333fee",
+      "finished_at": 1793693118.2185764
+    },
+    {
+      "id": "a4be5bf80f284abe8a46ad6d",
+      "job_id": "9d7968370dc5f87d87698425",
+      "source": "kbcard",
+      "at": 1793693298.218782,
+      "status": "done",
+      "run_id": "86e12d78bbf948259f21a94fd03640e7",
+      "request": {
+        "method": "POST",
+        "url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+        "data": {
+          "mainCC": "a",
+          "isNoFrame": "Y",
+          "situXCdnt": 34.9281857676441,
+          "situYCdnt": 127.491275722294,
+          "페이지번호": 1,
+          "useCase": "1",
+          "locationType": "1",
+          "startRow": 0,
+          "endRow": 10,
+          "mmcNm": ""
+        }
+      },
+      "request_started_at": 1793693299.5635383,
+      "network_duration_seconds": 0.9398007392883301,
+      "http_status": 200,
+      "response_sha256": "32ce3bd29b33b64e0aa0f86bb458490d1fede544ffc55770a06bcf9a7e0989c1",
+      "finished_at": 1793693300.6205678
+    },
+    {
+      "id": "b95ed4413cfa49939f73b829",
+      "job_id": "a99de73b338c5f780aaa112f",
+      "source": "kbcard",
+      "at": 1793693480.6207514,
+      "status": "done",
+      "run_id": "86e12d78bbf948259f21a94fd03640e7",
+      "request": {
+        "method": "POST",
+        "url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+        "data": {
+          "mainCC": "a",
+          "isNoFrame": "Y",
+          "situXCdnt": 34.40867856,
+          "situYCdnt": 126.6249243,
+          "페이지번호": 1,
+          "useCase": "1",
+          "locationType": "1",
+          "startRow": 0,
+          "endRow": 10,
+          "mmcNm": ""
+        }
+      },
+      "request_started_at": 1793693481.896118,
+      "network_duration_seconds": 0.9476487636566162,
+      "http_status": 200,
+      "response_sha256": "ed9cc0421b5ec98455d55e8f292af98c795f13d7cc64c60c8fc317eb6b903641",
+      "finished_at": 1793693482.8572404
+    }
+  ],
+  "request_purposes": {
+    "annual_reverse_discovery": 1,
+    "post_renewal_recheck": 2
+  },
+  "inter_request_gaps_seconds": [
+    180.00020551681519,
+    180.0001835823059
+  ],
+  "new_map_stations": 0,
+  "new_issuer_confirmations_existing_stations": 1,
+  "all_existing_map_ids_preserved": true,
+  "operator_paper_QR_dates_and_other_business_fields_unchanged": true,
+  "changes_to_existing_records": [
+    {
+      "id": "onnuri:kb:000000055922242",
+      "name": "(주)대창석유 (갑산)",
+      "issuer_checks": {
+        "kbcard": {
+          "status": "confirmed_in_issuer_scope",
+          "issuer": "kbcard",
+          "checked_at": "2026-11-03T17:08:20+09:00",
+          "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+          "bank_id": "000000055922242",
+          "other_payment_methods": "not_reverified",
+          "identity_review_evidence": "https://github.com/pcwin21-alt/gwangju-gas-map/blob/590ca19/output/audits/regional_gap_20261102/curated_rechecks_20261103_1712.json"
+        }
+      }
+    },
+    {
+      "id": "onnuri:kb:000000055922616",
+      "name": "(주)대창석유 (남창)",
+      "issuer_checks": {
+        "kbcard": {
+          "status": "needs_review_not_found",
+          "checked_at": "2026-11-03T17:11:22+09:00",
+          "job_id": "a99de73b338c5f780aaa112f",
+          "nonmembership": "not_established"
+        }
+      }
+    }
+  ],
+  "region_only_candidate_resolutions": 12,
+  "regional_progress": {
+    "region": "전남",
+    "status": "collecting",
+    "jobs_total": 44,
+    "jobs_remaining": 4,
+    "jobs_needing_review": 0,
+    "source_gaps": 12,
+    "review_records": 11,
+    "inventory_reviewed": false,
+    "mapped_records_to_recheck": 28,
+    "membership_check_status": {
+      "confirmed_in_issuer_scope": 24,
+      "needs_review_not_found": 4
+    },
+    "unresolved_annual_identities": 9,
+    "missing_standard_checks": [
+      "market_coverage",
+      "membership_rechecks",
+      "annual_identities"
+    ],
+    "standard_checks_complete": false,
+    "scope": "issuer-scoped rechecks; paper/QR/operator freshness not inferred"
+  },
+  "gwangju_unresolved_identities_preserved": 21,
+  "effective_limits": {
+    "onnuri": {
+      "requests_per_24h": 24,
+      "requests_per_run": 0,
+      "interval_seconds": 180,
+      "stage": "stopped"
+    },
+    "kbcard": {
+      "requests_per_24h": 24,
+      "requests_per_run": 3,
+      "interval_seconds": 180,
+      "stage": "pilot",
+      "clean_since": 1793556784.2048566,
+      "valid_responses_in_clean_window": 27,
+      "earliest_review_at": 1793729584.2048566
+    },
+    "datagov": {
+      "requests_per_24h": 20,
+      "requests_per_run": 3,
+      "interval_seconds": 180,
+      "stage": "fixed"
+    }
+  },
+  "last_24h_requests": {
+    "kbcard": 18
+  },
+  "collection_schedule": {
+    "minimum_run_interval_seconds": 10800,
+    "last_collection_started_at": 1793693115.5209043,
+    "next_allowed_at": 1793703915.5209043,
+    "waiting": true
+  },
+  "published": {
+    "http_status": 200,
+    "url": "https://pcwin21-alt.github.io/gwangju-gas-map/?v=3f2fac2",
+    "main_commit": "3f2fac2",
+    "html_sha256": "74c10ea07710dc3aa8c61a7e8657da401585fd0deb6ed5b28664a7730a1c767e",
+    "embedded_stations_match_main": true,
+    "date_header": "Tue, 03 Nov 2026 08:19:27 GMT",
+    "last_modified": "Tue, 03 Nov 2026 08:18:31 GMT",
+    "all_records": 220,
+    "onnuri_tags": 184,
+    "jeonnam_historical_onnuri_records": 28,
+    "initial_CDN_delay_resolved": true
+  },
+  "validation": {
+    "local_python_tests_passed": 189,
+    "source_and_publication_workflows": "success",
+    "manual_review_source_requests": 0,
+    "publication_only_source_requests": 0
+  },
+  "primary_web_review": {
+    "queries": [
+      "site:mokpo.go.kr 골목형상점가 지정 도면 하당푸른솔 당가두로 2026",
+      "site:yeosu.go.kr 현대참기름"
+    ],
+    "mokpo_direct_read": "web fetch HTTP400 Bad Request, stopped; index repeats existing designation lead",
+    "new_boundary_or_shop_inventory": false,
+    "merchant_decisions_from_search_snippets": 0
+  },
+  "next_work": [
+    "Jeonnam four pending managed queries including the added Namchang archived-coordinate identity check",
+    "Nine unresolved annual identities, four existing station nonmatches and current market boundaries/member inventories",
+    "No next-region merchant query or blocked-source retry; do not replace pinned Toss submission candidate"
+  ]
+}
