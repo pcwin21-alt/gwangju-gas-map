@@ -9893,13 +9893,10 @@
     }
   },
   "last_run": {
-    "id": "5de8286d15bc4b8d821d2f29f3d9a1ee",
-    "checked_at": "2026-11-03T14:04:48+09:00",
-    "requests": 3,
-    "request_purposes": {
-      "annual_reverse_discovery": 1,
-      "post_renewal_recheck": 2
-    }
+    "id": "3bf572cb106e4c309d61ae37734f5368",
+    "checked_at": "2026-11-03T14:08:01+09:00",
+    "requests": 0,
+    "request_purposes": {}
   },
   "initial_scope": "finite cross-source fuel registration candidates, Jeonnam first and Seoul last; not a geographic census",
   "region_order": [
