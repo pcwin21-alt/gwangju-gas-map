@@ -8155,6 +8155,60 @@
         "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
       },
       "annual_candidate_ids": []
+    },
+    {
+      "identity_review": "same_premise_confirmed",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "checked_at": "2026-11-03T10:08:14+09:00",
+      "bank_record": {
+        "location": {
+          "lat": "34.8244227459",
+          "lng": "126.4238800097"
+        },
+        "content": {
+          "tel": "061)283-5671",
+          "title": "(주)대창석유 (삼학)",
+          "category": "주유소",
+          "address": "전남 목포시 석현동 ",
+          "distance": "999",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000055922363",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-11-03T10:08:14+09:00"
+      },
+      "municipal_record": {
+        "name": "삼학(셀프)주유소",
+        "address": "전라남도 목포시 영산로 668",
+        "category": "주유소",
+        "source_url": "https://www.data.go.kr/data/15116429/fileData.do",
+        "source_date": "2026-08-04"
+      },
+      "identity_record": {
+        "name": "sk대창석유 삼학주유소",
+        "address": "전라남도 목포시 영산로 668",
+        "phone": "061-283-5671",
+        "source_url": "https://www.daangn.com/kr/local-profile/sk대창석유-삼학주유소-동네업체-sk대창석유-삼학주유소-10540331/",
+        "access_method": "search_index_full_record",
+        "checked_at": "2026-10-26"
+      },
+      "annual_candidate_ids": [],
+      "identity_support": "Reviewed bank corporate/branch name, explicit fuel category, exact phone and locality against municipal fuel listing. Bank coordinates retained with separate provenance; no nearby commercial address substitution.",
+      "municipal_raw_record": {
+        "주유소명": "삼학(셀프)주유소",
+        "시도명": "전남광주통합특별시",
+        "시군구명": "목포시",
+        "소재지도로명주소": "영산로 668",
+        "상표구분명": "SK",
+        "데이터기준일자": "2026-08-04"
+      },
+      "municipal_file_sha256": "7fd79c4ab3bc737bff9e9564220fdc87bf14dc6f9de596ff1cf76b2942807361",
+      "identity_review_evidence": "https://github.com/pcwin21-alt/gwangju-gas-map/blob/06457ac/output/audits/regional_gap_20261102/mokpo_samhak_recheck_20261103.json"
     }
   ],
   "review": [
@@ -8389,7 +8443,14 @@
       "station_id": "onnuri:kb:000000055922363",
       "job_id": "504058b68c3f51a4ff1d8e1f",
       "checked_at": "2026-11-03T10:08:14+09:00",
-      "reason": "No independently matched current issuer record; preserve previous station"
+      "reason": "No independently matched current issuer record; preserve previous station",
+      "status": "resolved",
+      "resolution": "confirmed_in_issuer_scope",
+      "resolved_at": "2026-11-03T10:44:02+09:00",
+      "evidence": [
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/06457ac/output/audits/regional_gap_20261102/mokpo_samhak_recheck_20261103.json"
+      ],
+      "source_checked_at": "2026-11-03T10:08:14+09:00"
     }
   ],
   "source_gaps": [
@@ -9114,7 +9175,7 @@
     "jobs_done": 34,
     "jobs_remaining": 193,
     "review_records": 12,
-    "evidence_records": 21,
+    "evidence_records": 22,
     "source_gaps": 90,
     "source_status": {
       "onnuri": "blocked",
@@ -9130,12 +9191,12 @@
         "jobs_remaining": 9,
         "jobs_needing_review": 0,
         "source_gaps": 24,
-        "review_records": 11,
+        "review_records": 10,
         "inventory_reviewed": false,
         "mapped_records_to_recheck": 28,
         "membership_check_status": {
-          "confirmed_in_issuer_scope": 20,
-          "needs_review_not_found": 4,
+          "confirmed_in_issuer_scope": 21,
+          "needs_review_not_found": 3,
           "pending": 4
         },
         "unresolved_annual_identities": 21,
@@ -9573,10 +9634,11 @@
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/16c7c03/output/audits/three_route_trial_20261103/results.json",
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/2b72365/output/audits/portal_search_20261103/results.json",
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f25f479/output/audits/regional_gap_20261102/nonfuel_reviews.json",
-        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/76d7041/output/audits/regional_gap_20261102/run_20261103_0743.json"
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/76d7041/output/audits/regional_gap_20261102/run_20261103_0743.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/06457ac/output/audits/regional_gap_20261102/mokpo_samhak_recheck_20261103.json"
       ],
       "checked_at": null,
-      "last_reviewed_at": "2026-11-03T07:53:25+09:00"
+      "last_reviewed_at": "2026-11-03T10:44:02+09:00"
     },
     "전북": {
       "status": "pending",
@@ -21942,11 +22004,12 @@
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/0632768/output/audits/regional_gap_20261102/naju_namgomun_review_20261103.json",
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f201100/output/audits/full_region_crosscheck_20261103/report.json",
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/092ad8d/output/audits/region_comparison_20261103/analysis.json",
-          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/76d7041/output/audits/regional_gap_20261102/run_20261103_0743.json"
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/76d7041/output/audits/regional_gap_20261102/run_20261103_0743.json",
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/06457ac/output/audits/regional_gap_20261102/mokpo_samhak_recheck_20261103.json"
         ],
         "checked_at": null,
         "scope": "Current issuer rechecks incomplete; coordinate discrepancy follow-up is discovery only",
-        "last_reviewed_at": "2026-11-03T07:53:25+09:00"
+        "last_reviewed_at": "2026-11-03T10:44:02+09:00"
       },
       "market_coverage": {
         "status": "pending",
@@ -22808,10 +22871,13 @@
       "other_payment_methods": "not_reverified"
     },
     "onnuri:kb:000000055922363": {
-      "status": "needs_review_not_found",
+      "status": "confirmed_in_issuer_scope",
+      "issuer": "kbcard",
       "checked_at": "2026-11-03T10:08:14+09:00",
-      "job_id": "504058b68c3f51a4ff1d8e1f",
-      "nonmembership": "not_established"
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "bank_id": "000000055922363",
+      "other_payment_methods": "not_reverified",
+      "identity_review_evidence": "https://github.com/pcwin21-alt/gwangju-gas-map/blob/06457ac/output/audits/regional_gap_20261102/mokpo_samhak_recheck_20261103.json"
     }
   },
   "initial_plan_id": "fuel-candidate-inventory-20261102-v1",
