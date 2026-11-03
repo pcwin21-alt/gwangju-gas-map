@@ -13,7 +13,7 @@
       "status": "active",
       "url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
       "scope": "Public unauthenticated Onnuri merchant form; issuer-specific evidence only; limits are our load caps, not a provider guarantee",
-      "next_allowed_at": 1793682282.4857912,
+      "next_allowed_at": 1793682284.849272,
       "volume_ramp": {
         "stage": "pilot",
         "started_at": 1793556784.2048566,
@@ -913,7 +913,7 @@
       "job_id": "2c0ae8db0c7828f8bbe5e0d1",
       "source": "kbcard",
       "at": 1793682102.4857912,
-      "status": "reserved",
+      "status": "done",
       "run_id": "5de8286d15bc4b8d821d2f29f3d9a1ee",
       "request": {
         "method": "POST",
@@ -930,7 +930,12 @@
           "endRow": 10,
           "mmcNm": ""
         }
-      }
+      },
+      "request_started_at": 1793682103.663378,
+      "network_duration_seconds": 0.9952249526977539,
+      "http_status": 200,
+      "response_sha256": "2b8c61182905560e34765191d149c4aab04232e3ca96c4699b82f9596c069a6f",
+      "finished_at": 1793682104.8492143
     }
   ],
   "jobs": [
@@ -2565,11 +2570,17 @@
       },
       "logical_key": "2c0ae8db0c7828f8bbe5e0d1",
       "id": "2c0ae8db0c7828f8bbe5e0d1",
-      "status": "pending",
+      "status": "done",
       "attempts": 1,
       "page": 1,
-      "observed_ids": [],
-      "candidate_ids": []
+      "observed_ids": [
+        "000000055922645",
+        "000000094722540"
+      ],
+      "candidate_ids": [],
+      "expected": 2,
+      "last_observed_at": "2026-11-03T14:01:44+09:00",
+      "result": "observations_saved"
     },
     {
       "kind": "kb_search",
@@ -8507,6 +8518,40 @@
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/06457ac/output/audits/regional_gap_20261102/mokpo_samhak_recheck_20261103.json"
       ],
       "source_checked_at": "2026-11-03T10:08:14+09:00"
+    },
+    {
+      "job_id": "2c0ae8db0c7828f8bbe5e0d1",
+      "bank_record": {
+        "location": {
+          "lat": "35.2770071066",
+          "lng": "127.2916235046"
+        },
+        "content": {
+          "tel": "061)362-7778",
+          "title": "(주)대창석유 (대인)",
+          "category": "주유소",
+          "address": "전남 곡성군 곡성읍 ",
+          "distance": "0",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000055922645",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        }
+      },
+      "checked_at": "2026-11-03T14:01:44+09:00",
+      "independent_fuel_candidate_ids": [],
+      "reason": "Independent exact business/address/category evidence incomplete; do not exclude by bank category alone"
+    },
+    {
+      "region": "전남",
+      "station_id": "onnuri:kb:000000055922645",
+      "job_id": "2c0ae8db0c7828f8bbe5e0d1",
+      "checked_at": "2026-11-03T14:01:44+09:00",
+      "reason": "No independently matched current issuer record; preserve previous station"
     }
   ],
   "source_gaps": [
@@ -22968,6 +23013,12 @@
       "bank_id": "000000055922363",
       "other_payment_methods": "not_reverified",
       "identity_review_evidence": "https://github.com/pcwin21-alt/gwangju-gas-map/blob/06457ac/output/audits/regional_gap_20261102/mokpo_samhak_recheck_20261103.json"
+    },
+    "onnuri:kb:000000055922645": {
+      "status": "needs_review_not_found",
+      "checked_at": "2026-11-03T14:01:44+09:00",
+      "job_id": "2c0ae8db0c7828f8bbe5e0d1",
+      "nonmembership": "not_established"
     }
   },
   "initial_plan_id": "fuel-candidate-inventory-20261102-v1",
