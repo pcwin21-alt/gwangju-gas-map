@@ -13,7 +13,7 @@
       "status": "active",
       "url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
       "scope": "Public unauthenticated Onnuri merchant form; issuer-specific evidence only; limits are our load caps, not a provider guarantee",
-      "next_allowed_at": 1793667910.0271277,
+      "next_allowed_at": 1793668090.0272732,
       "volume_ramp": {
         "stage": "pilot",
         "started_at": 1793556784.2048566,
@@ -820,6 +820,30 @@
       "http_status": 200,
       "response_sha256": "7fb6f237d8f8ffee540eea522d8b0ba471ba236d135ef246cc4c1bf59a3cbfdc",
       "finished_at": 1793667730.0270498
+    },
+    {
+      "id": "2b85fbf7b7a24eeeae3eabc9",
+      "job_id": "091e7f3c8182386ec64f3473",
+      "source": "kbcard",
+      "at": 1793667910.0272732,
+      "status": "reserved",
+      "run_id": "94f92e0e76f6460eb744b6d2b4839b4d",
+      "request": {
+        "method": "POST",
+        "url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+        "data": {
+          "mainCC": "a",
+          "isNoFrame": "Y",
+          "situXCdnt": 35.26739,
+          "situYCdnt": 126.804762,
+          "페이지번호": 1,
+          "useCase": "1",
+          "locationType": "1",
+          "startRow": 0,
+          "endRow": 10,
+          "mmcNm": ""
+        }
+      }
     }
   ],
   "jobs": [
@@ -2371,7 +2395,7 @@
       "logical_key": "091e7f3c8182386ec64f3473",
       "id": "091e7f3c8182386ec64f3473",
       "status": "pending",
-      "attempts": 0,
+      "attempts": 1,
       "page": 1,
       "observed_ids": [],
       "candidate_ids": []
