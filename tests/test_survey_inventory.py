@@ -162,6 +162,50 @@ class SurveyTests(unittest.TestCase):
         merge_plan(state, plan)
         self.assertEqual(state['survey_inventory']['annual_source']['sha256'], 'downloaded')
 
+    def regional_identity_state(self):
+        annual = copy.deepcopy(self.annual)
+        annual['rows'][0]['소재지'] = '전남광주'
+        inv = make_inventory([], {**self.fuel, 'rows': []}, annual, ['전남', '광주'])
+        plan = {'id': 'region-test', 'scope': 'test', 'jobs': [], 'survey_inventory': inv, 'source_gaps': []}
+        state = initial_state(plan, {**self.policy, 'region_order': ['전남', '광주']})
+        configure_regions(state, {**self.policy, 'region_order': ['전남', '광주']})
+        merge_plan(state, plan)
+        candidate = inv['annual_candidates'][0]
+        state['candidate_resolutions'] = {candidate['candidate_id']: {
+            'status': 'region_identified', 'source_kind': 'archived_operator_place',
+            'annual_row': copy.deepcopy(candidate['row']), 'evidence': ['archived exact name and market'],
+            'checked_at': '2026-11-03T17:00:00+09:00', 'source_checked_at': '2026-10-25T10:51:11+09:00',
+            'operator_record': {'frCd': 'archived-identity', 'frcsNm': candidate['row']['가맹점명'],
+                                'mrktNm': candidate['row']['소속 시장명(또는 상점가)'],
+                                'frcsAddr': '광주광역시 북구 검증로 1', 'latitude': 35.17, 'longitude': 126.91}}}
+        return state, candidate['candidate_id']
+
+    def test_region_only_identity_removes_wrong_region_gap_but_keeps_home_identity_open(self):
+        state, cid = self.regional_identity_state()
+        previous = copy.deepcopy(state)
+        result = summarize(state)
+        jeonnam, gwangju = result['regions']
+        self.assertEqual((jeonnam['unresolved_annual_identities'], jeonnam['source_gaps']), (0, 0))
+        self.assertEqual((gwangju['unresolved_annual_identities'], gwangju['source_gaps']), (1, 1))
+        self.assertEqual(state['candidate_resolutions'][cid]['status'], 'region_identified')
+        self.assertFalse(jeonnam['standard_checks_complete'])
+        for field in ('survey_inventory', 'source_gaps', 'candidate_resolutions', 'attempts', 'jobs', 'sources'):
+            self.assertEqual(state[field], previous[field])
+
+    def test_region_narrowing_requires_exact_annual_premise_market_and_dated_evidence(self):
+        state, cid = self.regional_identity_state()
+        for field, value in [('evidence', []), ('source_kind', 'keyword_search'),
+                             ('checked_at', 'invalid'), ('source_checked_at', '2026-10-25'),
+                             ('annual_row', {}), ('operator_record', {})]:
+            with self.subTest(field=field):
+                changed = copy.deepcopy(state);changed['candidate_resolutions'][cid][field] = value
+                self.assertEqual(survey_progress(changed, '전남')['unresolved_annual_identities'], 1)
+                self.assertEqual(summarize(changed)['regions'][0]['source_gaps'], 1)
+        for field, value in [('frcsNm', '다른사업장'), ('mrktNm', '다른시장'), ('latitude', None), ('frcsAddr', '미확인')]:
+            with self.subTest(record_field=field):
+                changed = copy.deepcopy(state);changed['candidate_resolutions'][cid]['operator_record'][field] = value
+                self.assertEqual(survey_progress(changed, '전남')['unresolved_annual_identities'], 1)
+
     def test_border_observation_is_not_published_to_unreached_region(self):
         state, _ = self.state();state['summary'] = {'active_region': self.area}
         later = copy.deepcopy(self.s);later['region'] = self.other

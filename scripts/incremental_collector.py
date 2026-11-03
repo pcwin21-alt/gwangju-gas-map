@@ -24,14 +24,14 @@ try:
     from nationwide import name_key, region, valid_coords
     from supplemental_onnuri import station_from_evidence, meters
     from survey_inventory import (install_survey, survey_jobs, make_inventory,
-                                  survey_progress, completed_recheck, sync_mapped_inventory)
+                                  survey_progress, completed_recheck, sync_mapped_inventory, candidate_regions)
     from collector_limits import limits, run_limit, observe, snapshot as limits_snapshot
 except ModuleNotFoundError:
     from scripts.discover_kb_fuel import parse_response, URL as KB_URL
     from scripts.nationwide import name_key, region, valid_coords
     from scripts.supplemental_onnuri import station_from_evidence, meters
     from scripts.survey_inventory import (install_survey, survey_jobs, make_inventory,
-                                          survey_progress, completed_recheck, sync_mapped_inventory)
+                                          survey_progress, completed_recheck, sync_mapped_inventory, candidate_regions)
     from scripts.collector_limits import limits, run_limit, observe, snapshot as limits_snapshot
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -317,13 +317,17 @@ def regional_progress(state):
     active = None
     rows = []
     jobs_by_id = {j['id']: j for j in state['jobs']}
+    annual_regions = {c['candidate_id']: candidate_regions(c, state.get('candidate_resolutions', {}).get(c['candidate_id']))
+                      for c in state.get('survey_inventory', {}).get('annual_candidates', [])}
     unresolved = lambda item: item.get('status') not in ('resolved', 'excluded')
     for area in order:
-        def covers(label):
+        def covers(label, candidate_id=None):
+            if candidate_id in annual_regions and area not in annual_regions[candidate_id]:
+                return False
             return not label or label == area or label == '전남광주' and area in ('전남', '광주')
         jobs = [j for j in state['jobs'] if j.get('region') == area]
         gaps = [g for g in state.get('source_gaps', []) if unresolved(g) and
-                covers(g.get('region'))]
+                    covers(g.get('region'), g.get('candidate_id'))]
         reviews = [r for r in state['review'] if unresolved(r) and
                    covers(r.get('region') or jobs_by_id.get(r.get('job_id'), {}).get('region'))]
         receipt = state.get('regional_reviews', {}).get(area, {})

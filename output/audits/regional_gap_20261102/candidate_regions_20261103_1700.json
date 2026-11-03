@@ -1,0 +1,504 @@
+{
+  "reviewed_at": "2026-11-03T17:07:50+09:00",
+  "source_checked_at": "2026-10-25T10:51:11+09:00",
+  "source_requests": 0,
+  "source_snapshot": "output/onnuri_live_snapshot.json",
+  "source_snapshot_sha256": "af6866d59fd471cbe26ed0cefa112ca046c4e00641479ba45b5f3082e39d55aa",
+  "annual_source": {
+    "source_url": "https://www.data.go.kr/data/3060079/fileData.do",
+    "download_url": "https://www.data.go.kr/cmm/cmm/fileDownload.do?atchFileId=FILE_000000007663918&fileDetailSn=1&insertDataPrcus=N",
+    "source_date": "2026-07-31",
+    "retrieved_at": "2026-11-02T02:08:47+09:00",
+    "sha256": "66173bf934ad24d3195e9e0c1be0e62adcca0e4767e19a80c435f8e1aead4df6",
+    "total_rows": 225803,
+    "regional_fuel_rows": 280,
+    "scope": "nationwide-v3",
+    "fuel_selection_version": 2,
+    "registry_signature": "39938bc8747130b07876e1afffd68a5f90e54f1de1d7367bce4f57efb1c46ac1"
+  },
+  "scope": "Exact archived premise/market region links only; not a new fuel outlet, non-vehicle exclusion or refreshed membership check. Combined source labels remain intact. Gwangju identity tasks stay open.",
+  "resolutions": {
+    "8edc76825b375b2fb2f7f514": {
+      "status": "region_identified",
+      "source_kind": "archived_operator_place",
+      "annual_row": {
+        "가맹점명": "유창석유",
+        "소속 시장명(또는 상점가)": "큰방림길 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": "석유류",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2026"
+      },
+      "operator_record": {
+        "frCd": "05163200052",
+        "frcsNm": "유창석유",
+        "frcsAddr": "광주광역시 남구 천변좌로542번길 20 (방림동)",
+        "mrktNm": "큰방림길 골목형상점가",
+        "placeTypeCd": "08",
+        "placeTypeNm": "기타소매업",
+        "addrCd": "12270",
+        "latitude": 35.132413,
+        "longitude": 126.921637,
+        "paperYn": "Y",
+        "cardYn": "Y",
+        "qrYn": "Y"
+      },
+      "evidence": [
+        "output/audits/regional_gap_20261102/candidate_regions_20261103_1700.json"
+      ],
+      "checked_at": "2026-11-03T17:07:50+09:00",
+      "source_checked_at": "2026-10-25T10:51:11+09:00",
+      "source_url": "https://www.onnuri.gift/place",
+      "source_snapshot_sha256": "af6866d59fd471cbe26ed0cefa112ca046c4e00641479ba45b5f3082e39d55aa",
+      "scope": "Province-only linkage between the exact annual name/market and archived operator address. Vehicle-fuel identity and current membership remain unresolved in the supported region."
+    },
+    "5b55f3a461dcd35401e6139f": {
+      "status": "region_identified",
+      "source_kind": "archived_operator_place",
+      "annual_row": {
+        "가맹점명": "용전주유마트",
+        "소속 시장명(또는 상점가)": "일곡동(제11지역:용전동) 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": "요소수 첨가제 등",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2025"
+      },
+      "operator_record": {
+        "frCd": "05634200002",
+        "frcsNm": "용전주유마트",
+        "frcsAddr": "광주광역시 북구 우치로 809 (용전동)",
+        "mrktNm": "일곡동(제11지역:용전동) 골목형상점가",
+        "placeTypeCd": "08",
+        "placeTypeNm": "기타소매업",
+        "addrCd": "12300",
+        "latitude": 35.234411,
+        "longitude": 126.894298,
+        "paperYn": "Y",
+        "cardYn": "Y",
+        "qrYn": "Y"
+      },
+      "evidence": [
+        "output/audits/regional_gap_20261102/candidate_regions_20261103_1700.json"
+      ],
+      "checked_at": "2026-11-03T17:07:50+09:00",
+      "source_checked_at": "2026-10-25T10:51:11+09:00",
+      "source_url": "https://www.onnuri.gift/place",
+      "source_snapshot_sha256": "af6866d59fd471cbe26ed0cefa112ca046c4e00641479ba45b5f3082e39d55aa",
+      "scope": "Province-only linkage between the exact annual name/market and archived operator address. Vehicle-fuel identity and current membership remain unresolved in the supported region."
+    },
+    "f0bceeeee30bceb8d97290ef": {
+      "status": "region_identified",
+      "source_kind": "archived_operator_place",
+      "annual_row": {
+        "가맹점명": "에스케이신안석유",
+        "소속 시장명(또는 상점가)": "임동 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": "등유",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2026"
+      },
+      "operator_record": {
+        "frCd": "05104200133",
+        "frcsNm": "에스케이신안석유",
+        "frcsAddr": "광주광역시 북구 중흥로7번길 15 (임동)",
+        "mrktNm": "임동 골목형상점가",
+        "placeTypeCd": "08",
+        "placeTypeNm": "기타소매업",
+        "addrCd": "12300",
+        "latitude": 35.166299,
+        "longitude": 126.894879,
+        "paperYn": "Y",
+        "cardYn": "Y",
+        "qrYn": "Y"
+      },
+      "evidence": [
+        "output/audits/regional_gap_20261102/candidate_regions_20261103_1700.json"
+      ],
+      "checked_at": "2026-11-03T17:07:50+09:00",
+      "source_checked_at": "2026-10-25T10:51:11+09:00",
+      "source_url": "https://www.onnuri.gift/place",
+      "source_snapshot_sha256": "af6866d59fd471cbe26ed0cefa112ca046c4e00641479ba45b5f3082e39d55aa",
+      "scope": "Province-only linkage between the exact annual name/market and archived operator address. Vehicle-fuel identity and current membership remain unresolved in the supported region."
+    },
+    "cb99f02bfb07308115f48728": {
+      "status": "region_identified",
+      "source_kind": "archived_operator_place",
+      "annual_row": {
+        "가맹점명": "에스케이(sk)만국석유",
+        "소속 시장명(또는 상점가)": "호랑꼬두메마을 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": "석유",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2026"
+      },
+      "operator_record": {
+        "frCd": "05666200010",
+        "frcsNm": "에스케이(sk)만국석유",
+        "frcsAddr": "광주광역시 동구 무등로 499-5 (산수동)",
+        "mrktNm": "호랑꼬두메마을 골목형상점가",
+        "placeTypeCd": "08",
+        "placeTypeNm": "기타소매업",
+        "addrCd": "12210",
+        "latitude": 35.155754,
+        "longitude": 126.934259,
+        "paperYn": "Y",
+        "cardYn": "Y",
+        "qrYn": "Y"
+      },
+      "evidence": [
+        "output/audits/regional_gap_20261102/candidate_regions_20261103_1700.json"
+      ],
+      "checked_at": "2026-11-03T17:07:50+09:00",
+      "source_checked_at": "2026-10-25T10:51:11+09:00",
+      "source_url": "https://www.onnuri.gift/place",
+      "source_snapshot_sha256": "af6866d59fd471cbe26ed0cefa112ca046c4e00641479ba45b5f3082e39d55aa",
+      "scope": "Province-only linkage between the exact annual name/market and archived operator address. Vehicle-fuel identity and current membership remain unresolved in the supported region."
+    },
+    "20c01e1b3ffe7769ce5b37cc": {
+      "status": "region_identified",
+      "source_kind": "archived_operator_place",
+      "annual_row": {
+        "가맹점명": "에스케이(SK)금호석유",
+        "소속 시장명(또는 상점가)": "월산4동 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": "등유,경유",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2026"
+      },
+      "operator_record": {
+        "frCd": "05421200052",
+        "frcsNm": "에스케이(SK)금호석유",
+        "frcsAddr": "광주광역시 남구 금화로 476 (월산동)",
+        "mrktNm": "월산4동 골목형상점가",
+        "placeTypeCd": "08",
+        "placeTypeNm": "기타소매업",
+        "addrCd": "12270",
+        "latitude": 35.148494,
+        "longitude": 126.891586,
+        "paperYn": "Y",
+        "cardYn": "Y",
+        "qrYn": "Y"
+      },
+      "evidence": [
+        "output/audits/regional_gap_20261102/candidate_regions_20261103_1700.json"
+      ],
+      "checked_at": "2026-11-03T17:07:50+09:00",
+      "source_checked_at": "2026-10-25T10:51:11+09:00",
+      "source_url": "https://www.onnuri.gift/place",
+      "source_snapshot_sha256": "af6866d59fd471cbe26ed0cefa112ca046c4e00641479ba45b5f3082e39d55aa",
+      "scope": "Province-only linkage between the exact annual name/market and archived operator address. Vehicle-fuel identity and current membership remain unresolved in the supported region."
+    },
+    "3b2fbcfcf6f33c30eb688d72": {
+      "status": "region_identified",
+      "source_kind": "archived_operator_place",
+      "annual_row": {
+        "가맹점명": "성진에너지",
+        "소속 시장명(또는 상점가)": "각화도매 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": "의자탁자 잡화",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2025"
+      },
+      "operator_record": {
+        "frCd": "05124200079",
+        "frcsNm": "성진에너지",
+        "frcsAddr": "광주광역시 북구 군왕로 235 (각화동)",
+        "mrktNm": "각화도매 골목형상점가",
+        "placeTypeCd": "08",
+        "placeTypeNm": "기타소매업",
+        "addrCd": "12300",
+        "latitude": 35.18145,
+        "longitude": 126.93702,
+        "paperYn": "Y",
+        "cardYn": "Y",
+        "qrYn": "Y"
+      },
+      "evidence": [
+        "output/audits/regional_gap_20261102/candidate_regions_20261103_1700.json"
+      ],
+      "checked_at": "2026-11-03T17:07:50+09:00",
+      "source_checked_at": "2026-10-25T10:51:11+09:00",
+      "source_url": "https://www.onnuri.gift/place",
+      "source_snapshot_sha256": "af6866d59fd471cbe26ed0cefa112ca046c4e00641479ba45b5f3082e39d55aa",
+      "scope": "Province-only linkage between the exact annual name/market and archived operator address. Vehicle-fuel identity and current membership remain unresolved in the supported region."
+    },
+    "604ad71bee3d9a8881951202": {
+      "status": "region_identified",
+      "source_kind": "archived_operator_place",
+      "annual_row": {
+        "가맹점명": "동신 석유",
+        "소속 시장명(또는 상점가)": "광주고인근 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": "등유",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2026"
+      },
+      "operator_record": {
+        "frCd": "05639200037",
+        "frcsNm": "동신 석유",
+        "frcsAddr": "광주광역시 동구 경양로223번길 14-24 (계림동)",
+        "mrktNm": "광주고인근 골목형상점가",
+        "placeTypeCd": "08",
+        "placeTypeNm": "기타소매업",
+        "addrCd": "12210",
+        "latitude": 35.158578,
+        "longitude": 126.917265,
+        "paperYn": "Y",
+        "cardYn": "Y",
+        "qrYn": "Y"
+      },
+      "evidence": [
+        "output/audits/regional_gap_20261102/candidate_regions_20261103_1700.json"
+      ],
+      "checked_at": "2026-11-03T17:07:50+09:00",
+      "source_checked_at": "2026-10-25T10:51:11+09:00",
+      "source_url": "https://www.onnuri.gift/place",
+      "source_snapshot_sha256": "af6866d59fd471cbe26ed0cefa112ca046c4e00641479ba45b5f3082e39d55aa",
+      "scope": "Province-only linkage between the exact annual name/market and archived operator address. Vehicle-fuel identity and current membership remain unresolved in the supported region."
+    },
+    "9048d648f7164ac10b9d7aaa": {
+      "status": "region_identified",
+      "source_kind": "archived_operator_place",
+      "annual_row": {
+        "가맹점명": "도시에너지 주식회사",
+        "소속 시장명(또는 상점가)": "신안동용봉초건너편 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": "엘피지가스",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2025"
+      },
+      "operator_record": {
+        "frCd": "05598200003",
+        "frcsNm": "도시에너지 주식회사",
+        "frcsAddr": "광주광역시 북구 무등로137번길 8 (신안동)",
+        "mrktNm": "신안동용봉초건너편 골목형상점가",
+        "placeTypeCd": "08",
+        "placeTypeNm": "기타소매업",
+        "addrCd": "12300",
+        "latitude": 35.167303,
+        "longitude": 126.899245,
+        "paperYn": "Y",
+        "cardYn": "Y",
+        "qrYn": "Y"
+      },
+      "evidence": [
+        "output/audits/regional_gap_20261102/candidate_regions_20261103_1700.json"
+      ],
+      "checked_at": "2026-11-03T17:07:50+09:00",
+      "source_checked_at": "2026-10-25T10:51:11+09:00",
+      "source_url": "https://www.onnuri.gift/place",
+      "source_snapshot_sha256": "af6866d59fd471cbe26ed0cefa112ca046c4e00641479ba45b5f3082e39d55aa",
+      "scope": "Province-only linkage between the exact annual name/market and archived operator address. Vehicle-fuel identity and current membership remain unresolved in the supported region."
+    },
+    "58bf924a52d2ce1fb7de7c8e": {
+      "status": "region_identified",
+      "source_kind": "archived_operator_place",
+      "annual_row": {
+        "가맹점명": "대성석유",
+        "소속 시장명(또는 상점가)": "매월동상인회 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": "등경유",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2025"
+      },
+      "operator_record": {
+        "frCd": "05273200078",
+        "frcsNm": "대성석유",
+        "frcsAddr": "광주광역시 서구 화개길 24-3 (매월동)",
+        "mrktNm": "매월동상인회 골목형상점가",
+        "placeTypeCd": "08",
+        "placeTypeNm": "기타소매업",
+        "addrCd": "12240",
+        "latitude": 35.120688,
+        "longitude": 126.856856,
+        "paperYn": "Y",
+        "cardYn": "Y",
+        "qrYn": "Y"
+      },
+      "evidence": [
+        "output/audits/regional_gap_20261102/candidate_regions_20261103_1700.json"
+      ],
+      "checked_at": "2026-11-03T17:07:50+09:00",
+      "source_checked_at": "2026-10-25T10:51:11+09:00",
+      "source_url": "https://www.onnuri.gift/place",
+      "source_snapshot_sha256": "af6866d59fd471cbe26ed0cefa112ca046c4e00641479ba45b5f3082e39d55aa",
+      "scope": "Province-only linkage between the exact annual name/market and archived operator address. Vehicle-fuel identity and current membership remain unresolved in the supported region."
+    },
+    "3d8d8f19bfe620a6108e4c04": {
+      "status": "region_identified",
+      "source_kind": "archived_operator_place",
+      "annual_row": {
+        "가맹점명": "SK삼성에너지",
+        "소속 시장명(또는 상점가)": "두암초주변 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": "석유",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2026"
+      },
+      "operator_record": {
+        "frCd": "05658200021",
+        "frcsNm": "SK삼성에너지",
+        "frcsAddr": "광주광역시 북구 탁영로15번길 10 (두암동)",
+        "mrktNm": "두암초주변 골목형상점가",
+        "placeTypeCd": "08",
+        "placeTypeNm": "기타소매업",
+        "addrCd": "12300",
+        "latitude": 35.16705,
+        "longitude": 126.934441,
+        "paperYn": "Y",
+        "cardYn": "Y",
+        "qrYn": "Y"
+      },
+      "evidence": [
+        "output/audits/regional_gap_20261102/candidate_regions_20261103_1700.json"
+      ],
+      "checked_at": "2026-11-03T17:07:50+09:00",
+      "source_checked_at": "2026-10-25T10:51:11+09:00",
+      "source_url": "https://www.onnuri.gift/place",
+      "source_snapshot_sha256": "af6866d59fd471cbe26ed0cefa112ca046c4e00641479ba45b5f3082e39d55aa",
+      "scope": "Province-only linkage between the exact annual name/market and archived operator address. Vehicle-fuel identity and current membership remain unresolved in the supported region."
+    },
+    "6fed398149a3ddc242eb314c": {
+      "status": "region_identified",
+      "source_kind": "archived_operator_place",
+      "annual_row": {
+        "가맹점명": "SK동진석유",
+        "소속 시장명(또는 상점가)": "중흥중가로 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": "유류",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2025"
+      },
+      "operator_record": {
+        "frCd": "05023200024",
+        "frcsNm": "SK동진석유",
+        "frcsAddr": "광주광역시 북구 중가로85번길 28 (중흥동)",
+        "mrktNm": "중흥중가로 골목형상점가",
+        "placeTypeCd": "08",
+        "placeTypeNm": "기타소매업",
+        "addrCd": "12300",
+        "latitude": 35.15978,
+        "longitude": 126.909609,
+        "paperYn": "Y",
+        "cardYn": "Y",
+        "qrYn": "Y"
+      },
+      "evidence": [
+        "output/audits/regional_gap_20261102/candidate_regions_20261103_1700.json"
+      ],
+      "checked_at": "2026-11-03T17:07:50+09:00",
+      "source_checked_at": "2026-10-25T10:51:11+09:00",
+      "source_url": "https://www.onnuri.gift/place",
+      "source_snapshot_sha256": "af6866d59fd471cbe26ed0cefa112ca046c4e00641479ba45b5f3082e39d55aa",
+      "scope": "Province-only linkage between the exact annual name/market and archived operator address. Vehicle-fuel identity and current membership remain unresolved in the supported region."
+    },
+    "aec951dbdb417bcb46318c53": {
+      "status": "region_identified",
+      "source_kind": "archived_operator_place",
+      "annual_row": {
+        "가맹점명": "SK경인석유",
+        "소속 시장명(또는 상점가)": "두암1동군왕로 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": "등유,경유",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2026"
+      },
+      "operator_record": {
+        "frCd": "05626200027",
+        "frcsNm": "SK경인석유",
+        "frcsAddr": "광주광역시 북구 동문대로30번길 24 (풍향동)",
+        "mrktNm": "두암1동군왕로 골목형상점가",
+        "placeTypeCd": "08",
+        "placeTypeNm": "기타소매업",
+        "addrCd": "12300",
+        "latitude": 35.167184,
+        "longitude": 126.921058,
+        "paperYn": "Y",
+        "cardYn": "Y",
+        "qrYn": "Y"
+      },
+      "evidence": [
+        "output/audits/regional_gap_20261102/candidate_regions_20261103_1700.json"
+      ],
+      "checked_at": "2026-11-03T17:07:50+09:00",
+      "source_checked_at": "2026-10-25T10:51:11+09:00",
+      "source_url": "https://www.onnuri.gift/place",
+      "source_snapshot_sha256": "af6866d59fd471cbe26ed0cefa112ca046c4e00641479ba45b5f3082e39d55aa",
+      "scope": "Province-only linkage between the exact annual name/market and archived operator address. Vehicle-fuel identity and current membership remain unresolved in the supported region."
+    }
+  },
+  "before_jeonnam": {
+    "region": "전남",
+    "status": "collecting",
+    "jobs_total": 43,
+    "jobs_remaining": 6,
+    "jobs_needing_review": 0,
+    "source_gaps": 24,
+    "review_records": 10,
+    "inventory_reviewed": false,
+    "mapped_records_to_recheck": 28,
+    "membership_check_status": {
+      "confirmed_in_issuer_scope": 23,
+      "needs_review_not_found": 3,
+      "pending": 2
+    },
+    "unresolved_annual_identities": 21,
+    "missing_standard_checks": [
+      "market_coverage",
+      "membership_rechecks",
+      "annual_identities"
+    ],
+    "standard_checks_complete": false,
+    "scope": "issuer-scoped rechecks; paper/QR/operator freshness not inferred"
+  },
+  "after_jeonnam": {
+    "region": "전남",
+    "status": "collecting",
+    "jobs_total": 43,
+    "jobs_remaining": 6,
+    "jobs_needing_review": 0,
+    "source_gaps": 12,
+    "review_records": 10,
+    "inventory_reviewed": false,
+    "mapped_records_to_recheck": 28,
+    "membership_check_status": {
+      "confirmed_in_issuer_scope": 23,
+      "needs_review_not_found": 3,
+      "pending": 2
+    },
+    "unresolved_annual_identities": 9,
+    "missing_standard_checks": [
+      "market_coverage",
+      "membership_rechecks",
+      "annual_identities"
+    ],
+    "standard_checks_complete": false,
+    "scope": "issuer-scoped rechecks; paper/QR/operator freshness not inferred"
+  },
+  "gwangju_unresolved_before": 21,
+  "gwangju_unresolved_after": 21,
+  "preserved": {
+    "attempts": true,
+    "jobs": true,
+    "sources": true,
+    "effective_collection_limits": true,
+    "survey_inventory": true,
+    "membership_rechecks": true,
+    "source_gaps": true,
+    "review": true
+  },
+  "new_map_stations": 0,
+  "map_mutated": false
+}

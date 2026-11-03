@@ -15,10 +15,12 @@ try:
     from nationwide import name_key, region, row_id, non_vehicle, valid_coords
     from discover_address_candidates import address_key
     from supplemental_onnuri import meters
+    from market_regions import market_key
 except ModuleNotFoundError:
     from scripts.nationwide import name_key, region, row_id, non_vehicle, valid_coords
     from scripts.discover_address_candidates import address_key
     from scripts.supplemental_onnuri import meters
+    from scripts.market_regions import market_key
 
 ROOT = Path(__file__).resolve().parents[1]
 RECHECK_AFTER = '2026-11-01T00:00:00+09:00'
@@ -51,6 +53,37 @@ def after_cutoff(value, cutoff=RECHECK_AFTER):
         return checked.tzinfo is not None and checked >= datetime.fromisoformat(cutoff)
     except (TypeError, ValueError):
         return False
+
+
+def candidate_regions(candidate, resolution=None):
+    """Locate one ambiguous annual identity without certifying fuel or membership.
+
+    Only a separately reviewed exact name/market record may narrow the combined
+    regional label. The candidate stays unresolved in its supported region.
+    """
+    possible = candidate['possible_regions']
+    resolution = resolution or {}
+    if set(possible) != {'전남', '광주'} or resolution.get('status') != 'region_identified':
+        return possible
+    if resolution.get('source_kind') != 'archived_operator_place' or not resolution.get('evidence'):
+        return possible
+    if resolution.get('annual_row') != candidate['row']:
+        return possible
+    try:
+        dates = [datetime.fromisoformat(resolution[key]) for key in ('checked_at', 'source_checked_at')]
+        if any(value.tzinfo is None for value in dates):
+            return possible
+    except (KeyError, TypeError, ValueError):
+        return possible
+    record = resolution.get('operator_record') or {}
+    row = candidate['row']
+    area = region(record.get('frcsAddr', ''))
+    if not record.get('frCd') or area not in possible or not valid_coords(record.get('latitude'), record.get('longitude')):
+        return possible
+    if market_key(record.get('frcsNm')) != market_key(row['가맹점명']) or \
+            market_key(record.get('mrktNm')) != market_key(row['소속 시장명(또는 상점가)']):
+        return possible
+    return [area]
 
 
 def map_links(evidence, known):
@@ -256,9 +289,9 @@ def survey_progress(state, area):
         missing.append('membership_rechecks')
     unresolved = []
     for c in inv['annual_candidates']:
-        if area not in c['possible_regions'] or c['status'] == 'excluded_non_vehicle' or c['mapped_ids']:
-            continue
         resolved = state.get('candidate_resolutions', {}).get(c['candidate_id'], {})
+        if area not in candidate_regions(c, resolved) or c['status'] == 'excluded_non_vehicle' or c['mapped_ids']:
+            continue
         if not (resolved.get('status') in ('linked', 'excluded_non_vehicle', 'duplicate') and
                 resolved.get('evidence') and resolved.get('checked_at')):
             unresolved.append(c['candidate_id'])
