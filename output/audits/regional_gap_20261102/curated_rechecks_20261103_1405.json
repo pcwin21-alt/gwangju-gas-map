@@ -1,0 +1,330 @@
+{
+  "reviewed_at": "2026-11-03T14:06:16+09:00",
+  "region": "전남",
+  "collection_run": "https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41581130188",
+  "state_commit_before_manual_review": "30fb51ab5ef7f50d674774be3b725be6e3b16a4b",
+  "new_source_requests_for_review": 0,
+  "reviews": [
+    {
+      "station_id": "onnuri:kb:000000055922645",
+      "name": "(주)대창석유 (대인)",
+      "bank_id": "000000055922645",
+      "job_id": "2c0ae8db0c7828f8bbe5e0d1",
+      "decision": "confirmed_in_issuer_scope",
+      "source_checked_at": "2026-11-03T14:01:44+09:00",
+      "current_response_file": "responses/f0c814be34b74f59a196a33c.json",
+      "current_response_sha256": "611072c6423287efcd4007445608dcb03ed881467828232a94c03f8ae4fb9c3c",
+      "current_bank_record": {
+        "location": {
+          "lat": "35.2770071066",
+          "lng": "127.2916235046"
+        },
+        "content": {
+          "tel": "061)362-7778",
+          "title": "(주)대창석유 (대인)",
+          "category": "주유소",
+          "address": "전남 곡성군 곡성읍 ",
+          "distance": "0",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000055922645",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        }
+      },
+      "prior_curated_identity": {
+        "identity_review": "same_premise_confirmed",
+        "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+        "checked_at": "2026-10-27T16:38:41+09:00",
+        "bank_record": {
+          "location": {
+            "lat": "35.2770071066",
+            "lng": "127.2916235046"
+          },
+          "content": {
+            "tel": "061)362-7778",
+            "title": "(주)대창석유 (대인)",
+            "category": "주유소",
+            "address": "전남 곡성군 곡성읍 ",
+            "distance": "28064",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000055922645",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          },
+          "checked_at": "2026-10-27T16:38:41+09:00",
+          "query_address": [
+            "전남",
+            "곡성군",
+            "곡성읍"
+          ],
+          "coordinate_status": "present_unverified"
+        },
+        "municipal_record": {
+          "name": "㈜대창석유직영 대인주유소",
+          "address": "전라남도 곡성군 곡성읍 곡성로 796",
+          "category": "주유소",
+          "source_url": "https://www.gokseong.go.kr/kr/noticeViewFour.do?codeId=ANN0000027&menuNo=103009004003",
+          "source_date": null
+        },
+        "identity_record": {
+          "name": "㈜대창석유직영 대인주유소",
+          "address": "전라남도 곡성군 곡성읍 곡성로 796",
+          "phone": "061-362-7778",
+          "source_url": "https://www.gokseong.go.kr/kr/noticeViewFour.do?codeId=ANN0000027&menuNo=103009004003",
+          "access_method": "search_index_full_record",
+          "checked_at": "2026-10-26"
+        },
+        "annual_candidate_ids": [],
+        "identity_support": "Reviewed bank corporate/branch name, explicit fuel category, exact phone and locality against municipal fuel listing. Bank coordinates retained with separate provenance; no nearby commercial address substitution."
+      },
+      "validated_current_evidence": {
+        "identity_review": "same_premise_confirmed",
+        "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+        "checked_at": "2026-11-03T14:01:44+09:00",
+        "bank_record": {
+          "location": {
+            "lat": "35.2770071066",
+            "lng": "127.2916235046"
+          },
+          "content": {
+            "tel": "061)362-7778",
+            "title": "(주)대창석유 (대인)",
+            "category": "주유소",
+            "address": "전남 곡성군 곡성읍 ",
+            "distance": "0",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000055922645",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          },
+          "checked_at": "2026-11-03T14:01:44+09:00"
+        },
+        "municipal_record": {
+          "name": "㈜대창석유직영 대인주유소",
+          "address": "전라남도 곡성군 곡성읍 곡성로 796",
+          "category": "주유소",
+          "source_url": "https://www.gokseong.go.kr/kr/noticeViewFour.do?codeId=ANN0000027&menuNo=103009004003",
+          "source_date": null
+        },
+        "identity_record": {
+          "name": "㈜대창석유직영 대인주유소",
+          "address": "전라남도 곡성군 곡성읍 곡성로 796",
+          "phone": "061-362-7778",
+          "source_url": "https://www.gokseong.go.kr/kr/noticeViewFour.do?codeId=ANN0000027&menuNo=103009004003",
+          "access_method": "search_index_full_record",
+          "checked_at": "2026-10-26"
+        },
+        "annual_candidate_ids": [],
+        "identity_support": "Reviewed bank corporate/branch name, explicit fuel category, exact phone and locality against municipal fuel listing. Bank coordinates retained with separate provenance; no nearby commercial address substitution."
+      },
+      "independent_physical_records": [
+        {
+          "source_id": "station_locations.json:4446",
+          "name": "(주)대창석유 직영 대인주유소",
+          "address": "전라남도 곡성군 곡성읍 곡성로 796",
+          "phone": "",
+          "lat": "35.2769531114",
+          "lng": "127.2917794284",
+          "fuel_kind": "liquid",
+          "source_date": "2024-08-19",
+          "source_url": "https://www.data.go.kr/data/15129441/standard.do"
+        }
+      ],
+      "why_automatic_review_failed": "Generic commercial matcher could not link municipal/corporate branch spelling; current issuer ID was actually returned. Existing individually pinned identity validators passed.",
+      "checks": [
+        "same previously reviewed issuer ID",
+        "pinned branch identity or reviewed exact alias",
+        "explicit fuel category and Onnuri flag",
+        "same independent physical road-address premise within 100m",
+        "no current operator/paper/QR inference"
+      ],
+      "operator_paper_QR_dates_change": false,
+      "new_station": false
+    },
+    {
+      "station_id": "onnuri:kb:000000055922220",
+      "name": "(주)대창석유 (태인)",
+      "bank_id": "000000055922220",
+      "job_id": "b232bd4b131f52e779fe25d8",
+      "decision": "confirmed_in_issuer_scope",
+      "source_checked_at": "2026-11-03T14:04:46+09:00",
+      "current_response_file": "responses/94fc2f829cb44fcd8b97dc65.json",
+      "current_response_sha256": "bc35b22d21e78931da03e707b7712526687768bc129b823c8daf6fa7593a6591",
+      "current_bank_record": {
+        "location": {
+          "lat": "34.940399796",
+          "lng": "127.7543484052"
+        },
+        "content": {
+          "tel": "061)792-3105",
+          "title": "(주)대창석유 (태인)",
+          "category": "주유소",
+          "address": "전남 광양시 태인동 ",
+          "distance": "13",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000055922220",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        }
+      },
+      "prior_curated_identity": {
+        "identity_review": "same_premise_confirmed",
+        "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+        "checked_at": "2026-10-27T16:39:14+09:00",
+        "bank_record": {
+          "location": {
+            "lat": "34.940399796",
+            "lng": "127.7543484052"
+          },
+          "content": {
+            "tel": "061)792-3105",
+            "title": "(주)대창석유 (태인)",
+            "category": "주유소",
+            "address": "전남 광양시 태인동 ",
+            "distance": "81098",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000055922220",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          },
+          "checked_at": "2026-10-27T16:39:14+09:00",
+          "query_address": [
+            "전남",
+            "광양시",
+            "태인동"
+          ],
+          "coordinate_status": "present_unverified"
+        },
+        "commercial_record": {
+          "상가업소번호": "MA0101202503A0025892",
+          "상호명": "태인주유소",
+          "지점명": "",
+          "상권업종소분류코드": "G21401",
+          "상권업종소분류명": "주유소",
+          "표준산업분류코드": "G47711",
+          "표준산업분류명": "운송장비용 주유소 운영업",
+          "시군구명": "광양시",
+          "도로명주소": "전남광주통합특별시 광양시 백운1로 107",
+          "지번주소": "전남광주통합특별시 광양시 태인동 1653-2",
+          "위도": "34.940285652818",
+          "경도": "127.754350964769",
+          "region": "전남"
+        },
+        "commercial_source": {
+          "archive_sha256": "57aa361544108ff4fc73334f87d2ced61e41fe8638dd70bcd842930f865d2386",
+          "source_date": "2026-06-30",
+          "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+          "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
+        },
+        "annual_candidate_ids": [],
+        "identity_support": "Reviewed corporate-branch name (주)대창석유 (태인) against 태인주유소. Fuel classification and 태인동 agree; commercial coordinates 13m from bank, same premises 백운1로107. No generalized fuzzy alias rule."
+      },
+      "validated_current_evidence": {
+        "identity_review": "same_premise_confirmed",
+        "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+        "checked_at": "2026-11-03T14:04:46+09:00",
+        "bank_record": {
+          "location": {
+            "lat": "34.940399796",
+            "lng": "127.7543484052"
+          },
+          "content": {
+            "tel": "061)792-3105",
+            "title": "(주)대창석유 (태인)",
+            "category": "주유소",
+            "address": "전남 광양시 태인동 ",
+            "distance": "13",
+            "kindGb": "0",
+            "onNuliGb": "1",
+            "tradiGb": "0",
+            "liveHoodGb": "1",
+            "sangsaengGb": "1",
+            "franchiseNo": "000000055922220",
+            "highOilGb": "1",
+            "seoulGb": "0"
+          },
+          "checked_at": "2026-11-03T14:04:46+09:00"
+        },
+        "commercial_record": {
+          "상가업소번호": "MA0101202503A0025892",
+          "상호명": "태인주유소",
+          "지점명": "",
+          "상권업종소분류코드": "G21401",
+          "상권업종소분류명": "주유소",
+          "표준산업분류코드": "G47711",
+          "표준산업분류명": "운송장비용 주유소 운영업",
+          "시군구명": "광양시",
+          "도로명주소": "전남광주통합특별시 광양시 백운1로 107",
+          "지번주소": "전남광주통합특별시 광양시 태인동 1653-2",
+          "위도": "34.940285652818",
+          "경도": "127.754350964769",
+          "region": "전남"
+        },
+        "commercial_source": {
+          "archive_sha256": "57aa361544108ff4fc73334f87d2ced61e41fe8638dd70bcd842930f865d2386",
+          "source_date": "2026-06-30",
+          "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+          "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
+        },
+        "annual_candidate_ids": [],
+        "identity_support": "Reviewed corporate-branch name (주)대창석유 (태인) against 태인주유소. Fuel classification and 태인동 agree; commercial coordinates 13m from bank, same premises 백운1로107. No generalized fuzzy alias rule."
+      },
+      "independent_physical_records": [
+        {
+          "source_id": "station_locations.json:58",
+          "name": "태인주유소",
+          "address": "전남광주통합특별시 광양시 백운1로 107",
+          "phone": "061-792-3105",
+          "lat": "34.94036623",
+          "lng": "127.7543479",
+          "fuel_kind": "liquid",
+          "source_date": "2026-07-29",
+          "source_url": "https://www.data.go.kr/data/15129441/standard.do"
+        },
+        {
+          "source_id": "MA0101202503A0025892",
+          "name": "태인주유소",
+          "branch": "",
+          "address": "전남광주통합특별시 광양시 백운1로 107",
+          "phone": null,
+          "lat": "34.940285652818",
+          "lng": "127.754350964769",
+          "fuel_kind": "liquid",
+          "source_date": "2026-06-30",
+          "source_url": "https://www.data.go.kr/data/15083033/fileData.do"
+        }
+      ],
+      "why_automatic_review_failed": "Generic commercial matcher could not link municipal/corporate branch spelling; current issuer ID was actually returned. Existing individually pinned identity validators passed.",
+      "checks": [
+        "same previously reviewed issuer ID",
+        "pinned branch identity or reviewed exact alias",
+        "explicit fuel category and Onnuri flag",
+        "same independent physical road-address premise within 100m",
+        "no current operator/paper/QR inference"
+      ],
+      "operator_paper_QR_dates_change": false,
+      "new_station": false
+    }
+  ],
+  "new_station_additions": 0
+}
