@@ -549,7 +549,7 @@
     {
       "identity_review": "same_premise_confirmed",
       "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
-      "checked_at": "2026-10-27T16:39:14+09:00",
+      "checked_at": "2026-11-03T14:04:46+09:00",
       "bank_record": {
         "location": {
           "lat": "34.940399796",
@@ -560,7 +560,7 @@
           "title": "(주)대창석유 (태인)",
           "category": "주유소",
           "address": "전남 광양시 태인동 ",
-          "distance": "81098",
+          "distance": "13",
           "kindGb": "0",
           "onNuliGb": "1",
           "tradiGb": "0",
@@ -570,13 +570,7 @@
           "highOilGb": "1",
           "seoulGb": "0"
         },
-        "checked_at": "2026-10-27T16:39:14+09:00",
-        "query_address": [
-          "전남",
-          "광양시",
-          "태인동"
-        ],
-        "coordinate_status": "present_unverified"
+        "checked_at": "2026-11-03T14:04:46+09:00"
       },
       "commercial_record": {
         "상가업소번호": "MA0101202503A0025892",
@@ -600,7 +594,8 @@
         "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
       },
       "annual_candidate_ids": [],
-      "identity_support": "Reviewed corporate-branch name (주)대창석유 (태인) against 태인주유소. Fuel classification and 태인동 agree; commercial coordinates 13m from bank, same premises 백운1로107. No generalized fuzzy alias rule."
+      "identity_support": "Reviewed corporate-branch name (주)대창석유 (태인) against 태인주유소. Fuel classification and 태인동 agree; commercial coordinates 13m from bank, same premises 백운1로107. No generalized fuzzy alias rule.",
+      "identity_review_evidence": "https://github.com/pcwin21-alt/gwangju-gas-map/blob/04059f2/output/audits/regional_gap_20261102/curated_rechecks_20261103_1405.json"
     },
     {
       "identity_review": "same_premise_confirmed",
