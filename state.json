@@ -8310,6 +8310,102 @@
       },
       "municipal_file_sha256": "7fd79c4ab3bc737bff9e9564220fdc87bf14dc6f9de596ff1cf76b2942807361",
       "identity_review_evidence": "https://github.com/pcwin21-alt/gwangju-gas-map/blob/06457ac/output/audits/regional_gap_20261102/mokpo_samhak_recheck_20261103.json"
+    },
+    {
+      "identity_review": "same_premise_confirmed",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "checked_at": "2026-11-03T14:01:44+09:00",
+      "bank_record": {
+        "location": {
+          "lat": "35.2770071066",
+          "lng": "127.2916235046"
+        },
+        "content": {
+          "tel": "061)362-7778",
+          "title": "(주)대창석유 (대인)",
+          "category": "주유소",
+          "address": "전남 곡성군 곡성읍 ",
+          "distance": "0",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000055922645",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-11-03T14:01:44+09:00"
+      },
+      "municipal_record": {
+        "name": "㈜대창석유직영 대인주유소",
+        "address": "전라남도 곡성군 곡성읍 곡성로 796",
+        "category": "주유소",
+        "source_url": "https://www.gokseong.go.kr/kr/noticeViewFour.do?codeId=ANN0000027&menuNo=103009004003",
+        "source_date": null
+      },
+      "identity_record": {
+        "name": "㈜대창석유직영 대인주유소",
+        "address": "전라남도 곡성군 곡성읍 곡성로 796",
+        "phone": "061-362-7778",
+        "source_url": "https://www.gokseong.go.kr/kr/noticeViewFour.do?codeId=ANN0000027&menuNo=103009004003",
+        "access_method": "search_index_full_record",
+        "checked_at": "2026-10-26"
+      },
+      "annual_candidate_ids": [],
+      "identity_support": "Reviewed bank corporate/branch name, explicit fuel category, exact phone and locality against municipal fuel listing. Bank coordinates retained with separate provenance; no nearby commercial address substitution.",
+      "identity_review_evidence": "https://github.com/pcwin21-alt/gwangju-gas-map/blob/04059f2/output/audits/regional_gap_20261102/curated_rechecks_20261103_1405.json"
+    },
+    {
+      "identity_review": "same_premise_confirmed",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "checked_at": "2026-11-03T14:04:46+09:00",
+      "bank_record": {
+        "location": {
+          "lat": "34.940399796",
+          "lng": "127.7543484052"
+        },
+        "content": {
+          "tel": "061)792-3105",
+          "title": "(주)대창석유 (태인)",
+          "category": "주유소",
+          "address": "전남 광양시 태인동 ",
+          "distance": "13",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000055922220",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        },
+        "checked_at": "2026-11-03T14:04:46+09:00"
+      },
+      "commercial_record": {
+        "상가업소번호": "MA0101202503A0025892",
+        "상호명": "태인주유소",
+        "지점명": "",
+        "상권업종소분류코드": "G21401",
+        "상권업종소분류명": "주유소",
+        "표준산업분류코드": "G47711",
+        "표준산업분류명": "운송장비용 주유소 운영업",
+        "시군구명": "광양시",
+        "도로명주소": "전남광주통합특별시 광양시 백운1로 107",
+        "지번주소": "전남광주통합특별시 광양시 태인동 1653-2",
+        "위도": "34.940285652818",
+        "경도": "127.754350964769",
+        "region": "전남"
+      },
+      "commercial_source": {
+        "archive_sha256": "57aa361544108ff4fc73334f87d2ced61e41fe8638dd70bcd842930f865d2386",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+        "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
+      },
+      "annual_candidate_ids": [],
+      "identity_support": "Reviewed corporate-branch name (주)대창석유 (태인) against 태인주유소. Fuel classification and 태인동 agree; commercial coordinates 13m from bank, same premises 백운1로107. No generalized fuzzy alias rule.",
+      "identity_review_evidence": "https://github.com/pcwin21-alt/gwangju-gas-map/blob/04059f2/output/audits/regional_gap_20261102/curated_rechecks_20261103_1405.json"
     }
   ],
   "review": [
@@ -8578,14 +8674,28 @@
       },
       "checked_at": "2026-11-03T14:01:44+09:00",
       "independent_fuel_candidate_ids": [],
-      "reason": "Independent exact business/address/category evidence incomplete; do not exclude by bank category alone"
+      "reason": "Independent exact business/address/category evidence incomplete; do not exclude by bank category alone",
+      "status": "resolved",
+      "resolution": "confirmed_in_issuer_scope",
+      "resolved_at": "2026-11-03T14:06:16+09:00",
+      "source_checked_at": "2026-11-03T14:01:44+09:00",
+      "evidence": [
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/04059f2/output/audits/regional_gap_20261102/curated_rechecks_20261103_1405.json"
+      ]
     },
     {
       "region": "전남",
       "station_id": "onnuri:kb:000000055922645",
       "job_id": "2c0ae8db0c7828f8bbe5e0d1",
       "checked_at": "2026-11-03T14:01:44+09:00",
-      "reason": "No independently matched current issuer record; preserve previous station"
+      "reason": "No independently matched current issuer record; preserve previous station",
+      "status": "resolved",
+      "resolution": "confirmed_in_issuer_scope",
+      "resolved_at": "2026-11-03T14:06:16+09:00",
+      "source_checked_at": "2026-11-03T14:01:44+09:00",
+      "evidence": [
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/04059f2/output/audits/regional_gap_20261102/curated_rechecks_20261103_1405.json"
+      ]
     },
     {
       "job_id": "b232bd4b131f52e779fe25d8",
@@ -8612,14 +8722,28 @@
       },
       "checked_at": "2026-11-03T14:04:46+09:00",
       "independent_fuel_candidate_ids": [],
-      "reason": "Independent exact business/address/category evidence incomplete; do not exclude by bank category alone"
+      "reason": "Independent exact business/address/category evidence incomplete; do not exclude by bank category alone",
+      "status": "resolved",
+      "resolution": "confirmed_in_issuer_scope",
+      "resolved_at": "2026-11-03T14:06:16+09:00",
+      "source_checked_at": "2026-11-03T14:04:46+09:00",
+      "evidence": [
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/04059f2/output/audits/regional_gap_20261102/curated_rechecks_20261103_1405.json"
+      ]
     },
     {
       "region": "전남",
       "station_id": "onnuri:kb:000000055922220",
       "job_id": "b232bd4b131f52e779fe25d8",
       "checked_at": "2026-11-03T14:04:46+09:00",
-      "reason": "No independently matched current issuer record; preserve previous station"
+      "reason": "No independently matched current issuer record; preserve previous station",
+      "status": "resolved",
+      "resolution": "confirmed_in_issuer_scope",
+      "resolved_at": "2026-11-03T14:06:16+09:00",
+      "source_checked_at": "2026-11-03T14:04:46+09:00",
+      "evidence": [
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/04059f2/output/audits/regional_gap_20261102/curated_rechecks_20261103_1405.json"
+      ]
     }
   ],
   "source_gaps": [
@@ -9354,7 +9478,7 @@
     "jobs_done": 37,
     "jobs_remaining": 190,
     "review_records": 16,
-    "evidence_records": 22,
+    "evidence_records": 24,
     "source_gaps": 90,
     "source_status": {
       "onnuri": "blocked",
@@ -9370,12 +9494,12 @@
         "jobs_remaining": 6,
         "jobs_needing_review": 0,
         "source_gaps": 24,
-        "review_records": 14,
+        "review_records": 10,
         "inventory_reviewed": false,
         "mapped_records_to_recheck": 28,
         "membership_check_status": {
-          "confirmed_in_issuer_scope": 21,
-          "needs_review_not_found": 5,
+          "confirmed_in_issuer_scope": 23,
+          "needs_review_not_found": 3,
           "pending": 2
         },
         "unresolved_annual_identities": 21,
@@ -9816,10 +9940,11 @@
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/76d7041/output/audits/regional_gap_20261102/run_20261103_0743.json",
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/06457ac/output/audits/regional_gap_20261102/mokpo_samhak_recheck_20261103.json",
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f12f94c/output/audits/regional_gap_20261102/run_20261103_1001.json",
-        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f12f94c/output/audits/regional_gap_20261102/yeosu_hyundai_identity_lead_20261103.json"
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f12f94c/output/audits/regional_gap_20261102/yeosu_hyundai_identity_lead_20261103.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/04059f2/output/audits/regional_gap_20261102/curated_rechecks_20261103_1405.json"
       ],
       "checked_at": null,
-      "last_reviewed_at": "2026-11-03T10:46:54+09:00"
+      "last_reviewed_at": "2026-11-03T14:06:16+09:00"
     },
     "전북": {
       "status": "pending",
@@ -22211,11 +22336,12 @@
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/76d7041/output/audits/regional_gap_20261102/run_20261103_0743.json",
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/06457ac/output/audits/regional_gap_20261102/mokpo_samhak_recheck_20261103.json",
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f12f94c/output/audits/regional_gap_20261102/run_20261103_1001.json",
-          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f12f94c/output/audits/regional_gap_20261102/yeosu_hyundai_identity_lead_20261103.json"
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f12f94c/output/audits/regional_gap_20261102/yeosu_hyundai_identity_lead_20261103.json",
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/04059f2/output/audits/regional_gap_20261102/curated_rechecks_20261103_1405.json"
         ],
         "checked_at": null,
         "scope": "Current issuer rechecks incomplete; coordinate discrepancy follow-up is discovery only",
-        "last_reviewed_at": "2026-11-03T10:46:54+09:00"
+        "last_reviewed_at": "2026-11-03T14:06:16+09:00"
       },
       "market_coverage": {
         "status": "pending",
@@ -23086,16 +23212,22 @@
       "identity_review_evidence": "https://github.com/pcwin21-alt/gwangju-gas-map/blob/06457ac/output/audits/regional_gap_20261102/mokpo_samhak_recheck_20261103.json"
     },
     "onnuri:kb:000000055922645": {
-      "status": "needs_review_not_found",
+      "status": "confirmed_in_issuer_scope",
+      "issuer": "kbcard",
       "checked_at": "2026-11-03T14:01:44+09:00",
-      "job_id": "2c0ae8db0c7828f8bbe5e0d1",
-      "nonmembership": "not_established"
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "bank_id": "000000055922645",
+      "other_payment_methods": "not_reverified",
+      "identity_review_evidence": "https://github.com/pcwin21-alt/gwangju-gas-map/blob/04059f2/output/audits/regional_gap_20261102/curated_rechecks_20261103_1405.json"
     },
     "onnuri:kb:000000055922220": {
-      "status": "needs_review_not_found",
+      "status": "confirmed_in_issuer_scope",
+      "issuer": "kbcard",
       "checked_at": "2026-11-03T14:04:46+09:00",
-      "job_id": "b232bd4b131f52e779fe25d8",
-      "nonmembership": "not_established"
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "bank_id": "000000055922220",
+      "other_payment_methods": "not_reverified",
+      "identity_review_evidence": "https://github.com/pcwin21-alt/gwangju-gas-map/blob/04059f2/output/audits/regional_gap_20261102/curated_rechecks_20261103_1405.json"
     }
   },
   "initial_plan_id": "fuel-candidate-inventory-20261102-v1",
