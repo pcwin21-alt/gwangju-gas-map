@@ -1,6 +1,6 @@
 {
   "preparedAt": "2026-11-03T14:12:40.087248+09:00",
-  "status": "console_draft_saved_upload_and_device_test_pending",
+  "status": "map_domain_fixed_toss_device_retest_pending",
   "appName": "onnuri-fuel-map",
   "workspaceId": "105239",
   "consoleUrl": "https://apps-in-toss.toss.im/workspace/105239/mini-app/onnuri-fuel-map/app-build",
@@ -8,8 +8,8 @@
   "readyForSubmission": false,
   "bundleUploadedThisRun": false,
   "reviewSubmittedThisRun": false,
-  "tossDeviceTest": "not_run",
-  "consoleInspection": "authenticated console; actual metadata and category saved and reloaded; upload locally blocked; review button disabled",
+  "tossDeviceTest": "user_reported_entire_app_blank_retest_pending",
+  "consoleInspection": "Test version 20261103-1 QR observed; Kakao SDK domains saved and reloaded; real Toss retest pending",
   "checks": {
     "nodeTestsPassed": 3,
     "pythonTestsPassed": 6,
@@ -19,12 +19,12 @@
     "logo": "600x600 PNG, opaque",
     "browser": "manual lookup, clear/reset, region and fuel/payment filters, pagination, reload state, local details and focus return, help and language; widths 288/360/1280; no real Toss device",
     "javascriptSyntaxPassed": 20,
-    "bundleArtifactChecksPassed": 9
+    "bundleArtifactChecksPassed": 9,
+    "mapRepair": "Same pinned .ait rendered map and markers on the already registered localhost:8080; 177 loaded map images and no browser warnings/errors. Native Toss runtime is not certified."
   },
   "blockingChecks": [
-    "Upload pinned .ait bundle and logo; browser file URL access currently prevents automated upload",
-    "Complete actual Toss-app test at least once; map origins, GPS and native back unverified",
-    "Confirm final platform eligibility, applicable notices and truthful operator acknowledgements before submission"
+    "Reopen test version 20261103-1 in the real Toss app and verify the reported blank screen; capture Web Debug Tools Log/Network if it persists",
+    "Verify remaining logo, functional device tests and truthful operator acknowledgements before submission"
   ],
   "files": {
     "artifact-audit.json": {
@@ -36,8 +36,8 @@
       "sha256": "63386aac30bfa30d722ee3ac2d56e1147cec02066f2be591ff903611722d62e1"
     },
     "console-recheck.json": {
-      "bytes": 1542,
-      "sha256": "cc4e1907e3f94ee8e126979dd6848301943872ffaf3a5433ca1af852bc226be4"
+      "bytes": 2428,
+      "sha256": "e4eb629e201e5cb68be08616b1c1154ea3a40767ab6c620aae34bdd05314891f"
     },
     "logo-600.png": {
       "bytes": 14747,
@@ -52,12 +52,28 @@
       "sha256": "e1f72f65b654b4b5bc2bc7430261c5614a824697d4c85d91a8dc0b85faf63c7f"
     },
     "START_HERE.md": {
-      "bytes": 20504,
-      "sha256": "1974dbacc1a96e2e454d2404d2dbd2498a7b8d62a816d9f0a5ff6170fb437b77"
+      "bytes": 23859,
+      "sha256": "403b30862854091af1df77a6ebe7c83944ce429aeff0d6ffdd2ce2597d8467ea"
     },
     "test-build-manifest.json": {
       "bytes": 6277,
       "sha256": "9a7f267568487492fb65d9eed22c0cd8a4a3fd71d8b13b64ead010714a8e461a"
+    },
+    "map-domain-fix-20261103.json": {
+      "bytes": 1770,
+      "sha256": "8a6c975497bff789c20c91760ef50edbeb71ae372617f480b1680cb6cadfad02"
+    },
+    "map-domains-saved.jpg": {
+      "bytes": 71929,
+      "sha256": "0eb687f9e70c21e63b9999b4e6ee6b4b7c65ed15392644c06d0ffdd90f350a86"
+    },
+    "pinned-map-local-working.jpg": {
+      "bytes": 309968,
+      "sha256": "93e97f358434db15e8dcf2814f1180d5b75d8a3e3ce1a0760a6bfd06331d9f53"
+    },
+    "NEXT_STEP.md": {
+      "bytes": 1192,
+      "sha256": "626ee977808d31d89ceb2687ab88df8e30d154832ee2417b2282aab6d79adab4"
     }
   },
   "sourceCodeCommit": "fa8c949",
@@ -70,7 +86,7 @@
     "previousLocalUiChecks": "unchanged platform code; device certification still pending"
   },
   "consoleRecheck": {
-    "checkedAt": "2026-11-03T15:27:32+09:00",
+    "checkedAt": "2026-11-03T18:50:02+09:00",
     "appName": "onnuri-fuel-map",
     "workspaceId": "105239",
     "consoleUrl": "https://apps-in-toss.toss.im/workspace/105239/mini-app/onnuri-fuel-map/meta/edit",
@@ -91,20 +107,43 @@
       "유가",
       "지역화폐"
     ],
-    "bundleUploaded": false,
-    "logoUploaded": false,
-    "tossAppTestButtonEnabled": false,
-    "reviewRequestButtonEnabled": false,
+    "bundleUploaded": true,
+    "logoUploaded": null,
+    "tossAppTestButtonEnabled": true,
+    "reviewRequestButtonEnabled": null,
     "reviewSubmitted": false,
-    "tossDeviceTest": "not_run",
-    "acknowledgements": "unchecked",
-    "uploadOutcome": "Chrome extension local file URL access restriction; no file attached",
+    "tossDeviceTest": "user_reported_entire_app_blank_retest_pending",
+    "acknowledgements": "not_changed_this_run",
+    "uploadOutcome": "Actual console QR test deployment observed; no automated upload performed in this repair",
     "serverReviewRejection": false,
     "screenshots": "platform AI capture default observed; no local fallback screenshot uploaded",
     "policyQualification": "Public automotive restriction and live automotive/fuel category differ; final eligibility not established",
     "handoffFolder": "C:\\Users\\unw\\OneDrive\\Documents\\Playground\\output\\apps-in-toss-review-20261103\\candidate-e1f72f65",
     "candidateSha256": "e1f72f65b654b4b5bc2bc7430261c5614a824697d4c85d91a8dc0b85faf63c7f",
     "handoffCandidatePinned": true,
-    "evidenceScreenshot": "console-category-review.jpg"
+    "evidenceScreenshot": "console-category-review.jpg",
+    "testVersionName": "20261103-1",
+    "logoInspection": "not_rechecked_this_run",
+    "reviewRequestInspection": "not_rechecked_this_run",
+    "mapDomainRepair": {
+      "verifiedAt": "2026-11-03T18:50:02+09:00",
+      "originalDomains": [
+        "http://localhost:8080",
+        "https://pcwin21-alt.github.io",
+        "http://127.0.0.1:5500"
+      ],
+      "addedDomains": [
+        "https://onnuri-fuel-map.private-apps.tossmini.com",
+        "https://onnuri-fuel-map.apps.tossmini.com"
+      ],
+      "saved": true,
+      "reloadedAndVerified": true,
+      "settingsModifiedAtDisplay": "2026.11.03 18:44",
+      "originalDomainsPreserved": true,
+      "bundleRebuiltOrReuploaded": false,
+      "evidenceScreenshot": "map-domains-saved.jpg",
+      "actualTossRetest": "awaiting_user_result",
+      "localPinnedMapRendered": true
+    }
   }
 }

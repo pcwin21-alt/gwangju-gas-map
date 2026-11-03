@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-03T15:27:32+09:00",
+  "checkedAt": "2026-11-03T18:50:02+09:00",
   "appName": "onnuri-fuel-map",
   "workspaceId": "105239",
   "consoleUrl": "https://apps-in-toss.toss.im/workspace/105239/mini-app/onnuri-fuel-map/meta/edit",
@@ -20,19 +20,42 @@
     "유가",
     "지역화폐"
   ],
-  "bundleUploaded": false,
-  "logoUploaded": false,
-  "tossAppTestButtonEnabled": false,
-  "reviewRequestButtonEnabled": false,
+  "bundleUploaded": true,
+  "logoUploaded": null,
+  "tossAppTestButtonEnabled": true,
+  "reviewRequestButtonEnabled": null,
   "reviewSubmitted": false,
-  "tossDeviceTest": "not_run",
-  "acknowledgements": "unchecked",
-  "uploadOutcome": "Chrome extension local file URL access restriction; no file attached",
+  "tossDeviceTest": "user_reported_entire_app_blank_retest_pending",
+  "acknowledgements": "not_changed_this_run",
+  "uploadOutcome": "Actual console QR test deployment observed; no automated upload performed in this repair",
   "serverReviewRejection": false,
   "screenshots": "platform AI capture default observed; no local fallback screenshot uploaded",
   "policyQualification": "Public automotive restriction and live automotive/fuel category differ; final eligibility not established",
   "handoffFolder": "C:\\Users\\unw\\OneDrive\\Documents\\Playground\\output\\apps-in-toss-review-20261103\\candidate-e1f72f65",
   "candidateSha256": "e1f72f65b654b4b5bc2bc7430261c5614a824697d4c85d91a8dc0b85faf63c7f",
   "handoffCandidatePinned": true,
-  "evidenceScreenshot": "console-category-review.jpg"
+  "evidenceScreenshot": "console-category-review.jpg",
+  "testVersionName": "20261103-1",
+  "logoInspection": "not_rechecked_this_run",
+  "reviewRequestInspection": "not_rechecked_this_run",
+  "mapDomainRepair": {
+    "verifiedAt": "2026-11-03T18:50:02+09:00",
+    "originalDomains": [
+      "http://localhost:8080",
+      "https://pcwin21-alt.github.io",
+      "http://127.0.0.1:5500"
+    ],
+    "addedDomains": [
+      "https://onnuri-fuel-map.private-apps.tossmini.com",
+      "https://onnuri-fuel-map.apps.tossmini.com"
+    ],
+    "saved": true,
+    "reloadedAndVerified": true,
+    "settingsModifiedAtDisplay": "2026.11.03 18:44",
+    "originalDomainsPreserved": true,
+    "bundleRebuiltOrReuploaded": false,
+    "evidenceScreenshot": "map-domains-saved.jpg",
+    "actualTossRetest": "awaiting_user_result",
+    "localPinnedMapRendered": true
+  }
 }
