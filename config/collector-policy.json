@@ -24,6 +24,7 @@
   "sources": {
     "onnuri": {"status": "blocked", "reason": "2026-10-30 HTTP 400 Request Blocked; no automatic reactivation", "url": "https://www.onnuri.gift/place"},
     "kbcard": {"status": "active", "url": "https://card.kbcard.com/BON/DVIEW/HBGV0701", "scope": "Public unauthenticated Onnuri merchant form; issuer-specific evidence only; limits are our load caps, not a provider guarantee"},
-    "datagov": {"status": "active", "requests_per_24h": 20, "url": "https://www.data.go.kr/data/3060079/fileData.do", "scope": "Published official bulk download, no private API or credentials"}
+    "datagov": {"status": "active", "requests_per_24h": 20, "url": "https://www.data.go.kr/data/3060079/fileData.do", "scope": "Published official bulk download, no private API or credentials"},
+    "kakao_local": {"status": "active", "requests_per_24h": 2, "requests_per_run": 1, "interval_seconds": 180, "url": "https://developers.kakao.com/docs/ko/local/dev-guide#search-by-keyword", "scope": "One named public business identity via installed kakao-map skill relay; no bulk indexing, membership inference, blocked-source retry or host rotation"}
   }
 }

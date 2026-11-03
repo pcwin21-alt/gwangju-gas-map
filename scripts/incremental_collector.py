@@ -1,4 +1,4 @@
-"""A resumable, source-budgeted collection loop. No LLM, proxy or credentials.
+"""A resumable, source-budgeted collection loop, without access-control bypass.
 
 Every outbound attempt is reserved and durably committed before transmission.
 The state checkout is separate from main and is never included in the site.
@@ -26,6 +26,7 @@ try:
     from survey_inventory import (install_survey, survey_jobs, make_inventory,
                                   survey_progress, completed_recheck, sync_mapped_inventory, candidate_regions)
     from collector_limits import limits, run_limit, observe, snapshot as limits_snapshot
+    import independent_place
 except ModuleNotFoundError:
     from scripts.discover_kb_fuel import parse_response, URL as KB_URL
     from scripts.nationwide import name_key, region, valid_coords
@@ -33,6 +34,7 @@ except ModuleNotFoundError:
     from scripts.survey_inventory import (install_survey, survey_jobs, make_inventory,
                                           survey_progress, completed_recheck, sync_mapped_inventory, candidate_regions)
     from scripts.collector_limits import limits, run_limit, observe, snapshot as limits_snapshot
+    from scripts import independent_place
 
 ROOT = Path(__file__).resolve().parents[1]
 POLICY = ROOT / 'config/collector-policy.json'
@@ -124,6 +126,8 @@ def initial_state(plan, policy):
 
 def request_for(job):
     kind = job['kind']
+    if kind == 'kakao_place_identity':
+        return independent_place.request_for(job)
     if kind == 'kb_search':
         target = job['target']
         if not valid_coords(target['lat'], target['lng']):
@@ -181,6 +185,14 @@ def independent_fuel_leads(bank, commercial):
 
 def handle_response(state, job, response, now, commercial, commercial_source):
     checked = stamp(now)
+    if job['kind'] == 'kakao_place_identity':
+        payload = independent_place.validate(response.json())
+        result = {'checked_at': checked, 'source': 'kakao_local', 'source_url': independent_place.SOURCE,
+                  'query': job['target']['query'], 'payload': payload,
+                  'scope': 'one named first-page identity observation; not membership or a complete area search'}
+        state.setdefault('independent_place_checks', {})[job['id']] = result
+        job.update(status='done', result='independent_identity_observations_saved', last_observed_at=checked)
+        return json.dumps(result, ensure_ascii=False).encode(), 'json'
     if job['kind'] == 'kb_search':
         total, rows = parse_response(response.content.decode('utf-8'), require_coordinates=False)
         page = job['page']
@@ -478,7 +490,8 @@ def run(state, store, policy, session, commercial, commercial_source, *, clock=t
         job = chosen
         method, url, kwargs = request_for(job)
         source = state['sources'][job['source']]
-        expected_host = 'card.kbcard.com' if job['source'] == 'kbcard' else 'www.data.go.kr'
+        expected_host = {'kbcard': 'card.kbcard.com', 'datagov': 'www.data.go.kr',
+                         'kakao_local': 'k-skill-proxy.nomadamas.org'}.get(job['source'])
         if urlparse(url).hostname != expected_host:
             raise ValueError('Unexpected source host')
         source.update(status='active', next_allowed_at=now + quota['interval_seconds'])
@@ -495,6 +508,11 @@ def run(state, store, policy, session, commercial, commercial_source, *, clock=t
             response = session.request(method, url, **kwargs, timeout=(10, 45), allow_redirects=False)
             attempt['network_duration_seconds'] = max(0, clock()-attempt['request_started_at'])
             attempt.update(http_status=response.status_code, response_sha256=hashlib.sha256(response.content).hexdigest())
+            if job['source'] == 'kakao_local':
+                # Preserve the one response even if its contract fails; no retry
+                # through a different route, host or transport is attempted.
+                blob = (attempt['id'] + '.json', json.dumps({'checked_at': stamp(clock()),
+                        'http_status': response.status_code, 'raw_response': response.text}, ensure_ascii=False).encode())
             blocked = response.status_code in (401, 403) or 'request blocked' in response.text[:4096].lower()
             if blocked:
                 source.update(status='blocked', reason='Explicit access rejection at ' + stamp(clock()))
@@ -506,9 +524,14 @@ def run(state, store, policy, session, commercial, commercial_source, *, clock=t
                               next_allowed_at=max(until or 0, source['next_allowed_at']), reason='HTTP 429')
                 attempt['status'] = 'rate_limited'
             elif response.status_code in (500, 502, 503, 504):
-                attempt['status'] = 'transient_error'
-                job.update(status='pending' if job['attempts'] < 2 else 'needs_review', reason='Upstream server error')
-                source['next_allowed_at'] = max(source['next_allowed_at'], clock() + 21600)
+                if job['source'] == 'kakao_local':
+                    attempt['status'] = 'needs_review'
+                    source.update(status='needs_review', reason='Independent place relay error; manual review required')
+                    job.update(status='needs_review', reason=source['reason'])
+                else:
+                    attempt['status'] = 'transient_error'
+                    job.update(status='pending' if job['attempts'] < 2 else 'needs_review', reason='Upstream server error')
+                    source['next_allowed_at'] = max(source['next_allowed_at'], clock() + 21600)
             elif 300 <= response.status_code < 400:
                 job.update(status='needs_review', reason='Redirect not followed automatically')
                 attempt['status'] = 'needs_review'
@@ -524,6 +547,8 @@ def run(state, store, policy, session, commercial, commercial_source, *, clock=t
         except (requests.RequestException, ValueError, KeyError, TypeError, UnicodeError) as exc:
             attempt['status'] = 'needs_review'
             job.update(status='needs_review', reason=type(exc).__name__ + ': ' + str(exc)[:250])
+            if job['source'] == 'kakao_local':
+                source.update(status='needs_review', reason='Independent place response requires manual review')
         attempt['finished_at'] = clock()
         attempt.setdefault('network_duration_seconds', max(0, clock()-attempt.get('request_started_at', clock())))
         observe(state, policy, job['source'], attempt, clock())
@@ -546,6 +571,14 @@ def run(state, store, policy, session, commercial, commercial_source, *, clock=t
     return state['summary']
 
 
+def merge_sources(state, policy):
+    """Add a separately scoped source without resetting any previous source."""
+    for source, setting in policy['sources'].items():
+        current = state['sources'].setdefault(source, {**setting, 'next_allowed_at': 0})
+        if setting['status'] == 'blocked':
+            current.update(status='blocked', reason=setting['reason'])
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument('--state-dir', type=Path, required=True)
@@ -561,9 +594,7 @@ def main():
     merge_plan(state, plan)
     # Persist current restrictions; changing a config to active never clears a
     # previous rejection. Unblocking requires a separately reviewed state edit.
-    for source, setting in policy['sources'].items():
-        if setting['status'] == 'blocked':
-            state['sources'][source].update(status='blocked', reason=setting['reason'])
+    merge_sources(state, policy)
     with gzip.open(ROOT/'config/collector-fuel-index.json.gz', 'rt', encoding='utf-8') as stream:
         fuel = json.load(stream)
     sync_mapped_inventory(state, read(ROOT/'output/gas_stations.json'), fuel, policy.get('region_order', []))

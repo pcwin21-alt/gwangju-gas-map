@@ -12,7 +12,8 @@ def limits(state, policy, source_name, now):
     source = state['sources'][source_name]
     setting = policy['sources'].get(source_name, {})
     base = {'requests_per_24h': setting.get('requests_per_24h', policy['requests_per_24h']),
-            'requests_per_run': policy['requests_per_run'], 'interval_seconds': policy['interval_seconds'],
+            'requests_per_run': setting.get('requests_per_run', policy['requests_per_run']),
+            'interval_seconds': setting.get('interval_seconds', policy['interval_seconds']),
             'stage': 'fixed'}
     if source['status'] in ('blocked', 'needs_review'):
         return {**base, 'requests_per_run': 0, 'stage': 'stopped'}

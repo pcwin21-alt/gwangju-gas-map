@@ -1,0 +1,74 @@
+{
+  "prepared_at": "2026-11-04T02:10:08+09:00",
+  "region": "전남",
+  "reason": "Existing current KB record has exact name and close point, but independent physical fuel premise is missing from earlier commercial/municipal inventory. One public named-place observation can provide independent identity evidence, not Onnuri membership.",
+  "job": {
+    "kind": "kakao_place_identity",
+    "source": "kakao_local",
+    "region": "전남",
+    "purpose": "independent_premise_identity",
+    "review_station_id": "onnuri:18802200007",
+    "discovery_only": true,
+    "target": {
+      "name": "남고문 self주유소",
+      "query": "나주 남고문주유소",
+      "address": "전남광주통합특별시 나주시 남고문로 72 (남외동)",
+      "lat": 35.028658,
+      "lng": 126.718889
+    },
+    "source_evidence": "output/audits/regional_gap_20261102/naju_namgomun_review_20261103.json",
+    "scope": "Inspect independent place category/full address/phone against already saved KB ID 000000034595536; never auto-confirm membership, relocate or merge a station.",
+    "logical_key": "90ee175ab2efcb026a6a14b5"
+  },
+  "request": [
+    "GET",
+    "https://k-skill-proxy.nomadamas.org/v1/kakao-map/search/keyword",
+    {
+      "params": {
+        "q": "나주 남고문주유소",
+        "page": 1,
+        "size": 15,
+        "sort": "accuracy"
+      }
+    }
+  ],
+  "new_source_limits": {
+    "status": "active",
+    "requests_per_24h": 2,
+    "requests_per_run": 1,
+    "interval_seconds": 180,
+    "url": "https://developers.kakao.com/docs/ko/local/dev-guide#search-by-keyword",
+    "scope": "One named public business identity via installed kakao-map skill relay; no bulk indexing, membership inference, blocked-source retry or host rotation"
+  },
+  "existing_limits_unchanged": {
+    "kbcard_pilot": [
+      3,
+      24,
+      180
+    ],
+    "kbcard_promoted": [
+      4,
+      32,
+      180
+    ],
+    "kbcard_promotion": "48 clean hours AND 24 valid recent samples; no manual override",
+    "datagov_per_24h": 20,
+    "minimum_run_interval_seconds": 10800
+  },
+  "source_isolation": "Kakao Local is a new independent location provider. The installed skill relay is not used to request a rejected Onnuri/KB/LOCALDATA source; no alternate host, route, IP or credentials fallback.",
+  "failure_policy": "Explicit rejection remains blocked. Relay/configuration errors and invalid response contract pause this source for manual review, preserve the one response and do not retry elsewhere.",
+  "not_implemented": [
+    "bulk indexing",
+    "grid crawling of Kakao",
+    "automatic place-to-membership promotion",
+    "changes to public or Toss UI",
+    "phone calls or support messages"
+  ],
+  "source_references": [
+    "https://developers.kakao.com/docs/ko/local/dev-guide#search-by-keyword",
+    "https://github.com/NomaDamas/k-skill/blob/main/docs/features/k-skill-proxy.md"
+  ],
+  "installed_skill": "C:/Users/unw/.agents/skills/kakao-map/SKILL.md",
+  "python_tests_passed": 198,
+  "new_regression_tests": 7
+}
