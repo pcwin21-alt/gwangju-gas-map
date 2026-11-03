@@ -15297,10 +15297,18 @@
           "candidate_ids": [],
           "issuer_checks": {
             "kbcard": {
-              "status": "needs_review_not_found",
+              "status": "confirmed_in_issuer_scope",
+              "issuer": "kbcard",
               "checked_at": "2026-11-03T04:38:41+09:00",
-              "job_id": "de06432b3d9da466cd3d9ec5",
-              "nonmembership": "not_established"
+              "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+              "bank_id": "000000034595536",
+              "other_payment_methods": "not_reverified",
+              "match_basis": "reviewed_single_station_name_pair_exact_phone_road_locality_fuel_category_and_coordinates_with_independent_Kakao_Local",
+              "identity_review_evidence": "https://github.com/pcwin21-alt/gwangju-gas-map/blob/2bbcc43da943e4d13f510d2e5016b07f1f9ef884/output/audits/regional_gap_20261102/namgomun_place_identity_review_20261104.json",
+              "independent_identity_checked_at": "2026-11-04T02:13:27+09:00",
+              "independent_identity_source": "Kakao Local",
+              "independent_place_id": "8247983",
+              "map_location_changed": false
             }
           }
         }
