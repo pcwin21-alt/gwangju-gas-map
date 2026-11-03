@@ -13,7 +13,7 @@
       "status": "active",
       "url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
       "scope": "Public unauthenticated Onnuri merchant form; issuer-specific evidence only; limits are our load caps, not a provider guarantee",
-      "next_allowed_at": 1793667905.6134572,
+      "next_allowed_at": 1793667910.0271277,
       "volume_ramp": {
         "stage": "pilot",
         "started_at": 1793556784.2048566,
@@ -797,7 +797,7 @@
       "job_id": "1f7576ef6453ee52147d2844",
       "source": "kbcard",
       "at": 1793667725.6134572,
-      "status": "reserved",
+      "status": "done",
       "run_id": "94f92e0e76f6460eb744b6d2b4839b4d",
       "request": {
         "method": "POST",
@@ -814,7 +814,12 @@
           "endRow": 10,
           "mmcNm": ""
         }
-      }
+      },
+      "request_started_at": 1793667726.9017272,
+      "network_duration_seconds": 1.268085241317749,
+      "http_status": 200,
+      "response_sha256": "7fb6f237d8f8ffee540eea522d8b0ba471ba236d135ef246cc4c1bf59a3cbfdc",
+      "finished_at": 1793667730.0270498
     }
   ],
   "jobs": [
@@ -2561,11 +2566,42 @@
       },
       "logical_key": "1f7576ef6453ee52147d2844",
       "id": "1f7576ef6453ee52147d2844",
-      "status": "pending",
+      "status": "done",
       "attempts": 1,
       "page": 1,
-      "observed_ids": [],
-      "station_ids": []
+      "observed_ids": [
+        "000000107902269",
+        "000000079137640",
+        "000000030417094",
+        "000000023157270",
+        "000000060968829",
+        "000000084903781",
+        "000000036259035",
+        "000000022980650",
+        "000000122400936",
+        "000000028347109",
+        "000000052434303",
+        "000000100745478",
+        "000000100747978",
+        "000000019929143",
+        "000000081271571",
+        "000000082805263",
+        "000000100916315",
+        "000000068455335",
+        "000000116567537",
+        "000000047247126",
+        "000000078832474",
+        "000000122296322",
+        "000000050834631",
+        "000000103642751",
+        "000000066757166",
+        "000000079074322",
+        "000000021395510"
+      ],
+      "station_ids": [],
+      "expected": 27,
+      "last_observed_at": "2026-11-03T10:02:08+09:00",
+      "result": "observations_saved"
     },
     {
       "kind": "kb_search",
@@ -7954,6 +7990,54 @@
         "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
       },
       "annual_candidate_ids": []
+    },
+    {
+      "identity_review": "same_premise_confirmed",
+      "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
+      "checked_at": "2026-11-03T10:02:08+09:00",
+      "bank_record": {
+        "location": {
+          "lat": "35.2924363629",
+          "lng": "126.779621544"
+        },
+        "content": {
+          "tel": "061)393-1000",
+          "title": "장성농협주유소",
+          "category": "주유소",
+          "address": "전남 장성군 장성읍 ",
+          "distance": "223",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "1",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000100745478",
+          "highOilGb": "1",
+          "seoulGb": "0"
+        }
+      },
+      "commercial_record": {
+        "상가업소번호": "MA010120220808842825",
+        "상호명": "장성농협주유소",
+        "지점명": "",
+        "상권업종소분류코드": "G21401",
+        "상권업종소분류명": "주유소",
+        "표준산업분류코드": "G47711",
+        "표준산업분류명": "운송장비용 주유소 운영업",
+        "시군구명": "장성군",
+        "도로명주소": "전남광주통합특별시 장성군 장성읍 뱃나드리로 245",
+        "지번주소": "전남광주통합특별시 장성군 장성읍 영천리 1330-1",
+        "위도": "35.2921931828988",
+        "경도": "126.779711530487",
+        "region": "전남"
+      },
+      "commercial_source": {
+        "archive_sha256": "57aa361544108ff4fc73334f87d2ced61e41fe8638dd70bcd842930f865d2386",
+        "source_date": "2026-06-30",
+        "source_url": "https://www.data.go.kr/data/15083033/fileData.do",
+        "scope": "all_vehicle_fuel_candidates_not_Onnuri_verification"
+      },
+      "annual_candidate_ids": []
     }
   ],
   "review": [
@@ -8126,6 +8210,35 @@
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f201100/output/audits/full_region_crosscheck_20261103/report.json",
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f201100/output/audits/full_region_crosscheck_20261103/review_actions.json"
       ]
+    },
+    {
+      "job_id": "1f7576ef6453ee52147d2844",
+      "bank_record": {
+        "location": {
+          "lat": "35.2924363629",
+          "lng": "126.779621544"
+        },
+        "content": {
+          "tel": "061)393-1000",
+          "title": "장성농협주유소",
+          "category": "세차장",
+          "address": "전남 장성군 장성읍 ",
+          "distance": "223",
+          "kindGb": "0",
+          "onNuliGb": "1",
+          "tradiGb": "0",
+          "liveHoodGb": "0",
+          "sangsaengGb": "1",
+          "franchiseNo": "000000100747978",
+          "highOilGb": "0",
+          "seoulGb": "0"
+        }
+      },
+      "checked_at": "2026-11-03T10:02:08+09:00",
+      "independent_fuel_candidate_ids": [
+        "MA010120220808842825"
+      ],
+      "reason": "Independent exact business/address/category evidence incomplete; do not exclude by bank category alone"
     }
   ],
   "source_gaps": [
@@ -22460,7 +22573,7 @@
     "onnuri:14500200210": {
       "status": "confirmed_in_issuer_scope",
       "issuer": "kbcard",
-      "checked_at": "2026-11-02T15:20:33+09:00",
+      "checked_at": "2026-11-03T10:02:08+09:00",
       "source_url": "https://card.kbcard.com/BON/DVIEW/HBGV0701",
       "bank_id": "000000100745478",
       "other_payment_methods": "not_reverified"
