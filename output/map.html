@@ -875,7 +875,7 @@
         <button class="search-clear" id="searchClear" title="검색어 지우기" aria-label="검색어 지우기">✕</button>
         <div class="no-result" id="noResult">검색 결과 없음</div>
       </div>
-      <button id="regionOpen" type="button" aria-haspopup="dialog" aria-controls="regionDialog" aria-label="지역 선택"><span id="regionLabel" data-no-i18n>광주</span><span aria-hidden="true">▾</span></button>
+      <button id="regionOpen" type="button" aria-haspopup="dialog" aria-controls="regionDialog" aria-label="지역 선택"><span id="regionLabel" data-no-i18n>전국</span><span aria-hidden="true">▾</span></button>
       <button id="filtersToggle" type="button" aria-expanded="false" aria-controls="mapFilters"><span>필터</span><span id="filterCount" hidden></span></button>
     </div>
     <nav class="search-modes" aria-label="찾는 방식"><button id="nearbyModeBtn" type="button" aria-pressed="false" aria-busy="false">내 주변</button><button id="routeModeBtn" type="button" aria-pressed="false" aria-controls="tripPanel">가는 길</button></nav>
@@ -1249,10 +1249,10 @@ const COLOR = {
   both:       '#DC2626',
 };
 
-// 지도 초기화 (광주 중심)
+// 전국 보기로 시작하고, 아래에서 현재 조건의 등록 지점에 범위를 맞춘다.
 const map = new kakao.maps.Map(document.getElementById('map'), {
-  center: new kakao.maps.LatLng(35.1595, 126.8526),
-  level: 8,
+  center: new kakao.maps.LatLng(36.0, 127.8),
+  level: 13,
 });
 
 // ── 자치구 경계 폴리곤 (구 단위, 동 경계 없음) ────────────────

@@ -1,0 +1,65 @@
+{
+  "date": "2026-11-04",
+  "scope": "nationwide_default_not_merchant_collection",
+  "defaultRegion": "all",
+  "nodeTestsPassed": 103,
+  "tossTestsPassed": 9,
+  "tossBundleChecksPassed": 9,
+  "datasetsChanged": false,
+  "browser": {
+    "mobile": {
+      "allPinsInsideMap": true,
+      "count": "217곳",
+      "horizontalOverflow": false,
+      "pinCount": 217,
+      "region": "all",
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    "reset": {
+      "count": "217곳",
+      "fuel": "all",
+      "method": "all",
+      "region": "all"
+    },
+    "explicitProvince": {
+      "count": "28곳",
+      "region": "전남"
+    },
+    "toss": {
+      "count": "217곳",
+      "overflow": false,
+      "region": "all",
+      "viewport": [
+        390,
+        844
+      ],
+      "zoomAfterMapClick": "32km"
+    },
+    "tossOnnuri": {
+      "count": "184곳",
+      "region": "all"
+    },
+    "tossLogs": [],
+    "design": {
+      "allPinsInsideMap": true,
+      "count": "184곳",
+      "horizontalOverflow": false,
+      "pinCount": 184,
+      "region": "all",
+      "viewport": [
+        320,
+        740
+      ]
+    }
+  },
+  "publicDeployment": "pending",
+  "tossConsoleUploaded": false,
+  "tossReleased": false,
+  "candidateArtifact": {
+    "name": "onnuri-fuel-map.ait",
+    "sha256": "3261cf5dad9337c6de5c19609fa844109adc11ac2a5aee07f6416a7d9aad179f"
+  }
+}

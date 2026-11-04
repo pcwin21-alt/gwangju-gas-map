@@ -3,7 +3,7 @@
   'use strict';
   const byId=id=>document.getElementById(id),input=byId('regionSelect'),dialog=byId('regionDialog'),open=byId('regionOpen');
   const buttons=new Map();
-  for(const value of ['광주','all',...GasNational.regions.filter(name=>name!=='광주')]) {
+  for(const value of ['all',...GasNational.regions]) {
     const button=document.createElement('button');button.type='button';button.textContent=value==='all'?'전국':value;
     button.dataset.region=value;buttons.set(value,button);
     button.addEventListener('click',()=>{

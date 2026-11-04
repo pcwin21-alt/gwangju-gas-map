@@ -150,7 +150,7 @@
     byId('searchInput').addEventListener('input',()=>{limit=20;render(true);});
     document.querySelectorAll('.filter-btn').forEach(b=>b.addEventListener('click',()=>{fallbackPayment=b.dataset.filter;document.querySelectorAll('.filter-btn').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b));});render(true);syncURL();}));
   }
-  byId('resetBtn').addEventListener('click',()=>{regionInput.value='광주';method.value=fuel.value='all';change();});
+  byId('resetBtn').addEventListener('click',()=>{regionInput.value='all';method.value=fuel.value='all';change();});
   function restore() {
     restoring=true;const url=new URL(location.href),district=url.searchParams.get('district');
     regionInput.value=GasNational.regionFromURL(url.searchParams.get('region'));method.value=['paper','digital'].includes(url.searchParams.get('method'))?url.searchParams.get('method'):'all';fuel.value=['liquid','lpg'].includes(url.searchParams.get('fuel'))?url.searchParams.get('fuel'):'all';
