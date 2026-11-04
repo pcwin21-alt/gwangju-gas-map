@@ -1,0 +1,210 @@
+{
+  "checkedAt": "2026-11-04T11:37:34.799283+09:00",
+  "status": "launched_post_launch_audit_completed",
+  "appName": "onnuri-fuel-map",
+  "workspaceId": "105239",
+  "currentRelease": {
+    "version": "20261103-1",
+    "sdk": "3.9.0",
+    "launchedAt": "2026-11-04T11:20:00+09:00",
+    "consoleStatus": "현재 출시됨",
+    "consoleVerified": true,
+    "approvalEmailDate": "2026-11-04T11:00:47+09:00",
+    "launchEmailDate": "2026-11-04T11:20:02+09:00",
+    "launchEmailUrl": "https://mail.google.com/mail/u/0/#inbox/FMfcgzQjggrQjZqljFlthmjvZFhTGtFC",
+    "remoteArtifactHashVerified": false
+  },
+  "consoleObservations": {
+    "coreMetricsRegistered": false,
+    "reviews": "none_yet",
+    "category": [
+      "자동차",
+      "주유·충전"
+    ],
+    "customerContactEmailConfigured": true,
+    "customerContactDeliverabilityTested": false,
+    "performance": {
+      "p90LoadingSecondsDisplayed": 1.1,
+      "fps": "no_data",
+      "sampleCount": "unknown",
+      "notUniversalPerformanceCertification": true
+    },
+    "eventObservations": {
+      "window": "recent_14_days",
+      "baseEventsReceiving": true,
+      "customStationDetailEventInAdapter": false,
+      "unknownDetailMapViewScreen": {
+        "name": "/actions/detailMapView::screen",
+        "countDisplayed": 1,
+        "mappedToStationDetails": false
+      },
+      "caution": "Event counts are not unique new users; release-day dashboard data may lag."
+    }
+  },
+  "browserQa": {
+    "artifact": "local_pinned_handoff_not_downloaded_remote_release",
+    "artifactSha256": "e1f72f65b654b4b5bc2bc7430261c5614a824697d4c85d91a8dc0b85faf63c7f",
+    "viewportRequested": {
+      "width": 360,
+      "height": 780
+    },
+    "viewportMeasured": {
+      "width": 379,
+      "height": 821
+    },
+    "input": "desktop_mouse_keyboard",
+    "checks": [
+      {
+        "name": "initial_map_and_unblocked_lookup",
+        "status": "passed",
+        "evidence": "Map rendered without login, notification prompt, full-screen advertisement or automatic search focus."
+      },
+      {
+        "name": "search_and_detail_evidence",
+        "status": "passed",
+        "evidence": "Query returned one station; internal detail displayed address, payment scope, membership date and 2026-11-02 fuel-price date."
+      },
+      {
+        "name": "detail_return_preserves_context",
+        "status": "passed",
+        "evidence": "Query and 100m scale retained; focus returned to the selected result."
+      },
+      {
+        "name": "zoom_click_drag_preserves_scale",
+        "status": "passed",
+        "evidence": "At 50m, map click and mouse drag did not reset scale or focus the search field."
+      },
+      {
+        "name": "empty_results_and_recovery",
+        "status": "passed",
+        "evidence": "Non-matching search displayed zero results and recovery actions; clearing restored 164 regional records."
+      },
+      {
+        "name": "region_popup",
+        "status": "passed",
+        "evidence": "Jeonnam popup selection displayed 28 embedded records; no source collection."
+      },
+      {
+        "name": "fuel_filter",
+        "status": "passed",
+        "evidence": "LPG selection displayed one result and active filter."
+      },
+      {
+        "name": "reload_state",
+        "status": "passed",
+        "evidence": "Reload preserved Jeonnam, LPG and the one-result state."
+      },
+      {
+        "name": "responsive_and_runtime",
+        "status": "passed",
+        "evidence": "Measured viewport 379x821; no horizontal overflow; zero warning/error app logs."
+      }
+    ],
+    "passed": 9,
+    "nativePhoneTest": false,
+    "screenshots": [
+      "output/apps-in-toss-postlaunch-20261104/pinned-mobile.jpg",
+      "output/apps-in-toss-postlaunch-20261104/console-launched.jpg"
+    ]
+  },
+  "automatedChecks": {
+    "scope": "current_local_platform_location_bridge_and_bundle_transform",
+    "nodeTestsPassed": 3,
+    "pythonTestsPassed": 6,
+    "archiveChecksumPassed": true
+  },
+  "dataComparison": {
+    "pinnedSha256": "e1f72f65b654b4b5bc2bc7430261c5614a824697d4c85d91a8dc0b85faf63c7f",
+    "zipIntegrity": null,
+    "pinned": {
+      "stations": 220,
+      "onnuri": 184,
+      "priceRecords": 25,
+      "priceSourceDates": {
+        "2026-10-30": 1,
+        "2026-10-31": 6,
+        "2026-11-01": 7,
+        "2026-11-02": 17
+      }
+    },
+    "webSource": {
+      "stations": 220,
+      "onnuri": 184,
+      "priceRecords": 27,
+      "priceSourceDates": {
+        "2026-10-31": 3,
+        "2026-11-01": 4,
+        "2026-11-02": 3,
+        "2026-11-03": 20
+      }
+    },
+    "changedDatasets": [
+      "STATIONS",
+      "PRICES",
+      "PRICE_INFO",
+      "MERCHANT_STATUS"
+    ],
+    "archiveFiles": 38,
+    "excluded": [
+      "donations",
+      "legacy_reporting",
+      "legacy_reactions",
+      "legacy_analytics",
+      "trial_routing",
+      "external_navigation_actions"
+    ],
+    "adapterHasCustomAnalytics": false,
+    "checkedAt": "2026-11-04T11:31:01.821592+09:00",
+    "priceSourceDateCountsCountEvidenceEntriesNotDistinctStations": true
+  },
+  "recommendations": [
+    {
+      "priority": 1,
+      "work": "Prepare a separately verified candidate using already acquired data; define ongoing read-only data refresh with validated fallback.",
+      "implemented": false
+    },
+    {
+      "priority": 2,
+      "work": "Instrument successful station detail render using the official SDK, verify payload disclosure and reception, then register a primary conversion.",
+      "implemented": false,
+      "proposedEvent": "fuel_station_detail_view",
+      "notFuelPurchaseConfirmation": true,
+      "sdkAddsAnonymousKey": true
+    },
+    {
+      "priority": 3,
+      "work": "Review actual user feedback and fill native-device validation gaps; do not infer device pass from local QA.",
+      "implemented": false
+    }
+  ],
+  "actionsThisRun": {
+    "supportMessageSent": false,
+    "consoleSettingsSaved": false,
+    "conversionRegistered": false,
+    "reviewSubmitted": false,
+    "bundleRebuilt": false,
+    "bundleUploaded": false,
+    "versionReleased": false,
+    "serviceCodeChanged": false,
+    "mapDataChanged": false,
+    "collectionReenabled": false,
+    "automationChanged": false,
+    "promotionOrBudgetStarted": false,
+    "temporaryPreviewServerStopped": true,
+    "browserViewportReset": true
+  },
+  "references": [
+    "https://developers-apps-in-toss.toss.im/guide/exposure",
+    "https://developers-apps-in-toss.toss.im/guide/analytics/logging",
+    "https://developers-apps-in-toss.toss.im/guide/analytics/conversion-metrics",
+    "https://developers-apps-in-toss.toss.im/documentation/sdk/domains-api/analytics/analytics.log",
+    "https://developers-apps-in-toss.toss.im/guide/operation/user-protection",
+    "https://developers-apps-in-toss.toss.im/guide/marketing/promotion"
+  ],
+  "remainingUnverified": [
+    "Actual native touch/pinch, keyboard, location allow/deny and navigation",
+    "Customer-support email reception/response",
+    "Remote released artifact hash",
+    "Custom conversion event transmission and recommendation selection"
+  ]
+}
