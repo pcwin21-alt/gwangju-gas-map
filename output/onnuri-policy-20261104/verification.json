@@ -79,6 +79,24 @@
         "source": "published",
         "sourceExpansionRetained": true
       }
+    },
+    "live": {
+      "base": "기본 구매할인 7%",
+      "horizontalOverflow": false,
+      "plannedState": "planned",
+      "source": "published",
+      "special": "11/02~11/06 특별할인 10% 공지",
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    "liveLogs": [],
+    "tossCandidateFeed": {
+      "checked": "공식 자료 확인 2026-11-04",
+      "horizontalOverflow": false,
+      "signupLinkCount": 0,
+      "source": "published"
     }
   },
   "automation": {
@@ -88,9 +106,19 @@
     "schedule": "FREQ=DAILY;BYHOUR=9;BYMINUTE=0;BYSECOND=0",
     "timezone": "Asia/Seoul"
   },
-  "publicDeployment": "pending",
+  "publicDeployment": {
+    "status": "verified_live",
+    "sourceCommit": "fff467ab84e577cf54dd6dab80cab49980b28ae1",
+    "checksRun": "https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41816150016",
+    "publishRun": "https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41816149950",
+    "pagesRun": "https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41816195007",
+    "feedStatus": 200,
+    "feedMatchesReviewedSource": true,
+    "cors": "*"
+  },
   "tossUploaded": false,
   "tossReleased": false,
   "artifactSha256": "5ca2e29978092d5f5172e516582742a19b88222d9a5fbc4c52dea52bbf3ae97b",
-  "policySourcePdfSha256": "baa0a09c61a645e0fc89dcfe4177324c2b43ffe53c57b30d4c3363142ab8efc2"
+  "policySourcePdfSha256": "baa0a09c61a645e0fc89dcfe4177324c2b43ffe53c57b30d4c3363142ab8efc2",
+  "nativePhoneVerified": false
 }
