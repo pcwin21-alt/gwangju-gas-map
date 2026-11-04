@@ -764,6 +764,7 @@
   <link rel="stylesheet" href="assets/ux-fixes.css">
   <link rel="stylesheet" href="assets/responsive-ui.css">
   <link rel="stylesheet" href="assets/theme.css">
+  <link rel="stylesheet" href="assets/onnuri-policy.css">
   <script src="assets/nationwide.js"></script>
 </head>
 <body>
@@ -909,11 +910,25 @@
     </section>
   </div>
 
+  <!-- ONNURI_POLICY_DIALOG_START -->
+  <dialog id="policyDialog" class="policy-dialog" aria-labelledby="policyTitle" data-no-i18n>
+    <div class="policy-heading"><h2 id="policyTitle">온누리 혜택·정책</h2><button id="policyClose" type="button" aria-label="온누리 정책 닫기">닫기</button></div>
+    <div class="policy-body">
+      <section id="policyCurrent"></section>
+      <div class="policy-update-status"><p id="policyChecked" class="policy-meta"></p><button id="policyRefresh" type="button">새로고침</button></div>
+      <p id="policyLiveState" class="policy-meta" role="status" hidden></p>
+      <details class="policy-join"><summary>가입·이용 안내</summary><div id="policySignup" class="policy-signup"></div></details>
+      <section aria-label="최근 정책과 적용 일정" id="policyNews"></section>
+    </div>
+  </dialog>
+  <!-- ONNURI_POLICY_DIALOG_END -->
+
   <dialog id="mapTools" class="tools-dialog" aria-labelledby="toolsTitle">
     <div class="tools-header"><h2 id="toolsTitle">더보기</h2><button id="toolsCloseBtn" type="button" aria-label="더보기 닫기" autofocus>닫기</button></div>
     <nav class="tools-actions" aria-label="지도 도구">
       <button class="rank-btn" id="rankBtn">가격 순위</button>
       <button id="helpBtn" type="button">사용법 안내</button>
+      <button id="policyMenuOpen" type="button" aria-haspopup="dialog" aria-controls="policyDialog">온누리 혜택·정책</button>
       <button id="languageBtn" class="language-btn" type="button" aria-label="Switch to English" data-no-i18n>EN</button>
       <label class="theme-picker" for="themeMode"><span>화면 테마</span><select id="themeMode" aria-label="화면 테마"><option value="system">기기 설정</option><option value="light">밝게</option><option value="dark">어둡게</option></select></label>
       <button class="reset-btn" id="resetBtn">↺ 초기화</button>
@@ -1086,6 +1101,9 @@
   </div>
 
   <div class="map-area">
+    <!-- ONNURI_POLICY_ENTRY_START -->
+    <button id="policyOpen" type="button" aria-haspopup="dialog" aria-controls="policyDialog" data-no-i18n><span id="policyLabel">온누리 혜택·정책</span><span id="policySpecial" aria-hidden="true" hidden></span><span class="policy-info" aria-hidden="true">i</span></button>
+    <!-- ONNURI_POLICY_ENTRY_END -->
     <button id="tripLauncher" class="trip-launcher" type="button" aria-label="경유 주유소 찾기 열기" aria-controls="tripPanel" aria-expanded="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="18" r="2"/><path d="M7 6h8a4 4 0 0 1 0 8H9a4 4 0 0 0-4 4h12"/></svg><span data-i18n-context="route-stop">경유</span><span id="tripLauncherCount" class="trip-launcher-count" aria-hidden="true" hidden></span></button>
     <details class="trip-panel" id="tripPanel" role="dialog" aria-label="경유 주유소 찾기" aria-modal="false">
     <summary class="trip-trigger">
@@ -2623,5 +2641,8 @@ if (!localStorage.getItem('helpSeen')) {
 <script src="assets/route-window.js"></script>
 <script src="assets/search-flow.js"></script>
 <script src="assets/i18n.js"></script>
+<script src="assets/onnuri-policy-data.js"></script>
+<script src="assets/onnuri-policy-core.js"></script>
+<script src="assets/onnuri-policy.js"></script>
 </body>
 </html>

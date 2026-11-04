@@ -1,0 +1,64 @@
+{
+  "checkedAt": "2026-11-04T19:43:21.648255+09:00",
+  "scope": "local_artifact_audit_not_toss_device_certification",
+  "artifactSha256": "5ca2e29978092d5f5172e516582742a19b88222d9a5fbc4c52dea52bbf3ae97b",
+  "checks": [
+    {
+      "name": "archive_integrity_and_size",
+      "status": "passed",
+      "evidence": {
+        "compressedBytes": 153831,
+        "expandedBytes": 589855
+      }
+    },
+    {
+      "name": "archive_matches_built_files",
+      "status": "passed",
+      "evidence": 40
+    },
+    {
+      "name": "all_build_inputs_current",
+      "status": "passed",
+      "evidence": 47
+    },
+    {
+      "name": "all_references_packaged_without_stale_assets",
+      "status": "passed",
+      "evidence": 37
+    },
+    {
+      "name": "excluded_trial_scripts_absent",
+      "status": "passed",
+      "evidence": 5
+    },
+    {
+      "name": "legacy_endpoints_and_browser_gps_removed",
+      "status": "passed",
+      "evidence": true
+    },
+    {
+      "name": "policy_fallback_retains_official_sources_without_store_links",
+      "status": "passed",
+      "evidence": true
+    },
+    {
+      "name": "five_datasets_preserved",
+      "status": "passed",
+      "evidence": {
+        "allRecords": 220,
+        "onnuriTaggedRecords": 184
+      }
+    },
+    {
+      "name": "javascript_syntax",
+      "status": "passed",
+      "evidence": 23
+    },
+    {
+      "name": "asset_cache_version",
+      "status": "passed",
+      "evidence": "756544da8a39"
+    }
+  ],
+  "readyForSubmission": false
+}

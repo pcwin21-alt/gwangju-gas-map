@@ -58,6 +58,7 @@
     if(view==='filters')toggle.click();
     if(view==='region')document.getElementById('regionOpen').click();
     if(view==='more')document.getElementById('toolsOpenBtn').click();
+    if(view==='policy')document.getElementById('policyOpen').click();
     if(view==='detail'&&typeof allMarkers!=='undefined'&&window.kakao?.maps){
       const item=allMarkers.find(row=>row.station.name==='서양새마을금고 주유소');
       if(item){map.setCenter(new kakao.maps.LatLng(item.station.lat,item.station.lng));map.setLevel(4);showStationOverlay(item.overlay);}

@@ -1,0 +1,96 @@
+{
+  "checkedAt": "2026-11-04T19:43:23.126891+09:00",
+  "scope": "policy_information_not_merchant_collection",
+  "datasetsPreserved": 5,
+  "nodeTestsPassed": 109,
+  "policyDataTestsPassed": 2,
+  "platformTestsPassed": 9,
+  "bundleChecksPassed": 10,
+  "browser": {
+    "mobileDark": {
+      "horizontalOverflow": false,
+      "panel": {
+        "bottom": 844,
+        "height": 805,
+        "width": 390,
+        "x": 0,
+        "y": 39
+      },
+      "shortVisibleControls": [],
+      "signupURLs": [
+        "https://play.google.com/store/apps/details?id=com.komsco.kpay",
+        "https://apps.apple.com/kr/app/id6738372450"
+      ],
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    "return": {
+      "before": "32km",
+      "after": "32km",
+      "focus": "policyOpen"
+    },
+    "mobileLight": {
+      "fallbackNoticeVisible": true,
+      "horizontalOverflow": false,
+      "panel": {
+        "bottom": 740,
+        "height": 701,
+        "width": 320,
+        "x": 0,
+        "y": 39
+      },
+      "platform": "toss",
+      "shortVisibleControls": [],
+      "signupLinkCount": 0,
+      "viewport": [
+        320,
+        740
+      ]
+    },
+    "menuReturn": {
+      "focus": "toolsOpenBtn",
+      "policyOpen": false
+    },
+    "desktop": {
+      "horizontalOverflow": false,
+      "officialLinks": [
+        "https://m.korea.kr/briefing/pressReleaseView.do?newsId=156786628",
+        "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783869",
+        "https://www.korea.kr/common/download.do?fileId=198565961&tblKey=GMN"
+      ],
+      "panel": {
+        "bottom": 696.5,
+        "height": 673,
+        "width": 560,
+        "x": 360,
+        "y": 23.5
+      },
+      "refreshComplete": true,
+      "sourceExpansionRetained": true,
+      "viewport": [
+        1280,
+        720
+      ],
+      "refresh": {
+        "complete": true,
+        "focus": "policyRefresh",
+        "source": "published",
+        "sourceExpansionRetained": true
+      }
+    }
+  },
+  "automation": {
+    "id": "automation-7",
+    "name": "온누리 정책·할인 변동 점검",
+    "status": "ACTIVE",
+    "schedule": "FREQ=DAILY;BYHOUR=9;BYMINUTE=0;BYSECOND=0",
+    "timezone": "Asia/Seoul"
+  },
+  "publicDeployment": "pending",
+  "tossUploaded": false,
+  "tossReleased": false,
+  "artifactSha256": "5ca2e29978092d5f5172e516582742a19b88222d9a5fbc4c52dea52bbf3ae97b",
+  "policySourcePdfSha256": "baa0a09c61a645e0fc89dcfe4177324c2b43ffe53c57b30d4c3363142ab8efc2"
+}

@@ -10,6 +10,7 @@ import re
 import shutil
 import zipfile
 from pathlib import Path
+from build_policy_data import browser_script, platform_script, validate as validate_policy
 
 ROOT = Path(__file__).resolve().parents[1]
 DESIGN = ROOT / 'design/onnuri-fuel-v1'
@@ -49,6 +50,7 @@ COMPONENTS = [
  ('S03','support','사용 안내','독립 정보 서비스·자료 한계·위치 거절 후 검색을 읽을 수 있게 제공.','help'),
  ('S04','support','업데이트·자료 상태','실제 데이터의 시각과 범위를 표시. 가맹 확인을 새로 한 것으로 표현하지 않음.','updates'),
  ('S05','support','언어 선택','한 번의 선택으로 변경. 상호·주소·사용자 입력의 원문은 보존한다.','language'),
+ ('S06','support','온누리 혜택·정책','디지털 기본 할인·한시 행사·추진안의 상태와 출처. 오래된 확인은 현재 할인으로 단정하지 않는다.','policy'),
 ]
 
 ICON_PATHS = {
@@ -129,6 +131,7 @@ def render_gallery(sample, prices, checked, price_date, count):
       'help':'<details class="fu-accordion" open><summary>결제 확인 범위</summary><p>발행사·운영사의 공식 앱이 아니며, 전국 모든 가맹점이나 방문 시 결제를 보장하지 않아요.</p></details><details class="fu-accordion"><summary>내 위치를 허용하지 않았어요</summary><p>지역을 선택하거나 주유소명·주소를 검색할 수 있어요.</p></details>',
       'updates':f'<div class="fu-stack"><div><h3 class="fu-title">자료 기준</h3><p class="fu-meta" style="margin-top:.5rem">이 시안은 보관된 20261103-1 인계본을 사용해요.</p></div><div class="fu-notice"><p>가격과 가맹 확인일은 별개예요. 웹 갱신이 이 보관본을 바꾸지는 않아요.</p></div><p>유가 자료 중 가장 최근 기준일 · {price_date}</p></div>',
       'language':'<div class="fu-segments" data-demo-segments><button type="button" aria-pressed="true">한국어</button><button type="button" aria-pressed="false">English</button></div><p class="fu-meta" style="margin-top:1rem">상호·주소와 입력한 문구는 원문을 유지해요.</p>',
+      'policy':'<a class="fu-button secondary" href="app/?payment=onnuri&view=policy">온누리 혜택·정책 보기 ↗</a><p class="fu-meta" style="margin-top:1rem">기본 할인·한시 행사·추진안을 발표일과 적용 일정으로 구분해요.</p>',
     }
     sections=[]
     for code,group,title,spec,demo in COMPONENTS:
@@ -176,6 +179,22 @@ def build(out, artifact):
             if not target.is_relative_to(app): raise ValueError('Invalid archive path')
             target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(archive.read(name))
     original=(app/'index.html').read_text(encoding='utf-8');html=original
+    # Add the new policy feature without replacing the pinned merchant datasets.
+    shared_html=(ROOT/'output/map.html').read_text(encoding='utf-8')
+    for block,anchor in [('DIALOG','  <dialog id="mapTools"'),('ENTRY','  <div class="map-area">')]:
+        pattern=rf'<!-- ONNURI_POLICY_{block}_START -->(.*?)<!-- ONNURI_POLICY_{block}_END -->'
+        markup=re.search(pattern,shared_html,re.S)[1]
+        if html.count(anchor)!=1: raise ValueError('Policy insertion anchor changed')
+        html=html.replace(anchor,markup+anchor,1) if block=='DIALOG' else html.replace(anchor,anchor+markup,1)
+    html=html.replace('<html ','<html data-platform="toss" ',1)
+    html=html.replace('</head>','<link rel="stylesheet" href="assets/onnuri-policy.css"></head>',1)
+    policy_assets=['onnuri-policy-core.js','onnuri-policy.js','onnuri-policy.css']
+    for name in policy_assets: shutil.copyfile(ROOT/'assets'/name,app/'assets'/name)
+    policy_data=validate_policy(json.loads((ROOT/'assets/onnuri-policy.json').read_text(encoding='utf-8')))
+    (app/'assets/onnuri-policy-data.js').write_text(platform_script(browser_script(policy_data)),encoding='utf-8')
+    for name in ['onnuri-policy-data.js','onnuri-policy-core.js','onnuri-policy.js']:
+        html=html.replace('</body>',f'<script src="assets/{name}"></script></body>',1)
+    html=html.replace('<button id="helpBtn" type="button">사용법 안내</button>','<button id="helpBtn" type="button">사용법 안내</button><button id="policyMenuOpen" type="button" aria-haspopup="dialog" aria-controls="policyDialog">온누리 혜택·정책</button>')
     # Apply the current default-scope change over the preserved handoff data.
     for name in ['nationwide.js','region-picker.js']:
         shutil.copyfile(ROOT/'assets'/name,app/'assets'/name)
@@ -187,7 +206,7 @@ def build(out, artifact):
     html=html.replace('id="regionLabel" data-no-i18n>광주<','id="regionLabel" data-no-i18n>전국<')
     html=html.replace('// 지도 초기화 (광주 중심)','// 전국 기본 보기; 등록 지점 범위는 기존 지도 맞춤으로 계산')
     html=html.replace('center: new kakao.maps.LatLng(35.1595, 126.8526),\n  level: 8,','center: new kakao.maps.LatLng(36.0, 127.8),\n  level: 13,')
-    for name in ['nationwide.js','nationwide-ui.js','region-picker.js']:
+    for name in ['nationwide.js','nationwide-ui.js','region-picker.js','onnuri-policy-data.js',*policy_assets]:
         asset_version=hashlib.sha256((app/'assets'/name).read_bytes()).hexdigest()[:12]
         html=re.sub(r'assets/'+re.escape(name)+r'(?:\?[^"\s]+)?',f'assets/{name}?v={asset_version}',html)
     if html.count('<div class="app">')!=1: raise ValueError('App root contract changed')

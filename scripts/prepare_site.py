@@ -3,8 +3,10 @@ import shutil
 import hashlib
 import re
 from pathlib import Path
+from build_policy_data import build as build_policy_data
 
 ROOT = Path(__file__).resolve().parents[1]
+build_policy_data()
 SITE = ROOT / '_site'
 SITE.mkdir(exist_ok=True)
 html = (ROOT / 'output' / 'map.html').read_text(encoding='utf-8')

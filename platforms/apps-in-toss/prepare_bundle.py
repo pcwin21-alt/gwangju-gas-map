@@ -7,10 +7,13 @@ import hashlib
 import json
 import re
 import shutil
+import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
+sys.path.insert(0, str(ROOT / 'scripts'))
+from build_policy_data import build as build_policy_data, platform_script
 
 
 def between(text, start, end):
@@ -36,7 +39,7 @@ def prepare(html):
     # Donation QR and feedback image elements must not cause background requests.
     html = re.sub(r'<img\b[^>]*\bsrc="[^"]+"[^>]*>', lambda m: '' if any(term in m.group(0).lower() for term in ['kakaopay', 'qr.kakao', 'coffee']) else m.group(0), html)
     html = re.sub(r'<meta[^>]+(?:og:url|og:image|twitter:image)[^>]*>', '', html)
-    html = html.replace('<html lang="ko">', '<html lang="ko" data-theme="light" style="color-scheme:light">')
+    html = html.replace('<html lang="ko">', '<html lang="ko" data-theme="light" data-platform="toss" style="color-scheme:light">')
     html = html.replace('content="light dark"', 'content="light"')
     html = re.sub(r'<title>.*?</title>', '<title>온누리 주유소 지도</title>', html, count=1)
     # The native navigation replaces the public header; keep its menu reachable.
@@ -105,6 +108,8 @@ def copy_assets(html, dist):
         source = HERE / 'src' / target.name if target.name.startswith('information-ui.') else ROOT / relative
         if relative == 'assets/nationwide-ui.js':
             target.write_text(prepare_results(source.read_text(encoding='utf-8')), encoding='utf-8')
+        elif relative == 'assets/onnuri-policy-data.js':
+            target.write_text(platform_script(source.read_text(encoding='utf-8')), encoding='utf-8')
         elif relative == 'assets/i18n.js':
             translated = source.read_text(encoding='utf-8').replace('전국 주유소 할인 지도', '온누리 주유소 지도').replace('Korea Fuel Discount Map', 'Onnuri FuelMap')
             target.write_text(translated, encoding='utf-8')
@@ -122,13 +127,14 @@ def copy_assets(html, dist):
 
 
 def main():
+    build_policy_data()
     source = (ROOT / 'output/map.html').read_text(encoding='utf-8')
     html = prepare(source)
     dist = HERE / 'dist'
     dist.mkdir(exist_ok=True)
     references = copy_assets(html, dist)
     # Shared filenames can otherwise keep an older script after a new deployment.
-    inputs = [ROOT / 'output/map.html', ROOT / 'favicon.svg', HERE / 'prepare_bundle.py',
+    inputs = [ROOT / 'output/map.html', ROOT / 'favicon.svg', ROOT / 'assets/onnuri-policy.json', ROOT / 'scripts/build_policy_data.py', HERE / 'prepare_bundle.py',
               HERE / 'package.json', HERE / 'package-lock.json', HERE / 'apps-in-toss.config.ts', HERE / 'vite.config.js']
     inputs += sorted((HERE / 'src').glob('*'))
     inputs += [ROOT / relative for relative in references

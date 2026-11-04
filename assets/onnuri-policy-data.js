@@ -1,0 +1,78 @@
+(function(root){
+  const data = {
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-04",
+  "reviewAfterDays": 7,
+  "digitalBase": {
+    "rate": 7,
+    "recheckBy": "2026-12-31",
+    "sourceId": "reform-2026"
+  },
+  "notices": [
+    {
+      "id": "kgf-2026",
+      "kind": "temporary",
+      "title": "코리아 그랜드 페스티벌 특별할인",
+      "publishedAt": "2026-10-27",
+      "startsOn": "2026-11-02",
+      "endsOn": "2026-11-06",
+      "rate": 10,
+      "summary": "디지털 온누리상품권 할인율을 평소 7%에서 10%로 높이는 특별판매 공지입니다.",
+      "details": [
+        "행사 전체 기간과 상품권 특별판매 기간은 다릅니다.",
+        "실제 구매 가능액·적용 구간·잔여 예산·종료 시각은 공식 앱 공지를 확인하세요."
+      ],
+      "sourceId": "kgf-2026"
+    },
+    {
+      "id": "reform-2027",
+      "kind": "planned",
+      "title": "사용처에 따른 할인·환급 개편안",
+      "publishedAt": "2026-10-01",
+      "startsOn": null,
+      "endsOn": null,
+      "plannedYear": 2027,
+      "summary": "구매할인 5%에 사용처별 소비환급을 더하는 방안입니다. 개별 주유소의 적용 여부는 별도 확인이 필요합니다.",
+      "details": [
+        "전통시장: 구매할인 5% + 소비환급 5% = 총 10%",
+        "지방 골목상권: 구매할인 5% + 소비환급 3% = 총 8%",
+        "수도권 골목상권: 구매할인 5%, 추가 소비환급 0%"
+      ],
+      "sourceId": "reform-2026"
+    }
+  ],
+  "sources": [
+    {
+      "id": "kgf-2026",
+      "publisher": "관계부처 합동 · 대한민국 정책브리핑",
+      "title": "제2회 코리아 그랜드 페스티벌 개최 발표",
+      "url": "https://m.korea.kr/briefing/pressReleaseView.do?newsId=156786628"
+    },
+    {
+      "id": "reform-2026",
+      "publisher": "중소벤처기업부 · 대한민국 정책브리핑",
+      "title": "온누리상품권 개편 방안 · 2026.10.01",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783869",
+      "documentUrl": "https://www.korea.kr/common/download.do?fileId=198565961&tblKey=GMN"
+    }
+  ],
+  "registration": {
+    "steps": [
+      "공식 디지털온누리 앱에서 본인확인 후 회원가입",
+      "충전용 계좌와 결제용 카드를 각각 등록",
+      "방문할 가맹점·잔액·구매 조건 확인"
+    ],
+    "links": [
+      {
+        "label": "Android 공식 앱 · 가입 안내",
+        "url": "https://play.google.com/store/apps/details?id=com.komsco.kpay"
+      },
+      {
+        "label": "iPhone 공식 앱 · 가입 안내",
+        "url": "https://apps.apple.com/kr/app/id6738372450"
+      }
+    ]
+  }
+};
+  if(typeof module==='object'&&module.exports)module.exports=data;else root.GasOnnuriPolicyData=data;
+})(typeof globalThis!=='undefined'?globalThis:this);

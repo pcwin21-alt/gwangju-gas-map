@@ -47,6 +47,11 @@ def audit():
     for token in ['X-Master-Key', 'BIN_KEY', 'formspree.io', 'qr.kakaopay.com', 'goatcounter.com', 'gc.zgo.at', 'apps.apple.com', 'navigator.geolocation.getCurrentPosition']:
         assert token not in html, f'Legacy integration in HTML: {token}'
     passed('legacy_endpoints_and_browser_gps_removed', True)
+    policy = sources['assets/onnuri-policy-data.js'].decode('utf-8')
+    assert 'data-platform="toss"' in html
+    assert 'apps.apple.com' not in policy and 'play.google.com' not in policy
+    assert '156783869' in policy and '156786628' in policy
+    passed('policy_fallback_retains_official_sources_without_store_links', True)
     original = (ROOT / 'output/map.html').read_text(encoding='utf-8')
     for key in ['STATIONS', 'PRICES', 'PRICE_INFO', 'MERCHANT_STATUS', 'NATIONAL_PENDING']:
         pattern = rf'^(?:const|let) {key} = (.+);\r?$'
