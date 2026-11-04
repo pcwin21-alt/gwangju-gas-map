@@ -14,8 +14,8 @@
     }
     return true;
   }
-  // Keep an explicit nationwide link distinct from a first visit (Gwangju).
-  const regionFromURL=value=>value==='all'||regions.includes(value)?value:'광주';
+  // First visits and invalid regions open nationwide; shared regional links keep their scope.
+  const regionFromURL=value=>regions.includes(value)?value:'all';
   const api={regions,matches,searchMatches,regionFromURL};
   if (typeof module==='object' && module.exports) module.exports=api;
   else {root.GasNational=api;root.GasNationalState={region:'all',method:'all',fuel:'all'};}

@@ -764,7 +764,7 @@
   <link rel="stylesheet" href="assets/ux-fixes.css?v=2df80643d424">
   <link rel="stylesheet" href="assets/responsive-ui.css?v=c5dbf9ed40a2">
   <link rel="stylesheet" href="assets/theme.css?v=c42a25cb01d4">
-  <script src="assets/nationwide.js?v=e1738fc77729"></script>
+  <script src="assets/nationwide.js?v=93fd0d41c27e"></script>
 </head>
 <body>
 <div class="app">
@@ -875,7 +875,7 @@
         <button class="search-clear" id="searchClear" title="검색어 지우기" aria-label="검색어 지우기">✕</button>
         <div class="no-result" id="noResult">검색 결과 없음</div>
       </div>
-      <button id="regionOpen" type="button" aria-haspopup="dialog" aria-controls="regionDialog" aria-label="지역 선택"><span id="regionLabel" data-no-i18n>광주</span><span aria-hidden="true">▾</span></button>
+      <button id="regionOpen" type="button" aria-haspopup="dialog" aria-controls="regionDialog" aria-label="지역 선택"><span id="regionLabel" data-no-i18n>전국</span><span aria-hidden="true">▾</span></button>
       <button id="filtersToggle" type="button" aria-expanded="false" aria-controls="mapFilters"><span>필터</span><span id="filterCount" hidden></span></button>
     </div>
     <nav class="search-modes" aria-label="찾는 방식"><button id="nearbyModeBtn" type="button" aria-pressed="false" aria-busy="false">내 주변</button><button id="routeModeBtn" type="button" aria-pressed="false" aria-controls="tripPanel">가는 길</button></nav>
@@ -1249,10 +1249,10 @@ const COLOR = {
   both:       '#DC2626',
 };
 
-// 지도 초기화 (광주 중심)
+// 전국 보기로 시작하고, 아래에서 현재 조건의 등록 지점에 범위를 맞춘다.
 const map = new kakao.maps.Map(document.getElementById('map'), {
-  center: new kakao.maps.LatLng(35.1595, 126.8526),
-  level: 8,
+  center: new kakao.maps.LatLng(36.0, 127.8),
+  level: 13,
 });
 
 // ── 자치구 경계 폴리곤 (구 단위, 동 경계 없음) ────────────────
@@ -2612,9 +2612,9 @@ if (!localStorage.getItem('helpSeen')) {
 <script src="assets/route-planner.js?v=787ce0354e88"></script>
 <script src="assets/updates.js?v=db39e7a48351"></script>
 <script src="assets/visual-refresh.js?v=58440547ed92"></script>
-<script src="assets/nationwide-ui.js?v=8267a14a247e"></script>
+<script src="assets/nationwide-ui.js?v=a34bfc02d531"></script>
 <script src="assets/simple-controls.js?v=48c97dd1a966"></script>
-<script src="assets/region-picker.js?v=285abb1dcb98"></script>
+<script src="assets/region-picker.js?v=6bf30e1a5cbd"></script>
 <script src="assets/ux-fixes.js?v=7f1466bfd7ca"></script>
 <script src="assets/input-ux.js?v=1809ebe00951"></script>
 <script src="assets/map-controls.js?v=1ae1546514a1"></script>
