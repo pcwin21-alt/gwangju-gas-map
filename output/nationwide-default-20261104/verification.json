@@ -53,13 +53,44 @@
         320,
         740
       ]
-    }
+    },
+    "liveMobile": {
+      "allPinsInsideMap": true,
+      "count": "217곳",
+      "horizontalOverflow": false,
+      "pinCount": 217,
+      "region": "all",
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    "liveDesktop": {
+      "count": "217곳",
+      "horizontalOverflow": false,
+      "region": "all",
+      "viewport": [
+        1280,
+        720
+      ]
+    },
+    "liveLogs": []
   },
-  "publicDeployment": "pending",
+  "publicDeployment": {
+    "status": "verified_live",
+    "sourceCommit": "bcb972a7a0a8b4ba58ea3194abfa6ca5fe7a7e44",
+    "sourceChecksRun": "https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41811973422",
+    "publishRun": "https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41811973489",
+    "pagesRun": "https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/41812053174",
+    "pagesAttempt": 2,
+    "initialFailure": "GitHub Pages deployment API HTTP 500; same deployment rerun succeeded",
+    "url": "https://pcwin21-alt.github.io/gwangju-gas-map/"
+  },
   "tossConsoleUploaded": false,
   "tossReleased": false,
   "candidateArtifact": {
     "name": "onnuri-fuel-map.ait",
     "sha256": "3261cf5dad9337c6de5c19609fa844109adc11ac2a5aee07f6416a7d9aad179f"
-  }
+  },
+  "nativePhoneVerified": false
 }
