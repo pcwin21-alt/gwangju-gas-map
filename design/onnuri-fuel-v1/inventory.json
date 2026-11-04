@@ -1,0 +1,230 @@
+{
+  "status": "design_proposal_not_deployed",
+  "components": [
+    {
+      "id": "F01",
+      "family": "foundation",
+      "name": "글자 위계",
+      "contract": "제목20 / 본문16 / 메타14. 400·700 두 굵기를 사용한다.",
+      "demo": "type"
+    },
+    {
+      "id": "F02",
+      "family": "foundation",
+      "name": "버튼과 아이콘",
+      "contract": "주 행동·보조·닫기. 최소44px, 선 아이콘24px.",
+      "demo": "buttons"
+    },
+    {
+      "id": "F03",
+      "family": "foundation",
+      "name": "색과 표면",
+      "contract": "Sand 바탕·Indigo 정보·Jade 행동·Sage 선택. 일반 목록에 그림자 없음.",
+      "demo": "surfaces"
+    },
+    {
+      "id": "M01",
+      "family": "map",
+      "name": "토스 내비게이션 경계",
+      "contract": "실제 앱에서는 SDK 내비게이션을 유지한다. 웹 미리보기에서 재구현하지 않는다.",
+      "demo": "native"
+    },
+    {
+      "id": "M02",
+      "family": "map",
+      "name": "검색 입력과 지우기",
+      "contract": "입력16px. 검색과 지우기를 각각 이름 붙인 조작으로 제공한다.",
+      "demo": "search"
+    },
+    {
+      "id": "M03",
+      "family": "map",
+      "name": "지역 선택 버튼",
+      "contract": "현재 지역을 버튼에 표시하고 선택창으로 연결한다.",
+      "demo": "region_button"
+    },
+    {
+      "id": "M04",
+      "family": "map",
+      "name": "필터 버튼과 개수",
+      "contract": "적용된 결제수단·추가 조건은 접근성 이름과 배지로 표시한다.",
+      "demo": "filter_button"
+    },
+    {
+      "id": "M05",
+      "family": "map",
+      "name": "내 주변과 더보기",
+      "contract": "주요 탐색과 보조 메뉴를 구분한다. 처음에 위치 권한을 요구하지 않는다.",
+      "demo": "modes"
+    },
+    {
+      "id": "M06",
+      "family": "map",
+      "name": "조회 개수와 범위",
+      "contract": "전체 가맹점 수로 오해하지 않도록 현재 조건의 결과임을 구분한다.",
+      "demo": "count"
+    },
+    {
+      "id": "M07",
+      "family": "map",
+      "name": "지도 범위 조회",
+      "contract": "좌측 상단 단일 진입점. 결과창이 열리면 중복 버튼을 감춘다.",
+      "demo": "area"
+    },
+    {
+      "id": "M08",
+      "family": "map",
+      "name": "확대·축소와 내 위치",
+      "contract": "44px 확대 조작·48px 위치 조작. 지도 하단 좌우를 분리한다.",
+      "demo": "map_controls"
+    },
+    {
+      "id": "M09",
+      "family": "map",
+      "name": "지도 마커",
+      "contract": "온누리·지역화폐·중복의 색과 내부 도형을 구분한다. 상세에서 결제 범위를 다시 확인한다.",
+      "demo": "markers"
+    },
+    {
+      "id": "Q01",
+      "family": "filters",
+      "name": "지역 선택 팝업",
+      "contract": "모바일 아래 시트 / PC 중앙 팝업. 선택 지역과 닫기를 항상 구분한다.",
+      "demo": "region"
+    },
+    {
+      "id": "Q02",
+      "family": "filters",
+      "name": "검색 필터 팝업",
+      "contract": "결제수단→유형·유종→시군구. 지도 보기와 조건 초기화 제공.",
+      "demo": "filters"
+    },
+    {
+      "id": "Q03",
+      "family": "filters",
+      "name": "결제수단 선택",
+      "contract": "색과 체크를 함께 사용. 현재 선택은 배경·경계·문구로 구별한다.",
+      "demo": "segments"
+    },
+    {
+      "id": "Q04",
+      "family": "filters",
+      "name": "유형·유종·시군구 선택",
+      "contract": "기본 native select. 긴 선택값·키보드·확대 시 높이 증가 허용.",
+      "demo": "selects"
+    },
+    {
+      "id": "Q05",
+      "family": "filters",
+      "name": "초기화와 선택 요약",
+      "contract": "초기화는 낮은 우선순위. 선택값 자체를 화면에 보존한다.",
+      "demo": "reset"
+    },
+    {
+      "id": "R01",
+      "family": "results",
+      "name": "조회 결과 시트",
+      "contract": "지도 위에 독립된 목록. 제목·닫기·높이 조절과 본문 스크롤 구분.",
+      "demo": "results"
+    },
+    {
+      "id": "R02",
+      "family": "results",
+      "name": "범위·정렬·목록 높이",
+      "contract": "범위와 정렬은 짧은 두 선택. 내 위치가 없으면 거리 정렬 비활성.",
+      "demo": "sort"
+    },
+    {
+      "id": "R03",
+      "family": "results",
+      "name": "주유소 결과 행",
+      "contract": "상호→주소→결제 확인 범위→유가·날짜. 자동 높이, 긴 주소 줄바꿈.",
+      "demo": "row"
+    },
+    {
+      "id": "R04",
+      "family": "results",
+      "name": "추가 보기",
+      "contract": "현재 표시량과 추가 보기를 분리. 끝없이 자동 추가하지 않는다.",
+      "demo": "pagination"
+    },
+    {
+      "id": "R05",
+      "family": "results",
+      "name": "빈 결과와 복구",
+      "contract": "검색어 지우기·필터 초기화·지역 바꾸기 중 원인에 맞는 행동만 표시.",
+      "demo": "empty"
+    },
+    {
+      "id": "D01",
+      "family": "detail",
+      "name": "주유소 상세 시트",
+      "contract": "좌측 제목·주소와 우측44px 닫기. 지도 위치를 보존하고 원래 결과로 복귀.",
+      "demo": "detail"
+    },
+    {
+      "id": "D02",
+      "family": "detail",
+      "name": "결제 확인 배지",
+      "contract": "지류·디지털·KB국민카드 범위를 혼동하지 않는다. 현재 결제 보장 표현 없음.",
+      "demo": "badges"
+    },
+    {
+      "id": "D03",
+      "family": "detail",
+      "name": "확인일과 출처",
+      "contract": "가맹 확인일·유가 기준일을 나누고, 과거 자료는 상태와 함께 표시.",
+      "demo": "proof"
+    },
+    {
+      "id": "D04",
+      "family": "detail",
+      "name": "유가 행",
+      "contract": "유종과 숫자를 정렬. 가격 단위·자료 기준일을 숫자와 함께 제공.",
+      "demo": "prices"
+    },
+    {
+      "id": "D05",
+      "family": "detail",
+      "name": "유가 미확인",
+      "contract": "0원이나 실시간 최저가로 대체하지 않고 자료 부재를 표시한다.",
+      "demo": "no_price"
+    },
+    {
+      "id": "S01",
+      "family": "support",
+      "name": "더보기 메뉴",
+      "contract": "가격 순위·언어·사용 안내·업데이트. 보조 항목을 행으로 정리한다.",
+      "demo": "menu"
+    },
+    {
+      "id": "S02",
+      "family": "support",
+      "name": "가격 순위",
+      "contract": "서로 다른 날짜·가격 확보 범위를 표시. 작은 화면에서 가격을 다음 행에 배치.",
+      "demo": "rank"
+    },
+    {
+      "id": "S03",
+      "family": "support",
+      "name": "사용 안내",
+      "contract": "독립 정보 서비스·자료 한계·위치 거절 후 검색을 읽을 수 있게 제공.",
+      "demo": "help"
+    },
+    {
+      "id": "S04",
+      "family": "support",
+      "name": "업데이트·자료 상태",
+      "contract": "실제 데이터의 시각과 범위를 표시. 가맹 확인을 새로 한 것으로 표현하지 않음.",
+      "demo": "updates"
+    },
+    {
+      "id": "S05",
+      "family": "support",
+      "name": "언어 선택",
+      "contract": "한 번의 선택으로 변경. 상호·주소·사용자 입력의 원문은 보존한다.",
+      "demo": "language"
+    }
+  ],
+  "count": 32
+}
