@@ -1,0 +1,35 @@
+/* A small, optional policy entry; the native dialog does not resize the map. */
+.app #policyOpen{position:absolute;left:72px;bottom:24px;z-index:120;display:inline-flex;align-items:center;justify-content:center;gap:4px;max-width:calc(100% - 148px);min-height:44px;padding:6px 8px;border:1px solid var(--line);border-radius:10px;background:var(--panel);color:var(--muted);box-shadow:0 2px 8px #11111314;font-size:.875rem;line-height:1.5;font-family:inherit;font-weight:400;cursor:pointer;overflow-wrap:anywhere}
+.app #policyLabel{min-width:0}
+.app .map-area:has(.national-results[open]) #policyOpen,.app .map-area:has(#stationDetails:not([hidden])) #policyOpen,.app .map-area:has(#tripPanel[open]) #policyOpen{display:none}
+.app #policyOpen:hover{color:var(--accent);background:var(--selected)}
+.app #policyOpen .policy-info{display:grid;place-items:center;width:16px;height:16px;border:1px solid currentColor;border-radius:50%;font:700 11px/1 sans-serif}
+.app #policySpecial{width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.app #policySpecial[hidden]{display:none}
+.app .policy-dialog{position:fixed;inset:0;width:min(560px,calc(100% - 32px));max-width:calc(100% - 32px);max-height:calc(100dvh - 32px);margin:auto;padding:0;border:1px solid var(--line);border-radius:24px;background:var(--panel);color:var(--ink);box-shadow:var(--panel-shadow);overflow:hidden;text-align:left;font-size:16px;line-height:1.6}
+.policy-dialog::backdrop{background:var(--veil)}
+.policy-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 20px;border-bottom:1px solid var(--soft-line)}
+.policy-heading h2{font-size:20px;line-height:1.4;margin:0}
+.app .policy-heading button{flex:0 0 auto;min-width:44px;min-height:44px;border:1px solid var(--line);border-radius:12px;background:var(--field);color:var(--ink);font-size:16px;cursor:pointer}
+.policy-body{max-height:calc(100dvh - 126px);overflow:auto;overscroll-behavior:contain;padding:20px}
+.policy-body h3{font-size:18px;line-height:1.5;margin:8px 0}
+.policy-body p{margin:8px 0;overflow-wrap:anywhere}
+.policy-body .policy-meta,.policy-eyebrow{font-size:14px;line-height:1.5;color:var(--muted)}
+.policy-special{color:var(--accent);font-weight:700}
+.policy-warning{background:var(--warning-bg);color:var(--warning-ink);padding:12px;border-radius:12px}
+.policy-update-status{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.policy-update-status p{margin:0;flex:1 1 180px}
+.app #policyRefresh{min-height:44px;padding:6px 10px;border:1px solid var(--line);border-radius:12px;background:var(--field);color:var(--ink);font-size:14px;cursor:pointer}
+.policy-news-item,.policy-signup{padding:20px 0 0;margin-top:20px;border-top:1px solid var(--soft-line)}
+.policy-join{margin-top:12px;border-top:1px solid var(--soft-line);border-bottom:1px solid var(--soft-line)}
+.policy-join .policy-signup{margin-top:0;padding-top:0;border-top:0;padding-bottom:12px}
+.policy-state{display:inline-block;padding:2px 8px;border-radius:8px;background:var(--selected);color:var(--accent);font-size:14px}
+.policy-news-item[data-state="ended"] .policy-state{background:var(--field);color:var(--muted)}
+.policy-body summary{min-height:44px;padding:10px 0;color:var(--accent);cursor:pointer;font-size:14px}
+.policy-body ul,.policy-body ol{padding-left:22px;margin:8px 0}
+.policy-body li{margin:6px 0}
+.policy-body a{display:block;padding:10px 0;min-height:44px;color:var(--accent);font-size:14px;overflow-wrap:anywhere;text-underline-offset:3px}
+.policy-signup-links{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.policy-signup-links a{padding:10px;border:1px solid var(--line);border-radius:12px;text-decoration:none}
+@media(max-width:600px){.app .policy-dialog{width:100%;max-width:100%;max-height:calc(100dvh - 16px);inset:auto 0 0;margin:0;border-radius:24px 24px 0 0}.policy-body{max-height:calc(100dvh - 110px);padding:16px 16px max(20px,env(safe-area-inset-bottom))}.policy-heading{padding:12px 16px}}
+@media(max-width:360px){.app .search-modes{gap:4px}.app #policyOpen{font-size:14px;padding-inline:2px}.policy-signup-links{grid-template-columns:1fr}}
