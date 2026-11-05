@@ -11,8 +11,10 @@
         if (!points.length || !container.clientWidth || !container.clientHeight) return;
         map.relayout();
         if (points.length === 1) {
-          map.setCenter(new sdk.LatLng(points[0].lat, points[0].lng));
           map.setLevel(4);
+          // Reapply the destination after zooming: Kakao can shift its center
+          // during a large nationwide-to-street scale change.
+          map.setCenter(new sdk.LatLng(points[0].lat, points[0].lng));
           return;
         }
         const bounds = new sdk.LatLngBounds();
