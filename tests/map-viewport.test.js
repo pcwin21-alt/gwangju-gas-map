@@ -25,6 +25,9 @@ test('empty results keep map unchanged and a single result gets useful zoom',()=
  const empty=fixture([]);empty.api.fit();empty.flush();assert.equal(empty.calls.length,0);
  const one=fixture([{lat:35.1,lng:126.8}]);one.api.fit();one.flush();
  assert.equal(one.calls.find(c=>c[0]==='level')[1],4);
+ assert.equal(one.calls.at(-1)[0],'center');
+ assert.equal(one.calls.at(-1)[1].lat,35.1);
+ assert.equal(one.calls.at(-1)[1].lng,126.8);
  assert.equal(one.calls.some(c=>c[0]==='bounds'),false);
 });
 test('direct manipulation cancels a queued automatic fit without removing explicit fit',()=>{

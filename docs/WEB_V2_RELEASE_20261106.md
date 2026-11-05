@@ -24,4 +24,6 @@ GasBuddy 중심으로 검토한 v2의 검색·필터 시트·가격 핀·비교 
 
 ## 배포 결과
 
-로컬 검수 완료. 원격 반영과 실제 공개 주소의 최종 확인은 이어서 기록한다.
+화면 커밋 `43e0f37`의 [배포 파일 생성](https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/42131375220)과 [전체 검사](https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/42131375205)가 통과했다. Pages의 첫 게시가 지연돼 같은 gh-pages 커밋에 게시 요청을1회 재전송했고, [실제 Pages 게시](https://github.com/pcwin21-alt/gwangju-gas-map/actions/runs/42131993406)가 성공했다. 공개 주소의 `fuelDesignApp`, 해시가 붙은 v2 자산7개, 언어 버튼0개, 전국184개 조건을 확인했다.
+
+공개 검색 검수에서 기존 단일 결과 맞춤의 `setCenter → setLevel` 순서가 전국→거리 확대 때 중심을 벗어나게 하는 문제를 재현했다. `setLevel → setCenter`로 바꾸고 로컬 실제 Kakao에서 **검색1곳 → 가격 핀 노출 → 현재 지도 안1곳**을 확인했다. 확대/검색/목록/핀 관련17개 검사 통과. 수정의 후속 게시와 공개 재검수 결과를 이어서 기록한다.
