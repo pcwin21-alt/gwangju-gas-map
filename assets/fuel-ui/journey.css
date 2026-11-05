@@ -1,0 +1,16 @@
+#fuelJourney{position:absolute;z-index:230;bottom:0;left:0;right:0;max-height:70%;overflow:auto;background:var(--fuel-panel);color:var(--fuel-ink);border:1px solid var(--fuel-line);border-radius:24px 24px 0 0;box-shadow:var(--fuel-sheet-shadow);font:1rem/1.6 var(--fuel-font)}
+#fuelJourney[hidden],#journeyRestore[hidden],#fuelJourney [hidden]{display:none!important}
+#fuelJourney header{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 20px;position:sticky;top:0;background:var(--fuel-panel);border-bottom:1px solid var(--fuel-line);z-index:2}
+#fuelJourney h2{font-size:1.125rem;margin:0}#fuelJourney button,#fuelJourney input{font:inherit;min-height:44px;border-radius:12px;border:1px solid var(--fuel-control-line);padding:8px 12px;color:var(--fuel-ink);background:var(--fuel-panel)}
+#fuelJourney button{cursor:pointer;word-break:keep-all}#fuelJourney button:disabled{opacity:.6;cursor:wait}#fuelJourney button:focus-visible,#journeyRestore:focus-visible{outline:3px solid var(--fuel-focus);outline-offset:2px}
+.journey-body{padding:16px 20px 24px}.journey-body p{margin:0 0 12px}#journeyStation{font-weight:700;font-size:1.125rem}.journey-meta{font-size:.875rem;color:var(--fuel-muted);overflow-wrap:anywhere}
+.journey-origin{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}.journey-origin strong{flex-basis:100%}.journey-search{display:flex;gap:8px}.journey-search input{min-width:0;flex:1}#journeySearch label{font-size:.875rem;display:block;margin-bottom:4px}
+.journey-choices{display:grid;gap:8px;margin:12px 0}.journey-choices button{text-align:left}.journey-choices small{display:block;color:var(--fuel-muted)}
+#journeyStatus{font-size:.875rem;color:var(--fuel-muted)}.journey-estimate{font-size:1.375rem;font-weight:700}.journey-primary,.journey-support,.journey-apps{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.journey-primary button,.journey-support button,.journey-apps button{flex:1;min-width:110px}
+#fuelJourney #journeyCalculate,#fuelJourney #journeyNavigate{background:var(--fuel-primary);color:var(--fuel-on-primary);border-color:var(--fuel-primary)}.journey-apps p{flex-basis:100%}
+.fuel-journey-actions{display:flex;gap:8px;margin-top:16px}.fuel-journey-actions button{min-height:48px;flex:1;border:1px solid var(--fuel-primary);border-radius:12px;font:700 1rem var(--fuel-font);padding:12px;background:var(--fuel-primary);color:var(--fuel-on-primary)}.fuel-journey-actions button+button{background:var(--fuel-panel);color:var(--fuel-primary)}
+.journey-restore{position:absolute;z-index:231;bottom:20px;left:16px;min-height:48px;padding:12px 18px;border-radius:999px;border:1px solid var(--fuel-primary);color:var(--fuel-on-primary);background:var(--fuel-primary);font:700 1rem var(--fuel-font)}
+.map-area:has(#fuelJourney:not([hidden])) :is(#searchAreaBtn,#policyOpen,.map-zoom-tools,#myLocBtn),.map-area:has(#journeyRestore:not([hidden])) :is(#searchAreaBtn,#policyOpen){display:none!important}
+.journey-map-label{background:var(--fuel-primary);color:white;border:2px solid white;border-radius:8px;padding:4px 8px;font:700 .875rem var(--fuel-font)}
+@media(min-width:701px){#fuelJourney{left:auto;right:16px;bottom:16px;width:420px;max-height:calc(100% - 32px);border-radius:24px}}
+@media(max-width:359px){.journey-apps button{flex-basis:100%}}

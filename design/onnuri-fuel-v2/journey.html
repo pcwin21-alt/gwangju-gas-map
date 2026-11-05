@@ -1,0 +1,20 @@
+<section id="fuelJourney" class="fuel-journey" role="dialog" aria-label="주유소까지 경로" hidden>
+  <header><h2 id="journeyTitle">주유소까지 경로</h2><button id="journeyClose" type="button" aria-label="경로 닫기">닫기</button></header>
+  <div class="journey-body">
+    <p id="journeyStation"></p>
+    <p id="journeyAddress" class="journey-meta"></p>
+    <div class="journey-origin"><strong id="journeyOrigin">출발지를 선택해 주세요</strong><button id="journeyLocate" type="button">내 위치</button><button id="journeyPick" type="button">지도에서 선택</button></div>
+    <form id="journeySearch"><label for="journeyQuery">출발지 검색</label><div class="journey-search"><input id="journeyQuery" type="search" placeholder="주소·장소명" autocomplete="off" enterkeyhint="search"><button type="submit">검색</button></div></form>
+    <div id="journeyChoices" class="journey-choices"></div>
+    <details id="journeyDestinationOptions"><summary>목적지로 가는 길에 들르기</summary><form id="journeyDestinationSearch"><label for="journeyDestinationQuery">최종 목적지</label><div class="journey-search"><input id="journeyDestinationQuery" type="search" placeholder="목적지 주소·장소명" autocomplete="off"><button type="submit">검색</button></div></form><p id="journeyDestinationLabel" class="journey-meta"></p><div id="journeyDestinationChoices" class="journey-choices"></div><button id="journeyDestinationClear" type="button">최종 목적지 지우기</button></details>
+    <p id="journeyStatus" role="status" aria-live="polite"></p>
+    <p id="journeyEstimate" class="journey-estimate" hidden></p>
+    <p id="journeyRouteDate" class="journey-meta" hidden></p>
+    <p class="journey-meta journey-route-note">경로 확인 시 출발지·목적지 좌표가 카카오모빌리티에 전달돼요.</p>
+    <div class="journey-primary"><button id="journeyCalculate" type="button">경로 확인</button><button id="journeyMap" type="button" hidden>지도 크게 보기</button></div>
+    <div class="journey-support"><button id="journeyNavigate" type="button">내비로 안내받기</button><button id="journeyCopy" type="button">주소 복사</button></div>
+    <div id="journeyApps" class="journey-apps" hidden><button data-journey-app="naver" type="button">네이버지도로 열기</button><button data-journey-app="kakao" type="button">카카오맵으로 열기</button><p class="journey-meta">선택한 주유소 위치를 지도앱으로 전달해요.</p></div>
+    <p class="journey-meta">주유 전 사용할 결제수단과 현장 유가를 확인해 주세요. 예상 이동시간에 주유·대기 시간은 포함되지 않아요.</p>
+  </div>
+</section>
+<button id="journeyRestore" class="journey-restore" type="button" hidden>경로 다시 보기</button>

@@ -14,7 +14,7 @@ def version_asset(match):
     path = match.group(1)
     digest = hashlib.sha256((ROOT / path).read_bytes()).hexdigest()[:12]
     return path + '?v=' + digest
-html = re.sub(r'(assets/[\w.-]+\.(?:js|css))(?=")', version_asset, html)
+html = re.sub(r'(assets/[\w./-]+\.(?:js|css))(?=")', version_asset, html)
 (SITE / 'index.html').write_text(html, encoding='utf-8')
 for name in ('favicon.svg', 'thumbnail.png', 'thumbnail-discount-map.png'):
     shutil.copyfile(ROOT / name, SITE / name)
