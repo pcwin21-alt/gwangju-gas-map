@@ -3,13 +3,13 @@
 This reads local public policy data only; it never collects merchant records.
 """
 import json
-from datetime import date
+from datetime import date, datetime, timedelta
 from pathlib import Path
 from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 ALLOWED_HOSTS = {'www.korea.kr', 'm.korea.kr', 'www.mss.go.kr', 'www.semas.or.kr',
-                 'www.komsco.com', 'play.google.com', 'apps.apple.com'}
+                 'www.komsco.com', 'www.onnuri.gift', 'play.google.com', 'apps.apple.com'}
 
 
 def validate(data):
@@ -44,6 +44,15 @@ def validate(data):
                 raise ValueError('Policy dates reversed')
         if 'rate' in item and not 0 <= item['rate'] <= 30:
             raise ValueError('Invalid notice rate')
+        for stamp, day in [('startsAt', 'startsOn'), ('endsAt', 'endsOn')]:
+            if stamp in item:
+                instant = datetime.fromisoformat(item[stamp])
+                if instant.isoformat(timespec='seconds') != item[stamp] or instant.utcoffset() != timedelta(hours=9) or instant.date().isoformat() != item.get(day):
+                    raise ValueError('Notice timestamp must match its Korean date')
+        if item.get('startsAt') and item.get('endsAt') and item['startsAt'] >= item['endsAt']:
+            raise ValueError('Notice timestamps reversed')
+        if 'purchaseLimitKRW' in item and (type(item['purchaseLimitKRW']) is not int or item['purchaseLimitKRW'] <= 0):
+            raise ValueError('Invalid purchase limit')
     links = data['sources'] + data['registration']['links']
     for link in links:
         for key in ('url', 'documentUrl'):

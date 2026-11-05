@@ -22,6 +22,15 @@ class PolicyData(unittest.TestCase):
         self.assertIn('156783869', result)
         self.assertIn('156786628', result)
 
+    def test_announcement_clock_and_limits_validate_consistently(self):
+        data = json.loads((ROOT / 'assets/onnuri-policy.json').read_text(encoding='utf-8'))
+        self.assertEqual(builder.validate(data)['notices'][0]['endsAt'], '2026-11-06T23:30:00+09:00')
+        for key, value in [('endsAt', '2026-11-07T23:30:00+09:00'), ('endsAt', '2026-11-06T14:30:00Z'), ('purchaseLimitKRW', -1)]:
+            changed = json.loads(json.dumps(data))
+            changed['notices'][0][key] = value
+            with self.assertRaises(ValueError):
+                builder.validate(changed)
+
 
 if __name__ == '__main__':
     unittest.main()
