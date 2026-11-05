@@ -17,11 +17,8 @@
   <meta property="og:image" content="https://pcwin21-alt.github.io/gwangju-gas-map/thumbnail-discount-map.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://pcwin21-alt.github.io/gwangju-gas-map/thumbnail-discount-map.png">
-  <script>
-    window.goatcounter = { path: function() { return '/hit'; } };
-  </script>
-  <script data-goatcounter="https://spectac1e.goatcounter.com/count"
-          async src="//gc.zgo.at/count.js"></script>
+
+
   <script type="text/javascript"
     src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=f912bbe9346dcc939b3ecabee03a4dff&libraries=services"
     onerror="window.mapSdkFailed=true"></script>
@@ -766,9 +763,10 @@
   <link rel="stylesheet" href="assets/theme.css?v=c42a25cb01d4">
   <link rel="stylesheet" href="assets/onnuri-policy.css?v=3ae448c47277">
   <script src="assets/nationwide.js?v=93fd0d41c27e"></script>
+<link rel="stylesheet" href="assets/fuel-ui/tokens.css?v=45814debca48"><link rel="stylesheet" href="assets/fuel-ui/components.css?v=8ed0dcbcb11a"><link rel="stylesheet" href="assets/fuel-ui/prototype.css?v=12abdd432440"><link rel="stylesheet" href="assets/fuel-ui/reference.css?v=e4d04517341f"><link rel="stylesheet" href="assets/fuel-ui/journey.css?v=63305fc5473b"><link rel="stylesheet" href="assets/fuel-ui/web.css?v=2e8a519b2b2b"><link rel="stylesheet" href="assets/onnuri-palette.css?v=2b6e6f6d41b7">
 </head>
 <body>
-<div class="app">
+<div class="app" id="fuelDesignApp">
   <div class="header">
     <div class="header-text">
       <div class="header-title">
@@ -788,7 +786,7 @@
       <p>온누리·광주 지역화폐 사용처와 주유 가격을 한눈에.<span hidden> 오늘 <b id="cnt-today">-</b> · 전체 <b id="cnt-total">-</b></span></p>
     </div>
     <div class="header-actions">
-      <button class="tools-trigger" id="toolsOpenBtn" type="button" aria-haspopup="dialog" aria-controls="mapTools">더보기 <span aria-hidden="true">⋯</span></button>
+
     </div>
   </div>
 
@@ -797,9 +795,7 @@
     <div class="modal-box">
       <h2>☕ 커피 사주기</h2>
       <p>이 지도가 도움이 됐다면<br>개발자에게 커피 한 잔 선물해주세요!</p>
-      <img class="modal-qr"
-           src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://qr.kakaopay.com/Ej8MzXsoX"
-           alt="카카오페이 QR코드">
+
       <p class="modal-hint">카카오페이 앱으로 QR을 스캔하세요</p>
       <button class="modal-close" id="coffeeModalClose">닫기</button>
     </div>
@@ -830,21 +826,15 @@
         <div class="help-item"><b>마커 클릭</b> → 주유소 이름·주소, 결제 가능 수단, 현재 유가(휘발유·경유·LPG) 확인</div>
         <div class="help-item"><b>검색창</b>에 주유소명이나 주소를 입력하면 해당 위치로 이동합니다.</div>
         <div class="help-item"><b>필터</b>에서 결제수단·유종·시군구를 고릅니다. 선택한 조건은 접어도 표시됩니다.</div>
-        <div class="help-item"><b>경유 주유소 찾기</b>에서 목적지를 검색하고 선택하세요. 출발지·조건은 필요할 때 변경할 수 있습니다.</div>
-        <div class="help-item"><b>더보기</b>에서 가격 순위·언어·사용법·제보 등 보조 기능을 엽니다.</div>
+
+        <div class="help-item"><b>더보기</b>에서 가격 순위·사용법·제보 등 보조 기능을 엽니다.</div>
         <div class="help-item"><b>📍 내 위치</b> → 현재 위치를 지도 중심으로 이동합니다. (브라우저 위치 권한 필요)</div>
         <div class="help-item"><b>길찾기</b> → 주유소 팝업에서 카카오맵 또는 네이버지도를 바로 엽니다.</div>
-        <div class="help-item"><b>주변 내보내기</b> → 내 위치 기준 가까운 주유소 링크 목록을 복사합니다.</div>
+
         <div class="help-item"><b>↺ 초기화</b> → 필터·검색·지도 위치를 한 번에 원래대로 되돌립니다.</div>
       </div>
 
       <hr class="help-divider">
-
-      <div class="help-section">
-        <div class="help-section-title">누락·오류 제보</div>
-        <div class="help-item">지도에 없는 주유소, 잘못된 정보가 있다면 <b>+ 제보</b> 버튼을 눌러 알려주세요. 지도에서 위치를 직접 찍거나 주소를 입력하고, 사진도 첨부할 수 있습니다.</div>
-        <div class="help-item">이메일로도 신고 가능 → <b>pcwin21@gmail.com</b></div>
-      </div>
 
       <hr class="help-divider">
 
@@ -879,7 +869,7 @@
       <button id="regionOpen" type="button" aria-haspopup="dialog" aria-controls="regionDialog" aria-label="지역 선택"><span id="regionLabel" data-no-i18n>전국</span><span aria-hidden="true">▾</span></button>
       <button id="filtersToggle" type="button" aria-expanded="false" aria-controls="mapFilters"><span>필터</span><span id="filterCount" hidden></span></button>
     </div>
-    <nav class="search-modes" aria-label="찾는 방식"><button id="nearbyModeBtn" type="button" aria-pressed="false" aria-busy="false">내 주변</button><button id="routeModeBtn" type="button" aria-pressed="false" aria-controls="tripPanel">가는 길</button></nav>
+    <nav class="search-modes" aria-label="찾는 방식"><button id="nearbyModeBtn" type="button" aria-pressed="false" aria-busy="false">내 주변</button><button id="routeModeBtn" type="button" aria-pressed="false" aria-controls="tripPanel">가는 길</button><button class="tools-trigger" id="toolsOpenBtn" type="button" aria-haspopup="dialog" aria-controls="mapTools">더보기 <span aria-hidden="true">⋯</span></button></nav>
     <div class="controls-status"><span class="count-badge" id="countBadge">0개</span><p id="activeFilters" class="active-filters" hidden></p></div>
     <p id="searchFlowStatus" class="search-flow-status" role="status" aria-live="polite" hidden></p>
     <dialog id="regionDialog" aria-labelledby="regionTitle">
@@ -887,7 +877,7 @@
       <select id="regionSelect" aria-label="시도 선택" hidden><option value="all">전국</option></select>
       <div id="regionOptions" class="region-options" role="group" aria-label="시도 선택"></div>
     </dialog>
-    <section id="mapFilters" class="map-filters" aria-label="검색 필터" hidden>
+    <dialog id="mapFilters" class="map-filters" aria-label="검색 필터" hidden>
       <div class="filters-heading"><h2>검색 필터</h2><button id="filtersReset" type="button">조건 초기화</button></div>
       <div class="filter-group" role="group" aria-label="결제수단">
         <button class="filter-btn active" data-filter="all">전체</button>
@@ -907,7 +897,7 @@
       <button class="district-btn" data-district="북구">북구</button>
       <button class="district-btn" data-district="서구">서구</button>
       </div>
-    </section>
+    </dialog>
   </div>
 
   <!-- ONNURI_POLICY_DIALOG_START -->
@@ -929,7 +919,7 @@
       <button class="rank-btn" id="rankBtn">가격 순위</button>
       <button id="helpBtn" type="button">사용법 안내</button>
       <button id="policyMenuOpen" type="button" aria-haspopup="dialog" aria-controls="policyDialog">온누리 혜택·정책</button>
-      <button id="languageBtn" class="language-btn" type="button" aria-label="Switch to English" data-no-i18n>EN</button>
+
       <label class="theme-picker" for="themeMode"><span>화면 테마</span><select id="themeMode" aria-label="화면 테마"><option value="system">기기 설정</option><option value="light">밝게</option><option value="dark">어둡게</option></select></label>
       <button class="reset-btn" id="resetBtn">↺ 초기화</button>
       <button class="nearby-btn" id="nearbyBtn">↗ 주변 내보내기</button>
@@ -1100,7 +1090,27 @@
     </div>
   </div>
 
-  <div class="map-area">
+  <div class="map-area"><section id="fuelJourney" class="fuel-journey" role="dialog" aria-label="주유소까지 경로" hidden>
+  <header><h2 id="journeyTitle">주유소까지 경로</h2><button id="journeyClose" type="button" aria-label="경로 닫기">닫기</button></header>
+  <div class="journey-body">
+    <p id="journeyStation"></p>
+    <p id="journeyAddress" class="journey-meta"></p>
+    <div class="journey-origin"><strong id="journeyOrigin">출발지를 선택해 주세요</strong><button id="journeyLocate" type="button">내 위치</button><button id="journeyPick" type="button">지도에서 선택</button></div>
+    <form id="journeySearch"><label for="journeyQuery">출발지 검색</label><div class="journey-search"><input id="journeyQuery" type="search" placeholder="주소·장소명" autocomplete="off" enterkeyhint="search"><button type="submit">검색</button></div></form>
+    <div id="journeyChoices" class="journey-choices"></div>
+    <details id="journeyDestinationOptions"><summary>목적지로 가는 길에 들르기</summary><form id="journeyDestinationSearch"><label for="journeyDestinationQuery">최종 목적지</label><div class="journey-search"><input id="journeyDestinationQuery" type="search" placeholder="목적지 주소·장소명" autocomplete="off"><button type="submit">검색</button></div></form><p id="journeyDestinationLabel" class="journey-meta"></p><div id="journeyDestinationChoices" class="journey-choices"></div><button id="journeyDestinationClear" type="button">최종 목적지 지우기</button></details>
+    <p id="journeyStatus" role="status" aria-live="polite"></p>
+    <p id="journeyEstimate" class="journey-estimate" hidden></p>
+    <p id="journeyRouteDate" class="journey-meta" hidden></p>
+    <p class="journey-meta journey-route-note">경로 확인 시 출발지·목적지 좌표가 카카오모빌리티에 전달돼요.</p>
+    <div class="journey-primary"><button id="journeyCalculate" type="button">경로 확인</button><button id="journeyMap" type="button" hidden>지도 크게 보기</button></div>
+    <div class="journey-support"><button id="journeyNavigate" type="button">내비로 안내받기</button><button id="journeyCopy" type="button">주소 복사</button></div>
+    <div id="journeyApps" class="journey-apps" hidden><button data-journey-app="naver" type="button">네이버지도로 열기</button><button data-journey-app="kakao" type="button">카카오맵으로 열기</button><p class="journey-meta">선택한 주유소 위치를 지도앱으로 전달해요.</p></div>
+    <p class="journey-meta">주유 전 사용할 결제수단과 현장 유가를 확인해 주세요. 예상 이동시간에 주유·대기 시간은 포함되지 않아요.</p>
+  </div>
+</section>
+<button id="journeyRestore" class="journey-restore" type="button" hidden>경로 다시 보기</button>
+
     <!-- ONNURI_POLICY_ENTRY_START -->
     <button id="policyOpen" type="button" aria-haspopup="dialog" aria-controls="policyDialog" data-no-i18n><span id="policyLabel">온누리 혜택·정책</span><span id="policySpecial" aria-hidden="true" hidden></span><span class="policy-info" aria-hidden="true">i</span></button>
     <!-- ONNURI_POLICY_ENTRY_END -->
@@ -2169,461 +2179,12 @@ function doCopy(text, onSuccess) {
   }
 }
 
-// ── 제보 기능 ────────────────────────────────────────────
-const geocoder = new kakao.maps.services.Geocoder();
-
-let reportLat = null, reportLng = null, reportAddress = '';
-
-const reportPanel    = document.getElementById('reportPanel');
-const reportBanner   = document.getElementById('reportBanner');
-const reportLocDisp  = document.getElementById('reportLocDisplay');
-const reportNameInp  = document.getElementById('reportName');
-const reportSubmitBtn = document.getElementById('reportSubmitBtn');
-
-function setReportLoc(lat, lng, addr) {
-  reportLat = lat; reportLng = lng; reportAddress = addr || '';
-  reportLocDisp.textContent = addr
-    ? `${addr} (${lat.toFixed(5)}, ${lng.toFixed(5)})`
-    : `위도 ${lat.toFixed(5)}, 경도 ${lng.toFixed(5)}`;
-  updateReportSubmitState();
-}
-
-function updateReportSubmitState() {
-  const ok = reportLat !== null && reportNameInp.value.trim().length > 0;
-  reportSubmitBtn.disabled = !ok;
-}
-
-function clearReportPin() {
-  if (reportPin) { reportPin.setMap(null); reportPin = null; }
-}
-
-function enterMapPinMode() {
-  reportPanel.classList.remove('open');
-  reportBanner.style.display = 'flex';
-  document.getElementById('reportTriggerBtn').classList.add('active');
-  reportMode = true;
-}
-
-function exitMapPinMode() {
-  reportBanner.style.display = 'none';
-  reportMode = false;
-}
-
-function openReportPanel() {
-  reportPanel.classList.add('open');
-  document.getElementById('reportTriggerBtn').classList.add('active');
-}
-
-function closeReportPanel() {
-  reportPanel.classList.remove('open');
-  exitMapPinMode();
-  clearReportPin();
-  reportLat = null; reportLng = null; reportAddress = '';
-  reportLocDisp.textContent = '위치가 설정되지 않았습니다';
-  reportNameInp.value = '';
-  document.getElementById('reportAddrInput').value = '';
-  document.getElementById('reportSaengsaeng').checked = false;
-  document.getElementById('reportOnnuri').checked = false;
-  document.getElementById('reportNotes').value = '';
-  document.getElementById('reportFileInput').value = '';
-  document.getElementById('reportFilePreview').style.display = 'none';
-  document.getElementById('reportFileName').style.display = 'none';
-  document.getElementById('reportFileHint').style.display = '';
-  document.getElementById('reportAttachReminder').style.display = 'none';
-  reportSubmitBtn.disabled = true;
-  document.getElementById('reportTriggerBtn').classList.remove('active');
-}
-
-// 지도 클릭 → 제보 위치 지정
-kakao.maps.event.addListener(map, 'click', function(mouseEvent) {
-  if (!reportMode) return;
-  const lat = mouseEvent.latLng.getLat();
-  const lng = mouseEvent.latLng.getLng();
-  clearReportPin();
-  const pinImg = new kakao.maps.MarkerImage(
-    markerSvg('#7c3aed'), new kakao.maps.Size(28, 36)
-  );
-  reportPin = new kakao.maps.Marker({
-    position: mouseEvent.latLng, image: pinImg, map: map,
-  });
-  // 역지오코딩으로 주소 조회
-  geocoder.coord2Address(lng, lat, function(result, status) {
-    const addr = status === kakao.maps.services.Status.OK
-      ? (result[0].road_address?.address_name || result[0].address.address_name)
-      : '';
-    setReportLoc(lat, lng, addr);
-  });
-  exitMapPinMode();
-  openReportPanel();
-});
-
-// 주소 검색
-document.getElementById('reportAddrSearchBtn').addEventListener('click', function() {
-  const addr = document.getElementById('reportAddrInput').value.trim();
-  if (!addr) return;
-  geocoder.addressSearch(addr, function(result, status) {
-    if (status !== kakao.maps.services.Status.OK) {
-      alert('주소를 찾을 수 없습니다. 더 구체적으로 입력해 주세요.');
-      return;
-    }
-    const lat = parseFloat(result[0].y);
-    const lng = parseFloat(result[0].x);
-    clearReportPin();
-    const pos = new kakao.maps.LatLng(lat, lng);
-    const pinImg = new kakao.maps.MarkerImage(
-      markerSvg('#7c3aed'), new kakao.maps.Size(28, 36)
-    );
-    reportPin = new kakao.maps.Marker({ position: pos, image: pinImg, map: map });
-    map.setCenter(pos);
-    setReportLoc(lat, lng, result[0].address_name);
-  });
-});
-document.getElementById('reportAddrInput').addEventListener('keydown', function(e) {
-  if (e.key === 'Enter' && !e.isComposing && e.keyCode !== 229) {e.preventDefault();document.getElementById('reportAddrSearchBtn').click();}
-});
-
-// 지도 클릭 모드 전환
-document.getElementById('reportMapPinBtn').addEventListener('click', enterMapPinMode);
-document.getElementById('reportBannerCancel').addEventListener('click', function() {
-  exitMapPinMode();
-  openReportPanel();
-});
-
-// 이름 입력 시 제출 버튼 상태 갱신
-reportNameInp.addEventListener('input', updateReportSubmitState);
-
-// 사진 선택 미리보기
-document.getElementById('reportFileInput').addEventListener('change', function() {
-  const file = this.files[0];
-  const preview = document.getElementById('reportFilePreview');
-  const hint    = document.getElementById('reportFileHint');
-  const fname   = document.getElementById('reportFileName');
-  if (!file) return;
-  const url = URL.createObjectURL(file);
-  preview.src = url;
-  preview.style.display = 'block';
-  hint.style.display = 'none';
-  fname.textContent = file.name;
-  fname.style.display = 'block';
-  // 안내 초기화
-  document.getElementById('reportAttachReminder').style.display = 'none';
-});
-
-// 제보 열기/닫기
-document.getElementById('reportTriggerBtn').addEventListener('click', function() {
-  if (reportPanel.classList.contains('open')) {
-    closeReportPanel();
-  } else {
-    openReportPanel();
-  }
-});
-document.getElementById('reportPanelClose').addEventListener('click', closeReportPanel);
-document.getElementById('reportPanel').addEventListener('click', function(e) {
-  if (e.target === this) closeReportPanel();
-});
-
-// 제보 등록 (Formspree)
-reportSubmitBtn.addEventListener('click', async function() {
-  const name    = reportNameInp.value.trim();
-  const saeng   = document.getElementById('reportSaengsaeng').checked;
-  const onnuri  = document.getElementById('reportOnnuri').checked;
-  const notes   = document.getElementById('reportNotes').value.trim();
-  const payment = [saeng && '광주 지역화폐', onnuri && '온누리상품권'].filter(Boolean).join(', ') || '미선택';
-  const kakaoUrl = 'https://map.kakao.com/link/map/' + name + ',' + reportLat.toFixed(6) + ',' + reportLng.toFixed(6);
-
-  reportSubmitBtn.disabled = true;
-  reportSubmitBtn.textContent = '전송 중...';
-
-  try {
-    const res = await fetch('https://formspree.io/f/mjgagwkl', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify({
-        주유소명: name,
-        주소: reportAddress || '(주소 미확인)',
-        좌표: reportLat.toFixed(6) + ', ' + reportLng.toFixed(6),
-        결제수단: payment,
-        기타: notes || '없음',
-        카카오맵: kakaoUrl,
-      }),
-    });
-
-    if (res.ok) {
-      reportSubmitBtn.textContent = '✅ 제보 완료!';
-      setTimeout(() => { closeReportPanel(); }, 1500);
-    } else {
-      throw new Error('서버 오류');
-    }
-  } catch (e) {
-    alert('제보 전송에 실패했습니다. 잠시 후 다시 시도해 주세요.');
-    reportSubmitBtn.disabled = false;
-    reportSubmitBtn.textContent = '📨 제보 등록하기';
-  }
-});
-
-// 커피 사주기
-document.getElementById('coffeeBtn').addEventListener('click', function() {
-  const isMobile = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent) || window.innerWidth < 768;
-  if (isMobile) {
-    window.open('https://qr.kakaopay.com/Ej8MzXsoX', '_blank');
-  } else {
-    document.getElementById('coffeeModal').classList.add('open');
-  }
-});
-document.getElementById('coffeeModalClose').addEventListener('click', function() {
-  document.getElementById('coffeeModal').classList.remove('open');
-});
-document.getElementById('coffeeModal').addEventListener('click', function(e) {
-  if (e.target === this) this.classList.remove('open');
-});
-
+// ── 제보 기능 (정보 UI에서 제외)
 // 도움말 모달
 const helpModal = document.getElementById('helpModal');
 function openHelp() { helpModal.classList.add('open'); }
 function closeHelp() { helpModal.classList.remove('open'); }
-// 최초 방문 시 자동 오픈
-if (!localStorage.getItem('helpSeen')) {
-  openHelp();
-  localStorage.setItem('helpSeen', '1');
-}
-
-// 반응 패널
-(function() {
-  var ITEMS = [
-    { id: 'useful', path: '/react/useful', label: '도움됐어요',      emoji: '✅' },
-    { id: 'fire',   path: '/react/fire',   label: '더 많이 필요해요', emoji: '🔥' },
-    { id: 'share',  path: '/react/share',  label: '주변에 알릴게요',  emoji: '📣' },
-    { id: 'sad',    path: '/react/sad',    label: '아쉬워요',         emoji: '😔' },
-  ];
-  var GC_BASE   = 'https://spectac1e.goatcounter.com';
-  var LS_PREFIX = 'rx_react-';
-  var COOLDOWN  = 86400000;
-  var BIN_URL   = 'https://api.jsonbin.io/v3/b/69a6e549d0ea881f40eab2b3';
-  var BIN_KEY   = '$2a$10$YoGGB9IHL44jP7Jbdnl8guzxC3511wf6oLt0oDss/qYOm70qFnCzO';
-  var selectedReact = null;
-
-  function uid() { return Date.now().toString(36) + Math.random().toString(36).slice(2, 6); }
-  function encPath(p) { return p.split('/').map(encodeURIComponent).join('%2F'); }
-  function esc(s) {
-    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-  }
-  function relTime(ts) {
-    var d = Date.now() - ts;
-    if (d < 60000)    return '방금';
-    if (d < 3600000)  return Math.floor(d / 60000)  + '분 전';
-    if (d < 86400000) return Math.floor(d / 3600000) + '시간 전';
-    return Math.floor(d / 86400000) + '일 전';
-  }
-
-  function loadCount(id, path) {
-    fetch(GC_BASE + '/counter/' + encPath(path) + '.json')
-      .then(function(r) { return r.ok ? r.json() : { count: '-' }; })
-      .then(function(d) {
-        var el = document.getElementById('rc-' + id);
-        if (el) el.textContent = d.count || '0';
-      }).catch(function() {});
-  }
-
-  function renderComments(list) {
-    var el = document.getElementById('reactClist');
-    if (!list || !list.length) {
-      el.innerHTML = '<div class="react-clist-empty">아직 댓글이 없어요. 첫 번째 댓글을 남겨주세요!</div>';
-      return;
-    }
-    el.innerHTML = list.slice().reverse().slice(0, 20).map(function(c) {
-      return '<div class="react-clist-item" data-id="' + esc(c.id || '') + '">'
-        + '<span class="react-clist-emoji">' + esc(c.emoji || '💬') + '</span>'
-        + '<div class="react-clist-body">'
-        + '<div class="react-clist-nick-row">'
-        + '<span class="react-clist-nick">' + esc(c.nick || '익명') + '</span>'
-        + '<button class="react-del-btn">삭제</button>'
-        + '</div>'
-        + (c.text ? '<div class="react-clist-text">' + esc(c.text) + '</div>' : '')
-        + '<div class="react-clist-meta">' + esc(c.label) + ' · ' + relTime(c.ts) + '</div>'
-        + '<div class="react-del-confirm" style="display:none">'
-        + '<input type="password" class="react-del-pw" placeholder="비밀번호 입력">'
-        + '<button class="react-del-ok">확인</button>'
-        + '<button class="react-del-cancel">취소</button>'
-        + '</div>'
-        + '</div></div>';
-    }).join('');
-  }
-
-  function loadComments() {
-    document.getElementById('reactClist').innerHTML = '<div class="react-clist-loading">불러오는 중...</div>';
-    fetch(BIN_URL + '/latest', { headers: { 'X-Master-Key': BIN_KEY } })
-      .then(function(r) { return r.ok ? r.json() : null; })
-      .then(function(d) { renderComments(d && d.record ? d.record.comments : []); })
-      .catch(function() {
-        document.getElementById('reactClist').innerHTML = '<div class="react-clist-empty">댓글을 불러올 수 없어요.</div>';
-      });
-  }
-
-  function saveComment(reaction, nick, pw, text) {
-    var entry = {
-      id: uid(), emoji: reaction.emoji, label: reaction.label,
-      nick: nick || '익명', pw: btoa(unescape(encodeURIComponent(pw))),
-      text: text, ts: Date.now()
-    };
-    fetch(BIN_URL + '/latest', { headers: { 'X-Master-Key': BIN_KEY } })
-      .then(function(r) { return r.ok ? r.json() : null; })
-      .then(function(d) {
-        var list = (d && d.record && d.record.comments) ? d.record.comments : [];
-        list.push(entry);
-        if (list.length > 50) list = list.slice(-50);
-        return fetch(BIN_URL, {
-          method: 'PUT',
-          headers: { 'Content-Type': 'application/json', 'X-Master-Key': BIN_KEY },
-          body: JSON.stringify({ comments: list }),
-        });
-      })
-      .then(function(r) { return r && r.ok ? r.json() : null; })
-      .then(function(d) { if (d && d.record) renderComments(d.record.comments); })
-      .catch(function() {});
-  }
-
-  function deleteComment(id, pw) {
-    fetch(BIN_URL + '/latest', { headers: { 'X-Master-Key': BIN_KEY } })
-      .then(function(r) { return r.ok ? r.json() : null; })
-      .then(function(d) {
-        var list = (d && d.record && d.record.comments) ? d.record.comments : [];
-        var target = list.filter(function(c) { return c.id === id; })[0];
-        if (!target) return null;
-        var encoded = btoa(unescape(encodeURIComponent(pw)));
-        if (encoded !== target.pw) { alert('비밀번호가 맞지 않아요.'); return null; }
-        var newList = list.filter(function(c) { return c.id !== id; });
-        return fetch(BIN_URL, {
-          method: 'PUT',
-          headers: { 'Content-Type': 'application/json', 'X-Master-Key': BIN_KEY },
-          body: JSON.stringify({ comments: newList }),
-        });
-      })
-      .then(function(r) { return r && r.ok ? r.json() : null; })
-      .then(function(d) { if (d && d.record) renderComments(d.record.comments); })
-      .catch(function() {});
-  }
-
-  function restoreVoted() {
-    var now = Date.now();
-    ITEMS.forEach(function(item) {
-      var ts = parseInt(localStorage.getItem(LS_PREFIX + item.id) || '0', 10);
-      if (ts && now - ts < COOLDOWN) {
-        document.getElementById('ri-' + item.id).classList.add('voted');
-      }
-    });
-  }
-
-  function vote(item) {
-    var now = Date.now();
-    var ts  = parseInt(localStorage.getItem(LS_PREFIX + item.id) || '0', 10);
-    if (ts && now - ts < COOLDOWN) return;
-    new Image().src = GC_BASE + '/count?p=' + encodeURIComponent(item.path);
-    localStorage.setItem(LS_PREFIX + item.id, String(now));
-    document.getElementById('ri-' + item.id).classList.add('voted');
-    var countEl = document.getElementById('rc-' + item.id);
-    if (countEl) {
-      var cur = parseInt(countEl.textContent, 10);
-      countEl.textContent = isNaN(cur) ? 1 : cur + 1;
-    }
-    selectedReact = item;
-    document.getElementById('reactNickInput').value = '';
-    document.getElementById('reactPwInput').value = '';
-    document.getElementById('reactCommentInput').value = '';
-    document.getElementById('reactCommentArea').style.display = 'block';
-  }
-
-  function closeReactPanel() {
-    document.getElementById('reactPanel').classList.remove('open');
-    document.getElementById('reactCommentArea').style.display = 'none';
-  }
-
-  // 패널 열기
-  document.getElementById('reactFloatBtn').addEventListener('click', function() {
-    document.getElementById('reactPanel').classList.add('open');
-    loadComments();
-  });
-  document.getElementById('reactPanelClose').addEventListener('click', closeReactPanel);
-  document.getElementById('reactPanel').addEventListener('click', function(e) {
-    if (e.target === this) closeReactPanel();
-  });
-
-  // 댓글만 남기기 버튼
-  document.getElementById('reactOnlyCommentBtn').addEventListener('click', function() {
-    selectedReact = null;
-    document.getElementById('reactNickInput').value = '';
-    document.getElementById('reactPwInput').value = '';
-    document.getElementById('reactCommentInput').value = '';
-    document.getElementById('reactCommentArea').style.display = 'block';
-  });
-
-  // 닫기 (댓글 입력창만 닫음, 패널 유지)
-  document.getElementById('reactCommentSkip').addEventListener('click', function() {
-    document.getElementById('reactCommentArea').style.display = 'none';
-  });
-
-  // 등록하기 (패널 닫지 않음)
-  document.getElementById('reactCommentSend').addEventListener('click', function() {
-    var nick = document.getElementById('reactNickInput').value.trim();
-    var pw   = document.getElementById('reactPwInput').value;
-    var text = document.getElementById('reactCommentInput').value.trim();
-    if (!text) return;
-    var reaction = selectedReact || { emoji: '💬', label: '댓글' };
-    saveComment(reaction, nick, pw, text);
-    document.getElementById('reactCommentArea').style.display = 'none';
-    selectedReact = null;
-  });
-
-  // 삭제 버튼 이벤트 (이벤트 위임)
-  document.getElementById('reactClist').addEventListener('click', function(e) {
-    var t = e.target;
-    if (t.classList.contains('react-del-btn')) {
-      var confirm = t.closest('.react-clist-item').querySelector('.react-del-confirm');
-      confirm.style.display = confirm.style.display === 'none' ? 'flex' : 'none';
-    }
-    if (t.classList.contains('react-del-cancel')) {
-      t.closest('.react-del-confirm').style.display = 'none';
-    }
-    if (t.classList.contains('react-del-ok')) {
-      var item = t.closest('.react-clist-item');
-      var pw   = item.querySelector('.react-del-pw').value;
-      deleteComment(item.dataset.id, pw);
-    }
-  });
-
-  ITEMS.forEach(function(item) {
-    document.getElementById('ri-' + item.id).addEventListener('click', function() {
-      vote(item);
-    });
-  });
-
-  restoreVoted();
-  window.addEventListener('load', function() {
-    ITEMS.forEach(function(item) { loadCount(item.id, item.path); });
-  });
-})();
-
-// 방문자 카운터 (GoatCounter)
-(function() {
-  const today = new Date().toISOString().slice(0, 10).replace(/-/g, '');
-  // 오늘 카운트: 스크립트 의존 없이 image pixel로 직접 전송
-  new Image().src = 'https://spectac1e.goatcounter.com/count?p=%2Fd' + today;
-  function fetchCounts() {
-    Promise.all([
-      fetch('https://spectac1e.goatcounter.com/counter/%2Fhit.json'),
-      fetch('https://spectac1e.goatcounter.com/counter/%2Fd' + today + '.json')
-    ]).then(function(rs) {
-      return Promise.all(rs.map(function(r) { return r.ok ? r.json() : {count:'0'}; }));
-    }).then(function(data) {
-      document.getElementById('cnt-total').textContent = data[0].count || '0';
-      document.getElementById('cnt-today').textContent = data[1].count || '0';
-    }).catch(function() {});
-  }
-  // hit 처리 후 2초 대기 → 첫 조회, 이후 60초마다 갱신
-  window.addEventListener('load', function() {
-    setTimeout(fetchCounts, 2000);
-    setInterval(fetchCounts, 60000);
-  });
-})();
+// 반응 패널 (정보 UI에서 제외)
 </script>
 <script src="assets/route-core.js?v=874a3207b088"></script>
 <script src="assets/route-map.js?v=54c476f92b85"></script>
@@ -2640,9 +2201,10 @@ if (!localStorage.getItem('helpSeen')) {
 <script src="assets/district-context.js?v=3150dc533d74"></script>
 <script src="assets/route-window.js?v=b24e4dc651ba"></script>
 <script src="assets/search-flow.js?v=50f68b49c146"></script>
-<script src="assets/i18n.js?v=0c8cc22565bb"></script>
+
 <script src="assets/onnuri-policy-data.js?v=92e54602793f"></script>
 <script src="assets/onnuri-policy-core.js?v=886a22590273"></script>
 <script src="assets/onnuri-policy.js?v=9f8d0b6338b3"></script>
+<script src="assets/fuel-ui/prototype.js?v=a8ac7fe580b4"></script><script src="assets/onnuri-pin-themes.js?v=6846181eb6e4"></script><script src="assets/fuel-ui/reference.js?v=c42fb319e2d7"></script><script>window.GasJourneyConfig={endpoint:"",externalNavigationEnabled:true};</script><script src="assets/fuel-journey-core.js?v=7760b5bd4114"></script><script src="assets/fuel-ui/journey.js?v=782db7836c20"></script>
 </body>
 </html>

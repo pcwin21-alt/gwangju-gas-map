@@ -1,0 +1,49 @@
+/* Observed official onnuri.gift header SVG fill, 2026-11-05: #EB6620.
+   Remaining colors are our accessible companion palette, not official BI values. */
+:root{
+  --fuel-brand:#EB6620;--fuel-action:#EB6620;--fuel-on-action:#351607;
+  --fuel-canvas:#FAF8F5;--fuel-panel:#FFFFFF;--fuel-field:#F7F3EF;--fuel-hover:#F0E8E1;
+  --fuel-ink:#2F2824;--fuel-muted:#706359;--fuel-line:#E4DAD1;--fuel-control-line:#9B8778;
+  --fuel-primary:#A43B0A;--fuel-on-primary:#FFFFFF;--fuel-selection:#FFF1E7;--fuel-focus:#A43B0A;
+  --fuel-brand-soft:#FFF1E7;--fuel-pin-border:#A43B0A;
+  --fuel-currency:#285BB5;--fuel-currency-soft:#EDF3FF;--fuel-currency-ink:#173F86;
+  --fuel-info:#285BB5;--fuel-warning:#815000;--fuel-warning-bg:#FFF4CF;--fuel-danger:#B42318;--fuel-danger-bg:#FFF0ED;
+  --fuel-veil:#24180F66;--fuel-float-shadow:0 4px 16px #3B241214;--fuel-sheet-shadow:0 -8px 40px #3B24121F;
+  --panel:var(--fuel-panel);--surface:var(--fuel-canvas);--field:var(--fuel-field);--hover:var(--fuel-hover);
+  --ink:var(--fuel-ink);--muted:var(--fuel-muted);--line:var(--fuel-control-line);--soft-line:var(--fuel-line);
+  --accent:var(--fuel-primary);--primary:var(--fuel-action);--on-primary:var(--fuel-on-action);--focus:var(--fuel-focus);
+  --selected:var(--fuel-selection);--selected-ink:var(--fuel-primary);--selected-line:var(--fuel-pin-border);
+  --navy:var(--fuel-currency);--on-navy:#FFFFFF;--badge-edge:var(--fuel-line);--neutral-ink:var(--fuel-muted);
+  --warning-bg:var(--fuel-warning-bg);--warning-ink:var(--fuel-warning);--danger-bg:var(--fuel-danger-bg);--danger:var(--fuel-danger);--on-danger:#FFFFFF;
+  --veil:var(--fuel-veil);--panel-shadow:var(--fuel-sheet-shadow);--detail-action-hover:#F17A3D;
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --fuel-canvas:#1C1917;--fuel-panel:#25211E;--fuel-field:#312B26;--fuel-hover:#3A312B;
+  --fuel-ink:#FAF5F0;--fuel-muted:#C9B9AD;--fuel-line:#594A3F;--fuel-control-line:#AB8F7A;
+  --fuel-primary:#FFAE7A;--fuel-on-primary:#351607;--fuel-selection:#432C1E;--fuel-focus:#FFAE7A;
+  --fuel-brand-soft:#432C1E;--fuel-pin-border:#FFAE7A;--fuel-currency-soft:#1C2E4C;--fuel-currency-ink:#B9D2FF;
+  --fuel-info:#B9D2FF;--fuel-warning:#FFE09A;--fuel-warning-bg:#3D3019;--fuel-danger:#FFB4A9;--fuel-danger-bg:#492820;
+  --fuel-veil:#100B08B3;--fuel-float-shadow:0 4px 20px #0005;--fuel-sheet-shadow:0 -8px 40px #0008;
+  --navy:#B9D2FF;--on-navy:#172A49;--on-danger:#492820;--detail-action-hover:#F17A3D;
+}
+/* Rebind the legacy UI's more-specific dark tokens to the same palette. */
+:root,:root[data-theme="light"],:root[data-theme="dark"]{
+  --panel:var(--fuel-panel);--surface:var(--fuel-canvas);--field:var(--fuel-field);--hover:var(--fuel-hover);
+  --ink:var(--fuel-ink);--muted:var(--fuel-muted);--line:var(--fuel-control-line);--soft-line:var(--fuel-line);
+  --accent:var(--fuel-primary);--primary:var(--fuel-action);--on-primary:var(--fuel-on-action);--focus:var(--fuel-focus);
+  --selected:var(--fuel-selection);--selected-ink:var(--fuel-primary);--selected-line:var(--fuel-pin-border);
+  --badge-edge:var(--fuel-line);--neutral-ink:var(--fuel-muted);--warning-bg:var(--fuel-warning-bg);--warning-ink:var(--fuel-warning);
+  --danger-bg:var(--fuel-danger-bg);--danger:var(--fuel-danger);--veil:var(--fuel-veil);--panel-shadow:var(--fuel-sheet-shadow);
+}
+/* Exact orange for action surfaces; dark ink passes normal-text contrast.
+   The deeper companion is reserved for small text, borders and focus on white. */
+.fu-button.primary,.cta,#fuelDesignApp .review-filter-foot #reviewFiltersDone,#fuelDesignApp :is(#reviewFiltersDone,#searchAreaBtn,#journeyCalculate,#journeyNavigate,.fuel-journey-open){background:var(--fuel-action);color:var(--fuel-on-action);border-color:var(--fuel-action)}
+#fuelDesignApp #filtersToggle[data-review-selected="true"]{background:var(--fuel-action);color:var(--fuel-on-action);border-color:var(--fuel-action)}
+#fuelDesignApp #filtersToggle[data-review-selected="true"] #filterCount{background:var(--fuel-on-action);color:#FFFFFF}
+#fuelDesignApp .fuel-journey-actions button+button{background:var(--fuel-panel);color:var(--fuel-primary);border-color:var(--fuel-control-line)}
+.journey-restore,.journey-map-label{background:var(--fuel-action);color:var(--fuel-on-action)}
+.fuel-price-pin:focus-visible{outline-color:var(--fuel-focus)}
+.fu-marker{color:var(--fuel-brand)}.fu-marker.currency{color:var(--fuel-currency)}
+.fu-marker.both{color:var(--fuel-primary)}
+@media(prefers-contrast:more){:root{--fuel-control-line:#706359}:root[data-theme="dark"]{--fuel-control-line:#C9B9AD}}

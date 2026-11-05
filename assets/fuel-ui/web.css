@@ -1,0 +1,8 @@
+/* Public web variant of the approved v2. Theme selection stays in More. */
+#fuelDesignApp .header,#fuelDesignApp :is(#routeModeBtn,#tripLauncher,#tripPanel,.station-via,.info-overlay .route-actions){display:none!important}
+#fuelDesignApp :is(#coffeeBtn,#coffeeModal,#reportTriggerBtn,#reportPanel,#reportBanner,#reactFloatBtn,#reactPanel,.react-banner,.react-footer,.header-stats,#nearbyBtn){display:none!important}
+#fuelDesignApp .controls:has(#reviewExtraFilters:not([hidden])){grid-template-rows:auto auto auto}
+#fuelJourney[data-route-available="false"] :is(.journey-origin,#journeySearch,#journeyChoices,#journeyDestinationOptions,.journey-primary,.journey-route-note,#journeyNavigate){display:none!important}
+#fuelJourney[data-route-available="false"] .journey-apps{margin-top:16px}
+#fuelDesignApp .tools-actions .theme-picker{display:flex;align-items:center;justify-content:space-between;gap:16px}
+#fuelDesignApp .header-title{color:var(--fuel-primary)}
