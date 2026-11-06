@@ -11,3 +11,9 @@
 .toss-station-payment {padding:10px;border-radius:12px;background:var(--selected);color:var(--selected-ink);font-weight:600;}
 .toss-station-note {color:var(--muted);}
 .toss-station-prices {padding:12px;background:var(--surface);border:1px solid var(--soft-line);border-radius:12px;}
+.toss-address-copy {display:block;width:100%;min-height:48px;margin-top:16px;border:1px solid var(--fuel-action);border-radius:12px;background:var(--fuel-action);color:var(--fuel-on-action);font:inherit;font-weight:700;cursor:pointer;}
+.toss-address-copy:focus-visible {outline:3px solid var(--fuel-focus);outline-offset:3px;}
+.toss-copy-status {margin:8px 0 0;font-size:14px;color:var(--muted);}
+.toss-copy-status:empty {display:none;}
+.toss-station-dialog p,.info-overlay .info-address {user-select:text;}
+#fuelDesignApp #noResult {position:static;grid-column:1/-1;padding:4px 0 0;margin:0;border:0;border-radius:0;box-shadow:none;background:none;text-align:left;color:var(--muted);pointer-events:none;}

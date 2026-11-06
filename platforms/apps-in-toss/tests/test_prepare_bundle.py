@@ -25,6 +25,8 @@ class PlatformBuild(unittest.TestCase):
             self.assertNotIn(token, self.html)
         self.assertNotIn('navigator.geolocation.getCurrentPosition(', self.html)
         self.assertNotIn('src="assets/route-planner.js"', self.html)
+        self.assertNotIn('src="assets/fuel-ui/journey.js"', self.html)
+        self.assertNotIn('externalNavigationEnabled:true', self.html)
 
     def test_normal_map_and_manual_search_remain_available(self):
         for token in ['id="map"', 'id="searchInput"', 'id="regionSelect"', 'id="stationList"', 'id="myLocBtn"', 'assets/nationwide-ui.js']:
@@ -63,9 +65,21 @@ class PlatformBuild(unittest.TestCase):
             self.assertFalse((dist / 'assets' / 'theme.js').exists())
             self.assertIn('assets/information-ui.js', references)
             self.assertTrue((dist / 'assets' / 'information-ui.js').is_file())
-            translation = (dist / 'assets' / 'i18n.js').read_text(encoding='utf-8')
-            self.assertNotIn('전국 주유소 할인 지도', translation)
-            self.assertIn('Onnuri FuelMap', translation)
+            self.assertFalse((dist / 'assets' / 'i18n.js').exists())
+            for name in ['Pretendard-Regular.woff2', 'Pretendard-Bold.woff2', 'Pretendard-LICENSE.txt']:
+                self.assertTrue((dist / 'assets' / 'fuel-ui' / 'fonts' / name).is_file())
+
+    def test_unknown_startup_contract_fails_closed(self):
+        changed = self.source.replace('// 반응 패널 (정보 UI에서 제외)', '// startup changed')
+        with self.assertRaisesRegex(ValueError, 'Help/startup contract changed'):
+            builder.prepare(changed)
+
+    def test_detail_copy_does_not_depend_on_interrupted_map_startup(self):
+        js = (builder.HERE / 'src/information-ui.js').read_text(encoding='utf-8')
+        self.assertNotIn('doCopy(', js)
+        self.assertNotIn('copyToClipboard(', js)
+        self.assertIn('field.readOnly = true', js)
+        self.assertIn('복사하지 못했어요.', js)
 
 
 if __name__ == '__main__':

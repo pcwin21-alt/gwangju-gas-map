@@ -26,12 +26,16 @@ def prepare(html):
     html = re.sub(r'<script>\s*window.goatcounter[\s\S]*?</script>', '', html, count=1)
     html = re.sub(r'<script data-goatcounter=[\s\S]*?</script>', '', html, count=1)
     html = between(html, '// ── 제보 기능', '// 도움말 모달')
-    html = between(html, '// 최초 방문 시 자동 오픈', '// 반응 패널')
+    if '// 최초 방문 시 자동 오픈' in html:
+        html = between(html, '// 최초 방문 시 자동 오픈', '// 반응 패널')
+    elif not re.search(r"function closeHelp\(\) \{ helpModal.classList.remove\('open'\); \}\s*// 반응 패널 \(정보 UI에서 제외\)", html):
+        raise ValueError('Help/startup contract changed; review automatic dialogs before packaging.')
     a = html.index('// 반응 패널')
     b = html.index('</script>', a)
     html = html[:a] + html[b:]
-    for name in ['route-core', 'route-map', 'route-planner', 'route-window', 'theme']:
+    for name in ['route-core', 'route-map', 'route-planner', 'route-window', 'theme', 'fuel-journey-core', 'fuel-ui/journey']:
         html = html.replace(f'<script src="assets/{name}.js"></script>', '')
+    html = re.sub(r'<script>window.GasJourneyConfig=.*?</script>', '', html, count=1)
     html = html.replace('navigator.geolocation.getCurrentPosition(', 'window.GasToss.getCurrentPosition(')
     html = re.sub(r'function getNaverFallbackUrl\(station\) \{[\s\S]*?\n\}', "function getNaverFallbackUrl(station) { return ''; }", html, count=1)
     html = html.replace('if (!navigator.geolocation)', 'if (!window.GasToss)')
@@ -54,7 +58,7 @@ def prepare(html):
       .header,.theme-picker,#routeModeBtn,#tripLauncher,#tripPanel,.station-via,.info-overlay .route-actions,
       #coffeeBtn,#coffeeModal,#reportTriggerBtn,#reportPanel,#reportBanner,
       #reactFloatBtn,#reactPanel,.react-banner,.react-footer,.header-stats,
-      #nearbyBtn,.tools-contact {display:none!important}
+      #nearbyBtn,.tools-contact,#fuelJourney,#journeyRestore {display:none!important}
     </style>'''
     html = html.replace('</head>', style + '\n<link rel="stylesheet" href="assets/information-ui.css">\n</head>')
     html = html.replace('<script src="assets/nationwide-ui.js"></script>', '<script src="assets/information-ui.js"></script>\n<script src="assets/nationwide-ui.js"></script>')
@@ -63,6 +67,7 @@ def prepare(html):
     html = re.sub(r'<div class="help-item">[\s\S]*?</div>', lambda m: '' if any(term in m[0] for term in ['경유 주유소 찾기', '<b>길찾기</b>', '<b>주변 내보내기</b>']) else m[0], html)
     html = re.sub(r'<div class="help-section">\s*<div class="help-section-title">누락·오류 제보</div>[\s\S]*?(?=<div class="help-section">)', '', html, count=1)
     html = html.replace('가격 순위·언어·사용법·제보 등 보조 기능', '가격 순위·언어·사용법 등 보조 기능')
+    html = html.replace('가격 순위·언어·사용법 등 보조 기능', '가격 순위·사용법 등 보조 기능')
     html = html.replace('브라우저 위치 권한 필요', '토스 위치 권한 허용 필요')
     html = html.replace('결제 가능 수단, 현재 유가', '결제 확인 범위, 자료 기준일의 유가')
     html = html.replace('온누리: 소상공인시장진흥공단 공식 파일', '온누리: 공식 검색·공식 파일·KB국민카드 가맹점 조회')
@@ -99,10 +104,13 @@ def copy_assets(html, dist):
         raise ValueError('Unexpected linked asset directory')
     assets.mkdir(exist_ok=True)
     references = set(re.findall(r'(?:src|href)="(assets/[^"?#]+)"', html))
-    for relative in references:
+    pending = list(references)
+    while pending:
+        relative = pending.pop()
         target = dist / relative
         if target.is_symlink() or not target.resolve().is_relative_to(assets):
             raise ValueError('Asset path escapes output directory')
+        target.parent.mkdir(parents=True, exist_ok=True)
         if relative == 'assets/toss-adapter.js':
             continue  # Vite builds this after the static copy.
         source = HERE / 'src' / target.name if target.name.startswith('information-ui.') else ROOT / relative
@@ -118,6 +126,24 @@ def copy_assets(html, dist):
             target.write_text(keyboard, encoding='utf-8')
         else:
             shutil.copyfile(source, target)
+        if target.suffix == '.css':
+            for value in re.findall(r'url\(\s*[\'"]?([^\'"\)\s]+)', target.read_text(encoding='utf-8')):
+                if value.startswith(('data:', 'https:', 'http:', '//')):
+                    continue
+                dependency = (target.parent / value.split('?')[0]).resolve()
+                if not dependency.is_relative_to(assets):
+                    raise ValueError('Stylesheet dependency escapes asset directory')
+                key = dependency.relative_to(dist).as_posix()
+                if key not in references:
+                    references.add(key)
+                    pending.append(key)
+        if target.suffix == '.woff2':
+            license_source = source.parent / 'Pretendard-LICENSE.txt'
+            if license_source.is_file():
+                key = (target.parent / license_source.name).relative_to(dist).as_posix()
+                if key not in references:
+                    references.add(key)
+                    pending.append(key)
     for path in assets.rglob('*'):
         if path.is_symlink() or not path.resolve().is_relative_to(assets):
             raise ValueError('Unexpected asset symlink or path')
@@ -153,6 +179,7 @@ def main():
         'appName': 'onnuri-fuel-map', 'buildKind': 'information_only_test_candidate',
         'runtimeVerified': False, 'externalHostsInHtml': hosts,
         'referencedAssets': references,
+        'htmlAssetReferences': sorted(set(re.findall(r'(?:src|href)="(assets/[^"?#]+)', html))),
         'buildInputs': hashes, 'assetVersion': version,
         'sharedPalette': {'path': 'assets/theme.css', 'sha256': hashlib.sha256((dist / 'assets/theme.css').read_bytes()).hexdigest()},
         'sourceHtmlSha256': hashlib.sha256(source.encode('utf-8')).hexdigest(),

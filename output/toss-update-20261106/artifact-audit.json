@@ -1,0 +1,69 @@
+{
+  "checkedAt": "2026-11-06T16:40:21.002142+09:00",
+  "scope": "local_artifact_audit_not_toss_device_certification",
+  "artifactSha256": "16a1ec8a314aff5d6ab35474f27eb62a5facdfa51ff74fda3add087d67c01619",
+  "checks": [
+    {
+      "name": "archive_integrity_and_size",
+      "status": "passed",
+      "evidence": {
+        "compressedBytes": 1698383,
+        "expandedBytes": 2187804
+      }
+    },
+    {
+      "name": "archive_matches_built_files",
+      "status": "passed",
+      "evidence": 52
+    },
+    {
+      "name": "all_build_inputs_current",
+      "status": "passed",
+      "evidence": 59
+    },
+    {
+      "name": "all_references_packaged_without_stale_assets",
+      "status": "passed",
+      "evidence": 49
+    },
+    {
+      "name": "nested_fonts_and_license_packaged",
+      "status": "passed",
+      "evidence": true
+    },
+    {
+      "name": "excluded_trial_scripts_absent",
+      "status": "passed",
+      "evidence": 7
+    },
+    {
+      "name": "legacy_endpoints_and_browser_gps_removed",
+      "status": "passed",
+      "evidence": true
+    },
+    {
+      "name": "policy_fallback_retains_official_sources_without_store_links",
+      "status": "passed",
+      "evidence": true
+    },
+    {
+      "name": "five_datasets_preserved",
+      "status": "passed",
+      "evidence": {
+        "allRecords": 220,
+        "onnuriTaggedRecords": 184
+      }
+    },
+    {
+      "name": "javascript_syntax",
+      "status": "passed",
+      "evidence": 25
+    },
+    {
+      "name": "asset_cache_version",
+      "status": "passed",
+      "evidence": "d24700473e7a"
+    }
+  ],
+  "readyForSubmission": false
+}

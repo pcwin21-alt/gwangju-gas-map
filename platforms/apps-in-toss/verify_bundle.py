@@ -38,10 +38,13 @@ def audit():
         assert hashlib.sha256(path.read_bytes()).hexdigest() == digest, f'Input changed since build: {name}'
     passed('all_build_inputs_current', len(manifest['buildInputs']))
     references = set(re.findall(r'(?:src|href)="(assets/[^"?#]+)', html))
-    assert references == set(manifest['referencedAssets'])
-    assert set(name for name in sources if name.startswith('assets/')) == references, 'Missing or leftover asset'
-    passed('all_references_packaged_without_stale_assets', len(references))
-    excluded = ['route-core.js', 'route-map.js', 'route-planner.js', 'route-window.js', 'theme.js']
+    assert references == set(manifest['htmlAssetReferences'])
+    assert set(name for name in sources if name.startswith('assets/')) == set(manifest['referencedAssets']), 'Missing or leftover asset'
+    passed('all_references_packaged_without_stale_assets', len(manifest['referencedAssets']))
+    for name in ['Pretendard-Regular.woff2', 'Pretendard-Bold.woff2', 'Pretendard-LICENSE.txt']:
+        assert 'assets/fuel-ui/fonts/' + name in sources, f'Missing nested font or license: {name}'
+    passed('nested_fonts_and_license_packaged', True)
+    excluded = ['route-core.js', 'route-map.js', 'route-planner.js', 'route-window.js', 'theme.js', 'fuel-ui/journey.js', 'fuel-journey-core.js']
     assert all('assets/' + name not in sources for name in excluded)
     passed('excluded_trial_scripts_absent', len(excluded))
     for token in ['X-Master-Key', 'BIN_KEY', 'formspree.io', 'qr.kakaopay.com', 'goatcounter.com', 'gc.zgo.at', 'apps.apple.com', 'navigator.geolocation.getCurrentPosition']:
