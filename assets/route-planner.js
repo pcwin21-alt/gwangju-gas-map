@@ -10,7 +10,7 @@
     byId('tripMethod').disabled = !isOnnuri;
     if (!isOnnuri) byId('tripMethod').value = 'any';
     byId('tripRecommend').textContent = destination ? (requestedStop?'이 주유소로 경유 연결':'경유 주유소 찾기') : '목적지 검색';
-    const payment = {all:'모든 결제수단', onnuri:'온누리', saengsaeng:'지역화폐'}[byId('tripPayment').value];
+    const payment = byId('tripPayment').value==='all'?'모든 결제수단':GasRegionalCurrency.label(byId('tripPayment').value);
     const fuel = {all:'모든 유종', liquid:'휘발유·경유', lpg:'LPG'}[byId('tripFuel').value];
     const method = {any:'', paper:'지류', digital:'디지털'}[byId('tripMethod').value];
     byId('tripSettingsSummary').textContent = [start?.name || (byId('tripStart').value.trim() ? '출발지 선택 필요' : '내 위치'), payment, method, fuel].filter(Boolean).join(' · ');
@@ -19,9 +19,10 @@
   panel.addEventListener('toggle', () => {
     if (!panel.open || settingsInitialized) return;
     settingsInitialized = true;
-    byId('tripPayment').value = document.querySelector('.filter-btn.active')?.dataset.filter || 'all';
+    const selected = document.querySelector('.filter-btn.active')?.dataset.filter;
+    byId('tripPayment').value = selected==='local'?byId('regionalPayment').value:selected||'all';
     byId('tripMethod').value = {all:'any', paper:'paper', digital:'digital'}[byId('onnuriMethod').value] || 'any';
-    if (byId('tripMethod').value !== 'any') byId('tripPayment').value = 'onnuri';
+    if (selected !== 'local' && byId('tripMethod').value !== 'any') byId('tripPayment').value = 'onnuri';
     byId('tripFuel').value = byId('fuelSelect').value === 'all' ? 'liquid' : byId('fuelSelect').value;
     syncControls();
   });
@@ -101,7 +102,7 @@
     const prices=PRICES[station.id];
     if(prices){
       const block=document.createElement('div');block.className='trip-prices';
-      for(const fuel of station.fuel_kind==='lpg'?['LPG']:['휘발유','경유']){
+      for(const fuel of GasRegionalCurrency.fuelPrices(station)){
         if(!GasPriceDisplay.effectivePrice(prices[fuel],station))continue;
         const row=document.createElement('div');row.className='trip-fuel-price';
         row.innerHTML=fuel+' '+GasPriceDisplay.html(prices[fuel],station);block.append(row);

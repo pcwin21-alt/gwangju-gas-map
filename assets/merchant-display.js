@@ -1,5 +1,10 @@
 (function(root) {
   'use strict';
+  const regional = typeof module === 'object' && module.exports ? require('./regional-currency.js') : root.GasRegionalCurrency;
+  const regionalLabels = station => regional.localPayments(station).map(id => {
+    const channels = regional.channelText(station, id);
+    return regional.label(id) + (channels ? ' ' + channels : '');
+  });
   const digital = m => Boolean(m?.digital || m?.card || m?.qr);
   const date = value => typeof value==='string'&&/^\d{4}-\d{2}-\d{2}/.test(value)?value.slice(0,10):'미확인';
   function paymentText(station) {
@@ -8,13 +13,13 @@
       const m=station.onnuri_methods,types=[m?.paper===true&&'지류',digital(m)&&'디지털'].filter(Boolean);
       labels.push('온누리 '+(types.join('·')||'종류 미확인'));
     }
-    if(station.payment_types?.includes('saengsaeng'))labels.push('광주 지역화폐');
+    labels.push(...regionalLabels(station));
     return labels.join(' / ')||'결제 유형 미확인';
   }
   function confirmationText(station) {
     const labels=[],v=station.verification;
     if(station.payment_types?.includes('onnuri'))labels.push(onnuriNote(station));
-    if(station.payment_types?.includes('saengsaeng'))labels.push('지역화폐 조회 '+date(v?.saengsaeng?.checked_at));
+    for(const id of regional.localPayments(station))labels.push((id==='saengsaeng'?'지역화폐':regional.label(id))+' 조회 '+date(v?.[id]?.checked_at));
     return labels.join(' / ');
   }
   function onnuriNote(station) {
@@ -25,18 +30,20 @@
   }
   function verificationText(station) {
     const labels=[];
-    if(station.verification?.saengsaeng) labels.push('지역화폐 조회: '+date(station.verification.saengsaeng.checked_at));
+    for(const id of regional.localPayments(station))if(station.verification?.[id])labels.push((id==='saengsaeng'?'지역화폐':regional.label(id))+' 조회: '+date(station.verification[id].checked_at));
     if(station.payment_types?.includes('onnuri')) labels.push('온누리 '+onnuriNote(station));
     if(station.location_evidence) labels.push('위치: '+(station.location_evidence.source_type==='commercial_registry'?'상권자료 ':'지자체 주유소 자료 ')+(station.location_evidence.source_date||'기준일 미확인'));
     return labels.join(' / ');
   }
   function paymentSummary(station) {
     if(station.payment_types?.includes('onnuri')&&station.verification?.onnuri?.provider==='kbcard')
-      return '온누리 KB국민카드'+(station.payment_types.includes('saengsaeng')?' / 광주 지역화폐':'');
+      return ['온누리 KB국민카드',...regionalLabels(station)].join(' / ');
     return paymentText(station);
   }
-  function checkCaption(station) {
-    const v=station.payment_types?.includes('onnuri')?station.verification?.onnuri:station.verification?.saengsaeng;
+  function checkCaption(station, selection) {
+    const local = regional.localPayments(station);
+    const id = local.includes(selection) ? selection : selection === 'local' ? local[0] : station.payment_types?.includes('onnuri') ? 'onnuri' : local[0];
+    const v = station.verification?.[id];
     if(v?.status==='published_snapshot')return date(v.source_date)+' 자료';
     if(!v||v.status!=='confirmed')return '최근 미확인';
     return date(v.checked_at)==='미확인'?'확인일 미확인':date(v.checked_at)+' 확인';

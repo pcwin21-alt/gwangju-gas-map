@@ -7,7 +7,7 @@
     const labels = [];
     const payment = document.querySelector('.filter-btn.active')?.dataset.filter;
     if (payment === 'onnuri') labels.push('온누리');
-    if (payment === 'saengsaeng') labels.push('지역화폐');
+    if (payment === 'local') labels.push(GasRegionalCurrency.label(byId('regionalPayment').value));
     const method = byId('onnuriMethod').value, fuel = byId('fuelSelect').value;
     if (method !== 'all') labels.push(method === 'paper' ? '지류' : '디지털');
     if (fuel !== 'all') labels.push(fuel === 'lpg' ? 'LPG' : '휘발유·경유');
@@ -33,6 +33,7 @@
       byId(id).value = 'all';
       byId(id).dispatchEvent(new Event('change', {bubbles:true}));
     }
+    byId('regionalPayment').value = 'local';
     document.querySelector('.filter-btn[data-filter="all"]').click();
     sync();
   });

@@ -18,7 +18,7 @@
       const value=document.createElement('b'),meta=document.createElement('small'),date=document.createElement('small');
       const known=Number.isFinite(price)&&price>0;
       value.textContent=known?price.toLocaleString('ko-KR'):'유가 미확인';
-      meta.textContent=known?fuel+' · 원/L':'확인 자료 없음';
+      meta.textContent=known?fuel+' · 원/L':'';
       const dates=PRICE_INFO[station.id]?.source_dates;
       date.textContent=known?(dates?.length?dates.map(d=>d.slice(0,4)+'.'+d.slice(4,6)+'.'+d.slice(6)).join(' / '):'기준일 미확인'):'';
       if(!known)block.classList.add('unknown');block.append(value,meta,date);row.append(block);
@@ -27,7 +27,8 @@
   new MutationObserver(decorateRows).observe(list,{childList:true});decorateRows();
   if(!window.kakao?.maps)return;
   const pins=[],markerCache=new Map();let routePinsHidden=false;
-  const payment=()=>document.querySelector('.filter-btn.active')?.dataset.filter||'all';
+  const payment=()=>document.querySelector('.filter-btn.active[data-filter="local"]')
+    ? document.getElementById('regionalPayment').value : document.querySelector('.filter-btn.active')?.dataset.filter||'all';
   function applyTheme(button,theme){
     button.style.setProperty('--pin-edge',theme.priceEdge||theme.edge);
     button.style.setProperty('--pin-surface',theme.surface);
