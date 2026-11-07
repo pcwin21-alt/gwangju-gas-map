@@ -52,7 +52,8 @@
     const priceLabel=core.priceText(station,prices,typeof PRICE_INFO==='undefined'?null:PRICE_INFO[station.id]?.source_dates);
     if(priceLabel)node.append(text('span',priceLabel,'station-price'));
     if(row.km!==null)node.append(text('span',core.distanceText(row.km),'station-distance'));
-    if(station.verification?.onnuri?.status!=='confirmed')node.append(text('span',GasMerchantDisplay.checkCaption(station),'station-proof'));
+    const selected=payment();
+    if(paymentGroup(selected)==='local'||station.verification?.onnuri?.status!=='confirmed')node.append(text('span',GasMerchantDisplay.checkCaption(station,selected),'station-proof'));
     if(hasMap)node.setAttribute('aria-pressed',String(selectedId===station.id));
     if(hasMap)node.addEventListener('click',()=>{
       selectedId=station.id;returnScroll=body.scrollTop;

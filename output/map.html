@@ -1569,7 +1569,7 @@ function buildInfoHtml(station) {
   const tagsEl = document.createElement('div');
   tagsEl.className = 'tags';
   const paymentLabel=document.createElement('span');paymentLabel.className='station-payment-label';paymentLabel.textContent=GasMerchantDisplay.paymentSummary(station);
-  const checkLabel=document.createElement('span');checkLabel.className='station-check';checkLabel.textContent=GasMerchantDisplay.checkCaption(station);
+  const checkLabel=document.createElement('span');checkLabel.className='station-check';checkLabel.textContent=GasMerchantDisplay.confirmationText(station)||GasMerchantDisplay.checkCaption(station);
   tagsEl.append(paymentLabel,checkLabel);
   if (station.fuel_kind==='dual') {
     const fuelLabel=document.createElement('span');

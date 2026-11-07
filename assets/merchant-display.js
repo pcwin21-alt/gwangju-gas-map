@@ -40,8 +40,10 @@
       return ['온누리 KB국민카드',...regionalLabels(station)].join(' / ');
     return paymentText(station);
   }
-  function checkCaption(station) {
-    const v=station.payment_types?.includes('onnuri')?station.verification?.onnuri:station.verification?.[regional.localPayments(station)[0]];
+  function checkCaption(station, selection) {
+    const local = regional.localPayments(station);
+    const id = local.includes(selection) ? selection : selection === 'local' ? local[0] : station.payment_types?.includes('onnuri') ? 'onnuri' : local[0];
+    const v = station.verification?.[id];
     if(v?.status==='published_snapshot')return date(v.source_date)+' 자료';
     if(!v||v.status!=='confirmed')return '최근 미확인';
     return date(v.checked_at)==='미확인'?'확인일 미확인':date(v.checked_at)+' 확인';

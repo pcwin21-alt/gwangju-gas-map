@@ -35,3 +35,13 @@ test('live official date is shown and verified stops are eligible',()=>{
  assert.equal(display.onnuriNote(s),'공식 검색 확인 2026-10-23');
  assert.equal(core.shortlist([s],{lat:33.5,lng:126.5},{lat:33.55,lng:126.7},'onnuri','digital').length,1);
 });
+
+test('regional selection shows its own confirmation date for a shared pin',()=>{
+ const station={payment_types:['onnuri','jeju-tamna'],verification:{
+   onnuri:{status:'confirmed',checked_at:'2026-10-25'},
+   'jeju-tamna':{status:'confirmed',checked_at:'2026-11-08',channels:['paper']},
+ }};
+ assert.equal(display.checkCaption(station),'2026-10-25 확인');
+ assert.equal(display.checkCaption(station,'jeju-tamna'),'2026-11-08 확인');
+ assert.equal(display.checkCaption(station,'local'),'2026-11-08 확인');
+});
