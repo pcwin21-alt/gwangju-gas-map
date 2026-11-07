@@ -5,6 +5,7 @@
     'incheon-eum': { label: '인천e음', region: '인천', fill: '#2AAFD4', edge: '#17495B', ink: '#0D3040' },
     'busan-dongbaek': { label: '동백전', region: '부산', fill: '#EE3C96', edge: '#8B0203', ink: '#3B0A29' },
     'gangwon-gift': { label: '강원상품권', region: '강원', fill: '#D83831', edge: '#7C1714' },
+    'jeju-tamna': { label: '탐나는전', region: '제주', fill: '#FB8300', edge: '#713500', ink: '#381B06' },
     'daegu-ropay': { label: '대구로페이', region: '대구', fill: '#D80017', edge: '#770010' },
     'ulsan-pay': { label: '울산페이', region: '울산', fill: '#8E4599', edge: '#4B2052' },
     yeominjeon: { label: '여민전', region: '세종', fill: '#1F3383', edge: '#111F55' },
