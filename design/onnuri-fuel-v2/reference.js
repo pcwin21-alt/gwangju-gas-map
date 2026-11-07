@@ -27,7 +27,8 @@
   new MutationObserver(decorateRows).observe(list,{childList:true});decorateRows();
   if(!window.kakao?.maps)return;
   const pins=[],markerCache=new Map();let routePinsHidden=false;
-  const payment=()=>document.querySelector('.filter-btn.active')?.dataset.filter||'all';
+  const payment=()=>document.querySelector('.filter-btn.active[data-filter="local"]')
+    ? document.getElementById('regionalPayment').value : document.querySelector('.filter-btn.active')?.dataset.filter||'all';
   function applyTheme(button,theme){
     button.style.setProperty('--pin-edge',theme.priceEdge||theme.edge);
     button.style.setProperty('--pin-surface',theme.surface);

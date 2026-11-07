@@ -21,7 +21,7 @@ function setup(options={}) {
   for (const match of html.matchAll(/<select id="([^"]+)"[^>]*>\s*<option value="([^"]+)"/g)) el(match[1]).value=match[2];
   const lookups=[], gps=[],roads=[],draws=[];
   let now=10000;
-  const sandbox={GasRouteCore:core, document:{getElementById:el,querySelector:()=>({dataset:{filter:'all'}}),createElement:()=>new Element()},
+  const sandbox={GasRouteCore:core,GasRegionalCurrency:require('../assets/regional-currency.js'), document:{getElementById:el,querySelector:()=>({dataset:{filter:'all'}}),createElement:()=>new Element()},
     window:{GasRouteMap:{clear(){draws.push(null);},show(...args){draws.push(args);},fit(){}}}, MERCHANT_STATUS:{}, STATIONS:options.stations||[], PRICES:{},
     GasMerchantDisplay:require('../assets/merchant-display.js'),
     navigator:{userAgent:''},location:{hostname:'example.test'},Date:{now:()=>now+=2000},setTimeout,clearTimeout,AbortController,DOMException,

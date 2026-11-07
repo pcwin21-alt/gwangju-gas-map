@@ -75,3 +75,5 @@ html[data-review-text="large"] #fuelDesignApp #resultsSize{grid-column:1}
 }
 @media(max-width:359px){#fuelDesignApp .controls{gap:.375rem;padding-inline:.75rem!important}#fuelDesignApp :is(#regionOpen,#filtersToggle,#nearbyModeBtn){padding-inline:.375rem}#fuelDesignApp .count-badge{font-size:.875rem}#fuelDesignApp #toolsOpenBtn{padding-inline:.375rem}#fuelDesignApp .filter-selects{grid-template-columns:1fr}}
 @media(min-width:701px){#fuelDesignApp #stationDetails{left:auto;right:1rem;bottom:1rem;transform:none}#fuelDesignApp #stationDetails .info-overlay{border-radius:var(--fuel-radius-sheet)}}
+
+#fuelDesignApp #regionalPaymentField[hidden]{display:none!important}

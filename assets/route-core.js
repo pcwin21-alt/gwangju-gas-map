@@ -45,13 +45,18 @@
     if(data.waypoints?.some(p=>!Number.isFinite(p.distance)||p.distance>500))throw new Error('선택한 장소 가까이에 연결된 자동차 도로가 없습니다. 인근 도로명주소로 다시 선택하세요.');
     return {coordinates,seconds:route.duration,meters:route.distance};
   }
+  function verifiedForRoute(station, scheme) {
+    if (!station.verification) return true;
+    return Object.entries(station.verification).some(([id, evidence]) =>
+      (scheme === 'all' || scheme === id || (scheme === 'local' && id !== 'onnuri')) &&
+      (station.payment_types || []).includes(id) &&
+      (evidence?.status === 'confirmed' || (id === 'onnuri' && evidence?.status === 'published_snapshot')));
+  }
   function shortlist(stations, start, end, scheme, method, fuel = "all", routeOptions = null) {
     const direct = distance(start, end);
     return stations.filter(s => validPoint(s) && s.route_eligible !== false &&
-      (!s.verification || (scheme === 'saengsaeng' ? s.verification.saengsaeng?.status === 'confirmed' :
-        scheme === 'onnuri' ? ['confirmed','published_snapshot'].includes(s.verification.onnuri?.status) :
-        s.verification.saengsaeng?.status === 'confirmed' || ['confirmed','published_snapshot'].includes(s.verification.onnuri?.status))) &&
-      (scheme === 'all' || s.payment_types.includes(scheme)) &&
+      verifiedForRoute(s, scheme) &&
+      (scheme === 'all' || (scheme === 'local' ? s.payment_types.some(id => id !== 'onnuri') : s.payment_types.includes(scheme))) &&
       (fuel === 'all' || s.fuel_kind === fuel) &&
       (scheme !== 'onnuri' || method === 'any' ||
         (method === 'digital' ? s.onnuri_methods?.digital || s.onnuri_methods?.card || s.onnuri_methods?.qr : s.onnuri_methods?.paper)))

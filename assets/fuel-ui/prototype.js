@@ -16,7 +16,7 @@
   const syncLabel=()=>{
     const labels=document.getElementById('activeFilters').textContent.trim();
     const payment=document.querySelector('.filter-btn.active')?.dataset.filter;
-    const label=toggle.querySelector('span');label.textContent=payment==='onnuri'?'온누리':payment==='saengsaeng'?'지역화폐':'필터';
+    const label=toggle.querySelector('span');label.textContent=payment==='onnuri'?'온누리':['local','saengsaeng'].includes(payment)?'지역화폐':'필터';
     const rest=labels.split(' · ').filter(value=>value&&value!==label.textContent);extraFilters.textContent=rest.join(' · ');extraFilters.hidden=!rest.length;
     toggle.dataset.reviewSelected=String(Boolean(labels));
     toggle.setAttribute('aria-label',labels?'필터, '+labels:'필터');

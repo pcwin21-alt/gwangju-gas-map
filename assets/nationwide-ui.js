@@ -4,7 +4,16 @@
   const regionInput=byId('regionSelect'),method=byId('onnuriMethod'),fuel=byId('fuelSelect');
   const panel=byId('nationalResults'),body=byId('resultsBody'),list=byId('stationList');
   const scope=byId('resultsScope'),order=byId('resultsOrder'),areaButton=byId('searchAreaBtn');
-  const hasMap=Boolean(window.kakao?.maps);
+  const hasMap=Boolean(window.kakao?.maps),regional=GasRegionalCurrency;
+  const regionalSelect=byId('regionalPayment'),tripPayment=byId('tripPayment');
+  const localIds=regional.available(STATIONS);
+  localIds.forEach(id=>{regionalSelect.add(new Option(regional.label(id),id));tripPayment.add(new Option(regional.label(id),id));});
+  const paymentGroup=id=>localIds.includes(id)?'local':id;
+  const showRegional=()=>{
+    const local=paymentGroup(payment())==='local';
+    byId('regionalPaymentField').hidden=!local||localIds.length<2;
+    method.disabled=local;
+  };
   let limit=20,restoring=true,areaBounds=null,selectedId=null,returnFromList=false,returnScroll=0,orderChosen=false,fallbackPayment='all';
   const locationPoint=()=>hasMap&&typeof currentLocation!=='undefined'?currentLocation:null;
   const payment=()=>hasMap?currentFilter:fallbackPayment;
@@ -19,8 +28,8 @@
     return {south:sw.getLat(),west:sw.getLng(),north:ne.getLat(),east:ne.getLng()};
   }
   function items() {
-    return hasMap?allMarkers.filter(m=>m.visible):STATIONS.filter(s=>GasNational.matches(s,state)&&
-      (payment()==='all'||s.payment_types.includes(payment()))&&GasNational.searchMatches(s,query())).map(station=>({station}));
+    return hasMap?allMarkers.filter(m=>m.visible):STATIONS.filter(s=>GasNational.matches(s,{...state,paymentScope:paymentGroup(payment())})&&
+      regional.matches(s,payment())&&GasNational.searchMatches(s,query())).map(station=>({station}));
   }
   function text(tag,value,className) {const el=document.createElement(tag);el.textContent=value;if(className)el.className=className;return el;}
   function emptyActions(parent) {
@@ -121,6 +130,7 @@
     const u=new URL(location.href);
     for(const k of ['region','method','fuel']){if(state[k]==='all'&&k!=='region')u.searchParams.delete(k);else u.searchParams.set(k,state[k]);}
     if(payment()==='all')u.searchParams.delete('payment');else u.searchParams.set('payment',payment());
+    showRegional();
     if(!hasMap||currentDistrict==='all')u.searchParams.delete('district');else u.searchParams.set('district',currentDistrict);
     // Keep GPS, input text and trip endpoints out of shared URLs.
     if(u.href!==location.href)history[restoring?'replaceState':'pushState'](null,'',u);
@@ -148,15 +158,18 @@
     byId('map').textContent='지도를 불러오지 못했습니다. 목록에서 주소와 길찾기를 확인하세요.';
     for(const id of ['myLocBtn','rankBtn','districtSelect'])byId(id).disabled=true;byId('tripPanel').hidden=true;
     byId('searchInput').addEventListener('input',()=>{limit=20;render(true);});
-    document.querySelectorAll('.filter-btn').forEach(b=>b.addEventListener('click',()=>{fallbackPayment=b.dataset.filter;document.querySelectorAll('.filter-btn').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b));});render(true);syncURL();}));
+    document.querySelectorAll('.filter-btn').forEach(b=>b.addEventListener('click',()=>{fallbackPayment=b.dataset.filter==='local'?regionalSelect.value:b.dataset.filter;document.querySelectorAll('.filter-btn').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b));});render(true);syncURL();}));
   }
-  byId('resetBtn').addEventListener('click',()=>{regionInput.value='all';method.value=fuel.value='all';change();});
+  regionalSelect.addEventListener('change',()=>document.querySelector('.filter-btn[data-filter="local"]').click());
+  byId('resetBtn').addEventListener('click',()=>{regionalSelect.value='local';regionInput.value='all';method.value=fuel.value='all';change();});
   function restore() {
     restoring=true;const url=new URL(location.href),district=url.searchParams.get('district');
     regionInput.value=GasNational.regionFromURL(url.searchParams.get('region'));method.value=['paper','digital'].includes(url.searchParams.get('method'))?url.searchParams.get('method'):'all';fuel.value=['liquid','lpg'].includes(url.searchParams.get('fuel'))?url.searchParams.get('fuel'):'all';
-    const selected=['onnuri','saengsaeng'].includes(url.searchParams.get('payment'))?url.searchParams.get('payment'):'all';
+    const requested=url.searchParams.get('payment');
+    const selected=['onnuri','local',...localIds].includes(requested)?requested:'all';
+    regionalSelect.value=localIds.includes(selected)?selected:'local';
     if(hasMap)currentFilter=selected;else fallbackPayment=selected;
-    document.querySelectorAll('.filter-btn').forEach(b=>{b.classList.toggle('active',b.dataset.filter===selected);b.setAttribute('aria-pressed',String(b.dataset.filter===selected));});change();
+    document.querySelectorAll('.filter-btn').forEach(b=>{b.classList.toggle('active',b.dataset.filter===paymentGroup(selected));b.setAttribute('aria-pressed',String(b.dataset.filter===paymentGroup(selected)));});change();
     if(hasMap&&district&&[...byId('districtSelect').options].some(o=>o.value===district))triggerDistrictSelect(district);syncURL();restoring=false;
   }
   window.addEventListener('popstate',restore);restore();syncResults();

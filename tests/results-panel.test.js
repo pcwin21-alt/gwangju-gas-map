@@ -1,4 +1,5 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
+const regional=require('../assets/regional-currency.js');
 const core=require('../assets/station-results-core.js'),national=require('../assets/nationwide.js'),display=require('../assets/merchant-display.js');
 
 function fixture({fallback=false,count=25}={}) {
@@ -20,12 +21,12 @@ function fixture({fallback=false,count=25}={}) {
   focus(){document.activeElement=this;}
  }
  function el(id){return nodes[id]||=(new Element());}
- const buttons=['all','onnuri','saengsaeng'].map(filter=>{const n=new Element();n.dataset.filter=filter;return n;});
+ const buttons=['all','onnuri','local'].map(filter=>{const n=new Element();n.dataset.filter=filter;return n;});
  for(const [id,value] of Object.entries({regionSelect:'광주',onnuriMethod:'all',fuelSelect:'all',resultsScope:'region',resultsOrder:'name'}))el(id).value=value;
  el('nationalResults').dataset.size='half';el('nationalResults').open=false;el('nationalResults').append(el('summary'));
  const stations=Array.from({length:count},(_,i)=>({id:String(i),name:'주유소 '+String(i).padStart(2,'0'),address:'광주 북구 '+i,region:'광주',lat:35+i*.01,lng:126,payment_types:['onnuri'],onnuri_methods:{paper:true},fuel_kind:'liquid'}));
  const window={addEventListener(type,fn){(events[type]||=[]).push(fn);},GasRouteMap:{isActive:()=>route}};
- sandbox={document,window,GasStationResults:core,GasNational:national,GasNationalState:{region:'all',fuel:'all',method:'all'},GasMerchantDisplay:display,MERCHANT_STATUS:{},STATIONS:stations,NATIONAL_PENDING:[],PRICES:{},
+ sandbox={document,window,GasStationResults:core,GasNational:national,GasNationalState:{region:'all',fuel:'all',method:'all'},GasMerchantDisplay:display,GasRegionalCurrency:regional,MERCHANT_STATUS:{},STATIONS:stations,NATIONAL_PENDING:[],PRICES:{},
   currentLocation:null,currentFilter:'all',currentDistrict:'all',allMarkers:stations.map(station=>({station,visible:true,overlay:{}})),
   Option:class{constructor(label,value){this.textContent=label;this.value=value;}},URL,location:{href:'https://example.test/?region=광주&payment=onnuri'},history:{replaceState(){},pushState(){}},
   ResizeObserver:class{observe(){}},clearRankMapOverlays(){},setDistrictHighlight(){},triggerDistrictSelect(){},mapViewport:{fit(){fits++;}},

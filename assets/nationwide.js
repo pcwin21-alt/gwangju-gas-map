@@ -8,7 +8,7 @@
   function matches(station, state) {
     if (state.region !== 'all' && station.region !== state.region) return false;
     if (state.fuel !== 'all' && station.fuel_kind !== state.fuel) return false;
-    if (state.method !== 'all') {
+    if (state.method !== 'all' && state.paymentScope !== 'local') {
       if (!station.payment_types?.includes('onnuri')) return false;
       if (station.onnuri_methods?.[state.method] !== true) return false;
     }

@@ -8,11 +8,15 @@ const FUEL_PIN_THEMES = {
   unknown: {key:'local-unassigned',label:'지역화폐',fill:'#596673',edge:'#34404C',ink:'#FFFFFF',surface:'#F0F3F5',symbol:'diamond'}
 };
 function fuelPinTheme(station,payment='all'){
-  const types=station.payment_types||[],onnuri=types.includes('onnuri'),local=types.includes('saengsaeng');
+  const types=station.payment_types||[],onnuri=types.includes('onnuri');
+  const localIds=GasRegionalCurrency.localPayments(station);
+  const chosen=localIds.includes(payment)?payment:localIds[0];
+  const local=Boolean(chosen), product=GasRegionalCurrency.product(chosen);
   const currencyId=station.local_currency_id||(station.region==='광주'?'gwangju-saengsaeng':null);
-  const regional=FUEL_PIN_THEMES.currencies[currencyId]||FUEL_PIN_THEMES.unknown;
+  const regional=chosen==='saengsaeng'?(FUEL_PIN_THEMES.currencies[currencyId]||FUEL_PIN_THEMES.unknown):
+    product?{...product,key:chosen,ink:product.ink||'#FFF',surface:'var(--fuel-currency-soft)',priceInk:'var(--fuel-ink)',priceEdge:product.edge,symbol:'diamond'}:FUEL_PIN_THEMES.unknown;
   if(payment==='onnuri'&&onnuri)return FUEL_PIN_THEMES.onnuri;
-  if(payment==='saengsaeng'&&local)return regional;
+  if(local&&(payment==='local'||localIds.includes(payment)))return regional;
   if(onnuri&&local)return {key:'both-'+regional.key,label:'온누리 + '+regional.label,fill:FUEL_PIN_THEMES.onnuri.fill,second:regional.fill,edge:'#34404C',ink:'#351607',priceInk:'var(--fuel-ink)',priceEdge:'var(--fuel-control-line)',surface:'linear-gradient(110deg,var(--fuel-brand-soft) 50%,'+regional.surface+' 50%)',symbol:'double'};
   return local?regional:FUEL_PIN_THEMES.onnuri;
 }
