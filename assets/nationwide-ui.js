@@ -47,7 +47,7 @@
     const name=text('strong',station.name);name.dataset.noI18n='';
     const address=text('span',station.address||'상세주소 미확인','station-address');address.dataset.noI18n='';
     node.append(name);
-    node.append(address,text('span',GasMerchantDisplay.paymentSummary(station)+(station.fuel_kind==='lpg'?' · LPG 충전소':''),'station-payment'));
+    node.append(address,text('span',GasMerchantDisplay.paymentSummary(station)+(station.fuel_kind==='dual'?' · 주유·LPG':station.fuel_kind==='lpg'?' · LPG 충전소':''),'station-payment'));
     const prices=typeof PRICES==='undefined'?null:PRICES[station.id];
     const priceLabel=core.priceText(station,prices,typeof PRICE_INFO==='undefined'?null:PRICE_INFO[station.id]?.source_dates);
     if(priceLabel)node.append(text('span',priceLabel,'station-price'));

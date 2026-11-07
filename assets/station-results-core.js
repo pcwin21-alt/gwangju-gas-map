@@ -1,6 +1,7 @@
 /* Result ordering and geographic scope never mutate map or filter state. */
 (function(root) {
   'use strict';
+  const fuel = typeof module === 'object' && module.exports ? require('./regional-currency.js') : root.GasRegionalCurrency;
   const point = p => p && Number.isFinite(p.lat) && Number.isFinite(p.lng);
   function distance(a,b) {
     if(!point(a)||!point(b))return null;
@@ -27,7 +28,7 @@
   }
   function priceText(station,prices,dates) {
     if(!prices)return '';
-    const kinds=station.fuel_kind==='lpg'?['LPG']:['휘발유','경유'];
+    const kinds=fuel.fuelPrices(station);
     const values=kinds.filter(k=>Number.isFinite(prices[k])&&prices[k]>0).map(k=>k+' '+prices[k].toLocaleString('ko-KR')+'원/L');
     if(!values.length)return '';
     const sources=Array.isArray(dates)?dates.filter(d=>typeof d==='string').map(d=>d.replace(/^(\d{4})(\d{2})(\d{2})$/,'$1-$2-$3')):[];

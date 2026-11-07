@@ -36,3 +36,19 @@ test('an unverified or wrong-region entry adds no station or regional option', (
   assert.deepEqual(regional.mergeStations([station], invalid), [station]);
   assert.deepEqual(regional.available([station]), []);
 });
+
+test('a single dual-fuel station is included in both filters and routing', () => {
+  const national = require('../assets/nationwide.js');
+  const station = {
+    id: 'dual', region: '강원', lat: 37.9, lng: 128.03, fuel_kind: 'dual',
+    route_eligible: true, payment_types: ['gangwon-gift'],
+    verification: {'gangwon-gift': {status: 'confirmed'}},
+  };
+  const state = {region: '강원', method: 'all', paymentScope: 'local'};
+  const start = {lat: 37.8, lng: 128}, end = {lat: 38, lng: 128.1};
+  for (const fuel of ['liquid', 'lpg']) {
+    assert.equal(national.matches(station, {...state, fuel}), true);
+    assert.deepEqual(route.shortlist([station], start, end, 'gangwon-gift', 'any', fuel), [station]);
+  }
+  assert.deepEqual(regional.fuelPrices(station), ['휘발유', '경유', 'LPG']);
+});

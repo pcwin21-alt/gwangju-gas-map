@@ -1,5 +1,6 @@
 (function(root) {
   'use strict';
+  const fuel = typeof module === 'object' && module.exports ? require('./regional-currency.js') : root.GasRegionalCurrency;
   const regions = ['서울','부산','대구','인천','광주','대전','울산','세종','경기','강원','충북','충남','전북','전남','경북','경남','제주'];
   function searchMatches(station, query) {
     const q=(query||'').trim().toLowerCase();
@@ -7,7 +8,7 @@
   }
   function matches(station, state) {
     if (state.region !== 'all' && station.region !== state.region) return false;
-    if (state.fuel !== 'all' && station.fuel_kind !== state.fuel) return false;
+    if (!fuel.fuelMatches(station, state.fuel)) return false;
     if (state.method !== 'all' && state.paymentScope !== 'local') {
       if (!station.payment_types?.includes('onnuri')) return false;
       if (station.onnuri_methods?.[state.method] !== true) return false;

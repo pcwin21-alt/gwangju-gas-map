@@ -102,7 +102,7 @@
     const prices=PRICES[station.id];
     if(prices){
       const block=document.createElement('div');block.className='trip-prices';
-      for(const fuel of station.fuel_kind==='lpg'?['LPG']:['휘발유','경유']){
+      for(const fuel of GasRegionalCurrency.fuelPrices(station)){
         if(!GasPriceDisplay.effectivePrice(prices[fuel],station))continue;
         const row=document.createElement('div');row.className='trip-fuel-price';
         row.innerHTML=fuel+' '+GasPriceDisplay.html(prices[fuel],station);block.append(row);

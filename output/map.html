@@ -1508,7 +1508,7 @@ function buildInfoHtml(station) {
   const p = PRICES[station.id];
   let priceHtml = '';
   if (p && Object.keys(p).length > 0) {
-    const order = station.fuel_kind==='lpg'?['LPG']:['휘발유', '경유'];
+    const order = GasRegionalCurrency.fuelPrices(station);
     const items = order.filter(k => typeof p[k]==='number'&&Number.isFinite(p[k])&&p[k]>0).map(k => {
       return `<span class="price-item"><span class="fuel-label">${k}</span>${GasPriceDisplay.html(p[k], station)}</span>`;
     }).join('');
@@ -1571,6 +1571,11 @@ function buildInfoHtml(station) {
   const paymentLabel=document.createElement('span');paymentLabel.className='station-payment-label';paymentLabel.textContent=GasMerchantDisplay.paymentSummary(station);
   const checkLabel=document.createElement('span');checkLabel.className='station-check';checkLabel.textContent=GasMerchantDisplay.checkCaption(station);
   tagsEl.append(paymentLabel,checkLabel);
+  if (station.fuel_kind==='dual') {
+    const fuelLabel=document.createElement('span');
+    fuelLabel.className='station-check';fuelLabel.textContent='주유·LPG 충전';
+    tagsEl.append(fuelLabel);
+  }
 
   const heading = document.createElement('div');heading.className = 'info-heading';
   const close = document.createElement('button');close.type='button';close.className='station-close';close.textContent='×';close.setAttribute('aria-label','주유소 상세 닫기');

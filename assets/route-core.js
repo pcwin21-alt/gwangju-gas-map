@@ -1,5 +1,6 @@
 (function (root) {
   'use strict';
+  const fuelTypes = typeof module === 'object' && module.exports ? require('./regional-currency.js') : root.GasRegionalCurrency;
   const validPoint = p => p && Number.isFinite(p.lat) && Number.isFinite(p.lng) && p.lat >= 31.43 && p.lat <= 44.35 && p.lng >= 122.37 && p.lng <= 132;
   function distance(a, b) {
     const r = Math.PI / 180;
@@ -57,7 +58,7 @@
     return stations.filter(s => validPoint(s) && s.route_eligible !== false &&
       verifiedForRoute(s, scheme) &&
       (scheme === 'all' || (scheme === 'local' ? s.payment_types.some(id => id !== 'onnuri') : s.payment_types.includes(scheme))) &&
-      (fuel === 'all' || s.fuel_kind === fuel) &&
+      fuelTypes.fuelMatches(s, fuel) &&
       (scheme !== 'onnuri' || method === 'any' ||
         (method === 'digital' ? s.onnuri_methods?.digital || s.onnuri_methods?.card || s.onnuri_methods?.qr : s.onnuri_methods?.paper)))
       .map(s => ({station: s, corridor:routeOptions?distanceToRoute(s,routeOptions.coordinates):0,penalty: distance(start, s) + distance(s, end) - direct}))

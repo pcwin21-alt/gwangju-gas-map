@@ -58,7 +58,17 @@
     return [...byId.values()];
   }
 
-  const api = { product, localPayments, matches, label, available, channelText, mergeStations };
+  function fuelMatches(station, selection) {
+    return selection === 'all' || station.fuel_kind === selection ||
+      (station.fuel_kind === 'dual' && (selection === 'liquid' || selection === 'lpg'));
+  }
+
+  function fuelPrices(station) {
+    if (station.fuel_kind === 'dual') return ['휘발유', '경유', 'LPG'];
+    return station.fuel_kind === 'lpg' ? ['LPG'] : ['휘발유', '경유'];
+  }
+
+  const api = { product, localPayments, matches, label, available, channelText, mergeStations, fuelMatches, fuelPrices };
   if (typeof module === 'object' && module.exports) module.exports = api;
   else root.GasRegionalCurrency = api;
 })(typeof globalThis !== 'undefined' ? globalThis : this);

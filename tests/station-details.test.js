@@ -27,7 +27,7 @@ test('distance is absent until known, and updates without requesting location or
 test('details show only valid fuel prices and only supported stations can be chosen as a stop',()=>{
  const html=fs.readFileSync('output/map.html','utf8'),nodes=[],chosen=[];
  const node=()=>{const n={children:[],dataset:{},listeners:{},append(...children){this.children.push(...children);},appendChild(child){this.append(child);},setAttribute(){},addEventListener(k,v){this.listeners[k]=v;}};nodes.push(n);return n;};
- const context={document:{createElement:node},PRICES:{a:{'휘발유':1800,'경유':0,LPG:900}},PRICE_INFO:{a:{source_dates:['20261030']}},GasPriceDisplay:require('../assets/price-display.js'),GasMerchantDisplay:require('../assets/merchant-display.js'),updateDistanceElement(){},getKakaoRouteUrl:()=>'/kakao',getNaverMapWebUrl:()=>'/naver',closeStationOverlay(){},window:{GasRoutePlanner:{chooseStation:s=>chosen.push(s.id)}}};
+ const context={document:{createElement:node},PRICES:{a:{'휘발유':1800,'경유':0,LPG:900}},PRICE_INFO:{a:{source_dates:['20261030']}},GasRegionalCurrency:require('../assets/regional-currency.js'),GasPriceDisplay:require('../assets/price-display.js'),GasMerchantDisplay:require('../assets/merchant-display.js'),updateDistanceElement(){},getKakaoRouteUrl:()=>'/kakao',getNaverMapWebUrl:()=>'/naver',closeStationOverlay(){},window:{GasRoutePlanner:{chooseStation:s=>chosen.push(s.id)}}};
  vm.createContext(context);vm.runInContext(html.slice(html.indexOf('function buildInfoHtml('),html.indexOf('// 마커 생성')),context);
  context.buildInfoHtml({id:'a',name:'충전소',fuel_kind:'lpg',payment_types:['onnuri'],route_eligible:true});
  const price=nodes.find(n=>n.innerHTML?.includes('price-item')).innerHTML;
