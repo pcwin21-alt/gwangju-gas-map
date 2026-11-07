@@ -1,0 +1,110 @@
+{
+  "reviewed_at": "2026-11-07T13:18:35+09:00",
+  "region": "전남",
+  "base_main": "5320a90",
+  "collector_state": "ad0b62dfd33626bcc174bc9c7e6ad3ab7c7c3c13",
+  "method": "historical_premise_timeline_with_distinct_operator_checks",
+  "candidate": {
+    "name": "(주)백동산업",
+    "historical_address_lead": "담양군 담양읍 무정로 35",
+    "status": "hold_conflicting_current_business"
+  },
+  "primary_history_access": [
+    {
+      "url": "https://www.damyang.go.kr/board/getFile?boardId=BBS_0000283&fileSid=208856&isInline=true",
+      "result": "Damyang fuel registration procedure; no named operator-change record located."
+    },
+    {
+      "url": "https://www.kpetro.or.kr/download.do?uuid=aa7e8a1c-96c7-4a34-86b2-759fd64aec68.pdf",
+      "result": "Public records index lists a nonpublic change-registration document; not a record for this facility."
+    }
+  ],
+  "secondary_leads": [
+    {
+      "url": "https://dreamermemory.tistory.com/271",
+      "page_updated": "2022-08-15",
+      "reported": "(주)백동산업 fuel listing at 무정로 35, phone 061-383-2115",
+      "limit": "Reposted directory; page update does not date the underlying business observation."
+    },
+    {
+      "url": "https://bizno.net/article/1292617097",
+      "reported_closed_on": "2019-06-30",
+      "reported": "백동주유소 old sole-proprietor listing with masked address and phone",
+      "limit": "Secondary closure lead. Cannot identify this permit or apply closure to the later company or premise."
+    },
+    {
+      "url": "https://www.saramin.co.kr/zf_user/company-info/view/csn/ZFFVSWxXdm5YNVRzYlE0THZ4ZVdodz09/company_nm/%28%EC%A3%BC%29%EB%B0%B1%EB%8F%99",
+      "reported": "Later corporate profile for (주)백동 lists building materials and vehicle fuel among business lines at 무정로 35",
+      "limit": "Declared business lines are not active station permission or payment terminal evidence."
+    }
+  ],
+  "inputs": [
+    {
+      "path": "output/audits/full_region_crosscheck_20261103/physical_fuel_records.json.gz",
+      "sha256": "f23b2357821eaacd6485e93728b590f1ab180e92db935b5d48dd471e3f11a4f0"
+    },
+    {
+      "path": "output/audits/full_region_crosscheck_20261103/issuer_latest_by_id.json.gz",
+      "sha256": "a51a8367eb03d4dcb7497ba423bb80094262a6a3ef36b8646e40203516768b83"
+    }
+  ],
+  "counts": {
+    "jeonnam_physical_rows_loaded": 1557,
+    "damyang_physical_rows_compared": 29,
+    "historical_candidates_tested": 1,
+    "positive_control_premises": 2,
+    "archived_issuer_records_compared": 2,
+    "live_merchant_source_requests": 0,
+    "new_fuel_identities_resolved": 0,
+    "new_memberships": 0,
+    "existing_fresh_rechecks": 0,
+    "map_additions": 0,
+    "deployments": 0
+  },
+  "candidate_matches": {
+    "historical_name": [],
+    "exact_road_address": [],
+    "historical_or_archived_issuer_phone": []
+  },
+  "controls": [
+    {
+      "name": "대나무주유소",
+      "address": "담양군 담양읍 죽향대로 1179",
+      "source_rows": [
+        "MA010120220807533538"
+      ]
+    },
+    {
+      "name": "남문주유소",
+      "address": "담양군 담양읍 죽향대로 1102",
+      "source_rows": [
+        "MA010120220807562353"
+      ]
+    }
+  ],
+  "issuer_pair": [
+    {
+      "id": "000000094538059",
+      "title": "(주)백동산업",
+      "category": "주유소",
+      "observed_at": "2026-11-02T15:14:26+09:00",
+      "location": {
+        "lat": "35.3090822678",
+        "lng": "126.984898723"
+      }
+    },
+    {
+      "id": "000000099830408",
+      "title": "(주)백동",
+      "category": "건축자재",
+      "observed_at": "2026-11-02T15:14:26+09:00",
+      "location": {
+        "lat": "35.3090822678",
+        "lng": "126.984898723"
+      }
+    }
+  ],
+  "issuer_pair_has_same_observation_time_phone_and_coordinate": true,
+  "decision": "Keep review open. The archived fuel and hardware IDs are separate, and no dated permit ties a current vehicle-fuel operation to either terminal.",
+  "next_pilot": "Look for a recent Jeonnam municipal fleet fuel contract that specifies the actual filling premise, not just a vendor headquarters. Use it only as independent fuel-identity evidence."
+}
