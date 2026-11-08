@@ -1,9 +1,10 @@
 /* A small, optional policy entry; the native dialog does not resize the map. */
-.app :is(#policyOpen,#regionalBenefitsOpen){position:absolute;left:72px;bottom:24px;z-index:120;display:inline-flex;align-items:center;justify-content:center;gap:4px;max-width:calc(100% - 148px);min-height:44px;padding:6px 8px;border:1px solid var(--line);border-radius:10px;background:var(--panel);color:var(--muted);box-shadow:0 2px 8px #11111314;font-size:.875rem;line-height:1.5;font-family:inherit;font-weight:400;cursor:pointer;overflow-wrap:anywhere}
-.app #policyLabel{min-width:0}
+.app .map-policy-actions{position:absolute;left:72px;right:76px;bottom:24px;z-index:120;display:flex;gap:8px;align-items:end;pointer-events:none}
+.app :is(#policyOpen,#regionalBenefitsOpen){display:inline-flex;pointer-events:auto;min-width:0;align-items:center;justify-content:center;gap:4px;min-height:44px;padding:6px 8px;border:1px solid var(--line);border-radius:10px;background:var(--panel);color:var(--muted);box-shadow:0 2px 8px #11111314;font-size:.875rem;line-height:1.5;font-family:inherit;font-weight:400;cursor:pointer;overflow-wrap:anywhere}
+.app :is(#policyLabel,#regionalBenefitsLabel){min-width:0}
 .app .map-area:has(.national-results[open]) :is(#policyOpen,#regionalBenefitsOpen),.app .map-area:has(#stationDetails:not([hidden])) :is(#policyOpen,#regionalBenefitsOpen),.app .map-area:has(#tripPanel[open]) :is(#policyOpen,#regionalBenefitsOpen){display:none}
 .app :is(#policyOpen,#regionalBenefitsOpen):hover{color:var(--accent);background:var(--selected)}
-.app :is(#policyOpen,#regionalBenefitsOpen) .policy-info{display:grid;place-items:center;width:16px;height:16px;border:1px solid currentColor;border-radius:50%;font:700 11px/1 sans-serif}
+.app :is(#policyOpen,#regionalBenefitsOpen) .policy-info{display:grid;place-items:center;width:16px;height:16px;flex:none;border:1px solid currentColor;border-radius:50%;font:700 11px/1 sans-serif}
 .app #policySpecial{width:6px;height:6px;border-radius:50%;background:var(--accent)}
 .app #policySpecial[hidden]{display:none}
 .app .policy-dialog{position:fixed;inset:0;width:min(560px,calc(100% - 32px));max-width:calc(100% - 32px);max-height:calc(100dvh - 32px);margin:auto;padding:0;border:1px solid var(--line);border-radius:24px;background:var(--panel);color:var(--ink);box-shadow:var(--panel-shadow);overflow:hidden;text-align:left;font-size:16px;line-height:1.6}
@@ -37,3 +38,10 @@
 .app :is(#policyOpen,#regionalBenefitsOpen)[hidden]{display:none}
 .regional-benefits-choice{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:16px}
 .regional-benefits-choice select{flex:1 1 150px;min-width:0;min-height:44px;padding:6px 12px;border:1px solid var(--line);border-radius:10px;background:var(--field);color:var(--ink);font:inherit}
+
+.policy-body .regional-news-list{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.policy-body .regional-news-list li{margin:0}
+.regional-news-row{display:grid;width:100%;min-height:44px;gap:4px;padding:12px 14px;text-align:left;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:12px;font:inherit;cursor:pointer;overflow-wrap:anywhere}
+.regional-news-row:hover{background:var(--field)}
+.regional-news-rate{color:var(--accent);font-weight:700}
+.regional-news-title{font-size:.875rem}

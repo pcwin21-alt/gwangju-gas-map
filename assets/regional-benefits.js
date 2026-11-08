@@ -8,7 +8,7 @@
   const dialog = byId('regionalBenefitsDialog');
   const choice = byId('regionalBenefitsChoice');
   const content = byId('regionalBenefitsContent');
-  let selected = null, returnFocus, renderedDay;
+  let selected = null, nationwide = false, returnFocus, renderedDay;
   const make = (tag, value, cls) => {
     const element = document.createElement(tag);
     element.textContent = value;
@@ -22,11 +22,39 @@
     anchor.rel = 'noopener noreferrer';
     return anchor;
   };
+  function renderOverview(today) {
+    const list = make('ul', '', 'regional-news-list');
+    for (const id of Object.keys(data.policies)) {
+      const view = data.snapshot(id, today);
+      const region = GasRegionalCurrency.product(id).region;
+      const latest = view.notices[0];
+      const row = make('li', '');
+      const action = make('button', '', 'regional-news-row');
+      action.type = 'button';
+      action.append(
+        make('strong', region + ' · ' + view.name),
+        make('span', view.current?.label || '공식 안내 확인', 'regional-news-rate')
+      );
+      if (latest) {
+        action.append(make('span', latest.title, 'regional-news-title'));
+        action.append(make('span', latest.publishedOn + ' · ' + latest.state, 'policy-meta'));
+      }
+      action.addEventListener('click', () => {
+        choice.value = id;
+        render(today);
+        choice.focus();
+      });
+      row.append(action);
+      list.append(row);
+    }
+    content.replaceChildren(list);
+  }
+
   function render(today) {
     renderedDay = today;
     const view = data.snapshot(choice.value, today);
     if (!view) {
-      content.replaceChildren(make('p', '지역화폐를 선택하면 혜택과 공식 공지를 볼 수 있어요.'));
+      renderOverview(today);
       return;
     }
     const current = view.current;
@@ -59,23 +87,26 @@
   function update() {
     const today = GasOnnuriPolicy.koreanDay();
     const params = new URL(location.href).searchParams;
-    selected = data.context(params.get('region'), params.get('payment'), GasRegionalCurrency);
-    byId('policyOpen').hidden = Boolean(selected);
-    button.hidden = !selected;
-    const view = data.snapshot(selected, today);
+    const region = params.get('region');
+    selected = data.context(region, params.get('payment'), GasRegionalCurrency);
+    nationwide = GasNational.regionFromURL(region) === 'all';
+    byId('policyOpen').hidden = !nationwide && Boolean(selected);
+    button.hidden = !nationwide && !selected;
+    const view = nationwide ? null : data.snapshot(selected, today);
     byId('regionalBenefitsLabel').textContent = view ?
-      view.name + ' ' + (view.current?.label || '혜택') : '지역화폐 혜택';
+      view.name + ' ' + (view.current?.label || '혜택') : '지역화폐 소식';
     if (dialog.open && renderedDay !== today) render(today);
   }
 
   function show(event) {
     returnFocus = event.currentTarget;
-    choice.value = Object.hasOwn(data.policies, selected) ? selected : '';
+    choice.value = !nationwide && Object.hasOwn(data.policies, selected) ? selected : '';
+    dialog.querySelector('.policy-body').scrollTop = 0;
     render(GasOnnuriPolicy.koreanDay());
     dialog.showModal();
   }
 
-  choice.add(new Option('지역화폐 선택', ''));
+  choice.add(new Option('전체 지역 소식', ''));
   for (const [id, policy] of Object.entries(data.policies)) choice.add(new Option(policy.name, id));
   choice.addEventListener('change', () => render(GasOnnuriPolicy.koreanDay()));
   button.addEventListener('click', show);

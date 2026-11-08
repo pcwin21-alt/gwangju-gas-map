@@ -10,7 +10,8 @@
 #fuelDesignApp .search-area-btn{position:absolute;top:auto;bottom:20px;left:16px;right:16px;width:calc(100% - 32px);max-width:none;min-height:52px;border-radius:16px;background:var(--fuel-primary);color:var(--fuel-on-primary);border:0;box-shadow:0 6px 20px #173f3526;font-size:1rem;z-index:121}
 #fuelDesignApp .map-zoom-tools{bottom:136px;left:16px}
 #fuelDesignApp .map-location-btn{bottom:136px;right:16px}
-#fuelDesignApp :is(#policyOpen,#regionalBenefitsOpen){bottom:84px;left:16px;max-width:calc(100% - 32px);border-radius:999px;background:var(--fuel-panel);border-color:var(--fuel-line);color:var(--fuel-ink);box-shadow:none}
+#fuelDesignApp .map-policy-actions{bottom:84px;left:16px;right:16px}
+#fuelDesignApp :is(#policyOpen,#regionalBenefitsOpen){border-radius:999px;background:var(--fuel-panel);border-color:var(--fuel-line);color:var(--fuel-ink);box-shadow:none}
 #fuelDesignApp .national-results{border-color:var(--fuel-line);background:var(--fuel-panel);box-shadow:0 -4px 24px #173f351a}
 #fuelDesignApp .results-heading,#fuelDesignApp .results-toolbar{background:var(--fuel-panel)}
 #fuelDesignApp .results-body{padding:0 16px}
