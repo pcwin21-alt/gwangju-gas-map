@@ -765,7 +765,7 @@
   <link rel="stylesheet" href="assets/theme.css?v=c42a25cb01d4">
   <link rel="stylesheet" href="assets/onnuri-policy.css?v=3ae448c47277">
   <script src="assets/nationwide.js?v=c4a8135d9306"></script>
-<link rel="stylesheet" href="assets/fuel-ui/tokens.css?v=45814debca48"><link rel="stylesheet" href="assets/fuel-ui/components.css?v=8ed0dcbcb11a"><link rel="stylesheet" href="assets/fuel-ui/prototype.css?v=dc2c680cf796"><link rel="stylesheet" href="assets/fuel-ui/reference.css?v=e4d04517341f"><link rel="stylesheet" href="assets/fuel-ui/journey.css?v=63305fc5473b"><link rel="stylesheet" href="assets/fuel-ui/web.css?v=2e8a519b2b2b"><link rel="stylesheet" href="assets/onnuri-palette.css?v=2b6e6f6d41b7">
+<link rel="stylesheet" href="assets/fuel-ui/tokens.css?v=45814debca48"><link rel="stylesheet" href="assets/fuel-ui/components.css?v=8ed0dcbcb11a"><link rel="stylesheet" href="assets/fuel-ui/prototype.css?v=dc2c680cf796"><link rel="stylesheet" href="assets/fuel-ui/reference.css?v=69b7a00cadf0"><link rel="stylesheet" href="assets/fuel-ui/journey.css?v=63305fc5473b"><link rel="stylesheet" href="assets/fuel-ui/web.css?v=2e8a519b2b2b"><link rel="stylesheet" href="assets/onnuri-palette.css?v=2b6e6f6d41b7">
 </head>
 <body>
 <div class="app" id="fuelDesignApp">
@@ -1710,7 +1710,6 @@ function applyFilters() {
     const matchSearch = GasNational.searchMatches(item.station,q);
     const show = matchFilter && matchDistrict && matchSearch && GasNational.matches(item.station, {...GasNationalState, paymentScope: currentFilter==='local'||GasRegionalCurrency.product(currentFilter)?'local':currentFilter});
     item.visible = show;
-    item.marker.setMap(show ? map : null);
     if (show) {
       const s = GasRegionalCurrency.matches(item.station, 'local');
       const o = item.station.payment_types.includes('onnuri');
@@ -1722,6 +1721,10 @@ function applyFilters() {
       item.overlay.setMap(null); activeOverlay = null;
     }
   });
+  if (window.GasStationPins) window.GasStationPins.refresh();
+  else if (!document.getElementById('fuelDesignApp') || document.readyState === 'complete') {
+    for (const item of allMarkers) item.marker.setMap(item.visible ? map : null);
+  }
   const total = sOnly + oOnly + both;
   let badge;
   if (currentFilter === 'all') {
@@ -1737,6 +1740,10 @@ function applyFilters() {
   noResult.classList.toggle('visible', total === 0);
 }
 
+// Show fallback markers only if the pin layer did not load.
+window.addEventListener('load', () => {
+  if (!window.GasStationPins) applyFilters();
+}, {once:true});
 // 초기 카운트
 applyFilters();
 mapViewport.fit();
@@ -2196,11 +2203,11 @@ function closeHelp() { helpModal.classList.remove('open'); }
 // 반응 패널 (정보 UI에서 제외)
 </script>
 <script src="assets/route-core.js?v=66fdb1baad69"></script>
-<script src="assets/route-map.js?v=54c476f92b85"></script>
+<script src="assets/route-map.js?v=da0af7e34d73"></script>
 <script src="assets/route-planner.js?v=623d122c50bb"></script>
 <script src="assets/updates.js?v=db39e7a48351"></script>
 <script src="assets/visual-refresh.js?v=58440547ed92"></script>
-<script src="assets/nationwide-ui.js?v=3d78034919a9"></script>
+<script src="assets/nationwide-ui.js?v=2f82533c1e15"></script>
 <script src="assets/simple-controls.js?v=490493334111"></script>
 <script src="assets/region-picker.js?v=6bf30e1a5cbd"></script>
 <script src="assets/ux-fixes.js?v=7f1466bfd7ca"></script>
@@ -2214,6 +2221,6 @@ function closeHelp() { helpModal.classList.remove('open'); }
 <script src="assets/onnuri-policy-data.js?v=c2786d9b9d43"></script>
 <script src="assets/onnuri-policy-core.js?v=886a22590273"></script>
 <script src="assets/onnuri-policy.js?v=9f8d0b6338b3"></script>
-<script src="assets/fuel-ui/prototype.js?v=fb363a8f099e"></script><script src="assets/onnuri-pin-themes.js?v=a67ee0534b11"></script><script src="assets/fuel-ui/reference.js?v=c899b0f86f22"></script><script>window.GasJourneyConfig={endpoint:"",externalNavigationEnabled:true};</script><script src="assets/fuel-journey-core.js?v=7760b5bd4114"></script><script src="assets/fuel-ui/journey.js?v=782db7836c20"></script>
+<script src="assets/fuel-ui/prototype.js?v=fb363a8f099e"></script><script src="assets/onnuri-pin-themes.js?v=a67ee0534b11"></script><script src="assets/fuel-ui/reference.js?v=b4e7597ebc4f"></script><script>window.GasJourneyConfig={endpoint:"",externalNavigationEnabled:true};</script><script src="assets/fuel-journey-core.js?v=7760b5bd4114"></script><script src="assets/fuel-ui/journey.js?v=782db7836c20"></script>
 </body>
 </html>
