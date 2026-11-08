@@ -904,6 +904,13 @@
   </div>
 
   <!-- ONNURI_POLICY_DIALOG_START -->
+  <dialog id="regionalBenefitsDialog" class="policy-dialog" aria-labelledby="regionalBenefitsTitle" data-no-i18n>
+    <div class="policy-heading"><h2 id="regionalBenefitsTitle">지역화폐 혜택</h2><button id="regionalBenefitsClose" type="button">닫기</button></div>
+    <div class="policy-body">
+      <label class="regional-benefits-choice" for="regionalBenefitsChoice">지역화폐<select id="regionalBenefitsChoice"></select></label>
+      <section id="regionalBenefitsContent" aria-live="polite"></section>
+    </div>
+  </dialog>
   <dialog id="policyDialog" class="policy-dialog" aria-labelledby="policyTitle" data-no-i18n>
     <div class="policy-heading"><h2 id="policyTitle">온누리 혜택·정책</h2><button id="policyClose" type="button" aria-label="온누리 정책 닫기">닫기</button></div>
     <div class="policy-body">
@@ -921,6 +928,7 @@
     <nav class="tools-actions" aria-label="지도 도구">
       <button class="rank-btn" id="rankBtn">가격 순위</button>
       <button id="helpBtn" type="button">사용법 안내</button>
+      <button id="regionalBenefitsMenu" type="button" aria-haspopup="dialog" aria-controls="regionalBenefitsDialog">지역화폐 혜택</button>
       <button id="policyMenuOpen" type="button" aria-haspopup="dialog" aria-controls="policyDialog">온누리 혜택·정책</button>
 
       <label class="theme-picker" for="themeMode"><span>화면 테마</span><select id="themeMode" aria-label="화면 테마"><option value="system">기기 설정</option><option value="light">밝게</option><option value="dark">어둡게</option></select></label>
@@ -1115,6 +1123,7 @@
 <button id="journeyRestore" class="journey-restore" type="button" hidden>경로 다시 보기</button>
 
     <!-- ONNURI_POLICY_ENTRY_START -->
+    <button id="regionalBenefitsOpen" type="button" aria-haspopup="dialog" aria-controls="regionalBenefitsDialog" data-no-i18n hidden><span id="regionalBenefitsLabel">지역화폐 혜택</span><span class="policy-info" aria-hidden="true">i</span></button>
     <button id="policyOpen" type="button" aria-haspopup="dialog" aria-controls="policyDialog" data-no-i18n><span id="policyLabel">온누리 혜택·정책</span><span id="policySpecial" aria-hidden="true" hidden></span><span class="policy-info" aria-hidden="true">i</span></button>
     <!-- ONNURI_POLICY_ENTRY_END -->
     <button id="tripLauncher" class="trip-launcher" type="button" aria-label="경유 주유소 찾기 열기" aria-controls="tripPanel" aria-expanded="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="18" r="2"/><path d="M7 6h8a4 4 0 0 1 0 8H9a4 4 0 0 0-4 4h12"/></svg><span data-i18n-context="route-stop">경유</span><span id="tripLauncherCount" class="trip-launcher-count" aria-hidden="true" hidden></span></button>
@@ -2221,6 +2230,8 @@ function closeHelp() { helpModal.classList.remove('open'); }
 <script src="assets/onnuri-policy-data.js"></script>
 <script src="assets/onnuri-policy-core.js"></script>
 <script src="assets/onnuri-policy.js"></script>
+<script src="assets/regional-benefits-data.js"></script>
+<script src="assets/regional-benefits.js"></script>
 <script src="assets/fuel-ui/prototype.js"></script><script src="assets/onnuri-pin-themes.js"></script><script src="assets/fuel-ui/reference.js"></script><script>window.GasJourneyConfig={endpoint:"",externalNavigationEnabled:true};</script><script src="assets/fuel-journey-core.js"></script><script src="assets/fuel-ui/journey.js"></script>
 </body>
 </html>
