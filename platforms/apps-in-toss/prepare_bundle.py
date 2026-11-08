@@ -45,7 +45,6 @@ def prepare(html):
     html = re.sub(r'<meta[^>]+(?:og:url|og:image|twitter:image)[^>]*>', '', html)
     html = html.replace('<html lang="ko">', '<html lang="ko" data-theme="light" data-platform="toss" style="color-scheme:light">')
     html = html.replace('content="light dark"', 'content="light"')
-    html = re.sub(r'<title>.*?</title>', '<title>온누리 주유소 지도</title>', html, count=1)
     # The native navigation replaces the public header; keep its menu reachable.
     menu = re.search(r'<button\b[^>]*\bid="toolsOpenBtn"[^>]*>[\s\S]*?</button>', html)
     if not menu:
@@ -118,9 +117,6 @@ def copy_assets(html, dist):
             target.write_text(prepare_results(source.read_text(encoding='utf-8')), encoding='utf-8')
         elif relative == 'assets/onnuri-policy-data.js':
             target.write_text(platform_script(source.read_text(encoding='utf-8')), encoding='utf-8')
-        elif relative == 'assets/i18n.js':
-            translated = source.read_text(encoding='utf-8').replace('전국 주유소 할인 지도', '온누리 주유소 지도').replace('Korea Fuel Discount Map', 'Onnuri FuelMap')
-            target.write_text(translated, encoding='utf-8')
         elif relative == 'assets/ux-fixes.js':
             keyboard = source.read_text(encoding='utf-8').replace("event.key==='Escape'&&typeof activeOverlay", "event.key==='Escape'&&window.kakao?.maps&&typeof activeOverlay")
             target.write_text(keyboard, encoding='utf-8')

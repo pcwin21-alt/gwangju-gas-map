@@ -21,11 +21,11 @@
     '경유 주유소를 찾으면 추가 이동시간을 비교합니다.':'Find stations to compare detour times.',
     '검색·지역·내 위치를 앞에 두고, 세부 조건은 필터로 모았습니다. 경유 찾기는 목적지부터 입력하고 출발지와 조건은 필요할 때 변경합니다.':'Search, region and location stay up front; detailed options are under Filters. Route search starts with the destination, with start and options available when needed.',
     '전국 온누리 주유소 지도':'Onnuri fuel stations across Korea',
-    '전국 주유소 할인 지도':'Korea Fuel Discount Map',
+    '할인 주유소 지도':'Fuel Deals Map',
     '내 주변':'Near me','가는 길':'On route','찾는 방식':'Search mode','목록 보기':'View list',
     '현재 위치를 확인하고 있습니다.':'Finding your current location.',
     '위치 확인 실패. 주소로 검색하세요.':'Location unavailable. Search an address.',
-    '온누리·광주 지역화폐 사용처와 주유 가격을 한눈에.':'Find Onnuri and Gwangju local currency stations and fuel prices at a glance.',
+    '온누리·지역화폐 사용처와 주유 가격을 한눈에.':'Find Onnuri and local currency stations and fuel prices at a glance.',
     '지역화폐와 온누리 공식 검색 결과를 표시합니다. 현행 검색과 대조되지 않은 곳은 과거 기록으로 구분합니다. 유가와 가맹점 확인일은 별개입니다.':'Local currency and Onnuri use official search results. Unmatched older records are marked historical. Price and merchant check dates are separate.',
     '유가: 하루 1회 조회 · 가맹점: 매일 오전 6시 30분 확인':'Prices: daily lookup · Merchants: daily at 06:30 KST',
     '유가: 하루 1회 조회 · 가맹점: 확인된 자료부터 순차 반영':'Prices: daily lookup · Merchants: verified records added progressively',
@@ -255,7 +255,7 @@
     observer.disconnect();
     scan(document.body);
     document.documentElement.lang = language;
-    document.title = language === 'en' ? messages['전국 주유소 할인 지도'] : '전국 주유소 할인 지도';
+    document.title = language === 'en' ? messages['할인 주유소 지도'] : '할인 주유소 지도';
     button.textContent = language === 'en' ? '한국어' : 'EN';
     button.setAttribute('aria-label',language === 'en' ? '한국어로 전환' : 'Switch to English');
     button.setAttribute('lang',language === 'en' ? 'ko' : 'en');

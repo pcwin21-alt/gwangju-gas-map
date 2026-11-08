@@ -44,7 +44,7 @@ class PlatformBuild(unittest.TestCase):
 
     def test_candidate_registers_detail_fallback_before_results(self):
         self.assertLess(self.html.index('src="assets/information-ui.js"'), self.html.index('src="assets/nationwide-ui.js"'))
-        self.assertIn('<title>온누리 주유소 지도</title>', self.html)
+        self.assertIn('<title>할인 주유소 지도</title>', self.html)
         self.assertNotIn('결제 가능 수단, 현재 유가', self.html)
 
     def test_old_trial_assets_cannot_survive_rebuild(self):
