@@ -6,3 +6,46 @@
 .map-zoom-tools button:disabled {opacity:.55;cursor:wait;}
 .map-area:has(.info-overlay) .map-zoom-tools {visibility:hidden;}
 @media(max-height:440px){.map-zoom-tools button {height:44px;}}
+
+#map div:has(> .my-location-marker) {
+  pointer-events: none;
+}
+
+.my-location-marker {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 32px;
+  height: 32px;
+  border: 2px solid #17478c;
+  border-radius: 50%;
+  background: #dbeafe;
+  box-shadow: 0 0 0 2px #fff, 0 2px 8px #102c6059;
+  pointer-events: none;
+}
+
+.my-location-marker::before {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: #1d5ed4;
+}
+
+.my-location-marker > span {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 5px);
+  transform: translateX(-50%);
+  padding: 2px 7px;
+  border: 1px solid #17478c;
+  border-radius: 999px;
+  background: #f8fbff;
+  color: #14396d;
+  font-size: .875rem;
+  font-weight: 700;
+  line-height: 1.4;
+  white-space: nowrap;
+  box-shadow: 0 1px 4px #102c6033;
+}
