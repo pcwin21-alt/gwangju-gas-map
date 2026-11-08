@@ -4,9 +4,11 @@
     document.documentElement.style.fontSize='200%';document.documentElement.dataset.reviewText='large';
   }
   const panel=document.getElementById('mapFilters'),toggle=document.getElementById('filtersToggle');
+  const filterLabel = '상품권 종류';
+  toggle.querySelector('span').textContent = filterLabel;
   const extraFilters=document.createElement('p');extraFilters.id='reviewExtraFilters';extraFilters.hidden=true;document.querySelector('.controls').append(extraFilters);
   const setClosed=()=>{panel.hidden=true;toggle.setAttribute('aria-expanded','false');toggle.focus({preventScroll:true});};
-  const close=document.createElement('button');close.type='button';close.textContent='닫기';close.setAttribute('aria-label','검색 필터 닫기');close.addEventListener('click',setClosed);
+  const close=document.createElement('button');close.type='button';close.textContent='닫기';close.setAttribute('aria-label','상품권 종류 및 검색 조건 닫기');close.addEventListener('click',setClosed);
   const reset=document.getElementById('filtersReset'),foot=document.createElement('div');foot.className='review-filter-foot';
   const done=document.createElement('button');done.id='reviewFiltersDone';done.type='button';done.textContent='지도 보기';done.addEventListener('click',setClosed);
   panel.querySelector('.filters-heading').append(close);foot.append(reset,done);panel.append(foot);
@@ -15,11 +17,10 @@
   new MutationObserver(()=>{if(panel.hidden){if(panel.open)panel.close();}else if(!panel.open)panel.showModal();}).observe(panel,{attributes:true,attributeFilter:['hidden']});
   const syncLabel=()=>{
     const labels=document.getElementById('activeFilters').textContent.trim();
-    const payment=document.querySelector('.filter-btn.active')?.dataset.filter;
-    const label=toggle.querySelector('span');label.textContent=payment==='onnuri'?'온누리':['local','saengsaeng'].includes(payment)?'지역화폐':'필터';
-    const rest=labels.split(' · ').filter(value=>value&&value!==label.textContent);extraFilters.textContent=rest.join(' · ');extraFilters.hidden=!rest.length;
-    toggle.dataset.reviewSelected=String(Boolean(labels));
-    toggle.setAttribute('aria-label',labels?'필터, '+labels:'필터');
+    extraFilters.textContent = labels;
+    extraFilters.hidden = !labels;
+    toggle.dataset.reviewSelected = String(Boolean(labels));
+    toggle.setAttribute('aria-label', labels ? filterLabel + ', ' + labels : filterLabel);
   };
   new MutationObserver(syncLabel).observe(document.getElementById('activeFilters'),{childList:true,characterData:true,subtree:true});syncLabel();
   document.getElementById('searchInput').placeholder='주유소명 · 주소 검색';
