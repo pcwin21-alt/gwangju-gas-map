@@ -827,7 +827,7 @@
         <div class="help-section-title">주요 기능</div>
         <div class="help-item"><b>마커 클릭</b> → 주유소 이름·주소, 결제 가능 수단, 현재 유가(휘발유·경유·LPG) 확인</div>
         <div class="help-item"><b>검색창</b>에 주유소명이나 주소를 입력하면 해당 위치로 이동합니다.</div>
-        <div class="help-item"><b>필터</b>에서 결제수단·유종·시군구를 고릅니다. 선택한 조건은 접어도 표시됩니다.</div>
+        <div class="help-item"><b>상품권 종류</b>에서 상품권과 유종·시군구를 고릅니다. 선택한 조건은 접어도 표시됩니다.</div>
 
         <div class="help-item"><b>더보기</b>에서 가격 순위·사용법·제보 등 보조 기능을 엽니다.</div>
         <div class="help-item"><b>📍 내 위치</b> → 현재 위치를 지도 중심으로 이동합니다. (브라우저 위치 권한 필요)</div>
@@ -869,7 +869,7 @@
         <div class="no-result" id="noResult">검색 결과 없음</div>
       </div>
       <button id="regionOpen" type="button" aria-haspopup="dialog" aria-controls="regionDialog" aria-label="지역 선택"><span id="regionLabel" data-no-i18n>전국</span><span aria-hidden="true">▾</span></button>
-      <button id="filtersToggle" type="button" aria-expanded="false" aria-controls="mapFilters"><span>필터</span><span id="filterCount" hidden></span></button>
+      <button id="filtersToggle" type="button" aria-expanded="false" aria-controls="mapFilters"><span>상품권 종류</span><span id="filterCount" hidden></span></button>
     </div>
     <nav class="search-modes" aria-label="찾는 방식"><button id="nearbyModeBtn" type="button" aria-pressed="false" aria-busy="false">내 주변</button><button id="routeModeBtn" type="button" aria-pressed="false" aria-controls="tripPanel">가는 길</button><button class="tools-trigger" id="toolsOpenBtn" type="button" aria-haspopup="dialog" aria-controls="mapTools">더보기 <span aria-hidden="true">⋯</span></button></nav>
     <div class="controls-status"><span class="count-badge" id="countBadge">0개</span><p id="activeFilters" class="active-filters" hidden></p></div>
@@ -879,9 +879,9 @@
       <select id="regionSelect" aria-label="시도 선택" hidden><option value="all">전국</option></select>
       <div id="regionOptions" class="region-options" role="group" aria-label="시도 선택"></div>
     </dialog>
-    <dialog id="mapFilters" class="map-filters" aria-label="검색 필터" hidden>
-      <div class="filters-heading"><h2>검색 필터</h2><button id="filtersReset" type="button">조건 초기화</button></div>
-      <div class="filter-group" role="group" aria-label="결제수단">
+    <dialog id="mapFilters" class="map-filters" aria-labelledby="mapFiltersTitle" hidden>
+      <div class="filters-heading"><h2 id="mapFiltersTitle">상품권 종류 및 검색 조건</h2><button id="filtersReset" type="button">조건 초기화</button></div>
+      <div class="filter-group" role="group" aria-label="상품권 종류">
         <button class="filter-btn active" data-filter="all">전체</button>
         <button class="filter-btn" data-filter="local">지역화폐</button>
         <button class="filter-btn" data-filter="onnuri">온누리</button>
@@ -2234,6 +2234,6 @@ function closeHelp() { helpModal.classList.remove('open'); }
 <script src="assets/onnuri-policy.js?v=9f8d0b6338b3"></script>
 <script src="assets/regional-benefits-data.js?v=cbd9d82b9aba"></script>
 <script src="assets/regional-benefits.js?v=4aa30811ae83"></script>
-<script src="assets/fuel-ui/prototype.js?v=fb363a8f099e"></script><script src="assets/onnuri-pin-themes.js?v=a67ee0534b11"></script><script src="assets/fuel-ui/reference.js?v=b4e7597ebc4f"></script><script>window.GasJourneyConfig={endpoint:"",externalNavigationEnabled:true};</script><script src="assets/fuel-journey-core.js?v=7760b5bd4114"></script><script src="assets/fuel-ui/journey.js?v=782db7836c20"></script>
+<script src="assets/fuel-ui/prototype.js?v=af229dbdba41"></script><script src="assets/onnuri-pin-themes.js?v=a67ee0534b11"></script><script src="assets/fuel-ui/reference.js?v=b4e7597ebc4f"></script><script>window.GasJourneyConfig={endpoint:"",externalNavigationEnabled:true};</script><script src="assets/fuel-journey-core.js?v=7760b5bd4114"></script><script src="assets/fuel-ui/journey.js?v=782db7836c20"></script>
 </body>
 </html>
