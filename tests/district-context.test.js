@@ -29,6 +29,7 @@ test('map idle refreshes labels while drag and wide zoom hide them without locat
  const maps={LatLng:function(y,x){this.x=x;this.y=y;},Point:function(x,y){this.x=x;this.y=y;},CustomOverlay:function(options){this.options=options;this.setMap=m=>this.map=m;this.setPosition=p=>this.position=p;overlays.push(this);},event:{addListener:(m,name,fn)=>events[name]=fn}};
  const map={getLevel:()=>level,getCenter:()=>({}),getProjection:()=>({containerPointFromCoords:p=>p,coordsFromContainerPoint:p=>p})};
  const context={window:{kakao:{maps},GasDistrictGeoJSON:{features:features.map(f=>({properties:{gu:f.name},geometry:{type:'MultiPolygon',coordinates:f.polygons}}))}},kakao:{maps},GasDistrictContextCore:core,DISTRICT_COLORS:{},map,document:{querySelector:()=>({clientWidth:390,clientHeight:600}),getElementById:id=>elements[id],createElement:()=>({style:{setProperty(){}}})},requestAnimationFrame:fn=>(pending=fn,1),cancelAnimationFrame(){},ResizeObserver:function(fn){resize=fn;this.observe=()=>{};}};
+ context.MUNICIPAL_BOUNDARY_MAX_LEVEL=8;
  vm.runInNewContext(fs.readFileSync('assets/district-context.js','utf8'),context);pending();
  assert.equal(elements.districtContext.hidden,false);assert.match(elements.districtContextName.textContent,/west/);assert.equal(overlays.filter(o=>o.map===map).length,2);
  events.dragstart();assert.equal(elements.districtContext.hidden,true);assert.equal(overlays.filter(o=>o.map).length,0);

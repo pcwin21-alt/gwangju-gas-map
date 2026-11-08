@@ -16,7 +16,7 @@ test('clicks anywhere on Gwangju boundaries preserve the user zoom, center and s
  for(const polygon of f.polygons)polygon.events.click?.();
  assert.deepEqual(f.state(),{zoom:3,center:'user-panned-center',filters:0,highlight:undefined,closed:0});
  assert.equal(f.context.currentDistrict,'all');assert.equal(f.select.value,'all');
- assert.ok(f.polygons.every(p=>p.options.map===f.context.map&&p.options.path.length>3));
+ assert.ok(f.polygons.every(p=>!p.options.map&&p.options.strokeOpacity===0&&p.options.path.length>3));
 });
 test('explicit district menu selection still filters and fits results',()=>{
  const f=fixture();f.select.value='남구';f.select.listeners.change.call(f.select);
