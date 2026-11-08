@@ -1,7 +1,7 @@
 (function(root){
   const data = {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-04",
+  "checkedAt": "2026-11-08",
   "reviewAfterDays": 7,
   "digitalBase": {
     "rate": 7,
