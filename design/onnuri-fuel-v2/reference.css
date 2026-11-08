@@ -25,10 +25,63 @@
 #fuelDesignApp .v2-result-price small{font-size:.75rem;line-height:1.6;color:var(--fuel-muted)}
 #fuelDesignApp .v2-result-price.unknown b{font-size:.875rem;font-weight:400;color:var(--fuel-muted)}
 #fuelDesignApp .station-list-row[aria-pressed="true"]{background:var(--fuel-selection);border-left:0;padding-inline:8px}
-#fuelDesignApp .fuel-price-pin{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:44px;min-width:76px;padding:4px 10px;background:var(--pin-surface,var(--fuel-panel));color:var(--pin-ink,var(--fuel-primary));border:2px solid var(--pin-edge,var(--fuel-primary));border-radius:14px;box-shadow:0 2px 5px #173f3526;font:700 .875rem/1.4 FuelPretendard,sans-serif;cursor:pointer}
-.fuel-price-pin small{font-size:.75rem;font-weight:400}.fuel-price-pin strong{font-size:.875rem}
+#fuelDesignApp .fuel-map-pin {
+  --pin-target:max(44px,2.75rem);
+  display:grid;place-items:center;
+  width:var(--pin-target);height:var(--pin-target);
+  border:0;padding:0;background:transparent;color:#263441;cursor:pointer;
+  font:700 .875rem/1.25 FuelPretendard,sans-serif;
+}
+#fuelDesignApp .fuel-pin-face {
+  --pin-size:24px;
+  display:flex;align-items:center;justify-content:center;
+  width:var(--pin-size);height:var(--pin-size);
+  box-sizing:border-box;border:1.5px solid #445361;border-radius:50%;
+  background:#fffdf9;color:#263441;box-shadow:0 0 0 1px #fff,0 1px 4px #1c293538;
+}
+#fuelDesignApp :is(.is-compact,.help-dot) .fuel-pin-face,
+#fuelDesignApp .help-dot.fuel-pin-face {--pin-size:18px}
+#fuelDesignApp .help-dot {--pin-accent:#EB6620;--pin-secondary:#285BB5}
+#fuelDesignApp [data-symbol="diamond"].help-dot {--pin-accent:#285BB5}
+#fuelDesignApp [data-symbol] .fuel-pin-face::before,
+#fuelDesignApp .help-dot[data-symbol]::before,
+#fuelDesignApp [data-symbol="double"] .fuel-pin-face::after,
+#fuelDesignApp .help-dot[data-symbol="double"]::after {
+  content:"";display:block;box-sizing:border-box;width:8px;height:8px;
+  border:1px solid var(--pin-edge,#445361);border-radius:50%;background:var(--pin-accent);
+}
+#fuelDesignApp [data-symbol="diamond"] .fuel-pin-face::before,
+#fuelDesignApp .help-dot[data-symbol="diamond"]::before {width:7px;height:7px;border-radius:1px;transform:rotate(45deg)}
+#fuelDesignApp [data-symbol="double"] .fuel-pin-face,
+#fuelDesignApp .help-dot[data-symbol="double"] {gap:2px}
+#fuelDesignApp [data-symbol="double"] .fuel-pin-face::before,
+#fuelDesignApp [data-symbol="double"] .fuel-pin-face::after,
+#fuelDesignApp .help-dot[data-symbol="double"]::before,
+#fuelDesignApp .help-dot[data-symbol="double"]::after {width:6px;height:6px}
+#fuelDesignApp [data-symbol="double"] .fuel-pin-face::after,
+#fuelDesignApp .help-dot[data-symbol="double"]::after {background:var(--pin-secondary)}
+#fuelDesignApp .fuel-cluster-pin .fuel-pin-face {
+  width:calc(var(--pin-target) - 4px);height:calc(var(--pin-target) - 4px);
+  background:#f0f3f4;font-variant-numeric:tabular-nums;
+}
+#fuelDesignApp .fuel-price-pin {width:max(76px,5.5rem)}
+#fuelDesignApp .fuel-price-pin .fuel-pin-face {
+  flex-direction:column;width:100%;height:100%;border-radius:12px;
+  box-shadow:inset 0 3px 0 var(--pin-accent),0 0 0 1px #fff,0 1px 4px #1c293538;
+}
+#fuelDesignApp .fuel-price-pin[data-symbol] .fuel-pin-face::before,
+#fuelDesignApp .fuel-price-pin[data-symbol] .fuel-pin-face::after {display:none}
+#fuelDesignApp .fuel-price-pin small {font-size:.75rem;font-weight:400}
+#fuelDesignApp .fuel-price-pin strong {font-size:.875rem}
+#fuelDesignApp .fuel-map-pin.is-selected .fuel-pin-face {
+  outline:2px solid #263441;outline-offset:2px;
+}
+#fuelDesignApp .fuel-station-pin.is-selected .fuel-pin-face {
+  --pin-size:30px;background:var(--pin-accent);border-color:#263441;
+}
+#fuelDesignApp .fuel-station-pin.is-selected[data-symbol] .fuel-pin-face::before {background:#fffdf9;border-color:#263441}
+#fuelDesignApp .fuel-map-pin:focus-visible {outline:3px solid #1f5a80;outline-offset:1px;border-radius:12px}
 #fuelDesignApp #searchAreaBtn[hidden]{display:none}
-.fuel-price-pin:focus-visible{outline:3px solid #208368;outline-offset:3px}
 #fuelDesignApp #stationDetails .info-overlay{background:var(--fuel-panel);padding:20px;border-color:var(--fuel-line)}
 #fuelDesignApp #stationDetails .prices{background:var(--fuel-field);border-radius:16px;padding:4px 16px}
 #fuelDesignApp #stationDetails .price-item b{font-size:1.875rem;color:var(--fuel-primary)}

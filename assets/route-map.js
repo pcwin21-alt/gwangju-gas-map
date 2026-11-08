@@ -3,7 +3,12 @@
   'use strict';
   let state=null, overlays=[],fitFrame=0,focusedPin=null;
   const visibleLimit=5;
-  function refresh() {if(typeof allMarkers!=='undefined')for(const row of allMarkers)row.marker.setMap(!state&&row.visible?map:null);}
+  function refresh() {
+    if (window.GasStationPins) window.GasStationPins.refresh();
+    else if (typeof allMarkers !== 'undefined') {
+      for (const row of allMarkers) row.marker.setMap(!state && row.visible ? map : null);
+    }
+  }
   const notify=()=>{refresh();window.dispatchEvent(new CustomEvent('gas:routechange'));};
   function clear() {cancelAnimationFrame(fitFrame);for(const overlay of overlays)overlay.setMap(null);overlays=[];focusedPin=null;state=null;notify();}
   function fit() {

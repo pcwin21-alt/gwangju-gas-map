@@ -1710,7 +1710,6 @@ function applyFilters() {
     const matchSearch = GasNational.searchMatches(item.station,q);
     const show = matchFilter && matchDistrict && matchSearch && GasNational.matches(item.station, {...GasNationalState, paymentScope: currentFilter==='local'||GasRegionalCurrency.product(currentFilter)?'local':currentFilter});
     item.visible = show;
-    item.marker.setMap(show ? map : null);
     if (show) {
       const s = GasRegionalCurrency.matches(item.station, 'local');
       const o = item.station.payment_types.includes('onnuri');
@@ -1722,6 +1721,10 @@ function applyFilters() {
       item.overlay.setMap(null); activeOverlay = null;
     }
   });
+  if (window.GasStationPins) window.GasStationPins.refresh();
+  else if (!document.getElementById('fuelDesignApp') || document.readyState === 'complete') {
+    for (const item of allMarkers) item.marker.setMap(item.visible ? map : null);
+  }
   const total = sOnly + oOnly + both;
   let badge;
   if (currentFilter === 'all') {
@@ -1737,6 +1740,10 @@ function applyFilters() {
   noResult.classList.toggle('visible', total === 0);
 }
 
+// Show fallback markers only if the pin layer did not load.
+window.addEventListener('load', () => {
+  if (!window.GasStationPins) applyFilters();
+}, {once:true});
 // 초기 카운트
 applyFilters();
 mapViewport.fit();

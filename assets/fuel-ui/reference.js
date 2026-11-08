@@ -2,11 +2,12 @@
 (() => {
   // Keep the list action aligned to the map, independent of the result panel width.
   document.querySelector('.map-area').append(document.getElementById('searchAreaBtn'));
-  const helpLabels=['지역화폐 · 지역색','온누리 · 주황','전체 보기의 중복 · 두 색'];
-  document.querySelectorAll('.help-dot').forEach((dot,index)=>{
-    dot.style.background=index===0?FUEL_PIN_THEMES.currencies['gwangju-saengsaeng'].fill:index===1?FUEL_PIN_THEMES.onnuri.fill:'linear-gradient(90deg,#EB6620 50%,#285BB5 50%)';
-    dot.style.border='1px solid #596673';
-    if(dot.parentElement.lastChild.nodeType===Node.TEXT_NODE)dot.parentElement.lastChild.textContent=helpLabels[index];
+  const helpLabels = ['지역화폐', '온누리', '둘 다 가능'];
+  document.querySelectorAll('.help-dot').forEach((dot, index) => {
+    dot.classList.add('fuel-pin-face');
+    dot.dataset.symbol = ['diamond', 'circle', 'double'][index];
+    dot.style.removeProperty('background');
+    dot.parentElement.lastChild.textContent = helpLabels[index];
   });
   const list=document.getElementById('stationList');
   function decorateRows(){
@@ -26,63 +27,161 @@
   }
   new MutationObserver(decorateRows).observe(list,{childList:true});decorateRows();
   if(!window.kakao?.maps)return;
-  const pins=[],markerCache=new Map();let routePinsHidden=false;
-  const payment=()=>document.querySelector('.filter-btn.active[data-filter="local"]')
-    ? document.getElementById('regionalPayment').value : document.querySelector('.filter-btn.active')?.dataset.filter||'all';
-  function applyTheme(button,theme){
-    button.style.setProperty('--pin-edge',theme.priceEdge||theme.edge);
-    button.style.setProperty('--pin-surface',theme.surface);
-    button.style.setProperty('--pin-ink',theme.priceInk||(theme.symbol==='diamond'?theme.edge:theme.ink));
-    button.dataset.paymentTheme=theme.key;
-    button.title=theme.label+' · 보관된 기준일 유가';
+  const frame = document.getElementById('map');
+  const layers = new Map();
+  const pricesEnabled = new URL(location.href).searchParams.get('prices') !== 'off';
+  const payment = () => currentFilter;
+
+  function groupPins(gap, width, height) {
+    const projection = map.getProjection();
+    const groups = [];
+    for (const item of allMarkers) {
+      if (!item.visible) continue;
+      const position = item.marker.getPosition();
+      const {x, y} = projection.containerPointFromCoords(position);
+      if (x < 0 || y < 0 || x > width || y > height) continue;
+      const group = groups.find(pin => Math.abs(x - pin.x) < gap && Math.abs(y - pin.y) < gap);
+      if (group) group.items.push(item);
+      else groups.push({x, y, position, items:[item]});
+    }
+    return groups;
   }
-  function colorMarkers(){
-    const selected=payment();
-    for(const item of allMarkers){
-      const theme=fuelPinTheme(item.station,selected);
-      if(!markerCache.has(theme.key))markerCache.set(theme.key,new kakao.maps.MarkerImage('data:image/svg+xml;charset=utf-8,'+encodeURIComponent(fuelPinSvg(theme)),new kakao.maps.Size(28,36),{offset:new kakao.maps.Point(14,36)}));
-      item.marker.setImage(markerCache.get(theme.key));
+
+  function showGroup(group) {
+    closeStationOverlay();
+    const level = map.getLevel();
+    if (level >= 10) {
+      map.setCenter(group.position);
+      map.setLevel(Math.max(9, level - 2));
+    } else {
+      window.GasResultsPanel.showCluster(group.items.map(item => item.station.id));
     }
   }
-  for(const item of allMarkers){
-    const s=item.station,fuel=s.fuel_kind==='lpg'?'LPG':'휘발유',p=PRICES[s.id]?.[fuel];
-    if(!Number.isFinite(p)||p<=0)continue;
-    const button=document.createElement('button');button.type='button';button.className='fuel-price-pin';
-    const grade=document.createElement('small'),amount=document.createElement('strong');grade.textContent=fuel+' · 원/L';amount.textContent=p.toLocaleString('ko-KR');button.append(grade,amount);
-    applyTheme(button,fuelPinTheme(s,payment()));
-    button.setAttribute('aria-label',s.name+' '+fuel+' '+p+'원/L, 보관된 기준일 가격');
-    button.addEventListener('click',()=>showStationOverlay(item.overlay));
-    const overlay=new kakao.maps.CustomOverlay({position:new kakao.maps.LatLng(s.lat,s.lng),content:button,yAnchor:1,zIndex:60});
-    pins.push({item,overlay,button});
+
+  function makePin(group, kind) {
+    const item = group.items[0];
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'fuel-map-pin fuel-' + kind + '-pin';
+    const face = document.createElement('span');
+    face.className = 'fuel-pin-face';
+    face.setAttribute('aria-hidden', 'true');
+    button.append(face);
+    const overlay = new kakao.maps.CustomOverlay({
+      position:group.position, content:button, clickable:true, yAnchor:0.5, zIndex:60,
+    });
+    const layer = {button, face, overlay, group};
+    button.addEventListener('click', event => {
+      event.stopPropagation();
+      if (reportMode) return;
+      if (kind === 'cluster') showGroup(layer.group);
+      else showStationOverlay(item.overlay);
+    });
+    if (kind !== 'cluster') button.dataset.stationPin = item.station.id;
+    if (kind === 'price') {
+      const fuel = item.station.fuel_kind === 'lpg' ? 'LPG' : '휘발유';
+      const amount = PRICES[item.station.id][fuel];
+      const grade = document.createElement('small');
+      grade.textContent = fuel + ' · 원/L';
+      const value = document.createElement('strong');
+      value.textContent = amount.toLocaleString('ko-KR');
+      face.append(grade, value);
+      button.dataset.priceLabel = fuel + ' ' + amount.toLocaleString('ko-KR') + '원/L, 보관된 기준일 가격';
+    }
+    return layer;
   }
-  function syncPins(){
-    colorMarkers();
-    if(document.querySelector('.map-area').classList.contains('fuel-route-active')){
-      routePinsHidden=true;
-      for(const item of allMarkers)item.marker.setMap(null);
-      for(const pin of pins)pin.overlay.setMap(null);
+
+  function updatePin(layer, group, kind, selected) {
+    layer.group = group;
+    const {button, face, overlay} = layer;
+    const isSelected = Boolean(activeOverlay && group.items.some(item => item.overlay === activeOverlay));
+    button.classList.toggle('is-selected', isSelected);
+    const zIndex = isSelected ? 65 : 60;
+    if (overlay.getZIndex() !== zIndex) overlay.setZIndex(zIndex);
+    if (kind === 'cluster') {
+      const count = group.items.length + '곳';
+      face.textContent = group.items.length.toLocaleString('ko-KR');
+      button.setAttribute('aria-label', count + (map.getLevel() >= 10 ? ' 있는 구역 확대' : ' 목록 보기'));
       return;
     }
-    if(routePinsHidden){for(const item of allMarkers)item.marker.setMap(item.visible?map:null);routePinsHidden=false;}
-    const bounds=map.getBounds(),near=map.getLevel()<=7&&new URL(location.href).searchParams.get('prices')!=='off';
-    const placed=[],frame=document.getElementById('map').getBoundingClientRect();
-    for(const {item,overlay,button} of pins){
-      const theme=fuelPinTheme(item.station,payment());applyTheme(button,theme);
-      button.setAttribute('aria-label',item.station.name+' '+theme.label+' '+button.textContent+', 보관된 기준일 가격');
-      let show=near&&item.visible&&bounds.contain(new kakao.maps.LatLng(item.station.lat,item.station.lng));
-      if(show){
-        overlay.setMap(map);
-        const r=button.getBoundingClientRect();
-        show=r.left>=frame.left+8&&r.right<=frame.right-8&&r.top>=frame.top+8&&r.bottom<=frame.bottom-8&&!placed.some(p=>r.left<p.right+8&&r.right>p.left-8&&r.top<p.bottom+8&&r.bottom>p.top-8);
-        if(show)placed.push(r);
+    const station = group.items[0].station;
+    const theme = fuelPinTheme(station, selected);
+    if (button.dataset.paymentTheme !== theme.key) {
+      button.dataset.paymentTheme = theme.key;
+      button.dataset.symbol = theme.symbol;
+      button.style.setProperty('--pin-accent', theme.fill);
+      button.style.setProperty('--pin-secondary', theme.second || theme.fill);
+      button.style.setProperty('--pin-edge', theme.edge);
+      button.setAttribute('aria-label', [station.name, theme.label, button.dataset.priceLabel].filter(Boolean).join(' · '));
+    }
+    button.setAttribute('aria-pressed', String(isSelected));
+  }
+
+  function syncPins() {
+    const showingRoute = window.GasRouteMap?.isActive() ||
+      document.querySelector('.map-area').classList.contains('fuel-route-active');
+    const level = map.getLevel();
+    const width = frame.clientWidth;
+    const height = frame.clientHeight;
+    const compact = level >= 8;
+    const rem = parseFloat(getComputedStyle(document.documentElement).fontSize);
+    const targetSize = Math.max(44, 2.75 * rem);
+    const gap = Math.max(level >= 11 ? 54 : 48, targetSize + 4);
+    const groups = showingRoute ? [] : groupPins(gap, width, height);
+    // Reserve every touch target before considering a wider price label.
+    const halfWidth = Math.max(76, 5.5 * rem) / 2;
+    const halfHeight = Math.max(44, 2.75 * rem) / 2;
+    const priceGroups = [];
+    if (!compact && pricesEnabled) {
+      const candidates = groups.filter(({items}) => {
+        const station = items[0].station;
+        const price = PRICES[station.id]?.[station.fuel_kind === 'lpg' ? 'LPG' : '휘발유'];
+        return items.length === 1 && Number.isFinite(price) && price > 0;
+      });
+      candidates.sort((a, b) => Number(b.items[0].overlay === activeOverlay) - Number(a.items[0].overlay === activeOverlay));
+      for (const group of candidates) {
+        const {x, y} = group;
+        if (x < halfWidth + 8 || width - x < halfWidth + 8 ||
+            y < halfHeight + 8 || height - y < halfHeight + 8) continue;
+        const conflicts = groups.some(other => other !== group &&
+          Math.abs(x - other.x) < halfWidth + targetSize / 2 + 4 && Math.abs(y - other.y) < halfHeight + targetSize / 2 + 4);
+        const priceConflict = priceGroups.some(other =>
+          Math.abs(x - other.x) < 2 * halfWidth + 8 && Math.abs(y - other.y) < 2 * halfHeight + 8);
+        if (!conflicts && !priceConflict) priceGroups.push(group);
       }
-      overlay.setMap(show?map:null);
-      item.marker.setMap(item.visible&&!show?map:null);
+    }
+
+    const plan = new Map();
+    for (const group of groups) {
+      const kind = group.items.length > 1 ? 'cluster' : priceGroups.includes(group) ? 'price' : 'station';
+      const key = kind + ':' + group.items[0].station.id;
+      plan.set(key, {group, kind});
+    }
+    for (const [key, layer] of layers) {
+      if (plan.has(key)) continue;
+      layer.overlay.setMap(null);
+      layers.delete(key);
+    }
+    const selected = payment();
+    for (const [key, {group, kind}] of plan) {
+      let layer = layers.get(key);
+      if (!layer) {
+        layer = makePin(group, kind);
+        layers.set(key, layer);
+      }
+      updatePin(layer, group, kind, selected);
+      layer.button.classList.toggle('is-compact', compact);
+      if (!layer.overlay.getMap()) layer.overlay.setMap(map);
     }
   }
-  kakao.maps.event.addListener(map,'idle',syncPins);
-  addEventListener('fuelroutevisibility',syncPins);
-  new MutationObserver(syncPins).observe(document.getElementById('mapFilters'),{subtree:true,attributes:true,attributeFilter:['class']});
+  // Any fallback markers attached before this script finished loading belong to the old layer.
+  for (const {marker} of allMarkers) {
+    if (marker.getMap()) marker.setMap(null);
+  }
+  window.GasStationPins = { refresh: syncPins };
+  kakao.maps.event.addListener(map, 'idle', syncPins);
+  addEventListener('fuelroutevisibility', syncPins);
+  new MutationObserver(syncPins).observe(document.getElementById('stationDetails'), {childList:true});
   const start=()=>{
     const params=new URL(location.href).searchParams;
     if(params.get('focus')==='prices'){

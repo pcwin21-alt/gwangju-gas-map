@@ -4,6 +4,13 @@
   const regionInput=byId('regionSelect'),method=byId('onnuriMethod'),fuel=byId('fuelSelect');
   const panel=byId('nationalResults'),body=byId('resultsBody'),list=byId('stationList');
   const scope=byId('resultsScope'),order=byId('resultsOrder'),areaButton=byId('searchAreaBtn');
+  const clusterOption=new Option('묶인 주유소','cluster');
+  let clusterIds=null;
+  function clearCluster() {
+    if (!clusterIds) return;
+    clusterIds=null;
+    clusterOption.remove();
+  }
   const hasMap=Boolean(window.kakao?.maps),regional=GasRegionalCurrency;
   const regionalSelect=byId('regionalPayment'),tripPayment=byId('tripPayment');
   const localIds=regional.available(STATIONS);
@@ -66,14 +73,15 @@
   function refreshMapCount() {
     if(!hasMap)return;
     const all=items(),count=core.select(all,{bounds:boundsNow()}).length;
-    const label=scope.value==='map'?'찾은 범위':(state.region==='all'?'전국':state.region)+' 조건 결과';
+    const label=scope.value==='cluster'?'묶인 주유소':scope.value==='map'?'찾은 범위':(state.region==='all'?'전국':state.region)+' 조건 결과';
     byId('listScope').textContent=label+' · '+(order.value==='distance'?'내 위치 가까운 순':'이름순')+' · 현재 지도 안 '+count+'곳';
   }
   function render(reset=false) {
     const scroll=reset?0:body.scrollTop,focused=document.activeElement?.dataset?.stationId,all=items(),point=locationPoint();
     order.querySelector('option[value="distance"]').disabled=!point;
     if(!point&&order.value==='distance')order.value='name';
-    const rows=core.select(all,{bounds:scope.value==='map'?areaBounds:null,location:point,order:order.value});
+    const candidates=scope.value==='cluster'?all.filter(item=>clusterIds.has(item.station.id)):all;
+    const rows=core.select(candidates,{bounds:scope.value==='map'?areaBounds:null,location:point,order:order.value});
     byId('resultDataStatus').textContent=`온누리 공식 검색 ${MERCHANT_STATUS.onnuri?.source_date||'미확인'}${MERCHANT_STATUS.onnuri?.refresh_error?' · 최근 조회 실패, 이전 자료 유지':''}`+bankSummary();
     byId('nationalSummary').textContent=rows.length>limit?`${limit}곳 표시 중`:'';
     byId('listCount').textContent=`${rows.length}곳`;
@@ -108,13 +116,17 @@
   panel.querySelector('summary').addEventListener('click',event=>{event.preventDefault();closeResults();});
   byId('resultsSize').addEventListener('click',()=>setSize(panel.dataset.size!=='full'));
   panel.addEventListener('keydown',event=>{if(event.key==='Escape'&&panel.open){event.preventDefault();event.stopPropagation();closeResults();}});
-  scope.addEventListener('change',()=>{if(scope.value==='map')areaBounds=boundsNow();limit=20;render(true);});
+  scope.addEventListener('change',()=>{if(scope.value==='map')areaBounds=boundsNow();if(scope.value!=='cluster')clearCluster();limit=20;render(true);});
   order.addEventListener('change',()=>{orderChosen=true;limit=20;render(true);});
   byId('moreStations').addEventListener('click',()=>{limit+=20;render();});
   window.GasResultsPanel={
+    showCluster(ids){
+      clusterIds=new Set(ids);scope.add(clusterOption);scope.value='cluster';limit=20;
+      render(true);panel.open=true;syncResults();panel.querySelector('summary').focus({preventScroll:true});
+    },
     showNearby(){
       if(!hasMap||!locationPoint())return false;
-      scope.value='region';areaBounds=null;limit=20;orderChosen=true;order.value='distance';
+      clearCluster();scope.value='region';areaBounds=null;limit=20;orderChosen=true;order.value='distance';
       render(true);panel.open=true;body.scrollTop=0;panel.querySelector('summary').focus({preventScroll:true});return true;
     },
     onDetailsOpen(fromResults){returnFromList=fromResults;},
@@ -126,7 +138,7 @@
   };
   window.addEventListener('gas:locationchange',()=>{if(!orderChosen)order.value='distance';render();});
   window.addEventListener('gas:routechange',syncResults);
-  areaButton.addEventListener('click',()=>{if(routeActive())window.GasRoutePlanner?.clearForMapSearch();areaBounds=boundsNow();scope.value=hasMap?'map':'region';limit=20;render(true);panel.open=true;syncResults();panel.querySelector('summary').focus({preventScroll:true});});
+  areaButton.addEventListener('click',()=>{if(routeActive())window.GasRoutePlanner?.clearForMapSearch();clearCluster();areaBounds=boundsNow();scope.value=hasMap?'map':'region';limit=20;render(true);panel.open=true;syncResults();panel.querySelector('summary').focus({preventScroll:true});});
   function syncURL() {
     const u=new URL(location.href);
     for(const k of ['region','method','fuel']){if(state[k]==='all'&&k!=='region')u.searchParams.delete(k);else u.searchParams.set(k,state[k]);}
@@ -144,13 +156,13 @@
   function change() {
     const regionChanged=state.region!==regionInput.value;state.region=regionInput.value;state.method=method.value;state.fuel=fuel.value;limit=20;
     // A deliberate filter change starts a new search; map panning alone never does.
-    scope.value='region';areaBounds=null;returnFromList=false;
+    clearCluster();scope.value='region';areaBounds=null;returnFromList=false;
     if(hasMap){if(regionChanged||restoring)districts();applyFilters();clearRankMapOverlays();mapViewport.fit();}else render(true);
     syncURL();
   }
   [regionInput,method,fuel].forEach(el=>el.addEventListener('change',change));
   if(hasMap){
-    const original=applyFilters;applyFilters=function(){scope.value='region';areaBounds=null;limit=20;original();render(true);};
+    const original=applyFilters;applyFilters=function(){clearCluster();scope.value='region';areaBounds=null;limit=20;original();render(true);};
     for(const name of ['dragend','zoom_changed'])kakao.maps.event.addListener(map,name,syncResults);
     kakao.maps.event.addListener(map,'idle',refreshMapCount);
     document.querySelectorAll('.filter-btn').forEach(el=>el.addEventListener('click',syncURL));byId('districtSelect').addEventListener('change',syncURL);
