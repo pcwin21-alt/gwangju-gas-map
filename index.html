@@ -843,6 +843,7 @@
       <div class="help-section">
         <div class="help-section-title">데이터 출처</div>
         <div class="help-item">지역화폐: 광주시 가맹점 조회 / 온누리: 소상공인시장진흥공단 공식 파일 / 위치: 전국주유소표준데이터·기존 위치 기록 / 유가: 오피넷(한국석유공사)</div>
+        <div class="help-item">시·군·구 경계(2026.10.01 참고용) · 통계청 <a href="https://sgis.kostat.go.kr">SGIS</a>(공공누리 제1유형) 원자료, <a href="https://github.com/vuski/admdongkor">vuski/admdongkor</a>(<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>) 가공 자료를 단순화했습니다.</div>
         <div class="help-item">지역화폐와 온누리 공식 검색 결과를 표시합니다. 현행 검색과 대조되지 않은 곳은 과거 기록으로 구분합니다. 유가와 가맹점 확인일은 별개입니다.</div>
       </div>
 
@@ -1309,14 +1310,21 @@ const DISTRICT_COLORS = {
 };
 
 const districtPolygonMap = {};
+const MUNICIPAL_BOUNDARY_MAX_LEVEL = 8;
+let highlightedDistrict = 'all';
 
 function setDistrictHighlight(districtName) {
-  if (GasNationalState.region !== '광주') districtName = 'all';
-  for (const polygons of Object.values(districtPolygonMap)) {
-    polygons.forEach(p => p.setOptions({ fillOpacity: 0.04 }));
-  }
-  if (districtName !== 'all' && districtPolygonMap[districtName]) {
-    districtPolygonMap[districtName].forEach(p => p.setOptions({ fillOpacity: 0.22 }));
+  highlightedDistrict = GasNationalState.region === '광주' ? districtName : 'all';
+  updateDistrictHighlight();
+}
+
+function updateDistrictHighlight() {
+  const close = map.getLevel() <= MUNICIPAL_BOUNDARY_MAX_LEVEL;
+  for (const [name, polygons] of Object.entries(districtPolygonMap)) {
+    const target = close && name === highlightedDistrict ? map : null;
+    polygons.forEach(polygon => {
+      if (polygon.getMap() !== target) polygon.setMap(target);
+    });
   }
 }
 
@@ -1332,9 +1340,9 @@ function setDistrictHighlight(districtName) {
     rings.forEach(function(ring) {
       var path = ring[0].map(function(c) { return new kakao.maps.LatLng(c[1], c[0]); });
       var polygon = new kakao.maps.Polygon({
-        map: map, path: path,
-        strokeWeight: 2, strokeColor: color, strokeOpacity: 0.7,
-        fillColor: color, fillOpacity: 0.04,
+        path: path,
+        strokeOpacity: 0,
+        fillColor: color, fillOpacity: 0.22,
       });
       if (!districtPolygonMap[gu]) districtPolygonMap[gu] = [];
       districtPolygonMap[gu].push(polygon);
@@ -1342,6 +1350,7 @@ function setDistrictHighlight(districtName) {
     });
   });
 })();
+kakao.maps.event.addListener(map, 'zoom_changed', updateDistrictHighlight);
 
 // 마커 SVG 생성 (색상별)
 function markerSvg(color) {
@@ -2225,7 +2234,8 @@ function closeHelp() { helpModal.classList.remove('open'); }
 <script src="assets/input-ux.js?v=1809ebe00951"></script>
 <script src="assets/map-controls.js?v=1ae1546514a1"></script>
 <script src="assets/district-context-core.js?v=0934e655aaf9"></script>
-<script src="assets/district-context.js?v=3150dc533d74"></script>
+<script src="assets/district-context.js?v=d23e69d03527"></script>
+<script src="assets/municipal-boundaries.js?v=1e654a7ae978" data-src="assets/municipal-boundary-lines.json?v=776360916dcb"></script>
 <script src="assets/route-window.js?v=b24e4dc651ba"></script>
 <script src="assets/search-flow.js?v=50f68b49c146"></script>
 

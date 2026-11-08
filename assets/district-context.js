@@ -12,7 +12,7 @@
   let frame=0;
   function update() {
     const width=area.clientWidth,height=area.clientHeight;
-    if(map.getLevel()>8||width<180||height<180){hide();return;}
+    if(map.getLevel()>MUNICIPAL_BOUNDARY_MAX_LEVEL||width<180||height<180){hide();return;}
     const projection=map.getProjection();
     const features=shapes.map(s=>({name:s.name,polygons:s.polygons.map(rings=>rings.map(ring=>ring.map(c=>{const p=projection.containerPointFromCoords(new kakao.maps.LatLng(c[1],c[0]));return [p.x,p.y];})))}));
     const result=core.context(features,width,height);
