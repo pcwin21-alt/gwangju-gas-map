@@ -147,6 +147,7 @@
     if(!hasMap||currentDistrict==='all')u.searchParams.delete('district');else u.searchParams.set('district',currentDistrict);
     // Keep GPS, input text and trip endpoints out of shared URLs.
     if(u.href!==location.href)history[restoring?'replaceState':'pushState'](null,'',u);
+    window.GasRegionalBenefitsUI?.update();
   }
   function districts() {
     const select=byId('districtSelect');select.replaceChildren(new Option('전체 시·군·구','all'));select.disabled=state.region==='all';

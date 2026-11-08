@@ -763,9 +763,9 @@
   <link rel="stylesheet" href="assets/ux-fixes.css?v=2df80643d424">
   <link rel="stylesheet" href="assets/responsive-ui.css?v=c5dbf9ed40a2">
   <link rel="stylesheet" href="assets/theme.css?v=c42a25cb01d4">
-  <link rel="stylesheet" href="assets/onnuri-policy.css?v=3ae448c47277">
+  <link rel="stylesheet" href="assets/onnuri-policy.css?v=625f58ca64cf">
   <script src="assets/nationwide.js?v=c4a8135d9306"></script>
-<link rel="stylesheet" href="assets/fuel-ui/tokens.css?v=45814debca48"><link rel="stylesheet" href="assets/fuel-ui/components.css?v=8ed0dcbcb11a"><link rel="stylesheet" href="assets/fuel-ui/prototype.css?v=dc2c680cf796"><link rel="stylesheet" href="assets/fuel-ui/reference.css?v=69b7a00cadf0"><link rel="stylesheet" href="assets/fuel-ui/journey.css?v=63305fc5473b"><link rel="stylesheet" href="assets/fuel-ui/web.css?v=2e8a519b2b2b"><link rel="stylesheet" href="assets/onnuri-palette.css?v=2b6e6f6d41b7">
+<link rel="stylesheet" href="assets/fuel-ui/tokens.css?v=45814debca48"><link rel="stylesheet" href="assets/fuel-ui/components.css?v=8ed0dcbcb11a"><link rel="stylesheet" href="assets/fuel-ui/prototype.css?v=dc2c680cf796"><link rel="stylesheet" href="assets/fuel-ui/reference.css?v=3ed0e3029cf3"><link rel="stylesheet" href="assets/fuel-ui/journey.css?v=f29959652188"><link rel="stylesheet" href="assets/fuel-ui/web.css?v=2e8a519b2b2b"><link rel="stylesheet" href="assets/onnuri-palette.css?v=2b6e6f6d41b7">
 </head>
 <body>
 <div class="app" id="fuelDesignApp">
@@ -904,6 +904,13 @@
   </div>
 
   <!-- ONNURI_POLICY_DIALOG_START -->
+  <dialog id="regionalBenefitsDialog" class="policy-dialog" aria-labelledby="regionalBenefitsTitle" data-no-i18n>
+    <div class="policy-heading"><h2 id="regionalBenefitsTitle">지역화폐 혜택</h2><button id="regionalBenefitsClose" type="button">닫기</button></div>
+    <div class="policy-body">
+      <label class="regional-benefits-choice" for="regionalBenefitsChoice">지역화폐<select id="regionalBenefitsChoice"></select></label>
+      <section id="regionalBenefitsContent" aria-live="polite"></section>
+    </div>
+  </dialog>
   <dialog id="policyDialog" class="policy-dialog" aria-labelledby="policyTitle" data-no-i18n>
     <div class="policy-heading"><h2 id="policyTitle">온누리 혜택·정책</h2><button id="policyClose" type="button" aria-label="온누리 정책 닫기">닫기</button></div>
     <div class="policy-body">
@@ -921,6 +928,7 @@
     <nav class="tools-actions" aria-label="지도 도구">
       <button class="rank-btn" id="rankBtn">가격 순위</button>
       <button id="helpBtn" type="button">사용법 안내</button>
+      <button id="regionalBenefitsMenu" type="button" aria-haspopup="dialog" aria-controls="regionalBenefitsDialog">지역화폐 혜택</button>
       <button id="policyMenuOpen" type="button" aria-haspopup="dialog" aria-controls="policyDialog">온누리 혜택·정책</button>
 
       <label class="theme-picker" for="themeMode"><span>화면 테마</span><select id="themeMode" aria-label="화면 테마"><option value="system">기기 설정</option><option value="light">밝게</option><option value="dark">어둡게</option></select></label>
@@ -1115,6 +1123,7 @@
 <button id="journeyRestore" class="journey-restore" type="button" hidden>경로 다시 보기</button>
 
     <!-- ONNURI_POLICY_ENTRY_START -->
+    <button id="regionalBenefitsOpen" type="button" aria-haspopup="dialog" aria-controls="regionalBenefitsDialog" data-no-i18n hidden><span id="regionalBenefitsLabel">지역화폐 혜택</span><span class="policy-info" aria-hidden="true">i</span></button>
     <button id="policyOpen" type="button" aria-haspopup="dialog" aria-controls="policyDialog" data-no-i18n><span id="policyLabel">온누리 혜택·정책</span><span id="policySpecial" aria-hidden="true" hidden></span><span class="policy-info" aria-hidden="true">i</span></button>
     <!-- ONNURI_POLICY_ENTRY_END -->
     <button id="tripLauncher" class="trip-launcher" type="button" aria-label="경유 주유소 찾기 열기" aria-controls="tripPanel" aria-expanded="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="18" r="2"/><path d="M7 6h8a4 4 0 0 1 0 8H9a4 4 0 0 0-4 4h12"/></svg><span data-i18n-context="route-stop">경유</span><span id="tripLauncherCount" class="trip-launcher-count" aria-hidden="true" hidden></span></button>
@@ -2207,7 +2216,7 @@ function closeHelp() { helpModal.classList.remove('open'); }
 <script src="assets/route-planner.js?v=623d122c50bb"></script>
 <script src="assets/updates.js?v=db39e7a48351"></script>
 <script src="assets/visual-refresh.js?v=58440547ed92"></script>
-<script src="assets/nationwide-ui.js?v=2f82533c1e15"></script>
+<script src="assets/nationwide-ui.js?v=bfb300a2ae3f"></script>
 <script src="assets/simple-controls.js?v=490493334111"></script>
 <script src="assets/region-picker.js?v=6bf30e1a5cbd"></script>
 <script src="assets/ux-fixes.js?v=7f1466bfd7ca"></script>
@@ -2221,6 +2230,8 @@ function closeHelp() { helpModal.classList.remove('open'); }
 <script src="assets/onnuri-policy-data.js?v=c2786d9b9d43"></script>
 <script src="assets/onnuri-policy-core.js?v=886a22590273"></script>
 <script src="assets/onnuri-policy.js?v=9f8d0b6338b3"></script>
+<script src="assets/regional-benefits-data.js?v=cbd9d82b9aba"></script>
+<script src="assets/regional-benefits.js?v=1dfbf4d3245e"></script>
 <script src="assets/fuel-ui/prototype.js?v=fb363a8f099e"></script><script src="assets/onnuri-pin-themes.js?v=a67ee0534b11"></script><script src="assets/fuel-ui/reference.js?v=b4e7597ebc4f"></script><script>window.GasJourneyConfig={endpoint:"",externalNavigationEnabled:true};</script><script src="assets/fuel-journey-core.js?v=7760b5bd4114"></script><script src="assets/fuel-ui/journey.js?v=782db7836c20"></script>
 </body>
 </html>
