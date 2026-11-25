@@ -1,0 +1,236 @@
+{
+  "reviewed_at": "2026-11-25T10:50:00+09:00",
+  "source_checked_at": "2026-10-25T10:51:11+09:00",
+  "base_state_commit": "ad0b62dfd33626bcc174bc9c7e6ad3ab7c7c3c13",
+  "snapshot_sha256": "e16f3cd3a5fdac5aca66b43bd0f1f5684771bd1cd8f0fa4b9c3fef728e4c5e57",
+  "source_requests": 0,
+  "new_merchants": 0,
+  "membership_rechecks": 0,
+  "map_changes": 0,
+  "items": [
+    {
+      "candidate_id": "26b21e88211bfd8aa34da650",
+      "original_gap": {
+        "candidate_id": "26b21e88211bfd8aa34da650",
+        "name": "아세아오일뱅크",
+        "region": "전남광주",
+        "status": "needs_location",
+        "reason": "No independently linked vehicle-fuel location; no guessed point"
+      },
+      "resolution": {
+        "status": "region_identified",
+        "source_kind": "archived_operator_place",
+        "annual_row": {
+          "가맹점명": "아세아오일뱅크",
+          "소속 시장명(또는 상점가)": "늘해랑상인회 골목형상점가",
+          "소재지": "전남광주",
+          "취급품목": "석유류",
+          "지류형 가맹 여부": "Y",
+          "디지털형 가맹 여부": "Y",
+          "가맹 등록년도": "2025"
+        },
+        "operator_record": {
+          "frCd": "05177200032",
+          "frcsNm": "아세아오일뱅크",
+          "frcsAddr": "광주광역시 서구 내방로 264 (쌍촌동)",
+          "mrktNm": "늘해랑상인회 골목형상점가",
+          "placeTypeCd": "08",
+          "placeTypeNm": "기타소매업",
+          "addrCd": "12240",
+          "latitude": 35.157511,
+          "longitude": 126.869479,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        },
+        "evidence": [
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/merchant-collector-state/audits/region_scope_20261125.json"
+        ],
+        "checked_at": "2026-11-25T10:50:00+09:00",
+        "source_checked_at": "2026-10-25T10:51:11+09:00",
+        "source_url": "https://www.onnuri.gift/place",
+        "source_snapshot_sha256": "e16f3cd3a5fdac5aca66b43bd0f1f5684771bd1cd8f0fa4b9c3fef728e4c5e57",
+        "mapped_ids": [
+          "onnuri:05177200032"
+        ],
+        "scope": "Archived exact annual name/market/address locates this record in Gwangju only; no current operator continuity or membership renewal inferred."
+      },
+      "station": {
+        "id": "onnuri:05177200032",
+        "name": "아세아오일뱅크",
+        "aliases": [
+          "더푸른주식회사"
+        ],
+        "address": "광주광역시 서구 내방로 264 (쌍촌동)",
+        "region": "광주",
+        "lat": 35.157511,
+        "lng": 126.869479,
+        "fuel_kind": "liquid",
+        "payment_types": [
+          "onnuri"
+        ],
+        "prior_verification": {
+          "checked_at": "2026-10-25T10:51:11+09:00",
+          "status": "confirmed",
+          "source_id": "05259200037",
+          "source_ids": [
+            "05177200032",
+            "05259200037"
+          ],
+          "source_date": "2026-10-25",
+          "source_url": "https://www.onnuri.gift/place",
+          "match_basis": "official_place_id_address_coordinates",
+          "market": "늘해랑상인회 골목형상점가",
+          "candidate_ids": [
+            "fed39f15ce90b5feefe54519"
+          ]
+        }
+      }
+    },
+    {
+      "candidate_id": "6bd0aa8c13da8305ab643354",
+      "original_gap": {
+        "candidate_id": "6bd0aa8c13da8305ab643354",
+        "name": "SK코끼리주유소",
+        "region": "전남광주",
+        "status": "needs_location",
+        "reason": "No independently linked vehicle-fuel location; no guessed point"
+      },
+      "resolution": {
+        "status": "region_identified",
+        "source_kind": "archived_operator_place",
+        "annual_row": {
+          "가맹점명": "SK코끼리주유소",
+          "소속 시장명(또는 상점가)": "매화 하백로 골목형상점가",
+          "소재지": "전남광주",
+          "취급품목": "유류",
+          "지류형 가맹 여부": "Y",
+          "디지털형 가맹 여부": "Y",
+          "가맹 등록년도": "2025"
+        },
+        "operator_record": {
+          "frCd": "05051200102",
+          "frcsNm": "SK코끼리주유소",
+          "frcsAddr": "광주광역시 북구 서하로 77 (매곡동)",
+          "mrktNm": "매화 하백로 골목형상점가",
+          "placeTypeCd": "08",
+          "placeTypeNm": "기타소매업",
+          "addrCd": "12300",
+          "latitude": 35.187732,
+          "longitude": 126.888737,
+          "paperYn": "Y",
+          "cardYn": "Y",
+          "qrYn": "Y"
+        },
+        "evidence": [
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/merchant-collector-state/audits/region_scope_20261125.json"
+        ],
+        "checked_at": "2026-11-25T10:50:00+09:00",
+        "source_checked_at": "2026-10-25T10:51:11+09:00",
+        "source_url": "https://www.onnuri.gift/place",
+        "source_snapshot_sha256": "e16f3cd3a5fdac5aca66b43bd0f1f5684771bd1cd8f0fa4b9c3fef728e4c5e57",
+        "mapped_ids": [
+          "sangsaeng:38500"
+        ],
+        "scope": "Archived exact annual name/market/address locates this record in Gwangju only; no current operator continuity or membership renewal inferred."
+      },
+      "station": {
+        "id": "sangsaeng:38500",
+        "name": "77번가주유소",
+        "aliases": [
+          "(주)엔씨아이 코끼주유소",
+          "SK코끼리주유소",
+          "코끼리주유소"
+        ],
+        "address": "광주광역시 북구 서하로 77 (매곡동)",
+        "region": "광주",
+        "lat": 35.187732,
+        "lng": 126.888737,
+        "fuel_kind": "liquid",
+        "payment_types": [
+          "onnuri"
+        ],
+        "prior_verification": {
+          "checked_at": "2026-10-25T10:51:11+09:00",
+          "status": "confirmed",
+          "source_id": "05399200036",
+          "source_ids": [
+            "05051200102",
+            "05399200036"
+          ],
+          "source_date": "2026-10-25",
+          "source_url": "https://www.onnuri.gift/place",
+          "match_basis": "official_place_id_address_coordinates",
+          "market": "매화 하백로 골목형상점가",
+          "candidate_ids": [
+            "13eb72b964fa7c4235eaadbb"
+          ]
+        }
+      }
+    }
+  ],
+  "changed_top_level_keys": [
+    "candidate_resolutions",
+    "coverage_checks",
+    "regional_reviews",
+    "source_gaps",
+    "summary"
+  ],
+  "before_region": {
+    "region": "전남",
+    "status": "collecting",
+    "jobs_total": 52,
+    "jobs_remaining": 2,
+    "jobs_needing_review": 0,
+    "source_gaps": 8,
+    "review_records": 7,
+    "inventory_reviewed": false,
+    "mapped_records_to_recheck": 28,
+    "membership_check_status": {
+      "confirmed_in_issuer_scope": 27,
+      "needs_review_not_found": 1
+    },
+    "unresolved_annual_identities": 5,
+    "missing_standard_checks": [
+      "market_coverage",
+      "membership_rechecks",
+      "annual_identities"
+    ],
+    "standard_checks_complete": false,
+    "scope": "issuer-scoped rechecks; paper/QR/operator freshness not inferred"
+  },
+  "after_region": {
+    "region": "전남",
+    "status": "collecting",
+    "jobs_total": 52,
+    "jobs_remaining": 2,
+    "jobs_needing_review": 0,
+    "source_gaps": 6,
+    "review_records": 7,
+    "inventory_reviewed": false,
+    "mapped_records_to_recheck": 28,
+    "membership_check_status": {
+      "confirmed_in_issuer_scope": 27,
+      "needs_review_not_found": 1
+    },
+    "unresolved_annual_identities": 5,
+    "missing_standard_checks": [
+      "market_coverage",
+      "membership_rechecks",
+      "annual_identities"
+    ],
+    "standard_checks_complete": false,
+    "scope": "issuer-scoped rechecks; paper/QR/operator freshness not inferred"
+  },
+  "preserved": [
+    "jobs",
+    "attempts",
+    "sources",
+    "effective_collection_limits",
+    "evidence",
+    "membership_rechecks",
+    "survey_inventory",
+    "collection_schedule"
+  ],
+  "limitations": "Historical regional location cleanup, not a novel discovery experiment or current payment evidence."
+}

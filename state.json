@@ -10039,8 +10039,19 @@
       "candidate_id": "26b21e88211bfd8aa34da650",
       "name": "아세아오일뱅크",
       "region": "전남광주",
-      "status": "needs_location",
-      "reason": "No independently linked vehicle-fuel location; no guessed point"
+      "status": "resolved",
+      "reason": "Archived exact operator name/market/address and existing mapped identity resolve the location gap to Gwangju. Current membership remains unrenewed.",
+      "checked_at": "2026-11-25T10:50:00+09:00",
+      "source_checked_at": "2026-10-25T10:51:11+09:00",
+      "evidence": [
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/merchant-collector-state/audits/region_scope_20261125.json"
+      ],
+      "previous_status": "needs_location",
+      "previous_reason": "No independently linked vehicle-fuel location; no guessed point",
+      "resolved_region": "광주",
+      "mapped_ids": [
+        "onnuri:05177200032"
+      ]
     },
     {
       "candidate_id": "76ce41be9eed4c5a2696b79a",
@@ -10060,8 +10071,19 @@
       "candidate_id": "6bd0aa8c13da8305ab643354",
       "name": "SK코끼리주유소",
       "region": "전남광주",
-      "status": "needs_location",
-      "reason": "No independently linked vehicle-fuel location; no guessed point"
+      "status": "resolved",
+      "reason": "Archived exact operator name/market/address and existing mapped identity resolve the location gap to Gwangju. Current membership remains unrenewed.",
+      "checked_at": "2026-11-25T10:50:00+09:00",
+      "source_checked_at": "2026-10-25T10:51:11+09:00",
+      "evidence": [
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/merchant-collector-state/audits/region_scope_20261125.json"
+      ],
+      "previous_status": "needs_location",
+      "previous_reason": "No independently linked vehicle-fuel location; no guessed point",
+      "resolved_region": "광주",
+      "mapped_ids": [
+        "sangsaeng:38500"
+      ]
     },
     {
       "candidate_id": "9e8ff2baaea7b95ae7a04d00",
@@ -10683,7 +10705,7 @@
         "jobs_total": 52,
         "jobs_remaining": 2,
         "jobs_needing_review": 0,
-        "source_gaps": 8,
+        "source_gaps": 6,
         "review_records": 7,
         "inventory_reviewed": false,
         "mapped_records_to_recheck": 28,
@@ -10957,7 +10979,7 @@
         "jobs_total": 131,
         "jobs_remaining": 131,
         "jobs_needing_review": 0,
-        "source_gaps": 23,
+        "source_gaps": 21,
         "review_records": 0,
         "inventory_reviewed": false,
         "mapped_records_to_recheck": 131,
@@ -11151,10 +11173,17 @@
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/849cb33/output/audits/regional_gap_20261102/jeonnam_physical_coverage_ledger_20261104.json",
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/2bdf397/output/audits/regional_gap_20261102/mokpo_attachment_visual_review_20261104.json",
         "https://github.com/pcwin21-alt/gwangju-gas-map/blob/18e65bd/output/audits/regional_gap_20261102/mokpo_observation_crosscheck_20261104_0814.json",
-        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/18e65bd/output/audits/regional_gap_20261102/alternative_issuer_surface_review_20261104.json"
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/18e65bd/output/audits/regional_gap_20261102/alternative_issuer_surface_review_20261104.json",
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/merchant-collector-state/audits/region_scope_20261125.json"
       ],
       "checked_at": null,
-      "last_reviewed_at": "2026-11-04T08:27:43+09:00"
+      "last_reviewed_at": "2026-11-04T08:27:43+09:00",
+      "location_scope_review": {
+        "reviewed_at": "2026-11-25T10:50:00+09:00",
+        "resolved_archived_location_gaps": 2,
+        "current_membership_confirmations": 0,
+        "evidence": "https://github.com/pcwin21-alt/gwangju-gas-map/blob/merchant-collector-state/audits/region_scope_20261125.json"
+      }
     },
     "전북": {
       "status": "pending",
@@ -23593,10 +23622,17 @@
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/f12f94c/output/audits/regional_gap_20261102/yeosu_hyundai_identity_lead_20261103.json",
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/cc81165/output/audits/regional_gap_20261102/candidate_regions_20261103_1700.json",
           "https://github.com/pcwin21-alt/gwangju-gas-map/blob/b94117e11e726b40100125bb0fcf019221a3775c/output/audits/regional_gap_20261102/namchang_and_market_review_20261103_2310.json",
-          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/849cb33/output/audits/regional_gap_20261102/yeosu_hyundai_nonfuel_review_20261104.json"
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/849cb33/output/audits/regional_gap_20261102/yeosu_hyundai_nonfuel_review_20261104.json",
+          "https://github.com/pcwin21-alt/gwangju-gas-map/blob/merchant-collector-state/audits/region_scope_20261125.json"
         ],
         "checked_at": null,
-        "last_reviewed_at": "2026-11-04T05:16:24+09:00"
+        "last_reviewed_at": "2026-11-04T05:16:24+09:00",
+        "location_scope_review": {
+          "reviewed_at": "2026-11-25T10:50:00+09:00",
+          "resolved_archived_location_gaps": 2,
+          "current_membership_confirmations": 0,
+          "evidence": "https://github.com/pcwin21-alt/gwangju-gas-map/blob/merchant-collector-state/audits/region_scope_20261125.json"
+        }
       },
       "membership_rechecks": {
         "status": "pending",
@@ -25232,6 +25268,82 @@
       "independent_place_id": "21350046",
       "reason": "Same named market candidate is linked by a specific historical street address to the independently observed food mill; exact address and phone also corroborate the dated food-permit mirror. Exclude this annual candidate from vehicle-fuel discovery only.",
       "scope": "No present membership, operating permit, paper/QR/digital status or registry correction inferred; no map deletion and no exclusion of another same-name store."
+    },
+    "26b21e88211bfd8aa34da650": {
+      "status": "region_identified",
+      "source_kind": "archived_operator_place",
+      "annual_row": {
+        "가맹점명": "아세아오일뱅크",
+        "소속 시장명(또는 상점가)": "늘해랑상인회 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": "석유류",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2025"
+      },
+      "operator_record": {
+        "frCd": "05177200032",
+        "frcsNm": "아세아오일뱅크",
+        "frcsAddr": "광주광역시 서구 내방로 264 (쌍촌동)",
+        "mrktNm": "늘해랑상인회 골목형상점가",
+        "placeTypeCd": "08",
+        "placeTypeNm": "기타소매업",
+        "addrCd": "12240",
+        "latitude": 35.157511,
+        "longitude": 126.869479,
+        "paperYn": "Y",
+        "cardYn": "Y",
+        "qrYn": "Y"
+      },
+      "evidence": [
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/merchant-collector-state/audits/region_scope_20261125.json"
+      ],
+      "checked_at": "2026-11-25T10:50:00+09:00",
+      "source_checked_at": "2026-10-25T10:51:11+09:00",
+      "source_url": "https://www.onnuri.gift/place",
+      "source_snapshot_sha256": "e16f3cd3a5fdac5aca66b43bd0f1f5684771bd1cd8f0fa4b9c3fef728e4c5e57",
+      "mapped_ids": [
+        "onnuri:05177200032"
+      ],
+      "scope": "Archived exact annual name/market/address locates this record in Gwangju only; no current operator continuity or membership renewal inferred."
+    },
+    "6bd0aa8c13da8305ab643354": {
+      "status": "region_identified",
+      "source_kind": "archived_operator_place",
+      "annual_row": {
+        "가맹점명": "SK코끼리주유소",
+        "소속 시장명(또는 상점가)": "매화 하백로 골목형상점가",
+        "소재지": "전남광주",
+        "취급품목": "유류",
+        "지류형 가맹 여부": "Y",
+        "디지털형 가맹 여부": "Y",
+        "가맹 등록년도": "2025"
+      },
+      "operator_record": {
+        "frCd": "05051200102",
+        "frcsNm": "SK코끼리주유소",
+        "frcsAddr": "광주광역시 북구 서하로 77 (매곡동)",
+        "mrktNm": "매화 하백로 골목형상점가",
+        "placeTypeCd": "08",
+        "placeTypeNm": "기타소매업",
+        "addrCd": "12300",
+        "latitude": 35.187732,
+        "longitude": 126.888737,
+        "paperYn": "Y",
+        "cardYn": "Y",
+        "qrYn": "Y"
+      },
+      "evidence": [
+        "https://github.com/pcwin21-alt/gwangju-gas-map/blob/merchant-collector-state/audits/region_scope_20261125.json"
+      ],
+      "checked_at": "2026-11-25T10:50:00+09:00",
+      "source_checked_at": "2026-10-25T10:51:11+09:00",
+      "source_url": "https://www.onnuri.gift/place",
+      "source_snapshot_sha256": "e16f3cd3a5fdac5aca66b43bd0f1f5684771bd1cd8f0fa4b9c3fef728e4c5e57",
+      "mapped_ids": [
+        "sangsaeng:38500"
+      ],
+      "scope": "Archived exact annual name/market/address locates this record in Gwangju only; no current operator continuity or membership renewal inferred."
     }
   },
   "collection_schedule": {
